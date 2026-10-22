@@ -39,21 +39,6 @@ def measures(total_code: int, matched_code: int, total_functions: int,
     }
 
 
-def inventory_measures(total_bytes: int, matched_bytes: int,
-                       total_records: int = 0,
-                       matched_records: int = 0) -> dict[str, object]:
-    """Expose non-code progress accurately in ByteMatch's code-only category UI.
-
-    ByteMatch renders category bars from ``matched_code_percent`` even for data
-    categories.  Mirror only the category-local byte counts so asset
-    identification is visible, while the report's aggregate code totals remain
-    executable code only.  This follows the established BattleTanx report
-    convention.
-    """
-    return measures(total_bytes, matched_bytes, total_records, matched_records,
-                    total_bytes, matched_bytes)
-
-
 def manifest_ranges(paths: list[Path]) -> list[tuple[int, int, str]]:
     ranges = []
     for path in paths:
@@ -148,7 +133,7 @@ def build_report() -> dict[str, object]:
             "metadata": {
                 "complete": True,
                 "source_path": source,
-                "progress_categories": [category],
+                "progress_categories": ["code"],
                 "auto_generated": False,
             },
         })
@@ -178,7 +163,7 @@ def build_report() -> dict[str, object]:
                 "metadata": {
                     "complete": True,
                     "source_path": source,
-                    "progress_categories": ["overlays"],
+                    "progress_categories": ["code"],
                     "auto_generated": False,
                 },
             })
@@ -202,7 +187,7 @@ def build_report() -> dict[str, object]:
             "metadata": {
                 "complete": True,
                 "source_path": source,
-                "progress_categories": ["boot_loader"],
+                "progress_categories": ["code"],
                 "auto_generated": False,
             },
         })
@@ -211,99 +196,20 @@ def build_report() -> dict[str, object]:
     matched_code = (sum(end - start for start, end, _source in ranges) +
                     overlay_matched + loader_matched)
     matched_functions = progress["matched_functions"]
-    categories = []
-    for category_id, name in (("game", "Game code"), ("libultra", "libultra")):
-        total, matched, count = category_totals[category_id]
-        categories.append({
-            "id": category_id,
-            "name": "Resident " + name.lower(),
-            "measures": measures(total, matched, 0, 0),
-        })
-    categories.extend([
+    categories = [
         {
-            "id": "boot_loader",
-            "name": "Boot-loader code",
-            "measures": measures(loader_code, loader_matched, loader_functions,
-                                 len(loader_ranges),
-                                 loader_data, 0),
+            "id": "code",
+            "name": "Program code",
+            "measures": measures(image["code_size"], matched_code,
+                                 image["total_functions"], matched_functions),
         },
         {
-            "id": "overlays",
-            "name": "Executable overlay code",
-            "measures": measures(359488, overlay_matched, 901, overlay_functions),
+            "id": "program_data",
+            "name": "Initialized program data",
+            "measures": measures(0, 0, 0, 0, image["data_size"],
+                                 progress["matched_data"]),
         },
-        {
-            "id": "initialized_data",
-            "name": "Whole-program initialized data",
-            "measures": inventory_measures(image["data_size"],
-                                            progress["matched_data"]),
-        },
-        {
-            "id": "rom_inventory",
-            "name": "Archive record identification",
-            "measures": inventory_measures(inventory["payload_bytes"],
-                                           inventory["payload_bytes"],
-                                           inventory["records"], inventory["records"]),
-        },
-        {
-            "id": "inventory_audio",
-            "name": "Identified audio streams",
-            "measures": inventory_measures(inventory["audio_bytes"], inventory["audio_bytes"],
-                                            inventory["audio_records"], inventory["audio_records"]),
-        },
-        {
-            "id": "inventory_images",
-            "name": "Identified JPEG images",
-            "measures": inventory_measures(inventory["jpeg_bytes"], inventory["jpeg_bytes"],
-                                            inventory["jpeg_records"], inventory["jpeg_records"]),
-        },
-        {
-            "id": "inventory_textures",
-            "name": "Identified canonical textures",
-            "measures": inventory_measures(inventory["texture_bytes"], inventory["texture_bytes"],
-                                            inventory["texture_records"], inventory["texture_records"]),
-        },
-        {
-            "id": "inventory_models",
-            "name": "Identified TNMF models",
-            "measures": inventory_measures(inventory["model_bytes"], inventory["model_bytes"],
-                                            inventory["model_records"], inventory["model_records"]),
-        },
-        {
-            "id": "inventory_animations",
-            "name": "Identified TMot animations",
-            "measures": inventory_measures(inventory["animation_bytes"], inventory["animation_bytes"],
-                                            inventory["animation_records"], inventory["animation_records"]),
-        },
-        {
-            "id": "inventory_sprites",
-            "name": "Identified TSpr sprites",
-            "measures": inventory_measures(inventory["sprite_bytes"], inventory["sprite_bytes"],
-                                            inventory["sprite_records"], inventory["sprite_records"]),
-        },
-        {
-            "id": "inventory_graphics_auxiliary",
-            "name": "Identified auxiliary graphics records",
-            "measures": inventory_measures(inventory["graphics_auxiliary_bytes"],
-                                            inventory["graphics_auxiliary_bytes"],
-                                            inventory["graphics_auxiliary_records"],
-                                            inventory["graphics_auxiliary_records"]),
-        },
-        {
-            "id": "inventory_game_data",
-            "name": "Identified gameplay and roster databases",
-            "measures": inventory_measures(
-                inventory["gameplay_table_bytes"] + inventory["roster_database_bytes"],
-                inventory["gameplay_table_bytes"] + inventory["roster_database_bytes"],
-                inventory["gameplay_table_records"] + inventory["roster_database_records"],
-                inventory["gameplay_table_records"] + inventory["roster_database_records"]),
-        },
-        {
-            "id": "rom_mapping",
-            "name": "Physical ROM byte mapping",
-            "measures": inventory_measures(inventory["rom_size"], inventory["rom_size"]),
-        },
-    ])
+    ]
     return {
         "measures": measures(image["code_size"], matched_code,
                              image["total_functions"], matched_functions,
