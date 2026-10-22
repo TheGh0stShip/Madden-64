@@ -29,3 +29,9 @@
 0x1D53C	0x40	src/overlays/overlay4/object_frame_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3cbf901b6a954aad05a87b241d22b07dc8a0c66edc19b8f6424db2cacb3b4b32
 0x1E8F8	0xC	src/overlays/overlay4/object_timeout_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0c6daf9730ced1a0b4ef95c5dccd2970b597babbcd1737c275094e2b2dee8c0f
 0x1DB10	0x18	src/overlays/overlay4/object_flag_enable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d4097a8c1c8cb3674c3340b4ab9c32ecd02eabe2cdcec338344db00ff446e392
+0x1B4C	0x40	src/overlays/overlay4/active_state_gate.c	--symbol=func_800C7590:0x800C7590 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	db42c69efda19cd9eadacb855a1d7a4eab656ffe0aa73f56d2f823b6ddd9ba10
+0x4490	0x40	src/overlays/overlay4/send_command_14.c	--symbol=func_800E1BCC:0x800E1BCC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	33ca8a5fb231fff6575bd139ef4329b27aa56d9452c5422ecfdfdee07363e9a0
+0x4514	0x28	src/overlays/overlay4/send_command_15.c	--symbol=func_800E1BCC:0x800E1BCC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4148846bd77d3ded5908bba72ad5d4711ac48b6cbb192736899e6082935b0a66
+0x47DC	0x2C	src/overlays/overlay4/send_command_32.c	--symbol=func_800E1BCC:0x800E1BCC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4b0cc20248f0edf01b7d79c355608ee46171d97cc67a2857311c2630f4175d8a
+0x4808	0x28	src/overlays/overlay4/send_command_17.c	--symbol=func_800E1BCC:0x800E1BCC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	36a2c189f3da52b10ac6d28071e0400340a73fd74ec0ff55cb9f0e8238c72f69
+0x8C40	0x48	src/overlays/overlay4/object_position_bounds_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1aec6c37f542cf6b881c277da002bc13573b33c6337a87677728f2ecc47f40eb

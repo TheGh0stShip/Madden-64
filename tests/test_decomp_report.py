@@ -18,23 +18,26 @@ class DecompReportTests(unittest.TestCase):
         totals = report["measures"]
         self.assertEqual(report["version"], 2)
         self.assertEqual(totals["total_code"], "753420")
-        self.assertEqual(totals["matched_code"], "52404")
+        self.assertEqual(totals["matched_code"], "52728")
         self.assertEqual(totals["total_data"], "484548")
         self.assertEqual(totals["matched_data"], "496")
         self.assertEqual(totals["total_functions"], 2279)
-        self.assertEqual(totals["matched_functions"], 490)
+        self.assertEqual(totals["matched_functions"], 496)
         categories = {item["id"]: item["measures"] for item in report["categories"]}
         self.assertNotIn("overall_verified", categories)
-        self.assertEqual(categories["overlays"]["matched_code"], "3564")
-        self.assertEqual(categories["overlays"]["matched_functions"], 144)
+        self.assertEqual(categories["overlays"]["matched_code"], "3888")
+        self.assertEqual(categories["overlays"]["matched_functions"], 150)
         self.assertEqual(categories["boot_loader"]["total_code"], "644")
         self.assertEqual(categories["boot_loader"]["total_data"], "76")
         self.assertEqual(categories["boot_loader"]["total_functions"], 5)
         self.assertEqual(categories["boot_loader"]["matched_code"], "172")
         self.assertEqual(categories["boot_loader"]["matched_functions"], 3)
+        self.assertAlmostEqual(categories["initialized_data"]["matched_code_percent"],
+                               496 * 100 / 484548)
         self.assertEqual(categories["rom_inventory"]["total_functions"], 1353)
         self.assertEqual(categories["inventory_audio"]["total_functions"], 237)
         self.assertEqual(categories["inventory_audio"]["total_data"], "7169664")
+        self.assertEqual(categories["inventory_audio"]["matched_code_percent"], 100.0)
         self.assertEqual(categories["inventory_images"]["total_functions"], 43)
         self.assertEqual(categories["inventory_textures"]["total_functions"], 516)
         self.assertEqual(categories["inventory_textures"]["total_data"], "1104924")
@@ -45,6 +48,7 @@ class DecompReportTests(unittest.TestCase):
         self.assertEqual(categories["inventory_game_data"]["matched_functions"], 4)
         self.assertEqual(categories["inventory_game_data"]["matched_data"], "155978")
         self.assertEqual(categories["rom_mapping"]["matched_data"], "12582912")
+        self.assertEqual(categories["rom_mapping"]["matched_code_percent"], 100.0)
 
     def test_cli_writes_valid_json(self):
         report = REPORT.build_report()

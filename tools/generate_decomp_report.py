@@ -39,6 +39,21 @@ def measures(total_code: int, matched_code: int, total_functions: int,
     }
 
 
+def inventory_measures(total_bytes: int, matched_bytes: int,
+                       total_records: int = 0,
+                       matched_records: int = 0) -> dict[str, object]:
+    """Expose non-code progress accurately in ByteMatch's code-only category UI.
+
+    ByteMatch renders category bars from ``matched_code_percent`` even for data
+    categories.  Mirror only the category-local byte counts so asset
+    identification is visible, while the report's aggregate code totals remain
+    executable code only.  This follows the established BattleTanx report
+    convention.
+    """
+    return measures(total_bytes, matched_bytes, total_records, matched_records,
+                    total_bytes, matched_bytes)
+
+
 def manifest_ranges(paths: list[Path]) -> list[tuple[int, int, str]]:
     ranges = []
     for path in paths:
@@ -220,76 +235,73 @@ def build_report() -> dict[str, object]:
         {
             "id": "initialized_data",
             "name": "Whole-program initialized data",
-            "measures": measures(0, 0, 0, 0,
-                                 image["data_size"], progress["matched_data"]),
+            "measures": inventory_measures(image["data_size"],
+                                            progress["matched_data"]),
         },
         {
             "id": "rom_inventory",
-            "name": "Physical ROM inventory",
-            "measures": measures(0, 0, inventory["records"], inventory["records"]),
+            "name": "Archive record identification",
+            "measures": inventory_measures(inventory["payload_bytes"],
+                                           inventory["payload_bytes"],
+                                           inventory["records"], inventory["records"]),
         },
         {
             "id": "inventory_audio",
-            "name": "Inventory: audio streams",
-            "measures": measures(0, 0, inventory["audio_records"], inventory["audio_records"],
-                                 inventory["audio_bytes"], inventory["audio_bytes"]),
+            "name": "Identified audio streams",
+            "measures": inventory_measures(inventory["audio_bytes"], inventory["audio_bytes"],
+                                            inventory["audio_records"], inventory["audio_records"]),
         },
         {
             "id": "inventory_images",
-            "name": "Inventory: JPEG images",
-            "measures": measures(0, 0, inventory["jpeg_records"], inventory["jpeg_records"],
-                                 inventory["jpeg_bytes"], inventory["jpeg_bytes"]),
+            "name": "Identified JPEG images",
+            "measures": inventory_measures(inventory["jpeg_bytes"], inventory["jpeg_bytes"],
+                                            inventory["jpeg_records"], inventory["jpeg_records"]),
         },
         {
             "id": "inventory_textures",
-            "name": "Inventory: canonical textures",
-            "measures": measures(0, 0, inventory["texture_records"], inventory["texture_records"],
-                                 inventory["texture_bytes"], inventory["texture_bytes"]),
+            "name": "Identified canonical textures",
+            "measures": inventory_measures(inventory["texture_bytes"], inventory["texture_bytes"],
+                                            inventory["texture_records"], inventory["texture_records"]),
         },
         {
             "id": "inventory_models",
-            "name": "Inventory: TNMF models",
-            "measures": measures(0, 0, inventory["model_records"], inventory["model_records"],
-                                 inventory["model_bytes"], inventory["model_bytes"]),
+            "name": "Identified TNMF models",
+            "measures": inventory_measures(inventory["model_bytes"], inventory["model_bytes"],
+                                            inventory["model_records"], inventory["model_records"]),
         },
         {
             "id": "inventory_animations",
-            "name": "Inventory: TMot animations",
-            "measures": measures(0, 0, inventory["animation_records"], inventory["animation_records"],
-                                 inventory["animation_bytes"], inventory["animation_bytes"]),
+            "name": "Identified TMot animations",
+            "measures": inventory_measures(inventory["animation_bytes"], inventory["animation_bytes"],
+                                            inventory["animation_records"], inventory["animation_records"]),
         },
         {
             "id": "inventory_sprites",
-            "name": "Inventory: TSpr sprites",
-            "measures": measures(0, 0, inventory["sprite_records"], inventory["sprite_records"],
-                                 inventory["sprite_bytes"], inventory["sprite_bytes"]),
+            "name": "Identified TSpr sprites",
+            "measures": inventory_measures(inventory["sprite_bytes"], inventory["sprite_bytes"],
+                                            inventory["sprite_records"], inventory["sprite_records"]),
         },
         {
             "id": "inventory_graphics_auxiliary",
-            "name": "Inventory: auxiliary graphics records",
-            "measures": measures(0, 0, inventory["graphics_auxiliary_records"],
-                                 inventory["graphics_auxiliary_records"],
-                                 inventory["graphics_auxiliary_bytes"],
-                                 inventory["graphics_auxiliary_bytes"]),
+            "name": "Identified auxiliary graphics records",
+            "measures": inventory_measures(inventory["graphics_auxiliary_bytes"],
+                                            inventory["graphics_auxiliary_bytes"],
+                                            inventory["graphics_auxiliary_records"],
+                                            inventory["graphics_auxiliary_records"]),
         },
         {
             "id": "inventory_game_data",
-            "name": "Inventory: gameplay and roster databases",
-            "measures": measures(0, 0,
-                                 inventory["gameplay_table_records"] +
-                                 inventory["roster_database_records"],
-                                 inventory["gameplay_table_records"] +
-                                 inventory["roster_database_records"],
-                                 inventory["gameplay_table_bytes"] +
-                                 inventory["roster_database_bytes"],
-                                 inventory["gameplay_table_bytes"] +
-                                 inventory["roster_database_bytes"]),
+            "name": "Identified gameplay and roster databases",
+            "measures": inventory_measures(
+                inventory["gameplay_table_bytes"] + inventory["roster_database_bytes"],
+                inventory["gameplay_table_bytes"] + inventory["roster_database_bytes"],
+                inventory["gameplay_table_records"] + inventory["roster_database_records"],
+                inventory["gameplay_table_records"] + inventory["roster_database_records"]),
         },
         {
             "id": "rom_mapping",
             "name": "Physical ROM byte mapping",
-            "measures": measures(0, 0, 0, 0,
-                                 inventory["rom_size"], inventory["rom_size"]),
+            "measures": inventory_measures(inventory["rom_size"], inventory["rom_size"]),
         },
     ])
     return {
