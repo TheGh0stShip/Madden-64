@@ -1,11 +1,7 @@
 # GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
-0x47064	0x100	src/libultra/os_enqueue_and_yield.s	-O2 -G0 -mips3 -mgp32 -mfp32	0aec3acfb02c3681276c32f8a5ab969e5fab24fa719fc8fd222d0639b80ce577
-0x47164	0x58	src/libultra/os_thread_queue.s	-O2 -G0 -mips3 -mgp32 -mfp32	143747b0b9bddd749687b0aa560ad891a817e90336a2bcb7801fc391ee97fc2b
-0x47338	0x10	src/libultra/os_cleanup_thread.s	-O2 -G0 -mips3 -mgp32 -mfp32	eece8cbe1c6683217c815d20cd7c18cde02c1007d11ca56ee5d565477aa66c75
 0x478A8	0x50	src/libultra/os_interrupt.s	-O2 -G0 -mips3 -mgp32 -mfp32	eea139088241ae2e4f665c8d86a50a8665f9835530da37e4dbb888c7c3b8ee3d
 0x478F8	0xB0	src/libultra/os_inval_dcache.s	-O2 -G0 -mips3 -mgp32 -mfp32	7ea4c6bffed307fe915ab8ef0ae37d86482e17b132eb99598f82ad5cbca40a71
 0x479A8	0x80	src/libultra/os_inval_icache.s	-O2 -G0 -mips3 -mgp32 -mfp32	cf9ac7a3378e8d2013f33517eebd339955e401c76380ec29ca56152a34f0040d
-0x471BC	0x17C	src/libultra/os_dispatch_thread.s	--symbol=__osPopThread:0x800465AC -O2 -G0 -mips3 -mgp32 -mfp32	b5af608370b0b042c80a7ffa4646f4aa61b8320fc615a166d4501a8364d18c44
 0x485D8	0x2C0	src/libgcc/ll_runtime.s	-O2 -G0 -mips3 -mgp32 -mfp32	ccf2a1fcc516893d7a2343a6fe49332f551ecb037d7de2e3dda5d2205bcd9ccc
 0x47808	0xA0	src/libultra/bzero.s	-O2 -G0 -mips3 -mgp32 -mfp32	6cb49ba97859396e62e39990cd9a31a7a775d8e8b5618695b03027823a7b2863
 0x48D58	0x60	src/libultra/os_map_tlb_rdb.s	-O2 -G0 -mips3 -mgp32 -mfp32	60e870785652f4c5376888fa708add8104458aed09503a8f38eb0925c8dbe54a
@@ -14,9 +10,7 @@
 0x4F5A8	0x10	src/libultra/os_set_compare.s	-O2 -G0 -mips3 -mgp32 -mfp32	424b05c5a5a48f29b4669731a97ea63a5ee362e2b47fa58afc9317487695229c
 0x4F198	0x10	src/libultra/os_get_count.s	-O2 -G0 -mips3 -mgp32 -mfp32	49439260d2ea325fd9d1049a302274c512c90775bbc3751b54513b65152f01ae
 0x47518	0x60	src/libultra/os_get_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	5fe6c90dfed9ccdd884b8a58cb6c13bc1de2707bce30d89f8f9d0ffcc779e4cd
-0x46A38	0x10	src/libultra/exception_preamble.s	--symbol=__osException:0x80045E48 -O2 -G0 -mips3 -mgp32 -mfp32	3db73acedae60b81faa9cf4e444eddb40587d136a2c28366c4a2fd6c93bd178c
 0x4FD58	0x80	src/libultra/os_writeback_dcache.s	-O2 -G0 -mips3 -mgp32 -mfp32	21514538b715f668861f169883c91749feb94cb501d5dfd9a24b67f782fa1b69
 0x4FDD8	0x30	src/libultra/os_writeback_dcache_all.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e2e910cf2dcf19b0d2826eea41187a62acc4584b8fb7316cc74acbd40f4b04f
 0x4F648	0xC0	src/libultra/os_probe_tlb.s	-O2 -G0 -mips3 -mgp32 -mfp32	349227b84b51cb246abaf9de4bf56eba78054d85575e1bfb09acfdb8d1bc0c28
 0x4DD68	0xA0	src/libultra/os_set_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	86cb8015715ed857a8877c8f765e022385d51b5c1e2cb8645586b08a05f91a23
-0x46F7C	0xE8	src/libultra/os_exception_helpers.s	--symbol=__osPopThread:0x800465AC --symbol=__osEnqueueThread:0x80046564 -O2 -G0 -mips3 -mgp32 -mfp32	9a0bac47baf1ae1685fc13c068a9ef9123abc7d9cd4d7d3e1909d4a541f0680d
