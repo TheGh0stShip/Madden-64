@@ -72,6 +72,16 @@ typedef struct OSIoMesg {
     OSPiHandle* piHandle;
 } OSIoMesg;
 
+typedef struct OSDevMgr {
+    s32 active;
+    OSThread* thread;
+    OSMesgQueue* cmdQueue;
+    OSMesgQueue* evtQueue;
+    OSMesgQueue* acsQueue;
+    s32 (*dma)(s32, u32, void*, u32);
+    s32 (*edma)(OSPiHandle*, s32, u32, void*, u32);
+} OSDevMgr;
+
 typedef struct OSViMode {
     u8 type;
     u8 pad[3];
@@ -155,5 +165,19 @@ extern s32 __osSpSetPc(u32 pc);
 extern s32 __osSpRawStartDma(s32 direction, u32 deviceAddress,
                              void* dramAddress, u32 size);
 extern s32 __osSpDeviceBusy(void);
+extern void osCreateThread(OSThread* thread, s32 id,
+                           void (*entry)(void*), void* argument,
+                           void* stack, s32 priority);
+extern s32 osGetThreadPri(OSThread* thread);
+extern void osSetThreadPri(OSThread* thread, s32 priority);
+extern void osSetEventMesg(s32 event, OSMesgQueue* queue, OSMesg message);
+extern void __osPiCreateAccessQueue(void);
+extern s32 __osPiRawStartDma(s32 direction, u32 deviceAddress,
+                             void* dramAddress, u32 size);
+extern s32 __osEPiRawStartDma(OSPiHandle* handle, s32 direction,
+                              u32 deviceAddress, void* dramAddress,
+                              u32 size);
+extern void __osDevMgrMain(void* argument);
+extern OSMesgQueue D_8007D260;
 
 #endif
