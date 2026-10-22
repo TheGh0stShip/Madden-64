@@ -125,3 +125,10 @@
 0x63220	0x8	src/code/empty_function.c	-DFUNCTION=func_80062620 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x64114	0x8	src/code/empty_function.c	-DFUNCTION=func_80063514 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x655F4	0x8	src/code/empty_function.c	-DFUNCTION=func_800649F4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0xEA18	0x1C	src/code/node_pool_advance.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	97cd495e4a88a49610679e56ff1ad86c3789dfbf588af0fcc887236f960b717e
+0x5C5E8	0x8	src/code/return_zero.c	-DFUNCTION=func_8005B9E8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	648cbc77d024f6d08bc8ff4e3bdf1cebf2a933937ee1cebef4690d015808bd9c
+0x65530	0x20	src/code/call_with_zero.c	-DFUNCTION=func_80064930 -DCALLEE=func_80032E00 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f196605f96d4ae5168392cf28c99e2fec92d07ccfc465433e5174ea9c92120ad
+0x65550	0x20	src/code/call_with_zero.c	-DFUNCTION=func_80064950 -DCALLEE=func_80032F3C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6333b08843e124bfd7d902bb76e8eb821993461dd0ae8b68b84b53fb45e28153
+0x65570	0x20	src/code/call_with_zero.c	-DFUNCTION=func_80064970 -DCALLEE=func_80032E00 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f196605f96d4ae5168392cf28c99e2fec92d07ccfc465433e5174ea9c92120ad
+0x65590	0x20	src/code/call_with_zero.c	-DFUNCTION=func_80064990 -DCALLEE=func_80032F3C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6333b08843e124bfd7d902bb76e8eb821993461dd0ae8b68b84b53fb45e28153
+0x655EC	0x8	src/code/return_zero.c	-DFUNCTION=func_800649EC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	648cbc77d024f6d08bc8ff4e3bdf1cebf2a933937ee1cebef4690d015808bd9c

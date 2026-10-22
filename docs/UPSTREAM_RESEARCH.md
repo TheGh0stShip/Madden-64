@@ -1,10 +1,13 @@
 # Upstream research
 
-Fifty focused searches were performed against public repository indexes and
-source trees, followed by binary comparison against locally available N64
-titles. The purpose was to find reusable source, symbols, formats, compiler
-settings, and tooling rather than assume that games from the same period share
-an engine.
+Two independent research sweeps were performed against public repository
+indexes, source trees, technical forums, and project histories, followed by
+binary comparison against locally available N64 titles. The first sweep used
+the fifty title- and engine-focused passes below. A second sweep used 52
+distinct searches focused on matching automation, compiler behavior, boundary
+recovery, overlays, audio, graphics, asset formats, and cross-project reuse.
+The purpose was to find reusable source, symbols, formats, compiler settings,
+and tooling rather than assume that games from the same period share an engine.
 
 | Pass | Search focus | Result |
 |---:|---|---|
@@ -75,6 +78,38 @@ an engine.
   strong examples of relocatable N64 modules and asset loaders. Binary and
   source inspection found a different Paradigm module/file system, not Madden's
   archive formats, so its game code is not being imported.
+- [xsig](https://github.com/Druthulu/xsig) demonstrates relocation-masked
+  signatures for proving shared MIPS functions across projects. Madden's
+  present same-image search can use the stricter raw-byte form immediately;
+  cross-project masking remains useful once relocatable object listings are
+  available for closer KMC relatives.
+- [Turok 2](https://github.com/mgrz18/turok2-decomp) provides two applicable
+  workflow patterns: bulk screening of small m2c drafts and explicit rejection
+  of candidates that do not contain a complete return path. Its engine and
+  compiler are different, so its source is not imported.
+- [n64-decomp-workbench](https://github.com/akratch/n64-decomp-workbench)
+  documents compiler-difference classification and reproducible search
+  campaigns. Its register, frame, and scheduling diagnostics are applicable
+  to near matches without changing Madden's existing byte gate.
+
+## Applied findings from the second sweep
+
+The useful results were applied as constraints rather than treated as progress
+by themselves:
+
+- Function-family grouping found repeated resident wrappers and return-value
+  leaves. One generic C body is now compiled under explicit function/callee
+  macros for each address, and every instance is independently byte-checked.
+- Candidate selection now rejects catalogue entries marked `invalid` or
+  `falls_through` before quick-win work. Direct disassembly confirmed that
+  several tempting 8- and 12-byte entries are internal basic blocks, not
+  functions.
+- Exact raw-byte families are preferred inside this image. Relocation-masked
+  comparison is reserved for cross-project objects where relocation records
+  distinguish addresses from genuine constants.
+- Bulk m2c screening is the next automation target, but generated drafts will
+  receive no progress credit unless the existing compiler and ROM comparison
+  gate reports an exact match.
 
 ## Binary comparison
 
