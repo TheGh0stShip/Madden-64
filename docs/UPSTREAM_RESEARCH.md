@@ -1,11 +1,15 @@
 # Upstream research
 
-Two independent research sweeps were performed against public repository
+Three independent research campaigns were performed against public repository
 indexes, source trees, technical forums, and project histories, followed by
 binary comparison against locally available N64 titles. The first sweep used
 the fifty title- and engine-focused passes below. A second sweep used 52
 distinct searches focused on matching automation, compiler behavior, boundary
-recovery, overlays, audio, graphics, asset formats, and cross-project reuse.
+recovery, overlays, audio, graphics, asset formats, and cross-project reuse. A
+third campaign added 250 distinct searches across completed N64 projects,
+KMC GCC 2.7.2 internals, EA/Tiburon sibling titles, graphics and audio formats,
+signature transfer, function discovery, historical documentation, and tracker
+reporting.
 The purpose was to find reusable source, symbols, formats, compiler settings,
 and tooling rather than assume that games from the same period share an engine.
 
@@ -110,6 +114,39 @@ by themselves:
 - Bulk m2c screening is the next automation target, but generated drafts will
   receive no progress credit unless the existing compiler and ROM comparison
   gate reports an exact match.
+
+## Findings from the 250-search campaign
+
+- The public Madden-specific trail remains sparse. No independent Madden 64
+  source tree, symbol map, archive parser, or implementation of the `TNMF`,
+  `TMot`, or `TSpr` containers was found. Searches for sibling EA N64 titles
+  also produced no source-compatible game engine.
+- [lfgfx](https://github.com/ethteck/lfgfx) was validated directly against an
+  uncompressed Madden `TNMF` record. With the container's segment base, it
+  resolves the record into a 32-byte header, an F3DEX display list, vertices,
+  a 512-byte palette, and texture payload at the offsets stored by the file.
+  This is useful structural evidence, but is not reconstruction credit.
+- [vgmstream](https://github.com/vgmstream/vgmstream/blob/master/src/meta/ea_schl.c)
+  documents EA's later `SCHl` block format and both N64 codec identifiers.
+  Madden's 237 audio records do not contain the `SCHl`, `SCDl`, or related
+  block signatures, so that decoder is not directly applicable to this title.
+- [mips-gcc-2.7.2](https://github.com/decompals/mips-gcc-2.7.2) remains the
+  best source-level reference for KMC-tailored register allocation, scheduling,
+  reload, combine, and delay-slot behavior. Compiler-pass inspection is more
+  useful for stubborn near matches than changing the established toolchain.
+- [fn64](https://github.com/fn64/fn64) demonstrates a conservative function
+  discovery policy that measures recall while accepting no known false splits.
+  Madden now applies the same principle operationally: the candidate-ranking
+  tool joins each overlay catalogue with its retained boundary findings and
+  excludes contradicted starts before proposing small unmatched functions.
+- [objdiff](https://github.com/encounter/objdiff) confirms that code, data, and
+  per-object progress should remain separate measures. The public report keeps
+  catalogued assets outside matching credit and does not turn research coverage
+  into completed units.
+
+Run `make candidates` to list the smallest credible unmatched overlay entries.
+The list is a work queue only; each item still requires disassembly review and
+the normal exact-byte gate.
 
 ## Binary comparison
 
