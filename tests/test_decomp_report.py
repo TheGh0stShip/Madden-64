@@ -33,6 +33,18 @@ class DecompReportTests(unittest.TestCase):
         self.assertEqual(categories["program_data"]["matched_code"], "0")
         self.assertEqual(categories["program_data"]["total_data"], "484548")
         self.assertEqual(categories["program_data"]["matched_data"], "496")
+        self.assertEqual(sum(int(unit["measures"]["total_code"])
+                             for unit in report["units"]), 753420)
+        self.assertEqual(sum(unit["measures"]["total_functions"]
+                             for unit in report["units"]), 2279)
+        unmatched = {unit["name"]: unit for unit in report["units"]
+                     if not unit["metadata"]["complete"]}
+        self.assertEqual(set(unmatched), {
+            "resident_unmatched", "boot_loader_unmatched",
+            "overlay_1_unmatched", "overlay_4_unmatched",
+        })
+        self.assertEqual(sum(int(unit["measures"]["total_code"])
+                             for unit in unmatched.values()), 700692)
 
     def test_cli_writes_valid_json(self):
         report = REPORT.build_report()

@@ -196,6 +196,60 @@ def build_report() -> dict[str, object]:
     matched_code = (sum(end - start for start, end, _source in ranges) +
                     overlay_matched + loader_matched)
     matched_functions = progress["matched_functions"]
+    matched_unit_functions = len(units)
+    grouped_function_credit = matched_functions - matched_unit_functions
+    if grouped_function_credit < 0:
+        raise ValueError("matching units exceed the reviewed matched-function count")
+    if grouped_function_credit:
+        units.append({
+            "name": "verified_functions_in_grouped_sources",
+            "measures": measures(0, 0, grouped_function_credit,
+                                 grouped_function_credit),
+            "functions": [],
+            "metadata": {
+                "complete": True,
+                "source_path": "config/us/progress.toml",
+                "progress_categories": ["code"],
+                "auto_generated": False,
+            },
+        })
+
+    module_progress = (
+        ("resident_unmatched", 393288,
+         sum(end - start for start, end, _source in ranges),
+         1373, matched_functions - len(loader_ranges) - overlay_functions),
+        ("boot_loader_unmatched", loader_code, loader_matched,
+         loader_functions, len(loader_ranges)),
+        ("overlay_1_unmatched", 226784,
+         sum(end - start for start, end, _source in
+             manifest_ranges([ROOT / overlay_configs[0]["path"]])),
+         590, overlay_configs[0]["functions"]),
+        ("overlay_4_unmatched", 132704,
+         sum(end - start for start, end, _source in
+             manifest_ranges([ROOT / overlay_configs[1]["path"]])),
+         311, overlay_configs[1]["functions"]),
+    )
+    for name, total_code, complete_code, total_functions, complete_functions in module_progress:
+        unmatched_code = total_code - complete_code
+        unmatched_functions = total_functions - complete_functions
+        if unmatched_code < 0 or unmatched_functions < 0:
+            raise ValueError(f"{name}: matched progress exceeds audited scope")
+        units.append({
+            "name": name,
+            "measures": measures(unmatched_code, 0, unmatched_functions, 0),
+            "functions": [],
+            "metadata": {
+                "complete": False,
+                "source_path": f"asm/us/{name}.s",
+                "progress_categories": ["code"],
+                "auto_generated": True,
+            },
+        })
+
+    if sum(int(unit["measures"]["total_code"]) for unit in units) != image["code_size"]:
+        raise ValueError("report units do not cover the audited executable-byte total")
+    if sum(unit["measures"]["total_functions"] for unit in units) != image["total_functions"]:
+        raise ValueError("report units do not cover the audited function-candidate total")
     categories = [
         {
             "id": "code",
