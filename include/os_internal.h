@@ -4,6 +4,7 @@
 #include "types.h"
 
 typedef void* OSMesg;
+typedef u64 OSTime;
 
 typedef struct OSThreadContext {
     u64 at, v0, v1, a0, a1, a2, a3;
@@ -49,6 +50,15 @@ typedef struct OSPiHandle {
     u32 baseAddress;
 } OSPiHandle;
 
+typedef struct OSTimer {
+    struct OSTimer* next;
+    struct OSTimer* prev;
+    OSTime interval;
+    OSTime value;
+    OSMesgQueue* mq;
+    OSMesg msg;
+} OSTimer;
+
 typedef struct OSViMode {
     u8 type;
     u8 pad[3];
@@ -89,5 +99,14 @@ extern void osCreateMesgQueue(OSMesgQueue* queue, OSMesg* messages, s32 count);
 extern s32 osRecvMesg(OSMesgQueue* queue, OSMesg* message, s32 flag);
 extern s32 osSendMesg(OSMesgQueue* queue, OSMesg message, s32 flag);
 extern u32 osVirtualToPhysical(void* address);
+extern OSTimer* D_80074ED0;
+extern OSTime D_8007E5A8;
+extern u32 D_8007E5B0;
+extern u32 D_8007E5B4;
+extern u32 D_8007E5B8;
+extern OSTime __osInsertTimer(OSTimer* timer);
+extern void __osSetTimerIntr(OSTime time);
+extern u32 osGetCount(void);
+extern void __osSetCompare(u32 value);
 
 #endif
