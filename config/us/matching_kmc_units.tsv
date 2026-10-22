@@ -9,5 +9,9 @@
 0xDEB0	0x10	src/code/object_active.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d4a473777ad939806f5dd7a7f130c7f402a991c89feb51ca2ed56fad28effecc
 0xE800	0x2C	src/code/node_flags.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9d35b067ae06959ff1250cb996704435d7e96b055c3c7cdeb04964bd33d72e70
 0xE870	0xC	src/code/node_callback.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3438afaf497c6bb7ecb00473448443434e7c91fc37627e19d4366956f6c658da
+0xE8C8	0x30	src/code/node_init.c	--symbol=func_8000DCF8:0x8000DCF8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f0cfea6e3a30317d0333c6dd84251669336f5cfa8243ff4d1b225852da1163de
 0xE8F8	0x24	src/code/node_children.c	--symbol=func_8000DC7C:0x8000DC7C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	054b4d29f4135898d8dd2d8bd6bd8540377ad17f23e263093b1f30fcf8263a5d
+0xE964	0x8	src/code/node_noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0xE96C	0x24	src/code/node_cleanup.c	--symbol=func_8000DB20:0x8000DB20 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	76ed3faacd410dc4282102700738ad3ff405a3939b9d3eb1e6fa030f58170a0c
+0xE9E8	0x8	src/code/node_noop_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0xE9F0	0x28	src/code/node_pool_select.c	--symbol=D_8008AFD4:0x8008AFD4 --symbol=D_80078430:0x80078430 --symbol=D_80078438:0x80078438 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	973fcaa7c767d961fde35eed2a4a5cd915249a78f0d412097d03b2a5a3389e8b
