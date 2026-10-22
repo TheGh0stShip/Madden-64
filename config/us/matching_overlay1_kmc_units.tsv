@@ -1,0 +1,21 @@
+# KMC GCC 2.7.2; OVERLAY_ROM_START SIZE SOURCE FLAGS SHA256
+0x8D24	0x8	src/overlays/overlay1/noop_97d28.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x962C	0x8	src/overlays/overlay1/return_one.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a7e7ca11a6b853f66aed197e962cbe2e8f22691c363f271a0a6e780f4ceb9b83
+0xADC8	0x8	src/overlays/overlay1/noop_99dcc.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0xC8FC	0x18	src/overlays/overlay1/noop_b900.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2dd9d4251f16baabaaefa264df6fc76be9cf5380c59f9fe6a4ff6580c3678b03
+0xD050	0x8	src/overlays/overlay1/noop_c054.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0xEA90	0x8	src/overlays/overlay1/noop_da94.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x106F8	0x8	src/overlays/overlay1/noop_f6fc.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x1082C	0x8	src/overlays/overlay1/noop_f830.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x16AD8	0x8	src/overlays/overlay1/return_zero.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	648cbc77d024f6d08bc8ff4e3bdf1cebf2a933937ee1cebef4690d015808bd9c
+0x16FCC	0x8	src/overlays/overlay1/noop_a5fd0.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x1B178	0x8	src/overlays/overlay1/noop_aa17c.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x22E94	0x8	src/overlays/overlay1/noop_b1e98.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x2B1A4	0x8	src/overlays/overlay1/noop_ba1a8.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x2C434	0x8	src/overlays/overlay1/noop_bb438.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x2D168	0x18	src/overlays/overlay1/noop_bc16c.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2dd9d4251f16baabaaefa264df6fc76be9cf5380c59f9fe6a4ff6580c3678b03
+0x2D224	0x18	src/overlays/overlay1/noop_bc228.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2dd9d4251f16baabaaefa264df6fc76be9cf5380c59f9fe6a4ff6580c3678b03
+0x2D2D8	0x8	src/overlays/overlay1/noop_bc2dc.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x2E2F4	0x10	src/overlays/overlay1/return_negative_one.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7cb80336a8021b7c1f5c5613fd225d1efc4358b27f2a5df1fbcffa87e9fe9cb5
+0x32EB4	0x8	src/overlays/overlay1/noop_c1eb8.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x34E08	0x8	src/overlays/overlay1/noop_c3e0c.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378

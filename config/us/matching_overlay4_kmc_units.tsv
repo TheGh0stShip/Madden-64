@@ -9,3 +9,5 @@
 0x15978	0x8	src/overlays/overlay4/return_zero_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	648cbc77d024f6d08bc8ff4e3bdf1cebf2a933937ee1cebef4690d015808bd9c
 0x16108	0x10	src/overlays/overlay4/return_zero_tertiary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	206eab6718c3a744583c123cd0a4569b7e273d12c72daaa657efa573e9c16203
 0x17728	0x8	src/overlays/overlay4/noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x1D52C	0x10	src/overlays/overlay4/boolean_pair.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c9d09e2eb525c045650f341c95d79a687ba0be86999b2f93aba7ff74e9007b85
+0x1DCB0	0x10	src/overlays/overlay4/boolean_pair_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	49840446e65419471283231fb2ef2c88522b9281e9effdf793c7b8a02fa29c15
