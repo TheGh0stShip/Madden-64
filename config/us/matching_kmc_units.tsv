@@ -140,3 +140,7 @@
 0x55AF0	0x20	src/code/call_no_arguments.c	-DFUNCTION=func_80054EF0 -DCALLEE=func_80063318 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c43dd26a5dc61bc7fa4ac7c8211e5ef724f709b74059757dda6cc4d09953f302
 0x5740	0x14	src/code/global_pointer_word_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	38f08653aacf43bfc4af877fbedd5730a737b5a33d8e70b07415e483dce7054c
 0x1BAA8	0x14	src/code/global_value_swap.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	31fb26087ee269d26cb844c28ad2a3395d071fc62f1cfacc9eb81e0486bc0e9c
+0x56158	0x10	src/code/nested_flag_enable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1ccb6f3af08704bfde08c912b7b171347509563af092a522108425280e6637e6
+0x633E0	0x10	src/code/nested_state_enable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e9ddb500dbd05e802c82d9c4e276fb403aea274f4fa5912d01e2de61bc4365d6
+0x57468	0x14	src/code/nested_callback_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	96185dd310fbf73067dd72c80ce97d4ab8642901980aec2124bdca2a3996b6fd
+0x6411C	0x14	src/code/object_pair_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	77d80406c4b9b7b5ec3e7ea39ebac491208335ab1b8f95f84467c574ab4dd0b0
