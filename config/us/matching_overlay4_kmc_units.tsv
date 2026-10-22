@@ -15,4 +15,17 @@
 0x18D80	0x48	src/overlays/overlay4/short_comparisons_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b893eaa2f9a0268c5a7f27ff17e6f0b7564b1d8e1e455e8e9305f727883e68ec
 0x1BEDC	0x20	src/overlays/overlay4/match_state.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ff403df1a2fd72cb17a6532a6a01131c1735fca7a75f71ee3bca9aaee0b5d7fa
 0x1CC64	0x20	src/overlays/overlay4/subsystem_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	dd125995d7531443861e73a5ec1846bc799f3774966b391fa4d07ea202f60a2a
+0x9E28	0x24	src/overlays/overlay4/object_timer_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30236f36c128352e613a1f8e1a737f0818ffd02cd0cc45b9266934aa369d2bbc
+0xB298	0x38	src/overlays/overlay4/object_range_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ff7598aeff340f5dd0710dec79e6933859d189cdf76d4096de82111001f38b1a
+0xBB68	0x28	src/overlays/overlay4/object_range_reset_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4c49545762e122605d66e25ee444724f93a6894a1416f8e433caf48df1c70af3
+0x113E4	0x40	src/overlays/overlay4/object_position_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7698204adbe4267a48321ee449717660ed35aa29bf487407a6b5ad4f166ee7b9
+0x135F0	0x34	src/overlays/overlay4/object_mode_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	761cc5451667cd542e6f244e5d30ae7490e65be9863657e326631f0a73ccb64f
+0x14CA8	0x20	src/overlays/overlay4/object_display_init.c	--symbol=func_800C0BBC:0x800C0BBC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d2a4b57456a89e6033ed158b71b2fc82495810889e73743d15f4cb730cdc691c
+0x15238	0x38	src/overlays/overlay4/object_fields_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	67d78b4858e9de74023bfc1d88953fabe2b8dd34a9bdd228c4336553d8184d94
+0x15488	0x38	src/overlays/overlay4/object_fields_init_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	67d78b4858e9de74023bfc1d88953fabe2b8dd34a9bdd228c4336553d8184d94
+0x15D08	0x20	src/overlays/overlay4/object_offsets_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	211337a41add1bc53580b75f3236486ca11b7864b11296eb8c36e9b490927424
+0x1B7D4	0x28	src/overlays/overlay4/global_object_update.c	--symbol=func_8001A520:0x8001A520 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c82c0a2bbbf55d0cdffa2c77b52adf1d31e88ae6dec3e9bcd32b51eabff14bf5
+0x1BC74	0x34	src/overlays/overlay4/optional_resource_reset.c	--symbol=func_800E0CFC:0x800E0CFC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4c56b1c5312ad5ae7ccc74b45361f9fef7e1f048626fb57a71dfbae54201dc23
+0x1D53C	0x40	src/overlays/overlay4/object_frame_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3cbf901b6a954aad05a87b241d22b07dc8a0c66edc19b8f6424db2cacb3b4b32
+0x1E8F8	0xC	src/overlays/overlay4/object_timeout_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0c6daf9730ced1a0b4ef95c5dccd2970b597babbcd1737c275094e2b2dee8c0f
 0x1DB10	0x18	src/overlays/overlay4/object_flag_enable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d4097a8c1c8cb3674c3340b4ab9c32ecd02eabe2cdcec338344db00ff446e392
