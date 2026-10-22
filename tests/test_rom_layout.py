@@ -16,6 +16,7 @@ MAIN = ROOT / "build/us/survey/main_segment.bin"
 LEDGER = ROOT / "config/us/rom_files.tsv"
 MAP = ROOT / "config/us/rom_map.tsv"
 PROGRESS = ROOT / "config/us/progress.toml"
+OVERLAY1_FINDINGS = ROOT / "config/us/overlay1_boundary_findings.tsv"
 
 
 @unittest.skipUnless(ROM.is_file() and MAIN.is_file(), "requires verified ROM survey")
@@ -106,6 +107,23 @@ class RomLayoutTests(unittest.TestCase):
         main = MAIN.read_bytes()
         self.assertEqual(decoded[0x40:], main[0x40:])
         self.assertEqual(decoded[:0x40], bytes(0x40))
+
+    def test_overlay1_boundary_findings_are_well_formed(self):
+        lines = OVERLAY1_FINDINGS.read_text().splitlines()
+        self.assertEqual(lines[0], "address\tkind\tfunction\tdetail")
+        self.assertEqual(len(lines) - 1, 949)
+        allowed_kinds = {
+            "branch_outside", "branch_to_entry", "cross_branch",
+            "falls_through", "in_text_data", "interior_alias", "junk_start",
+            "late_start", "rejected_start", "shared_epilogue", "stray_words",
+            "start_in_delay_slot",
+        }
+        for line in lines[1:]:
+            address, kind, _function, detail = line.split("\t", 3)
+            self.assertGreaterEqual(int(address, 16), 0x80090004)
+            self.assertLess(int(address, 16), 0x800C75EC)
+            self.assertIn(kind, allowed_kinds)
+            self.assertTrue(detail)
 
 
 if __name__ == "__main__":

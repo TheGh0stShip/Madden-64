@@ -143,6 +143,14 @@ functions. Byte totals and ROM locations are exact. The expanded program rows
 sum to 1,237,968 bytes including the loader, and the code/data split above sums
 to the same value.
 
+Overlay 1's boundary review is retained in
+[`config/us/overlay1_boundary_findings.tsv`](../config/us/overlay1_boundary_findings.tsv).
+Its 949 observations record the evidence behind non-obvious splits, including
+embedded data, fall-through entries, shared epilogues, interior aliases, and
+cross-boundary branches. These findings are diagnostic constraints rather than
+additional functions; they prevent ambiguous sweep seeds from silently
+inflating the public function count.
+
 Run `make audit` to regenerate the ignored JSON, TSV, and Markdown reports under
 `build/us/audit/` from a verified local ROM. The complete location ledger is
 committed as [`config/us/rom_files.tsv`](../config/us/rom_files.tsv); the test
