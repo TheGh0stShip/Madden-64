@@ -2,3 +2,5 @@
 0xD498	0xA8	src/code/object_flags.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	858ac3a1ce465482f6ed1587e925bca6ad7ddd3cee69d7e8cf07eb3716bb4405
 0xD540	0x50	src/code/object_dimensions.c	--symbol=func_8000CC18:0x8000CC18 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e5746656a57a066c86bfb297a34745aa3f1de720e769db00f4917d77c14ba21
 0xD590	0x38	src/code/object_position.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ec9ec0f5d8f9d2aae611a3ce9ea03f237a015197a66a4d5611ffb13f59436e3a
+0xD738	0x70	src/code/object_bounds.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	182114fbe2c2252b46c7461bcc66a2b43d1f9e0a43a249be24a95a08155b30c6
+0xD7A8	0x44	src/code/object_list.c	--symbol=D_8008B3D0:0x8008B3D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d8089ae7c92b977056c726b1aca32c4e568bd94958c09c7120c3c64d2609d5c8
