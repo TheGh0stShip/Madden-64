@@ -14,6 +14,7 @@ SPEC.loader.exec_module(AUDIT)
 ROM = ROOT / "Madden Football 64 (USA).z64"
 MAIN = ROOT / "build/us/survey/main_segment.bin"
 LEDGER = ROOT / "config/us/rom_files.tsv"
+MAP = ROOT / "config/us/rom_map.tsv"
 PROGRESS = ROOT / "config/us/progress.toml"
 
 
@@ -57,6 +58,14 @@ class RomLayoutTests(unittest.TestCase):
 
     def test_committed_record_ledger_is_current(self):
         self.assertEqual(LEDGER.read_text(), AUDIT.records_tsv(self.audit))
+
+    def test_physical_map_is_gap_free_and_current(self):
+        rows = AUDIT.physical_map(self.audit)
+        self.assertEqual(rows[0]["rom_start"], 0)
+        self.assertEqual(rows[-1]["rom_end"], 0xC00000)
+        self.assertEqual(sum(row["rom_end"] - row["rom_start"] for row in rows),
+                         0xC00000)
+        self.assertEqual(MAP.read_text(), AUDIT.physical_map_tsv(self.audit))
 
     def test_public_inventory_totals_are_current(self):
         inventory = tomllib.loads(PROGRESS.read_text())["inventory"]

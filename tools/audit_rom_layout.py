@@ -259,10 +259,66 @@ def records_tsv(audit: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+def physical_map(audit: dict) -> list[dict]:
+    """Return non-overlapping intervals covering every physical ROM byte."""
+    rows = [
+        {"rom_start": 0, "rom_end": 0x1000, "kind": "rom_header_and_ipl3",
+         "archive": None, "record": None},
+        {"rom_start": 0x1000, "rom_end": audit["archives"][0]["start"],
+         "kind": "boot_loader", "archive": None, "record": None},
+    ]
+    records = {(record["archive"], record["index"]): record
+               for record in audit["records"]}
+    for archive in audit["archives"]:
+        if archive["table_size"] == 0:
+            continue
+        rows.append({"rom_start": archive["start"],
+                     "rom_end": archive["start"] + archive["table_size"],
+                     "kind": "archive_table", "archive": archive["index"],
+                     "record": None})
+        for index in range(archive["records"]):
+            record = records[(archive["index"], index)]
+            logical_end = record["rom_start"] + record["logical_stored_size"]
+            if logical_end > record["rom_start"]:
+                rows.append({"rom_start": record["rom_start"],
+                             "rom_end": logical_end, "kind": record["kind"],
+                             "archive": archive["index"], "record": index})
+            if logical_end < record["rom_end"]:
+                rows.append({"rom_start": logical_end,
+                             "rom_end": record["rom_end"],
+                             "kind": "record_alignment", "archive": archive["index"],
+                             "record": index})
+    rows.append({"rom_start": audit["archives"][-1]["end"],
+                 "rom_end": audit["rom_size"], "kind": "unused_padding",
+                 "archive": None, "record": None})
+    rows.sort(key=lambda row: row["rom_start"])
+    cursor = 0
+    for row in rows:
+        if row["rom_start"] != cursor or row["rom_end"] <= row["rom_start"]:
+            raise AuditError(f"physical map discontinuity at 0x{cursor:X}")
+        cursor = row["rom_end"]
+    if cursor != audit["rom_size"]:
+        raise AuditError(f"physical map ends at 0x{cursor:X}")
+    return rows
+
+
+def physical_map_tsv(audit: dict) -> str:
+    lines = ["rom_start\trom_end\tsize\tkind\tarchive\trecord"]
+    for row in physical_map(audit):
+        lines.append("\t".join((f'0x{row["rom_start"]:06X}',
+                                f'0x{row["rom_end"]:06X}',
+                                str(row["rom_end"] - row["rom_start"]),
+                                row["kind"],
+                                "-" if row["archive"] is None else str(row["archive"]),
+                                "-" if row["record"] is None else str(row["record"]))))
+    return "\n".join(lines) + "\n"
+
+
 def write_outputs(audit: dict, output: Path) -> None:
     output.mkdir(parents=True, exist_ok=True)
     (output / "rom_layout.json").write_text(json.dumps(audit, indent=2) + "\n")
     (output / "rom_files.tsv").write_text(records_tsv(audit))
+    (output / "rom_map.tsv").write_text(physical_map_tsv(audit))
     summary = audit["summary"]
     md = ["# Madden Football 64 ROM audit", "",
           f"- Archive slots: {summary['archive_slots']} ({summary['nonempty_archives']} non-empty)",

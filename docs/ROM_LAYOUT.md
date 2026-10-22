@@ -34,11 +34,15 @@ The complete physical-byte equation is therefore:
 | Unused tail padding | 5,674 |
 | **Complete ROM** | **12,582,912** |
 
-Every payload has an exact ROM start and exclusive end in
-[`config/us/rom_files.tsv`](../config/us/rom_files.tsv). Together with the
-top-level ranges above, that ledger is the canonical answer to where each
-physical item lives; automated tests regenerate it from the verified cartridge
-and reject any difference.
+Every byte has an exact ROM start and exclusive end in the gap-free
+[`config/us/rom_map.tsv`](../config/us/rom_map.tsv). It includes the header,
+loader, all fourteen archive tables, the logical contents and alignment of
+every record, and the final unused padding. The companion
+[`config/us/rom_files.tsv`](../config/us/rom_files.tsv) retains the packed and
+expanded sizes for each file record. The flat map contains 1,992 contiguous
+intervals and covers addresses `0x000000..0xC00000` exactly once. Automated
+tests regenerate both ledgers from the verified cartridge and reject any
+difference.
 
 The audit also reproduces the boot loader's type-1 LZ decoder. Decoding the
 first file regenerates the surveyed resident program byte-for-byte after its
