@@ -238,3 +238,6 @@
 0xB4FC	0x44	src/code/render_state_ba001001.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7f50bbb6539d085d072803f8e7eca559d9daadafdcd4edac10593fb235f61996
 0xB540	0x44	src/code/render_state_ba000e02.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f2b1cdb793d76768e66eee7f716e05509d9b0adf47a8249786385cc7350c5a2e
 0xB584	0x44	src/code/render_state_ba001301.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8e693db51f2dada0e5ef5c54d39fee8b6b165bcb00bf8b57d99709afa35718d4
+0xBD40	0x44	src/code/render_state_bc00000e.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	580984a1fb1e28f5bd656e7c1ae5c31e0aaa5e730f95ca56895b551d3ae13953
+0xBCEC	0x54	src/code/render_segment_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	93804b800d103caa1681aa4daba9b5486baf01993cdd7041aa1365418d381514
+0xBD84	0x54	src/code/render_state_bc000006.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	de573b8c475299ae33e3a647a63e0754f48d288437f8dc4cf47c3e5622e8465f
