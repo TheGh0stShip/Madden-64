@@ -18,17 +18,17 @@ class DecompReportTests(unittest.TestCase):
         totals = report["measures"]
         self.assertEqual(report["version"], 2)
         self.assertEqual(totals["total_code"], "753420")
-        self.assertEqual(totals["matched_code"], "52728")
+        self.assertEqual(totals["matched_code"], "52852")
         self.assertEqual(totals["total_data"], "484548")
         self.assertEqual(totals["matched_data"], "496")
         self.assertEqual(totals["total_functions"], 2279)
-        self.assertEqual(totals["matched_functions"], 496)
+        self.assertEqual(totals["matched_functions"], 498)
         categories = {item["id"]: item["measures"] for item in report["categories"]}
         self.assertEqual(set(categories), {"code", "program_data"})
         self.assertEqual(categories["code"]["total_code"], "753420")
-        self.assertEqual(categories["code"]["matched_code"], "52728")
+        self.assertEqual(categories["code"]["matched_code"], "52852")
         self.assertEqual(categories["code"]["total_functions"], 2279)
-        self.assertEqual(categories["code"]["matched_functions"], 496)
+        self.assertEqual(categories["code"]["matched_functions"], 498)
         self.assertEqual(categories["program_data"]["total_code"], "0")
         self.assertEqual(categories["program_data"]["matched_code"], "0")
         self.assertEqual(categories["program_data"]["total_data"], "484548")
@@ -44,7 +44,7 @@ class DecompReportTests(unittest.TestCase):
             "overlay_1_unmatched", "overlay_4_unmatched",
         })
         self.assertEqual(sum(int(unit["measures"]["total_code"])
-                             for unit in unmatched.values()), 700692)
+                             for unit in unmatched.values()), 700568)
 
     def test_cli_writes_valid_json(self):
         report = REPORT.build_report()
