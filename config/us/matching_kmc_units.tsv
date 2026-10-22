@@ -164,3 +164,7 @@
 0x1475C	0x30	src/code/callback_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6a9f3eb83d13713c3831002f33f3359b8e17958e5c69e33a4182f756271727e2
 0x201A4	0x30	src/code/indexed_entry_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	86ea9e29deb44fa79d8eb9b8e2f94cc7d4e0b43ead2f002312915c75ae1bd1d9
 0xEC2C	0x30	src/code/pool_entry_at.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8a2fd554e13ec2077a1815af4c95837e306809ddc0e04ae080634a8d86c74990
+0x284D8	0x30	src/code/overlay_short_query.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5ed8e66f301f42fccc40d4e737665b0c97b87e0fbb7b9309aa33bdb40d5aba79
+0x2D6A0	0x30	src/code/task_state_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e22cdbece40f300ed525f66888942bc570250b124d87e0d5ac16a9b6df20fc0
+0x35F80	0x30	src/code/status_query.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	057d76d32257d79cbc926d40f13c6371e19f3eaae8a540c9c40fdff7b644c29d
+0x2F25C	0x2C	src/code/string_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e26b66c504161b1b2aeaad991d273544afb3ffc40832d37351fb354322e0305d

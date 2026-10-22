@@ -35,7 +35,7 @@ class AttackSurfaceTests(unittest.TestCase):
         modules = self.analysis["functions"]["modules"]
         self.assertEqual(sum(item["functions"] for item in modules.values()), 2823)
         self.assertEqual(sum(item["matched_functions"] for item in modules.values()),
-                         517)
+                         521)
 
 
 if __name__ == "__main__":
