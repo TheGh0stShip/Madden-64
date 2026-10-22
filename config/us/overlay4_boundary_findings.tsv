@@ -1,0 +1,349 @@
+address	kind	function	detail
+0x800C77E8	junk_start	0x800C77E8	first word is not compiler output (stray or data bytes)
+0x800C77EC	stray_words		0x4 non-code bytes before 0x800C77F0
+0x800C78A0	rejected_start		sweep seed: falls into the next function
+0x800C78A0	stray_words		0x4 non-code bytes before 0x800C78A4
+0x800C78A4	late_start	0x800C78A4	reads v0 set by the preceding bytes
+0x800C7A88	in_text_data		0x48 bytes of non-code inside text
+0x800C7A88	rejected_start		sweep seed: falls into the next function
+0x800C7AD0	late_start	0x800C7AD0	reads at,v0,v1 set by the preceding bytes
+0x800C7BD0	in_text_data		0x34 bytes of non-code inside text
+0x800C7BD0	rejected_start		sweep seed: falls into the next function
+0x800C7FFC	in_text_data		0x14 bytes of non-code inside text
+0x800C7FFC	rejected_start		sweep seed: falls into the next function
+0x800C8010	falls_through	0x800C8010	preceding code continues into this entry
+0x800C8050	stray_words		0x8 non-code bytes before 0x800C8058
+0x800C8058	late_start	0x800C8058	reads v0 set by the preceding bytes
+0x800C8374	in_text_data		0x2AC bytes of non-code inside text
+0x800C8374	rejected_start		sweep seed: falls into the next function
+0x800C8628	stray_words		0x8 non-code bytes before 0x800C8630
+0x800C8640	in_text_data		0x34 bytes of non-code inside text
+0x800C8674	late_start	0x800C8674	reads v0 set by the preceding bytes
+0x800C8728	shared_epilogue	0x800C8674	branch to epilogue at 0x800C882C in 0x800C872C
+0x800C8768	branch_outside	0x800C872C	branch to 0x800C8628 outside any entry
+0x800C8964	in_text_data		0x188 bytes of non-code inside text
+0x800C8964	rejected_start		sweep seed: falls into the next function
+0x800C8AEC	late_start	0x800C8AEC	reads at set by the preceding bytes; not referenced
+0x800C8C08	in_text_data		0x80 bytes of non-code inside text
+0x800C8C08	rejected_start		sweep seed: falls into the next function
+0x800C8C88	late_start	0x800C8C88	reads at,v0 set by the preceding bytes; not referenced
+0x800C8E30	in_text_data		0x70 bytes of non-code inside text
+0x800C8E30	rejected_start		sweep seed: falls into the next function
+0x800C8EA0	late_start	0x800C8EA0	reads v0 set by the preceding bytes; not referenced
+0x800C8F18	cross_branch	0x800C8EA0	branch to 0x800C8FA4 inside 0x800C8F64
+0x800C8F64	late_start	0x800C8F64	reads t6,t7 set by the preceding bytes; not referenced
+0x800C9370	in_text_data		0x3C bytes of non-code inside text
+0x800C9370	rejected_start		sweep seed: falls into the next function
+0x800C93AC	falls_through	0x800C93AC	preceding code continues into this entry
+0x800C93B4	in_text_data		0x24 bytes of non-code inside text
+0x800C93D8	late_start	0x800C93D8	reads v0 set by the preceding bytes
+0x800C9418	late_start	0x800C9418	reads t0,v0 set by the preceding bytes
+0x800C945C	late_start	0x800C945C	reads at,t0,v0 set by the preceding bytes
+0x800C94A4	in_text_data		0x24 bytes of non-code inside text
+0x800C94A4	rejected_start		sweep seed: falls into the next function
+0x800C94C8	late_start	0x800C94C8	reads v0 set by the preceding bytes
+0x800C9668	branch_outside	0x800C94C8	branch to 0x800C97E8 outside any entry
+0x800C9724	late_start	0x800C9724	reads v0 set by the preceding bytes
+0x800C97E8	stray_words		0x8 non-code bytes before 0x800C97F0
+0x800C9FCC	in_text_data		0x38 bytes of non-code inside text
+0x800C9FCC	rejected_start		sweep seed: falls into the next function
+0x800CA004	falls_through	0x800CA004	preceding code continues into this entry
+0x800CA064	in_text_data		0x228 bytes of non-code inside text
+0x800CA3AC	branch_to_entry	0x800CA38C	branch into the start of 0x800CA3C4
+0x800CA740	in_text_data		0x68 bytes of non-code inside text
+0x800CA740	rejected_start		sweep seed: falls into the next function
+0x800CA7A8	late_start	0x800CA7A8	reads v0,v1 set by the preceding bytes
+0x800CB018	in_text_data		0x47C bytes of non-code inside text
+0x800CB018	rejected_start		sweep seed: falls into the next function
+0x800CB494	falls_through	0x800CB494	preceding code continues into this entry
+0x800CC048	in_text_data		0x144 bytes of non-code inside text
+0x800CC048	rejected_start		sweep seed: falls into the next function
+0x800CC238	late_start	0x800CC238	reads v1,t0,v0 set by the preceding bytes
+0x800CC4A0	late_start	0x800CC4A0	reads v0,v1 set by the preceding bytes
+0x800CC578	branch_outside	0x800CC4A0	branch to 0x800CC5D4 outside any entry
+0x800CC580	cross_branch	0x800CC4A0	branch to 0x800CC624 inside 0x800CC61C
+0x800CC5D4	in_text_data		0x48 bytes of non-code inside text
+0x800CC61C	late_start	0x800CC61C	reads v0,t1 set by the preceding bytes
+0x800CC64C	cross_branch	0x800CC61C	branch to 0x800CC85C inside 0x800CC7C4
+0x800CC658	cross_branch	0x800CC61C	branch to 0x800CC85C inside 0x800CC7C4
+0x800CC660	cross_branch	0x800CC61C	branch to 0x800CC6AC inside 0x800CC6A8
+0x800CC68C	late_start	0x800CC68C	reads t0 set by the preceding bytes
+0x800CC698	falls_through	0x800CC698	preceding code continues into this entry
+0x800CC6A8	start_in_delay_slot	0x800CC6A8	entry begins in the delay slot of a jump
+0x800CC760	cross_branch	0x800CC6A8	branch to 0x800CC7D8 inside 0x800CC7C4
+0x800CC7A8	cross_branch	0x800CC6A8	branch to 0x800CC7D4 inside 0x800CC7C4
+0x800CC7C4	late_start	0x800CC7C4	reads v0 set by the preceding bytes
+0x800CC8E4	branch_outside	0x800CC7C4	branch to 0x800CC954 outside any entry
+0x800CC914	late_start	0x800CC914	reads v0 set by the preceding bytes
+0x800CC954	in_text_data		0x24 bytes of non-code inside text
+0x800CC978	late_start	0x800CC978	reads v1,v0 set by the preceding bytes
+0x800CC9BC	branch_to_entry	0x800CC978	branch into the start of 0x800CCAF8
+0x800CC9D0	branch_to_entry	0x800CC978	branch into the start of 0x800CCAF8
+0x800CCA38	cross_branch	0x800CC978	branch to 0x800CCCB0 inside 0x800CCAF8
+0x800CCA7C	late_start	0x800CCA7C	reads v0,v1 set by the preceding bytes
+0x800CCAF8	interior_alias	0x800CCAF8	label reached only by branches from 0x800CC9BC
+0x800CDA2C	in_text_data		0x54 bytes of non-code inside text
+0x800CDA2C	rejected_start		sweep seed: falls into the next function
+0x800CDAC0	branch_outside	0x800CDA80	branch to 0x800CDA40 outside any entry
+0x800CE31C	in_text_data		0x1EC bytes of non-code inside text
+0x800CE31C	rejected_start		sweep seed: terminator without delay slot
+0x800CE508	start_in_delay_slot	0x800CE508	entry begins in the delay slot of a jump
+0x800CE5FC	shared_epilogue	0x800CE508	branch to epilogue at 0x800CE9B8 in 0x800CE6BC
+0x800CE638	shared_epilogue	0x800CE508	branch to epilogue at 0x800CE9B8 in 0x800CE6BC
+0x800CE69C	cross_branch	0x800CE508	branch to 0x800CE6C8 inside 0x800CE6BC
+0x800CE6B8	cross_branch	0x800CE508	branch to 0x800CE6C8 inside 0x800CE6BC
+0x800CF4C8	shared_epilogue	0x800CF470	branch to epilogue at 0x800CFD8C in 0x800CFC44
+0x800CF5C4	cross_branch	0x800CF470	branch to 0x800CFD78 inside 0x800CFC44
+0x800CF5F4	shared_epilogue	0x800CF470	branch to epilogue at 0x800CFD8C in 0x800CFC44
+0x800CF994	cross_branch	0x800CF470	branch to 0x800CF9F8 inside 0x800CF9F0
+0x800CF9AC	cross_branch	0x800CF470	branch to 0x800CF9F8 inside 0x800CF9F0
+0x800CF9E0	branch_to_entry	0x800CF470	branch into the start of 0x800CF9F0
+0x800CF9F0	interior_alias	0x800CF9F0	label reached only by branches from 0x800CF9E0
+0x800CFA54	cross_branch	0x800CF9F0	branch to 0x800CFD78 inside 0x800CFC44
+0x800CFBA8	cross_branch	0x800CF9F0	branch to 0x800CFD50 inside 0x800CFC44
+0x800CFBCC	cross_branch	0x800CF9F0	branch to 0x800CFC88 inside 0x800CFC44
+0x800CFBE0	cross_branch	0x800CF9F0	branch to 0x800CFC88 inside 0x800CFC44
+0x800CFBF4	cross_branch	0x800CF9F0	branch to 0x800CFC88 inside 0x800CFC44
+0x800CFC60	cross_branch	0x800CFC44	branch to 0x800CFC14 inside 0x800CF9F0
+0x800CFC70	cross_branch	0x800CFC44	branch to 0x800CFC14 inside 0x800CF9F0
+0x800CFC80	cross_branch	0x800CFC44	branch to 0x800CFC14 inside 0x800CF9F0
+0x800D1ACC	branch_to_entry	0x800D1AB8	branch into the start of 0x800D1AF8
+0x800D1AF8	interior_alias	0x800D1AF8	label reached only by branches from 0x800D1ACC
+0x800D1C7C	in_text_data		0x114 bytes of non-code inside text
+0x800D1C7C	rejected_start		sweep seed: falls into the next function
+0x800D1D90	late_start	0x800D1D90	reads v1,v0 set by the preceding bytes
+0x800D1DA0	stray_words		0xC non-code bytes before 0x800D1DAC
+0x800D1DDC	stray_words		0xC non-code bytes before 0x800D1DE8
+0x800D2700	in_text_data		0x718 bytes of non-code inside text
+0x800D2700	rejected_start		sweep seed: falls into the next function
+0x800D3178	stray_words		0x8 non-code bytes before 0x800D3180
+0x800D36DC	in_text_data		0x3A4 bytes of non-code inside text
+0x800D36DC	rejected_start		sweep seed: falls into the next function
+0x800D3A80	late_start	0x800D3A80	reads v0,v1 set by the preceding bytes
+0x800D3B00	in_text_data		0x110 bytes of non-code inside text
+0x800D3B00	rejected_start		sweep seed: falls into the next function
+0x800D3D94	in_text_data		0x28 bytes of non-code inside text
+0x800D3D94	rejected_start		sweep seed: falls into the next function
+0x800D3DBC	falls_through	0x800D3DBC	preceding code continues into this entry
+0x800D3DD0	in_text_data		0xE8 bytes of non-code inside text
+0x800D3EB8	late_start	0x800D3EB8	reads v1,v0 set by the preceding bytes
+0x800D3F44	branch_outside	0x800D3EB8	branch to 0x800D3E98 outside any entry
+0x800D3FE4	in_text_data		0x10 bytes of non-code inside text
+0x800D3FF4	falls_through	0x800D3FF4	preceding code continues into this entry
+0x800D4A40	in_text_data		0x34 bytes of non-code inside text
+0x800D4A40	rejected_start		sweep seed: falls into the next function
+0x800D4A74	late_start	0x800D4A74	reads v0 set by the preceding bytes
+0x800D4C94	in_text_data		0x2C bytes of non-code inside text
+0x800D4C94	rejected_start		sweep seed: falls into the next function
+0x800D4CC0	falls_through	0x800D4CC0	preceding code continues into this entry
+0x800D4CCC	stray_words		0x4 non-code bytes before 0x800D4CD0
+0x800D4CDC	in_text_data		0x40 bytes of non-code inside text
+0x800D4EB8	in_text_data		0xCC bytes of non-code inside text
+0x800D4EB8	rejected_start		sweep seed: falls into the next function
+0x800D4F84	late_start	0x800D4F84	reads v0,v1 set by the preceding bytes
+0x800D50B8	in_text_data		0xF8 bytes of non-code inside text
+0x800D50B8	rejected_start		sweep seed: terminator without delay slot
+0x800D51B0	start_in_delay_slot	0x800D51B0	entry begins in the delay slot of a jump
+0x800D521C	late_start	0x800D521C	reads at,v1 set by the preceding bytes
+0x800D52D4	late_start	0x800D52D4	reads v0 set by the preceding bytes
+0x800D5758	in_text_data		0x5D4 bytes of non-code inside text
+0x800D5758	rejected_start		sweep seed: falls into the next function
+0x800D5D2C	late_start	0x800D5D2C	reads v0 set by the preceding bytes
+0x800D5D3C	in_text_data		0xA0 bytes of non-code inside text
+0x800D5DDC	late_start	0x800D5DDC	reads v0,v1 set by the preceding bytes
+0x800D5EDC	late_start	0x800D5EDC	reads v0 set by the preceding bytes
+0x800D6144	in_text_data		0x34 bytes of non-code inside text
+0x800D6144	rejected_start		sweep seed: falls into the next function
+0x800D6178	falls_through	0x800D6178	preceding code continues into this entry
+0x800D6180	in_text_data		0x14 bytes of non-code inside text
+0x800D6194	falls_through	0x800D6194	preceding code continues into this entry
+0x800D61AC	in_text_data		0x7C bytes of non-code inside text
+0x800D6228	late_start	0x800D6228	reads v1,v0 set by the preceding bytes
+0x800D777C	in_text_data		0xF8 bytes of non-code inside text
+0x800D777C	rejected_start		sweep seed: falls into the next function
+0x800D7874	late_start	0x800D7874	reads v0 set by the preceding bytes
+0x800D9E24	cross_branch	0x800D9E0C	branch to 0x800DA390 inside 0x800DA374
+0x800D9EC0	shared_epilogue	0x800D9E0C	branch to epilogue at 0x800DA3A4 in 0x800DA374
+0x800DA020	branch_to_entry	0x800D9E0C	branch into the start of 0x800DA374
+0x800DA044	branch_to_entry	0x800D9E0C	branch into the start of 0x800DA374
+0x800DA130	branch_to_entry	0x800D9E0C	branch into the start of 0x800DA374
+0x800DA350	branch_to_entry	0x800D9E0C	branch into the start of 0x800DA374
+0x800DA374	interior_alias	0x800DA374	label reached only by branches from 0x800DA020
+0x800DAF84	in_text_data		0x28 bytes of non-code inside text
+0x800DAF84	rejected_start		sweep seed: falls into the next function
+0x800DAFAC	falls_through	0x800DAFAC	preceding code continues into this entry
+0x800DAFC0	in_text_data		0x38 bytes of non-code inside text
+0x800DAFF8	falls_through	0x800DAFF8	preceding code continues into this entry
+0x800DB034	in_text_data		0x2C bytes of non-code inside text
+0x800DB060	late_start	0x800DB060	reads v0 set by the preceding bytes; not referenced
+0x800DB0AC	in_text_data		0x10 bytes of non-code inside text
+0x800DB0BC	branch_to_entry	0x800DB0BC	branch into the start of 0x800DB468
+0x800DB0BC	late_start	0x800DB0BC	reads v0 set by the preceding bytes; not referenced
+0x800DB0C8	shared_epilogue	0x800DB0BC	branch to epilogue at 0x800DB46C in 0x800DB468
+0x800DB0D8	shared_epilogue	0x800DB0BC	branch to epilogue at 0x800DB46C in 0x800DB468
+0x800DB0F0	shared_epilogue	0x800DB0BC	branch to epilogue at 0x800DB46C in 0x800DB468
+0x800DB14C	branch_to_entry	0x800DB0BC	branch into the start of 0x800DB22C
+0x800DB1A4	late_start	0x800DB1A4	reads v0,v1 set by the preceding bytes
+0x800DB22C	interior_alias	0x800DB22C	label reached only by branches from 0x800DB14C
+0x800DB468	interior_alias	0x800DB468	label reached only by branches from 0x800DB0BC
+0x800DB4B0	in_text_data		0xA4 bytes of non-code inside text
+0x800DB4B0	rejected_start		sweep seed: falls into the next function
+0x800DB554	late_start	0x800DB554	reads v0 set by the preceding bytes
+0x800DB670	in_text_data		0x60 bytes of non-code inside text
+0x800DB670	rejected_start		sweep seed: falls into the next function
+0x800DB6EC	in_text_data		0x4C bytes of non-code inside text
+0x800DB738	late_start	0x800DB738	reads v1 set by the preceding bytes
+0x800DB74C	in_text_data		0x54 bytes of non-code inside text
+0x800DB7A0	falls_through	0x800DB7A0	preceding code continues into this entry
+0x800DB7D4	late_start	0x800DB7D4	reads v0,v1 set by the preceding bytes
+0x800DBF08	in_text_data		0x30 bytes of non-code inside text
+0x800DBF08	rejected_start		sweep seed: falls into the next function
+0x800DBF38	falls_through	0x800DBF38	preceding code continues into this entry
+0x800DBF4C	in_text_data		0x5C bytes of non-code inside text
+0x800DBFB0	stray_words		0x8 non-code bytes before 0x800DBFB8
+0x800DC168	in_text_data		0xB4 bytes of non-code inside text
+0x800DC168	rejected_start		sweep seed: falls into the next function
+0x800DC240	rejected_start		sweep seed: falls into the next function
+0x800DC240	stray_words		0xC non-code bytes before 0x800DC24C
+0x800DC24C	late_start	0x800DC24C	reads v1 set by the preceding bytes
+0x800DC510	in_text_data		0x30 bytes of non-code inside text
+0x800DC510	rejected_start		sweep seed: falls into the next function
+0x800DC540	falls_through	0x800DC540	preceding code continues into this entry
+0x800DC554	in_text_data		0x24 bytes of non-code inside text
+0x800DC578	falls_through	0x800DC578	preceding code continues into this entry
+0x800DC580	in_text_data		0x84 bytes of non-code inside text
+0x800DC604	late_start	0x800DC604	reads v0 set by the preceding bytes
+0x800DC61C	in_text_data		0x38 bytes of non-code inside text
+0x800DC654	late_start	0x800DC654	reads v0 set by the preceding bytes
+0x800DC654	shared_epilogue	0x800DC654	branch to epilogue at 0x800DC6C8 in 0x800DC6BC
+0x800DC664	in_text_data		0x14 bytes of non-code inside text
+0x800DC678	late_start	0x800DC678	reads v0 set by the preceding bytes
+0x800DC678	shared_epilogue	0x800DC678	branch to epilogue at 0x800DC6CC in 0x800DC6BC
+0x800DC690	shared_epilogue	0x800DC678	branch to epilogue at 0x800DC6C8 in 0x800DC6BC
+0x800DC6A0	in_text_data		0x1C bytes of non-code inside text
+0x800DC6E4	in_text_data		0x48 bytes of non-code inside text
+0x800DC6E4	rejected_start		sweep seed: falls into the next function
+0x800DC72C	late_start	0x800DC72C	reads v0,v1 set by the preceding bytes
+0x800DC7E4	branch_outside	0x800DC72C	branch to 0x800DC71C outside any entry
+0x800DC9B8	in_text_data		0x3C bytes of non-code inside text
+0x800DC9B8	rejected_start		sweep seed: falls into the next function
+0x800DC9F4	late_start	0x800DC9F4	reads v1 set by the preceding bytes
+0x800DCA44	in_text_data		0x360 bytes of non-code inside text
+0x800DCA44	rejected_start		sweep seed: falls into the next function
+0x800DCDA4	late_start	0x800DCDA4	reads v0,v1 set by the preceding bytes
+0x800DD0A4	branch_outside	0x800DD074	branch to 0x800DD808 outside any entry
+0x800DD364	branch_outside	0x800DD074	branch to 0x800DD820 outside any entry
+0x800DD458	branch_outside	0x800DD074	branch to 0x800DD818 outside any entry
+0x800DD4A4	branch_to_entry	0x800DD074	branch into the start of 0x800DD824
+0x800DD5A0	branch_outside	0x800DD074	branch to 0x800DD818 outside any entry
+0x800DD5B0	in_text_data		0x1C bytes of non-code inside text
+0x800DD5CC	falls_through	0x800DD5CC	preceding code continues into this entry
+0x800DD64C	branch_to_entry	0x800DD5CC	branch into the start of 0x800DD824
+0x800DD65C	in_text_data		0x38 bytes of non-code inside text
+0x800DD694	falls_through	0x800DD694	preceding code continues into this entry
+0x800DD6AC	cross_branch	0x800DD694	branch to 0x800DD73C inside 0x800DD6EC
+0x800DD6C0	in_text_data		0x2C bytes of non-code inside text
+0x800DD6EC	late_start	0x800DD6EC	reads v0 set by the preceding bytes
+0x800DD78C	branch_to_entry	0x800DD6EC	branch into the start of 0x800DD824
+0x800DD7C4	branch_to_entry	0x800DD6EC	branch into the start of 0x800DD824
+0x800DD808	in_text_data		0x1C bytes of non-code inside text
+0x800DDAEC	in_text_data		0x134 bytes of non-code inside text
+0x800DDAEC	rejected_start		sweep seed: falls into the next function
+0x800DDC24	branch_outside	0x800DDC20	branch to 0x800DDBFC outside any entry
+0x800DDC84	cross_branch	0x800DDC20	branch to 0x800DDD3C inside 0x800DDD10
+0x800DDD10	late_start	0x800DDD10	reads v0 set by the preceding bytes
+0x800DDD78	branch_outside	0x800DDD10	branch to 0x800DDBE0 outside any entry
+0x800DDEF4	in_text_data		0x1C bytes of non-code inside text
+0x800DDEF4	rejected_start		sweep seed: falls into the next function
+0x800DE1A0	cross_branch	0x800DDFCC	branch to 0x800DE238 inside 0x800DE1FC
+0x800DE1B0	cross_branch	0x800DDFCC	branch to 0x800DE278 inside 0x800DE1FC
+0x800DE1D4	branch_to_entry	0x800DDFCC	branch into the start of 0x800DE1FC
+0x800DE1FC	interior_alias	0x800DE1FC	label reached only by branches from 0x800DE1D4
+0x800DE294	in_text_data		0x17C bytes of non-code inside text
+0x800DE294	rejected_start		sweep seed: falls into the next function
+0x800DE410	late_start	0x800DE410	reads at set by the preceding bytes
+0x800DE438	branch_outside	0x800DE410	branch to 0x800DE408 outside any entry
+0x800DE644	in_text_data		0x2C bytes of non-code inside text
+0x800DE644	rejected_start		sweep seed: falls into the next function
+0x800DE670	falls_through	0x800DE670	preceding code continues into this entry
+0x800DE68C	in_text_data		0x24C bytes of non-code inside text
+0x800DEB70	cross_branch	0x800DEB2C	branch to 0x800DEDA0 inside 0x800DEC88
+0x800DEB8C	in_text_data		0x14 bytes of non-code inside text
+0x800DEBA0	falls_through	0x800DEBA0	preceding code continues into this entry
+0x800DEBCC	in_text_data		0x1C bytes of non-code inside text
+0x800DEBE8	falls_through	0x800DEBE8	preceding code continues into this entry
+0x800DEC28	cross_branch	0x800DEBE8	branch to 0x800DEDA0 inside 0x800DEC88
+0x800DEC7C	stray_words		0xC non-code bytes before 0x800DEC88
+0x800DFDCC	in_text_data		0x2D0 bytes of non-code inside text
+0x800DFDCC	rejected_start		sweep seed: falls into the next function
+0x800E009C	late_start	0x800E009C	reads at set by the preceding bytes
+0x800E0178	in_text_data		0x30 bytes of non-code inside text
+0x800E0178	rejected_start		sweep seed: falls into the next function
+0x800E01A8	late_start	0x800E01A8	reads v1,v0 set by the preceding bytes
+0x800E01B8	in_text_data		0x60 bytes of non-code inside text
+0x800E0218	late_start	0x800E0218	reads v0 set by the preceding bytes
+0x800E0224	in_text_data		0x164 bytes of non-code inside text
+0x800E0388	late_start	0x800E0388	reads v0,v1 set by the preceding bytes
+0x800E04D8	in_text_data		0x28 bytes of non-code inside text
+0x800E04D8	rejected_start		sweep seed: falls into the next function
+0x800E0500	late_start	0x800E0500	reads v1 set by the preceding bytes
+0x800E0540	in_text_data		0x204 bytes of non-code inside text
+0x800E0540	rejected_start		sweep seed: falls into the next function
+0x800E0744	late_start	0x800E0744	reads v1 set by the preceding bytes
+0x800E0758	stray_words		0x4 non-code bytes before 0x800E075C
+0x800E0AC8	in_text_data		0x90 bytes of non-code inside text
+0x800E0AC8	rejected_start		sweep seed: falls into the next function
+0x800E0BF0	late_start	0x800E0BF0	reads at,v0 set by the preceding bytes
+0x800E0CFC	late_start	0x800E0CFC	reads v0 set by the preceding bytes
+0x800E0DB4	cross_branch	0x800E0CFC	branch to 0x800E1724 inside 0x800E1320
+0x800E0E24	late_start	0x800E0E24	reads t3 set by the preceding bytes
+0x800E0E34	branch_outside	0x800E0E24	branch to 0x800E0E4C outside any entry
+0x800E0E4C	in_text_data		0x1C bytes of non-code inside text
+0x800E0E68	falls_through	0x800E0E68	preceding code continues into this entry
+0x800E0E7C	in_text_data		0x14 bytes of non-code inside text
+0x800E0ECC	cross_branch	0x800E0E90	branch to 0x800E0F44 inside 0x800E0EF8
+0x800E0EF8	falls_through	0x800E0EF8	preceding code continues into this entry
+0x800E0F10	cross_branch	0x800E0EF8	branch to 0x800E1724 inside 0x800E1320
+0x800E0F7C	falls_through	0x800E0F7C	preceding code continues into this entry
+0x800E128C	cross_branch	0x800E0F7C	branch to 0x800E133C inside 0x800E1320
+0x800E12F8	cross_branch	0x800E0F7C	branch to 0x800E1724 inside 0x800E1320
+0x800E1320	late_start	0x800E1320	reads v0 set by the preceding bytes
+0x800E1334	cross_branch	0x800E1320	branch to 0x800E1298 inside 0x800E0F7C
+0x800E1A48	in_text_data		0x3C bytes of non-code inside text
+0x800E1A48	rejected_start		sweep seed: falls into the next function
+0x800E1A84	late_start	0x800E1A84	reads v0 set by the preceding bytes
+0x800E1AB8	in_text_data		0x48 bytes of non-code inside text
+0x800E1AB8	rejected_start		sweep seed: falls into the next function
+0x800E1B18	branch_outside	0x800E1B00	branch to 0x800E1ADC outside any entry
+0x800E1BAC	late_start	0x800E1BAC	reads v0 set by the preceding bytes
+0x800E1BB0	cross_branch	0x800E1BAC	branch to 0x800E1BF4 inside 0x800E1BE0
+0x800E1BC8	branch_outside	0x800E1BAC	branch to 0x800E1BD8 outside any entry
+0x800E1BD8	stray_words		0x8 non-code bytes before 0x800E1BE0
+0x800E1C28	in_text_data		0x2C bytes of non-code inside text
+0x800E1C28	rejected_start		sweep seed: falls into the next function
+0x800E1C54	falls_through	0x800E1C54	preceding code continues into this entry
+0x800E1C68	in_text_data		0x30 bytes of non-code inside text
+0x800E2160	in_text_data		0x18 bytes of non-code inside text
+0x800E2160	rejected_start		sweep seed: falls into the next function
+0x800E2230	shared_epilogue	0x800E2178	branch to epilogue at 0x800E22E4 in 0x800E2248
+0x800E2248	late_start	0x800E2248	reads v0 set by the preceding bytes
+0x800E2BC0	in_text_data		0x38 bytes of non-code inside text
+0x800E2BC0	rejected_start		sweep seed: falls into the next function
+0x800E2BF8	late_start	0x800E2BF8	reads v0,v1 set by the preceding bytes
+0x800E2C00	late_start	0x800E2C00	reads v0 set by the preceding bytes
+0x800E45AC	in_text_data		0x218 bytes of non-code inside text
+0x800E45AC	rejected_start		sweep seed: falls into the next function
+0x800E47C4	late_start	0x800E47C4	reads v1 set by the preceding bytes
+0x800E47D0	branch_outside	0x800E47C4	branch to 0x800E46F0 outside any entry
+0x800E4838	cross_branch	0x800E47C4	branch to 0x800E48E4 inside 0x800E48A4
+0x800E4848	cross_branch	0x800E47C4	branch to 0x800E48E4 inside 0x800E48A4
+0x800E485C	cross_branch	0x800E47C4	branch to 0x800E48E4 inside 0x800E48A4
+0x800E48A4	late_start	0x800E48A4	reads v0 set by the preceding bytes
+0x800E48F8	cross_branch	0x800E48A4	branch to 0x800E4978 inside 0x800E4904
+0x800E4900	cross_branch	0x800E48A4	branch to 0x800E4918 inside 0x800E4904
+0x800E4904	late_start	0x800E4904	reads v1 set by the preceding bytes
+0x800E56D0	in_text_data		0x6C bytes of non-code inside text
+0x800E56D0	rejected_start		sweep seed: falls into the next function
+0x800E573C	late_start	0x800E573C	reads v0 set by the preceding bytes
+0x800E57B8	in_text_data		0x10 bytes of non-code inside text
+0x800E57B8	rejected_start		sweep seed: falls into the next function

@@ -143,9 +143,11 @@ functions. Byte totals and ROM locations are exact. The expanded program rows
 sum to 1,237,968 bytes including the loader, and the code/data split above sums
 to the same value.
 
-Overlay 1's boundary review is retained in
-[`config/us/overlay1_boundary_findings.tsv`](../config/us/overlay1_boundary_findings.tsv).
-Its 949 observations record the evidence behind non-obvious splits, including
+The overlay boundary reviews are retained in
+[`config/us/overlay1_boundary_findings.tsv`](../config/us/overlay1_boundary_findings.tsv)
+and
+[`config/us/overlay4_boundary_findings.tsv`](../config/us/overlay4_boundary_findings.tsv).
+Their 1,297 observations record the evidence behind non-obvious splits, including
 embedded data, fall-through entries, shared epilogues, interior aliases, and
 cross-boundary branches. These findings are diagnostic constraints rather than
 additional functions; they prevent ambiguous sweep seeds from silently
