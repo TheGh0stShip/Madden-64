@@ -49,3 +49,10 @@
 0x2D2B8	0x20	src/overlays/overlay1/runtime_link_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	59a62208f2b20ae6ebe241fb27dcdcf8e05b6978fb893b30414de7f76b687c15
 0x326B8	0x24	src/overlays/overlay1/mode_state.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7fac0df13ae6188f3c7692622e5e137220cda39c28e29837bd8e824feadf4132
 0x34640	0x14	src/overlays/overlay1/status_byte_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a413be8882845d4b865cce243c69550f17d499ea606cd07fdf0c1855e263e4a2
+0xC840	0x30	src/overlays/overlay1/resource_copy.c	--symbol=func_8002E17C:0x8002E17C --symbol=D_80065430:0x80065430 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3ecb58e2531b2b947823d6ad3f00a57ab124141bb8557f5324676cc7cf539cad
+0xD058	0x30	src/overlays/overlay1/resource_load_91.c	--symbol=func_80008F30:0x80008F30 --symbol=D_80097968:0x80097968 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b2cf1bc98632b6d3f70eb1ae18de2a1410b867ab18184dc87941d887b20678df
+0x1010C	0x30	src/overlays/overlay1/resource_load_f0.c	--symbol=func_80008F30:0x80008F30 --symbol=D_8009AA1C:0x8009AA1C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	31d56af1a238bf362eea9fe868e2822d91510d79b036ae1f86373a6b611093b2
+0x10804	0x28	src/overlays/overlay1/resource_release.c	--symbol=func_80032F3C:0x80032F3C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ecb60b3be29b2252b1e25568fa698653cae7516722fa54e49a7d6edd688e4f98
+0x10834	0x30	src/overlays/overlay1/resource_load_eb.c	--symbol=func_80008F30:0x80008F30 --symbol=D_8009B144:0x8009B144 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e945548114126c108cccdf2371704d91dc7de8c106c57400acbe85d9bfb687b3
+0x244C8	0x40	src/overlays/overlay1/subsystem_wrappers.c	--symbol=func_800AE700:0x800AE700 --symbol=func_800ABD44:0x800ABD44 --symbol=func_800B1B48:0x800B1B48 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	96406c2126056d6c632076b4dc0bf0cc6dd2c50c93c1b488ef4aa22f06d6171e
+0x27598	0x20	src/overlays/overlay1/subsystem_update_wrapper.c	--symbol=func_800B1B48:0x800B1B48 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	863923b842bfc27bf4c6329eab4d17db912fb6bdb53b79c73fa3d8fd62d42592
