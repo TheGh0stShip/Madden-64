@@ -44,6 +44,9 @@
 0x40970	0x14	src/code/interface_enable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6d705449d3a7e5d6af3ab5f7629945ac2751efcf991073067bbec4d27e386157
 0x40984	0x10	src/code/interface_disable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	62abb020bc6f53af8daddf1eb0e7090269d1dba5fe4d58b968d041e1dd8123a9
 0x45B48	0x24	src/code/byte_argument_wrapper.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	308ed7a90fd7983ad46570d5470e7d47754ffb8c3febc46f4c3df485b02cd9f7
+0x2A3DC	0x20	src/code/counter_subtract.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b3d9929501a8c83cfa3e5526694bb8c8fae36cb67d8bcdaa2bf3b9d29124b394
+0x2D688	0x18	src/code/variadic_success.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6c0dbc56dd67d795f31837b306636282ebb656a1ed0cc38e5a3222053993161d
+0x3B3B8	0x24	src/code/frame_entry_at.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b0ab4e2f06cad515c15b7e67c1597760afee5f4faedad1d0293d69b21751e4df
 0xD498	0xA8	src/code/object_flags.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	858ac3a1ce465482f6ed1587e925bca6ad7ddd3cee69d7e8cf07eb3716bb4405
 0xD540	0x50	src/code/object_dimensions.c	--symbol=func_8000CC18:0x8000CC18 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e5746656a57a066c86bfb297a34745aa3f1de720e769db00f4917d77c14ba21
 0xD590	0x38	src/code/object_position.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ec9ec0f5d8f9d2aae611a3ce9ea03f237a015197a66a4d5611ffb13f59436e3a
