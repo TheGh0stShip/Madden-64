@@ -13,8 +13,12 @@ static union {
     OSIoMesg msg;
     u64 forceAlignment;
 } viCounterMsg;
-extern void viMgrMain(void* argument);
+
+static void viMgrMain(void* argument);
 extern void __osTimerServicesInit(void);
+extern OSViContext* __osViGetCurrentContext(void);
+extern void __osViSwapContext(void);
+extern void __osTimerInterrupt(void);
 
 void osCreateViManager(s32 priority) {
     u32 savedMask;
@@ -55,5 +59,53 @@ void osCreateViManager(s32 priority) {
     __osRestoreInt(savedMask);
     if (oldPriority != -1) {
         osSetThreadPri(0, oldPriority);
+    }
+}
+
+static void viMgrMain(void* argument) {
+    OSViContext* context;
+    OSDevMgr* manager;
+    OSIoMesg* message;
+    static u16 retrace;
+    s32 first;
+    u32 count;
+
+    message = 0;
+    first = 0;
+    context = __osViGetCurrentContext();
+    retrace = context->retraceCount;
+    if (retrace == 0) {
+        retrace = 1;
+    }
+    manager = (OSDevMgr*)argument;
+
+    while (1) {
+        osRecvMesg(manager->evtQueue, (OSMesg*)&message, 1);
+        switch (message->hdr.type) {
+        case 13:
+            __osViSwapContext();
+            retrace--;
+            if (retrace == 0) {
+                context = __osViGetCurrentContext();
+                if (context->msgq != 0) {
+                    osSendMesg(context->msgq, context->msg, 0);
+                }
+                retrace = context->retraceCount;
+            }
+            D_8007E5B4++;
+            if (first) {
+                count = osGetCount();
+                D_8007E5A8 = count;
+                first = 0;
+            }
+            count = D_8007E5B0;
+            D_8007E5B0 = osGetCount();
+            count = D_8007E5B0 - count;
+            D_8007E5A8 = D_8007E5A8 + count;
+            break;
+        case 14:
+            __osTimerInterrupt();
+            break;
+        }
     }
 }
