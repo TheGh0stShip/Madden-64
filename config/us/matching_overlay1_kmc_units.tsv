@@ -70,3 +70,10 @@
 0x3505C	0x30	src/overlays/overlay1/display_resource_release.c	--symbol=func_80033258:0x80033258 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b78ed82aadf9fc6208073c00fda56c32664575150fe3202794ca4df82c4c0b99
 0x369D4	0x30	src/overlays/overlay1/pair_update.c	--symbol=func_800C2290:0x800C2290 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f3e0680d4104ee88e181c396c976fdf59e8eddb591c7bb46eaf48fe127a84ba7
 0x37698	0x30	src/overlays/overlay1/angular_update.c	--symbol=func_800C20F0:0x800C20F0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	df0099e59c9ac0d2a9ad4fbc37cd4b546ce8f7e08cacd94c7fc85ba96bb7cd95
+0xA800	0x14	src/overlays/overlay1/object_flag_enable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	364e84975b170e162e21cb840c248471ffa091ac960fedf7d94f7e720e3da138
+0xAD84	0x44	src/overlays/overlay1/conditional_child_release.c	--symbol=func_80032F3C:0x80032F3C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	77dca423ea238e0b8b4284dc21d9fad5f3eea5df7de04e578be79e6f718d0804
+0xAF94	0x40	src/overlays/overlay1/resource_load_96.c	--symbol=func_80008F30:0x80008F30 --symbol=D_800958B4:0x800958B4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c9224dab9ff3b6c44f0e9724cbfe87839887bd1af736d983b11e0b35bb5bd817
+0x106BC	0x3C	src/overlays/overlay1/object_resources_release.c	--symbol=func_80032F3C:0x80032F3C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	239dfff2ae772935d243da6473df31770485aa5e96ad5f839d00ae94d054b04a
+0x1FA5C	0x34	src/overlays/overlay1/gameplay_buffer_release.c	--symbol=func_80032F3C:0x80032F3C --symbol=D_8006B9D4:0x8006B9D4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8a3817b4b870516287762ab1ef7d19b4136aa19c70f3bde6c1e17ccb50e18a8e
+0x22818	0x2C	src/overlays/overlay1/gameplay_mode_set.c	--symbol=func_800AEA9C:0x800AEA9C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5095d2ef57d185d3d69f87328fb2ddfd14e069c3463a3f6da32a5b2308737eef
+0x2ECC8	0x30	src/overlays/overlay1/temporary_buffer_release.c	--symbol=func_80033258:0x80033258 --symbol=D_800726D0:0x800726D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b70c702ac27222c679bae4ddda371669d51cacbf361c5cc55e1009c16b56f9a5
