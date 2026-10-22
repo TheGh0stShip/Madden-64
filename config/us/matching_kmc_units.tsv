@@ -29,3 +29,11 @@
 0x175D4	0x50	src/code/ui_entry_value.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	14b86cb715dc8a936d01f9bd5a0efcbe317fd1f61b25dcd88e221c5f0266aa3b
 0x17BC4	0x6C	src/code/ui_state.c	--symbol=D_80085BF8:0x80085BF8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e5908d11b6a89c6e64260e33fe290c410781cf4516ea3e4f8195c4de45ab2be1
 0x188A4	0x48	src/code/ui_value_scalar.c	--symbol=func_80017CC8:0x80017CC8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	697537b9c7e47c547fd31936335b945f508c6fcb24a2e5e41fda52a288a28ea7
+0x1B558	0x40	src/code/byte_swap.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d51b3aae0cbc76a60e6fb57e7550f4e455edd590ff083080a1ae9c0a1cb54dba
+0x1BB98	0xC	src/code/resource_callback.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	064ecd0f13a849ca9ca3b1de8bfcb443a01fba738a0e7bff917ec383db65440a
+0x2041C	0x2C	src/code/team_entry_flag.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bc433b493cef370a6968cd62d8b5484e7e7f5f6011c0c39cd3c4d85edcb6bfc3
+0x2060C	0x10	src/code/menu_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9139a9cacf78e724f30f7012a41431558ddadecfbcd18c3a18e63fab0f2c23fd
+0x20620	0x18	src/code/menu_state.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	60c51019229f25ba8c93e935afcd11e5622f443d98acfd73fff942b13a9b909a
+0x20650	0x18	src/code/menu_byte_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	31047d203188fd6f9cc789fdb08313821b9da50567cfc0d3bc50b8d21dc9a5cd
+0x2158C	0x20	src/code/menu_queries.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a8d82b2d7bbe774d1ed2fe529cfcc5d2e01796bd63dd1fe1528396abe0bb215a
+0x215AC	0x10	src/code/menu_buffer.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fb079f81b0eba3143d35f2581eaec06cb9a7bc5e51477ad1cc90e5c997c6e735
