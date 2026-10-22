@@ -21,3 +21,5 @@
 0xF3EC	0x8	src/code/render_noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0xF768	0x24	src/code/render_region.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	14356308c9310a383b0a673da3afaa12a4a29ce00959595654cb96eefcea23a2
 0xF858	0xCC	src/code/render_properties.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	55fb7631450fb1985b589f5ac76480a92112e777358e1468e4344b3bcf9bd5e5
+0xFF1C	0x28	src/code/render_resource.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30585cc7eadc2192ac194dabd5fc00cf3832e7e14fe762b1c2cea789e1dc5d32
+0x104B8	0x34	src/code/render_toggle.c	--symbol=D_80065458:0x80065458 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	702d8d21e7d4a8cd768ae316a6cdce8ff5726794dde664b3206f6fab2e7e4699
