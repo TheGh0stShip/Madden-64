@@ -62,6 +62,14 @@ typedef struct OSPackId {
     u16 inverted_checksum;
 } OSPackId;
 
+typedef struct OSInodeCache {
+    OSInode inode;
+    u8 bank;
+    u8 map[256];
+} OSInodeCache;
+
+extern s32 __osGetId(OSPfs* pfs);
+
 extern s32 __osCheckId(OSPfs* pfs);
 extern s32 __osPfsRWInode(OSPfs* pfs, OSInode* inode, u8 flag, u8 bank);
 extern s32 __osPfsSelectBank(OSPfs* pfs);
