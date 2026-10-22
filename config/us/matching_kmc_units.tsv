@@ -6,3 +6,8 @@
 0xD738	0x70	src/code/object_bounds.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	182114fbe2c2252b46c7461bcc66a2b43d1f9e0a43a249be24a95a08155b30c6
 0xD7A8	0x44	src/code/object_list.c	--symbol=D_8008B3D0:0x8008B3D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d8089ae7c92b977056c726b1aca32c4e568bd94958c09c7120c3c64d2609d5c8
 0xD9C0	0x50	src/code/object_system_init.c	--symbol=func_8000BE80:0x8000BE80 --symbol=func_8000D684:0x8000D684 --symbol=func_8000D5BC:0x8000D5BC --symbol=func_80033484:0x80033484 --symbol=D_8008931C:0x8008931C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	925b6fedd777824ae1ec8ee92b517b36333c20044f607c118b9b2cca08d5ee82
+0xDEB0	0x10	src/code/object_active.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d4a473777ad939806f5dd7a7f130c7f402a991c89feb51ca2ed56fad28effecc
+0xE800	0x2C	src/code/node_flags.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9d35b067ae06959ff1250cb996704435d7e96b055c3c7cdeb04964bd33d72e70
+0xE870	0xC	src/code/node_callback.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3438afaf497c6bb7ecb00473448443434e7c91fc37627e19d4366956f6c658da
+0xE8F8	0x24	src/code/node_children.c	--symbol=func_8000DC7C:0x8000DC7C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	054b4d29f4135898d8dd2d8bd6bd8540377ad17f23e263093b1f30fcf8263a5d
+0xE96C	0x24	src/code/node_cleanup.c	--symbol=func_8000DB20:0x8000DB20 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	76ed3faacd410dc4282102700738ad3ff405a3939b9d3eb1e6fa030f58170a0c
