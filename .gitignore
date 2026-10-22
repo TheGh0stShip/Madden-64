@@ -1,0 +1,10 @@
+.venv/
+.git-data/
+build/
+baseroms/
+.toolchain
+*.z64
+__pycache__/
+*.pyc
+AGENTS.md
+**/AGENTS.md

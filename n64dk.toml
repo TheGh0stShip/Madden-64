@@ -1,0 +1,6 @@
+[toolchains]
+root = ".toolchain"
+
+[match]
+symbols = ["build/us/survey/symbol_addrs.txt"]
+rom = "Madden Football 64 (USA).z64"
