@@ -43,3 +43,5 @@
 0x1474C	0x50	src/overlays/overlay4/motion_state_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6883dbdf1a9d4ce4056181db27339ab866552b54deb188609902c0f93f41f9b5
 0x14E10	0x78	src/overlays/overlay4/motion_state_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6e90ecf42741541e86b2c13e897217c5b4c4f99ec36f91ccde2ce8d1de1df2a8
 0x1F938	0x24	src/overlays/overlay4/copy_four_bytes.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8216255a533335253d69a44acca49cc52e88b6756af14aae9f387bf2f4e279cb
+0x16858	0x34	src/overlays/overlay4/slot_byte_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5871cb95dbb3853adb2602a209f786f7190b6a4b7b3cb640c3ea37eeca65b5de
+0x98BC	0x40	src/overlays/overlay4/object_fields_derive.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f63142aede18479889f28ffc5bfd78bcca575f16cb15ebfbce58f982de5ff726
