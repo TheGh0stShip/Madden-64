@@ -15,3 +15,7 @@
 0xE96C	0x24	src/code/node_cleanup.c	--symbol=func_8000DB20:0x8000DB20 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	76ed3faacd410dc4282102700738ad3ff405a3939b9d3eb1e6fa030f58170a0c
 0xE9E8	0x8	src/code/node_noop_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0xE9F0	0x28	src/code/node_pool_select.c	--symbol=D_8008AFD4:0x8008AFD4 --symbol=D_80078430:0x80078430 --symbol=D_80078438:0x80078438 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	973fcaa7c767d961fde35eed2a4a5cd915249a78f0d412097d03b2a5a3389e8b
+0xEFC8	0x5C	src/code/display_state.c	--symbol=D_80064BB4:0x80064BB4 --symbol=func_8000AFA8:0x8000AFA8 --symbol=func_8000B008:0x8000B008 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	859d73de50155edcd3c97840992d87a1d3a020484ccc433fb9900b7d59efb745
+0xF024	0xC	src/code/node_payload.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b2d4d44b74eda6b4188ed032d5981b49fe78c035a4debfdfaa2ad12b916e439e
+0xF118	0x40	src/code/relocate_block.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	35b76f5650c4ec3b7c44a6c8cd21eb567c97fcfe521cce7482d31a28b8eceec3
+0xF3EC	0x8	src/code/render_noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
