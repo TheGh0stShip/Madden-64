@@ -180,3 +180,8 @@
 0x63EC8	0x2C	src/code/copy_scaled_blocks.c	--symbol=memcpy:0x8004DF68 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1527647b5acc49c9f4bc0444a0057814161fa6d8103e3a97175944229bb58b7b
 0x63EF4	0x24	src/code/clear_buffer_region.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0de46116cad8ef5fccbff292c766576a2a37c5515f3b579ae36487f75891bc65
 0x63FC0	0x58	src/code/allocated_fields_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4657f13ccd915ddc7f4e643000f6f697663d6c05ee98e1d7834aa72a212a5ac7
+0x61AFC	0x34	src/code/callback_command_45.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b67e1f446f8ff921b28d537b07f9065e1df868c45417fe5eb19c994a2474af8a
+0x631E0	0x40	src/code/runtime_transition_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7b16be77d64fe0b2eab2afc06bf4ca6b5d0006f65b10d45287f4aa4b4f640f2c
+0x63DD8	0x78	src/code/integer_rounding.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	59074be8f491a231156777ec7a3fc40d845ba4345eb46c54fd3677eb7aefb330
+0x641A0	0x3C	src/code/callback_command_53.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ca9f10907d7dbdba0133785ece088bb7a1a4b8b6b692f2c41786f7161614696e
+0x655B8	0x34	src/code/callback_command_48.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bd1d3b86f3dfc30a220308a3f271dae37d3d7932206e3a6775e44fd7eefdd2d3
