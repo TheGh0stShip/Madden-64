@@ -11,7 +11,7 @@ total_functions = 2279
 
 [progress]
 matched_data = 384
-matched_functions = 158
+matched_functions = 161
 
 manifests = [
   "config/us/matching_ido_sources.tsv",
