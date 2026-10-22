@@ -248,3 +248,5 @@
 0x9BA0	0x370	src/code/runtime_tables_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	967103070c81166466572369487142f7419c8fc8cc7b74f840604775fe448968
 0x9F10	0xE4	src/code/render_palette_load.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	59001e06cefb028482633a84d5c95eca1b07149dee1b8a1cbc952cf145c94091
 0x9FF4	0xDC	src/code/render_palette_load_full.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2dae6df2431c490a5510ce1b02ea4eca789a32957377f314017a513a4747a69e
+0xB92C	0x58	src/code/render_sprite_command.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	05dd49f0f882dba1fa4625db7584d9f80bd2c917636c69dd8d11e6984e0b842a
+0xB984	0x3C	src/code/render_display_list_call.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	39cbec5489144d6e4e197bd03054b5deafbb1ddee7f8d07d6766c768b1093ac5
