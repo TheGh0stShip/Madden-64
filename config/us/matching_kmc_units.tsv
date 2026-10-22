@@ -224,3 +224,17 @@
 0x60D2C	0x4C	src/code/ratio_half_round.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c8db273b1d3f195512433864cef7069cdf6e12fd5d795e0b4cca719c7c929231
 0x60760	0x3C	src/code/runtime_command_forward.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c655b11c9c51c1dcf7d39afd4f5d152df8551923132a1f18f0f0be584e6fbbfc
 0x6405C	0x38	src/code/runtime_description_emit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8ad5dfc2fda45cedb08fa85d9fcc1670bf1b8de5b513098ea7e1a7279f08128a
+0xAA14	0x44	src/code/render_state_ba001701.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bae023fb6fbcd4552e8f99fa4a48a1036a5f52a67dd4c3f1e6b3a551058185eb
+0xAA58	0x44	src/code/render_state_b9000002.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	059bfb446d799f4c8e4d31afc97f0f3e0f30b709f76e1196bbcc22345978918b
+0xAA9C	0x44	src/code/render_state_ba000402.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1f06a44e7b473bacd823ad8b334c2c3318a6093976de44775bdaafb8622ebe88
+0xADEC	0x40	src/code/render_fill_color_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	193150e51c66c5e2e0b595d4d66a441fcbb0af10b3d43a11d74be25de250d4fd
+0xAE2C	0x44	src/code/render_state_ba000602.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	42ab9619db03168ce2313a4ed7ad155b2e87348ef96a3cfa04c2871ae6490fc7
+0xAE70	0x44	src/code/render_state_ba000801.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	52687fe892cfda27e2de06f03cc6dc66c2a55531091a566de2b58126788548cf
+0xAFC0	0x44	src/code/render_state_ba001402.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	429e4b7fbc423f99f213b3abacc98e665bd5c6e303fa18c192c41bab086cb4a9
+0xB004	0x44	src/code/render_state_b9000201.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c52b59f15c4179b1f5f4f4b350a8e125afe348ccfcde5f39c41c091548a2b5a9
+0xB430	0x44	src/code/render_state_ba000903.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c107ab1d87caf13399930926cfff02a3790e077c3f18eb34a0c6178c84abbae3
+0xB474	0x44	src/code/render_state_ba001102.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a740767bf8426caad710412009ce81d0dd8debc0338167632ada3a24a6a7b68d
+0xB4B8	0x44	src/code/render_state_ba000c02.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9ee9d6ad71611d5e4eacf59073468d125b96bab277347904caf6dcdfbdd3cf99
+0xB4FC	0x44	src/code/render_state_ba001001.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7f50bbb6539d085d072803f8e7eca559d9daadafdcd4edac10593fb235f61996
+0xB540	0x44	src/code/render_state_ba000e02.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f2b1cdb793d76768e66eee7f716e05509d9b0adf47a8249786385cc7350c5a2e
+0xB584	0x44	src/code/render_state_ba001301.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8e693db51f2dada0e5ef5c54d39fee8b6b165bcb00bf8b57d99709afa35718d4
