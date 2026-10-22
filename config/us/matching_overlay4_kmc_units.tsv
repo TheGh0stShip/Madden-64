@@ -48,3 +48,4 @@
 0x17678	0x44	src/overlays/overlay4/timer_flag_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	33745245416d7482e81dfb831e0c318713bc14fce0bb13db112df531e1081ecc
 0x1D230	0x48	src/overlays/overlay4/copy_global_bytes.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cc7d90de219faaf282b31e899317f791adb3edc8dba5b2accc4ebe7292da0342
 0x1F95C	0x60	src/overlays/overlay4/compact_slots.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1bcb57a614b951d25c519eeb551a58f41d0efac873d0cc595a1e5899d45fd08b
+0x79CC	0x64	src/overlays/overlay4/remove_empty_records.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1b91e83d5fa9878fd3ac1473d8a0a4e2d0a6d8804c1438b12426cbb9145afbfb
