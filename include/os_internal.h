@@ -87,6 +87,7 @@ extern OSMesgQueue D_8007D310;
 extern OSMesg D_8007D258[1];
 extern OSMesgQueue D_8007D260;
 extern u32 D_80000308;
+extern OSPiHandle* D_80074DF0[2];
 extern u32 __osDisableInt(void);
 extern void __osRestoreInt(u32 mask);
 extern void __osEnqueueAndYield(OSThread** queue);

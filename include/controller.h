@@ -55,10 +55,20 @@ typedef struct OSContPad {
 extern OSPifRam D_8007E5C8;
 extern u8 D_8007E608;
 extern u8 D_8007E609;
+extern s32 D_80075CF0;
+extern u64 D_80074DB0;
+extern OSMesgQueue D_8007E630;
+extern OSMesg D_8007E648;
 
 extern void __osSiGetAccess(void);
 extern void __osSiRelAccess(void);
 extern s32 __osSiRawStartDma(s32 direction, void* dramAddr);
 extern s32 osRecvMesg(OSMesgQueue* queue, OSMesg* message, s32 flag);
+extern OSTime osGetTime(void);
+extern s32 osSetTimer(OSTimer* timer, OSTime countdown, OSTime interval,
+                      OSMesgQueue* queue, OSMesg message);
+extern void __osSiCreateAccessQueue(void);
+extern void __osPackRequestData(u8 command);
+extern void __osContGetInitData(u8* pattern, OSContStatus* data);
 
 #endif
