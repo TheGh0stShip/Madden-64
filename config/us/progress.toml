@@ -11,7 +11,7 @@ total_functions = 2279
 
 [progress]
 matched_data = 496
-matched_functions = 179
+matched_functions = 181
 
 manifests = [
   "config/us/matching_ido_sources.tsv",
@@ -28,12 +28,21 @@ table_bytes = 16236
 payload_bytes = 12556186
 padding_bytes = 5674
 audio_records = 237
+audio_bytes = 7169664
 jpeg_records = 43
+jpeg_bytes = 233596
 texture_records = 516
+texture_bytes = 1104924
 model_records = 262
+model_bytes = 1823646
 animation_records = 67
+animation_bytes = 547866
 sprite_records = 2
+sprite_bytes = 18420
 graphics_auxiliary_records = 214
+graphics_auxiliary_bytes = 816120
 gameplay_table_records = 2
+gameplay_table_bytes = 13246
 roster_database_records = 2
+roster_database_bytes = 142732
 empty_records = 2

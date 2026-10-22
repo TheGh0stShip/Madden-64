@@ -1,5 +1,6 @@
 import importlib.util
 import sys
+import tomllib
 import unittest
 from pathlib import Path
 
@@ -13,6 +14,7 @@ SPEC.loader.exec_module(AUDIT)
 ROM = ROOT / "Madden Football 64 (USA).z64"
 MAIN = ROOT / "build/us/survey/main_segment.bin"
 LEDGER = ROOT / "config/us/rom_files.tsv"
+PROGRESS = ROOT / "config/us/progress.toml"
 
 
 @unittest.skipUnless(ROM.is_file() and MAIN.is_file(), "requires verified ROM survey")
@@ -55,6 +57,28 @@ class RomLayoutTests(unittest.TestCase):
 
     def test_committed_record_ledger_is_current(self):
         self.assertEqual(LEDGER.read_text(), AUDIT.records_tsv(self.audit))
+
+    def test_public_inventory_totals_are_current(self):
+        inventory = tomllib.loads(PROGRESS.read_text())["inventory"]
+        summary = self.audit["summary"]
+        mappings = {
+            "audio": "audio_stream",
+            "jpeg": "jpeg_image",
+            "texture": "texture",
+            "model": "tnmf_model",
+            "animation": "tmot_animation",
+            "sprite": "tspr_sprite",
+            "graphics_auxiliary": "graphics_auxiliary",
+            "gameplay_table": "gameplay_table",
+            "roster_database": "roster_database",
+        }
+        self.assertEqual(inventory["rom_size"], self.audit["rom_size"])
+        self.assertEqual(inventory["records"], summary["records"])
+        for public_name, audit_name in mappings.items():
+            self.assertEqual(inventory[f"{public_name}_records"],
+                             summary["counts_by_kind"][audit_name])
+            self.assertEqual(inventory[f"{public_name}_bytes"],
+                             summary["stored_bytes_by_kind"][audit_name])
 
     def test_boot_lz_decoder_reproduces_main_image(self):
         rom = AUDIT.load_rom(ROM)

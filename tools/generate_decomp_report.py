@@ -153,38 +153,46 @@ def build_report() -> dict[str, object]:
         {
             "id": "inventory_audio",
             "name": "Inventory: audio streams",
-            "measures": measures(0, 0, inventory["audio_records"], inventory["audio_records"]),
+            "measures": measures(0, 0, inventory["audio_records"], inventory["audio_records"],
+                                 inventory["audio_bytes"], inventory["audio_bytes"]),
         },
         {
             "id": "inventory_images",
             "name": "Inventory: JPEG images",
-            "measures": measures(0, 0, inventory["jpeg_records"], inventory["jpeg_records"]),
+            "measures": measures(0, 0, inventory["jpeg_records"], inventory["jpeg_records"],
+                                 inventory["jpeg_bytes"], inventory["jpeg_bytes"]),
         },
         {
             "id": "inventory_textures",
             "name": "Inventory: canonical textures",
-            "measures": measures(0, 0, inventory["texture_records"], inventory["texture_records"]),
+            "measures": measures(0, 0, inventory["texture_records"], inventory["texture_records"],
+                                 inventory["texture_bytes"], inventory["texture_bytes"]),
         },
         {
             "id": "inventory_models",
             "name": "Inventory: TNMF models",
-            "measures": measures(0, 0, inventory["model_records"], inventory["model_records"]),
+            "measures": measures(0, 0, inventory["model_records"], inventory["model_records"],
+                                 inventory["model_bytes"], inventory["model_bytes"]),
         },
         {
             "id": "inventory_animations",
             "name": "Inventory: TMot animations",
-            "measures": measures(0, 0, inventory["animation_records"], inventory["animation_records"]),
+            "measures": measures(0, 0, inventory["animation_records"], inventory["animation_records"],
+                                 inventory["animation_bytes"], inventory["animation_bytes"]),
         },
         {
             "id": "inventory_sprites",
             "name": "Inventory: TSpr sprites",
-            "measures": measures(0, 0, inventory["sprite_records"], inventory["sprite_records"]),
+            "measures": measures(0, 0, inventory["sprite_records"], inventory["sprite_records"],
+                                 inventory["sprite_bytes"], inventory["sprite_bytes"]),
         },
         {
             "id": "inventory_graphics_auxiliary",
             "name": "Inventory: auxiliary graphics records",
             "measures": measures(0, 0, inventory["graphics_auxiliary_records"],
-                                 inventory["graphics_auxiliary_records"]),
+                                 inventory["graphics_auxiliary_records"],
+                                 inventory["graphics_auxiliary_bytes"],
+                                 inventory["graphics_auxiliary_bytes"]),
         },
         {
             "id": "inventory_game_data",
@@ -193,7 +201,11 @@ def build_report() -> dict[str, object]:
                                  inventory["gameplay_table_records"] +
                                  inventory["roster_database_records"],
                                  inventory["gameplay_table_records"] +
-                                 inventory["roster_database_records"]),
+                                 inventory["roster_database_records"],
+                                 inventory["gameplay_table_bytes"] +
+                                 inventory["roster_database_bytes"],
+                                 inventory["gameplay_table_bytes"] +
+                                 inventory["roster_database_bytes"]),
         },
         {
             "id": "rom_mapping",

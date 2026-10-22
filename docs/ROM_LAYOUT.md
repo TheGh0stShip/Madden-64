@@ -23,6 +23,23 @@ byte in the archive region:
 - 626 alignment bytes
 - no gaps or overlapping payloads
 
+The complete physical-byte equation is therefore:
+
+| Physical allocation | Bytes |
+|---|---:|
+| Header and IPL3 | 4,096 |
+| Boot loader | 720 |
+| Archive record tables | 16,236 |
+| Archive payload extents | 12,556,186 |
+| Unused tail padding | 5,674 |
+| **Complete ROM** | **12,582,912** |
+
+Every payload has an exact ROM start and exclusive end in
+[`config/us/rom_files.tsv`](../config/us/rom_files.tsv). Together with the
+top-level ranges above, that ledger is the canonical answer to where each
+physical item lives; automated tests regenerate it from the verified cartridge
+and reject any difference.
+
 The audit also reproduces the boot loader's type-1 LZ decoder. Decoding the
 first file regenerates the surveyed resident program byte-for-byte after its
 64-byte archive-boundary prefix.
@@ -82,6 +99,12 @@ but several are components of a larger logical asset. They are not inflated
 into a speculative asset count. The audio archive count and byte extents are
 exact; music, speech, ambience, and effects remain one stream class until the
 sound-number tables are named from code.
+
+Counts in this table are physical file-record counts, not claims about the
+number of player-visible songs, sound effects, models, or texture surfaces.
+One logical asset may use several records, and one container may hold several
+internal elements. Semantic counts will only be promoted after their owning
+tables and loader relationships are reconstructed.
 
 ## Whole-program accounting
 
