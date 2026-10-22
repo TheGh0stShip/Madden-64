@@ -31,7 +31,21 @@ typedef struct OSInode {
     OSInodeUnit inode_page[128];
 } OSInode;
 
+typedef struct OSDir {
+    u32 game_code;
+    u16 company_code;
+    OSInodeUnit start_page;
+    u8 status;
+    s8 reserved;
+    u16 data_sum;
+    u8 ext_name[4];
+    u8 game_name[16];
+} OSDir;
+
 extern s32 __osCheckId(OSPfs* pfs);
 extern s32 __osPfsRWInode(OSPfs* pfs, OSInode* inode, u8 flag, u8 bank);
+extern s32 __osPfsSelectBank(OSPfs* pfs);
+extern s32 __osContRamRead(OSMesgQueue* queue, s32 channel, u16 address, u8* buffer);
+extern u16 __osSumcalc(u8* buffer, s32 length);
 
 #endif
