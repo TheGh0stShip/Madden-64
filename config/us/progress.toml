@@ -1,0 +1,18 @@
+[version]
+id = "N8ME"
+
+[image]
+vram = 0x80000400
+rom = 0x1000
+code_size = 0x645FC
+data_size = 0x12CC4
+libultra_vram = 0x80045928
+total_functions = 1383
+
+[progress]
+matched_data = 288
+
+manifests = [
+  "config/us/matching_ido_sources.tsv",
+  "config/us/matching_kmc_units.tsv",
+]

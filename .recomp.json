@@ -1,0 +1,39 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Madden Football 64",
+  "system": "N64",
+  "type": "decomp",
+  "original": {
+    "region": "USA",
+    "revision": "Rev 0",
+    "serial": "N8ME",
+    "sha1": "b0de34b759f18ad86d39a4c68c9840d35ce25809"
+  },
+  "project": "Madden Football 64 matching decompilation",
+  "status": "in-progress",
+  "toolchain": [
+    "n64-decomp-kit"
+  ],
+  "approach": "Matching decompilation with byte-verified code and initialized data.",
+  "notes": "USA Rev 0 matching decompilation. Program recovery and code reconstruction remain active.",
+  "maintainers": [
+    {
+      "name": "TheGh0stShip",
+      "link": "https://github.com/TheGh0stShip"
+    }
+  ],
+  "links": [
+    {
+      "label": "Repository",
+      "url": "https://github.com/TheGh0stShip/Madden-64"
+    },
+    {
+      "label": "Progress",
+      "url": "https://bytematch.dev/TheGh0stShip/Madden-64"
+    }
+  ],
+  "tags": [
+    "matching",
+    "MIPS"
+  ]
+}

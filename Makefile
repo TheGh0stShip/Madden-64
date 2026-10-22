@@ -4,7 +4,7 @@ N64DK_PYTHON ?= $(N64DK_ROOT)/.venv/bin/python
 N64DK := PYTHONPATH=$(N64DK_ROOT) $(N64DK_PYTHON) -m n64dk
 ROM ?= Madden Football 64 (USA).z64
 
-.PHONY: verify survey match check
+.PHONY: verify survey match check report
 
 verify:
 	$(PYTHON) tools/verify_rom.py "$(ROM)"
@@ -20,3 +20,6 @@ match: verify
 
 check: verify
 	$(PYTHON) -m unittest discover -s tests -v
+
+report:
+	$(PYTHON) tools/generate_decomp_report.py

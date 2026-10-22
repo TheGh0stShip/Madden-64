@@ -204,5 +204,6 @@ extern s32 __osEPiRawStartDma(OSPiHandle* handle, s32 direction,
                               u32 size);
 extern void __osDevMgrMain(void* argument);
 extern OSMesgQueue D_8007D260;
+extern void __osViInit(void);
 
 #endif

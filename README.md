@@ -25,7 +25,7 @@ game's decompressor recovers the initialized program at
 boundaries and identifies 147 libultra routines. Its compiler fingerprint is
 predominantly KMC GCC, while detected library code is IDO-built.
 
-Ninety-four reviewed C units currently match 31,896 retail code bytes and 256 data bytes exactly, including
+Ninety-five reviewed C units currently match 32,288 retail code bytes and 288 data bytes exactly, including
 the contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
 boundaries are research leads, not decompilation credit, until a source unit is
 compiled and compared byte-for-byte.
@@ -42,6 +42,7 @@ make verify
 make survey
 make match
 make check
+make report
 ```
 
 `make survey` writes ROM-derived artifacts under `build/us/survey`. Because the
@@ -57,3 +58,10 @@ development host. On-disk structures use explicit-width integers and explicit
 big-endian decoding. Host tests do not by themselves prove target correctness;
 matching status requires target compiler output to equal the recovered retail
 program bytes.
+
+## Progress tracking
+
+Every push to `main` publishes an objdiff v2 artifact named `N8ME_report`.
+The report is generated from the reviewed function catalogue and matching
+manifests without requiring a copy of the retail ROM. Public history and
+progress are available on [ByteMatch](https://bytematch.dev/TheGh0stShip/Madden-64).
