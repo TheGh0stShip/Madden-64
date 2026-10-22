@@ -53,6 +53,7 @@ typedef struct OSContPad {
 } OSContPad;
 
 extern OSPifRam D_8007E5C8;
+extern OSPifRam D_8007BFC8;
 extern u8 D_8007E608;
 extern u8 D_8007E609;
 extern s32 D_80075CF0;
@@ -70,5 +71,7 @@ extern s32 osSetTimer(OSTimer* timer, OSTime countdown, OSTime interval,
 extern void __osSiCreateAccessQueue(void);
 extern void __osPackRequestData(u8 command);
 extern void __osContGetInitData(u8* pattern, OSContStatus* data);
+extern void __osPfsRequestData(u8 command);
+extern void __osPfsGetInitData(u8* pattern, OSContStatus* data);
 
 #endif

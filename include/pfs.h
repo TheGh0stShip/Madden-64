@@ -50,6 +50,18 @@ typedef struct OSPfsState {
     u8 game_name[16];
 } OSPfsState;
 
+typedef struct OSPackId {
+    u32 repaired;
+    u32 random;
+    u64 serial_mid;
+    u64 serial_low;
+    u16 deviceid;
+    u8 banks;
+    u8 version;
+    u16 checksum;
+    u16 inverted_checksum;
+} OSPackId;
+
 extern s32 __osCheckId(OSPfs* pfs);
 extern s32 __osPfsRWInode(OSPfs* pfs, OSInode* inode, u8 flag, u8 bank);
 extern s32 __osPfsSelectBank(OSPfs* pfs);
@@ -67,5 +79,14 @@ extern s32 osPfsFreeBlocks(OSPfs* pfs, s32* bytesNotUsed);
 extern s32 __osPfsDeclearPage(OSPfs* pfs, OSInode* inode, int pageCount,
                               int* firstPage, u8 bank, int* allocated,
                               int* lastPage);
+extern void __osSiGetAccess(void);
+extern void __osSiRelAccess(void);
+extern s32 __osPfsGetStatus(OSMesgQueue* queue, s32 channel);
+extern s32 __osIdCheckSum(u16* words, u16* checksum,
+                          u16* invertedChecksum);
+extern s32 __osCheckPackId(OSPfs* pfs, OSPackId* id);
+extern s32 __osRepairPackId(OSPfs* pfs, OSPackId* badId,
+                            OSPackId* newId);
+extern s32 osPfsChecker(OSPfs* pfs);
 
 #endif
