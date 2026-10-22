@@ -17,9 +17,11 @@ audit: verify
 
 match: verify
 	$(PYTHON) tools/make_analysis_rom.py build/us/survey/main_segment.bin build/us/main_unpacked.z64
-	$(N64DK) match-batch config/us/matching_ido_sources.tsv=ido5.3 --project . \
+	$(N64DK) match-batch --project . \
 		--rom build/us/main_unpacked.z64 \
-		--symbols build/us/survey/symbol_addrs.txt
+		--symbols build/us/survey/symbol_addrs.txt \
+		config/us/matching_ido_sources.tsv=ido5.3 \
+		config/us/matching_asm_units.tsv=as
 
 check: verify
 	$(PYTHON) -m unittest discover -s tests -v

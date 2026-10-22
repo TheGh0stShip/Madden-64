@@ -11,10 +11,11 @@ total_functions = 2279
 
 [progress]
 matched_data = 384
-matched_functions = 130
+matched_functions = 134
 
 manifests = [
   "config/us/matching_ido_sources.tsv",
+  "config/us/matching_asm_units.tsv",
   "config/us/matching_kmc_units.tsv",
 ]
 

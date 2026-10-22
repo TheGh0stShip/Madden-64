@@ -1,0 +1,4 @@
+# GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
+0x47064	0x100	src/libultra/os_enqueue_and_yield.s	-O2 -G0 -mips3 -mgp32 -mfp32	0aec3acfb02c3681276c32f8a5ab969e5fab24fa719fc8fd222d0639b80ce577
+0x47164	0x58	src/libultra/os_thread_queue.s	-O2 -G0 -mips3 -mgp32 -mfp32	143747b0b9bddd749687b0aa560ad891a817e90336a2bcb7801fc391ee97fc2b
+0x47338	0x10	src/libultra/os_cleanup_thread.s	-O2 -G0 -mips3 -mgp32 -mfp32	eece8cbe1c6683217c815d20cd7c18cde02c1007d11ca56ee5d565477aa66c75
