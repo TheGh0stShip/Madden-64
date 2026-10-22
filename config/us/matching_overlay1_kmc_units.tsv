@@ -94,4 +94,5 @@
 0x16D9C	0x30	src/overlays/overlay1/object_type_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	16d703fd683c1cfd09403ef4f2ec26a2452d0481226e82f1340195d592a85980
 0x1FA5C	0x34	src/overlays/overlay1/gameplay_buffer_release.c	--symbol=func_80032F3C:0x80032F3C --symbol=D_8006B9D4:0x8006B9D4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8a3817b4b870516287762ab1ef7d19b4136aa19c70f3bde6c1e17ccb50e18a8e
 0x22818	0x2C	src/overlays/overlay1/gameplay_mode_set.c	--symbol=func_800AEA9C:0x800AEA9C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5095d2ef57d185d3d69f87328fb2ddfd14e069c3463a3f6da32a5b2308737eef
+0x1B1A4	0x24	src/overlays/overlay1/object_bounds_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f8804d6286e5dd810a92b9f5459f890064be102dde02a2eb6ac0f0e2ab2bb6f
 0x2ECC8	0x30	src/overlays/overlay1/temporary_buffer_release.c	--symbol=func_80033258:0x80033258 --symbol=D_800726D0:0x800726D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b70c702ac27222c679bae4ddda371669d51cacbf361c5cc55e1009c16b56f9a5
