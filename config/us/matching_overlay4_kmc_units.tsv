@@ -45,3 +45,4 @@
 0x1F938	0x24	src/overlays/overlay4/copy_four_bytes.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8216255a533335253d69a44acca49cc52e88b6756af14aae9f387bf2f4e279cb
 0x16858	0x34	src/overlays/overlay4/slot_byte_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5871cb95dbb3853adb2602a209f786f7190b6a4b7b3cb640c3ea37eeca65b5de
 0x98BC	0x40	src/overlays/overlay4/object_fields_derive.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f63142aede18479889f28ffc5bfd78bcca575f16cb15ebfbce58f982de5ff726
+0x17678	0x44	src/overlays/overlay4/timer_flag_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	33745245416d7482e81dfb831e0c318713bc14fce0bb13db112df531e1081ecc
