@@ -42,3 +42,4 @@
 0x156DC	0x44	src/overlays/overlay4/inactive_motion_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	92d9ddad95f5ada67122fa8cd38311d705c71bf229ee4f5b314b6390640748ec
 0x1474C	0x50	src/overlays/overlay4/motion_state_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6883dbdf1a9d4ce4056181db27339ab866552b54deb188609902c0f93f41f9b5
 0x14E10	0x78	src/overlays/overlay4/motion_state_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6e90ecf42741541e86b2c13e897217c5b4c4f99ec36f91ccde2ce8d1de1df2a8
+0x1F938	0x24	src/overlays/overlay4/copy_four_bytes.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8216255a533335253d69a44acca49cc52e88b6756af14aae9f387bf2f4e279cb
