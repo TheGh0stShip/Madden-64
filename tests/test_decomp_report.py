@@ -18,11 +18,11 @@ class DecompReportTests(unittest.TestCase):
         totals = report["measures"]
         self.assertEqual(report["version"], 2)
         self.assertEqual(totals["total_code"], "753420")
-        self.assertEqual(totals["matched_code"], "40856")
+        self.assertEqual(totals["matched_code"], "41560")
         self.assertEqual(totals["total_data"], "484548")
         self.assertEqual(totals["matched_data"], "384")
         self.assertEqual(totals["total_functions"], 2279)
-        self.assertEqual(totals["matched_functions"], 140)
+        self.assertEqual(totals["matched_functions"], 150)
         categories = {item["id"]: item["measures"] for item in report["categories"]}
         self.assertNotIn("overall_verified", categories)
         self.assertEqual(categories["rom_inventory"]["total_functions"], 1353)

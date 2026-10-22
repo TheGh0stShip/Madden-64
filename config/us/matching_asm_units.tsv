@@ -6,3 +6,4 @@
 0x478F8	0xB0	src/libultra/os_inval_dcache.s	-O2 -G0 -mips3 -mgp32 -mfp32	7ea4c6bffed307fe915ab8ef0ae37d86482e17b132eb99598f82ad5cbca40a71
 0x479A8	0x80	src/libultra/os_inval_icache.s	-O2 -G0 -mips3 -mgp32 -mfp32	cf9ac7a3378e8d2013f33517eebd339955e401c76380ec29ca56152a34f0040d
 0x471BC	0x17C	src/libultra/os_dispatch_thread.s	--symbol=__osPopThread:0x800465AC -O2 -G0 -mips3 -mgp32 -mfp32	b5af608370b0b042c80a7ffa4646f4aa61b8320fc615a166d4501a8364d18c44
+0x485D8	0x2C0	src/libgcc/ll_runtime.s	-O2 -G0 -mips3 -mgp32 -mfp32	ccf2a1fcc516893d7a2343a6fe49332f551ecb037d7de2e3dda5d2205bcd9ccc
