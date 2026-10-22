@@ -168,3 +168,10 @@
 0x2D6A0	0x30	src/code/task_state_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e22cdbece40f300ed525f66888942bc570250b124d87e0d5ac16a9b6df20fc0
 0x35F80	0x30	src/code/status_query.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	057d76d32257d79cbc926d40f13c6371e19f3eaae8a540c9c40fdff7b644c29d
 0x2F25C	0x2C	src/code/string_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e26b66c504161b1b2aeaad991d273544afb3ffc40832d37351fb354322e0305d
+0x3A424	0x2C	src/code/resource_u16_be.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7be703ea3f8045d1e76006a2c5be35e5edb621fd53632263cdbaf44d43d90267
+0x3B15C	0x28	src/code/frame_entry_mark.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5d28441dfa71460cb012150f41298a308b45cf0517b986c0810b9292580e4fb0
+0x3DA88	0x30	src/code/audio_command_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	232d6e1fbb7b00974087c17e2789f42f128baf8dde68fec535d7b2a53fea3185
+0x3DB78	0x28	src/code/audio_value_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8454012d1ddc3c612ed2afa1cf05ef6fedd4d0b70e323c868aa620e990e910c1
+0x42154	0x30	src/code/interface_audio_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	55512901644d9e9730c5b105381abc83034408c26aeebbb9a8ebbc061e50689a
+0x427B4	0x28	src/code/interface_index_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	74c81903d5f35f71883e93a4fab5617a797f093175f56136643b50dc73965967
+0x45024	0x30	src/code/late_nested_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d16189443fd4803a8671ce0e8678967464f8b94f6bf284018b3c4e5a99e9e510
