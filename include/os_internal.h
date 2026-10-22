@@ -86,6 +86,21 @@ typedef struct OSViMode {
     u8 type;
     u8 pad[3];
     u32 control;
+    u32 width;
+    u32 burst;
+    u32 vSync;
+    u32 hSync;
+    u32 leap;
+    u32 hStart;
+    u32 xScale;
+    u32 vCurrent;
+    struct {
+        u32 origin;
+        u32 yScale;
+        u32 vStart;
+        u32 vBurst;
+        u32 vIntr;
+    } fldRegs[2];
 } OSViMode;
 
 typedef struct OSViScale {
