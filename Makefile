@@ -21,6 +21,7 @@ match: verify
 		--rom build/us/main_unpacked.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		config/us/matching_ido_sources.tsv=ido5.3 \
+		config/us/matching_kmc_units.tsv=kmc+builtin \
 		config/us/matching_asm_units.tsv=as
 
 check: verify
