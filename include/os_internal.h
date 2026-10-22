@@ -88,6 +88,30 @@ typedef struct OSViContext {
     OSMesg msg;
 } OSViContext;
 
+typedef struct OSTaskData {
+    u32 type;
+    u32 flags;
+    u64* ucode_boot;
+    u32 ucode_boot_size;
+    u64* ucode;
+    u32 ucode_size;
+    u64* ucode_data;
+    u32 ucode_data_size;
+    u64* dram_stack;
+    u32 dram_stack_size;
+    u64* output_buff;
+    u64* output_buff_size;
+    u64* data_ptr;
+    u32 data_size;
+    u64* yield_data_ptr;
+    u32 yield_data_size;
+} OSTaskData;
+
+typedef union OSTask {
+    OSTaskData t;
+    s64 align;
+} OSTask;
+
 extern OSThread* D_80074E30;
 extern OSThread* D_80074E28;
 extern OSThread* D_80074E2C;
@@ -125,5 +149,11 @@ extern u32 osGetCount(void);
 extern void __osSetCompare(u32 value);
 extern s32 osJamMesg(OSMesgQueue* queue, OSMesg message, s32 flag);
 extern OSMesgQueue* osPiGetCmdQueue(void);
+extern void osWritebackDCache(void* address, s32 size);
+extern void __osSpSetStatus(u32 status);
+extern s32 __osSpSetPc(u32 pc);
+extern s32 __osSpRawStartDma(s32 direction, u32 deviceAddress,
+                             void* dramAddress, u32 size);
+extern s32 __osSpDeviceBusy(void);
 
 #endif
