@@ -52,6 +52,16 @@ typedef struct OSContPad {
     u8 errno;
 } OSContPad;
 
+typedef struct OSContRamReadFormat {
+    u8 dummy;
+    u8 txsize;
+    u8 rxsize;
+    u8 cmd;
+    u16 address;
+    u8 data[32];
+    u8 datacrc;
+} OSContRamReadFormat;
+
 extern OSPifRam D_8007E5C8;
 extern OSPifRam D_8007BFC8;
 extern u8 D_8007E608;
@@ -73,5 +83,7 @@ extern void __osPackRequestData(u8 command);
 extern void __osContGetInitData(u8* pattern, OSContStatus* data);
 extern void __osPfsRequestData(u8 command);
 extern void __osPfsGetInitData(u8* pattern, OSContStatus* data);
+extern u8 __osContAddressCrc(u16 address);
+extern u8 __osContDataCrc(u8* data);
 
 #endif
