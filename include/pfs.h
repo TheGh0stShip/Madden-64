@@ -63,5 +63,9 @@ extern s32 __osPfsReleasePages(OSPfs* pfs, OSInode* inode, u8 startPage,
                                int flag);
 extern s32 osPfsFindFile(OSPfs* pfs, u16 companyCode, u32 gameCode,
                          u8* gameName, u8* extName, s32* fileNo);
+extern s32 osPfsFreeBlocks(OSPfs* pfs, s32* bytesNotUsed);
+extern s32 __osPfsDeclearPage(OSPfs* pfs, OSInode* inode, int pageCount,
+                              int* firstPage, u8 bank, int* allocated,
+                              int* lastPage);
 
 #endif
