@@ -88,6 +88,13 @@ typedef struct OSViMode {
     u32 control;
 } OSViMode;
 
+typedef struct OSViScale {
+    f32 factor;
+    u16 offset;
+    u16 pad;
+    u32 scale;
+} OSViScale;
+
 typedef struct OSViContext {
     u16 state;
     u16 retraceCount;
@@ -96,6 +103,8 @@ typedef struct OSViContext {
     u32 control;
     OSMesgQueue* msgq;
     OSMesg msg;
+    OSViScale x;
+    OSViScale y;
 } OSViContext;
 
 typedef struct OSTaskData {
@@ -133,6 +142,7 @@ extern OSMesg D_8007D308[1];
 extern OSMesgQueue D_8007D310;
 extern OSMesg D_8007D258[1];
 extern OSMesgQueue D_8007D260;
+extern void bzero(void* address, s32 size);
 extern u32 D_80000308;
 extern OSPiHandle* D_80074DF0[2];
 extern s32 D_80074DD0;
