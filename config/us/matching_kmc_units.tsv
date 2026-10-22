@@ -193,3 +193,12 @@
 0x33F2C	0x34	src/code/arena_product_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e6c642d647e25e2c070304090c0f321da914fedee5dc9631974ff9d8ded6780
 0x34084	0x34	src/code/channel_toggle.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6427dd19677ff2bf551338876c1abd3e5321c14270a4628f509ee1d359960aa4
 0x34D64	0x34	src/code/sprite_magic_check.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6653022ebe215586fd58ee9ca82f07ed99f67d1307a512f64860d7957ca387b6
+0x33E98	0x30	src/code/stream_block_pop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0c7601dade8f8fbaafb3cefecd0ea516976ec49f5dd43a9ce03d36e3e17bd5ad
+0x352B4	0x28	src/code/stream_count_flush.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d8adcfe1c7becc8ae5f9202da0e3048f5e921ab5c84690e5f6e1079f0231cc7c
+0x3549C	0x34	src/code/resource_create_current.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	eabdec496701ba424b5f06c14b1f7122ff5ce5666bcf7a22239f5baa54d2af52
+0x35458	0x44	src/code/resource_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a23038cd0ef8f7974634a7340f356335e3d41199e222f6d6136a4c8051aa2327
+0x34028	0x5C	src/code/channel_command_append.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ab503d37eb43f6c91e581e48670c6cef2844c5b1b494ed1d7da90e78ba179fb3
+0x33D2C	0x48	src/code/channel_maximum_size.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f0e03fca6c04ec52b78c4e897815eea8bbb878fe586a9a958a23ededab193230
+0x36FF4	0x34	src/code/resource_guarded_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1f7af1850e20bed9a3baaa6521b8db1c9d1c4b8c4011ab6bc8801fa532722a0a
+0x3707C	0x34	src/code/resource_guarded_create.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	016abf0e4d09bcde7140c1ac18e51573a7b62eae23e12af754610c2688d960a6
+0x370B0	0x34	src/code/resource_guarded_load.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	37188ca389053ad6fa055ffa9e84da55ec345859d541dab7596dc6a4be2d457b
