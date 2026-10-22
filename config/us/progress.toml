@@ -10,7 +10,7 @@ libultra_vram = 0x80045928
 total_functions = 1383
 
 [progress]
-matched_data = 336
+matched_data = 368
 
 manifests = [
   "config/us/matching_ido_sources.tsv",

@@ -39,6 +39,26 @@ typedef struct OSMesgQueue {
     OSMesg* messages;
 } OSMesgQueue;
 
+typedef struct OSBlockInfo {
+    s32 errStatus;
+    void* dramAddr;
+    u32 c2Addr;
+    u32 sectorSize;
+    u32 c1ErrNum;
+    u32 c1ErrSector[4];
+} OSBlockInfo;
+
+typedef struct OSTranxInfo {
+    s32 cmdType;
+    u16 transferMode;
+    u16 blockNum;
+    s32 sectorNum;
+    u32 devAddr;
+    u32 bmCtlShadow;
+    u32 seqCtlShadow;
+    OSBlockInfo block[2];
+} OSTranxInfo;
+
 typedef struct OSPiHandle {
     struct OSPiHandle* next;
     u8 type;
@@ -48,6 +68,8 @@ typedef struct OSPiHandle {
     u8 pulse;
     u8 domain;
     u32 baseAddress;
+    u32 speed;
+    OSTranxInfo transferInfo;
 } OSPiHandle;
 
 typedef struct OSTimer {
@@ -202,6 +224,10 @@ extern s32 __osPiRawStartDma(s32 direction, u32 deviceAddress,
 extern s32 __osEPiRawStartDma(OSPiHandle* handle, s32 direction,
                               u32 deviceAddress, void* dramAddress,
                               u32 size);
+extern s32 __osEPiRawReadIo(OSPiHandle* handle, u32 deviceAddress,
+                            u32* data);
+extern s32 __osEPiRawWriteIo(OSPiHandle* handle, u32 deviceAddress,
+                             u32 data);
 extern void __osDevMgrMain(void* argument);
 extern OSMesgQueue D_8007D260;
 extern void __osViInit(void);
