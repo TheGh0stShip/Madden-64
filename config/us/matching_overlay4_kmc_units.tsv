@@ -14,3 +14,5 @@
 0x18D40	0x40	src/overlays/overlay4/short_comparisons_primary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2b4edcc596b3ecfcf6fc91ba8b7d330f4ec6e7b4dd8d45bb64a35ac60a55ee38
 0x18D80	0x48	src/overlays/overlay4/short_comparisons_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b893eaa2f9a0268c5a7f27ff17e6f0b7564b1d8e1e455e8e9305f727883e68ec
 0x1BEDC	0x20	src/overlays/overlay4/match_state.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ff403df1a2fd72cb17a6532a6a01131c1735fca7a75f71ee3bca9aaee0b5d7fa
+0x1CC64	0x20	src/overlays/overlay4/subsystem_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	dd125995d7531443861e73a5ec1846bc799f3774966b391fa4d07ea202f60a2a
+0x1DB10	0x18	src/overlays/overlay4/object_flag_enable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d4097a8c1c8cb3674c3340b4ab9c32ecd02eabe2cdcec338344db00ff446e392

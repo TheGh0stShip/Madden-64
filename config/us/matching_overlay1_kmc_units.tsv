@@ -24,3 +24,8 @@
 0xD790	0x18	src/overlays/overlay1/render_targets.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	52da7a13f58b267cdb3600a7a6b4d00d5e7117872c477a14f543f73e4593e86a
 0xD878	0x20	src/overlays/overlay1/wrapper_links.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	af5c06742e6b17883da9681bd58757ce0ac273b6bd22d7ce1407b0888c88bb94
 0x12108	0x20	src/overlays/overlay1/display_flag_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d639cb74b3cdbb0e0529babcb91f74366f3a3bd02621ce5d00541407ba77aa4d
+0x8AC4	0x18	src/overlays/overlay1/timer_compare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c781958ab509f049108c93d44db313e0355f558917b428225d461b2494fb0198
+0xA814	0x10	src/overlays/overlay1/object_flags_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f77bbdc38a593edddaa54ccd732cfa825248c72246f223392aeeeed6bbec6dc
+0xA8AC	0x20	src/overlays/overlay1/runtime_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	72ea58822a762bed6c0e9547078186042c5648702c36d8fedf5b87040d7c7932
+0x17434	0x14	src/overlays/overlay1/mode_enable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	782d81f1e8c72d6b788aa05bc01072e5fe932c665a363550fbc9468dbd20ee40
+0x18710	0x14	src/overlays/overlay1/object_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1e1c6ffbba8bdbed9f4d7927127da474c7023ab3495fbf3ab89a4fb9c7f941d9
