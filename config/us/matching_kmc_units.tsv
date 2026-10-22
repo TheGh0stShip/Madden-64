@@ -132,3 +132,11 @@
 0x65570	0x20	src/code/call_with_zero.c	-DFUNCTION=func_80064970 -DCALLEE=func_80032E00 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f196605f96d4ae5168392cf28c99e2fec92d07ccfc465433e5174ea9c92120ad
 0x65590	0x20	src/code/call_with_zero.c	-DFUNCTION=func_80064990 -DCALLEE=func_80032F3C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6333b08843e124bfd7d902bb76e8eb821993461dd0ae8b68b84b53fb45e28153
 0x655EC	0x8	src/code/return_zero.c	-DFUNCTION=func_800649EC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	648cbc77d024f6d08bc8ff4e3bdf1cebf2a933937ee1cebef4690d015808bd9c
+0x5FC30	0x8	src/code/store_fourth_argument.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1541a252c417e5b28a857cf10d135ccd75a25f62b83aaaafcd9b23511c51a2b7
+0x5FC38	0x8	src/code/clear_fourth_argument.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	35187e6c662dbcd6a584c8e4df084c9774f46897e1f6dd0fdc75f75f99c80540
+0x655B0	0x8	src/code/return_third_argument.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	19d4439116c0f84a1c4659b96dbf3c011424986c59da709d2c0638ab131e5a3e
+0x9B80	0x20	src/code/call_no_arguments.c	-DFUNCTION=func_80008F80 -DCALLEE=func_80008FA0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0ee0d1a3200cc553b3a24387204398e0870f0ddb0080504d326fa979f5c79232
+0x55AD0	0x20	src/code/call_no_arguments.c	-DFUNCTION=func_80054ED0 -DCALLEE=func_8006337C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3d726533a6d2eb6b173cd09dc5edf4947be6fe5c52e9f1615cd4dd7ccf41b89
+0x55AF0	0x20	src/code/call_no_arguments.c	-DFUNCTION=func_80054EF0 -DCALLEE=func_80063318 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c43dd26a5dc61bc7fa4ac7c8211e5ef724f709b74059757dda6cc4d09953f302
+0x5740	0x14	src/code/global_pointer_word_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	38f08653aacf43bfc4af877fbedd5730a737b5a33d8e70b07415e483dce7054c
+0x1BAA8	0x14	src/code/global_value_swap.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	31fb26087ee269d26cb844c28ad2a3395d071fc62f1cfacc9eb81e0486bc0e9c
