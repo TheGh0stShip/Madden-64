@@ -18,3 +18,4 @@
 0x4FD58	0x80	src/libultra/os_writeback_dcache.s	-O2 -G0 -mips3 -mgp32 -mfp32	21514538b715f668861f169883c91749feb94cb501d5dfd9a24b67f782fa1b69
 0x4FDD8	0x30	src/libultra/os_writeback_dcache_all.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e2e910cf2dcf19b0d2826eea41187a62acc4584b8fb7316cc74acbd40f4b04f
 0x4F648	0xC0	src/libultra/os_probe_tlb.s	-O2 -G0 -mips3 -mgp32 -mfp32	349227b84b51cb246abaf9de4bf56eba78054d85575e1bfb09acfdb8d1bc0c28
+0x4DD68	0xA0	src/libultra/os_set_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	86cb8015715ed857a8877c8f765e022385d51b5c1e2cb8645586b08a05f91a23
