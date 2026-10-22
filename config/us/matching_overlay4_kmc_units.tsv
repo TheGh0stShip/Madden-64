@@ -39,3 +39,5 @@
 0xB210	0x30	src/overlays/overlay4/subsystem_trigger.c	--symbol=func_800CE508:0x800CE508 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	17d604927bac1f26db816bdd4569fdf7382af0366c8c9366a1f8043f5b80cd92
 0x172D4	0x30	src/overlays/overlay4/packed_bytes_adjust.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9a78826560915c23c5689daf542c2e105042665b252da28d13fafb1758de31b1
 0x986C	0x50	src/overlays/overlay4/motion_mode_sync.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7e383ec6537b6c9c4f1d083b4b32b3ffacb211a4f9019a3be8ca1ee3a9cb13d5
+0x156DC	0x44	src/overlays/overlay4/inactive_motion_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	92d9ddad95f5ada67122fa8cd38311d705c71bf229ee4f5b314b6390640748ec
+0x1474C	0x50	src/overlays/overlay4/motion_state_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6883dbdf1a9d4ce4056181db27339ab866552b54deb188609902c0f93f41f9b5
