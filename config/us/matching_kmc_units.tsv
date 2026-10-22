@@ -149,3 +149,11 @@
 0x5C26C	0x20	src/code/object_reset_wrapper.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8c7292a073d960e0875525fc12829c0d64e97d39116e8a65f2be020ae7563ebe
 0x5FA88	0x18	src/code/runtime_object_values.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3ceafd78bad2f599a63ef8abae1ec6d5580b7edba4b62df710b117050135c76
 0x636F8	0x14	src/code/runtime_object_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	07d6590fa3896948ce7367395a2dc16d65b8346864a77f6fa8fa3595717a3a1f
+0x40B14	0x1C	src/code/copy_packed_four_bytes.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	26a9adc9b22143c71137596757a1dce77e8293ba1cd1cb929d4c67d729ff639c
+0x43CF4	0x20	src/code/nested_entry_value.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2983d967e393a80202b95af63707df6abf5c3d930587944c5869a5575a3d61f2
+0x1C11C	0x28	src/code/global_short_vector_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cb93d45b060be3c859b7ff3786f07894a03ff65724475a33b2d15f61395ddca7
+0x1C190	0x28	src/code/copy_link_payload.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	818a41ab052963446bb89926d7fe8a7b45f80e6da51fcfbf3ef570355dded504
+0x340B8	0x28	src/code/update_both_channels.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f5ce9a2adfba47b1db65039e3d98c18cb95250b1bdcc0f8619185f92ae5711aa
+0x368D4	0x28	src/code/audio_mode_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	80b44b411202e5ff4644fcc9cfe1c973e0a7a9fb4dcc1bae8e223b291480f8a5
+0x378D4	0x28	src/code/audio_signed_byte_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3d7771137875014dcc94e2f2f2e4e8f38ac2d98d48b01f6c16d1bf370fa1de8a
+0x22C78	0x24	src/code/index_pair_query.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	24d076ebece3a67690f9d73cdddd7c8ccf3843cc98155ab8058e54a7cf351956
