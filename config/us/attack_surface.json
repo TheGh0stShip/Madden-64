@@ -1,0 +1,1637 @@
+{
+  "rom_sha256": "39f25dad3af4782a909bf58d7127acae700ea7c6f17c48d39ab76fe331735d6f",
+  "rom_size": 12582912,
+  "coverage": {
+    "mapped_bytes": 12582912,
+    "unmapped_bytes": 0
+  },
+  "regions": [
+    {
+      "start": 0,
+      "end": 4096,
+      "kind": "rom_header_and_ipl3",
+      "size": 4096,
+      "entropy_bits_per_byte": 5.3122
+    },
+    {
+      "start": 4096,
+      "end": 4816,
+      "kind": "boot_loader",
+      "size": 720,
+      "entropy_bits_per_byte": 5.3431
+    },
+    {
+      "start": 4816,
+      "end": 12577238,
+      "kind": "archive_region",
+      "size": 12572422,
+      "entropy_bits_per_byte": 7.5936
+    },
+    {
+      "start": 12577238,
+      "end": 12582912,
+      "kind": "unused_padding",
+      "size": 5674,
+      "entropy_bits_per_byte": 1.3775
+    }
+  ],
+  "archives": [
+    {
+      "index": 0,
+      "start": 4816,
+      "end": 690856,
+      "table_size": 72,
+      "records": 6,
+      "size": 686040,
+      "entropy_bits_per_byte": 6.809
+    },
+    {
+      "index": 1,
+      "start": 690856,
+      "end": 1359384,
+      "table_size": 1824,
+      "records": 152,
+      "size": 668528,
+      "entropy_bits_per_byte": 7.496
+    },
+    {
+      "index": 2,
+      "start": 1359384,
+      "end": 1359526,
+      "table_size": 12,
+      "records": 1,
+      "size": 142,
+      "entropy_bits_per_byte": 4.5931
+    },
+    {
+      "index": 3,
+      "start": 1359526,
+      "end": 2819382,
+      "table_size": 3060,
+      "records": 255,
+      "size": 1459856,
+      "entropy_bits_per_byte": 7.1712
+    },
+    {
+      "index": 4,
+      "start": 2819382,
+      "end": 3013184,
+      "table_size": 696,
+      "records": 58,
+      "size": 193802,
+      "entropy_bits_per_byte": 6.9477
+    },
+    {
+      "index": 5,
+      "start": 3013184,
+      "end": 3026454,
+      "table_size": 24,
+      "records": 2,
+      "size": 13270,
+      "entropy_bits_per_byte": 6.8665
+    },
+    {
+      "index": 6,
+      "start": 3026454,
+      "end": 3046758,
+      "table_size": 132,
+      "records": 11,
+      "size": 20304,
+      "entropy_bits_per_byte": 7.6705
+    },
+    {
+      "index": 7,
+      "start": 3046758,
+      "end": 10219266,
+      "table_size": 2844,
+      "records": 237,
+      "size": 7172508,
+      "entropy_bits_per_byte": 7.5722
+    },
+    {
+      "index": 8,
+      "start": 10219266,
+      "end": 11054996,
+      "table_size": 1608,
+      "records": 134,
+      "size": 835730,
+      "entropy_bits_per_byte": 7.1276
+    },
+    {
+      "index": 9,
+      "start": 11054996,
+      "end": 11213718,
+      "table_size": 600,
+      "records": 50,
+      "size": 158722,
+      "entropy_bits_per_byte": 6.9338
+    },
+    {
+      "index": 10,
+      "start": 11213718,
+      "end": 11758418,
+      "table_size": 3960,
+      "records": 330,
+      "size": 544700,
+      "entropy_bits_per_byte": 7.2288
+    },
+    {
+      "index": 11,
+      "start": 11758418,
+      "end": 11867354,
+      "table_size": 540,
+      "records": 45,
+      "size": 108936,
+      "entropy_bits_per_byte": 7.7754
+    },
+    {
+      "index": 12,
+      "start": 11867354,
+      "end": 11867354,
+      "table_size": 0,
+      "records": 0,
+      "size": 0,
+      "entropy_bits_per_byte": 0.0
+    },
+    {
+      "index": 13,
+      "start": 11867354,
+      "end": 12010110,
+      "table_size": 24,
+      "records": 2,
+      "size": 142756,
+      "entropy_bits_per_byte": 7.1677
+    },
+    {
+      "index": 14,
+      "start": 12010110,
+      "end": 12577238,
+      "table_size": 840,
+      "records": 70,
+      "size": 567128,
+      "entropy_bits_per_byte": 7.2349
+    }
+  ],
+  "functions": {
+    "modules": {
+      "boot_loader": {
+        "functions": 5,
+        "bytes": 632,
+        "matched_functions": 3,
+        "matched_bytes": 172
+      },
+      "overlay_1": {
+        "functions": 1025,
+        "bytes": 183220,
+        "matched_functions": 103,
+        "matched_bytes": 2540
+      },
+      "overlay_4": {
+        "functions": 420,
+        "bytes": 115116,
+        "matched_functions": 53,
+        "matched_bytes": 1860
+      },
+      "resident": {
+        "functions": 1373,
+        "bytes": 378576,
+        "matched_functions": 314,
+        "matched_bytes": 37256
+      }
+    },
+    "size_buckets": {
+      "000-0016": {
+        "functions": 327,
+        "bytes": 3956,
+        "matched_functions": 192,
+        "matched_bytes": 2244
+      },
+      "000-0032": {
+        "functions": 225,
+        "bytes": 5860,
+        "matched_functions": 92,
+        "matched_bytes": 2500
+      },
+      "000-0064": {
+        "functions": 385,
+        "bytes": 19116,
+        "matched_functions": 95,
+        "matched_bytes": 4336
+      },
+      "000-0128": {
+        "functions": 554,
+        "bytes": 51956,
+        "matched_functions": 30,
+        "matched_bytes": 2712
+      },
+      "000-0256": {
+        "functions": 554,
+        "bytes": 102676,
+        "matched_functions": 23,
+        "matched_bytes": 4608
+      },
+      "000-0512": {
+        "functions": 476,
+        "bytes": 171136,
+        "matched_functions": 24,
+        "matched_bytes": 9388
+      },
+      "000-1024": {
+        "functions": 202,
+        "bytes": 140620,
+        "matched_functions": 10,
+        "matched_bytes": 6860
+      },
+      "1025+": {
+        "functions": 100,
+        "bytes": 182224,
+        "matched_functions": 7,
+        "matched_bytes": 9180
+      }
+    },
+    "exact_duplicate_families": 17,
+    "exact_duplicate_members": 113,
+    "transferable_families": [],
+    "conservative_queue": [
+      {
+        "module": "overlay1",
+        "vram": 2148246732,
+        "rom": 177352,
+        "size": 24,
+        "name": "func_800BA4CC"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148201948,
+        "rom": 132568,
+        "size": 28,
+        "name": "func_800AF5DC"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148201976,
+        "rom": 132596,
+        "size": 28,
+        "name": "func_800AF5F8"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148089124,
+        "rom": 19744,
+        "size": 36,
+        "name": "func_80093D24"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148180392,
+        "rom": 111012,
+        "size": 36,
+        "name": "func_800AA1A8"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148270616,
+        "rom": 201236,
+        "size": 36,
+        "name": "func_800C0218"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148426016,
+        "rom": 129336,
+        "size": 36,
+        "name": "func_800E6120"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148194048,
+        "rom": 124668,
+        "size": 40,
+        "name": "func_800AD700"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148153972,
+        "rom": 84592,
+        "size": 44,
+        "name": "func_800A3A74"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148201856,
+        "rom": 132476,
+        "size": 44,
+        "name": "func_800AF580"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148277744,
+        "rom": 208364,
+        "size": 44,
+        "name": "func_800C1DF0"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148162976,
+        "rom": 93596,
+        "size": 48,
+        "name": "func_800A5DA0"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148201900,
+        "rom": 132520,
+        "size": 48,
+        "name": "func_800AF5AC"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148260008,
+        "rom": 190628,
+        "size": 52,
+        "name": "func_800BD8A8"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148271912,
+        "rom": 202532,
+        "size": 52,
+        "name": "func_800C0728"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148388928,
+        "rom": 92248,
+        "size": 52,
+        "name": "func_800DD040"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148164608,
+        "rom": 95228,
+        "size": 56,
+        "name": "func_800A6400"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148190676,
+        "rom": 121296,
+        "size": 56,
+        "name": "func_800AC9D4"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148277688,
+        "rom": 208308,
+        "size": 56,
+        "name": "func_800C1DB8"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148416868,
+        "rom": 120188,
+        "size": 56,
+        "name": "func_800E3D64"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148112500,
+        "rom": 43120,
+        "size": 60,
+        "name": "func_80099874"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148259284,
+        "rom": 189904,
+        "size": 60,
+        "name": "func_800BD5D4"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148248220,
+        "rom": 178840,
+        "size": 64,
+        "name": "func_800BAA9C"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148296156,
+        "rom": 226776,
+        "size": 64,
+        "name": "func_800C65DC"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148335780,
+        "rom": 39100,
+        "size": 64,
+        "name": "func_800D00A4"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148292880,
+        "rom": 223500,
+        "size": 68,
+        "name": "func_800C5910"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148392544,
+        "rom": 95864,
+        "size": 68,
+        "name": "func_800DDE60"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148392728,
+        "rom": 96048,
+        "size": 68,
+        "name": "func_800DDF18"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148372540,
+        "rom": 75860,
+        "size": 72,
+        "name": "func_800D903C"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148416024,
+        "rom": 119344,
+        "size": 72,
+        "name": "func_800E3A18"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148112424,
+        "rom": 43044,
+        "size": 76,
+        "name": "func_80099828"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148260060,
+        "rom": 190680,
+        "size": 80,
+        "name": "func_800BD8DC"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148392612,
+        "rom": 95932,
+        "size": 80,
+        "name": "func_800DDEA4"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148143404,
+        "rom": 74024,
+        "size": 84,
+        "name": "func_800A112C"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148266716,
+        "rom": 197336,
+        "size": 84,
+        "name": "func_800BF2DC"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148392364,
+        "rom": 95684,
+        "size": 84,
+        "name": "func_800DDDAC"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148180260,
+        "rom": 110880,
+        "size": 88,
+        "name": "func_800AA124"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148297268,
+        "rom": 227888,
+        "size": 88,
+        "name": "func_800C6A34"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148169084,
+        "rom": 99704,
+        "size": 92,
+        "name": "func_800A757C"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148169176,
+        "rom": 99796,
+        "size": 92,
+        "name": "func_800A75D8"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148387072,
+        "rom": 90392,
+        "size": 92,
+        "name": "func_800DC900"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148387164,
+        "rom": 90484,
+        "size": 92,
+        "name": "func_800DC95C"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148210760,
+        "rom": 141380,
+        "size": 96,
+        "name": "func_800B1848"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148392448,
+        "rom": 95768,
+        "size": 96,
+        "name": "func_800DDE00"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148426052,
+        "rom": 129372,
+        "size": 96,
+        "name": "func_800E6144"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148191136,
+        "rom": 121756,
+        "size": 100,
+        "name": "func_800ACBA0"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148327860,
+        "rom": 31180,
+        "size": 100,
+        "name": "func_800CE1B4"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148258568,
+        "rom": 189188,
+        "size": 104,
+        "name": "func_800BD308"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148388720,
+        "rom": 92040,
+        "size": 104,
+        "name": "func_800DCF70"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148388824,
+        "rom": 92144,
+        "size": 104,
+        "name": "func_800DCFD8"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148398272,
+        "rom": 101592,
+        "size": 104,
+        "name": "func_800DF4C0"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148139876,
+        "rom": 70496,
+        "size": 112,
+        "name": "func_800A0364"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148233244,
+        "rom": 163864,
+        "size": 112,
+        "name": "func_800B701C"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148274728,
+        "rom": 205348,
+        "size": 112,
+        "name": "func_800C1228"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148392796,
+        "rom": 96116,
+        "size": 112,
+        "name": "func_800DDF5C"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148089008,
+        "rom": 19628,
+        "size": 116,
+        "name": "func_80093CB0"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148124588,
+        "rom": 55208,
+        "size": 116,
+        "name": "func_8009C7AC"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148168692,
+        "rom": 99312,
+        "size": 116,
+        "name": "func_800A73F4"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148191020,
+        "rom": 121640,
+        "size": 116,
+        "name": "func_800ACB2C"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148270356,
+        "rom": 200976,
+        "size": 116,
+        "name": "func_800C0114"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148104512,
+        "rom": 35132,
+        "size": 120,
+        "name": "func_80097940"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148216904,
+        "rom": 147524,
+        "size": 128,
+        "name": "func_800B3048"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148296884,
+        "rom": 227504,
+        "size": 128,
+        "name": "func_800C68B4"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148297012,
+        "rom": 227632,
+        "size": 128,
+        "name": "func_800C6934"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148300832,
+        "rom": 4152,
+        "size": 128,
+        "name": "func_800C7820"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148355092,
+        "rom": 58412,
+        "size": 128,
+        "name": "func_800D4C14"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148367048,
+        "rom": 70368,
+        "size": 128,
+        "name": "func_800D7AC8"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148088872,
+        "rom": 19492,
+        "size": 136,
+        "name": "func_80093C28"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148133732,
+        "rom": 64352,
+        "size": 136,
+        "name": "func_8009EB64"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148249336,
+        "rom": 179956,
+        "size": 136,
+        "name": "func_800BAEF8"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148366776,
+        "rom": 70096,
+        "size": 136,
+        "name": "func_800D79B8"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148366912,
+        "rom": 70232,
+        "size": 136,
+        "name": "func_800D7A40"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148120504,
+        "rom": 51124,
+        "size": 140,
+        "name": "func_8009B7B8"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148261560,
+        "rom": 192180,
+        "size": 140,
+        "name": "func_800BDEB8"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148120360,
+        "rom": 50980,
+        "size": 144,
+        "name": "func_8009B728"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148372612,
+        "rom": 75932,
+        "size": 144,
+        "name": "func_800D9084"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148127972,
+        "rom": 58592,
+        "size": 152,
+        "name": "func_8009D4E4"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148152112,
+        "rom": 82732,
+        "size": 152,
+        "name": "func_800A3330"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148184316,
+        "rom": 114936,
+        "size": 152,
+        "name": "func_800AB0FC"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148421704,
+        "rom": 125024,
+        "size": 152,
+        "name": "func_800E5048"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148252484,
+        "rom": 183104,
+        "size": 184,
+        "name": "func_800BBB44"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148254436,
+        "rom": 185056,
+        "size": 192,
+        "name": "func_800BC2E4"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148378628,
+        "rom": 81948,
+        "size": 200,
+        "name": "func_800DA804"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148259068,
+        "rom": 189688,
+        "size": 216,
+        "name": "func_800BD4FC"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148088632,
+        "rom": 19252,
+        "size": 240,
+        "name": "func_80093B38"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148283724,
+        "rom": 214344,
+        "size": 248,
+        "name": "func_800C354C"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148327960,
+        "rom": 31280,
+        "size": 260,
+        "name": "func_800CE218"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148396940,
+        "rom": 100260,
+        "size": 312,
+        "name": "func_800DEF8C"
+      },
+      {
+        "module": "overlay1",
+        "vram": 2148224436,
+        "rom": 155056,
+        "size": 340,
+        "name": "func_800B4DB4"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148340964,
+        "rom": 44284,
+        "size": 484,
+        "name": "func_800D14E4"
+      },
+      {
+        "module": "overlay4",
+        "vram": 2148398512,
+        "rom": 101832,
+        "size": 512,
+        "name": "func_800DF5B0"
+      }
+    ]
+  },
+  "assets": {
+    "by_kind": {
+      "audio_stream": {
+        "records": 237,
+        "stored_bytes": 7169529,
+        "expanded_bytes": 7169529,
+        "compressed_records": 0,
+        "expansion_ratio": 1.0
+      },
+      "empty_record": {
+        "records": 2,
+        "stored_bytes": 0,
+        "expanded_bytes": 0,
+        "compressed_records": 0,
+        "expansion_ratio": 1.0
+      },
+      "gameplay_table": {
+        "records": 2,
+        "stored_bytes": 13246,
+        "expanded_bytes": 31768,
+        "compressed_records": 2,
+        "expansion_ratio": 2.3983
+      },
+      "graphics_auxiliary": {
+        "records": 214,
+        "stored_bytes": 816040,
+        "expanded_bytes": 1087489,
+        "compressed_records": 164,
+        "expansion_ratio": 1.3326
+      },
+      "jpeg_image": {
+        "records": 43,
+        "stored_bytes": 233576,
+        "expanded_bytes": 233696,
+        "compressed_records": 1,
+        "expansion_ratio": 1.0005
+      },
+      "overlay_data": {
+        "records": 2,
+        "stored_bytes": 194248,
+        "expanded_bytes": 377152,
+        "compressed_records": 2,
+        "expansion_ratio": 1.9416
+      },
+      "program_metadata": {
+        "records": 1,
+        "stored_bytes": 32,
+        "expanded_bytes": 32,
+        "compressed_records": 0,
+        "expansion_ratio": 1.0
+      },
+      "program_overlay": {
+        "records": 2,
+        "stored_bytes": 207033,
+        "expanded_bytes": 371936,
+        "compressed_records": 2,
+        "expansion_ratio": 1.7965
+      },
+      "resident_program": {
+        "records": 1,
+        "stored_bytes": 284652,
+        "expanded_bytes": 488128,
+        "compressed_records": 1,
+        "expansion_ratio": 1.7148
+      },
+      "roster_database": {
+        "records": 2,
+        "stored_bytes": 142732,
+        "expanded_bytes": 270845,
+        "compressed_records": 2,
+        "expansion_ratio": 1.8976
+      },
+      "texture": {
+        "records": 516,
+        "stored_bytes": 1104681,
+        "expanded_bytes": 1680504,
+        "compressed_records": 496,
+        "expansion_ratio": 1.5213
+      },
+      "tmot_animation": {
+        "records": 67,
+        "stored_bytes": 547849,
+        "expanded_bytes": 556096,
+        "compressed_records": 38,
+        "expansion_ratio": 1.0151
+      },
+      "tnmf_model": {
+        "records": 262,
+        "stored_bytes": 1823524,
+        "expanded_bytes": 2612424,
+        "compressed_records": 251,
+        "expansion_ratio": 1.4326
+      },
+      "tspr_sprite": {
+        "records": 2,
+        "stored_bytes": 18418,
+        "expanded_bytes": 39324,
+        "compressed_records": 2,
+        "expansion_ratio": 2.1351
+      }
+    },
+    "leading_signatures": {
+      "audio_stream": [
+        {
+          "hex": "0000F939",
+          "records": 3
+        },
+        {
+          "hex": "0000DF29",
+          "records": 2
+        },
+        {
+          "hex": "00001E57",
+          "records": 2
+        },
+        {
+          "hex": "00002F55",
+          "records": 2
+        },
+        {
+          "hex": "0000CE46",
+          "records": 2
+        },
+        {
+          "hex": "00008D30",
+          "records": 2
+        },
+        {
+          "hex": "0000272A",
+          "records": 2
+        },
+        {
+          "hex": "00004941",
+          "records": 2
+        },
+        {
+          "hex": "0900127E",
+          "records": 1
+        },
+        {
+          "hex": "09002BDD",
+          "records": 1
+        },
+        {
+          "hex": "0900895E",
+          "records": 1
+        },
+        {
+          "hex": "0000862B",
+          "records": 1
+        }
+      ],
+      "empty_record": [
+        {
+          "hex": "",
+          "records": 2
+        }
+      ],
+      "gameplay_table": [
+        {
+          "hex": "01A54400",
+          "records": 1
+        },
+        {
+          "hex": "01A55A00",
+          "records": 1
+        }
+      ],
+      "graphics_auxiliary": [
+        {
+          "hex": "0000FFFF",
+          "records": 28
+        },
+        {
+          "hex": "0000EF7B",
+          "records": 16
+        },
+        {
+          "hex": "0000F7BD",
+          "records": 15
+        },
+        {
+          "hex": "00000808",
+          "records": 11
+        },
+        {
+          "hex": "00260010",
+          "records": 9
+        },
+        {
+          "hex": "0000E739",
+          "records": 8
+        },
+        {
+          "hex": "000010C7",
+          "records": 6
+        },
+        {
+          "hex": "00000001",
+          "records": 5
+        },
+        {
+          "hex": "0000DEF7",
+          "records": 5
+        },
+        {
+          "hex": "0001004C",
+          "records": 4
+        },
+        {
+          "hex": "00000043",
+          "records": 3
+        },
+        {
+          "hex": "02060100",
+          "records": 3
+        }
+      ],
+      "jpeg_image": [
+        {
+          "hex": "FFD8FFE0",
+          "records": 43
+        }
+      ],
+      "overlay_data": [
+        {
+          "hex": "05000000",
+          "records": 1
+        },
+        {
+          "hex": "08000000",
+          "records": 1
+        }
+      ],
+      "program_metadata": [
+        {
+          "hex": "07000000",
+          "records": 1
+        }
+      ],
+      "program_overlay": [
+        {
+          "hex": "06000000",
+          "records": 1
+        },
+        {
+          "hex": "09000000",
+          "records": 1
+        }
+      ],
+      "resident_program": [
+        {
+          "hex": "00000000",
+          "records": 1
+        }
+      ],
+      "roster_database": [
+        {
+          "hex": "0041544C",
+          "records": 1
+        },
+        {
+          "hex": "432E2043",
+          "records": 1
+        }
+      ],
+      "texture": [
+        {
+          "hex": "00080001",
+          "records": 516
+        }
+      ],
+      "tmot_animation": [
+        {
+          "hex": "544D6F74",
+          "records": 67
+        }
+      ],
+      "tnmf_model": [
+        {
+          "hex": "544E4D46",
+          "records": 262
+        }
+      ],
+      "tspr_sprite": [
+        {
+          "hex": "54537072",
+          "records": 2
+        }
+      ]
+    },
+    "largest_records": [
+      {
+        "archive": 7,
+        "index": 63,
+        "kind": "audio_stream",
+        "rom_start": 4042748,
+        "stored_bytes": 974893,
+        "expanded_bytes": 974893
+      },
+      {
+        "archive": 7,
+        "index": 65,
+        "kind": "audio_stream",
+        "rom_start": 5066328,
+        "stored_bytes": 766129,
+        "expanded_bytes": 766129
+      },
+      {
+        "archive": 0,
+        "index": 0,
+        "kind": "resident_program",
+        "rom_start": 4888,
+        "stored_bytes": 284652,
+        "expanded_bytes": 488128
+      },
+      {
+        "archive": 7,
+        "index": 66,
+        "kind": "audio_stream",
+        "rom_start": 5832458,
+        "stored_bytes": 372109,
+        "expanded_bytes": 372109
+      },
+      {
+        "archive": 13,
+        "index": 1,
+        "kind": "roster_database",
+        "rom_start": 11883628,
+        "stored_bytes": 126482,
+        "expanded_bytes": 243720
+      },
+      {
+        "archive": 0,
+        "index": 1,
+        "kind": "program_overlay",
+        "rom_start": 289540,
+        "stored_bytes": 132678,
+        "expanded_bytes": 239208
+      },
+      {
+        "archive": 0,
+        "index": 2,
+        "kind": "overlay_data",
+        "rom_start": 422218,
+        "stored_bytes": 115231,
+        "expanded_bytes": 238706
+      },
+      {
+        "archive": 0,
+        "index": 5,
+        "kind": "overlay_data",
+        "rom_start": 611838,
+        "stored_bytes": 79017,
+        "expanded_bytes": 138446
+      },
+      {
+        "archive": 14,
+        "index": 0,
+        "kind": "tmot_animation",
+        "rom_start": 12010950,
+        "stored_bytes": 132740,
+        "expanded_bytes": 132740
+      },
+      {
+        "archive": 0,
+        "index": 4,
+        "kind": "program_overlay",
+        "rom_start": 537482,
+        "stored_bytes": 74355,
+        "expanded_bytes": 132728
+      },
+      {
+        "archive": 4,
+        "index": 43,
+        "kind": "graphics_auxiliary",
+        "rom_start": 2873302,
+        "stored_bytes": 73830,
+        "expanded_bytes": 106692
+      },
+      {
+        "archive": 8,
+        "index": 126,
+        "kind": "graphics_auxiliary",
+        "rom_start": 10840536,
+        "stored_bytes": 80676,
+        "expanded_bytes": 80676
+      },
+      {
+        "archive": 7,
+        "index": 102,
+        "kind": "audio_stream",
+        "rom_start": 7485608,
+        "stored_bytes": 78682,
+        "expanded_bytes": 78682
+      },
+      {
+        "archive": 1,
+        "index": 5,
+        "kind": "texture",
+        "rom_start": 697648,
+        "stored_bytes": 57782,
+        "expanded_bytes": 77334
+      },
+      {
+        "archive": 1,
+        "index": 6,
+        "kind": "texture",
+        "rom_start": 755430,
+        "stored_bytes": 64430,
+        "expanded_bytes": 77334
+      },
+      {
+        "archive": 1,
+        "index": 7,
+        "kind": "texture",
+        "rom_start": 819860,
+        "stored_bytes": 55560,
+        "expanded_bytes": 77334
+      },
+      {
+        "archive": 1,
+        "index": 8,
+        "kind": "texture",
+        "rom_start": 875420,
+        "stored_bytes": 53496,
+        "expanded_bytes": 77334
+      },
+      {
+        "archive": 7,
+        "index": 108,
+        "kind": "audio_stream",
+        "rom_start": 7724640,
+        "stored_bytes": 68764,
+        "expanded_bytes": 68764
+      },
+      {
+        "archive": 1,
+        "index": 142,
+        "kind": "graphics_auxiliary",
+        "rom_start": 1297038,
+        "stored_bytes": 59091,
+        "expanded_bytes": 66898
+      },
+      {
+        "archive": 3,
+        "index": 246,
+        "kind": "tnmf_model",
+        "rom_start": 2470366,
+        "stored_bytes": 50998,
+        "expanded_bytes": 65864
+      },
+      {
+        "archive": 3,
+        "index": 239,
+        "kind": "tnmf_model",
+        "rom_start": 2201018,
+        "stored_bytes": 45524,
+        "expanded_bytes": 65728
+      },
+      {
+        "archive": 3,
+        "index": 238,
+        "kind": "tnmf_model",
+        "rom_start": 2147676,
+        "stored_bytes": 53342,
+        "expanded_bytes": 65456
+      },
+      {
+        "archive": 3,
+        "index": 230,
+        "kind": "tnmf_model",
+        "rom_start": 1831898,
+        "stored_bytes": 54324,
+        "expanded_bytes": 65264
+      },
+      {
+        "archive": 3,
+        "index": 224,
+        "kind": "tnmf_model",
+        "rom_start": 1610040,
+        "stored_bytes": 45377,
+        "expanded_bytes": 63928
+      },
+      {
+        "archive": 3,
+        "index": 252,
+        "kind": "tnmf_model",
+        "rom_start": 2699806,
+        "stored_bytes": 46301,
+        "expanded_bytes": 60904
+      },
+      {
+        "archive": 3,
+        "index": 251,
+        "kind": "tnmf_model",
+        "rom_start": 2652278,
+        "stored_bytes": 47528,
+        "expanded_bytes": 60784
+      },
+      {
+        "archive": 3,
+        "index": 231,
+        "kind": "tnmf_model",
+        "rom_start": 1886222,
+        "stored_bytes": 47168,
+        "expanded_bytes": 60752
+      },
+      {
+        "archive": 7,
+        "index": 107,
+        "kind": "audio_stream",
+        "rom_start": 7664156,
+        "stored_bytes": 60484,
+        "expanded_bytes": 60484
+      },
+      {
+        "archive": 7,
+        "index": 88,
+        "kind": "audio_stream",
+        "rom_start": 7004790,
+        "stored_bytes": 60439,
+        "expanded_bytes": 60439
+      },
+      {
+        "archive": 3,
+        "index": 221,
+        "kind": "tnmf_model",
+        "rom_start": 1498446,
+        "stored_bytes": 38411,
+        "expanded_bytes": 60432
+      },
+      {
+        "archive": 3,
+        "index": 241,
+        "kind": "tnmf_model",
+        "rom_start": 2285888,
+        "stored_bytes": 41046,
+        "expanded_bytes": 60320
+      },
+      {
+        "archive": 3,
+        "index": 232,
+        "kind": "tnmf_model",
+        "rom_start": 1933390,
+        "stored_bytes": 43736,
+        "expanded_bytes": 58600
+      },
+      {
+        "archive": 3,
+        "index": 226,
+        "kind": "tnmf_model",
+        "rom_start": 1691684,
+        "stored_bytes": 43030,
+        "expanded_bytes": 57920
+      },
+      {
+        "archive": 7,
+        "index": 90,
+        "kind": "audio_stream",
+        "rom_start": 7105474,
+        "stored_bytes": 57703,
+        "expanded_bytes": 57703
+      },
+      {
+        "archive": 3,
+        "index": 234,
+        "kind": "tnmf_model",
+        "rom_start": 2009984,
+        "stored_bytes": 44095,
+        "expanded_bytes": 57376
+      },
+      {
+        "archive": 7,
+        "index": 125,
+        "kind": "audio_stream",
+        "rom_start": 8277840,
+        "stored_bytes": 56794,
+        "expanded_bytes": 56794
+      },
+      {
+        "archive": 7,
+        "index": 22,
+        "kind": "audio_stream",
+        "rom_start": 3371996,
+        "stored_bytes": 56677,
+        "expanded_bytes": 56677
+      },
+      {
+        "archive": 7,
+        "index": 1,
+        "kind": "audio_stream",
+        "rom_start": 3081880,
+        "stored_bytes": 56623,
+        "expanded_bytes": 56623
+      },
+      {
+        "archive": 7,
+        "index": 21,
+        "kind": "audio_stream",
+        "rom_start": 3315462,
+        "stored_bytes": 56533,
+        "expanded_bytes": 56533
+      },
+      {
+        "archive": 3,
+        "index": 243,
+        "kind": "tnmf_model",
+        "rom_start": 2363588,
+        "stored_bytes": 41912,
+        "expanded_bytes": 54992
+      },
+      {
+        "archive": 8,
+        "index": 125,
+        "kind": "graphics_auxiliary",
+        "rom_start": 10792074,
+        "stored_bytes": 48461,
+        "expanded_bytes": 54618
+      },
+      {
+        "archive": 3,
+        "index": 222,
+        "kind": "tnmf_model",
+        "rom_start": 1536858,
+        "stored_bytes": 40667,
+        "expanded_bytes": 53760
+      },
+      {
+        "archive": 7,
+        "index": 74,
+        "kind": "audio_stream",
+        "rom_start": 6429356,
+        "stored_bytes": 52879,
+        "expanded_bytes": 52879
+      },
+      {
+        "archive": 7,
+        "index": 123,
+        "kind": "audio_stream",
+        "rom_start": 8174196,
+        "stored_bytes": 52789,
+        "expanded_bytes": 52789
+      },
+      {
+        "archive": 7,
+        "index": 56,
+        "kind": "audio_stream",
+        "rom_start": 3806712,
+        "stored_bytes": 52654,
+        "expanded_bytes": 52654
+      },
+      {
+        "archive": 7,
+        "index": 85,
+        "kind": "audio_stream",
+        "rom_start": 6881342,
+        "stored_bytes": 52375,
+        "expanded_bytes": 52375
+      },
+      {
+        "archive": 3,
+        "index": 235,
+        "kind": "tnmf_model",
+        "rom_start": 2054080,
+        "stored_bytes": 37298,
+        "expanded_bytes": 52344
+      },
+      {
+        "archive": 3,
+        "index": 245,
+        "kind": "tnmf_model",
+        "rom_start": 2439926,
+        "stored_bytes": 30440,
+        "expanded_bytes": 52200
+      },
+      {
+        "archive": 3,
+        "index": 223,
+        "kind": "tnmf_model",
+        "rom_start": 1577526,
+        "stored_bytes": 32513,
+        "expanded_bytes": 52032
+      },
+      {
+        "archive": 3,
+        "index": 225,
+        "kind": "tnmf_model",
+        "rom_start": 1655418,
+        "stored_bytes": 36265,
+        "expanded_bytes": 51176
+      }
+    ],
+    "format_evidence": {
+      "audio": {
+        "header_endian": "little",
+        "header_bytes": 4,
+        "size_word": "payload_bytes_mod_65536",
+        "validated_records": 237,
+        "stream_types": {
+          "0": 233,
+          "9": 4
+        }
+      },
+      "container_versions": {
+        "tmot_animation": [
+          {
+            "hex": "00000100",
+            "records": 67
+          }
+        ],
+        "tnmf_model": [
+          {
+            "hex": "00030002",
+            "records": 112
+          },
+          {
+            "hex": "00010002",
+            "records": 102
+          },
+          {
+            "hex": "00000002",
+            "records": 25
+          },
+          {
+            "hex": "000D0002",
+            "records": 19
+          },
+          {
+            "hex": "00090002",
+            "records": 4
+          }
+        ],
+        "tspr_sprite": [
+          {
+            "hex": "00000100",
+            "records": 2
+          }
+        ]
+      }
+    }
+  }
+}

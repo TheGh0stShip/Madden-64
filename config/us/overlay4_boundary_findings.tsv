@@ -347,3 +347,4 @@ address	kind	function	detail
 0x800E573C	late_start	0x800E573C	reads v0 set by the preceding bytes
 0x800E57B8	in_text_data		0x10 bytes of non-code inside text
 0x800E57B8	rejected_start		sweep seed: falls into the next function
+0x800D3FD4	interior_alias	0x800D3FD4	calls without saving ra before branching to a shared internal continuation

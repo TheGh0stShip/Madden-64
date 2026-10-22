@@ -948,3 +948,10 @@ address	kind	function	detail
 0x800C7458	cross_branch	0x800C7368	branch to 0x800C748C inside 0x800C747C
 0x800C7478	cross_branch	0x800C7368	branch to 0x800C7490 inside 0x800C747C
 0x800C747C	falls_through	0x800C747C	preceding code continues into this entry
+0x8009074C	interior_alias	0x8009074C	compiler cannot reproduce branch-only color preset as a standalone function
+0x80090760	interior_alias	0x80090760	compiler cannot reproduce branch-only color preset as a standalone function
+0x80090778	interior_alias	0x80090778	compiler cannot reproduce branch-only color preset as a standalone function
+0x800BCB88	interior_alias	0x800BCB88	writes v0 before branching to a shared internal continuation
+0x800BCE20	interior_alias	0x800BCE20	writes v0 before branching to a shared internal continuation
+0x800BCE78	interior_alias	0x800BCE78	writes v0 before branching to a shared internal continuation
+0x800BCF04	interior_alias	0x800BCF04	writes v0 before branching to a shared internal continuation

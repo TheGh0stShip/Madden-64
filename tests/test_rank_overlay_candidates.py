@@ -31,8 +31,18 @@ class RankOverlayCandidatesTests(unittest.TestCase):
         rows = RANK.ranked_candidates(0x1000)
         addresses = {row["vram"] for row in rows}
         self.assertNotIn(0x80090678, addresses)
+        self.assertNotIn(0x80097120, addresses)
+        self.assertNotIn(0x800A1AA4, addresses)
+        self.assertNotIn(0x800B7A50, addresses)
+        self.assertNotIn(0x800944D0, addresses)
         self.assertNotIn(0x800C77E8, addresses)
         self.assertNotIn(0x800C78A4, addresses)
+
+    def test_fallthrough_after_call_is_not_a_function_start(self):
+        image = (ROOT / "build/us/audit/overlay_1.z64").read_bytes()
+        self.assertFalse(RANK.has_closed_predecessor(image, 0x811C))
+        self.assertTrue(RANK.uses_saved_context(image, 0x12AA0, 8))
+        self.assertFalse(RANK.has_complete_exit(image, 0x28A4C, 8))
 
 
 if __name__ == "__main__":

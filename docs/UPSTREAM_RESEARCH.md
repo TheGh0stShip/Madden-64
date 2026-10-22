@@ -148,6 +148,12 @@ Run `make candidates` to list the smallest credible unmatched overlay entries.
 The list is a work queue only; each item still requires disassembly review and
 the normal exact-byte gate.
 
+The whole-ROM attack audit subsequently found an exact 36-byte body shared by
+resident functions `func_80008E48` and `func_80033360`. Reusing the already
+matched channel-call source produced another exact match. This validates raw
+body-family transfer as a practical source-reuse path, not merely a search
+theory.
+
 ## Binary comparison
 
 Two locally available 1998 titles were surveyed with the same tooling. Nagano
