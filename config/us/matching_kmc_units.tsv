@@ -16,6 +16,17 @@
 0x37FAC	0x8	src/code/empty_function.c	-DFUNCTION=func_800373AC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x3CDF0	0x8	src/code/return_zero.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	648cbc77d024f6d08bc8ff4e3bdf1cebf2a933937ee1cebef4690d015808bd9c
 0x42238	0x8	src/code/empty_function.c	-DFUNCTION=func_80041638 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0xEB10	0x24	src/code/node_pool_current.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f40358cf0716632b90674f90227f8b817cf33650c02b22977b94145202011ba
+0x11E28	0x10	src/code/global_value_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	46c1a74d6eb8e88a0db422f6fa63e036ea5954b53bffb7ea0a859c47c6c31aab
+0x11E38	0x10	src/code/global_value_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	74846a5a4620146924d6657b0e876f7854d6f8799a0ea86499aa328d0b9c6dde
+0x17824	0x20	src/code/swap_s16.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6c6923ef900ffd0dfec460450568b52c13463f83371af466a73084c58a997f9b
+0x180EC	0x18	src/code/resource_flag_enable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3d0f8241c0a34c18ea713c891e7582f26ba7b25a1f2162bfffb7d53288cb7809
+0x18AAC	0x24	src/code/resource_release_wrapper.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e2dee1033231a9e2b777d3eef23d8c679c1de5668af004ee1e1846f11f337b1c
+0x1A444	0x24	src/code/indexed_call.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b0d42e0b3acc315e14c6b26ff78195945d99329718a311d8565808cd225f08b7
+0x1B63C	0x24	src/code/resource_pair_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1c26a65239d5508a90525a5cbe0328c4ca90d89fc017819823e36b2e130bb896
+0x2A7D4	0x10	src/code/runtime_byte_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ebc3bb024a3e4f635bbf6b5cbe18cdd94e2e08de8e97496a9eae6056232f3fe2
+0x2F428	0x20	src/code/offset_wrapper.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	531bbb5cc2e5f0a8e0be578e88e5d87586506c5ac3321c8554ed823754d51cd6
+0x3004C	0x20	src/code/clear_wrapper.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b697f462ec60f83889b9b599a5cde2584f4552d65683054982ab028f33b60f81
 0xD498	0xA8	src/code/object_flags.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	858ac3a1ce465482f6ed1587e925bca6ad7ddd3cee69d7e8cf07eb3716bb4405
 0xD540	0x50	src/code/object_dimensions.c	--symbol=func_8000CC18:0x8000CC18 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e5746656a57a066c86bfb297a34745aa3f1de720e769db00f4917d77c14ba21
 0xD590	0x38	src/code/object_position.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ec9ec0f5d8f9d2aae611a3ce9ea03f237a015197a66a4d5611ffb13f59436e3a
