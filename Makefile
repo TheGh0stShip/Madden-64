@@ -16,6 +16,9 @@ audit: verify
 	$(PYTHON) tools/audit_rom_layout.py "$(ROM)" build/us/survey/main_segment.bin
 
 match: audit
+	$(N64DK) match-batch --project . \
+		--rom "$(ROM)" \
+		config/us/matching_loader_asm_units.tsv=as
 	$(PYTHON) tools/make_analysis_rom.py build/us/survey/main_segment.bin build/us/main_unpacked.z64
 	$(N64DK) match-batch --project . \
 		--rom build/us/main_unpacked.z64 \

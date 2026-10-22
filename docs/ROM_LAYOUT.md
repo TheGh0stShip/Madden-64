@@ -131,7 +131,9 @@ The boot-loader total is partitioned byte-for-byte in
 ranges occupy 644 bytes; a 12-byte alignment block and the 64-byte archive
 boundary table occupy the remaining 76 bytes. The audit verifies contiguous
 coverage, the ROM-to-VRAM mapping, and all sixteen table values against the
-resident copy before accepting these totals.
+resident copy before accepting these totals. The code accounting includes the
+unreachable store word at `0x802005DC` and two trailing no-op words after the
+instruction-cache routine, but neither is counted as a function candidate.
 
 The resident BSS is a further 82,464 zero-initialized bytes. Function totals
 are explicitly candidates until source/linker reconstruction proves every

@@ -1,8 +1,10 @@
-rom_start	rom_end	vram_start	size	kind	name
-0x001000	0x001010	0x80200400	16	code	entry_stub
-0x001010	0x0010DC	0x80200410	204	code	load_program
-0x0010DC	0x0011E0	0x802004DC	260	code	decode_lz_type_1
-0x0011E0	0x001254	0x802005E0	116	code	cache_writeback_invalidate
-0x001254	0x001260	0x80200654	12	initialized_data	alignment_words
-0x001260	0x001290	0x80200660	48	code	cache_invalidate
-0x001290	0x0012D0	0x80200690	64	initialized_data	archive_boundary_table
+rom_start	rom_end	vram_start	size	kind	function_candidate	name
+0x001000	0x001010	0x80200400	16	code	1	entry_stub
+0x001010	0x0010DC	0x80200410	204	code	1	load_program
+0x0010DC	0x0011DC	0x802004DC	256	code	1	decode_lz_type_1
+0x0011DC	0x0011E0	0x802005DC	4	code	0	orphan_store_word
+0x0011E0	0x001254	0x802005E0	116	code	1	cache_writeback_invalidate
+0x001254	0x001260	0x80200654	12	initialized_data	0	alignment_words
+0x001260	0x001288	0x80200660	40	code	1	cache_invalidate
+0x001288	0x001290	0x80200688	8	code	0	code_alignment_words
+0x001290	0x0012D0	0x80200690	64	initialized_data	0	archive_boundary_table

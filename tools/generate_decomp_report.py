@@ -65,12 +65,12 @@ def loader_totals() -> tuple[int, int, int]:
         if not line:
             continue
         fields = line.split("\t")
-        if len(fields) != 6:
+        if len(fields) != 7:
             raise ValueError(f"{LOADER_MAP}:{number}: malformed row")
         size = int(fields[3], 0)
         if fields[4] == "code":
             code += size
-            functions += 1
+            functions += int(fields[5])
         elif fields[4] == "initialized_data":
             data += size
         else:
@@ -104,6 +104,7 @@ def build_report() -> dict[str, object]:
     ranges = manifest_ranges(manifests)
     overlay_configs = progress.get("overlay_manifests", [])
     loader_code, loader_data, loader_functions = loader_totals()
+    loader_ranges = manifest_ranges([ROOT / progress["loader_manifest"]])
     vram_base, rom_base = image["vram"], image["rom"]
     code_end = rom_base + image["code_size"]
     libultra_start = rom_base + image["libultra_vram"] - vram_base
@@ -168,7 +169,32 @@ def build_report() -> dict[str, object]:
             })
             overlay_matched += size
 
-    matched_code = sum(end - start for start, end, _source in ranges) + overlay_matched
+    loader_matched = 0
+    for start, end, source in loader_ranges:
+        size = end - start
+        vram = 0x80200400 + start - 0x1000
+        name = Path(source).stem
+        units.append({
+            "name": name,
+            "measures": measures(size, size, 1, 1),
+            "functions": [{
+                "name": name,
+                "size": str(size),
+                "fuzzy_match_percent": 100.0,
+                "address": str(vram),
+                "metadata": {"virtual_address": str(vram)},
+            }],
+            "metadata": {
+                "complete": True,
+                "source_path": source,
+                "progress_categories": ["boot_loader"],
+                "auto_generated": False,
+            },
+        })
+        loader_matched += size
+
+    matched_code = (sum(end - start for start, end, _source in ranges) +
+                    overlay_matched + loader_matched)
     matched_functions = progress["matched_functions"]
     categories = []
     for category_id, name in (("game", "Game code"), ("libultra", "libultra")):
@@ -182,7 +208,8 @@ def build_report() -> dict[str, object]:
         {
             "id": "boot_loader",
             "name": "Boot-loader code",
-            "measures": measures(loader_code, 0, loader_functions, 0,
+            "measures": measures(loader_code, loader_matched, loader_functions,
+                                 len(loader_ranges),
                                  loader_data, 0),
         },
         {

@@ -18,11 +18,11 @@ class DecompReportTests(unittest.TestCase):
         totals = report["measures"]
         self.assertEqual(report["version"], 2)
         self.assertEqual(totals["total_code"], "753420")
-        self.assertEqual(totals["matched_code"], "48536")
+        self.assertEqual(totals["matched_code"], "48708")
         self.assertEqual(totals["total_data"], "484548")
         self.assertEqual(totals["matched_data"], "496")
         self.assertEqual(totals["total_functions"], 2279)
-        self.assertEqual(totals["matched_functions"], 361)
+        self.assertEqual(totals["matched_functions"], 364)
         categories = {item["id"]: item["measures"] for item in report["categories"]}
         self.assertNotIn("overall_verified", categories)
         self.assertEqual(categories["overlays"]["matched_code"], "908")
@@ -30,6 +30,8 @@ class DecompReportTests(unittest.TestCase):
         self.assertEqual(categories["boot_loader"]["total_code"], "644")
         self.assertEqual(categories["boot_loader"]["total_data"], "76")
         self.assertEqual(categories["boot_loader"]["total_functions"], 5)
+        self.assertEqual(categories["boot_loader"]["matched_code"], "172")
+        self.assertEqual(categories["boot_loader"]["matched_functions"], 3)
         self.assertEqual(categories["rom_inventory"]["total_functions"], 1353)
         self.assertEqual(categories["inventory_audio"]["total_functions"], 237)
         self.assertEqual(categories["inventory_audio"]["total_data"], "7169664")

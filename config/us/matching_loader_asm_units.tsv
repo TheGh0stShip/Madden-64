@@ -1,0 +1,4 @@
+# GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
+0x1000	0x10	src/boot/entry.s	--symbol=boot_load_program:0x80200410 -O2 -G0 -mips3 -mgp32 -mfp32	7e90b08703f297b319beb5e9c05e14ada0919449e1755f9aa7e9035352024b19
+0x11E0	0x74	src/boot/cache_writeback_invalidate.s	-O2 -G0 -mips3 -mgp32 -mfp32	713e7b78373df6fbf3d030b5237e9c1e2148c9443cbfdf938f2e8ffdf8e2d326
+0x1260	0x28	src/boot/cache_invalidate.s	-O2 -G0 -mips3 -mgp32 -mfp32	394d3bf1ec1a51ef7eff9113ae1103280d0f09b29035cfd8630a0843d890c4f5

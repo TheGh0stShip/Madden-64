@@ -82,16 +82,19 @@ def loader_inventory(rom: bytes, bounds: list[int]) -> dict:
         if not line:
             continue
         fields = line.split("\t")
-        if len(fields) != 6:
+        if len(fields) != 7:
             raise AuditError(f"{LOADER_MAP}:{number}: malformed row")
         start, end, vram, size = (int(field, 0) for field in fields[:4])
-        kind, name = fields[4:]
+        kind, candidate_text, name = fields[4:]
+        if candidate_text not in ("0", "1"):
+            raise AuditError(f"{LOADER_MAP}:{number}: invalid function flag")
         if start < 0x1000 or end > bounds[0] or end - start != size:
             raise AuditError(f"{LOADER_MAP}:{number}: invalid loader extent")
         if vram != 0x80200400 + start - 0x1000:
             raise AuditError(f"{LOADER_MAP}:{number}: invalid VRAM mapping")
         rows.append({"start": start, "end": end, "vram": vram,
-                     "size": size, "kind": kind, "name": name})
+                     "size": size, "kind": kind,
+                     "function_candidate": candidate_text == "1", "name": name})
     rows.sort(key=lambda row: row["start"])
     cursor = 0x1000
     for row in rows:
@@ -113,7 +116,7 @@ def loader_inventory(rom: bytes, bounds: list[int]) -> dict:
         "initialized_data_bytes": sum(
             row["size"] for row in rows if row["kind"] == "initialized_data"
         ),
-        "function_candidates": sum(row["kind"] == "code" for row in rows),
+        "function_candidates": sum(row["function_candidate"] for row in rows),
     }
 
 

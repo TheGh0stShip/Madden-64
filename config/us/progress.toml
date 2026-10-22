@@ -11,7 +11,8 @@ total_functions = 2279
 
 [progress]
 matched_data = 496
-matched_functions = 361
+matched_functions = 364
+loader_manifest = "config/us/matching_loader_asm_units.tsv"
 
 manifests = [
   "config/us/matching_ido_sources.tsv",
