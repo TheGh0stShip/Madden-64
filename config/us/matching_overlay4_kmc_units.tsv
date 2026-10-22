@@ -37,3 +37,4 @@
 0x8C40	0x48	src/overlays/overlay4/object_position_bounds_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1aec6c37f542cf6b881c277da002bc13573b33c6337a87677728f2ecc47f40eb
 0xACB0	0x4C	src/overlays/overlay4/object_random_timer_init.c	--symbol=func_80031A1C:0x80031A1C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fb32ef1d8e8e3852af52145a9d71d3d1e901e8d48cebd39e072ebced06e84944
 0xB210	0x30	src/overlays/overlay4/subsystem_trigger.c	--symbol=func_800CE508:0x800CE508 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	17d604927bac1f26db816bdd4569fdf7382af0366c8c9366a1f8043f5b80cd92
+0x172D4	0x30	src/overlays/overlay4/packed_bytes_adjust.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9a78826560915c23c5689daf542c2e105042665b252da28d13fafb1758de31b1
