@@ -41,3 +41,11 @@
 0x27FD4	0x10	src/overlays/overlay1/sequence_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cad1fa6a160d422a7629646077b265a97c659df89b43fbab422c0a73d3cfeb43
 0x2CBF8	0x24	src/overlays/overlay1/player_index_delta.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7d7578405d5b191ef792f24a7482e2bd5ee5ec21ee21591550783c9ce0f1fd47
 0x34D44	0x20	src/overlays/overlay1/inverted_volume.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c2cb00791888666f4ab373ff423a782eb64e917b66a473eef12aebe4f2301a62
+0xC0F8	0x50	src/overlays/overlay1/arena_helpers.c	--symbol=D_8006542C:0x8006542C --symbol=D_80087958:0x80087958 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7fbe05365145b676300a882f5db077997ab21c467aa7f38d16b79997f941b5e7
+0xE4D4	0xC	src/overlays/overlay1/wrapper_value_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	69fa34570c5f81c8a89f698f91e7ab846c265f1aa7eb8c4fe7608ab2596794f6
+0x167F8	0xC	src/overlays/overlay1/object_status_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3ee1c797efa97448aaf045a12df2a72cfb00fa80f5c5ecb0ec685a0ade6e7dc8
+0x23D7C	0x24	src/overlays/overlay1/selection_value_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3e6f3bc80eabfde9d31bd08e7dbad200ab24cdf14f171765cdc98d6020e4762
+0x24004	0x40	src/overlays/overlay1/selection_state.c	--symbol=func_800AE87C:0x800AE87C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aadfefc4fdfec45eca5f5f36d9a0dee373ac7c02990e046eef66d6896df22c2d
+0x2D2B8	0x20	src/overlays/overlay1/runtime_link_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	59a62208f2b20ae6ebe241fb27dcdcf8e05b6978fb893b30414de7f76b687c15
+0x326B8	0x24	src/overlays/overlay1/mode_state.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7fac0df13ae6188f3c7692622e5e137220cda39c28e29837bd8e824feadf4132
+0x34640	0x14	src/overlays/overlay1/status_byte_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a413be8882845d4b865cce243c69550f17d499ea606cd07fdf0c1855e263e4a2
