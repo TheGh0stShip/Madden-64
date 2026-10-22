@@ -218,3 +218,9 @@
 0x46314	0x80	src/code/render_buffers_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	26bd78cc298fddb003665b9e2c9a8cb95560a452ff4396a6529967f99a2ffd80
 0x63F7C	0x44	src/code/runtime_object_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f6406217b63b1bd850dd95d12483df89cd84cc9a417c459c4ab231d0979932d0
 0x5C050	0x3C	src/code/runtime_callback_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7c04435facb3fd441012048ea7b2363f5391626daf9571a9c0a08db2e14718fb
+0x61CCC	0x54	src/code/record_maximum_active.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aa3a0fab87116ae122eb3e0cfa74e90eae6d8112edb26ff7563ccf00c0bc115f
+0x61D20	0x48	src/code/record_maximum.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e340e5a83efc9ff60b3858ae6ae8cc5a09468446c2f3d8d1785cb4190b511745
+0x60CE0	0x4C	src/code/ratio_round.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3094d6eafbe47b6e97f26515b31ccc741571a9537d4e7d6a79843b3389582efa
+0x60D2C	0x4C	src/code/ratio_half_round.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c8db273b1d3f195512433864cef7069cdf6e12fd5d795e0b4cca719c7c929231
+0x60760	0x3C	src/code/runtime_command_forward.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c655b11c9c51c1dcf7d39afd4f5d152df8551923132a1f18f0f0be584e6fbbfc
+0x6405C	0x38	src/code/runtime_description_emit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8ad5dfc2fda45cedb08fa85d9fcc1670bf1b8de5b513098ea7e1a7279f08128a
