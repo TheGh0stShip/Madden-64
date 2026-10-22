@@ -11,3 +11,6 @@
 0x17728	0x8	src/overlays/overlay4/noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x1D52C	0x10	src/overlays/overlay4/boolean_pair.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c9d09e2eb525c045650f341c95d79a687ba0be86999b2f93aba7ff74e9007b85
 0x1DCB0	0x10	src/overlays/overlay4/boolean_pair_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	49840446e65419471283231fb2ef2c88522b9281e9effdf793c7b8a02fa29c15
+0x18D40	0x40	src/overlays/overlay4/short_comparisons_primary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2b4edcc596b3ecfcf6fc91ba8b7d330f4ec6e7b4dd8d45bb64a35ac60a55ee38
+0x18D80	0x48	src/overlays/overlay4/short_comparisons_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b893eaa2f9a0268c5a7f27ff17e6f0b7564b1d8e1e455e8e9305f727883e68ec
+0x1BEDC	0x20	src/overlays/overlay4/match_state.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ff403df1a2fd72cb17a6532a6a01131c1735fca7a75f71ee3bca9aaee0b5d7fa

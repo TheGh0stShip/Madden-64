@@ -19,3 +19,8 @@
 0x2E2F4	0x10	src/overlays/overlay1/return_negative_one.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7cb80336a8021b7c1f5c5613fd225d1efc4358b27f2a5df1fbcffa87e9fe9cb5
 0x32EB4	0x8	src/overlays/overlay1/noop_c1eb8.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x34E08	0x8	src/overlays/overlay1/noop_c3e0c.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0xC148	0x14	src/overlays/overlay1/read_u16_le.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	13ecead93de524b6087be69c89f92a586756b59f40a67884dfbef3382e310079
+0xC6F4	0x30	src/overlays/overlay1/object_coordinates.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	32d919b1bdf633b6a7a41f12aec3aa1eba3dc7ac7d998fdcd4d0998bd90a9ca3
+0xD790	0x18	src/overlays/overlay1/render_targets.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	52da7a13f58b267cdb3600a7a6b4d00d5e7117872c477a14f543f73e4593e86a
+0xD878	0x20	src/overlays/overlay1/wrapper_links.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	af5c06742e6b17883da9681bd58757ce0ac273b6bd22d7ce1407b0888c88bb94
+0x12108	0x20	src/overlays/overlay1/display_flag_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d639cb74b3cdbb0e0529babcb91f74366f3a3bd02621ce5d00541407ba77aa4d
