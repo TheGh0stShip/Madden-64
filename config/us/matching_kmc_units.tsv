@@ -175,3 +175,8 @@
 0x42154	0x30	src/code/interface_audio_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	55512901644d9e9730c5b105381abc83034408c26aeebbb9a8ebbc061e50689a
 0x427B4	0x28	src/code/interface_index_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	74c81903d5f35f71883e93a4fab5617a797f093175f56136643b50dc73965967
 0x45024	0x30	src/code/late_nested_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d16189443fd4803a8671ce0e8678967464f8b94f6bf284018b3c4e5a99e9e510
+0x45B6C	0x28	src/code/late_byte_pair_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aca5fa5ef0e625b2981d756a2383edda6b9bd47179539a10df9ecee716f27a58
+0x59888	0x28	src/code/runtime_fields_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0a6fef884d83ce9429a1375eabd3a3f8dc71c92249fbe0473f180282874a6692
+0x63EC8	0x2C	src/code/copy_scaled_blocks.c	--symbol=memcpy:0x8004DF68 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1527647b5acc49c9f4bc0444a0057814161fa6d8103e3a97175944229bb58b7b
+0x63EF4	0x24	src/code/clear_buffer_region.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0de46116cad8ef5fccbff292c766576a2a37c5515f3b579ae36487f75891bc65
+0x63FC0	0x58	src/code/allocated_fields_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4657f13ccd915ddc7f4e643000f6f697663d6c05ee98e1d7834aa72a212a5ac7
