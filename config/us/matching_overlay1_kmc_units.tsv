@@ -34,3 +34,10 @@
 0x241BC	0x34	src/overlays/overlay1/global_short_state.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	26c6647755e70f4445415a8b9c6e8e55175eaf193282a1002dc5b85bffc29b33
 0x2D180	0x18	src/overlays/overlay1/callback_state.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	640dcbec0d040378b743aac96d32616d1804faf8aa66cad39777b29c2b35f909
 0x2EE78	0x3C	src/overlays/overlay1/object_flag_bits.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4dab06333e8f7f63c3ec39e656c4c96112d01bad706798e22582fb51a942956a
+0x1BCA0	0x10	src/overlays/overlay1/runtime_accessors.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0211e263f444c9e8c83bd98a7df9b99474fe72ff2b21e5c048bfe5bebe465b5f
+0x1C6EC	0x10	src/overlays/overlay1/static_buffer_get.c	--symbol=D_8006B7EC:0x8006B7EC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	32c36df84b47618bc5f00ed80e31207ad5de60af93292dcffb2dec3ac20c2dea
+0x22E9C	0x10	src/overlays/overlay1/gameplay_global_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1c4eb86704e705ea8b2b623a36f444127793dff91626b7b6e98a4d71c378640d
+0x27914	0x5C	src/overlays/overlay1/gameplay_short_state.c	--symbol=D_800718E0:0x800718E0 --symbol=D_800718E2:0x800718E2 --symbol=D_800718E4:0x800718E4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c930d4637970f043e0c90fb2f6c321556826dc45f1753df59fcaf654d5b1b1a0
+0x27FD4	0x10	src/overlays/overlay1/sequence_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cad1fa6a160d422a7629646077b265a97c659df89b43fbab422c0a73d3cfeb43
+0x2CBF8	0x24	src/overlays/overlay1/player_index_delta.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7d7578405d5b191ef792f24a7482e2bd5ee5ec21ee21591550783c9ce0f1fd47
+0x34D44	0x20	src/overlays/overlay1/inverted_volume.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c2cb00791888666f4ab373ff423a782eb64e917b66a473eef12aebe4f2301a62
