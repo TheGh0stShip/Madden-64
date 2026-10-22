@@ -147,3 +147,5 @@
 0x6411C	0x14	src/code/object_pair_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	77d80406c4b9b7b5ec3e7ea39ebac491208335ab1b8f95f84467c574ab4dd0b0
 0x56168	0x20	src/code/nested_object_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	eb38bd5288a7a4e5585f1467da136a724c7b4ae2b4be981ec3fa3c217e710d82
 0x5C26C	0x20	src/code/object_reset_wrapper.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8c7292a073d960e0875525fc12829c0d64e97d39116e8a65f2be020ae7563ebe
+0x5FA88	0x18	src/code/runtime_object_values.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3ceafd78bad2f599a63ef8abae1ec6d5580b7edba4b62df710b117050135c76
+0x636F8	0x14	src/code/runtime_object_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	07d6590fa3896948ce7367395a2dc16d65b8346864a77f6fa8fa3595717a3a1f
