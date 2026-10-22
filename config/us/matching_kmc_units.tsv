@@ -19,3 +19,5 @@
 0xF024	0xC	src/code/node_payload.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b2d4d44b74eda6b4188ed032d5981b49fe78c035a4debfdfaa2ad12b916e439e
 0xF118	0x40	src/code/relocate_block.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	35b76f5650c4ec3b7c44a6c8cd21eb567c97fcfe521cce7482d31a28b8eceec3
 0xF3EC	0x8	src/code/render_noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0xF768	0x24	src/code/render_region.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	14356308c9310a383b0a673da3afaa12a4a29ce00959595654cb96eefcea23a2
+0xF858	0xCC	src/code/render_properties.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	55fb7631450fb1985b589f5ac76480a92112e777358e1468e4344b3bcf9bd5e5
