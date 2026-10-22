@@ -19,3 +19,4 @@
 0x4FDD8	0x30	src/libultra/os_writeback_dcache_all.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e2e910cf2dcf19b0d2826eea41187a62acc4584b8fb7316cc74acbd40f4b04f
 0x4F648	0xC0	src/libultra/os_probe_tlb.s	-O2 -G0 -mips3 -mgp32 -mfp32	349227b84b51cb246abaf9de4bf56eba78054d85575e1bfb09acfdb8d1bc0c28
 0x4DD68	0xA0	src/libultra/os_set_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	86cb8015715ed857a8877c8f765e022385d51b5c1e2cb8645586b08a05f91a23
+0x46F7C	0xE8	src/libultra/os_exception_helpers.s	--symbol=__osPopThread:0x800465AC --symbol=__osEnqueueThread:0x80046564 -O2 -G0 -mips3 -mgp32 -mfp32	9a0bac47baf1ae1685fc13c068a9ef9123abc7d9cd4d7d3e1909d4a541f0680d
