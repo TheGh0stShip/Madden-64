@@ -79,6 +79,7 @@ def build_report() -> dict[str, object]:
     config = tomllib.loads(CONFIG.read_text())
     image = config["image"]
     progress = config["progress"]
+    assets = config["assets"]
     manifests = [ROOT / path for path in progress["manifests"]]
     ranges = manifest_ranges(manifests)
     vram_base, rom_base = image["vram"], image["rom"]
@@ -127,6 +128,58 @@ def build_report() -> dict[str, object]:
             "name": name,
             "measures": measures(total, matched, count, count),
         })
+    categories.extend([
+        {
+            "id": "overall_verified",
+            "name": "Overall verified byte coverage",
+            "measures": measures(
+                0, 0, 0, 0,
+                image["code_size"] + image["data_size"]
+                + assets["region_end"] - assets["region_start"],
+                matched_code + progress["matched_data"] + assets["identified"],
+            ),
+        },
+        {
+            "id": "initialized_data",
+            "name": "Initialized program data",
+            "measures": measures(0, 0, 0, 0,
+                                 image["data_size"], progress["matched_data"]),
+        },
+        {
+            "id": "assets",
+            "name": "Asset identification",
+            "measures": measures(0, 0, 0, 0,
+                                 assets["region_end"] - assets["region_start"],
+                                 assets["identified"]),
+        },
+        {
+            "id": "assets_graphics",
+            "name": "Graphics and display lists",
+            "measures": measures(0, 0, 0, 0,
+                                 assets["region_end"] - assets["region_start"],
+                                 assets["graphics"]),
+        },
+        {
+            "id": "assets_images",
+            "name": "Images and textures",
+            "measures": measures(0, 0, 0, 0,
+                                 assets["region_end"] - assets["region_start"],
+                                 assets["images"]),
+        },
+        {
+            "id": "assets_audio",
+            "name": "Audio, music, and sound",
+            "measures": measures(0, 0, 0, 0,
+                                 assets["region_end"] - assets["region_start"],
+                                 assets["audio"] + assets["music"] + assets["sound"]),
+        },
+        {
+            "id": "rom_mapping",
+            "name": "ROM mapping and classification",
+            "measures": measures(0, 0, 0, 0,
+                                 assets["rom_size"], assets["rom_classified"]),
+        },
+    ])
     return {
         "measures": measures(image["code_size"], matched_code,
                              image["total_functions"], matched_functions,

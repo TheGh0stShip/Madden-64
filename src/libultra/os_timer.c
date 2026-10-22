@@ -1,5 +1,24 @@
 #include "os_internal.h"
 
+OSTime D_8007E5A8;
+u32 D_8007E5B0;
+u32 D_8007E5B4;
+u32 D_8007E5B8;
+static OSTimer baseTimer;
+OSTimer* D_80074ED0 = &baseTimer;
+
+void __osTimerServicesInit(void) {
+    D_8007E5A8 = 0;
+    D_8007E5B0 = 0;
+    D_8007E5B4 = 0;
+    D_80074ED0->prev = D_80074ED0;
+    D_80074ED0->next = D_80074ED0->prev;
+    D_80074ED0->value = 0;
+    D_80074ED0->interval = D_80074ED0->value;
+    D_80074ED0->mq = 0;
+    D_80074ED0->msg = 0;
+}
+
 void __osTimerInterrupt(void) {
     OSTimer* timer;
     u32 count;

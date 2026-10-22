@@ -18,9 +18,16 @@ class DecompReportTests(unittest.TestCase):
         totals = report["measures"]
         self.assertEqual(report["version"], 2)
         self.assertEqual(totals["total_code"], "411132")
-        self.assertEqual(totals["matched_code"], "32748")
+        self.assertEqual(totals["matched_code"], "32888")
         self.assertEqual(totals["total_data"], "76996")
-        self.assertEqual(totals["matched_data"], "288")
+        self.assertEqual(totals["matched_data"], "304")
+        categories = {item["id"]: item["measures"] for item in report["categories"]}
+        self.assertEqual(categories["overall_verified"]["total_data"], "12781248")
+        self.assertEqual(categories["overall_verified"]["matched_data"], "34088")
+        self.assertEqual(categories["assets"]["total_data"], "12293120")
+        self.assertEqual(categories["assets"]["matched_data"], "896")
+        self.assertEqual(categories["assets_audio"]["matched_data"], "0")
+        self.assertEqual(categories["rom_mapping"]["matched_data"], "2632354")
 
     def test_cli_writes_valid_json(self):
         report = REPORT.build_report()
