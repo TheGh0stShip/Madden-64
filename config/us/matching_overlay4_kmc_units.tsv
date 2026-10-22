@@ -51,3 +51,5 @@
 0x79CC	0x64	src/overlays/overlay4/remove_empty_records.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1b91e83d5fa9878fd3ac1473d8a0a4e2d0a6d8804c1438b12426cbb9145afbfb
 0x1038	0x80	src/overlays/overlay4/append_record16.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	021e586636345d858e3bedee4856623ea8bdbb08657695e9dd286d07762bd478
 0x175C4	0x54	src/overlays/overlay4/group_object_flag_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f7a9a7d3b35c2312a5e8bbe3bb91200eb06d1c8f390a2712d28f0b4b8ddb9e3
+0x16788	0x68	src/overlays/overlay4/group_position_min_delta.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	87e0440266fdeceee0012b2fdd06869d4eb48267d1074bb19d620ff3d851e539
+0x167F0	0x68	src/overlays/overlay4/group_position_max_delta.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	efe35791a6332fc258c0ae3c8dd4722a5b14f6fd0d7938cabeda9173883ab9ef

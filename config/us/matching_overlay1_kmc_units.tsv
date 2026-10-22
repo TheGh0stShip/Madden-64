@@ -101,4 +101,5 @@
 0x31724	0x34	src/overlays/overlay1/object_state_value_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	13032fe5eeff716ce0eb11b91e301495e1549fb0f5f57af8b0827c9414b9234e
 0x2BA98	0x40	src/overlays/overlay1/object_active_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	241df9500c6b63e9337241926fec042494d44728257acbb6f7d229a238a6de2e
 0x1B120	0x58	src/overlays/overlay1/global_vector_negate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a31f55512a5f018231b222da7effeb32be3e656dbe45ca343ecdb717fb8e591a
+0x12128	0x54	src/overlays/overlay1/runtime_ready.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e0ff8e71c632e8f8b8b467d10f8b2dfe2498c6dc2442bc78eb81430deb20f486
 0x2ECC8	0x30	src/overlays/overlay1/temporary_buffer_release.c	--symbol=func_80033258:0x80033258 --symbol=D_800726D0:0x800726D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b70c702ac27222c679bae4ddda371669d51cacbf361c5cc55e1009c16b56f9a5
