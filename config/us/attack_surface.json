@@ -195,16 +195,16 @@
       "resident": {
         "functions": 1373,
         "bytes": 378576,
-        "matched_functions": 410,
-        "matched_bytes": 42632
+        "matched_functions": 414,
+        "matched_bytes": 42892
       }
     },
     "size_buckets": {
       "000-0016": {
         "functions": 327,
         "bytes": 3956,
-        "matched_functions": 192,
-        "matched_bytes": 2244
+        "matched_functions": 193,
+        "matched_bytes": 2252
       },
       "000-0032": {
         "functions": 225,
@@ -215,14 +215,14 @@
       "000-0064": {
         "functions": 385,
         "bytes": 19116,
-        "matched_functions": 168,
-        "matched_bytes": 8020
+        "matched_functions": 169,
+        "matched_bytes": 8072
       },
       "000-0128": {
         "functions": 554,
         "bytes": 51956,
-        "matched_functions": 73,
-        "matched_bytes": 6216
+        "matched_functions": 75,
+        "matched_bytes": 6416
       },
       "000-0256": {
         "functions": 554,
