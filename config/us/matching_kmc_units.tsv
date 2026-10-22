@@ -244,3 +244,4 @@
 0x9A6C	0x34	src/code/pointer_array_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	26008504d7120fcad8d80fefbed0b247202ba47b23cb0cc254de8fe6151ec352
 0x9AA0	0x80	src/code/callback_array_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1d934fe3929cb4019fb79e45f770701ba0859b4cf0c35033eef9d662df412022
 0x99F8	0x50	src/code/pointer_array_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	23011c5ee1e4acceb427b9f5bae264d3ac8e70ca8fa87c3561df18bbb37de142
+0x9B30	0x4C	src/code/callback_node_prepend.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3c04a66af2b1960a361495dd24e6f7819c749b0673cc7077aaed7feb1733867b
