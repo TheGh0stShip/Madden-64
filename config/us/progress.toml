@@ -4,15 +4,16 @@ id = "N8ME"
 [image]
 vram = 0x80000400
 rom = 0x1000
-code_size = 753420
-data_size = 484548
+code_size = 753428
+data_size = 484540
 libultra_vram = 0x80045928
-total_functions = 2279
+total_functions = 2823
 
 [progress]
 matched_data = 496
-matched_functions = 498
+matched_functions = 439
 loader_manifest = "config/us/matching_loader_asm_units.tsv"
+resident_functions = "config/us/functions_resident.toml"
 
 manifests = [
   "config/us/matching_ido_sources.tsv",
@@ -21,8 +22,8 @@ manifests = [
 ]
 
 overlay_manifests = [
-  { path = "config/us/matching_overlay1_kmc_units.tsv", vram = 0x80090004, rom = 0x1000, functions = 104 },
-  { path = "config/us/matching_overlay4_kmc_units.tsv", vram = 0x800C77E8, rom = 0x1000, functions = 48 },
+  { id = "overlay_1", path = "config/us/matching_overlay1_kmc_units.tsv", functions = "config/us/functions_overlay1.toml", vram = 0x80090004, rom = 0x1000 },
+  { id = "overlay_4", path = "config/us/matching_overlay4_kmc_units.tsv", functions = "config/us/functions_overlay4.toml", vram = 0x800C77E8, rom = 0x1000 },
 ]
 
 [inventory]

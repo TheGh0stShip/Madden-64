@@ -1,8 +1,7 @@
 # Madden Football 64 decompilation
 
 [![Whole-program code](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Whole-program%20code&measure=matched_code_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
-[![Whole-program initialized data](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Whole-program%20initialized%20data&category=initialized_data&measure=matched_data_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
-[![ROM inventory](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=ROM%20inventory&category=rom_inventory&measure=matched_functions_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
+[![Whole-program initialized data](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Whole-program%20initialized%20data&category=program_data&measure=matched_data_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
 
 Matching decompilation of **Madden Football 64** for Nintendo 64, USA Rev 0.
 The project is in its initial recovery phase. It verifies the retail ROM,
@@ -35,8 +34,8 @@ overlays, separate overlay data, every archive table, each payload's logical
 length, and alignment padding. See [the ROM layout audit](docs/ROM_LAYOUT.md)
 for the gap-free map and per-archive counts and sizes.
 
-Three hundred fifty-seven reviewed source units, containing 498 function candidates,
-currently match 52,852 whole-program code bytes and 496 data bytes exactly, including the
+Three hundred fifty-seven reviewed source units fully cover 439 catalogued function
+candidates and currently match 52,852 whole-program code bytes and 496 data bytes exactly, including the
 contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
 boundaries are research leads, not decompilation credit, until a source unit is
 compiled and compared byte-for-byte.
@@ -83,9 +82,9 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching whole-program code | 52,852 bytes | 753,420 bytes | 7.01% |
-| Whole-program initialized data | 496 bytes | 484,548 bytes | 0.10% |
-| Matching function candidates | 498 | 2,279 | 21.85% |
+| Matching whole-program code | 52,852 bytes | 753,428 bytes | 7.01% |
+| Whole-program initialized data | 496 bytes | 484,540 bytes | 0.10% |
+| Matching function candidates | 439 | 2,823 | 15.55% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |

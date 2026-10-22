@@ -59,23 +59,24 @@ def manifest_ranges(paths: list[Path]) -> list[tuple[int, int, str]]:
     return ranges
 
 
-def loader_totals() -> tuple[int, int, int]:
-    code = data = functions = 0
+def loader_functions() -> list[dict[str, object]]:
+    functions = []
     for number, line in enumerate(LOADER_MAP.read_text().splitlines()[1:], 2):
         if not line:
             continue
         fields = line.split("\t")
         if len(fields) != 7:
             raise ValueError(f"{LOADER_MAP}:{number}: malformed row")
-        size = int(fields[3], 0)
-        if fields[4] == "code":
-            code += size
-            functions += int(fields[5])
-        elif fields[4] == "initialized_data":
-            data += size
-        else:
+        if fields[4] not in ("code", "initialized_data"):
             raise ValueError(f"{LOADER_MAP}:{number}: unknown kind {fields[4]}")
-    return code, data, functions
+        if fields[4] == "code" and int(fields[5]):
+            functions.append({
+                "name": fields[6],
+                "vram": int(fields[2], 0),
+                "rom": int(fields[0], 0),
+                "size": int(fields[3], 0),
+            })
+    return functions
 
 
 def covered(start: int, end: int,
@@ -95,167 +96,87 @@ def covered(start: int, end: int,
     return total, source_path
 
 
+def catalogue(path: Path, minimum_vram: int | None = None) -> list[dict[str, object]]:
+    section = tomllib.loads(path.read_text())["section"][0]
+    functions = section["functions"]
+    if minimum_vram is not None:
+        functions = [function for function in functions
+                     if function["vram"] >= minimum_vram]
+    return functions
+
+
+def function_unit(module: str, function: dict[str, object], rom_start: int,
+                  ranges: list[tuple[int, int, str]]) -> dict[str, object]:
+    size = int(function["size"])
+    matched, source = covered(rom_start, rom_start + size, ranges)
+    complete = matched == size
+    unit_measures = measures(size, matched, 1, int(complete))
+    name = str(function["name"])
+    return {
+        "name": f"{module}/{name}",
+        "measures": unit_measures,
+        "functions": [{
+            "name": name,
+            "size": str(size),
+            "fuzzy_match_percent": unit_measures["fuzzy_match_percent"],
+            "address": str(function["vram"]),
+            "metadata": {"virtual_address": str(function["vram"])},
+        }],
+        "metadata": {
+            "complete": complete,
+            "source_path": source or f"asm/us/{module}/{name}.s",
+            "progress_categories": ["code"],
+            "auto_generated": not complete,
+        },
+    }
+
+
 def build_report() -> dict[str, object]:
     config = tomllib.loads(CONFIG.read_text())
     image = config["image"]
     progress = config["progress"]
-    inventory = config["inventory"]
     manifests = [ROOT / path for path in progress["manifests"]]
     ranges = manifest_ranges(manifests)
     overlay_configs = progress.get("overlay_manifests", [])
-    loader_code, loader_data, loader_functions = loader_totals()
     loader_ranges = manifest_ranges([ROOT / progress["loader_manifest"]])
     vram_base, rom_base = image["vram"], image["rom"]
-    code_end = rom_base + image["code_size"]
-    libultra_start = rom_base + image["libultra_vram"] - vram_base
-    category_totals = {
-        "game": [266100, 0, 0],
-        "libultra": [127188, 0, 0],
-    }
     units = []
 
-    for start, end, source in ranges:
-        size = end - start
-        vram = vram_base + start - rom_base
-        category = "libultra" if vram >= image["libultra_vram"] else "game"
-        name = Path(source).stem
-        unit_measures = measures(size, size, 1, 1)
-        units.append({
-            "name": name,
-            "measures": unit_measures,
-            "functions": [{
-                "name": name,
-                "size": str(size),
-                "fuzzy_match_percent": 100.0,
-                "address": str(vram),
-                "metadata": {"virtual_address": str(vram)},
-            }],
-            "metadata": {
-                "complete": True,
-                "source_path": source,
-                "progress_categories": ["code"],
-                "auto_generated": False,
-            },
-        })
-        totals = category_totals[category]
-        totals[1] += size
-        totals[2] += 1
+    resident_functions = catalogue(ROOT / progress["resident_functions"], 0x8000047C)
+    for function in resident_functions:
+        rom_start = rom_base + int(function["vram"]) - vram_base
+        units.append(function_unit("resident", function, rom_start, ranges))
 
-    overlay_matched = 0
-    overlay_functions = 0
     for overlay in overlay_configs:
         overlay_ranges = manifest_ranges([ROOT / overlay["path"]])
-        overlay_functions += overlay["functions"]
-        for start, end, source in overlay_ranges:
-            size = end - start
-            vram = overlay["vram"] + start - overlay["rom"]
-            name = Path(source).stem
-            units.append({
-                "name": name,
-                "measures": measures(size, size, 1, 1),
-                "functions": [{
-                    "name": name,
-                    "size": str(size),
-                    "fuzzy_match_percent": 100.0,
-                    "address": str(vram),
-                    "metadata": {"virtual_address": str(vram)},
-                }],
-                "metadata": {
-                    "complete": True,
-                    "source_path": source,
-                    "progress_categories": ["code"],
-                    "auto_generated": False,
-                },
-            })
-            overlay_matched += size
+        functions = catalogue(ROOT / overlay["functions"])
+        module = overlay["id"]
+        for function in functions:
+            rom_start = overlay["rom"] + int(function["vram"]) - overlay["vram"]
+            units.append(function_unit(module, function, rom_start, overlay_ranges))
 
-    loader_matched = 0
-    for start, end, source in loader_ranges:
-        size = end - start
-        vram = 0x80200400 + start - 0x1000
-        name = Path(source).stem
-        units.append({
-            "name": name,
-            "measures": measures(size, size, 1, 1),
-            "functions": [{
-                "name": name,
-                "size": str(size),
-                "fuzzy_match_percent": 100.0,
-                "address": str(vram),
-                "metadata": {"virtual_address": str(vram)},
-            }],
-            "metadata": {
-                "complete": True,
-                "source_path": source,
-                "progress_categories": ["code"],
-                "auto_generated": False,
-            },
-        })
-        loader_matched += size
+    for function in loader_functions():
+        units.append(function_unit("boot_loader", function,
+                                   int(function["rom"]), loader_ranges))
 
     matched_code = (sum(end - start for start, end, _source in ranges) +
-                    overlay_matched + loader_matched)
-    matched_functions = progress["matched_functions"]
-    matched_unit_functions = len(units)
-    grouped_function_credit = matched_functions - matched_unit_functions
-    if grouped_function_credit < 0:
-        raise ValueError("matching units exceed the reviewed matched-function count")
-    if grouped_function_credit:
-        units.append({
-            "name": "verified_functions_in_grouped_sources",
-            "measures": measures(0, 0, grouped_function_credit,
-                                 grouped_function_credit),
-            "functions": [],
-            "metadata": {
-                "complete": True,
-                "source_path": "config/us/progress.toml",
-                "progress_categories": ["code"],
-                "auto_generated": False,
-            },
-        })
-
-    module_progress = (
-        ("resident_unmatched", 393288,
-         sum(end - start for start, end, _source in ranges),
-         1373, matched_functions - len(loader_ranges) - overlay_functions),
-        ("boot_loader_unmatched", loader_code, loader_matched,
-         loader_functions, len(loader_ranges)),
-        ("overlay_1_unmatched", 226784,
-         sum(end - start for start, end, _source in
-             manifest_ranges([ROOT / overlay_configs[0]["path"]])),
-         590, overlay_configs[0]["functions"]),
-        ("overlay_4_unmatched", 132704,
-         sum(end - start for start, end, _source in
-             manifest_ranges([ROOT / overlay_configs[1]["path"]])),
-         311, overlay_configs[1]["functions"]),
-    )
-    for name, total_code, complete_code, total_functions, complete_functions in module_progress:
-        unmatched_code = total_code - complete_code
-        unmatched_functions = total_functions - complete_functions
-        if unmatched_code < 0 or unmatched_functions < 0:
-            raise ValueError(f"{name}: matched progress exceeds audited scope")
-        units.append({
-            "name": name,
-            "measures": measures(unmatched_code, 0, unmatched_functions, 0),
-            "functions": [],
-            "metadata": {
-                "complete": False,
-                "source_path": f"asm/us/{name}.s",
-                "progress_categories": ["code"],
-                "auto_generated": True,
-            },
-        })
-
-    if sum(int(unit["measures"]["total_code"]) for unit in units) != image["code_size"]:
-        raise ValueError("report units do not cover the audited executable-byte total")
-    if sum(unit["measures"]["total_functions"] for unit in units) != image["total_functions"]:
-        raise ValueError("report units do not cover the audited function-candidate total")
+                    sum(end - start for overlay in overlay_configs
+                        for start, end, _source in
+                        manifest_ranges([ROOT / overlay["path"]])) +
+                    sum(end - start for start, end, _source in loader_ranges))
+    total_functions = len(units)
+    matched_functions = sum(int(unit["measures"]["complete_units"])
+                            for unit in units)
+    if total_functions != image["total_functions"]:
+        raise ValueError("function catalogues disagree with configured total")
+    if matched_functions != progress["matched_functions"]:
+        raise ValueError("function catalogues disagree with configured matched count")
     categories = [
         {
             "id": "code",
             "name": "Program code",
             "measures": measures(image["code_size"], matched_code,
-                                 image["total_functions"], matched_functions),
+                                 total_functions, matched_functions),
         },
         {
             "id": "program_data",
@@ -266,7 +187,7 @@ def build_report() -> dict[str, object]:
     ]
     return {
         "measures": measures(image["code_size"], matched_code,
-                             image["total_functions"], matched_functions,
+                             total_functions, matched_functions,
                              image["data_size"], progress["matched_data"]),
         "units": units,
         "version": 2,

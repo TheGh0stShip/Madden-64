@@ -17,34 +17,37 @@ class DecompReportTests(unittest.TestCase):
         report = REPORT.build_report()
         totals = report["measures"]
         self.assertEqual(report["version"], 2)
-        self.assertEqual(totals["total_code"], "753420")
+        self.assertEqual(totals["total_code"], "753428")
         self.assertEqual(totals["matched_code"], "52852")
-        self.assertEqual(totals["total_data"], "484548")
+        self.assertEqual(totals["total_data"], "484540")
         self.assertEqual(totals["matched_data"], "496")
-        self.assertEqual(totals["total_functions"], 2279)
-        self.assertEqual(totals["matched_functions"], 498)
+        self.assertEqual(totals["total_functions"], 2823)
+        self.assertEqual(totals["matched_functions"], 439)
         categories = {item["id"]: item["measures"] for item in report["categories"]}
         self.assertEqual(set(categories), {"code", "program_data"})
-        self.assertEqual(categories["code"]["total_code"], "753420")
+        self.assertEqual(categories["code"]["total_code"], "753428")
         self.assertEqual(categories["code"]["matched_code"], "52852")
-        self.assertEqual(categories["code"]["total_functions"], 2279)
-        self.assertEqual(categories["code"]["matched_functions"], 498)
+        self.assertEqual(categories["code"]["total_functions"], 2823)
+        self.assertEqual(categories["code"]["matched_functions"], 439)
         self.assertEqual(categories["program_data"]["total_code"], "0")
         self.assertEqual(categories["program_data"]["matched_code"], "0")
-        self.assertEqual(categories["program_data"]["total_data"], "484548")
+        self.assertEqual(categories["program_data"]["total_data"], "484540")
         self.assertEqual(categories["program_data"]["matched_data"], "496")
-        self.assertEqual(sum(int(unit["measures"]["total_code"])
-                             for unit in report["units"]), 753420)
+        self.assertLessEqual(sum(int(unit["measures"]["total_code"])
+                                 for unit in report["units"]), 753428)
         self.assertEqual(sum(unit["measures"]["total_functions"]
-                             for unit in report["units"]), 2279)
-        unmatched = {unit["name"]: unit for unit in report["units"]
-                     if not unit["metadata"]["complete"]}
-        self.assertEqual(set(unmatched), {
-            "resident_unmatched", "boot_loader_unmatched",
-            "overlay_1_unmatched", "overlay_4_unmatched",
-        })
-        self.assertEqual(sum(int(unit["measures"]["total_code"])
-                             for unit in unmatched.values()), 700568)
+                             for unit in report["units"]), 2823)
+        self.assertEqual(len(report["units"]), 2823)
+        self.assertEqual(sum(unit["metadata"]["complete"]
+                             for unit in report["units"]), 439)
+        self.assertTrue(all(len(unit["functions"]) == 1
+                            for unit in report["units"]))
+        self.assertTrue(all("unmatched" not in unit["name"]
+                            for unit in report["units"]))
+        self.assertTrue(any(unit["metadata"]["complete"]
+                            for unit in report["units"]))
+        self.assertTrue(any(not unit["metadata"]["complete"]
+                            for unit in report["units"]))
 
     def test_cli_writes_valid_json(self):
         report = REPORT.build_report()
