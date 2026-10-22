@@ -48,3 +48,5 @@
 0x4F5B8	0xC	src/libultra/os_vi_get_current_context.c	-O1 -mips2 -non_shared -G 0 -Iinclude	07edfad4a37e177dc923c83c94d3cff44cf50517a5b45473328d776ac3eae8a0
 0x4FE58	0x258	src/libultra/os_cont_read_data.c	--symbol=__osSiGetAccess:0x8004D348 --symbol=__osSiRawStartDma:0x8004D578 --symbol=osRecvMesg:0x8004CDA8 --symbol=__osSiRelAccess:0x8004D38C -O1 -mips2 -Wab,-r4300_mul -non_shared -G 0 -Iinclude	4f9342645a85a26fa7c82615aa47e808b70f9344e15928e2f76acc48bb542661
 0x502B0	0x1C4	src/libultra/os_cont_init_data.c	-O1 -mips2 -Wab,-r4300_mul -non_shared -G 0 -Iinclude	6ec8ddf8cf4eb21623e9cf88fdfde7296bee28effb3d38dce234d9d74f359b40
+0x4DEF8	0xC0	src/libultra/os_si_access.c	--symbol=osCreateMesgQueue:0x80045B68 --symbol=osSendMesg:0x8004CF48 --symbol=osRecvMesg:0x8004CDA8 -O1 -mips2 -Wab,-r4300_mul -non_shared -G 0 -Iinclude	c4ffada2a9a3a5475a8fc98233d0989f3f24391142db216a1199e7d96498a852
+0x4D418	0xC0	src/libultra/os_pi_access.c	--symbol=osCreateMesgQueue:0x80045B68 --symbol=osSendMesg:0x8004CF48 --symbol=osRecvMesg:0x8004CDA8 -O1 -mips2 -Wab,-r4300_mul -non_shared -G 0 -Iinclude	44ff8b470cb9b4313c82fc3ab55a340a5f0d088232172c8f132275359432ba5c
