@@ -15,7 +15,7 @@ survey: verify
 audit: verify
 	$(PYTHON) tools/audit_rom_layout.py "$(ROM)" build/us/survey/main_segment.bin
 
-match: verify
+match: audit
 	$(PYTHON) tools/make_analysis_rom.py build/us/survey/main_segment.bin build/us/main_unpacked.z64
 	$(N64DK) match-batch --project . \
 		--rom build/us/main_unpacked.z64 \
@@ -23,6 +23,11 @@ match: verify
 		config/us/matching_ido_sources.tsv=ido5.3 \
 		config/us/matching_kmc_units.tsv=kmc+builtin \
 		config/us/matching_asm_units.tsv=as
+	$(N64DK) match-batch --project . \
+		--rom build/us/audit/overlay_4.z64 \
+		--symbols build/us/survey/symbol_addrs.txt \
+		--symbols build/us/audit/overlay_4_functions/symbol_addrs.txt \
+		config/us/matching_overlay4_kmc_units.tsv=kmc+builtin
 
 check: verify
 	$(PYTHON) -m unittest discover -s tests -v

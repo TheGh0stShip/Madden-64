@@ -82,6 +82,7 @@ def build_report() -> dict[str, object]:
     inventory = config["inventory"]
     manifests = [ROOT / path for path in progress["manifests"]]
     ranges = manifest_ranges(manifests)
+    overlay_configs = progress.get("overlay_manifests", [])
     vram_base, rom_base = image["vram"], image["rom"]
     code_end = rom_base + image["code_size"]
     libultra_start = rom_base + image["libultra_vram"] - vram_base
@@ -118,7 +119,35 @@ def build_report() -> dict[str, object]:
         totals[1] += size
         totals[2] += 1
 
-    matched_code = sum(end - start for start, end, _source in ranges)
+    overlay_matched = 0
+    overlay_functions = 0
+    for overlay in overlay_configs:
+        overlay_ranges = manifest_ranges([ROOT / overlay["path"]])
+        overlay_functions += overlay["functions"]
+        for start, end, source in overlay_ranges:
+            size = end - start
+            vram = overlay["vram"] + start - overlay["rom"]
+            name = Path(source).stem
+            units.append({
+                "name": name,
+                "measures": measures(size, size, 1, 1),
+                "functions": [{
+                    "name": name,
+                    "size": str(size),
+                    "fuzzy_match_percent": 100.0,
+                    "address": str(vram),
+                    "metadata": {"virtual_address": str(vram)},
+                }],
+                "metadata": {
+                    "complete": True,
+                    "source_path": source,
+                    "progress_categories": ["overlays"],
+                    "auto_generated": False,
+                },
+            })
+            overlay_matched += size
+
+    matched_code = sum(end - start for start, end, _source in ranges) + overlay_matched
     matched_functions = progress["matched_functions"]
     categories = []
     for category_id, name in (("game", "Game code"), ("libultra", "libultra")):
@@ -137,7 +166,7 @@ def build_report() -> dict[str, object]:
         {
             "id": "overlays",
             "name": "Executable overlay code",
-            "measures": measures(359488, 0, 901, 0),
+            "measures": measures(359488, overlay_matched, 901, overlay_functions),
         },
         {
             "id": "initialized_data",

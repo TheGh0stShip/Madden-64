@@ -1,0 +1,11 @@
+# KMC GCC 2.7.2; OVERLAY_ROM_START SIZE SOURCE FLAGS SHA256
+0x1008	0x20	src/overlays/overlay4/entry_call.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	626db9777e5a9c1b1efc7042cbfd1ec1fd20609aef40a66b49d30545f5280f4e
+0x1028	0x10	src/overlays/overlay4/state_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e8225b13dfaa5746d15935e16420bd7c94624b0d391142a05e938fca8306c04e
+0x10C8	0x18	src/overlays/overlay4/entry_at.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fd8b6793f698cb5fd5166df91c362319593da572f9b00c443afd03a820d018a4
+0x7744	0x1C	src/overlays/overlay4/pair_links.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7b16a44709a2fd68bcbd73278525429cda72418ddffe6433b87e2f6cb28ccffd
+0xCE3C	0xC	src/overlays/overlay4/object_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0c6daf9730ced1a0b4ef95c5dccd2970b597babbcd1737c275094e2b2dee8c0f
+0x131B0	0x10	src/overlays/overlay4/return_zero_pair.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	206eab6718c3a744583c123cd0a4569b7e273d12c72daaa657efa573e9c16203
+0x13534	0x8	src/overlays/overlay4/return_zero.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	648cbc77d024f6d08bc8ff4e3bdf1cebf2a933937ee1cebef4690d015808bd9c
+0x15978	0x8	src/overlays/overlay4/return_zero_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	648cbc77d024f6d08bc8ff4e3bdf1cebf2a933937ee1cebef4690d015808bd9c
+0x16108	0x10	src/overlays/overlay4/return_zero_tertiary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	206eab6718c3a744583c123cd0a4569b7e273d12c72daaa657efa573e9c16203
+0x17728	0x8	src/overlays/overlay4/noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
