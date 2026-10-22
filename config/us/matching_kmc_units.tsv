@@ -245,3 +245,4 @@
 0x9AA0	0x80	src/code/callback_array_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1d934fe3929cb4019fb79e45f770701ba0859b4cf0c35033eef9d662df412022
 0x99F8	0x50	src/code/pointer_array_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	23011c5ee1e4acceb427b9f5bae264d3ac8e70ca8fa87c3561df18bbb37de142
 0x9B30	0x4C	src/code/callback_node_prepend.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3c04a66af2b1960a361495dd24e6f7819c749b0673cc7077aaed7feb1733867b
+0x9BA0	0x370	src/code/runtime_tables_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	967103070c81166466572369487142f7419c8fc8cc7b74f840604775fe448968

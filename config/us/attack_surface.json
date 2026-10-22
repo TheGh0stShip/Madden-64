@@ -195,8 +195,8 @@
       "resident": {
         "functions": 1373,
         "bytes": 378576,
-        "matched_functions": 415,
-        "matched_bytes": 42968
+        "matched_functions": 416,
+        "matched_bytes": 43848
       }
     },
     "size_buckets": {
@@ -239,8 +239,8 @@
       "000-1024": {
         "functions": 202,
         "bytes": 140620,
-        "matched_functions": 10,
-        "matched_bytes": 6860
+        "matched_functions": 11,
+        "matched_bytes": 7740
       },
       "1025+": {
         "functions": 100,

@@ -42,7 +42,7 @@ prioritization aid, not decompilation credit.
 | boot_loader | 5 | 3 | 632 | 172 |
 | overlay_1 | 1,025 | 121 | 183,220 | 4,176 |
 | overlay_4 | 420 | 62 | 115,116 | 2,560 |
-| resident | 1,373 | 415 | 378,576 | 42,968 |
+| resident | 1,373 | 416 | 378,576 | 43,848 |
 
 ### Size distribution
 
@@ -54,7 +54,7 @@ prioritization aid, not decompilation credit.
 | 000-0128 | 554 | 478 | 51,956 | 45,464 |
 | 000-0256 | 554 | 528 | 102,676 | 97,648 |
 | 000-0512 | 476 | 452 | 171,136 | 161,748 |
-| 000-1024 | 202 | 192 | 140,620 | 133,760 |
+| 000-1024 | 202 | 191 | 140,620 | 132,880 |
 | 1025+ | 100 | 93 | 182,224 | 173,044 |
 
 - Exact duplicate body families: 17
