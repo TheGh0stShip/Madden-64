@@ -144,3 +144,5 @@
 0x633E0	0x10	src/code/nested_state_enable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e9ddb500dbd05e802c82d9c4e276fb403aea274f4fa5912d01e2de61bc4365d6
 0x57468	0x14	src/code/nested_callback_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	96185dd310fbf73067dd72c80ce97d4ab8642901980aec2124bdca2a3996b6fd
 0x6411C	0x14	src/code/object_pair_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	77d80406c4b9b7b5ec3e7ea39ebac491208335ab1b8f95f84467c574ab4dd0b0
+0x56168	0x20	src/code/nested_object_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	eb38bd5288a7a4e5585f1467da136a724c7b4ae2b4be981ec3fa3c217e710d82
+0x5C26C	0x20	src/code/object_reset_wrapper.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8c7292a073d960e0875525fc12829c0d64e97d39116e8a65f2be020ae7563ebe
