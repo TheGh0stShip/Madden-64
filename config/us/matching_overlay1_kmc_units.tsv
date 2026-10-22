@@ -81,6 +81,9 @@
 0x2E8D8	0x50	src/overlays/overlay1/scaled_vector_add.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d71484b4a23c33d7c78fc32c5668aa300d71d699036b6238444d6d121357821a
 0x3690C	0x44	src/overlays/overlay1/byte_step_subtract.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cbf9103c7ea6d2488417b59fdf92dae39fd44cdcc081d0d120bc65f48f600481
 0x18578	0x5C	src/overlays/overlay1/vector_update_if_changed.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9a08171229abc444cd9121be7ee2272303e221fadea80796e573746c09c11190
+0x375D8	0x40	src/overlays/overlay1/runtime_globals_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0ea637f036cc01eb60174ee8b98dcb4b1990a717a9ab670977d2453ba9770719
+0xA870	0x3C	src/overlays/overlay1/child_entries_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	34ef4b1bf908dd79a5df04d37833be104b29f0cfe255f45b075c50edf9720ea5
+0xA824	0x4C	src/overlays/overlay1/child_entries_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	13b14e18ee99e2c86d149a5780f16244ef1e8a6f0a1d4e960b57b6cecf52fdfc
 0x1FA5C	0x34	src/overlays/overlay1/gameplay_buffer_release.c	--symbol=func_80032F3C:0x80032F3C --symbol=D_8006B9D4:0x8006B9D4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8a3817b4b870516287762ab1ef7d19b4136aa19c70f3bde6c1e17ccb50e18a8e
 0x22818	0x2C	src/overlays/overlay1/gameplay_mode_set.c	--symbol=func_800AEA9C:0x800AEA9C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5095d2ef57d185d3d69f87328fb2ddfd14e069c3463a3f6da32a5b2308737eef
 0x2ECC8	0x30	src/overlays/overlay1/temporary_buffer_release.c	--symbol=func_80033258:0x80033258 --symbol=D_800726D0:0x800726D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b70c702ac27222c679bae4ddda371669d51cacbf361c5cc55e1009c16b56f9a5
