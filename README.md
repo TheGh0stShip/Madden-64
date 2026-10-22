@@ -31,7 +31,7 @@ game's decompressor recovers the initialized program at
 boundaries and identifies 147 libultra routines. Its compiler fingerprint is
 predominantly KMC GCC, while detected library code is IDO-built.
 
-Ninety-five reviewed C units currently match 32,888 retail code bytes and 304 data bytes exactly, including
+Ninety-seven reviewed C units currently match 33,604 retail code bytes and 336 data bytes exactly, including
 the contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
 boundaries are research leads, not decompilation credit, until a source unit is
 compiled and compared byte-for-byte.
@@ -77,8 +77,8 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching code | 32,888 bytes | 411,132 bytes | 8.00% |
-| Initialized program data | 304 bytes | 76,996 bytes | 0.39% |
+| Matching code | 33,604 bytes | 411,132 bytes | 8.17% |
+| Initialized program data | 336 bytes | 76,996 bytes | 0.44% |
 | Asset identification | 896 bytes | 12,293,120 bytes | 0.007% |
 | ROM mapping and classification | 2,632,354 bytes | 12,582,912 bytes | 20.92% |
 
@@ -87,4 +87,4 @@ encoding is not yet understood, so it is research coverage rather than
 decompilation completion. Images, textures, music, and sound currently receive
 no progress credit because their formats have not yet been verified. If code,
 initialized data, and identified assets are combined strictly by verified byte
-coverage, the result is 34,088 of 12,781,248 bytes (0.267%).
+coverage, the result is 34,836 of 12,781,248 bytes (0.273%).
