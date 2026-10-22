@@ -49,9 +49,27 @@ typedef struct OSPiHandle {
     u32 baseAddress;
 } OSPiHandle;
 
+typedef struct OSViMode {
+    u8 type;
+    u8 pad[3];
+    u32 control;
+} OSViMode;
+
+typedef struct OSViContext {
+    u16 state;
+    u16 retraceCount;
+    void* framep;
+    OSViMode* modep;
+    u32 control;
+    OSMesgQueue* msgq;
+    OSMesg msg;
+} OSViContext;
+
 extern OSThread* D_80074E30;
 extern OSThread* D_80074E28;
 extern OSThread* D_80074E2C;
+extern OSViContext* D_80074EA4;
+extern OSViContext* D_80074EA0;
 extern u32 __osDisableInt(void);
 extern void __osRestoreInt(u32 mask);
 extern void __osEnqueueAndYield(OSThread** queue);
