@@ -1,4 +1,5 @@
 # KMC GCC 2.7.2; ROM_START SIZE SOURCE FLAGS SHA256
+0x107C	0x8	src/code/early_noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0xD498	0xA8	src/code/object_flags.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	858ac3a1ce465482f6ed1587e925bca6ad7ddd3cee69d7e8cf07eb3716bb4405
 0xD540	0x50	src/code/object_dimensions.c	--symbol=func_8000CC18:0x8000CC18 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e5746656a57a066c86bfb297a34745aa3f1de720e769db00f4917d77c14ba21
 0xD590	0x38	src/code/object_position.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ec9ec0f5d8f9d2aae611a3ce9ea03f237a015197a66a4d5611ffb13f59436e3a
