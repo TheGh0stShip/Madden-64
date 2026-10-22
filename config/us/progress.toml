@@ -11,7 +11,7 @@ total_functions = 2279
 
 [progress]
 matched_data = 496
-matched_functions = 365
+matched_functions = 381
 loader_manifest = "config/us/matching_loader_asm_units.tsv"
 
 manifests = [
