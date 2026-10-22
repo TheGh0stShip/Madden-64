@@ -35,3 +35,10 @@
 0x4DE18	0xE0	src/libultra/os_set_thread_pri.c	--symbol=__osDisableInt:0x80046CB8 --symbol=__osDequeueThread:0x8004E008 --symbol=__osEnqueueThread:0x80046564 --symbol=__osEnqueueAndYield:0x80046464 --symbol=__osRestoreInt:0x80046CD8 -O1 -mips2 -non_shared -G 0 -Iinclude	2e463c0b0df993af0134b2c234e329b1d841863ed53694803647714e84d0aee6
 0x4FE08	0x4C	src/libultra/os_yield_thread.c	--symbol=__osDisableInt:0x80046CB8 --symbol=__osEnqueueAndYield:0x80046464 --symbol=__osRestoreInt:0x80046CD8 -O1 -mips2 -non_shared -G 0 -Iinclude	fc8f09bd580c09e03787edb98c2c3c6d011d44135cd133cebfb311d61c1befab
 0x4EC08	0x40	src/libultra/os_dequeue_thread.c	-O1 -mips2 -non_shared -G 0 -Iinclude	6950f1d67e7328147547bdd321085cf5f0e2327d377a5d6ae2dfca3d5a3c6708
+0x4D358	0x50	src/libultra/os_epi_raw_read_io.c	-O1 -mips2 -non_shared -G 0 -Iinclude	a49df28dd1009fab8a6de0da391eb3c9906cc3c372f9118728dcb861a08b0baf
+0x4D3A8	0x4C	src/libultra/os_epi_raw_write_io.c	-O1 -mips2 -non_shared -G 0 -Iinclude	52208a6aea79e9973b7244dd4d8d480bad373116504b484e4dcfc474afc2de13
+0x4E228	0x2C	src/libultra/os_si_device_busy.c	-O1 -mips2 -non_shared -G 0 -Iinclude	c40efb0efd62baebfcb5aa0af3421d1155c9d8e9a20163f10b0c84f61c4ac156
+0x4E258	0x50	src/libultra/os_si_raw_read_io.c	--symbol=__osSiDeviceBusy:0x8004D628 -O1 -mips2 -non_shared -G 0 -Iinclude	24e4824e43423831c3018f8fd21f8cd5b179f1ae8487e93e2d40fdf71a17e7dd
+0x4E2A8	0x4C	src/libultra/os_si_raw_write_io.c	--symbol=__osSiDeviceBusy:0x8004D628 -O1 -mips2 -non_shared -G 0 -Iinclude	13dbb2dea03bd3480cca79d37ebfb79603dcf780f60e4f10e08d7fed5a7fff0a
+0x4E8F8	0x2C	src/libultra/os_sp_device_busy.c	-O1 -mips2 -non_shared -G 0 -Iinclude	5b8a49766e2e41e50b893cb38c81db6ebaaacf069cefe96035b118b0d9f9c4f0
+0x4E9B8	0x34	src/libultra/os_sp_set_pc.c	-O1 -mips2 -non_shared -G 0 -Iinclude	af66ed65d77fde1aae49eedb1374b1c64c2305b9dfb37653f1b09d17adb34bdc

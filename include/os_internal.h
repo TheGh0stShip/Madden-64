@@ -38,6 +38,17 @@ typedef struct OSMesgQueue {
     OSMesg* messages;
 } OSMesgQueue;
 
+typedef struct OSPiHandle {
+    struct OSPiHandle* next;
+    u8 type;
+    u8 latency;
+    u8 pageSize;
+    u8 relDuration;
+    u8 pulse;
+    u8 domain;
+    u32 baseAddress;
+} OSPiHandle;
+
 extern OSThread* D_80074E30;
 extern OSThread* D_80074E28;
 extern OSThread* D_80074E2C;
