@@ -87,6 +87,7 @@
 0x185D4	0x5C	src/overlays/overlay1/short_vector_update_if_changed.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f373d86f252b9e2ab34774718e9f96588d620c2bf1dc86c66c3133f97966c31f
 0x28018	0x70	src/overlays/overlay1/object_transform_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1c263ae11ae71fecd7bcac6d3abffbf74fdcc447236e2200197bdc5aef1e1781
 0x32224	0x70	src/overlays/overlay1/group_transform_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d23dedc40223cee5c607f72444ceb8a1ec562876001b670ef8472fb5e2b8102b
+0x4CAC	0x74	src/overlays/overlay1/count_special_modes.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6e53a53585ab4fb47f91cfe65a8384a5a951aff7efc9e3565a6c84b7ece22679
 0x1FA5C	0x34	src/overlays/overlay1/gameplay_buffer_release.c	--symbol=func_80032F3C:0x80032F3C --symbol=D_8006B9D4:0x8006B9D4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8a3817b4b870516287762ab1ef7d19b4136aa19c70f3bde6c1e17ccb50e18a8e
 0x22818	0x2C	src/overlays/overlay1/gameplay_mode_set.c	--symbol=func_800AEA9C:0x800AEA9C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5095d2ef57d185d3d69f87328fb2ddfd14e069c3463a3f6da32a5b2308737eef
 0x2ECC8	0x30	src/overlays/overlay1/temporary_buffer_release.c	--symbol=func_80033258:0x80033258 --symbol=D_800726D0:0x800726D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b70c702ac27222c679bae4ddda371669d51cacbf361c5cc55e1009c16b56f9a5
