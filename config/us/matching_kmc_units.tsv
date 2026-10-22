@@ -23,3 +23,6 @@
 0xF858	0xCC	src/code/render_properties.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	55fb7631450fb1985b589f5ac76480a92112e777358e1468e4344b3bcf9bd5e5
 0xFF1C	0x28	src/code/render_resource.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30585cc7eadc2192ac194dabd5fc00cf3832e7e14fe762b1c2cea789e1dc5d32
 0x104B8	0x34	src/code/render_toggle.c	--symbol=D_80065458:0x80065458 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	702d8d21e7d4a8cd768ae316a6cdce8ff5726794dde664b3206f6fab2e7e4699
+0x12698	0x10	src/code/system_status.c	--symbol=D_80065500:0x80065500 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f6826181df6462985d914e4402b29561e957b847d76d2f2bd7a49e02048679a6
+0x1273C	0x28	src/code/system_state_clear.c	--symbol=D_8006550C:0x8006550C --symbol=D_8006552C:0x8006552C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a4c86969e7600c18af9a6abe3806bf523dbb329c96e681e69094f0266007a24a
+0x17BC4	0x6C	src/code/ui_state.c	--symbol=D_80085BF8:0x80085BF8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e5908d11b6a89c6e64260e33fe290c410781cf4516ea3e4f8195c4de45ab2be1
