@@ -79,7 +79,7 @@ def build_report() -> dict[str, object]:
     config = tomllib.loads(CONFIG.read_text())
     image = config["image"]
     progress = config["progress"]
-    assets = config["assets"]
+    inventory = config["inventory"]
     manifests = [ROOT / path for path in progress["manifests"]]
     ranges = manifest_ranges(manifests)
     vram_base, rom_base = image["vram"], image["rom"]
@@ -130,54 +130,57 @@ def build_report() -> dict[str, object]:
         })
     categories.extend([
         {
-            "id": "overall_verified",
-            "name": "Overall verified byte coverage",
-            "measures": measures(
-                0, 0, 0, 0,
-                image["code_size"] + image["data_size"]
-                + assets["region_end"] - assets["region_start"],
-                matched_code + progress["matched_data"] + assets["identified"],
-            ),
-        },
-        {
             "id": "initialized_data",
-            "name": "Initialized program data",
+            "name": "Resident initialized program data",
             "measures": measures(0, 0, 0, 0,
                                  image["data_size"], progress["matched_data"]),
         },
         {
-            "id": "assets",
-            "name": "Asset identification",
-            "measures": measures(0, 0, 0, 0,
-                                 assets["region_end"] - assets["region_start"],
-                                 assets["identified"]),
+            "id": "rom_inventory",
+            "name": "Physical ROM inventory",
+            "measures": measures(0, 0, inventory["records"], inventory["records"]),
         },
         {
-            "id": "assets_graphics",
-            "name": "Graphics and display lists",
-            "measures": measures(0, 0, 0, 0,
-                                 assets["region_end"] - assets["region_start"],
-                                 assets["graphics"]),
+            "id": "inventory_audio",
+            "name": "Inventory: audio streams",
+            "measures": measures(0, 0, inventory["audio_records"], inventory["audio_records"]),
         },
         {
-            "id": "assets_images",
-            "name": "Images and textures",
-            "measures": measures(0, 0, 0, 0,
-                                 assets["region_end"] - assets["region_start"],
-                                 assets["images"]),
+            "id": "inventory_images",
+            "name": "Inventory: JPEG images",
+            "measures": measures(0, 0, inventory["jpeg_records"], inventory["jpeg_records"]),
         },
         {
-            "id": "assets_audio",
-            "name": "Audio, music, and sound",
-            "measures": measures(0, 0, 0, 0,
-                                 assets["region_end"] - assets["region_start"],
-                                 assets["audio"] + assets["music"] + assets["sound"]),
+            "id": "inventory_textures",
+            "name": "Inventory: canonical textures",
+            "measures": measures(0, 0, inventory["texture_records"], inventory["texture_records"]),
+        },
+        {
+            "id": "inventory_models",
+            "name": "Inventory: TNMF models",
+            "measures": measures(0, 0, inventory["model_records"], inventory["model_records"]),
+        },
+        {
+            "id": "inventory_animations",
+            "name": "Inventory: TMot animations",
+            "measures": measures(0, 0, inventory["animation_records"], inventory["animation_records"]),
+        },
+        {
+            "id": "inventory_sprites",
+            "name": "Inventory: TSpr sprites",
+            "measures": measures(0, 0, inventory["sprite_records"], inventory["sprite_records"]),
+        },
+        {
+            "id": "inventory_unresolved",
+            "name": "Inventory: unresolved structured records",
+            "measures": measures(0, 0, inventory["records"],
+                                 inventory["records"] - inventory["structured_records"]),
         },
         {
             "id": "rom_mapping",
-            "name": "ROM mapping and classification",
+            "name": "Physical ROM byte mapping",
             "measures": measures(0, 0, 0, 0,
-                                 assets["rom_size"], assets["rom_classified"]),
+                                 inventory["rom_size"], inventory["rom_size"]),
         },
     ])
     return {

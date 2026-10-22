@@ -22,12 +22,16 @@ class DecompReportTests(unittest.TestCase):
         self.assertEqual(totals["total_data"], "76996")
         self.assertEqual(totals["matched_data"], "368")
         categories = {item["id"]: item["measures"] for item in report["categories"]}
-        self.assertEqual(categories["overall_verified"]["total_data"], "12781248")
-        self.assertEqual(categories["overall_verified"]["matched_data"], "37604")
-        self.assertEqual(categories["assets"]["total_data"], "12293120")
-        self.assertEqual(categories["assets"]["matched_data"], "896")
-        self.assertEqual(categories["assets_audio"]["matched_data"], "0")
-        self.assertEqual(categories["rom_mapping"]["matched_data"], "2632354")
+        self.assertNotIn("overall_verified", categories)
+        self.assertEqual(categories["rom_inventory"]["total_functions"], 1353)
+        self.assertEqual(categories["inventory_audio"]["total_functions"], 237)
+        self.assertEqual(categories["inventory_images"]["total_functions"], 43)
+        self.assertEqual(categories["inventory_textures"]["total_functions"], 516)
+        self.assertEqual(categories["inventory_models"]["total_functions"], 262)
+        self.assertEqual(categories["inventory_animations"]["total_functions"], 67)
+        self.assertEqual(categories["inventory_sprites"]["total_functions"], 2)
+        self.assertEqual(categories["inventory_unresolved"]["matched_functions"], 1132)
+        self.assertEqual(categories["rom_mapping"]["matched_data"], "12582912")
 
     def test_cli_writes_valid_json(self):
         report = REPORT.build_report()

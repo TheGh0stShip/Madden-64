@@ -1,10 +1,8 @@
 # Madden Football 64 decompilation
 
-[![Overall verified](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Overall%20verified&category=overall_verified&measure=matched_data_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
-[![Code](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Code&measure=matched_code_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
-[![Initialized data](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Initialized%20data&category=initialized_data&measure=matched_data_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
-[![Assets](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Assets&category=assets&measure=matched_data_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
-[![ROM mapped](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=ROM%20mapped&category=rom_mapping&measure=matched_data_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
+[![Resident code](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Resident%20code&measure=matched_code_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
+[![Resident initialized data](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Resident%20initialized%20data&category=initialized_data&measure=matched_data_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
+[![ROM inventory](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=ROM%20inventory&category=rom_inventory&measure=matched_functions_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
 
 Matching decompilation of **Madden Football 64** for Nintendo 64, USA Rev 0.
 The project is in its initial recovery phase. It verifies the retail ROM,
@@ -27,9 +25,14 @@ No ROM or extracted game data should be distributed with this project.
 Madden's IPL loads a packed block at ROM `0x1318..0x46C00`. Emulating the
 game's decompressor recovers the initialized program at
 `0x80000400..0x800776C0` (488,128 bytes), followed by BSS through
-`0x8008B8E0`. The current automated catalogue has 1,383 provisional function
+`0x8008B8E0`. The resident-program catalogue has 1,383 provisional function
 boundaries and identifies 147 libultra routines. Its compiler fingerprint is
 predominantly KMC GCC, while detected library code is IDO-built.
+
+A complete physical ROM sweep identifies 1,353 file records in fourteen
+non-empty archives, including two executable overlays that were absent from the
+original code denominator. See [the ROM layout audit](docs/ROM_LAYOUT.md) for
+the gap-free map, content counts, and remaining semantic splits.
 
 Ninety-nine reviewed C units currently match 36,340 retail code bytes and 368 data bytes exactly, including
 the contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
@@ -46,6 +49,7 @@ configured in `n64dk.toml`.
 ```sh
 make verify
 make survey
+make audit
 make match
 make check
 make report
@@ -77,14 +81,16 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching code | 36,340 bytes | 411,132 bytes | 8.84% |
-| Initialized program data | 368 bytes | 76,996 bytes | 0.48% |
-| Asset identification | 896 bytes | 12,293,120 bytes | 0.007% |
-| ROM mapping and classification | 2,632,354 bytes | 12,582,912 bytes | 20.92% |
+| Matching resident code | 36,340 bytes | 411,132 resident bytes | 8.84% |
+| Resident initialized program data | 368 bytes | 76,996 resident bytes | 0.48% |
+| Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
+| Archive record inventory | 1,353 records | 1,353 records | 100% |
+| Narrow content classification | 1,132 records | 1,353 records | 83.67% |
 
-The ROM-mapping measure includes loader-referenced ranges whose purpose or
-encoding is not yet understood, so it is research coverage rather than
-decompilation completion. Images, textures, music, and sound currently receive
-no progress credit because their formats have not yet been verified. If code,
-initialized data, and identified assets are combined strictly by verified byte
-coverage, the result is 37,604 of 12,781,248 bytes (0.294%).
+The code and initialized-data denominators above cover only the resident image;
+they are not whole-game percentages because the two executable overlays still
+require a verified code/data split. The ROM-mapping measure is research
+coverage rather than decompilation completion. Images, textures, music, and
+sound receive no decompilation credit merely for being inventoried. A combined
+whole-game completion percentage will not be stated until the logical archive
+contents and overlay sections have non-overlapping, verified denominators.
