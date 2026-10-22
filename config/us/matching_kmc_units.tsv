@@ -185,3 +185,11 @@
 0x63DD8	0x78	src/code/integer_rounding.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	59074be8f491a231156777ec7a3fc40d845ba4345eb46c54fd3677eb7aefb330
 0x641A0	0x3C	src/code/callback_command_53.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ca9f10907d7dbdba0133785ece088bb7a1a4b8b6b692f2c41786f7161614696e
 0x655B8	0x34	src/code/callback_command_48.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bd1d3b86f3dfc30a220308a3f271dae37d3d7932206e3a6775e44fd7eefdd2d3
+0x3261C	0x3C	src/code/random_scale_u16.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2d107c80566b265a5cbabdffccffd729dd772d03a1d79bc17baa75f35eb61542
+0x33584	0x34	src/code/video_state_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	697ece6187383040e611997055166d8208c4d3bb4c0e7a05b95875fae391bb73
+0x3364C	0x34	src/code/video_event_set.c	--symbol=osSetEventMesg:0x8004D098 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3628592c70443a47e8cc5fee6ecbdfeed51597156c32df1fefa58a71fa2054eb
+0x33E58	0x40	src/code/stream_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bb64cf6d1bc5be58f89326314c0b4271d802f687eb0aaaa8b4931ac79e5a8325
+0x33EC8	0x40	src/code/stream_block_append.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3f3ffdf9d3155144b80490fd4e2b882d1fd1ce8d4dbf072719b370a8100eef32
+0x33F2C	0x34	src/code/arena_product_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e6c642d647e25e2c070304090c0f321da914fedee5dc9631974ff9d8ded6780
+0x34084	0x34	src/code/channel_toggle.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6427dd19677ff2bf551338876c1abd3e5321c14270a4628f509ee1d359960aa4
+0x34D64	0x34	src/code/sprite_magic_check.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6653022ebe215586fd58ee9ca82f07ed99f67d1307a512f64860d7957ca387b6
