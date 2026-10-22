@@ -126,6 +126,13 @@ and subtracting identified in-text data gives:
 | Separate overlay data records | 0 | 377,184 | 0 |
 | **Total** | **753,420** | **484,548** | **2,279** |
 
+The boot-loader total is partitioned byte-for-byte in
+[`config/us/loader_map.tsv`](../config/us/loader_map.tsv). Its five instruction
+ranges occupy 644 bytes; a 12-byte alignment block and the 64-byte archive
+boundary table occupy the remaining 76 bytes. The audit verifies contiguous
+coverage, the ROM-to-VRAM mapping, and all sixteen table values against the
+resident copy before accepting these totals.
+
 The resident BSS is a further 82,464 zero-initialized bytes. Function totals
 are explicitly candidates until source/linker reconstruction proves every
 boundary. The corrected resident count excludes nine archive-pointer words and

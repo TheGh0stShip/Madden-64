@@ -56,6 +56,16 @@ class RomLayoutTests(unittest.TestCase):
         self.assertEqual(program["code_bytes"] + program["initialized_data_bytes"],
                          1237968)
 
+    def test_boot_loader_map_is_complete(self):
+        loader = self.audit["summary"]["program"]["loader"]
+        self.assertEqual(loader["code_bytes"], 644)
+        self.assertEqual(loader["initialized_data_bytes"], 76)
+        self.assertEqual(loader["function_candidates"], 5)
+        rows = self.audit["loader_map"]
+        self.assertEqual(rows[0]["start"], 0x1000)
+        self.assertEqual(rows[-1]["end"], 0x12D0)
+        self.assertEqual(sum(row["size"] for row in rows), 720)
+
     def test_committed_record_ledger_is_current(self):
         self.assertEqual(LEDGER.read_text(), AUDIT.records_tsv(self.audit))
 

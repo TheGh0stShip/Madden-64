@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config/us/progress.toml"
+LOADER_MAP = ROOT / "config/us/loader_map.tsv"
 
 
 def measures(total_code: int, matched_code: int, total_functions: int,
@@ -58,6 +59,25 @@ def manifest_ranges(paths: list[Path]) -> list[tuple[int, int, str]]:
     return ranges
 
 
+def loader_totals() -> tuple[int, int, int]:
+    code = data = functions = 0
+    for number, line in enumerate(LOADER_MAP.read_text().splitlines()[1:], 2):
+        if not line:
+            continue
+        fields = line.split("\t")
+        if len(fields) != 6:
+            raise ValueError(f"{LOADER_MAP}:{number}: malformed row")
+        size = int(fields[3], 0)
+        if fields[4] == "code":
+            code += size
+            functions += 1
+        elif fields[4] == "initialized_data":
+            data += size
+        else:
+            raise ValueError(f"{LOADER_MAP}:{number}: unknown kind {fields[4]}")
+    return code, data, functions
+
+
 def covered(start: int, end: int,
             ranges: list[tuple[int, int, str]]) -> tuple[int, str | None]:
     spans = sorted((max(start, left), min(end, right), source)
@@ -83,6 +103,7 @@ def build_report() -> dict[str, object]:
     manifests = [ROOT / path for path in progress["manifests"]]
     ranges = manifest_ranges(manifests)
     overlay_configs = progress.get("overlay_manifests", [])
+    loader_code, loader_data, loader_functions = loader_totals()
     vram_base, rom_base = image["vram"], image["rom"]
     code_end = rom_base + image["code_size"]
     libultra_start = rom_base + image["libultra_vram"] - vram_base
@@ -161,7 +182,8 @@ def build_report() -> dict[str, object]:
         {
             "id": "boot_loader",
             "name": "Boot-loader code",
-            "measures": measures(644, 0, 5, 0),
+            "measures": measures(loader_code, 0, loader_functions, 0,
+                                 loader_data, 0),
         },
         {
             "id": "overlays",

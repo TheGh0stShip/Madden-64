@@ -30,6 +30,7 @@ ROM_SHA256 = "39f25dad3af4782a909bf58d7127acae700ea7c6f17c48d39ab76fe331735d6f"
 ROM_SIZE = 0xC00000
 CART_BASE = 0xB0000000
 ARCHIVE_POINTERS = 16
+LOADER_MAP = ROOT / "config/us/loader_map.tsv"
 
 
 class AuditError(ValueError):
@@ -72,6 +73,48 @@ def archive_bounds(main: bytes) -> list[int]:
     if bounds[0] != 0x12D0 or bounds[-1] != 0xBFE9D6:
         raise AuditError("unexpected archive boundary table")
     return bounds
+
+
+def loader_inventory(rom: bytes, bounds: list[int]) -> dict:
+    """Validate and total the hand-audited loader instruction/data map."""
+    rows = []
+    for number, line in enumerate(LOADER_MAP.read_text().splitlines()[1:], 2):
+        if not line:
+            continue
+        fields = line.split("\t")
+        if len(fields) != 6:
+            raise AuditError(f"{LOADER_MAP}:{number}: malformed row")
+        start, end, vram, size = (int(field, 0) for field in fields[:4])
+        kind, name = fields[4:]
+        if start < 0x1000 or end > bounds[0] or end - start != size:
+            raise AuditError(f"{LOADER_MAP}:{number}: invalid loader extent")
+        if vram != 0x80200400 + start - 0x1000:
+            raise AuditError(f"{LOADER_MAP}:{number}: invalid VRAM mapping")
+        rows.append({"start": start, "end": end, "vram": vram,
+                     "size": size, "kind": kind, "name": name})
+    rows.sort(key=lambda row: row["start"])
+    cursor = 0x1000
+    for row in rows:
+        if row["start"] != cursor:
+            raise AuditError(f"loader map gap or overlap at 0x{cursor:X}")
+        cursor = row["end"]
+    if cursor != bounds[0]:
+        raise AuditError("loader map does not cover the complete loader")
+    table = rows[-1]
+    if table["name"] != "archive_boundary_table":
+        raise AuditError("loader map does not end with the archive boundary table")
+    table_values = [be32(rom, table["start"] + 4 * index) - CART_BASE
+                    for index in range(ARCHIVE_POINTERS)]
+    if table_values != bounds:
+        raise AuditError("loader archive boundary table does not match resident copy")
+    return {
+        "rows": rows,
+        "code_bytes": sum(row["size"] for row in rows if row["kind"] == "code"),
+        "initialized_data_bytes": sum(
+            row["size"] for row in rows if row["kind"] == "initialized_data"
+        ),
+        "function_candidates": sum(row["kind"] == "code" for row in rows),
+    }
 
 
 def decode_lzta(data: bytes) -> bytes:
@@ -198,6 +241,7 @@ def build_audit(rom: bytes, main: bytes) -> dict:
         logical_stored[record.kind] += record.logical_stored_size
         expanded[record.kind] += record.expanded_size
     bounds = archive_bounds(main)
+    loader = loader_inventory(rom, bounds)
     archive_bytes = bounds[-1] - bounds[0]
     table_bytes = sum(item["table_size"] for item in archives)
     payload_bytes = sum(record.stored_size for record in records)
@@ -233,8 +277,9 @@ def build_audit(rom: bytes, main: bytes) -> dict:
                 "initialized_data_bytes": 484548,
                 "bss_bytes": 82464,
                 "function_candidates": 2279,
-                "loader": {"code_bytes": 644, "initialized_data_bytes": 76,
-                           "function_candidates": 5},
+                "loader": {key: loader[key] for key in (
+                    "code_bytes", "initialized_data_bytes", "function_candidates"
+                )},
                 "resident": {"code_bytes": 393288, "initialized_data_bytes": 94840,
                              "bss_bytes": 82464, "function_candidates": 1373},
                 "overlay_1": {"code_bytes": 226784, "initialized_data_bytes": 12424,
@@ -244,6 +289,7 @@ def build_audit(rom: bytes, main: bytes) -> dict:
                 "overlay_data_records": {"bytes": 377184, "records": 3},
             },
         },
+        "loader_map": loader["rows"],
     }
 
 

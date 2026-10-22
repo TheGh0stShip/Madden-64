@@ -21,7 +21,7 @@ class RepositorySafetyTests(unittest.TestCase):
         )
         self.assertEqual(result.returncode, 0)
 
-    def test_tracked_files_contain_no_assistant_metadata(self) -> None:
+    def test_tracked_files_contain_no_tool_metadata(self) -> None:
         blocked = (
             "ch" + "atgpt",
             "cl" + "aude",
