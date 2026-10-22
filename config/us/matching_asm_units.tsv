@@ -13,3 +13,5 @@
 0x4DD08	0x10	src/libultra/os_set_fpc_csr.s	-O2 -G0 -mips3 -mgp32 -mfp32	1b1c2a5e117a433a988d960120310c5634987537358a5b13b49fddcee5d2dac4
 0x4F5A8	0x10	src/libultra/os_set_compare.s	-O2 -G0 -mips3 -mgp32 -mfp32	424b05c5a5a48f29b4669731a97ea63a5ee362e2b47fa58afc9317487695229c
 0x4F198	0x10	src/libultra/os_get_count.s	-O2 -G0 -mips3 -mgp32 -mfp32	49439260d2ea325fd9d1049a302274c512c90775bbc3751b54513b65152f01ae
+0x47518	0x60	src/libultra/os_get_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	5fe6c90dfed9ccdd884b8a58cb6c13bc1de2707bce30d89f8f9d0ffcc779e4cd
+0x46A38	0x10	src/libultra/exception_preamble.s	--symbol=__osException:0x80045E48 -O2 -G0 -mips3 -mgp32 -mfp32	3db73acedae60b81faa9cf4e444eddb40587d136a2c28366c4a2fd6c93bd178c
