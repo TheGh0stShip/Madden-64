@@ -59,6 +59,19 @@ typedef struct OSTimer {
     OSMesg msg;
 } OSTimer;
 
+typedef struct OSIoMesg {
+    struct {
+        u16 type;
+        u8 priority;
+        u8 status;
+        OSMesgQueue* retQueue;
+    } hdr;
+    void* dramAddr;
+    u32 devAddr;
+    u32 size;
+    OSPiHandle* piHandle;
+} OSIoMesg;
+
 typedef struct OSViMode {
     u8 type;
     u8 pad[3];
@@ -88,6 +101,7 @@ extern OSMesg D_8007D258[1];
 extern OSMesgQueue D_8007D260;
 extern u32 D_80000308;
 extern OSPiHandle* D_80074DF0[2];
+extern s32 D_80074DD0;
 extern u32 __osDisableInt(void);
 extern void __osRestoreInt(u32 mask);
 extern void __osEnqueueAndYield(OSThread** queue);
@@ -109,5 +123,7 @@ extern OSTime __osInsertTimer(OSTimer* timer);
 extern void __osSetTimerIntr(OSTime time);
 extern u32 osGetCount(void);
 extern void __osSetCompare(u32 value);
+extern s32 osJamMesg(OSMesgQueue* queue, OSMesg message, s32 flag);
+extern OSMesgQueue* osPiGetCmdQueue(void);
 
 #endif

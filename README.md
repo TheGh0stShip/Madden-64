@@ -25,7 +25,7 @@ game's decompressor recovers the initialized program at
 boundaries and identifies 147 libultra routines. Its compiler fingerprint is
 predominantly KMC GCC, while detected library code is IDO-built.
 
-Sixty-four reviewed C units currently match 13,228 retail code bytes exactly, including
+Sixty-six reviewed C units currently match 13,828 retail code bytes exactly, including
 the contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
 boundaries are research leads, not decompilation credit, until a source unit is
 compiled and compared byte-for-byte.
