@@ -11,7 +11,7 @@ total_functions = 2279
 
 [progress]
 matched_data = 496
-matched_functions = 452
+matched_functions = 470
 loader_manifest = "config/us/matching_loader_asm_units.tsv"
 
 manifests = [
@@ -21,7 +21,7 @@ manifests = [
 ]
 
 overlay_manifests = [
-  { path = "config/us/matching_overlay1_kmc_units.tsv", vram = 0x80090004, rom = 0x1000, functions = 79 },
+  { path = "config/us/matching_overlay1_kmc_units.tsv", vram = 0x80090004, rom = 0x1000, functions = 97 },
   { path = "config/us/matching_overlay4_kmc_units.tsv", vram = 0x800C77E8, rom = 0x1000, functions = 27 },
 ]
 
