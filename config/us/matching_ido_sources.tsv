@@ -1,4 +1,5 @@
 # IDO 5.3; ROM_START SIZE SOURCE FLAGS SHA256
+0x47A28	0x880	src/libultra/os_leo_interrupt.c	--symbol=__osDiskHandle:0x8007BD7C --symbol=__osEPiRawStartDma:0x800476A8 --symbol=__osEnqueueThread:0x80046564 --symbol=__osPopThread:0x800465AC -O1 -mips2 -Wab,-r4300_mul -non_shared -G 0 -Iinclude	85c91f5f20f66010662ee39cdc1a463060c0a6f06f7319f98f6c16452f01f0ea
 0xE7F8	0x8	src/code/func_8000DBF8.c	-O2 -mips2 -non_shared -G 0	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x46528	0x160	src/libultra/os_ai_set_frequency.c	-O1 -mips2 -Wab,-r4300_mul -non_shared -G 0 -Iinclude	4221e22f43f3f807696eba1864ec36b7d4ffa9659fbd50f70258ebba59e49ab0
 0x46688	0xA8	src/libultra/os_ai_set_next_buffer.c	--section-base=.data:0x80074D80 --symbol=__osAiDeviceBusy:0x80045B38 --symbol=osVirtualToPhysical:0x8004E9C8 -O1 -mips2 -Wab,-r4300_mul -non_shared -G 0 -Iinclude	28e93b122e6889c8af804e532756b95c69b0ea5bed8cfc06373b653a6e045263
