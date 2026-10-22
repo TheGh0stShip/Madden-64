@@ -7,3 +7,9 @@
 0x479A8	0x80	src/libultra/os_inval_icache.s	-O2 -G0 -mips3 -mgp32 -mfp32	cf9ac7a3378e8d2013f33517eebd339955e401c76380ec29ca56152a34f0040d
 0x471BC	0x17C	src/libultra/os_dispatch_thread.s	--symbol=__osPopThread:0x800465AC -O2 -G0 -mips3 -mgp32 -mfp32	b5af608370b0b042c80a7ffa4646f4aa61b8320fc615a166d4501a8364d18c44
 0x485D8	0x2C0	src/libgcc/ll_runtime.s	-O2 -G0 -mips3 -mgp32 -mfp32	ccf2a1fcc516893d7a2343a6fe49332f551ecb037d7de2e3dda5d2205bcd9ccc
+0x47808	0xA0	src/libultra/bzero.s	-O2 -G0 -mips3 -mgp32 -mfp32	6cb49ba97859396e62e39990cd9a31a7a775d8e8b5618695b03027823a7b2863
+0x48D58	0x60	src/libultra/os_map_tlb_rdb.s	-O2 -G0 -mips3 -mgp32 -mfp32	60e870785652f4c5376888fa708add8104458aed09503a8f38eb0925c8dbe54a
+0x4DE08	0x10	src/libultra/os_set_sr.s	-O2 -G0 -mips3 -mgp32 -mfp32	8c9798aafb630c54a679991a2a686c3379687a94f8b3c8c14e5eafe1cd8cb961
+0x4DD08	0x10	src/libultra/os_set_fpc_csr.s	-O2 -G0 -mips3 -mgp32 -mfp32	1b1c2a5e117a433a988d960120310c5634987537358a5b13b49fddcee5d2dac4
+0x4F5A8	0x10	src/libultra/os_set_compare.s	-O2 -G0 -mips3 -mgp32 -mfp32	424b05c5a5a48f29b4669731a97ea63a5ee362e2b47fa58afc9317487695229c
+0x4F198	0x10	src/libultra/os_get_count.s	-O2 -G0 -mips3 -mgp32 -mfp32	49439260d2ea325fd9d1049a302274c512c90775bbc3751b54513b65152f01ae
