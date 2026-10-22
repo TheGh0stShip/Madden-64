@@ -34,7 +34,7 @@ non-empty archives, including two executable overlays that were absent from the
 original code denominator. See [the ROM layout audit](docs/ROM_LAYOUT.md) for
 the gap-free map, content counts, and remaining semantic splits.
 
-Ninety-nine reviewed C units currently match 36,340 retail code bytes and 368 data bytes exactly, including
+One hundred reviewed C units currently match 37,556 resident code bytes and 384 data bytes exactly, including
 the contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
 boundaries are research leads, not decompilation credit, until a source unit is
 compiled and compared byte-for-byte.
@@ -81,8 +81,8 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching resident code | 36,340 bytes | 411,132 resident bytes | 8.84% |
-| Resident initialized program data | 368 bytes | 76,996 resident bytes | 0.48% |
+| Matching resident code | 37,556 bytes | 411,132 resident bytes | 9.13% |
+| Resident initialized program data | 384 bytes | 76,996 resident bytes | 0.50% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Narrow content classification | 1,132 records | 1,353 records | 83.67% |
