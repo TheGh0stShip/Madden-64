@@ -53,3 +53,5 @@
 0x175C4	0x54	src/overlays/overlay4/group_object_flag_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f7a9a7d3b35c2312a5e8bbe3bb91200eb06d1c8f390a2712d28f0b4b8ddb9e3
 0x16788	0x68	src/overlays/overlay4/group_position_min_delta.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	87e0440266fdeceee0012b2fdd06869d4eb48267d1074bb19d620ff3d851e539
 0x167F0	0x68	src/overlays/overlay4/group_position_max_delta.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	efe35791a6332fc258c0ae3c8dd4722a5b14f6fd0d7938cabeda9173883ab9ef
+0xE42C	0x80	src/overlays/overlay4/object_motion_expire.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7b2939af136f2149a0e6d01179058d7720609734bdb266841067aa5b3b1dacce
+0x112E0	0x80	src/overlays/overlay4/group_slot_mode_sync.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fa54761d3a35c18c9491b87ec9cad55532fdd552dd25cec12c8e9a833f42e561
