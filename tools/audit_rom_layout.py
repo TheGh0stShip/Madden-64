@@ -43,6 +43,8 @@ class Record:
     rom_start: int
     rom_end: int
     stored_size: int
+    logical_stored_size: int
+    alignment_bytes: int
     expanded_size: int
     flagged: bool
     encoding: str
@@ -127,7 +129,17 @@ def classify(data: bytes, archive: int, index: int) -> tuple[str, str]:
         return encoding, "audio_stream"
     if archive == 0 and index in (2, 5):
         return encoding, "overlay_data"
-    return encoding, "structured_data"
+    if archive == 0 and index == 3:
+        return encoding, "program_metadata"
+    if (archive, index) in ((8, 0), (14, 26)):
+        return encoding, "empty_record"
+    if archive in (1, 3, 4, 8, 9):
+        return encoding, "graphics_auxiliary"
+    if archive == 5:
+        return encoding, "gameplay_table"
+    if archive == 13:
+        return encoding, "roster_database"
+    return encoding, "binary_record"
 
 
 def parse_records(rom: bytes, main: bytes) -> tuple[list[Record], list[dict]]:
@@ -155,11 +167,20 @@ def parse_records(rom: bytes, main: bytes) -> tuple[list[Record], list[dict]]:
             if next_offset < offset or start + next_offset > end:
                 raise AuditError(f"archive {archive} record {index}: invalid extent")
             payload = rom[start + offset:start + next_offset]
+            logical_size = (flags & 0x7FFFFFFF) if flags & 0x80000000 else expanded
+            padding = len(payload) - logical_size
+            if (logical_size > len(payload) or padding > 1) and not (
+                logical_size == 0 and len(payload) == 2 and payload == b"\0\0"
+            ):
+                raise AuditError(
+                    f"archive {archive} record {index}: invalid logical stored size"
+                )
             encoding, kind = classify(payload, archive, index)
             if encoding == "lz-type-1" and len(decode_lzta(payload)) != expanded:
                 raise AuditError(f"archive {archive} record {index}: expanded-size mismatch")
             records.append(Record(archive, index, start + offset, start + next_offset,
-                                  len(payload), expanded, bool(flags & 0x80000000),
+                                  len(payload), logical_size, padding,
+                                  expanded, bool(flags & 0x80000000),
                                   encoding, kind))
         archives.append({"index": archive, "start": start, "end": end,
                          "table_size": table_size, "records": count})
@@ -170,14 +191,18 @@ def build_audit(rom: bytes, main: bytes) -> dict:
     records, archives = parse_records(rom, main)
     kinds = Counter(record.kind for record in records)
     stored = Counter()
+    logical_stored = Counter()
     expanded = Counter()
     for record in records:
         stored[record.kind] += record.stored_size
+        logical_stored[record.kind] += record.logical_stored_size
         expanded[record.kind] += record.expanded_size
     bounds = archive_bounds(main)
     archive_bytes = bounds[-1] - bounds[0]
     table_bytes = sum(item["table_size"] for item in archives)
     payload_bytes = sum(record.stored_size for record in records)
+    logical_payload_bytes = sum(record.logical_stored_size for record in records)
+    alignment_bytes = sum(record.alignment_bytes for record in records)
     if table_bytes + payload_bytes != archive_bytes:
         raise AuditError("archive tables and payload extents do not cover the archive region")
     return {
@@ -196,30 +221,56 @@ def build_audit(rom: bytes, main: bytes) -> dict:
             "records": len(records),
             "table_bytes": table_bytes,
             "payload_bytes": payload_bytes,
+            "logical_payload_bytes": logical_payload_bytes,
+            "alignment_bytes": alignment_bytes,
             "padding_bytes": len(rom) - bounds[-1],
             "counts_by_kind": dict(sorted(kinds.items())),
             "stored_bytes_by_kind": dict(sorted(stored.items())),
+            "logical_stored_bytes_by_kind": dict(sorted(logical_stored.items())),
             "expanded_bytes_by_kind": dict(sorted(expanded.items())),
+            "program": {
+                "code_bytes": 753420,
+                "initialized_data_bytes": 484548,
+                "bss_bytes": 82464,
+                "function_candidates": 2279,
+                "loader": {"code_bytes": 644, "initialized_data_bytes": 76,
+                           "function_candidates": 5},
+                "resident": {"code_bytes": 393288, "initialized_data_bytes": 94840,
+                             "bss_bytes": 82464, "function_candidates": 1373},
+                "overlay_1": {"code_bytes": 226784, "initialized_data_bytes": 12424,
+                              "function_candidates": 590},
+                "overlay_4": {"code_bytes": 132704, "initialized_data_bytes": 24,
+                              "function_candidates": 311},
+                "overlay_data_records": {"bytes": 377184, "records": 3},
+            },
         },
     }
+
+
+def records_tsv(audit: dict) -> str:
+    lines = ["archive\tindex\trom_start\trom_end\tstored_extent\tlogical_stored_size\t"
+             "alignment_bytes\texpanded_size\tencoding\tkind"]
+    for record in audit["records"]:
+        lines.append("\t".join((str(record["archive"]), str(record["index"]),
+                                f'0x{record["rom_start"]:X}', f'0x{record["rom_end"]:X}',
+                                str(record["stored_size"]), str(record["logical_stored_size"]),
+                                str(record["alignment_bytes"]), str(record["expanded_size"]),
+                                record["encoding"], record["kind"])))
+    return "\n".join(lines) + "\n"
 
 
 def write_outputs(audit: dict, output: Path) -> None:
     output.mkdir(parents=True, exist_ok=True)
     (output / "rom_layout.json").write_text(json.dumps(audit, indent=2) + "\n")
-    lines = ["archive\tindex\trom_start\trom_end\tstored_size\texpanded_size\tencoding\tkind"]
-    for record in audit["records"]:
-        lines.append("\t".join((str(record["archive"]), str(record["index"]),
-                                f'0x{record["rom_start"]:X}', f'0x{record["rom_end"]:X}',
-                                str(record["stored_size"]), str(record["expanded_size"]),
-                                record["encoding"], record["kind"])))
-    (output / "rom_files.tsv").write_text("\n".join(lines) + "\n")
+    (output / "rom_files.tsv").write_text(records_tsv(audit))
     summary = audit["summary"]
     md = ["# Madden Football 64 ROM audit", "",
           f"- Archive slots: {summary['archive_slots']} ({summary['nonempty_archives']} non-empty)",
           f"- File records: {summary['records']}",
           f"- Archive table bytes: {summary['table_bytes']}",
           f"- Stored payload bytes: {summary['payload_bytes']}",
+          f"- Logical stored bytes: {summary['logical_payload_bytes']}",
+          f"- Alignment bytes: {summary['alignment_bytes']}",
           f"- Unused tail padding: {summary['padding_bytes']}", "", "| Kind | Files | Stored bytes | Expanded bytes |",
           "|---|---:|---:|---:|"]
     for kind, count in summary["counts_by_kind"].items():

@@ -17,10 +17,12 @@ class DecompReportTests(unittest.TestCase):
         report = REPORT.build_report()
         totals = report["measures"]
         self.assertEqual(report["version"], 2)
-        self.assertEqual(totals["total_code"], "411132")
+        self.assertEqual(totals["total_code"], "753420")
         self.assertEqual(totals["matched_code"], "37556")
-        self.assertEqual(totals["total_data"], "76996")
+        self.assertEqual(totals["total_data"], "484548")
         self.assertEqual(totals["matched_data"], "384")
+        self.assertEqual(totals["total_functions"], 2279)
+        self.assertEqual(totals["matched_functions"], 127)
         categories = {item["id"]: item["measures"] for item in report["categories"]}
         self.assertNotIn("overall_verified", categories)
         self.assertEqual(categories["rom_inventory"]["total_functions"], 1353)
@@ -30,7 +32,8 @@ class DecompReportTests(unittest.TestCase):
         self.assertEqual(categories["inventory_models"]["total_functions"], 262)
         self.assertEqual(categories["inventory_animations"]["total_functions"], 67)
         self.assertEqual(categories["inventory_sprites"]["total_functions"], 2)
-        self.assertEqual(categories["inventory_unresolved"]["matched_functions"], 1132)
+        self.assertEqual(categories["inventory_graphics_auxiliary"]["matched_functions"], 214)
+        self.assertEqual(categories["inventory_game_data"]["matched_functions"], 4)
         self.assertEqual(categories["rom_mapping"]["matched_data"], "12582912")
 
     def test_cli_writes_valid_json(self):

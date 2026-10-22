@@ -86,8 +86,8 @@ def build_report() -> dict[str, object]:
     code_end = rom_base + image["code_size"]
     libultra_start = rom_base + image["libultra_vram"] - vram_base
     category_totals = {
-        "game": [libultra_start - rom_base, 0, 0],
-        "libultra": [code_end - libultra_start, 0, 0],
+        "game": [266100, 0, 0],
+        "libultra": [127188, 0, 0],
     }
     units = []
 
@@ -119,19 +119,29 @@ def build_report() -> dict[str, object]:
         totals[2] += 1
 
     matched_code = sum(end - start for start, end, _source in ranges)
-    matched_functions = len(ranges)
+    matched_functions = progress["matched_functions"]
     categories = []
     for category_id, name in (("game", "Game code"), ("libultra", "libultra")):
         total, matched, count = category_totals[category_id]
         categories.append({
             "id": category_id,
-            "name": name,
-            "measures": measures(total, matched, count, count),
+            "name": "Resident " + name.lower(),
+            "measures": measures(total, matched, 0, 0),
         })
     categories.extend([
         {
+            "id": "boot_loader",
+            "name": "Boot-loader code",
+            "measures": measures(644, 0, 5, 0),
+        },
+        {
+            "id": "overlays",
+            "name": "Executable overlay code",
+            "measures": measures(359488, 0, 901, 0),
+        },
+        {
             "id": "initialized_data",
-            "name": "Resident initialized program data",
+            "name": "Whole-program initialized data",
             "measures": measures(0, 0, 0, 0,
                                  image["data_size"], progress["matched_data"]),
         },
@@ -171,10 +181,19 @@ def build_report() -> dict[str, object]:
             "measures": measures(0, 0, inventory["sprite_records"], inventory["sprite_records"]),
         },
         {
-            "id": "inventory_unresolved",
-            "name": "Inventory: unresolved structured records",
-            "measures": measures(0, 0, inventory["records"],
-                                 inventory["records"] - inventory["structured_records"]),
+            "id": "inventory_graphics_auxiliary",
+            "name": "Inventory: auxiliary graphics records",
+            "measures": measures(0, 0, inventory["graphics_auxiliary_records"],
+                                 inventory["graphics_auxiliary_records"]),
+        },
+        {
+            "id": "inventory_game_data",
+            "name": "Inventory: gameplay and roster databases",
+            "measures": measures(0, 0,
+                                 inventory["gameplay_table_records"] +
+                                 inventory["roster_database_records"],
+                                 inventory["gameplay_table_records"] +
+                                 inventory["roster_database_records"]),
         },
         {
             "id": "rom_mapping",

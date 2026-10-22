@@ -1,7 +1,7 @@
 # Madden Football 64 decompilation
 
-[![Resident code](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Resident%20code&measure=matched_code_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
-[![Resident initialized data](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Resident%20initialized%20data&category=initialized_data&measure=matched_data_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
+[![Whole-program code](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Whole-program%20code&measure=matched_code_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
+[![Whole-program initialized data](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Whole-program%20initialized%20data&category=initialized_data&measure=matched_data_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
 [![ROM inventory](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=ROM%20inventory&category=rom_inventory&measure=matched_functions_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
 
 Matching decompilation of **Madden Football 64** for Nintendo 64, USA Rev 0.
@@ -25,17 +25,19 @@ No ROM or extracted game data should be distributed with this project.
 Madden's IPL loads a packed block at ROM `0x1318..0x46C00`. Emulating the
 game's decompressor recovers the initialized program at
 `0x80000400..0x800776C0` (488,128 bytes), followed by BSS through
-`0x8008B8E0`. The resident-program catalogue has 1,383 provisional function
+`0x8008B8E0`. The corrected resident-program catalogue has 1,373 provisional function
 boundaries and identifies 147 libultra routines. Its compiler fingerprint is
 predominantly KMC GCC, while detected library code is IDO-built.
 
 A complete physical ROM sweep identifies 1,353 file records in fourteen
-non-empty archives, including two executable overlays that were absent from the
-original code denominator. See [the ROM layout audit](docs/ROM_LAYOUT.md) for
-the gap-free map, content counts, and remaining semantic splits.
+non-empty archives. It splits the loader, resident image, both executable
+overlays, separate overlay data, every archive table, each payload's logical
+length, and alignment padding. See [the ROM layout audit](docs/ROM_LAYOUT.md)
+for the gap-free map and per-archive counts and sizes.
 
-One hundred reviewed C units currently match 37,556 resident code bytes and 384 data bytes exactly, including
-the contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
+One hundred reviewed C units, containing 127 function candidates, currently
+match 37,556 resident code bytes and 384 data bytes exactly, including the
+contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
 boundaries are research leads, not decompilation credit, until a source unit is
 compiled and compared byte-for-byte.
 
@@ -81,16 +83,16 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching resident code | 37,556 bytes | 411,132 resident bytes | 9.13% |
-| Resident initialized program data | 384 bytes | 76,996 resident bytes | 0.50% |
+| Matching whole-program code | 37,556 bytes | 753,420 bytes | 4.99% |
+| Whole-program initialized data | 384 bytes | 484,548 bytes | 0.08% |
+| Matching function candidates | 127 | 2,279 | 5.57% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
-| Narrow content classification | 1,132 records | 1,353 records | 83.67% |
+| Physical content classification | 1,353 records | 1,353 records | 100% |
 
-The code and initialized-data denominators above cover only the resident image;
-they are not whole-game percentages because the two executable overlays still
-require a verified code/data split. The ROM-mapping measure is research
-coverage rather than decompilation completion. Images, textures, music, and
-sound receive no decompilation credit merely for being inventoried. A combined
-whole-game completion percentage will not be stated until the logical archive
-contents and overlay sections have non-overlapping, verified denominators.
+The program denominator covers the loader, resident executable, both overlays,
+and their initialized data records. Function boundaries remain candidates until
+source reconstruction proves them. ROM mapping and content classification are
+research coverage, not decompilation credit: the 516 texture containers, 43
+JPEGs, 262 models, 67 motions, 2 sprites, 237 audio streams, and 214 auxiliary
+graphics records are inventoried but not counted as reconstructed assets.
