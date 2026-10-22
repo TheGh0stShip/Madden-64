@@ -42,10 +42,26 @@ typedef struct OSDir {
     u8 game_name[16];
 } OSDir;
 
+typedef struct OSPfsState {
+    u32 file_size;
+    u32 game_code;
+    u16 company_code;
+    u8 ext_name[4];
+    u8 game_name[16];
+} OSPfsState;
+
 extern s32 __osCheckId(OSPfs* pfs);
 extern s32 __osPfsRWInode(OSPfs* pfs, OSInode* inode, u8 flag, u8 bank);
 extern s32 __osPfsSelectBank(OSPfs* pfs);
 extern s32 __osContRamRead(OSMesgQueue* queue, s32 channel, u16 address, u8* buffer);
+extern s32 __osContRamWrite(OSMesgQueue* queue, s32 channel, u16 address,
+                            u8* buffer, s32 force);
 extern u16 __osSumcalc(u8* buffer, s32 length);
+extern s32 __osBlockSum(OSPfs* pfs, u8 page, u16* sum, u8 bank);
+extern s32 __osPfsReleasePages(OSPfs* pfs, OSInode* inode, u8 startPage,
+                               u16* sum, u8 bank, OSInodeUnit* finalPage,
+                               int flag);
+extern s32 osPfsFindFile(OSPfs* pfs, u16 companyCode, u32 gameCode,
+                         u8* gameName, u8* extName, s32* fileNo);
 
 #endif
