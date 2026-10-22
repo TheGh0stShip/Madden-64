@@ -25,4 +25,7 @@
 0x104B8	0x34	src/code/render_toggle.c	--symbol=D_80065458:0x80065458 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	702d8d21e7d4a8cd768ae316a6cdce8ff5726794dde664b3206f6fab2e7e4699
 0x12698	0x10	src/code/system_status.c	--symbol=D_80065500:0x80065500 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f6826181df6462985d914e4402b29561e957b847d76d2f2bd7a49e02048679a6
 0x1273C	0x28	src/code/system_state_clear.c	--symbol=D_8006550C:0x8006550C --symbol=D_8006552C:0x8006552C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a4c86969e7600c18af9a6abe3806bf523dbb329c96e681e69094f0266007a24a
+0x16CA0	0x24	src/code/system_toggle.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	61e892cd486dcf27e887993ddf934cf7da39000188cfee73700e250e627630a3
+0x175D4	0x50	src/code/ui_entry_value.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	14b86cb715dc8a936d01f9bd5a0efcbe317fd1f61b25dcd88e221c5f0266aa3b
 0x17BC4	0x6C	src/code/ui_state.c	--symbol=D_80085BF8:0x80085BF8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e5908d11b6a89c6e64260e33fe290c410781cf4516ea3e4f8195c4de45ab2be1
+0x188A4	0x48	src/code/ui_value_scalar.c	--symbol=func_80017CC8:0x80017CC8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	697537b9c7e47c547fd31936335b945f508c6fcb24a2e5e41fda52a288a28ea7
