@@ -213,3 +213,8 @@
 0x386FC	0x3C	src/code/event_mode_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e5433183fce053c9cc808f85ad4174cc70527a0349b82d8c276f2b32f8525cae
 0x37E58	0x38	src/code/runtime_initialize_once.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bb6787ef53f6c788cb90023d19f3d74b55400c6b978be76c27f28b1aafedfb0d
 0x423C0	0x44	src/code/interface_status_events.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b743ca87d9c5d6247d7b2e531530598fd668c4d57d4872da20e36d360c94b5c2
+0x46394	0x58	src/code/render_buffers_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cae59b5666856b10cb635e67ab4d149d866e8c945ec6313a2e0d086a9ee0ec77
+0x463F8	0x44	src/code/runtime_range_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7378a853ffb83aa81aac49222dc4aa3912a5f13935a11e1aecb3e2303f7e408f
+0x46314	0x80	src/code/render_buffers_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	26bd78cc298fddb003665b9e2c9a8cb95560a452ff4396a6529967f99a2ffd80
+0x63F7C	0x44	src/code/runtime_object_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f6406217b63b1bd850dd95d12483df89cd84cc9a417c459c4ab231d0979932d0
+0x5C050	0x3C	src/code/runtime_callback_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7c04435facb3fd441012048ea7b2363f5391626daf9571a9c0a08db2e14718fb
