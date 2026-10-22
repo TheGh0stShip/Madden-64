@@ -5,3 +5,4 @@
 0xD5C8	0x58	src/code/object_vector.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	72ad66ad29a5e05b783efe4e483ae12f9a388db39d770484948584cfd0acdd3a
 0xD738	0x70	src/code/object_bounds.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	182114fbe2c2252b46c7461bcc66a2b43d1f9e0a43a249be24a95a08155b30c6
 0xD7A8	0x44	src/code/object_list.c	--symbol=D_8008B3D0:0x8008B3D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d8089ae7c92b977056c726b1aca32c4e568bd94958c09c7120c3c64d2609d5c8
+0xD9C0	0x50	src/code/object_system_init.c	--symbol=func_8000BE80:0x8000BE80 --symbol=func_8000D684:0x8000D684 --symbol=func_8000D5BC:0x8000D5BC --symbol=func_80033484:0x80033484 --symbol=D_8008931C:0x8008931C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	925b6fedd777824ae1ec8ee92b517b36333c20044f607c118b9b2cca08d5ee82
