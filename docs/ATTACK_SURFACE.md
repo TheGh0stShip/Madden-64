@@ -41,7 +41,7 @@ prioritization aid, not decompilation credit.
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 3 | 632 | 172 |
 | overlay_1 | 1,025 | 121 | 183,220 | 4,176 |
-| overlay_4 | 420 | 61 | 115,116 | 2,476 |
+| overlay_4 | 420 | 62 | 115,116 | 2,560 |
 | resident | 1,373 | 314 | 378,576 | 37,256 |
 
 ### Size distribution
@@ -51,7 +51,7 @@ prioritization aid, not decompilation credit.
 | 000-0016 | 327 | 135 | 3,956 | 1,712 |
 | 000-0032 | 225 | 133 | 5,860 | 3,360 |
 | 000-0064 | 385 | 281 | 19,116 | 14,288 |
-| 000-0128 | 554 | 510 | 51,956 | 47,904 |
+| 000-0128 | 554 | 509 | 51,956 | 47,820 |
 | 000-0256 | 554 | 528 | 102,676 | 97,648 |
 | 000-0512 | 476 | 452 | 171,136 | 161,748 |
 | 000-1024 | 202 | 192 | 140,620 | 133,760 |
@@ -60,7 +60,7 @@ prioritization aid, not decompilation credit.
 - Exact duplicate body families: 17
 - Functions participating in those families: 113
 - Matched-to-unmatched transferable families retained: 0
-- Conservative unmatched queue entries retained: 65
+- Conservative unmatched queue entries retained: 64
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally
