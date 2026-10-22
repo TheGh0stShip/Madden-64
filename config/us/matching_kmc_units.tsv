@@ -254,3 +254,4 @@
 0xBA60	0x6C	src/code/render_command_8_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	70af8e1d97d620a374c22a74e39dc4ee2b833d552e02115f926ee5f350393428
 0xBBA8	0x60	src/code/render_geometry_mode_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9b2f90611235796d7ed7f1ed7531227c742f90033a74a279d1659858567b47e2
 0xBC08	0x64	src/code/render_geometry_mode_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a50c843c14d3321e85cc0dd9b2ff09f61e3c3ef4e97c06fa702d1bd418414d49
+0xBACC	0xDC	src/code/render_viewport_range_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3d76829507b3dd6203bd327fc13a415f788d6cb8e9e1c705417fc9661b3dddf5
