@@ -202,3 +202,14 @@
 0x36FF4	0x34	src/code/resource_guarded_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1f7af1850e20bed9a3baaa6521b8db1c9d1c4b8c4011ab6bc8801fa532722a0a
 0x3707C	0x34	src/code/resource_guarded_create.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	016abf0e4d09bcde7140c1ac18e51573a7b62eae23e12af754610c2688d960a6
 0x370B0	0x34	src/code/resource_guarded_load.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	37188ca389053ad6fa055ffa9e84da55ec345859d541dab7596dc6a4be2d457b
+0x3F060	0x38	src/code/subsystems_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bd48dc796edd88864fdf9cfb6152b97282fc187f48bfdc38006d0295c7141aa0
+0x4238C	0x34	src/code/interface_random_event.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b71d2d1b595b3ea423c1c136c114e230245217469ead7ec48acae5e675b1f938
+0x44248	0x34	src/code/protocol_global_query.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	37421d1df0d16756c46635fb8da303f1b284b4cc4be0cc317dea209fed119f0a
+0x42270	0x34	src/code/interface_state_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	77e5e6b2cc705ebfc3b1397a366fcf47d25f6da59525e9763613628ce09256e0
+0x424F8	0x34	src/code/interface_pending_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e4ca48631dbaaa11241e6ce565385f8bc3e8a67fa82c027362c673f97c41b40d
+0x4210C	0x40	src/code/interface_binding_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e9dd751bda030b842b61762c7e8767557141c1f2e84e9ab8b4c2fee594259ea8
+0x41C50	0x38	src/code/interface_callback_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c14b03925de933b8c987a74a4140410ba3b0b449ca5f0d647647269c03e2ce0e
+0x44210	0x38	src/code/protocol_entry_matches.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3d71af216f429bc5f34de65ffe3d9f18bebc2f95e3d8a475916848a357cbeb12
+0x386FC	0x3C	src/code/event_mode_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e5433183fce053c9cc808f85ad4174cc70527a0349b82d8c276f2b32f8525cae
+0x37E58	0x38	src/code/runtime_initialize_once.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bb6787ef53f6c788cb90023d19f3d74b55400c6b978be76c27f28b1aafedfb0d
+0x423C0	0x44	src/code/interface_status_events.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b743ca87d9c5d6247d7b2e531530598fd668c4d57d4872da20e36d360c94b5c2
