@@ -28,12 +28,22 @@
       "url": "https://github.com/TheGh0stShip/Madden-64"
     },
     {
-      "label": "Progress",
+      "label": "ByteMatch progress",
       "url": "https://bytematch.dev/TheGh0stShip/Madden-64"
+    },
+    {
+      "label": "decmp.dev progress",
+      "url": "https://decmp.dev/TheGh0stShip/Madden-64"
     }
+  ],
+  "help": [
+    "Matching remaining game functions",
+    "Identifying initialized data",
+    "Documenting asset formats"
   ],
   "tags": [
     "matching",
-    "MIPS"
+    "MIPS",
+    "byte-exact"
   ]
 }

@@ -2,6 +2,7 @@
 
 [![Whole-program code](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Whole-program%20code&measure=matched_code_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
 [![Whole-program initialized data](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Whole-program%20initialized%20data&category=program_data&measure=matched_data_percent)](https://bytematch.dev/TheGh0stShip/Madden-64)
+[![Matching functions](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Matching%20functions&measure=matched_functions)](https://bytematch.dev/TheGh0stShip/Madden-64)
 
 Matching decompilation of **Madden Football 64** for Nintendo 64, USA Rev 0.
 The project is in its initial recovery phase. It verifies the retail ROM,
@@ -72,10 +73,14 @@ program bytes.
 
 ## Progress tracking
 
-Every push to `main` publishes an objdiff v2 artifact named `N8ME_report`.
-The report is generated from the reviewed matching manifests and audited ROM
-survey totals without requiring a copy of the retail ROM. Public history and
-progress are available on [ByteMatch](https://bytematch.dev/TheGh0stShip/Madden-64).
+Every push to `main` publishes an objdiff v2 artifact named `N8ME_report` and
+uploads the same report to decmp.dev. The report is generated from the reviewed
+matching manifests and audited ROM survey totals without requiring a copy of
+the retail ROM. Public history and progress are available on
+[ByteMatch](https://bytematch.dev/TheGh0stShip/Madden-64) and
+[decmp.dev](https://decmp.dev/TheGh0stShip/Madden-64). The root
+`.recomp.json` supplies the project metadata consumed by
+[recomp.fyi](https://recomp.fyi/).
 
 Progress is reported by evidence class; the code percentage is not an overall
 project percentage. Current audited measures are:
