@@ -40,7 +40,7 @@ prioritization aid, not decompilation credit.
 | Module | Functions | Matched | Candidate bytes | Matched bytes |
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 3 | 632 | 172 |
-| overlay_1 | 1,025 | 129 | 183,220 | 4,628 |
+| overlay_1 | 1,025 | 130 | 183,220 | 4,768 |
 | overlay_4 | 420 | 68 | 115,116 | 3,296 |
 | resident | 1,373 | 425 | 378,576 | 45,128 |
 
@@ -52,7 +52,7 @@ prioritization aid, not decompilation credit.
 | 000-0032 | 225 | 129 | 5,860 | 3,256 |
 | 000-0064 | 385 | 209 | 19,116 | 10,704 |
 | 000-0128 | 554 | 468 | 51,956 | 44,436 |
-| 000-0256 | 554 | 522 | 102,676 | 96,548 |
+| 000-0256 | 554 | 521 | 102,676 | 96,408 |
 | 000-0512 | 476 | 452 | 171,136 | 161,748 |
 | 000-1024 | 202 | 191 | 140,620 | 132,880 |
 | 1025+ | 100 | 93 | 182,224 | 173,044 |
@@ -60,7 +60,7 @@ prioritization aid, not decompilation credit.
 - Exact duplicate body families: 17
 - Functions participating in those families: 113
 - Matched-to-unmatched transferable families retained: 0
-- Conservative unmatched queue entries retained: 50
+- Conservative unmatched queue entries retained: 49
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally

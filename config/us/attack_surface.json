@@ -183,8 +183,8 @@
       "overlay_1": {
         "functions": 1025,
         "bytes": 183220,
-        "matched_functions": 129,
-        "matched_bytes": 4628
+        "matched_functions": 130,
+        "matched_bytes": 4768
       },
       "overlay_4": {
         "functions": 420,
@@ -227,8 +227,8 @@
       "000-0256": {
         "functions": 554,
         "bytes": 102676,
-        "matched_functions": 32,
-        "matched_bytes": 6128
+        "matched_functions": 33,
+        "matched_bytes": 6268
       },
       "000-0512": {
         "functions": 476,
@@ -483,13 +483,6 @@
         "rom": 179956,
         "size": 136,
         "name": "func_800BAEF8"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148261560,
-        "rom": 192180,
-        "size": 140,
-        "name": "func_800BDEB8"
       },
       {
         "module": "overlay4",
