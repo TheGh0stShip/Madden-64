@@ -26,11 +26,14 @@ jobs:
           path: build/report.json
           if-no-files-found: error
       - name: Publish progress to decmp.dev
-        uses: decmp/upload-action@v1
-        with:
-          report: build/report.json
-          version: N8ME
-          name: Madden Football 64
-          short-name: Madden 64
-          platform: n64
-          default-version: N8ME
+        run: |
+          curl -fsSL https://api.decmp.dev/action/v1.1.0.mjs -o decmp.mjs
+          echo "10fb0039a067b4ffe67510959356a691efa6efbb0aae16450c04f8c64da0a5f8  decmp.mjs" | sha256sum -c
+          node decmp.mjs
+        env:
+          DECMP_REPORT: build/report.json
+          DECMP_VERSION: N8ME
+          DECMP_NAME: Madden Football 64
+          DECMP_SHORT_NAME: Madden 64
+          DECMP_PLATFORM: n64
+          DECMP_DEFAULT_VERSION: N8ME
