@@ -112,7 +112,7 @@ class RomLayoutTests(unittest.TestCase):
     def test_overlay1_boundary_findings_are_well_formed(self):
         lines = OVERLAY1_FINDINGS.read_text().splitlines()
         self.assertEqual(lines[0], "address\tkind\tfunction\tdetail")
-        self.assertEqual(len(lines) - 1, 956)
+        self.assertEqual(len(lines) - 1, 953)
         allowed_kinds = {
             "branch_outside", "branch_to_entry", "cross_branch",
             "falls_through", "in_text_data", "interior_alias", "junk_start",

@@ -35,14 +35,14 @@ class AttackSurfaceTests(unittest.TestCase):
         modules = self.analysis["functions"]["modules"]
         self.assertEqual(sum(item["functions"] for item in modules.values()), 2823)
         self.assertEqual(sum(item["matched_functions"] for item in modules.values()),
-                         627)
+                         628)
 
     def test_provisional_catalogue_is_not_presented_as_complete_coverage(self):
         status = self.analysis["functions"]["catalogue_status"]
         self.assertTrue(status["provisional"])
         self.assertEqual(status["program_code_bytes"], 753428)
-        self.assertEqual(status["catalogue_body_bytes"], 677580)
-        self.assertEqual(status["code_bytes_outside_catalogue_bodies"], 75848)
+        self.assertEqual(status["catalogue_body_bytes"], 677852)
+        self.assertEqual(status["code_bytes_outside_catalogue_bodies"], 75576)
         self.assertGreater(
             sum(sum(item["findings"].values())
                 for item in status["boundary_audits"].values()), 0

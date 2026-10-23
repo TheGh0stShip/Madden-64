@@ -104,4 +104,5 @@
 0x12128	0x54	src/overlays/overlay1/runtime_ready.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e0ff8e71c632e8f8b8b467d10f8b2dfe2498c6dc2442bc78eb81430deb20f486
 0x2EEB4	0x8C	src/overlays/overlay1/object_list_sort.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	db55c45a41ca8d46cee7253b10559ef231855a6d075f69000b386cedb09bab6b
 0x2EF40	0xD4	src/overlays/overlay1/object_list_reposition.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	eabe167d2542a95b123a24b489bd2636079c46aa190276ab6e60edeca5079802
+0x2F014	0x12C	src/overlays/overlay1/object_neighbor_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	dfa6801df1dd84c7fda86c974f754de1e549a711396fd84c68211b5903701f80
 0x2ECC8	0x30	src/overlays/overlay1/temporary_buffer_release.c	--symbol=func_80033258:0x80033258 --symbol=D_800726D0:0x800726D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b70c702ac27222c679bae4ddda371669d51cacbf361c5cc55e1009c16b56f9a5
