@@ -114,8 +114,32 @@ def function_analysis() -> dict:
     transferable.sort(key=lambda item: (-item["size"], -len(item["members"]),
                                         item["sha256"]))
     ranked = RANK.ranked_candidates(0x200)
+    program = AUDIT.build_audit(AUDIT.load_rom(ROM), MAIN.read_bytes())["summary"]["program"]
+    catalogue_bytes = sum(values["bytes"] for values in modules.values())
+    boundary_audits = {}
+    for module in ("overlay_1", "overlay_4"):
+        path = ROOT / "build/us/audit" / f"{module}_functions/summary.json"
+        summary = json.loads(path.read_text())
+        boundary_audits[module] = {
+            "text_bytes": summary["text_size"],
+            "sweep_candidates": summary["functions"],
+            "catalogue_candidates": modules[module]["functions"],
+            "in_text_data_ranges": len(summary["in_text_data"]),
+            "in_text_data_bytes": sum(
+                int(item.rsplit("+", 1)[1], 0) for item in summary["in_text_data"]
+            ),
+            "findings": summary["findings"],
+        }
     return {
         "modules": dict(sorted(modules.items())),
+        "catalogue_status": {
+            "provisional": True,
+            "program_code_bytes": program["code_bytes"],
+            "catalogue_body_bytes": catalogue_bytes,
+            "code_bytes_outside_catalogue_bodies": program["code_bytes"] - catalogue_bytes,
+            "catalogue_candidates": sum(values["functions"] for values in modules.values()),
+            "boundary_audits": boundary_audits,
+        },
         "size_buckets": dict(sorted(buckets.items())),
         "exact_duplicate_families": len(repeated),
         "exact_duplicate_members": sum(len(item["members"]) for item in repeated),
@@ -230,6 +254,9 @@ def markdown(analysis: dict) -> str:
                      f'{archive["table_size"]:,} | '
                      f'{archive["entropy_bits_per_byte"]:.4f} |')
     lines.extend(["", "## Function attack surface", "",
+                  "The function count and function map are provisional. Code-byte totals",
+                  "come from program-region classification; candidate bodies come from",
+                  "heuristic boundary catalogues and are not equivalent measures.", "",
                   "| Module | Functions | Matched | Candidate bytes | Matched bytes |",
                   "|---|---:|---:|---:|---:|"])
     for module, values in analysis["functions"]["modules"].items():
@@ -245,6 +272,7 @@ def markdown(analysis: dict) -> str:
                      f'{values["bytes"]:,} | '
                      f'{values["bytes"] - values["matched_bytes"]:,} |')
     functions = analysis["functions"]
+    status = functions["catalogue_status"]
     lines.extend(["", f'- Exact duplicate body families: '
                   f'{functions["exact_duplicate_families"]:,}',
                   f'- Functions participating in those families: '
@@ -252,11 +280,28 @@ def markdown(analysis: dict) -> str:
                   f'- Matched-to-unmatched transferable families retained: '
                   f'{len(functions["transferable_families"]):,}',
                   f'- Conservative unmatched queue entries retained: '
-                  f'{len(functions["conservative_queue"]):,}', "",
+                  f'{len(functions["conservative_queue"]):,}',
+                  f'- Program-region code bytes: {status["program_code_bytes"]:,}',
+                  f'- Bytes assigned to provisional candidate bodies: '
+                  f'{status["catalogue_body_bytes"]:,}',
+                  f'- Code bytes outside provisional candidate bodies: '
+                  f'{status["code_bytes_outside_catalogue_bodies"]:,}', "",
                   "Exact duplicate families with both matched and unmatched members are",
                   "the first source-reuse targets. The conservative queue additionally",
                   "requires a closed predecessor, a complete exit, no saved-context",
                   "register dependency, and no contradictory boundary finding.", "",
+                  "### Boundary-audit evidence", "",
+                  "| Module | Sweep candidates | Published candidates | Gap ranges | Gap bytes | Contradictory findings |",
+                  "|---|---:|---:|---:|---:|---:|"])
+    for module, values in status["boundary_audits"].items():
+        lines.append(f'| {module} | {values["sweep_candidates"]:,} | '
+                     f'{values["catalogue_candidates"]:,} | '
+                     f'{values["in_text_data_ranges"]:,} | '
+                     f'{values["in_text_data_bytes"]:,} | '
+                     f'{sum(values["findings"].values()):,} |')
+    lines.extend(["", "These findings are an audit queue, not additional progress. They include",
+                  "late starts, branches across candidate boundaries, shared epilogues,",
+                  "fall-through entries, interior aliases, and executable-looking gap bytes.", "",
                   "## Asset attack surface", "",
                   "| Kind | Records | Compressed | Stored bytes | Expanded bytes | Ratio |",
                   "|---|---:|---:|---:|---:|---:|"])

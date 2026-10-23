@@ -37,6 +37,10 @@ prioritization aid, not decompilation credit.
 
 ## Function attack surface
 
+The function count and function map are provisional. Code-byte totals
+come from program-region classification; candidate bodies come from
+heuristic boundary catalogues and are not equivalent measures.
+
 | Module | Functions | Matched | Candidate bytes | Matched bytes |
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 3 | 632 | 172 |
@@ -61,11 +65,25 @@ prioritization aid, not decompilation credit.
 - Functions participating in those families: 113
 - Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 49
+- Program-region code bytes: 753,428
+- Bytes assigned to provisional candidate bodies: 677,544
+- Code bytes outside provisional candidate bodies: 75,884
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally
 requires a closed predecessor, a complete exit, no saved-context
 register dependency, and no contradictory boundary finding.
+
+### Boundary-audit evidence
+
+| Module | Sweep candidates | Published candidates | Gap ranges | Gap bytes | Contradictory findings |
+|---|---:|---:|---:|---:|---:|
+| overlay_1 | 1,071 | 1,025 | 231 | 43,696 | 987 |
+| overlay_4 | 420 | 420 | 87 | 17,500 | 348 |
+
+These findings are an audit queue, not additional progress. They include
+late starts, branches across candidate boundaries, shared epilogues,
+fall-through entries, interior aliases, and executable-looking gap bytes.
 
 ## Asset attack surface
 
