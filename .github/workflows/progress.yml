@@ -37,3 +37,20 @@ jobs:
           DECMP_SHORT_NAME: Madden 64
           DECMP_PLATFORM: n64
           DECMP_DEFAULT_VERSION: N8ME
+      - name: Notify DecompHub
+        env:
+          PROJECT_REPOSITORY: https://github.com/${{ github.repository }}
+          PROJECT_REVISION: ${{ github.sha }}
+        run: |
+          jq -n --arg repository "$PROJECT_REPOSITORY" --arg revision "$PROJECT_REVISION" \
+            '{repository: $repository, revision: $revision}' > decomphub-refresh.json
+          status=$(curl --silent --show-error --max-time 20 \
+            --output decomphub-refresh-response.json --write-out "%{http_code}" \
+            -H "Content-Type: application/json" --data-binary @decomphub-refresh.json \
+            https://app.decomphub.com/api/progress/refresh)
+          if [ "$status" = 404 ]; then
+            echo "DecompHub submission is awaiting publication."
+          elif [ "$status" -lt 200 ] || [ "$status" -ge 300 ]; then
+            cat decomphub-refresh-response.json
+            exit 1
+          fi

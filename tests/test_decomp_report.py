@@ -56,6 +56,25 @@ class DecompReportTests(unittest.TestCase):
             path.write_text(json.dumps(report))
             self.assertEqual(json.loads(path.read_text())["version"], 2)
 
+    def test_decomphub_report_preserves_independent_scopes(self):
+        report = REPORT.build_decomphub_report(REPORT.build_report())
+        tracks = {track["id"]: track for track in report["tracks"]}
+        self.assertEqual(report["format"], "decomphub.progress/v1")
+        self.assertEqual(tracks["matching-code"]["measurement"], {
+            "kind": "ratio", "completed": 65880, "total": 753428,
+            "unit": "bytes",
+        })
+        self.assertEqual(tracks["initialized-data"]["measurement"], {
+            "kind": "ratio", "completed": 496, "total": 484540,
+            "unit": "bytes",
+        })
+        self.assertEqual(tracks["matching-functions"]["measurement"], {
+            "kind": "ratio", "completed": 628, "total": 2823,
+            "unit": "functions",
+        })
+        self.assertIsNone(tracks["asset-reconstruction"]["measurement"])
+        self.assertNotIn("overall", tracks)
+
 
 if __name__ == "__main__":
     unittest.main()

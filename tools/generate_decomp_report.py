@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config/us/progress.toml"
 LOADER_MAP = ROOT / "config/us/loader_map.tsv"
+DECOMPHUB_REPORT = ROOT / "decomphub.progress.json"
 
 
 def measures(total_code: int, matched_code: int, total_functions: int,
@@ -195,15 +196,134 @@ def build_report() -> dict[str, object]:
     }
 
 
+def build_decomphub_report(report: dict[str, object]) -> dict[str, object]:
+    config = tomllib.loads(CONFIG.read_text())
+    inventory = config["inventory"]
+    totals = report["measures"]
+    records = inventory["records"]
+    return {
+        "format": "decomphub.progress/v1",
+        "repository": "https://github.com/TheGh0stShip/Madden-64",
+        "tracks": [
+            {
+                "id": "matching-code",
+                "label": "Matching whole-program code",
+                "scope": (
+                    "USA Rev 0 (N8ME) loader, resident executable, and both "
+                    "executable overlays; only byte-identical compiled or "
+                    "assembled code counts."
+                ),
+                "measurement": {
+                    "kind": "ratio",
+                    "completed": int(totals["matched_code"]),
+                    "total": int(totals["total_code"]),
+                    "unit": "bytes",
+                },
+            },
+            {
+                "id": "initialized-data",
+                "label": "Matching initialized program data",
+                "scope": (
+                    "USA Rev 0 initialized data across the loader, resident "
+                    "image, overlays, and overlay data records; only "
+                    "byte-identical reconstructed data counts."
+                ),
+                "measurement": {
+                    "kind": "ratio",
+                    "completed": int(totals["matched_data"]),
+                    "total": int(totals["total_data"]),
+                    "unit": "bytes",
+                },
+            },
+            {
+                "id": "matching-functions",
+                "label": "Matching function candidates",
+                "scope": (
+                    "Audited candidate boundaries across the loader, resident "
+                    "image, and both executable overlays; a function counts "
+                    "only when its complete machine code matches."
+                ),
+                "measurement": {
+                    "kind": "ratio",
+                    "completed": totals["matched_functions"],
+                    "total": totals["total_functions"],
+                    "unit": "functions",
+                },
+            },
+            {
+                "id": "physical-rom-map",
+                "label": "Physical ROM mapping",
+                "scope": (
+                    "Gap-free USA Rev 0 physical address map covering headers, "
+                    "loader, packed program, overlays, archive tables, payloads, "
+                    "and padding; this measures inventory coverage only."
+                ),
+                "measurement": {
+                    "kind": "ratio",
+                    "completed": inventory["rom_size"],
+                    "total": inventory["rom_size"],
+                    "unit": "bytes",
+                },
+            },
+            {
+                "id": "archive-record-inventory",
+                "label": "Archive record inventory",
+                "scope": (
+                    "All physical records in the fourteen non-empty USA Rev 0 "
+                    "archives have audited table entries, logical lengths, and "
+                    "aligned physical extents; this is not asset reconstruction."
+                ),
+                "measurement": {
+                    "kind": "ratio",
+                    "completed": records,
+                    "total": records,
+                    "unit": "records",
+                },
+            },
+            {
+                "id": "physical-content-classification",
+                "label": "Physical content classification",
+                "scope": (
+                    "Every archive record has a format-family classification "
+                    "from ROM evidence; classification does not mean its payload "
+                    "has been decoded, extracted, or reconstructed."
+                ),
+                "measurement": {
+                    "kind": "ratio",
+                    "completed": records,
+                    "total": records,
+                    "unit": "records",
+                },
+            },
+            {
+                "id": "asset-reconstruction",
+                "label": "Asset reconstruction",
+                "scope": (
+                    "Reconstruction of the inventoried texture, JPEG, model, "
+                    "motion, sprite, audio, auxiliary graphics, gameplay-table, "
+                    "and roster payloads; no completion denominator is established."
+                ),
+                "measurement": None,
+            },
+        ],
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=ROOT / "build/report.json")
+    parser.add_argument("--decomphub-output", type=Path,
+                        default=DECOMPHUB_REPORT)
     args = parser.parse_args()
     report = build_report()
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2) + "\n")
+    decomphub_report = build_decomphub_report(report)
+    args.decomphub_output.parent.mkdir(parents=True, exist_ok=True)
+    args.decomphub_output.write_text(json.dumps(decomphub_report, indent=2) + "\n")
     totals = report["measures"]
     print(f"wrote {args.output}: {totals['matched_code']} / {totals['total_code']} code bytes")
+    print(f"wrote {args.decomphub_output}: {len(decomphub_report['tracks'])} scoped tracks")
 
 
 if __name__ == "__main__":
