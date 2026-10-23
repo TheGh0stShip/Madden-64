@@ -887,7 +887,7 @@ functions = [
     { name = "func_800BDE90", vram = 0x800bde90, size = 0x18 }, # leaf
     { name = "func_800BDEA8", vram = 0x800bdea8, size = 0x10 }, # stub
     { name = "func_800BDEB8", vram = 0x800bdeb8, size = 0x8c }, # leaf
-    { name = "func_800BDF68", vram = 0x800bdf68, size = 0xb0 }, # leaf
+    { name = "func_800BDF44", vram = 0x800bdf44, size = 0xd4 }, # leaf
     { name = "func_800BE128", vram = 0x800be128, size = 0x1c }, # leaf
     { name = "func_800BE1B0", vram = 0x800be1b0, size = 0xf8 }, # c
     { name = "func_800BE300", vram = 0x800be300, size = 0xfc }, # leaf

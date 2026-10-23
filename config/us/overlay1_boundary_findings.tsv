@@ -803,8 +803,6 @@ address	kind	function	detail
 0x800BDB28	late_start	0x800BDB28	reads v0,v1 set by the preceding bytes
 0x800BDD68	stray_words		0x8 non-code bytes before 0x800BDD70
 0x800BDD70	late_start	0x800BDD70	reads v1 set by the preceding bytes
-0x800BDF44	in_text_data		0x24 bytes of non-code inside text
-0x800BDFA4	branch_outside	0x800BDF68	branch to 0x800BDF54 outside any entry
 0x800BE018	in_text_data		0x110 bytes of non-code inside text
 0x800BE144	in_text_data		0x6C bytes of non-code inside text
 0x800BE144	rejected_start		sweep seed: falls into the next function
