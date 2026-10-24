@@ -58,3 +58,4 @@
 0x112E0	0x80	src/overlays/overlay4/group_slot_mode_sync.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fa54761d3a35c18c9491b87ec9cad55532fdd552dd25cec12c8e9a833f42e561
 0x111D0	0x88	src/overlays/overlay4/group_modes_disable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c0676caf036f81a7061c69b7230d6d0ec861ce335d39d535600f0cdaa4ce6874
 0x11258	0x88	src/overlays/overlay4/group_modes_enable.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2280929e532fdd837219c78515f995e0f3b18cf7271cc3e07f15818d32c9a9b8
+0x1289C	0x90	src/overlays/overlay4/opposing_group_state_init.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1e7da0d80b091d7a9e5d0009f06742210a12b2cd98ccaeb8699f4a8ea80475e0
