@@ -122,3 +122,4 @@
 0x1DB28	0x74	src/overlays/overlay1/side_entries_reset.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30004052b8935d25196bc25b51b742d6fd2c05bdd874be29be8ee13b48774486
 0x378B0	0x80	src/overlays/overlay1/record_value_add.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ecb8c5306be2f7d13463b2e15362dfcde58a161b5dbe31ae08185b47e5fa10c8
 0x4C24	0x88	src/overlays/overlay1/active_group_object_count.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9c8088baea36f88cf24201709ec7497f99d53fe64829ee34ea54b69eb2462f4d
+0x2D2E0	0xC0	src/overlays/overlay1/index_list_capture.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c3d7fc05f5c6cbea95c4f53a9f97376ffe2323b2512acfbc541ce479118e2436

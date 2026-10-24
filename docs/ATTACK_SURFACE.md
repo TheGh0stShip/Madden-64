@@ -44,7 +44,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | Module | Functions | Matched | Candidate bytes | Matched bytes |
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 3 | 632 | 172 |
-| overlay_1 | 1,025 | 148 | 183,528 | 6,444 |
+| overlay_1 | 1,025 | 149 | 183,528 | 6,636 |
 | overlay_4 | 420 | 70 | 115,116 | 3,520 |
 | resident | 1,373 | 425 | 378,576 | 45,128 |
 
@@ -56,7 +56,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | 000-0032 | 224 | 125 | 5,832 | 3,148 |
 | 000-0064 | 385 | 203 | 19,116 | 10,428 |
 | 000-0128 | 554 | 461 | 51,956 | 43,684 |
-| 000-0256 | 554 | 518 | 102,712 | 95,952 |
+| 000-0256 | 554 | 517 | 102,712 | 95,760 |
 | 000-0512 | 477 | 452 | 171,436 | 161,748 |
 | 000-1024 | 202 | 191 | 140,620 | 132,880 |
 | 1025+ | 100 | 93 | 182,224 | 173,044 |
@@ -64,7 +64,7 @@ heuristic boundary catalogues and are not equivalent measures.
 - Exact duplicate body families: 17
 - Functions participating in those families: 113
 - Matched-to-unmatched transferable families retained: 0
-- Conservative unmatched queue entries retained: 4
+- Conservative unmatched queue entries retained: 3
 - Program-region code bytes: 753,428
 - Bytes assigned to provisional candidate bodies: 677,852
 - Code bytes outside provisional candidate bodies: 75,576
