@@ -307,3 +307,5 @@
 0xE434	0x40	src/code/node_list_prepend.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f534dcdbc60075df42c86c3ef04b2c4ab8361e4421824b3fcbca46c77be00667
 0x25790	0x44	src/code/encoded_byte_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5cadb0dbe5ee82796edffbd0f816253c78b87b0c5861ff1a88243dea405784ab
 0x257D4	0x44	src/code/encoded_byte_lookup.c	-DFUNCTION=func_80024BD4 -DTABLE=D_8006BAC4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ff6be47772388fdcf8f476ea02c19fbfc1cf970ef940cfa8420c411d72995b14
+0x1BC50	0x48	src/code/command_advance.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	44e336e996c9a1608ef1d7f15f9ef1ce33bb79231e5373cad7272ed38de125f1
+0x22DE8	0x4C	src/code/packed_pair_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3660f8a91a38dcbc0b57d1630864170a6fb232d9b956c9f07b7d3882d0b19cb4
