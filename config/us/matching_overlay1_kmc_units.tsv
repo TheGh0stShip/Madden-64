@@ -1,5 +1,6 @@
 # KMC GCC 2.7.2; OVERLAY_ROM_START SIZE SOURCE FLAGS SHA256
 0x2B4A8	0x20	src/overlays/overlay1/wrapped_index_next.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	13d78c8c562b1d9232b23284594ca1a6a15af81bd8b1db95fc6fa5b8a1168948
+0x2B4C8	0x18	src/overlays/overlay1/wrapped_index_previous.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9bb84f700d78ea928306ccbf35c2337c56676334943b2ee9de0666069dfc3847
 0x8D24	0x8	src/overlays/overlay1/noop_97d28.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x962C	0x8	src/overlays/overlay1/return_one.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a7e7ca11a6b853f66aed197e962cbe2e8f22691c363f271a0a6e780f4ceb9b83
 0xADC8	0x8	src/overlays/overlay1/noop_99dcc.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
