@@ -274,3 +274,4 @@
 0x36D00	0x30	src/code/indexed_byte_high_bit.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	7b0f86dfa291f99e370203045cc5d38cef464ccfd4599d78d6df558be0f46e20
 0x36D30	0x30	src/code/indexed_byte_high_bit.c	-DFUNCTION=func_80036130 -DCLEAR_HIGH_BIT --assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	a09f71b1185eec50c0e6a87659435bddf392640d358a1872944eb66d5ac9350c
 0x45DC8	0x30	src/code/four_entry_word_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	d0be7de18c06a355e9173cb7f5bec9bc7d7624368638bcb51809b6c1492d6565
+0x37140	0x30	src/code/runtime_busy_query.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d71cd6b3e85bdb1f12ff98135a1a45805a924eb275e5349c9b6c6c080a694974
