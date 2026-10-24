@@ -1,6 +1,12 @@
 # KMC GCC 2.7.2; OVERLAY_ROM_START SIZE SOURCE FLAGS SHA256
+0x14A70	0x2C	src/overlays/overlay1/indexed_counter_add.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	14ebfa90a75f5fde113e8f7c1691f35c3053dd7f312d4a519e4d20db061d70bb
+0x1E6FC	0x28	src/overlays/overlay1/word_table_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	678b26b921861425a531dd5d40a33e125992ff428efe4d723b92deb5c8deacdf
+0x2057C	0x2C	src/overlays/overlay1/short_table_bits_set.c	--assembler=asn64 --symbol=D_80086DE8_READ:0x80086DE8 --symbol=D_80086DE8_WRITE:0x80086DE8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	827f747b3b0ff747e0fe704f9cbc162ec16a173b045d57631cbfd0a6865c934f
+0x205A8	0x30	src/overlays/overlay1/short_table_bits_clear.c	--assembler=asn64 --symbol=D_80086DE8_READ:0x80086DE8 --symbol=D_80086DE8_WRITE:0x80086DE8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7f0f76d54963db671f41c81a954b6931dc991de166414deecf0aa084e28a5ebe
 0x205D8	0x1C	src/overlays/overlay1/signed_table_lookup.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4ca3e270b96cd6755860455765c6b3ed1772fc777b277536c3c272686c875281
 0x205F4	0x1C	src/overlays/overlay1/word_table_lookup.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4740023de9088f243373009472d229d2742d1b7e71abf66ca571da77cab7f597
+0x32DB4	0x38	src/overlays/overlay1/indexed_word_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5cbc4f856d8113a983f70cb02fde999c4e09e4d105b9a8ce43d2bd1ab72c33eb
+0x32DEC	0x2C	src/overlays/overlay1/indexed_words_xor.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	461f58f99fd87d469eb1eadb773af0caa3e22a4ad896b1b63676656b2f8474db
 0x2B4A8	0x20	src/overlays/overlay1/wrapped_index_next.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	13d78c8c562b1d9232b23284594ca1a6a15af81bd8b1db95fc6fa5b8a1168948
 0x2B4C8	0x18	src/overlays/overlay1/wrapped_index_previous.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9bb84f700d78ea928306ccbf35c2337c56676334943b2ee9de0666069dfc3847
 0x8D24	0x8	src/overlays/overlay1/noop_97d28.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
