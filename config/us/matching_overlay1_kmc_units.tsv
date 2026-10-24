@@ -115,3 +115,5 @@
 0x2EF40	0xD4	src/overlays/overlay1/object_list_reposition.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	eabe167d2542a95b123a24b489bd2636079c46aa190276ab6e60edeca5079802
 0x2F014	0x12C	src/overlays/overlay1/object_neighbor_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	dfa6801df1dd84c7fda86c974f754de1e549a711396fd84c68211b5903701f80
 0x2ECC8	0x30	src/overlays/overlay1/temporary_buffer_release.c	--symbol=func_80033258:0x80033258 --symbol=D_800726D0:0x800726D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b70c702ac27222c679bae4ddda371669d51cacbf361c5cc55e1009c16b56f9a5
+0x22844	0x60	src/overlays/overlay1/indexed_record_lookup.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	813ec1bab230e97140d7bd51dfdb713512f69d6db3ce366e45b8f75103c6da6c
+0x2E304	0x68	src/overlays/overlay1/indexed_record_byte_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	203a5a0463a087efc17182106d8bd734a8535a64ad44264800b05d89fd86fb48
