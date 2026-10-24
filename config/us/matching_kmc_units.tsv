@@ -280,3 +280,4 @@
 0x2F288	0x3C	src/code/byte_string_append.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	af79024226701f14ba219a84d0909fa3db751c41b2958e96ab00f35349ab9dec
 0x2ED08	0x40	src/code/byte_string_compare_count.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5f7c1b83ff2833238c855ca828bb8b0be5f36faeb111edc78f85bce3fbfa1296
 0x43A90	0x30	src/code/fixed_interpolate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	580df9d0e447de8b8858ddf50bc58b7389d81032b6df8ee055f342ee7dcf1195
+0x43AC0	0x90	src/code/wrapped_angle_interpolate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4bac438e3f99634b919dff4e1624dd28f0a253aa02b2397cd7ed4cc24d45bbbc
