@@ -46,13 +46,13 @@ heuristic boundary catalogues and are not equivalent measures.
 | boot_loader | 5 | 3 | 632 | 172 |
 | overlay_1 | 1,025 | 149 | 183,528 | 6,636 |
 | overlay_4 | 420 | 70 | 115,116 | 3,520 |
-| resident | 1,373 | 440 | 378,576 | 45,700 |
+| resident | 1,373 | 441 | 378,576 | 45,716 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 327 | 134 | 3,956 | 1,704 |
+| 000-0016 | 327 | 133 | 3,956 | 1,688 |
 | 000-0032 | 224 | 120 | 5,832 | 3,028 |
 | 000-0064 | 385 | 193 | 19,116 | 9,976 |
 | 000-0128 | 554 | 461 | 51,956 | 43,684 |
