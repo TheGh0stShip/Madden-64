@@ -288,3 +288,8 @@
 0x2A3A4	0x38	src/code/runtime_threshold_flag.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b0fde17111b74808a83d1ce0db2e06d7fb65952ae552fc1d278d12e976420f97
 0x2E484	0x3C	src/code/current_vector_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1814d2755f27abac2a0a27c7c10e50d871c8e679eb5a5306e0b72fb0ba5919e7
 0x36198	0x40	src/code/nested_record_value_align.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2393e11e9ebd70692d791c0c3a4087c85b77800b8c95fd11034834e7a5563442
+0x2DF50	0x48	src/code/current_vector_negate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bee10790d235ca51f507b9686228b421d7c8a26d3e3f639886a42b1c8549131f
+0x2DF98	0x48	src/code/current_vector_negate.c	-DFUNCTION=func_8002D398 -DROW=1 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	70ec050544c394260dce5a2933597527bdb135dae394cc76a6cd766934380a42
+0x2DFE0	0x48	src/code/current_vector_negate.c	-DFUNCTION=func_8002D3E0 -DROW=2 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fd53c37c41867b65f4eeea7980af181b90a1cb92e1186309f8e0849b829bf81f
+0x28CFC	0x48	src/code/record_byte_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cdc136ab1f605b0e0a3c5ce9dba4fa760fc1f73791b8f5d5d1bf02c9cb7a1def
+0x2363C	0x4C	src/code/record_grid_address.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2dc3ee547fc375f6c2c8503e513378ddb1cfdbe79a07a11744ceaf466a48783d
