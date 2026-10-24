@@ -286,3 +286,4 @@
 0x31340	0x38	src/code/indexed_record_flag_clear.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e1bdaa5ad9d67317386acef722c711d0b068dd0607c6c7345af34fcf4fcddfe7
 0x361D8	0x38	src/code/nested_record_value_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	01f0511e92ca1aa3cb197a597e284dccd2a42cf2271b02f811e77c06ffa684fa
 0x2A3A4	0x38	src/code/runtime_threshold_flag.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b0fde17111b74808a83d1ce0db2e06d7fb65952ae552fc1d278d12e976420f97
+0x2E484	0x3C	src/code/current_vector_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1814d2755f27abac2a0a27c7c10e50d871c8e679eb5a5306e0b72fb0ba5919e7
