@@ -30,7 +30,7 @@
       "scope": "Audited candidate boundaries across the loader, resident image, and both executable overlays; a function counts only when its complete machine code matches.",
       "measurement": {
         "kind": "ratio",
-        "completed": 748,
+        "completed": 804,
         "total": 2823,
         "unit": "functions"
       }

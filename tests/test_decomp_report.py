@@ -22,13 +22,13 @@ class DecompReportTests(unittest.TestCase):
         self.assertEqual(totals["total_data"], "484540")
         self.assertEqual(totals["matched_data"], "496")
         self.assertEqual(totals["total_functions"], 2823)
-        self.assertEqual(totals["matched_functions"], 748)
+        self.assertEqual(totals["matched_functions"], 804)
         categories = {item["id"]: item["measures"] for item in report["categories"]}
         self.assertEqual(set(categories), {"code", "program_data"})
         self.assertEqual(categories["code"]["total_code"], "753428")
         self.assertEqual(categories["code"]["matched_code"], "74060")
         self.assertEqual(categories["code"]["total_functions"], 2823)
-        self.assertEqual(categories["code"]["matched_functions"], 748)
+        self.assertEqual(categories["code"]["matched_functions"], 804)
         self.assertEqual(categories["program_data"]["total_code"], "0")
         self.assertEqual(categories["program_data"]["matched_code"], "0")
         self.assertEqual(categories["program_data"]["total_data"], "484540")
@@ -39,7 +39,12 @@ class DecompReportTests(unittest.TestCase):
                              for unit in report["units"]), 2823)
         self.assertEqual(len(report["units"]), 2823)
         self.assertEqual(sum(unit["metadata"]["complete"]
-                             for unit in report["units"]), 748)
+                             for unit in report["units"]), 804)
+        self.assertFalse(any(
+            0 < int(unit["measures"]["matched_code"])
+            < int(unit["measures"]["total_code"])
+            for unit in report["units"]
+        ))
         self.assertTrue(all(len(unit["functions"]) == 1
                             for unit in report["units"]))
         self.assertTrue(all("unmatched" not in unit["name"]
@@ -69,7 +74,7 @@ class DecompReportTests(unittest.TestCase):
             "unit": "bytes",
         })
         self.assertEqual(tracks["matching-functions"]["measurement"], {
-            "kind": "ratio", "completed": 748, "total": 2823,
+            "kind": "ratio", "completed": 804, "total": 2823,
             "unit": "functions",
         })
         self.assertIsNone(tracks["asset-reconstruction"]["measurement"])
