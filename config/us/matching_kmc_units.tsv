@@ -318,3 +318,6 @@
 0x22D2C	0x5C	src/code/grid_subfield_byte_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	942c8e39e9749553baddcf6f43b870f541d3d22fd610ea99ee3e6cb75f41b938
 0x266B8	0x58	src/code/menu_tables_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a96a6d46a8715022ffae45a3df54e4a0b0ac8ab10a94716920d91fc230f2097c
 0x370E4	0x5C	src/code/group_byte_status_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	ee68d2611104e89387f543e8bba2ae0ddf1b969dbc999966b301014be0606b08
+0x42ABC	0x3C	src/code/all_channels_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5b73802cef21d1fc603924333f37ca4858b2853642395d4b19f6c855ad961040
+0x4351C	0x40	src/code/matrix_4x20_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	120671193978829c7ee84f5184cd166f64de8cb32a79a2117c8d41ef87c1f316
+0x37170	0x3C	src/code/strided_words_add.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bd13308059c04d63ecb0b06f3db797fe62bb483113a3ad636b8463b71ba87934
