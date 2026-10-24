@@ -311,3 +311,5 @@
 0x22DE8	0x4C	src/code/packed_pair_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3660f8a91a38dcbc0b57d1630864170a6fb232d9b956c9f07b7d3882d0b19cb4
 0x35368	0x4C	src/code/entry_range_add.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e61a68b8ba4f9f0609346612eee60b1e28d94f275290f4a27d88cbdb58041fc7
 0x3B10C	0x50	src/code/count_active_records.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b02fc30c30ccaeb5f51ca695e66424fe63be5d6eec2da643cebb864805cb433a
+0x3D2B4	0x54	src/code/group_pair_byte_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	664d61d85b859ab045b91360a5ad4bde0af8e6ccc551ec1d8b5c8fd01e352233
+0x3D308	0x54	src/code/group_pair_byte_get.c	-DFUNCTION=func_8003C708 -DBYTE_INDEX=1 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	20af1c3dd46e93f14569e1a51f26195c60c734e6914ea15e27ab18f2e9d38759
