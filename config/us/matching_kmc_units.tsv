@@ -258,3 +258,7 @@
 0x23844	0x14	src/code/signed_byte_table_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8efe63552590240959957a237e6352ba5a0e18c398d7df9f3716d7af1706c5c8
 0x31A84	0x1C	src/code/short_indexed_byte_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	561f78a9f96de5094f3a35d4f6eb1a44d9ef97a6ed074c13ebe1caf51a6b2db8
 0x3D4C8	0x14	src/code/byte_table_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	542827634600d06bacf9e76cd144bd70511cb78349a80adba104a572050f69f9
+0x20638	0x18	src/code/unsigned_indexed_signed_byte_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	71d36f3e1b5f22e399a5c0bcacc95753c32945fd22261e944c659008c8147942
+0x3F098	0x1C	src/code/short_indexed_signed_byte_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	17ea9678bb8fae710003faae529ac9f46fcd9a2cf23cf37c012c52b51c9914eb
+0x324E0	0x2C	src/code/indexed_flag_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8540fcc52db2cd909bc2b98296b4e4e40ed427730982bcbbe07d76c3af797a6d
+0x1BC2C	0x24	src/code/relative_pointer_resolve.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e1d50adafa638c858e473891c08daeea6f45496dfe27106e85e57ef52dda997f
