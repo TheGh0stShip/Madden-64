@@ -14,11 +14,12 @@ SPEC.loader.exec_module(RANK)
 
 class RankOverlayCandidatesTests(unittest.TestCase):
     def test_ranked_candidates_are_unmatched_and_not_rejected(self):
+        total_rows = 0
         for module in RANK.MODULES:
             matched = RANK.matched_ranges(module.manifest)
             rejected = RANK.rejected_starts(module.findings)
             rows = RANK.rank_module(module)
-            self.assertTrue(rows)
+            total_rows += len(rows)
             self.assertTrue(all(not any(start <= row["rom"] and
                                         row["rom"] + row["size"] <= end
                                         for start, end in matched)
@@ -26,6 +27,7 @@ class RankOverlayCandidatesTests(unittest.TestCase):
             self.assertTrue(all(row["vram"] not in rejected for row in rows))
             self.assertEqual(rows, sorted(rows,
                              key=lambda row: (row["size"], row["vram"])))
+        self.assertGreater(total_rows, 0)
 
     def test_known_false_starts_are_excluded(self):
         rows = RANK.ranked_candidates(0x1000)

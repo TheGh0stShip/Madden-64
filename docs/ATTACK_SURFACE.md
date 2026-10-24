@@ -45,7 +45,7 @@ heuristic boundary catalogues and are not equivalent measures.
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 3 | 632 | 172 |
 | overlay_1 | 1,025 | 149 | 183,528 | 6,636 |
-| overlay_4 | 420 | 70 | 115,116 | 3,520 |
+| overlay_4 | 420 | 71 | 115,116 | 3,672 |
 | resident | 1,373 | 449 | 378,576 | 46,136 |
 
 ### Size distribution
@@ -56,7 +56,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | 000-0032 | 224 | 120 | 5,832 | 3,028 |
 | 000-0064 | 385 | 185 | 19,116 | 9,556 |
 | 000-0128 | 554 | 461 | 51,956 | 43,684 |
-| 000-0256 | 554 | 517 | 102,712 | 95,760 |
+| 000-0256 | 554 | 516 | 102,712 | 95,608 |
 | 000-0512 | 477 | 452 | 171,436 | 161,748 |
 | 000-1024 | 202 | 191 | 140,620 | 132,880 |
 | 1025+ | 100 | 93 | 182,224 | 173,044 |
@@ -64,7 +64,7 @@ heuristic boundary catalogues and are not equivalent measures.
 - Exact duplicate body families: 17
 - Functions participating in those families: 113
 - Matched-to-unmatched transferable families retained: 0
-- Conservative unmatched queue entries retained: 3
+- Conservative unmatched queue entries retained: 2
 - Program-region code bytes: 753,428
 - Bytes assigned to provisional candidate bodies: 677,852
 - Code bytes outside provisional candidate bodies: 75,576
