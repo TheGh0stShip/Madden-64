@@ -267,3 +267,5 @@
 0x37038	0x2C	src/code/group_value_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9f5289b872cdb2301b3ad0420caf56348e0067281ef9dfda11d3660eadcfc92e
 0x3AE1C	0x2C	src/code/optional_halfword_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	035be1571ba0bf2fcfe35c5ba1931e18738d98e40da56c9c1e20aabbb1b31d42
 0x45D9C	0x2C	src/code/strided_words_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bf6d73c93bf761930fec3ba32ae4b6ab7f8e3d91b8b789b17f0a24073b8f2394
+0x32820	0x34	src/code/indexed_new_bits_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6968235672a47142d90831eeba9f074d5c84d8ade742ad02b551eb28af6288e9
+0x3E4C0	0x34	src/code/signed_byte_present.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f1cbe15ced219f9bf0244d38d5593979796056731539cec001e0f6594dfa8e46
