@@ -35,7 +35,7 @@ class AttackSurfaceTests(unittest.TestCase):
         modules = self.analysis["functions"]["modules"]
         self.assertEqual(sum(item["functions"] for item in modules.values()), 2823)
         self.assertEqual(sum(item["matched_functions"] for item in modules.values()),
-                         661)
+                         662)
 
     def test_provisional_catalogue_is_not_presented_as_complete_coverage(self):
         status = self.analysis["functions"]["catalogue_status"]
