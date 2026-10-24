@@ -353,3 +353,13 @@
 0x17B74	0x50	src/code/runtime_resource_replace.c	-DFUNCTION=func_80016F74 -DDIRECT_ARGS -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c127e94335b401acdea7b5a4870074997f1e4ade60e2a1529b47b136ef35e846
 0x25BD8	0x50	src/code/runtime_block_submit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	015d02b703f4e74d79ee2d3093f6e546d1574b3dafa2bbda1c4fb4208fb96b66
 0x3F778	0x50	src/code/stream_resource_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	46288a2bde71e9c2ae176328b1e7d4fb99def27da2cedb43db1bfc6cb18be3a9
+0x30D94	0x4C	src/code/linked_entry_value_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	63fe9f3e1889efb53818ad1013df4558bdc661007e5696fcdd0682557bf55c9f
+0x30DF8	0x5C	src/code/linked_entry_process.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6b95516fcd70114ef0c6de84fa49821701f460eb53532f487ff79f5670b02bee
+0x16C54	0x4C	src/code/runtime_pair_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bde55fc944ffd6db4e9d562e94ef0950337a474c04fbecd44f5819dad36ff7e7
+0x1B514	0x44	src/code/resource_dimensions_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a5ed1c97dc1ff40e5fa3c53575e5c9b79a1b22605a9829ccc48a2a4a2649b985
+0x1B598	0x4C	src/code/resource_scaled_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4847c59927196680d9e32840738c72827fac38dc53555c12503bddce12920295
+0x1B5E4	0x58	src/code/resource_scaled_submit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	95ba89e0153e6a3c956c70b2095330d88ae0242ef10522b4bb39347dbe53cee9
+0x56C90	0x4C	src/code/owner_completion_advance.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3397b1876acfe76e98d0685245f9f4fd3a0e30fc29698d0fcafbcbafe4625f5b
+0xC3A4	0x40	src/code/object_short_configure.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0662b63c175ea444fd20c2806abf1478b1ea81ad41851911989b4f67697f115b
+0x3ADD0	0x4C	src/code/available_index_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2b82ff5b7c8add67c50417b440f3ac3d77ab7b8769a2d5ab0eb7284a9222e202
+0x3E9A4	0x54	src/code/audio_index_offset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b48a1f11a1fdf68a9577943f731eae2ffa8320441f303f2d7c8808a7dc392462

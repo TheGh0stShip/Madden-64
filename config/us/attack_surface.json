@@ -195,8 +195,8 @@
       "resident": {
         "functions": 1373,
         "bytes": 378088,
-        "matched_functions": 579,
-        "matched_bytes": 63472
+        "matched_functions": 589,
+        "matched_bytes": 64248
       }
     },
     "catalogue_status": {
@@ -266,14 +266,14 @@
       "000-0064": {
         "functions": 387,
         "bytes": 19212,
-        "matched_functions": 228,
-        "matched_bytes": 11136
+        "matched_functions": 229,
+        "matched_bytes": 11200
       },
       "000-0128": {
         "functions": 553,
         "bytes": 51820,
-        "matched_functions": 161,
-        "matched_bytes": 13736
+        "matched_functions": 170,
+        "matched_bytes": 14448
       },
       "000-0256": {
         "functions": 553,
