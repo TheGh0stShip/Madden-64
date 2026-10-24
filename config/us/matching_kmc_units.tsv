@@ -293,3 +293,5 @@
 0x2DFE0	0x48	src/code/current_vector_negate.c	-DFUNCTION=func_8002D3E0 -DROW=2 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fd53c37c41867b65f4eeea7980af181b90a1cb92e1186309f8e0849b829bf81f
 0x28CFC	0x48	src/code/record_byte_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cdc136ab1f605b0e0a3c5ce9dba4fa760fc1f73791b8f5d5d1bf02c9cb7a1def
 0x2363C	0x4C	src/code/record_grid_address.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2dc3ee547fc375f6c2c8503e513378ddb1cfdbe79a07a11744ceaf466a48783d
+0x28CB0	0x4C	src/code/record_byte_increment.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fe18cab00ee3d45f0ec7246f0dbb0e724a6301ffe2c8a79f5f3288da1c50fc7a
+0x23688	0x50	src/code/grid_cell_byte_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b47a867746767ee482512c2a1272d50fcf4a833121b5a29d4f9fb7697794834f
