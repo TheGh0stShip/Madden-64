@@ -44,17 +44,17 @@ heuristic boundary catalogues and are not equivalent measures.
 | Module | Functions | Matched | Candidate bytes | Matched bytes |
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 3 | 632 | 172 |
-| overlay_1 | 1,025 | 149 | 183,528 | 6,636 |
+| overlay_1 | 1,025 | 151 | 183,528 | 6,684 |
 | overlay_4 | 420 | 71 | 115,116 | 3,672 |
-| resident | 1,373 | 457 | 378,576 | 46,668 |
+| resident | 1,373 | 458 | 378,576 | 46,732 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 327 | 133 | 3,956 | 1,688 |
+| 000-0016 | 327 | 132 | 3,956 | 1,676 |
 | 000-0032 | 224 | 120 | 5,832 | 3,028 |
-| 000-0064 | 385 | 178 | 19,116 | 9,168 |
+| 000-0064 | 385 | 176 | 19,116 | 9,068 |
 | 000-0128 | 554 | 461 | 51,956 | 43,684 |
 | 000-0256 | 554 | 515 | 102,712 | 95,464 |
 | 000-0512 | 477 | 452 | 171,436 | 161,748 |

@@ -183,8 +183,8 @@
       "overlay_1": {
         "functions": 1025,
         "bytes": 183528,
-        "matched_functions": 149,
-        "matched_bytes": 6636
+        "matched_functions": 151,
+        "matched_bytes": 6684
       },
       "overlay_4": {
         "functions": 420,
@@ -195,8 +195,8 @@
       "resident": {
         "functions": 1373,
         "bytes": 378576,
-        "matched_functions": 457,
-        "matched_bytes": 46668
+        "matched_functions": 458,
+        "matched_bytes": 46732
       }
     },
     "catalogue_status": {
@@ -254,8 +254,8 @@
       "000-0016": {
         "functions": 327,
         "bytes": 3956,
-        "matched_functions": 194,
-        "matched_bytes": 2268
+        "matched_functions": 195,
+        "matched_bytes": 2280
       },
       "000-0032": {
         "functions": 224,
@@ -266,8 +266,8 @@
       "000-0064": {
         "functions": 385,
         "bytes": 19116,
-        "matched_functions": 207,
-        "matched_bytes": 9948
+        "matched_functions": 209,
+        "matched_bytes": 10048
       },
       "000-0128": {
         "functions": 554,

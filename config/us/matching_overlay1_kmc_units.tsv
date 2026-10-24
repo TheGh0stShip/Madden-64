@@ -1,4 +1,6 @@
 # KMC GCC 2.7.2; OVERLAY_ROM_START SIZE SOURCE FLAGS SHA256
+0x18510	0xC	src/overlays/overlay1/high_half_shift.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3b5a07564b75095ee2adbbb6b1b3400be01368409059d84529163e762e5dccf5
+0x17EFC	0x24	src/overlays/overlay1/nested_flag_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	127f6c7c9c0405b4931034d6e9d22483c9c4912122dca04423629896396a3cce
 0x14A70	0x2C	src/overlays/overlay1/indexed_counter_add.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	14ebfa90a75f5fde113e8f7c1691f35c3053dd7f312d4a519e4d20db061d70bb
 0x1E6FC	0x28	src/overlays/overlay1/word_table_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	678b26b921861425a531dd5d40a33e125992ff428efe4d723b92deb5c8deacdf
 0x2057C	0x2C	src/overlays/overlay1/short_table_bits_set.c	--assembler=asn64 --symbol=D_80086DE8_READ:0x80086DE8 --symbol=D_80086DE8_WRITE:0x80086DE8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	827f747b3b0ff747e0fe704f9cbc162ec16a173b045d57631cbfd0a6865c934f
