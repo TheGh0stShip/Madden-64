@@ -126,11 +126,40 @@ def uses_saved_context(image: bytes, offset: int, size: int) -> bool:
     return False
 
 
+def jumps_to_uncatalogued_overlay_entry(image: bytes, offset: int, size: int,
+                                        base_vram: int, base_rom: int,
+                                        starts: set[int], section_end: int) -> bool:
+    """Detect direct jumps into the middle of another overlay function.
+
+    Shared switch continuations can look like standalone leaves when they sit
+    after a return and contain their own return on one path.  Their other path
+    jumps into an earlier routine with caller-state still live.  A real tail
+    call targets a known function entry; a jump within the overlay's text span
+    to any other address is therefore too ambiguous for the conservative queue.
+    Local jumps within the candidate itself remain valid.
+    """
+    vram = base_vram + offset - base_rom
+    for cursor in range(offset, offset + size, 4):
+        word = int.from_bytes(image[cursor:cursor + 4], "big")
+        if word >> 26 != 2:
+            continue
+        pc = base_vram + cursor - base_rom
+        target = ((pc + 4) & 0xF0000000) | ((word & 0x03FFFFFF) << 2)
+        if vram <= target < vram + size:
+            continue
+        if base_vram <= target < section_end and target not in starts:
+            return True
+    return False
+
+
 def rank_module(module: Module, maximum_size: int = 0x100) -> list[dict]:
     document = tomllib.loads(module.catalogue.read_text())
     section = document["section"][0]
     base_vram = section["vram"]
     base_rom = section["rom"]
+    starts = {function["vram"] for function in section["functions"]}
+    section_end = max(function["vram"] + function["size"]
+                      for function in section["functions"])
     matched = matched_ranges(module.manifest)
     rejected = rejected_starts(module.findings)
     image = module.image.read_bytes()
@@ -144,7 +173,9 @@ def rank_module(module: Module, maximum_size: int = 0x100) -> list[dict]:
         if (vram in rejected or size > maximum_size or
                 not has_closed_predecessor(image, rom) or
                 not has_complete_exit(image, rom, size) or
-                uses_saved_context(image, rom, size)):
+                uses_saved_context(image, rom, size) or
+                jumps_to_uncatalogued_overlay_entry(
+                    image, rom, size, base_vram, base_rom, starts, section_end)):
             continue
         rows.append({"module": module.name, "vram": vram, "rom": rom,
                      "size": size, "name": function["name"]})

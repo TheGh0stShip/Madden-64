@@ -37,6 +37,9 @@ class RankOverlayCandidatesTests(unittest.TestCase):
         self.assertNotIn(0x800944D0, addresses)
         self.assertNotIn(0x800C77E8, addresses)
         self.assertNotIn(0x800C78A4, addresses)
+        self.assertNotIn(0x800D903C, addresses)
+        self.assertNotIn(0x800DDF18, addresses)
+        self.assertNotIn(0x800E3D64, addresses)
 
     def test_fallthrough_after_call_is_not_a_function_start(self):
         image = (ROOT / "build/us/audit/overlay_1.z64").read_bytes()

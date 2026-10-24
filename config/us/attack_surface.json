@@ -189,8 +189,8 @@
       "overlay_4": {
         "functions": 420,
         "bytes": 115116,
-        "matched_functions": 68,
-        "matched_bytes": 3296
+        "matched_functions": 69,
+        "matched_bytes": 3376
       },
       "resident": {
         "functions": 1373,
@@ -272,8 +272,8 @@
       "000-0128": {
         "functions": 554,
         "bytes": 51956,
-        "matched_functions": 86,
-        "matched_bytes": 7520
+        "matched_functions": 87,
+        "matched_bytes": 7600
       },
       "000-0256": {
         "functions": 554,
@@ -305,81 +305,11 @@
     "transferable_families": [],
     "conservative_queue": [
       {
-        "module": "overlay4",
-        "vram": 2148416868,
-        "rom": 120188,
-        "size": 56,
-        "name": "func_800E3D64"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148392728,
-        "rom": 96048,
-        "size": 68,
-        "name": "func_800DDF18"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148372540,
-        "rom": 75860,
-        "size": 72,
-        "name": "func_800D903C"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148392612,
-        "rom": 95932,
-        "size": 80,
-        "name": "func_800DDEA4"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148266716,
-        "rom": 197336,
-        "size": 84,
-        "name": "func_800BF2DC"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148297268,
-        "rom": 227888,
-        "size": 88,
-        "name": "func_800C6A34"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148387072,
-        "rom": 90392,
-        "size": 92,
-        "name": "func_800DC900"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148387164,
-        "rom": 90484,
-        "size": 92,
-        "name": "func_800DC95C"
-      },
-      {
         "module": "overlay1",
         "vram": 2148210760,
         "rom": 141380,
         "size": 96,
         "name": "func_800B1848"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148392448,
-        "rom": 95768,
-        "size": 96,
-        "name": "func_800DDE00"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148191136,
-        "rom": 121756,
-        "size": 100,
-        "name": "func_800ACBA0"
       },
       {
         "module": "overlay1",
@@ -389,25 +319,11 @@
         "name": "func_800BD308"
       },
       {
-        "module": "overlay4",
-        "vram": 2148398272,
-        "rom": 101592,
-        "size": 104,
-        "name": "func_800DF4C0"
-      },
-      {
         "module": "overlay1",
         "vram": 2148139876,
         "rom": 70496,
         "size": 112,
         "name": "func_800A0364"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148392796,
-        "rom": 96116,
-        "size": 112,
-        "name": "func_800DDF5C"
       },
       {
         "module": "overlay1",
@@ -418,31 +334,10 @@
       },
       {
         "module": "overlay1",
-        "vram": 2148168692,
-        "rom": 99312,
-        "size": 116,
-        "name": "func_800A73F4"
-      },
-      {
-        "module": "overlay1",
         "vram": 2148191020,
         "rom": 121640,
         "size": 116,
         "name": "func_800ACB2C"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148270356,
-        "rom": 200976,
-        "size": 116,
-        "name": "func_800C0114"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148104512,
-        "rom": 35132,
-        "size": 120,
-        "name": "func_80097940"
       },
       {
         "module": "overlay1",
@@ -453,24 +348,10 @@
       },
       {
         "module": "overlay1",
-        "vram": 2148297012,
-        "rom": 227632,
-        "size": 128,
-        "name": "func_800C6934"
-      },
-      {
-        "module": "overlay1",
         "vram": 2148088872,
         "rom": 19492,
         "size": 136,
         "name": "func_80093C28"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148249336,
-        "rom": 179956,
-        "size": 136,
-        "name": "func_800BAEF8"
       },
       {
         "module": "overlay4",
@@ -478,20 +359,6 @@
         "rom": 75932,
         "size": 144,
         "name": "func_800D9084"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148127972,
-        "rom": 58592,
-        "size": 152,
-        "name": "func_8009D4E4"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148152112,
-        "rom": 82732,
-        "size": 152,
-        "name": "func_800A3330"
       },
       {
         "module": "overlay1",
@@ -509,31 +376,10 @@
       },
       {
         "module": "overlay1",
-        "vram": 2148252484,
-        "rom": 183104,
-        "size": 184,
-        "name": "func_800BBB44"
-      },
-      {
-        "module": "overlay1",
         "vram": 2148254436,
         "rom": 185056,
         "size": 192,
         "name": "func_800BC2E4"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148378628,
-        "rom": 81948,
-        "size": 200,
-        "name": "func_800DA804"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148259068,
-        "rom": 189688,
-        "size": 216,
-        "name": "func_800BD4FC"
       },
       {
         "module": "overlay1",
@@ -541,48 +387,6 @@
         "rom": 19252,
         "size": 240,
         "name": "func_80093B38"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148283724,
-        "rom": 214344,
-        "size": 248,
-        "name": "func_800C354C"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148327960,
-        "rom": 31280,
-        "size": 260,
-        "name": "func_800CE218"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148396940,
-        "rom": 100260,
-        "size": 312,
-        "name": "func_800DEF8C"
-      },
-      {
-        "module": "overlay1",
-        "vram": 2148224436,
-        "rom": 155056,
-        "size": 340,
-        "name": "func_800B4DB4"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148340964,
-        "rom": 44284,
-        "size": 484,
-        "name": "func_800D14E4"
-      },
-      {
-        "module": "overlay4",
-        "vram": 2148398512,
-        "rom": 101832,
-        "size": 512,
-        "name": "func_800DF5B0"
       }
     ]
   },
