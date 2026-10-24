@@ -304,3 +304,6 @@
 0x3615C	0x3C	src/code/short_mode_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5d4160286a7d4682d1608e4efecb703fd3e3709c22e4ebc93d8373caec433a26
 0x3D74C	0x3C	src/code/audio_short_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0c0ad5b2f73cc6579014cb85a53bf774fefd2db3ddf066a504df32d7e309eb92
 0x17770	0x40	src/code/indexed_short_table_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	81ac38d9619e0460fc848e96f5b5db4feecc83c52bd15fff0ed31403ed671293
+0xE434	0x40	src/code/node_list_prepend.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f534dcdbc60075df42c86c3ef04b2c4ab8361e4421824b3fcbca46c77be00667
+0x25790	0x44	src/code/encoded_byte_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5cadb0dbe5ee82796edffbd0f816253c78b87b0c5861ff1a88243dea405784ab
+0x257D4	0x44	src/code/encoded_byte_lookup.c	-DFUNCTION=func_80024BD4 -DTABLE=D_8006BAC4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ff6be47772388fdcf8f476ea02c19fbfc1cf970ef940cfa8420c411d72995b14
