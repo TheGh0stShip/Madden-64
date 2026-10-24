@@ -80,7 +80,8 @@ the retail ROM. Public history and progress are available on
 [ByteMatch](https://bytematch.dev/TheGh0stShip/Madden-64) and
 [decmp.dev](https://decmp.dev/TheGh0stShip/Madden-64). The root
 `.recomp.json` supplies the project metadata consumed by
-[recomp.fyi](https://recomp.fyi/). DecompHub consumes the repository-owned
+[recomp.fyi](https://recomp.fyi/), and the project is indexed by
+[unbaked.games](https://unbaked.games/games/madden-football-64/). DecompHub consumes the repository-owned
 [scoped progress data](decomphub.progress.json); its tracks remain separate and
 are never averaged into an overall percentage.
 
