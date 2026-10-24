@@ -263,3 +263,5 @@
 0x324E0	0x2C	src/code/indexed_flag_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8540fcc52db2cd909bc2b98296b4e4e40ed427730982bcbbe07d76c3af797a6d
 0x1BC2C	0x24	src/code/relative_pointer_resolve.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e1d50adafa638c858e473891c08daeea6f45496dfe27106e85e57ef52dda997f
 0xD7EC	0x2C	src/code/linked_node_remove.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3459c6d82b64ec13cc024834e1a16ab87031e6f09f9adb4f5dedcc3d78dd26aa
+0x1887C	0x28	src/code/nested_dimensions_capture.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	24edef4457cd7a8ecb48fe40735d37e56a219303328bd2fb2ae2683a7243f499
+0x37038	0x2C	src/code/group_value_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9f5289b872cdb2301b3ad0420caf56348e0067281ef9dfda11d3660eadcfc92e
