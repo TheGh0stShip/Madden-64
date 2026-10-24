@@ -337,3 +337,7 @@
 0x2030C	0x48	src/code/gameplay_resources_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	131499d69ada7d3d9da19a09c9603a35fccc0e613b2aa00dd4ea84f6cc862166
 0x2D6D0	0x48	src/code/slot_allocate_next.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	18bce64596a91b77b0509453ff878b59fa56544f892422dafe1fe467d41bd104
 0x3250C	0x48	src/code/runtime_entries_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	96ec31a35d667085f6004571531eb5c21cb6504e8111edbd56cfa113a0a8c77d
+0x39FE0	0x48	src/code/byte_list_missing.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bd3e66160e31d577f9a0a1cd7dda6ded0d116b98ca6c7eab6959e87ea2e424eb
+0x3CB54	0x48	src/code/mode_flag_state_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	521c2e8a02c73efd16c9507212810c1c7d6520f787519ed2f7e163203488b9fc
+0x2F448	0x48	src/code/packed_signed_table_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	3ff1927eed252aeda631943a3c2fb3da98bb9ce9c2ac6caee73bbc31b7fa293f
+0x30A10	0x48	src/code/runtime_record_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	02a36ba94af644f27fb4b5e46e87e98fbaa6d343443a6a840801398f5bb3861f
