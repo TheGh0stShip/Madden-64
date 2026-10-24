@@ -302,3 +302,5 @@
 0x1D0E4	0x50	src/code/stream_word24_read.c	--assembler=asn64 -DFUNCTION=func_8001C4E4 -DMASK=0x20 -DDESTINATION_INDEX=2 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	19a62ef2b8d218c4f45e72e86a4dd2a9cf08d9f0b465380e70467df77cf7a353
 0x1D134	0x50	src/code/stream_word24_read.c	--assembler=asn64 -DFUNCTION=func_8001C534 -DMASK=0x20 -DDESTINATION_INDEX=3 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b68f1a8bb722dac73ad3c857a764e36514616a6e781b3111ef9f1a6caeac75d0
 0x3615C	0x3C	src/code/short_mode_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5d4160286a7d4682d1608e4efecb703fd3e3709c22e4ebc93d8373caec433a26
+0x3D74C	0x3C	src/code/audio_short_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0c0ad5b2f73cc6579014cb85a53bf774fefd2db3ddf066a504df32d7e309eb92
+0x17770	0x40	src/code/indexed_short_table_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	81ac38d9619e0460fc848e96f5b5db4feecc83c52bd15fff0ed31403ed671293
