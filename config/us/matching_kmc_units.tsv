@@ -271,3 +271,5 @@
 0x3E4C0	0x34	src/code/signed_byte_present.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f1cbe15ced219f9bf0244d38d5593979796056731539cec001e0f6594dfa8e46
 0x17A80	0x34	src/code/runtime_pair_select.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1a5d0ba1b3400ad13566502ec6b49b99efc2c15a1e7f4ca8a0214001ca3bca6d
 0x46304	0x10	src/code/empty_stack_function.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e0b64de6c3f86a93ef84df896a67cdb74509aa14ac2fd32aef2a9ddfb2a9b08
+0x36D00	0x30	src/code/indexed_byte_high_bit.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	7b0f86dfa291f99e370203045cc5d38cef464ccfd4599d78d6df558be0f46e20
+0x36D30	0x30	src/code/indexed_byte_high_bit.c	-DFUNCTION=func_80036130 -DCLEAR_HIGH_BIT --assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	a09f71b1185eec50c0e6a87659435bddf392640d358a1872944eb66d5ac9350c
