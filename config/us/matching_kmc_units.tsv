@@ -332,3 +332,8 @@
 0x1A5A0	0x44	src/code/type_category.c	--section-base=.rodata:0x800009C8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2d1c56d4eff9620c2ada41984291ac9e7d048a83055ba16071421a35cb74034f
 0x34368	0x64	src/code/node_unlink.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bcd24211b28fc1b31e901a5a563dc387e03df76c3fbcc4d1f9eed7d15b94669f
 0x33680	0x3C	src/code/event_ready_wait.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0fab857d4f748daca35e73bb6c55691dd6d60a6df9cadb13571873c9fedf7a05
+0xE91C	0x48	src/code/child_list_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8a06b8e3f044cb03976666f4fd35cfeb24ea229397e05ef85eef2af279a178b8
+0x12088	0x48	src/code/global_lists_link.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3e0934bb8be039d445e13cab54a135a4f58b45b4af5dbde921d65d839b18d6f5
+0x2030C	0x48	src/code/gameplay_resources_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	131499d69ada7d3d9da19a09c9603a35fccc0e613b2aa00dd4ea84f6cc862166
+0x2D6D0	0x48	src/code/slot_allocate_next.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	18bce64596a91b77b0509453ff878b59fa56544f892422dafe1fe467d41bd104
+0x3250C	0x48	src/code/runtime_entries_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	96ec31a35d667085f6004571531eb5c21cb6504e8111edbd56cfa113a0a8c77d
