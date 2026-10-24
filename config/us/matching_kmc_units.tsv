@@ -265,3 +265,5 @@
 0xD7EC	0x2C	src/code/linked_node_remove.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3459c6d82b64ec13cc024834e1a16ab87031e6f09f9adb4f5dedcc3d78dd26aa
 0x1887C	0x28	src/code/nested_dimensions_capture.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	24edef4457cd7a8ecb48fe40735d37e56a219303328bd2fb2ae2683a7243f499
 0x37038	0x2C	src/code/group_value_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9f5289b872cdb2301b3ad0420caf56348e0067281ef9dfda11d3660eadcfc92e
+0x3AE1C	0x2C	src/code/optional_halfword_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	035be1571ba0bf2fcfe35c5ba1931e18738d98e40da56c9c1e20aabbb1b31d42
+0x45D9C	0x2C	src/code/strided_words_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bf6d73c93bf761930fec3ba32ae4b6ab7f8e3d91b8b789b17f0a24073b8f2394

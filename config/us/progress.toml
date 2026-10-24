@@ -11,7 +11,7 @@ total_functions = 2823
 
 [progress]
 matched_data = 496
-matched_functions = 657
+matched_functions = 659
 loader_manifest = "config/us/matching_loader_asm_units.tsv"
 resident_functions = "config/us/functions_resident.toml"
 
