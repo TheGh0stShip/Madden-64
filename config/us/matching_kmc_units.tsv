@@ -255,3 +255,6 @@
 0xBBA8	0x60	src/code/render_geometry_mode_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9b2f90611235796d7ed7f1ed7531227c742f90033a74a279d1659858567b47e2
 0xBC08	0x64	src/code/render_geometry_mode_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a50c843c14d3321e85cc0dd9b2ff09f61e3c3ef4e97c06fa702d1bd418414d49
 0xBACC	0xDC	src/code/render_viewport_range_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3d76829507b3dd6203bd327fc13a415f788d6cb8e9e1c705417fc9661b3dddf5
+0x23844	0x14	src/code/signed_byte_table_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8efe63552590240959957a237e6352ba5a0e18c398d7df9f3716d7af1706c5c8
+0x31A84	0x1C	src/code/short_indexed_byte_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	561f78a9f96de5094f3a35d4f6eb1a44d9ef97a6ed074c13ebe1caf51a6b2db8
+0x3D4C8	0x14	src/code/byte_table_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	542827634600d06bacf9e76cd144bd70511cb78349a80adba104a572050f69f9
