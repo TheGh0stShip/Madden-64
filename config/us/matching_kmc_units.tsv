@@ -321,3 +321,8 @@
 0x42ABC	0x3C	src/code/all_channels_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5b73802cef21d1fc603924333f37ca4858b2853642395d4b19f6c855ad961040
 0x4351C	0x40	src/code/matrix_4x20_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	120671193978829c7ee84f5184cd166f64de8cb32a79a2117c8d41ef87c1f316
 0x37170	0x3C	src/code/strided_words_add.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bd13308059c04d63ecb0b06f3db797fe62bb483113a3ad636b8463b71ba87934
+0x25D14	0x38	src/code/runtime_block_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	18a4592be308ffa436a07abd890566bb455133026636d26507696166b7d92216
+0x1C010	0x3C	src/code/object_resource_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	395bfc16d09756ca50e140df286150352863b818022a1aae4429a71541c1799d
+0x25A9C	0x40	src/code/runtime_buffers_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cc6c0314b4ee7ac3e76da1c3b47ced7f5d3eb1b164236cd7dc5cfdfd72101eb6
+0x17AE4	0x40	src/code/optional_runtime_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9329d2d0afa889567b1409bda0b49987dfef0c1943ffee34a112b961f8194505
+0x25C28	0x44	src/code/runtime_block_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30a466e27f49c6fc8f656b09c867136fb6278a38f20e91147145680171d49df7
