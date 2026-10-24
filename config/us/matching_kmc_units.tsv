@@ -326,3 +326,6 @@
 0x25A9C	0x40	src/code/runtime_buffers_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cc6c0314b4ee7ac3e76da1c3b47ced7f5d3eb1b164236cd7dc5cfdfd72101eb6
 0x17AE4	0x40	src/code/optional_runtime_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9329d2d0afa889567b1409bda0b49987dfef0c1943ffee34a112b961f8194505
 0x25C28	0x44	src/code/runtime_block_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30a466e27f49c6fc8f656b09c867136fb6278a38f20e91147145680171d49df7
+0x336BC	0x44	src/code/event_state_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b4661ed9f84240b1d8c3dacc1c447676969cf3c2e7c58ec3e2ba614dbd0a3954
+0x34158	0x44	src/code/table_cursor_previous.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ba47caca95488f899a554d2e5b4ebe6e1a3f7eb749da38c850d7c4da3098b98e
+0x34244	0x48	src/code/node_lower_bound.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	3f617bc3d258260eac21b2eed511879b14fb27e1808c33ec1c3f9686c4f5ad18
