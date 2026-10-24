@@ -309,3 +309,5 @@
 0x257D4	0x44	src/code/encoded_byte_lookup.c	-DFUNCTION=func_80024BD4 -DTABLE=D_8006BAC4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ff6be47772388fdcf8f476ea02c19fbfc1cf970ef940cfa8420c411d72995b14
 0x1BC50	0x48	src/code/command_advance.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	44e336e996c9a1608ef1d7f15f9ef1ce33bb79231e5373cad7272ed38de125f1
 0x22DE8	0x4C	src/code/packed_pair_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3660f8a91a38dcbc0b57d1630864170a6fb232d9b956c9f07b7d3882d0b19cb4
+0x35368	0x4C	src/code/entry_range_add.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e61a68b8ba4f9f0609346612eee60b1e28d94f275290f4a27d88cbdb58041fc7
+0x3B10C	0x50	src/code/count_active_records.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b02fc30c30ccaeb5f51ca695e66424fe63be5d6eec2da643cebb864805cb433a
