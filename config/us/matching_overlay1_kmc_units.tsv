@@ -118,3 +118,5 @@
 0x22844	0x60	src/overlays/overlay1/indexed_record_lookup.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	813ec1bab230e97140d7bd51dfdb713512f69d6db3ce366e45b8f75103c6da6c
 0x2E304	0x68	src/overlays/overlay1/indexed_record_byte_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	203a5a0463a087efc17182106d8bd734a8535a64ad44264800b05d89fd86fb48
 0x11360	0x70	src/overlays/overlay1/gameplay_state_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4794c85b3fa2d42d8c3a23333aa80955a36cbc855fe78c471c39fe0beaae5143
+0xD7A8	0x74	src/overlays/overlay1/letter_sequence_build.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	666f6cd4725104eb7da0c5b845af40aa251a26c8d198968b50ec7f2cde621370
+0x1DB28	0x74	src/overlays/overlay1/side_entries_reset.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30004052b8935d25196bc25b51b742d6fd2c05bdd874be29be8ee13b48774486
