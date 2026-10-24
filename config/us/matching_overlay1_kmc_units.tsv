@@ -120,3 +120,4 @@
 0x11360	0x70	src/overlays/overlay1/gameplay_state_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4794c85b3fa2d42d8c3a23333aa80955a36cbc855fe78c471c39fe0beaae5143
 0xD7A8	0x74	src/overlays/overlay1/letter_sequence_build.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	666f6cd4725104eb7da0c5b845af40aa251a26c8d198968b50ec7f2cde621370
 0x1DB28	0x74	src/overlays/overlay1/side_entries_reset.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30004052b8935d25196bc25b51b742d6fd2c05bdd874be29be8ee13b48774486
+0x378B0	0x80	src/overlays/overlay1/record_value_add.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ecb8c5306be2f7d13463b2e15362dfcde58a161b5dbe31ae08185b47e5fa10c8
