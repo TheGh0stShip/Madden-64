@@ -329,3 +329,6 @@
 0x336BC	0x44	src/code/event_state_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b4661ed9f84240b1d8c3dacc1c447676969cf3c2e7c58ec3e2ba614dbd0a3954
 0x34158	0x44	src/code/table_cursor_previous.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ba47caca95488f899a554d2e5b4ebe6e1a3f7eb749da38c850d7c4da3098b98e
 0x34244	0x48	src/code/node_lower_bound.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	3f617bc3d258260eac21b2eed511879b14fb27e1808c33ec1c3f9686c4f5ad18
+0x1A5A0	0x44	src/code/type_category.c	--section-base=.rodata:0x800009C8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2d1c56d4eff9620c2ada41984291ac9e7d048a83055ba16071421a35cb74034f
+0x34368	0x64	src/code/node_unlink.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bcd24211b28fc1b31e901a5a563dc387e03df76c3fbcc4d1f9eed7d15b94669f
+0x33680	0x3C	src/code/event_ready_wait.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0fab857d4f748daca35e73bb6c55691dd6d60a6df9cadb13571873c9fedf7a05
