@@ -295,3 +295,9 @@
 0x2363C	0x4C	src/code/record_grid_address.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2dc3ee547fc375f6c2c8503e513378ddb1cfdbe79a07a11744ceaf466a48783d
 0x28CB0	0x4C	src/code/record_byte_increment.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fe18cab00ee3d45f0ec7246f0dbb0e724a6301ffe2c8a79f5f3288da1c50fc7a
 0x23688	0x50	src/code/grid_cell_byte_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b47a867746767ee482512c2a1272d50fcf4a833121b5a29d4f9fb7697794834f
+0x1D270	0x48	src/code/stream_short_offset_read.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0f6520a85caa43c64b91effc37659804b20597d3dae29d58c9cd3b40c8bae974
+0x1D644	0x48	src/code/stream_short_offset_read.c	--assembler=asn64 -DFUNCTION=func_8001CA44 -DUSE_SECOND_OFFSET -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	41dba8d1adf01c981e7c9f99273af12a1ab5726716e32b83e9021803e45bbc63
+0x1D044	0x50	src/code/stream_word24_read.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8859f9aac6e713a13dbb5d2e4591198d6820d0ad7dfabd1ae3503408224b8d11
+0x1D094	0x50	src/code/stream_word24_read.c	--assembler=asn64 -DFUNCTION=func_8001C494 -DMASK=0x20 -DDESTINATION_INDEX=1 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2b1e5e20ddaba22d1152f7a0518ad0e5bebb986b35f829598264ae0871ba2174
+0x1D0E4	0x50	src/code/stream_word24_read.c	--assembler=asn64 -DFUNCTION=func_8001C4E4 -DMASK=0x20 -DDESTINATION_INDEX=2 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	19a62ef2b8d218c4f45e72e86a4dd2a9cf08d9f0b465380e70467df77cf7a353
+0x1D134	0x50	src/code/stream_word24_read.c	--assembler=asn64 -DFUNCTION=func_8001C534 -DMASK=0x20 -DDESTINATION_INDEX=3 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b68f1a8bb722dac73ad3c857a764e36514616a6e781b3111ef9f1a6caeac75d0
