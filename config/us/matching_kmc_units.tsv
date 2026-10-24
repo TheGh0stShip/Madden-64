@@ -341,3 +341,15 @@
 0x3CB54	0x48	src/code/mode_flag_state_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	521c2e8a02c73efd16c9507212810c1c7d6520f787519ed2f7e163203488b9fc
 0x2F448	0x48	src/code/packed_signed_table_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	3ff1927eed252aeda631943a3c2fb3da98bb9ce9c2ac6caee73bbc31b7fa293f
 0x30A10	0x48	src/code/runtime_record_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	02a36ba94af644f27fb4b5e46e87e98fbaa6d343443a6a840801398f5bb3861f
+0x126F4	0x48	src/code/system_lists_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c75c578e5503a9fce4a9de97cef05a1e195a7e38f24c1b441599268530ff2ba3
+0x31754	0x48	src/code/optional_indexed_pointer_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	00b4c83a814a7959db5bd4646ce3468c29bf460284832e96c9d33fb83c197d93
+0xE87C	0x4C	src/code/child_callbacks_run.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7cad8180f590c82a8e80a01502e09d1494e3820aa25b433c9f023a3c5e01e3c5
+0x30A58	0x4C	src/code/runtime_record_children_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	05ba8b65ed42ffe9773f6a03fa21b73340692d3894715777328235a077cc81a2
+0x37938	0x4C	src/code/audio_channels_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a2e085df742d252e059b2317225b6d576702dd6dc1e35cb7346fb75d8f627f86
+0x42404	0x4C	src/code/audio_system_refresh.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7056c323077eda8fb18c1c4ff5d313cd45529fc9b982c40f6feaf203abaca7d6
+0x22E34	0x4C	src/code/group_pair_indirect_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2c73179a8f21f2b58534cbf3b97aa1d9a77b5c38c4fc9e01b4d4c4091bd34ba6
+0x126A8	0x4C	src/code/system_object_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3edc38611a004ece1f54bd49965f4693cd487a06fae3a33906bbbc6ddde985f
+0x17B24	0x50	src/code/runtime_resource_replace.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a71e4b06b858ab4faa16c94a714f93c1caf5dfba030908cd5d5e021a8faa6a8c
+0x17B74	0x50	src/code/runtime_resource_replace.c	-DFUNCTION=func_80016F74 -DDIRECT_ARGS -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c127e94335b401acdea7b5a4870074997f1e4ade60e2a1529b47b136ef35e846
+0x25BD8	0x50	src/code/runtime_block_submit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	015d02b703f4e74d79ee2d3093f6e546d1574b3dafa2bbda1c4fb4208fb96b66
+0x3F778	0x50	src/code/stream_resource_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	46288a2bde71e9c2ae176328b1e7d4fb99def27da2cedb43db1bfc6cb18be3a9
