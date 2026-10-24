@@ -282,3 +282,4 @@
 0x43A90	0x30	src/code/fixed_interpolate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	580df9d0e447de8b8858ddf50bc58b7389d81032b6df8ee055f342ee7dcf1195
 0x43AC0	0x90	src/code/wrapped_angle_interpolate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4bac438e3f99634b919dff4e1624dd28f0a253aa02b2397cd7ed4cc24d45bbbc
 0x20354	0x38	src/code/indexed_pair_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8486e631389e9bd39e81b2cc0966fe6035fc2a868a6e39ce76b7b0131e9ce8d8
+0x2D718	0x38	src/code/identity_rows_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ca11186b4835fda780704942bfcb53b1e5a987165cabbe273b597cfb65af5d5c
