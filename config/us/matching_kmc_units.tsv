@@ -277,3 +277,4 @@
 0x37140	0x30	src/code/runtime_busy_query.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d71cd6b3e85bdb1f12ff98135a1a45805a924eb275e5349c9b6c6c080a694974
 0x2ED48	0x34	src/code/byte_compare_count.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2df26bd624042a3f4ef7d99b751a5b677a5da636ded333ae7d021e80df31957f
 0x2F228	0x34	src/code/byte_string_compare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f0fa2996a8da953ea0f7b210290b2f5d9a1107c69dcfe2f20ac0a6533b6f6c4
+0x2F288	0x3C	src/code/byte_string_append.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	af79024226701f14ba219a84d0909fa3db751c41b2958e96ab00f35349ab9dec
