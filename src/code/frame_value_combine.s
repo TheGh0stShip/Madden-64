@@ -1,0 +1,43 @@
+.text
+.align 2
+.set noreorder
+.globl frame_value_combine
+.ent frame_value_combine
+frame_value_combine:
+    addiu $sp,$sp,-0x20
+    sw $s1,0x14($sp)
+    move $s1,$a0
+    sw $ra,0x18($sp)
+    jal func_8003B02C
+     sw $s0,0x10($sp)
+    move $a0,$s1
+    jal func_8003B3A0
+     move $s0,$v0
+    move $a0,$s1
+    jal func_8003B6AC
+     move $s1,$v0
+    andi $s0,$s0,0xffff
+    andi $s1,$s1,0xffff
+    addu $s0,$s0,$s1
+    sll $s0,$s0,1
+    andi $v0,$v0,0xffff
+    addu $s0,$s0,$v0
+    lui $v0,0xcccc
+    ori $v0,$v0,0xcccd
+    multu $s0,$v0
+    mfhi $a1
+    srl $v0,$a1,2
+    sll $v1,$v0,2
+    addu $v1,$v1,$v0
+    subu $s0,$s0,$v1
+    sltiu $s0,$s0,3
+    xori $s0,$s0,1
+    addu $v0,$v0,$s0
+    andi $v0,$v0,0xffff
+    lw $ra,0x18($sp)
+    lw $s1,0x14($sp)
+    lw $s0,0x10($sp)
+    addiu $sp,$sp,0x20
+    jr $ra
+     nop
+.end frame_value_combine

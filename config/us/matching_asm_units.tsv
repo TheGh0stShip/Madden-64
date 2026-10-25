@@ -60,3 +60,15 @@
 0x2E400	0x84	src/code/runtime_record_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	00a26d22ac3d88b2f084c7dedd2cf4e4746bdb4b5a88c70d045263ee48b2b0d5
 0x44004	0x84	src/code/rectangle_overlap_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cd7c9b89353bb2dc57262e49222b134650efd184b26e8a14b27c24815a40188
 0x44E70	0x84	src/code/texture_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ac1391ac9363bb7b9d57d253a806a8c9d1c69a2013617c098f6f4db389418e5
+0x1F820	0x8C	src/code/ui_slot_clear.s	-O2 -G0 -mips3 -mgp32 -mfp32	8efca5c4881500be430bd4d132ef4b120a47d54bfece67feb60df851e436dab8
+0x2981C	0x8C	src/code/mode_resources_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	762308a184109b44367906c21bffe5093ce8952b043b355d8efddee3e1164731
+0x31484	0x8C	src/code/display_values_refresh.s	-O2 -G0 -mips3 -mgp32 -mfp32	90ca8004a0dee6937ab1e3014a11c741e71507c67f13d83264eeb0291638cb75
+0x352DC	0x8C	src/code/resource_offsets_relocate.s	-O2 -G0 -mips3 -mgp32 -mfp32	1443afab2e5bee65932fd35cf82b46816bd707b3dbe33ab30fa40b8f8ce53def
+0x606D4	0x8C	src/code/tiled_columns_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	0be1fcf3a6d13b9816b2b2f9e1153135dffab3dd58dce4621fe31fb93e609845
+0xB048	0x90	src/code/display_scissor_cache.s	-O2 -G0 -mips3 -mgp32 -mfp32	da9d20b5d20077c884cce609c0c013e40737b8c3f4c7e51f2a9e5d37d8c34555
+0x2038C	0x90	src/code/player_index_selection_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	1f5b5f3ae494dde37695129d9c8709e0c4cba0d02d05b35d03ad57df9d85da8b
+0x216E8	0x90	src/code/menu_option_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	048e18353238654443e7f9f5e62e26449155b0342fdecc3939ef9e8e1a74a179
+0x22C9C	0x90	src/code/roster_attribute_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	18b339bacdf4cddd67203ea051c4741040f2e2510bea86a98823d46e6da57a90
+0x36F64	0x90	src/code/audio_channel_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	47177c5f873db4e2c1a17eb05616a99dc6fb6af462f6be05a12e3835031eeeca
+0x3C3FC	0x90	src/code/frame_value_combine.s	-O2 -G0 -mips3 -mgp32 -mfp32	5197294f754c61c320d7e948f67ae24bcda251d37516396d66f928784fdc1903
+0xFFBC	0x94	src/code/object_index_rows_shift.s	-O2 -G0 -mips3 -mgp32 -mfp32	38e3a286b6a4408b2982f307b8a12b2fbd98c1157503384eed0cdfa4ce6e43ba
