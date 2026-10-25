@@ -3,6 +3,7 @@
 0x478F8	0xB0	src/libultra/os_inval_dcache.s	-O2 -G0 -mips3 -mgp32 -mfp32	7ea4c6bffed307fe915ab8ef0ae37d86482e17b132eb99598f82ad5cbca40a71
 0x479A8	0x80	src/libultra/os_inval_icache.s	-O2 -G0 -mips3 -mgp32 -mfp32	cf9ac7a3378e8d2013f33517eebd339955e401c76380ec29ca56152a34f0040d
 0x485D8	0x2C0	src/libgcc/ll_runtime.s	-O2 -G0 -mips3 -mgp32 -mfp32	ccf2a1fcc516893d7a2343a6fe49332f551ecb037d7de2e3dda5d2205bcd9ccc
+0x4EA08	0x10	src/libultra/sqrtf.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ea14d5f89379ec41118bbacbd120dec7513472a303805a5461b4438f53a0626
 0x47808	0xA0	src/libultra/bzero.s	-O2 -G0 -mips3 -mgp32 -mfp32	6cb49ba97859396e62e39990cd9a31a7a775d8e8b5618695b03027823a7b2863
 0x48D58	0x60	src/libultra/os_map_tlb_rdb.s	-O2 -G0 -mips3 -mgp32 -mfp32	60e870785652f4c5376888fa708add8104458aed09503a8f38eb0925c8dbe54a
 0x4DE08	0x10	src/libultra/os_set_sr.s	-O2 -G0 -mips3 -mgp32 -mfp32	8c9798aafb630c54a679991a2a686c3379687a94f8b3c8c14e5eafe1cd8cb961
