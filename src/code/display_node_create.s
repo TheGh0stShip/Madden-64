@@ -1,0 +1,70 @@
+.text
+.align 2
+.set noreorder
+.globl display_node_create
+.ent display_node_create
+display_node_create:
+    addiu $sp,$sp,-0x28
+    sw $s0,0x10($sp)
+    move $s0,$a0
+    lui $a0,0x8008
+    lw $a0,-0x7d0c($a0)
+    sw $s3,0x1c($sp)
+    move $s3,$a2
+    sw $s2,0x18($sp)
+    move $s2,$a1
+    sw $ra,0x20($sp)
+    jal func_80033298
+     sw $s1,0x14($sp)
+    lw $v1,8($s0)
+    beqz $v1,.Lempty
+     move $s1,$v0
+    sw $zero,0($s1)
+    lw $v0,8($s0)
+    sw $v0,4($s1)
+    lw $v0,8($s0)
+    sw $s1,0($v0)
+    j .Llinked
+     sw $s1,8($s0)
+.Lempty:
+    sw $s1,0xc($s0)
+    sw $s1,8($s0)
+    sw $zero,4($s1)
+    sw $zero,0($s1)
+.Llinked:
+    lui $v1,0x8008
+    lw $v1,-0x7d08($v1)
+    addiu $v0,$zero,1
+    andi $s0,$s2,0xffff
+    sw $v0,0x14($s1)
+    sll $v0,$s0,2
+    sw $zero,0x10($s1)
+    sw $zero,0xc($s1)
+    sh $s2,0x54($s1)
+    addu $v0,$v0,$v1
+    lw $a0,0($v0)
+    jal func_80033298
+     nop
+    lui $v1,0x8008
+    lw $v1,-0x7d04($v1)
+    sw $v0,8($s1)
+    sll $v0,$s0,1
+    addu $v0,$v0,$s0
+    sll $v0,$v0,3
+    addu $v1,$v1,$v0
+    lw $v0,0x10($v1)
+    move $a0,$s1
+    jalr $v0
+     move $a1,$s3
+    move $v0,$s1
+    sw $zero,0x4c($v0)
+    sw $zero,0x50($v0)
+    lw $ra,0x20($sp)
+    lw $s3,0x1c($sp)
+    lw $s2,0x18($sp)
+    lw $s1,0x14($sp)
+    lw $s0,0x10($sp)
+    addiu $sp,$sp,0x28
+    jr $ra
+     nop
+.end display_node_create

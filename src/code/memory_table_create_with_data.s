@@ -1,0 +1,70 @@
+.text
+.align 2
+.set noreorder
+.globl memory_table_create_with_data
+.ent memory_table_create_with_data
+memory_table_create_with_data:
+    addiu $sp,$sp,-0x30
+    sw $s2,0x18($sp)
+    move $s2,$a0
+    move $a0,$zero
+    sw $s4,0x20($sp)
+    move $s4,$a1
+    sw $s1,0x14($sp)
+    sll $s1,$s2,16
+    sra $s1,$s1,16
+    sll $v0,$s1,1
+    sw $ra,0x2c($sp)
+    sw $s6,0x28($sp)
+    sw $s5,0x24($sp)
+    sw $s3,0x1c($sp)
+    sw $s0,0x10($sp)
+    lui $at,0x8008
+    addu $at,$at,$v0
+    lhu $v0,-0x5c04($at)
+    andi $s6,$s4,0xffff
+    sll $a1,$s6,1
+    addiu $a1,$a1,0x10
+    addiu $s0,$a2,-1
+    move $s3,$a3
+    addu $s0,$s0,$v0
+    negu $v0,$v0
+    jal func_80032E00
+     and $s0,$s0,$v0
+    mult $s6,$s0
+    mflo $a1
+    addiu $s5,$zero,1
+    move $a0,$s1
+    move $s1,$v0
+    move $a2,$s3
+    sh $s4,0($s1)
+    sh $s2,2($s1)
+    jal func_800337CC
+     sh $s0,4($s1)
+    sw $v0,8($s1)
+    ori $v0,$zero,0xffff
+    beqz $s6,.Ldone
+     sh $v0,0xc($s1)
+    move $a1,$s6
+    addiu $v1,$s1,2
+.Lloop:
+    addiu $v0,$s5,-1
+    sh $v0,0xc($v1)
+    addiu $s5,$s5,1
+    sltu $v0,$a1,$s5
+    beqz $v0,.Lloop
+     addiu $v1,$v1,2
+.Ldone:
+    move $v0,$s1
+    lw $ra,0x2c($sp)
+    lw $s6,0x28($sp)
+    lw $s5,0x24($sp)
+    lw $s4,0x20($sp)
+    lw $s3,0x1c($sp)
+    lw $s2,0x18($sp)
+    lw $s1,0x14($sp)
+    lw $s0,0x10($sp)
+    addiu $sp,$sp,0x30
+    jr $ra
+     nop
+.end memory_table_create_with_data
