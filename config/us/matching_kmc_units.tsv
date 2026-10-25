@@ -363,3 +363,14 @@
 0xC3A4	0x40	src/code/object_short_configure.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0662b63c175ea444fd20c2806abf1478b1ea81ad41851911989b4f67697f115b
 0x3ADD0	0x4C	src/code/available_index_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2b82ff5b7c8add67c50417b440f3ac3d77ab7b8769a2d5ab0eb7284a9222e202
 0x3E9A4	0x54	src/code/audio_index_offset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b48a1f11a1fdf68a9577943f731eae2ffa8320441f303f2d7c8808a7dc392462
+0x18440	0x40	src/code/render_record_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8268357714f6e714b791b244726e8ff3d82b6e9cfc17395226807327a702e69d
+0x5C218	0x54	src/code/display_state_finalize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	533f3ac1fb00511534f29a80fb43a5291fe164bf1b38a79e0242d68f416a497c
+0x340E0	0x54	src/code/list_entry_append.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	29d7ac6fba2f9f77f6c158277dae59d5a63e60a81b860a9f907f561fc7a0beb2
+0x35404	0x54	src/code/tagged_values_adjust.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	85ffb8fe24db92544c2cac5f85bf6fa25fd0e231de0d1bffea53e4f83a624301
+0xE990	0x58	src/code/runtime_storage_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	528efd031113b389765b2a1fc033a938b80699a89589f641b2f9db96e2c17e53
+0x42D1C	0x54	src/code/audio_resources_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	968a35cc9792905eb6980ef56a8bb2fd26665ee726324b57ebf336eef365a817
+0x428CC	0x58	src/code/random_threshold_trigger.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9180380b054286c349f4fb036484a524559329f8b6bafac16e5f2c1af7ed1e7d
+0x22F04	0x50	src/code/grid_subfield_from_table.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c7f01bb5d677a78173090521fa1a9fad18d8801a0ec8e3dbb06b0a58921aa136
+0x3DC74	0x50	src/code/indexed_audio_range_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e131565ffc0e3aaffaab778602b8f5c367dd36eac7b0a06a049403e57aa6d96d
+0x2F624	0x38	src/code/runtime_defaults_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2cca6ee545e9cd025c5c9c9e9af5c2a08a17a8f19ece0efa379b5ee8d14c1fb4
+0x2F5E8	0x3C	src/code/runtime_offset_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f3fab230d72aa6c6770b6c026f0a3c400040cb8e6d21e09c63bf9d90dcb74d1a
