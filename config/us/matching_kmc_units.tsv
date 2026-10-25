@@ -503,3 +503,9 @@
 0x30B70	0x7C	src/code/runtime_record_unlink.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d04493dc7c6dc9db8f3b4ee676faf05398bca05c134e8f0268aba134476a8e8a
 0x30C50	0xC0	src/code/runtime_records_process.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	53f177a5439c3acfcae7b24a5a25e153c4d18fecfd9c889ae57c8d61e7219d2b
 0x30D10	0x7C	src/code/runtime_records_tick.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aa9dc0f3fb44783664ca1314fb60c6d1685bbf293e9c41c617f861af763801b1
+0x230B8	0x80	src/code/attribute_count_matches.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	dea398bf94319c9b478f15d348e5ff8d1ad090b56356691a1b6973f2b639d626
+0x64094	0x80	src/code/object_callback_threshold.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	eda4de069e1db0c85163d8e3a4ef106ea41d547fe48be43a29f58d969738ac8c
+0x21668	0x80	src/code/menu_selection_confirm.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4bfba5d2eefaaf7db8a8ef9e49dbc22bd4da9113f4d5b566d773518cbfdcb2b0
+0x237C0	0x84	src/code/player_mode_apply.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9d3e55d2e4c885fd815a1abac2af881d5660bf0a449fabfb2f5ff69da9df6e15
+0x3C3FC	0x90	src/code/frame_value_combine.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5197294f754c61c320d7e948f67ae24bcda251d37516396d66f928784fdc1903
+0x2CB10	0x94	src/code/packed_field_primary_get.c	--assembler=asn64 --section-base=.rodata:0x800012B0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0f10e6075d1156b3ac6a086ce5495050445466dd8df8f604070e28baeaff02e

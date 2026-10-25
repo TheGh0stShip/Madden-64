@@ -44,18 +44,14 @@
 0x35FB0	0x78	src/code/runtime_entries_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	b2199fdd9d119aef7a61189d66efcdb9335cf22ce3796968a27462f74401244b
 0x3A350	0x78	src/code/roster_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e32c8d15b061901377f1f128d8c3a478272a5b82f8e2fc1ccde0c0f0a7e31a3
 0x25B5C	0x7C	src/code/interface_transfer_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	7c21b776be15e03a6224d164635ab930b552959cac1dec3752e567f7759a2182
-0x230B8	0x80	src/code/attribute_count_matches.s	-O2 -G0 -mips3 -mgp32 -mfp32	dea398bf94319c9b478f15d348e5ff8d1ad090b56356691a1b6973f2b639d626
 0x355FC	0x80	src/code/runtime_entry_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	94269dc6a57532b173f4d9d3ac109ba38e225b85cf40e3f44d4c60aff8e92a1a
 0x433C8	0x80	src/code/display_list_copy_or_branch.s	-O2 -G0 -mips3 -mgp32 -mfp32	24c635eab22c97eadf9cc9667ac7ae86f97499d25894e6e17a73ad5b80abe927
-0x64094	0x80	src/code/object_callback_threshold.s	-O2 -G0 -mips3 -mgp32 -mfp32	eda4de069e1db0c85163d8e3a4ef106ea41d547fe48be43a29f58d969738ac8c
 0xBC6C	0x80	src/code/display_texture_pair_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	c4e8ae174cf1e1f823dd0b7de01477577c03c96053ff88e99a0fb665d3a738a6
 0xD390	0x80	src/code/object_display_segment_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	a7258fc77ae348c1aa13d6e389485569358b25dc0648bba55c5ad927d10cd38a
-0x21668	0x80	src/code/menu_selection_confirm.s	-O2 -G0 -mips3 -mgp32 -mfp32	4bfba5d2eefaaf7db8a8ef9e49dbc22bd4da9113f4d5b566d773518cbfdcb2b0
 0x25ADC	0x80	src/code/interface_transfer_begin.s	-O2 -G0 -mips3 -mgp32 -mfp32	b48e0e6a932f64b3bb78a7f3e00e0ece346b83ddf4934f4007153f9dd99913cd
 0x1F6A8	0x84	src/code/ui_slots_release_all.s	--symbol=ui_slot_release:0x8001EB2C -O2 -G0 -mips3 -mgp32 -mfp32	d31527676535f75888e7f93346247ef46d9fdc847a1d2c72ccc991b80f2b782f
 0x22E80	0x84	src/code/roster_attribute_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	cdadcb7477b01290fb436c04310d48fc6066373098fadb9592c1d7123ce44142
 0x2373C	0x84	src/code/roster_symbol_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef1c0e46dfcff4c11e592a4448dd1e1a38505c4040150457e2e0269ecdb26ba6
-0x237C0	0x84	src/code/player_mode_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	9d3e55d2e4c885fd815a1abac2af881d5660bf0a449fabfb2f5ff69da9df6e15
 0x25818	0x84	src/code/frame_group_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	ace800bfb226efbb9e2fbd3e7c1f8dc32f71c4c985a4c26587f42f4bc9f41cd1
 0x2E400	0x84	src/code/runtime_record_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	00a26d22ac3d88b2f084c7dedd2cf4e4746bdb4b5a88c70d045263ee48b2b0d5
 0x44004	0x84	src/code/rectangle_overlap_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cd7c9b89353bb2dc57262e49222b134650efd184b26e8a14b27c24815a40188
@@ -70,14 +66,12 @@
 0x216E8	0x90	src/code/menu_option_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	048e18353238654443e7f9f5e62e26449155b0342fdecc3939ef9e8e1a74a179
 0x22C9C	0x90	src/code/roster_attribute_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	18b339bacdf4cddd67203ea051c4741040f2e2510bea86a98823d46e6da57a90
 0x36F64	0x90	src/code/audio_channel_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	47177c5f873db4e2c1a17eb05616a99dc6fb6af462f6be05a12e3835031eeeca
-0x3C3FC	0x90	src/code/frame_value_combine.s	-O2 -G0 -mips3 -mgp32 -mfp32	5197294f754c61c320d7e948f67ae24bcda251d37516396d66f928784fdc1903
 0xFFBC	0x94	src/code/object_index_rows_shift.s	-O2 -G0 -mips3 -mgp32 -mfp32	38e3a286b6a4408b2982f307b8a12b2fbd98c1157503384eed0cdfa4ce6e43ba
 0xD410	0x88	src/code/object_display_segment_enable.s	-O2 -G0 -mips3 -mgp32 -mfp32	f50fddcd10d7092cdbaec3574eaacc11e7976763e0d7405b3603570cbf0076a3
 0x1BBA4	0x88	src/code/resource_node_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	1109dc52675cf6ba8ff4e2fbd0035d0e2c0c7a6d542f8911cdfd0d80e7caac8f
 0x1C338	0x88	src/code/packed_position_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	5b4eef09dcd44f2d83ebe0443388d7506ad2a96554bc5dba12e89c52b58ea09b
 0x3E728	0x88	src/code/audio_level_calculate.s	-O2 -G0 -mips3 -mgp32 -mfp32	08f6a61368121a4d1e593f971f90b6c26a2998f0b73de076bf47ba49392ddcdc
 0x3F4F4	0x88	src/code/string_tail_clear.s	-O2 -G0 -mips3 -mgp32 -mfp32	c5c9bba6caa75c760ca382ec56eb53147643e789b891f34aece25d9f1245d6a1
-0x2CB10	0x94	src/code/packed_field_primary_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	0f10e6075d1156b3ac6a086ce5495050445466dd8df8f604070e28baeaff02e
 0x319F0	0x94	src/code/display_flags_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	06d9e9408f9d78c64de4ffe6a594e3c11df924de641be3c51a9f3e9c1602c4f0
 0x3567C	0x94	src/code/runtime_entry_find_available.s	-O2 -G0 -mips3 -mgp32 -mfp32	4519bc5c70cae56f45127932bfe730ff69b26fbcd353f0d7a81b04d75ca2e016
 0x45DF8	0x94	src/code/box_vertices_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	48e051c1a53060c12d3dfdea7fac202acf52b0f299ccfee9056fa254a62f3410
