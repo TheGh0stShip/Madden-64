@@ -513,3 +513,16 @@
 0x58E10	0x174	src/code/object_cycle_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	832dab41cfe489c28378edaf8ef49e59f971642cfe767f66c974aeb692f14001
 0x37624	0x170	src/code/memory_pool_finalize_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	8b5bcf864dab844c4e6be1f72c6e1b3dcbb86055c8181f6cf24dfc05bfd57a95
 0x145E8	0x16C	src/code/render_pipeline_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	ce39c9f69d342063912ea002cdf2d1b547261ae939fb9e460cc8f5a2069afb9a
+0x3C2AC	0x150	src/code/func_8003B6AC.s	-O2 -G0 -mips3 -mgp32 -mfp32	9f38e4370ff85d401bcfc5ae62c386e1ac76ba8749c1b6d5fd44d435417c20f3
+0x2A5B8	0x118	src/code/func_800299B8.s	-O2 -G0 -mips3 -mgp32 -mfp32	c0d79c234a0e3adee20f33c0f2e71221bf3275539c480b4aec20c55f192a0363
+0x3AF78	0x114	src/code/func_8003A378.s	-O2 -G0 -mips3 -mgp32 -mfp32	d3c65bef2aa169820c1eb6dff11739cb6115c245a07e9646a94a7a21c7c3bc27
+0x2CDF4	0x110	src/code/func_8002C1F4.s	-O2 -G0 -mips3 -mgp32 -mfp32	c8d05cf12b4ddd80956a4d3cda7555b5b3d8071d64c306128d8da7af19e6ce90
+0x2F490	0x10C	src/code/func_8002E890.s	-O2 -G0 -mips3 -mgp32 -mfp32	6a8f09655ac2464c054d60097d69412750c4ac0332c7880641ac90c6e89998c2
+0x3882C	0x108	src/code/func_80037C2C.s	-O2 -G0 -mips3 -mgp32 -mfp32	31a974a454641d494f165970c7d2c6ef67d30404b27204bcc29ce47bf0cebdd8
+0x323D8	0x108	src/code/func_800317D8.s	-O2 -G0 -mips3 -mgp32 -mfp32	68b90a601e5da215e7022f4c542018cf7e739bf8931f48376d8867fda8b7a050
+0x357B8	0xFC	src/code/func_80034BB8.s	-O2 -G0 -mips3 -mgp32 -mfp32	d5568c6544ab1bd1234f318e2eb008fd3a680b9e1f68b7adf583357bea6435f0
+0x30438	0xF8	src/code/func_8002F838.s	-O2 -G0 -mips3 -mgp32 -mfp32	4d7be293c4a63915209626d2f471ba5f26f7cb83dfcfd0416cf1e3b1b7cbe509
+0x562A8	0xD8	src/code/func_800556A8.s	-O2 -G0 -mips3 -mgp32 -mfp32	738de4a2cd02fd60ac53b41ee8f337b41c57f43cb218c0cd4e8806f6b6adff32
+0x351E8	0xCC	src/code/func_800345E8.s	-O2 -G0 -mips3 -mgp32 -mfp32	ad807f4a5ca928543a107139924fe96d69ce427ac11ac8341d6bf78471905dce
+0x2F18C	0x9C	src/code/func_8002E58C.s	-O2 -G0 -mips3 -mgp32 -mfp32	94b17ab75ad9585974bb57af3953b2572fd45388bc468e3b4dd0d5b53a090f55
+0x5898	0x9C	src/code/func_80004C98.s	-O2 -G0 -mips3 -mgp32 -mfp32	153fca43a871c0c0887ac2cda56da692fe9b9f64546d5d7ade03aa303afc4a35

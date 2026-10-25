@@ -59,6 +59,12 @@ def source_for(name: str, start: int, size: int, image: bytes) -> str:
             lines.append(f".L{address:08X}:")
         instruction = rendered.split(maxsplit=2)[2]
         decoded_instruction = instruction
+        if instruction.startswith("move "):
+            operands = instruction.removeprefix("move ").split(",")
+            if (word >> 26) == 0 and (word & 0x3F) == 0x21:
+                instruction = f"addu        {operands[0]}, {operands[1]}, $zero"
+            elif (word >> 26) == 0 and (word & 0x3F) == 0x25:
+                instruction = f"or          {operands[0]}, {operands[1]}, $zero"
         target = branch_target(address, word)
         if target is not None and start <= target < start + size:
             label = f".L{target:08X}"
