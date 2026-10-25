@@ -1,0 +1,40 @@
+.text
+.align 2
+.set noreorder
+.globl roster_attribute_lookup
+.ent roster_attribute_lookup
+roster_attribute_lookup:
+    andi $a0,$a0,0xffff
+    sll $v1,$a0,5
+    addu $v1,$v1,$a0
+    sll $v1,$v1,2
+    addu $v1,$v1,$a0
+    sll $v1,$v1,2
+    addu $v1,$v1,$a0
+    sll $v1,$v1,2
+    subu $v1,$v1,$a0
+    sll $v1,$v1,2
+    andi $a1,$a1,0xffff
+    lui $t0,%hi(D_800816A7)
+    addiu $t0,$t0,%lo(D_800816A7)
+    sll $a0,$a1,1
+    addu $a0,$a0,$a1
+    sll $a0,$a0,2
+    lui $a3,%hi(D_80088094)
+    lw $a3,%lo(D_80088094)($a3)
+    sll $v0,$a1,2
+    addu $v0,$v0,$a1
+    sll $v0,$v0,3
+    addu $v0,$v0,$a3
+    lw $v0,0x10($v0)
+    subu $a0,$a0,$a1
+    andi $a2,$a2,0xffff
+    addu $v0,$v0,$a2
+    lbu $v0,0($v0)
+    addu $v1,$v1,$t0
+    addu $a0,$a0,$v1
+    addu $a0,$a0,$v0
+    lbu $v0,0($a0)
+    jr $ra
+     nop
+.end roster_attribute_lookup

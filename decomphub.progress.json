@@ -8,7 +8,7 @@
       "scope": "USA Rev 0 (N8ME) loader, resident executable, and both executable overlays; only byte-identical compiled or assembled code counts.",
       "measurement": {
         "kind": "ratio",
-        "completed": 96480,
+        "completed": 98048,
         "total": 753428,
         "unit": "bytes"
       }
@@ -30,7 +30,7 @@
       "scope": "Audited candidate boundaries across the loader, resident image, and both executable overlays; a function counts only when its complete machine code matches.",
       "measurement": {
         "kind": "ratio",
-        "completed": 1010,
+        "completed": 1022,
         "total": 2820,
         "unit": "functions"
       }
