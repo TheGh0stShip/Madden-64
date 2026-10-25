@@ -509,3 +509,13 @@
 0x237C0	0x84	src/code/player_mode_apply.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9d3e55d2e4c885fd815a1abac2af881d5660bf0a449fabfb2f5ff69da9df6e15
 0x3C3FC	0x90	src/code/frame_value_combine.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5197294f754c61c320d7e948f67ae24bcda251d37516396d66f928784fdc1903
 0x2CB10	0x94	src/code/packed_field_primary_get.c	--assembler=asn64 --section-base=.rodata:0x800012B0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0f10e6075d1156b3ac6a086ce5495050445466dd8df8f604070e28baeaff02e
+0x2E400	0x84	src/code/runtime_record_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	00a26d22ac3d88b2f084c7dedd2cf4e4746bdb4b5a88c70d045263ee48b2b0d5
+0x25B5C	0x7C	src/code/interface_transfer_finalize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	7c21b776be15e03a6224d164635ab930b552959cac1dec3752e567f7759a2182
+0x1F72C	0x8C	src/code/ui_slot_release.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	64f9a02ea9e05f343b2c62e6a8cc5c53a179d26b0e82c5a4e816def7ff003205
+0x1F820	0x8C	src/code/ui_slot_clear.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	8efca5c4881500be430bd4d132ef4b120a47d54bfece67feb60df851e436dab8
+0x2CBA4	0x98	src/code/packed_field_secondary_get.c	--assembler=asn64 --section-base=.rodata:0x800012D0 -O2 -G0 -mips3 -mgp32 -mfp32	1615257ac4fae1693f3da2cdba1669bdc93a6865055650894d07b2f1453bb1c2
+0x2CA5C	0xB4	src/code/packed_field_variant_get.c	--assembler=asn64 --section-base=.rodata:0x80001288 -O2 -G0 -mips3 -mgp32 -mfp32	0e7ce1cd47421f4946aebbfe8e9254a61181abf4848eb452d0573de1389d3e0d
+0x28508	0x8C	src/code/interface_mode_configure.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	a91bc29f0e12897d462d6bf731701b809046b05abcf323a52ea57a51e06d38bd
+0x2F3A0	0x88	src/code/fixed_ratio_scale.c	--assembler=asn64 --symbol=D_80001550:0x80001550 -O2 -G0 -mips3 -mgp32 -mfp32	a236e1fde2367fb8bc7252d7496d9c9c6638fcdc990a4ad1c272257b847d3c68
+0x2CC3C	0xCC	src/code/packed_field_extended_get.c	--assembler=asn64 --section-base=.rodata:0x800012F0 -O2 -G0 -mips3 -mgp32 -mfp32	7509e71f0c09bdd6a813532c8ef82487c77dfc5ba43d8124887fa6a5943b87f0
+0x35FB0	0x78	src/code/runtime_entries_reset.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	b2199fdd9d119aef7a61189d66efcdb9335cf22ce3796968a27462f74401244b
