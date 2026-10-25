@@ -47,8 +47,6 @@
 0xD410	0x88	src/code/object_display_segment_enable.s	-O2 -G0 -mips3 -mgp32 -mfp32	f50fddcd10d7092cdbaec3574eaacc11e7976763e0d7405b3603570cbf0076a3
 0x1C338	0x88	src/code/packed_position_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	5b4eef09dcd44f2d83ebe0443388d7506ad2a96554bc5dba12e89c52b58ea09b
 0x3F4F4	0x88	src/code/string_tail_clear.s	-O2 -G0 -mips3 -mgp32 -mfp32	c5c9bba6caa75c760ca382ec56eb53147643e789b891f34aece25d9f1245d6a1
-0x45DF8	0x94	src/code/box_vertices_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	48e051c1a53060c12d3dfdea7fac202acf52b0f299ccfee9056fa254a62f3410
-0x4618C	0x94	src/code/display_context_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	130a10f227a03a8ebae55ce4da7c743ccfe36d876561371efaf5d0bd7edda6b6
 0x1B088	0x98	src/code/animation_step_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	feaf14dc842e030c09bfc94eacd6ff853a21c21b9f6b9e269ce8f021f4271321
 0x36AF0	0x98	src/code/audio_entry_resource_mark.s	-O2 -G0 -mips3 -mgp32 -mfp32	707b6f54b8d4df00f9c14b3c8c33ff6cc551685038169ffc39bb1c06867a3fa3
 0x45EFC	0x98	src/code/display_vectors_integrate.s	-O2 -G0 -mips3 -mgp32 -mfp32	f7dee0a6db9c3eeda89dc0c50d392c044897ad285ba56eff7c456104a47d86c2

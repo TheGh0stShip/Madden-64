@@ -1000,13 +1000,13 @@ functions = [
     { name = "display_system_initialize", vram = 0x80045100, size = 0x9c }, # asm
     { name = "func_8004519C", vram = 0x8004519c, size = 0x2c }, # leaf
     { name = "func_800451C8", vram = 0x800451c8, size = 0x30 }, # leaf
-    { name = "box_vertices_build", vram = 0x800451f8, size = 0x94 }, # asm
+    { name = "box_vertices_build", vram = 0x800451f8, size = 0x94 }, # c
     { name = "func_8004528C", vram = 0x8004528c, size = 0x70 }, # c
     { name = "display_vectors_integrate", vram = 0x800452fc, size = 0x98 }, # asm
     { name = "display_vertex_batch_append", vram = 0x80045394, size = 0xbc }, # asm
     { name = "display_strip_emit", vram = 0x80045450, size = 0xe8 }, # asm
     { name = "func_80045538", vram = 0x80045538, size = 0x54 }, # c
-    { name = "display_context_initialize", vram = 0x8004558c, size = 0x94 }, # asm
+    { name = "display_context_initialize", vram = 0x8004558c, size = 0x94 }, # c
     { name = "display_overlay_flush", vram = 0x80045620, size = 0xe4 }, # asm
     { name = "func_80045704", vram = 0x80045704, size = 0x10 }, # c
     { name = "func_80045714", vram = 0x80045714, size = 0x80 }, # c
