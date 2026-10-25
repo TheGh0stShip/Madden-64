@@ -456,3 +456,4 @@
 0x3DCE4	0x74	src/code/index_mapping_remove.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	ba6406a3e99aef5e33c034d3a838744767b8719b5d46006a02b3f9e9ac5b6d69
 0x5FD5C	0x74	src/code/byte_rows_expand_double.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a913aac0d4869e13673821c483cea6d4126fd06ec7ab2d0be3c2229c50a8acbd
 0x35B60	0x78	src/code/resource_entry_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	67cb123da3c03b26d435a3e5d4bed7eb0ec2fe2a3930ea4fe2b1779592c70c5d
+0x33700	0x78	src/code/input_record_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0cfd8e99a7b51fdb820a2cf7e73535201d73c9cb0f10db3ff318ebeb14765ede
