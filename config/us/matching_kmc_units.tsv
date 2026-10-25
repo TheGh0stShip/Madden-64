@@ -453,3 +453,5 @@
 0x414C8	0x68	src/code/object_values_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e15f547b6513e4995ace9dd2e935eb5897693d523368f73dc2c20388f4e3f4fa
 0x42AF8	0x74	src/code/bitmap_range_clear.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	2b50f273826261887c6e1dde08e3bb01cc39a31b20fe8b36481515a4e05c83dc
 0x5A600	0x74	src/code/runtime_handler_table_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4b95788747587d3ce5a9b467d2a8f0f0151dd5697b3c5855851d7b13babe6abc
+0x3DCE4	0x74	src/code/index_mapping_remove.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	ba6406a3e99aef5e33c034d3a838744767b8719b5d46006a02b3f9e9ac5b6d69
+0x5FD5C	0x74	src/code/byte_rows_expand_double.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a913aac0d4869e13673821c483cea6d4126fd06ec7ab2d0be3c2229c50a8acbd
