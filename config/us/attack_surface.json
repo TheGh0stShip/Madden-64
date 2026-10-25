@@ -183,8 +183,8 @@
       "overlay_1": {
         "functions": 1025,
         "bytes": 183528,
-        "matched_functions": 178,
-        "matched_bytes": 8568
+        "matched_functions": 181,
+        "matched_bytes": 8852
       },
       "overlay_4": {
         "functions": 420,
@@ -284,8 +284,8 @@
       "000-0128": {
         "functions": 553,
         "bytes": 51828,
-        "matched_functions": 296,
-        "matched_bytes": 26768
+        "matched_functions": 299,
+        "matched_bytes": 27052
       },
       "000-0256": {
         "functions": 553,
