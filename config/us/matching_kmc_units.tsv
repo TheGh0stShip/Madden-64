@@ -464,3 +464,5 @@
 0x3B08C	0x70	src/code/frame_halfword_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	03d7bb34033da96a7babf3e8a8381948e814d11ee536291e4855589ae937003b
 0x3C48C	0x70	src/code/frame_halfword_find.c	-DFUNCTION=func_8003B88C -DFIND_VALUE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7bbf0a5ea3f551bd78e7b3b64b737b4c263cbf2d058caf28de60bb074fbcb21e
 0x3B320	0x98	src/code/frame_storage_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9af7c536d6186fa6a5f4f9c85c48af7beb400ca1510af70f4b340989af647da4
+0x22D88	0x60	src/code/play_table_byte_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	068a13689bc155a7d76de88e5d13ec2290dffddc7e821c898e5d40ee139389b8
+0x2664C	0x6C	src/code/play_table_halfword_add.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	459a18dd203c7b1854233d4119922b676de3cb8f6a78af632fc4c5da2f431fc7
