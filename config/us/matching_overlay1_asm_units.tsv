@@ -210,7 +210,6 @@
 0x104D0	0x1EC	src/overlays/overlay1/func_8009F4D4.s	-O2 -G0 -mips3 -mgp32 -mfp32	16dc9427ba7a26458e39027c2bb7a3a368781cd46ffe5e80f00458097ff01c59
 0x10700	0x104	src/overlays/overlay1/func_8009F704.s	-O2 -G0 -mips3 -mgp32 -mfp32	4960dd91c9b318ae8820ba24fff7e563342097a79bf7194536a2ff266f8d65ce
 0x10864	0x13C	src/overlays/overlay1/func_8009F868.s	-O2 -G0 -mips3 -mgp32 -mfp32	89ca66af4e3c351bba4e72411a953d75f403223a2518fcc9625f0442a4d767fb
-0x109A0	0x44	src/overlays/overlay1/func_8009F9A4.s	-O2 -G0 -mips3 -mgp32 -mfp32	981b6861620a185f237433cdff9ac3e0fced11dfc601d2042a2cbc87c712d38f
 0x109E4	0x4CC	src/overlays/overlay1/func_8009F9E8.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef42725302cb23a7438ad4704988d5aa893fc73438e44dcec48dc6bb857f66ea
 0x10EB0	0x1F0	src/overlays/overlay1/func_8009FEB4.s	-O2 -G0 -mips3 -mgp32 -mfp32	8122312c0d0ef9c73226e6a355235f29fe82063eea4993634e7b0da4982550c3
 0x110A0	0xBC	src/overlays/overlay1/func_800A00A4.s	-O2 -G0 -mips3 -mgp32 -mfp32	3929c82fe96c3522dbce49b4ffa7a4f3aa793bda26a324cd78900f9976f9823c
@@ -510,7 +509,6 @@
 0x22960	0x20	src/overlays/overlay1/func_800B1964.s	-O2 -G0 -mips3 -mgp32 -mfp32	0779aa9151576cbdfca2bf62652f2d8661bf56331dbe20dd5c398d28a2d6e74f
 0x22980	0x20	src/overlays/overlay1/func_800B1984.s	-O2 -G0 -mips3 -mgp32 -mfp32	47fc56169a975710ea8ab9ccbd98dc3cd16d2919c72ca6e740d7fe61bcadf9ff
 0x229A8	0x24	src/overlays/overlay1/func_800B19AC.s	-O2 -G0 -mips3 -mgp32 -mfp32	406dcaabe37d07a580254ffd12cba0e89f872f9619e4a0619344b8e8b2abe47e
-0x22AC8	0x5C	src/overlays/overlay1/func_800B1ACC.s	-O2 -G0 -mips3 -mgp32 -mfp32	caa898d251017def305c6642ff2bad65d2e294c427e6d003a91fd50ee17b2f24
 0x22B44	0x3C	src/overlays/overlay1/func_800B1B48.s	-O2 -G0 -mips3 -mgp32 -mfp32	88dd0b2bacdc428a060dd965157aa24b8443b7e8abcf9e178d79b7c4b0add27c
 0x22B80	0x3C	src/overlays/overlay1/func_800B1B84.s	-O2 -G0 -mips3 -mgp32 -mfp32	5a99338a9eabe6f6b0abf6b53fca04bdda413e4141d03af01cf9b8816e56478a
 0x22BBC	0x5C	src/overlays/overlay1/func_800B1BC0.s	-O2 -G0 -mips3 -mgp32 -mfp32	6cc30f3a6173ff189e7452bd794b312bae65ca66329df42c6ccdeaf038cd6490

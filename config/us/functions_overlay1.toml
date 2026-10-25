@@ -253,7 +253,7 @@ functions = [
     { name = "func_8009F830", vram = 0x8009f830, size = 0x8 }, # stub
     { name = "func_8009F838", vram = 0x8009f838, size = 0x30 }, # c
     { name = "func_8009F868", vram = 0x8009f868, size = 0x13c }, # asm
-    { name = "func_8009F9A4", vram = 0x8009f9a4, size = 0x44 }, # asm
+    { name = "fixed_command_submit", vram = 0x8009f9a4, size = 0x44 }, # C
     { name = "func_8009F9E8", vram = 0x8009f9e8, size = 0x4cc }, # asm
     { name = "func_8009FEB4", vram = 0x8009feb4, size = 0x1f0 }, # asm
     { name = "func_800A00A4", vram = 0x800a00a4, size = 0xbc }, # asm
@@ -607,7 +607,7 @@ functions = [
     { name = "func_800B19AC", vram = 0x800b19ac, size = 0x24 }, # asm
     { name = "func_800B1A80", vram = 0x800b1a80, size = 0x10 }, # stub
     { name = "global_buffer_prepare", vram = 0x800b1a90, size = 0x3c }, # C
-    { name = "func_800B1ACC", vram = 0x800b1acc, size = 0x5c }, # asm
+    { name = "conditional_value_resolve", vram = 0x800b1acc, size = 0x5c }, # C
     { name = "func_800B1B48", vram = 0x800b1b48, size = 0x3c }, # asm
     { name = "func_800B1B84", vram = 0x800b1b84, size = 0x3c }, # asm
     { name = "func_800B1BC0", vram = 0x800b1bc0, size = 0x5c }, # asm
