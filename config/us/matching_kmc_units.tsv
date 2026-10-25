@@ -473,3 +473,5 @@
 0x35A58	0x7C	src/code/runtime_entry_count_adjust.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f5e1da881db32954808e73dfc1c9d2232acabebc9cea869464e14ebfea7a2296
 0x35AD4	0x8C	src/code/runtime_entry_resolved_adjust.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	287fdb668309dbcbf71b540e2e1f61241b7fd4a5ddef1f6e8e87e66828caf771
 0x35BD8	0x8C	src/code/runtime_entries_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0022ff25b1aa9c90c017a5098588a7e93ab2b6391c5ec20eace6020b92676f88
+0x3EE3C	0x84	src/code/pointer_list_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1d01c6f9fb6d84712bdffae84f004cf87372762b4fa2f8f480df3124b44d9fc2
+0x42848	0x84	src/code/transition_request_start.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0cc13a5f3efc4b4e3b946f797d22afeb8d67dd034385c574df1533b2ba349829
