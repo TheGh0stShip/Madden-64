@@ -422,3 +422,6 @@
 0xE82C	0x44	src/code/node_index_callback.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afdac468c52d90160a7765677c9283fb0aa3d124df21fcb56bb96ea16572231f
 0x1C14C	0x44	src/code/indexed_halfword_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	83d776e436fb34344e4570c1b51fa1abec57643c78d713e641f0cf1bf6087820
 0x40DD0	0x44	src/code/packed_command_append.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fd22d620df1d39b7914d0370657ecd4c899eba9170c74024ae0db9fd2bbe81ab
+0x2E77C	0x54	src/code/active_record_values_rotate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	129554f13c8d308af16d0d8edf54ed467c85828413b393c985e70368a98f8d2d
+0x3EF88	0x58	src/code/protocol_result_classify.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	519a44f9926463fd30209ae3fa7fc1f1b0ea81a1085fec7d429dadfa026557ae
+0x4546C	0x58	src/code/short_range_submit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f7228d86c809064d7f84c5c39aaf039cb1bb64e2f90a30b3aa2c2ac2973241a9
