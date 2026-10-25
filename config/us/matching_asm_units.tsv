@@ -487,3 +487,13 @@
 0x3DED4	0x190	src/code/audio_channel_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	892dbb713e69f0667215cfebe76f89b91a2852442e351220b89432917faf52f3
 0x5FAA0	0x190	src/code/image_plane_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	bca77dd996e34c301aaf23e9c22e15a68cb5b86d0cae4c6775e6e7a67dbe53d1
 0x62980	0x190	src/code/object_lookup_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	4c59ea69e49839ed3a1c7688f1f2adcc2af77d09ac5aff376d58ad4013d7b893
+0x2BDB8	0x18C	src/code/gameplay_interface_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	305d379df74bba16a48ca84d1fa8dc69d6902318c4a751d7bf6905dfbfdd25a7
+0x3E200	0x18C	src/code/audio_channel_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	a883a783720447bbdd39d72f38328d9d8f9ce55f7b1dfa91df296e655572252e
+0x44B7C	0x18C	src/code/display_frame_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	49bc5f02a4f3b851176da35ff998e6b682c09fee29258dbd9a347dc12ce067d3
+0x5C08C	0x188	src/code/object_geometry_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	669ad0962d57724dd96055788ecab4143d749e608734aac0ea91ea354307200f
+0x1B324	0x184	src/code/resource_node_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	a8f3323b383fa0af2749b09857ef38625ca48319047d2e023155bdc2deb563b4
+0x3A028	0x184	src/code/roster_record_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	fbd920cf69bcd619aa3ec533616bbdade5eec662909695f01eae01a3e99bb6de
+0x4459C	0x184	src/code/display_context_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	9dc57a8e25f3c2f97fdd1826a4fb9fb5a6bd476b58acdb1ced3ac69869930210
+0x5FF98	0x184	src/code/image_plane_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	7eca78886fb50761390be654dc92b652ec30d7e1692dcc62972ea560367e741e
+0x6520C	0x184	src/code/object_stream_complete.s	-O2 -G0 -mips3 -mgp32 -mfp32	557a71b1c19686d2969877ba9debae343a5bb1943fe1082b8cee1b1b2e4094b0
+0x59708	0x180	src/code/object_cycle_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	76137ef0a083edb508323ed1e5348f5a961d97b945a0046770dd47742556db76
