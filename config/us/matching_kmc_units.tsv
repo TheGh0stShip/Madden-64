@@ -384,3 +384,8 @@
 0x21538	0x54	src/code/gameplay_mode_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	77211e6e101e962bb5fdba7cb6e23614b2f2bd8614a94a526dd4886f92b00d7c
 0x4505C	0x74	src/code/audio_buffers_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	73c4661a9fa5db802b7a6a23bc0926f5c9ed6b4cc1879a14710d5528f026bae1
 0x1FC70	0x54	src/code/resource_coordinates_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8e612a5f6edd5006ac4b4a79ad373e4015007379759f9a74222fdab28d06ea01
+0x55B10	0x70	src/code/display_command_store.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7dbf41f715bfdcc5045d6054b618d13fc16667a871b7270c447941dbe14dacc7
+0x56188	0x7C	src/code/stream_bytes_consume.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5ee1cbe68b85d345201d44003db24b2f562b97b71e279391730e6854407bfbf1
+0x63F18	0x64	src/code/interface_state_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4c22b8af0bfaf206b4e4a621a98009bced509f3fc8f1b502e7257eb35d7164a3
+0x42A54	0x68	src/code/audio_position_submit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	73c0eccd0ca82599eb57beeed0612e32da1e82c126f4e0ccc7ac2700c350a6f3
+0x63840	0x68	src/code/display_indexed_submit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2aaa63ace9c2d6714a73275acddec0b71a705b8bbeb37274620fcbd666f10137
