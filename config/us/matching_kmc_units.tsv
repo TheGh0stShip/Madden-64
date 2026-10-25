@@ -414,3 +414,6 @@
 0xF030	0x60	src/code/node_type_entries_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b22bfc890bff480e2c4f62484b80be545f63d5eb602375722bbf575c0b789862
 0xF388	0x64	src/code/render_resource_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2c855ec65c2e30b25bef2884f2b9b8997b8c5b184540fd45d434e57168dbd5c6
 0xF7EC	0x6C	src/code/render_records_byte_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	dad3d795e0117129d8d026415478b3de6d5b72de154da33d03824f23ee006751
+0x3AE48	0x80	src/code/frame_value_slot_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8ee0dce56cce9c2588aa1861724767558c492de22d04c6e6144b5a9ce50c41cb
+0x40A94	0x80	src/code/interface_slot_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7270c0b4690812f7027962dc130880440aede19bd319d2ca52d3b1bef1acf04b
+0x3EFE0	0x80	src/code/active_flag_index_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fead11ebc4ee50b530f7a62dfac723105f107009b8da6b100e2fb928219b1aff
