@@ -1,4 +1,14 @@
 # KMC GCC 2.7.2; ROM_START SIZE SOURCE FLAGS SHA256
+0xE720	0x84	src/code/node_callbacks_apply.c	--assembler=asn64 --symbol=D_800782FC:0x800782FC -O2 -G0 -mips3 -mgp32 -mfp32	085385ea3569037035661be4e45d14e7ec202f1d156db88e6232da8408f6f0a4
+0xF090	0x88	src/code/record_key_replace.c	--assembler=asn64 --symbol=func_8002E148:0x8002E148 -O2 -G0 -mips3 -mgp32 -mfp32	8e0a34ea54b089f8f7a53bece47a958840902fac028b17801639cd68e2f38b59
+0x1BBA4	0x88	src/code/resource_node_configure.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	1109dc52675cf6ba8ff4e2fbd0035d0e2c0c7a6d542f8911cdfd0d80e7caac8f
+0x350E8	0x84	src/code/object_state_initialize.c	--assembler=asn64 --symbol=func_80034388:0x80034388 --symbol=func_80033B20:0x80033B20 -O2 -G0 -mips3 -mgp32 -mfp32	10b0e3a5b4155a5ddb343714ab2a1c3bc079df656c7527e2d68923c694660ab3
+0x354D0	0xA8	src/code/resource_entries_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	b85c7bfc05d2e357c4627a57afbffbc12ddcfc1873279ff2bbae2e6293611938
+0x355FC	0x80	src/code/runtime_entry_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	94269dc6a57532b173f4d9d3ac109ba38e225b85cf40e3f44d4c60aff8e92a1a
+0x3567C	0x94	src/code/runtime_entry_find_available.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	4519bc5c70cae56f45127932bfe730ff69b26fbcd353f0d7a81b04d75ca2e016
+0x35710	0xA8	src/code/resource_entry_best_select.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	180ae14cce164e67ec224e40a7be158d16ddfbbee735cbea8da568bdd6d019cc
+0x37C3C	0x74	src/code/audio_channel_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	fed29d32e5774748c5b93f20781d00b5c2fed58024344f1ef4e02b0f3da1675c
+0x37D74	0x98	src/code/resource_chunk_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	2bf79c86a776a71e1b25575a76cc85750e1d2be58bc90ffc37944ced52e99a03
 0x1BABC	0xDC	src/code/resource_buffers_replace.c	--assembler=asn64 --symbol=func_80032F3C:0x80032F3C --symbol=func_80032E00:0x80032E00 --symbol=func_80033308:0x80033308 --symbol=func_8001B314:0x8001B314 -O2 -G0 -mips3 -mgp32 -mfp32	67c2f7c79095f58284dca3f9faa1c6e12edac30a93b82e4b2230448d7e518d3b
 0x5582C	0xA8	src/code/object_duration_apply.c	--assembler=asn64 --symbol=func_800548B8:0x800548B8 -O2 -G0 -mips3 -mgp32 -mfp32	8460efaf90de30de2720f51a0cd1c572b0e2427f9bb5650e8eb772890564006a
 0x55DB4	0xC8	src/code/object_action_update.c	--assembler=asn64 --symbol=func_8005527C:0x8005527C --symbol=func_80063318:0x80063318 -O2 -G0 -mips3 -mgp32 -mfp32	451be2b666cafe5cf7d2f43f99f8e053404a41ad13220cd9c8ca458e639345e1
