@@ -363,8 +363,28 @@ def physical_map_tsv(audit: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+def address_space_summary(audit: dict) -> dict:
+    """Account for every offset in the unsigned 32-bit offset namespace."""
+    limit = 1 << 32
+    rom_size = audit["rom_size"]
+    if not 0 < rom_size <= limit:
+        raise AuditError("ROM size is outside the 32-bit offset namespace")
+    return {
+        "offset_start": 0,
+        "offset_end_exclusive": limit,
+        "cartridge_start": 0,
+        "cartridge_end_exclusive": rom_size,
+        "cartridge_bytes": rom_size,
+        "outside_cartridge_start": rom_size,
+        "outside_cartridge_end_exclusive": limit,
+        "outside_cartridge_bytes": limit - rom_size,
+        "last_offset": limit - 1,
+    }
+
+
 def write_outputs(audit: dict, output: Path) -> None:
     output.mkdir(parents=True, exist_ok=True)
+    audit["address_space"] = address_space_summary(audit)
     (output / "rom_layout.json").write_text(json.dumps(audit, indent=2) + "\n")
     (output / "rom_files.tsv").write_text(records_tsv(audit))
     (output / "rom_map.tsv").write_text(physical_map_tsv(audit))

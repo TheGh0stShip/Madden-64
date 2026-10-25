@@ -3,6 +3,14 @@
 The retail cartridge is 12,582,912 bytes. A complete physical sweep identifies
 the following gap-free top-level layout:
 
+The unsigned 32-bit offset namespace is also accounted for explicitly. The
+cartridge occupies `0x00000000..0x00C00000` (exclusive end). The interval
+`0x00C00000..0x100000000` is outside the cartridge, so offsets
+`0x00C00000..0xFFFFFFFF` contain no Madden Football 64 ROM bytes. These two
+intervals total exactly 4,294,967,296 offsets. This offset-space audit is kept
+separate from N64 virtual addresses, where the loader, resident program, and
+mutually exclusive overlays are mapped at runtime.
+
 | ROM range | Size | Purpose |
 |---|---:|---|
 | `0x000000..0x001000` | 4,096 | Header and IPL3 |

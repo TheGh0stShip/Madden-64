@@ -399,3 +399,6 @@
 0x4316C	0x4C	src/code/audio_mode_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	06e70dd47c29bdfb1dcd9fd7153d2bf3b990d81e49f685e0790e714e35dcf2fd
 0x18824	0x58	src/code/resource_flag_toggle.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	439ca49ed649ed0dfcad2582f92e7d6b9ec6c4625357a660346de1aa953c16bd
 0x1B774	0x50	src/code/pending_audio_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aa18ba615397e5ede378acdfa0275a33b939aeaab58705f4467741bf0bb5e84c
+0x2883C	0x5C	src/code/display_pair_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	306524fa9711fed74419972f46ecd46d5a1c9ac4a1d716752b71a536941a0b37
+0x236D8	0x64	src/code/gameplay_entry_byte_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7a7c36b79790fd077c0fca25cca61a8f8c1243bfce47b7ba113fdd2c819e5ad2
+0x1FE5C	0x58	src/code/display_selection_submit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	dfac720bccb36adfb1007861fa64d4ccd4ea70ba9317fd0e378045f2ff821a8d

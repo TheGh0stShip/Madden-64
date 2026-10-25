@@ -79,6 +79,15 @@ class RomLayoutTests(unittest.TestCase):
                          0xC00000)
         self.assertEqual(MAP.read_text(), AUDIT.physical_map_tsv(self.audit))
 
+    def test_complete_32_bit_offset_namespace_is_accounted_for(self):
+        summary = AUDIT.address_space_summary(self.audit)
+        self.assertEqual(summary["offset_start"], 0)
+        self.assertEqual(summary["offset_end_exclusive"], 0x100000000)
+        self.assertEqual(summary["last_offset"], 0xFFFFFFFF)
+        self.assertEqual(summary["cartridge_end_exclusive"], 0xC00000)
+        self.assertEqual(summary["cartridge_bytes"] +
+                         summary["outside_cartridge_bytes"], 0x100000000)
+
     def test_public_inventory_totals_are_current(self):
         inventory = tomllib.loads(PROGRESS.read_text())["inventory"]
         summary = self.audit["summary"]

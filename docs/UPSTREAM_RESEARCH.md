@@ -1,169 +1,116 @@
-# Upstream research
+# Upstream research audit
 
-Three independent research campaigns were performed against public repository
-indexes, source trees, technical forums, and project histories, followed by
-binary comparison against locally available N64 titles. The first sweep used
-the fifty title- and engine-focused passes below. A second sweep used 52
-distinct searches focused on matching automation, compiler behavior, boundary
-recovery, overlays, audio, graphics, asset formats, and cross-project reuse. A
-third campaign added 250 distinct searches across completed N64 projects,
-KMC GCC 2.7.2 internals, EA/Tiburon sibling titles, graphics and audio formats,
-signature transfer, function discovery, historical documentation, and tracker
-reporting.
-The purpose was to find reusable source, symbols, formats, compiler settings,
-and tooling rather than assume that games from the same period share an engine.
+The reproducible upstream campaign evaluates 500 independently ranked
+repositories selected from 1,262 unique search results. Run it with
+`make research`; the detailed ledger is written under `build/research` and is
+not a release artifact.
 
-| Pass | Search focus | Result |
-|---:|---|---|
-| 1 | Madden Football 64 repositories | No prior decompilation found |
-| 2 | Madden 64 N64 repositories | No source project found |
-| 3 | Madden64 decompilation | No source project found |
-| 4 | EA N64 decompilations | No Madden-family result |
-| 5 | Tiburon N64 engine | No public engine source found |
-| 6 | EA Sports N64 reversing | No usable source result |
-| 7 | Madden N64 tools | No extractor or symbol map found |
-| 8 | TNMF format | No independent format implementation found |
-| 9 | TMot format | No independent format implementation found |
-| 10 | TSpr format | No independent format implementation found |
-| 11 | Exact title on GitHub | Only this repository was relevant |
-| 12 | Exact short title on GitHub | No upstream decompilation found |
-| 13 | Madden64 repository names | No upstream decompilation found |
-| 14 | Current repository identity | Confirmed as the only matching project |
-| 15 | TNMF source-code signatures | No external parser found |
-| 16 | TMot source-code signatures | No external parser found |
-| 17 | TSpr source-code signatures | No external parser found |
-| 18 | Type-1 LZ naming | No matching implementation found |
-| 19 | PI register sequence `A4500010` | Generic N64 boot usage only |
-| 20 | PI register sequence `A4500014` | Generic N64 boot usage only |
-| 21 | Loader address `802004DC` | No published symbol/source hit |
-| 22 | First archive address `B00012D0` | No published format hit |
-| 23 | Exact title in indexed code | No independent code hit |
-| 24 | Product code `N8ME` | No source or symbol map found |
-| 25 | N64 decompilation tools | Found Splat and m3c |
-| 26 | N64 decompilation projects | Found mature build-layout references |
-| 27 | N64 reverse-engineering tools | Found Ghidra and ROM-splitting references |
-| 28 | EA Sports PlayStation decomps | No transferable Madden source found |
-| 29 | NASCAR 99 N64 | No decompilation found |
-| 30 | NHL 99 N64 | No decompilation found |
-| 31 | FIFA 99 N64 | No decompilation found |
-| 32 | World Cup 98 N64 | No decompilation found |
-| 33 | Knockout Kings 2000 N64 | No decompilation found |
-| 34 | Beetle Adventure Racing | Found an active matching decompilation |
-| 35 | N64 KMC compiler projects | Existing local KMC toolchain remains best fit |
-| 36 | GCC 2.7.2 KMC usage | Confirmed relevant compiler family |
-| 37 | KMC toolchain packaging | No better package than the current toolchain found |
-| 38 | EA Sports compiler evidence | No published Madden build configuration found |
-| 39 | EA N64 source releases | No applicable source release found |
-| 40 | Madden reverse engineering | No independent symbol work found |
-| 41 | Madden modding tools | No N64-specific tooling found |
-| 42 | Madden roster editors | No ROM-format implementation found |
-| 43 | Madden file formats | No technical specification found |
-| 44 | Madden ROM hacking | No code or data map found |
-| 45 | NFL 64 decomps | No applicable project found |
-| 46 | EA Tiburon source | No public N64 source found |
-| 47 | EA Canada N64 projects | No shared-source project found |
-| 48 | NASCAR 2000 N64 | No decompilation found |
-| 49 | NHL 2000 N64 | No decompilation found |
-| 50 | N64 sports-game decomps | No closer engine relative found |
+The campaign searches matching-decompilation, Nintendo 64, MIPS, compiler,
+binary-splitting, comparison, and static-recompilation sources. Each round
+records one unique repository, its update time, topics, implementation
+language, and relevance signals. Duplicate results from separate queries do
+not count as additional rounds.
 
-## Validated upstreams
+This campaign extends three earlier audits: 50 title/engine searches, 52
+matching and format searches, and 250 searches across completed N64 projects,
+compiler internals, EA/Tiburon siblings, assets, signatures, function
+discovery, and reporting. The combined research history therefore includes
+852 explicit passes or rounds, with the newest 500-round ledger independently
+reproducible.
 
-- [Splat](https://github.com/ethteck/splat) is a useful reference for eventual
-  linker and segment reconstruction, but the current byte-ledger already gives
-  Madden more exact packed-ROM coverage than a generic split configuration.
-- [m3c](https://github.com/ethteck/m3c) is relevant for generating and permuting
-  initial C candidates. The current matching pipeline already exposes the same
-  core workflow, so adopting another build layer would not itself add matches.
+## Findings applied to Madden Football 64
+
+- KMC GCC 2.7.2 remains the correct dominant game-code compiler. Upstream KMC
+  examples corroborate `-G0 -mgp32 -mfp32 -mips3`; this project additionally
+  preserves its verified `-O2` and R4300 multiply assembler behavior.
+- IDO remains limited to identified SDK/library objects. Sweeping IDO over the
+  resident game functions would waste compile cycles and blur compiler
+  provenance.
+- Random source permutation is useful after a candidate already differs only
+  in register allocation or scheduling. It is not a substitute for recovering
+  correct structure sizes, signedness, control flow, or relocation targets.
+- Relocation-aware instruction classification should remain the first triage
+  step. Register-only and scheduling-only candidates are the best bounded
+  search inputs; size and control-flow mismatches require manual correction
+  first.
+- Whole-object reports are valuable for publication, but ROM-linked byte
+  verification remains the authority for matching credit.
+- Data matching needs a first-mismatch scanner ordered by ROM address. This is
+  the most promising upstream process improvement not yet present in the
+  repository.
+- Batch campaigns should preserve compiler flags and symbol inputs with every
+  candidate so interrupted searches can be reproduced exactly.
+
+## Direct-transfer result
+
+No public upstream containing Madden Football 64 game-function source, a
+matching sibling N64 Madden project, or verified game-specific function bodies
+was found in the 500 rounds. Madden Football 64 was developed by EA Tiburon,
+but public projects from unrelated engines are useful for tools and SDK
+identification only; their game code is not treated as transferable evidence.
+
+Earlier exact-title, `N8ME`, loader-address, archive-address, container-name,
+and sibling-title searches reached the same result. No independent parser for
+the `TNMF`, `TMot`, or `TSpr` containers was found. Searches covering NASCAR,
+NHL, FIFA, World Cup, and Knockout Kings N64 releases likewise produced no
+source-compatible engine.
+
+## Highest-value primary sources
+
+- [Splat](https://github.com/ethteck/splat) for KMC-aware binary splitting and
+  compiler metadata.
+- [decomp-permuter](https://github.com/simonlindholm/decomp-permuter) for
+  bounded source-variation searches on structurally correct near matches.
+- [objdiff](https://github.com/encounter/objdiff) for object and progress
+  comparison formats.
+- [m2c](https://github.com/matt-kempster/m2c) for producing initial MIPS C
+  structure that must still be corrected and byte-verified.
+- [Mario Golf 64](https://github.com/monde-lointain/mariogolf64) and
+  [Snowboard Kids 2](https://github.com/cdlewis/snowboardkids2-decomp) for
+  current KMC project layouts and verification workflows.
+- [n64-decomp-workbench](https://github.com/akratch/n64-decomp-workbench) for
+  reproducible mismatch campaigns and relocation-aware triage.
+- [gameDecomp](https://github.com/GrantGallun/gameDecomp) for unattended,
+  checkpointed function-campaign design.
 - [libreultra](https://github.com/n64decomp/libreultra),
   [SDK tools](https://github.com/n64decomp/sdk-tools), and the
-  [IDO 5.3 package](https://github.com/n64decomp/ido5.3_cc) remain authoritative
-  references for the resident SDK portion.
-- [Beetle Adventure Racing](https://github.com/synamaxmusic/bar-decomp) provides
-  strong examples of relocatable N64 modules and asset loaders. Binary and
-  source inspection found a different Paradigm module/file system, not Madden's
-  archive formats, so its game code is not being imported.
-- [xsig](https://github.com/Druthulu/xsig) demonstrates relocation-masked
-  signatures for proving shared MIPS functions across projects. Madden's
-  present same-image search can use the stricter raw-byte form immediately;
-  cross-project masking remains useful once relocatable object listings are
-  available for closer KMC relatives.
-- [Turok 2](https://github.com/mgrz18/turok2-decomp) provides two applicable
-  workflow patterns: bulk screening of small m2c drafts and explicit rejection
-  of candidates that do not contain a complete return path. Its engine and
-  compiler are different, so its source is not imported.
-- [n64-decomp-workbench](https://github.com/akratch/n64-decomp-workbench)
-  documents compiler-difference classification and reproducible search
-  campaigns. Its register, frame, and scheduling diagnostics are applicable
-  to near matches without changing Madden's existing byte gate.
+  [IDO 5.3 package](https://github.com/n64decomp/ido5.3_cc) for identified
+  runtime-library code.
+- [xsig](https://github.com/Druthulu/xsig) for relocation-masked signatures
+  when raw cross-project comparisons are inappropriate.
+- [fn64](https://github.com/fn64/fn64) for conservative function-boundary
+  discovery and explicit false-start control.
+- [lfgfx](https://github.com/ethteck/lfgfx) for F3DEX display-list inspection
+  within Madden model containers.
+- [vgmstream](https://github.com/vgmstream/vgmstream) for comparison against
+  documented EA audio containers and codecs.
 
-## Applied findings from the second sweep
+## Format and binary-transfer evidence retained from earlier campaigns
 
-The useful results were applied as constraints rather than treated as progress
-by themselves:
+- `lfgfx` was tested against an uncompressed Madden `TNMF` record. With the
+  container segment base it resolves the 32-byte header, F3DEX commands,
+  vertices, palette, and texture payload at offsets held by the file. This is
+  structural evidence, not asset-reconstruction credit.
+- Madden's 237 audio records lack the `SCHl`, `SCDl`, and related signatures
+  used by the later EA formats documented in `vgmstream`; that decoder is not
+  directly applicable.
+- A local KMC-built WWF War Zone image was compared function-by-function with
+  Madden. Its nontrivial exact collisions were SDK/library code already
+  covered by the current runtime work; the only game-region leaf transfer was
+  the verified early no-op already present in this repository.
+- A local Nagano Winter Olympics '98 image is predominantly IDO-built and is
+  not a useful compiler or engine match for Madden's KMC game code.
+- Same-image raw-body comparison found an exact resident channel-call family
+  and produced a verified match. Raw identity remains the strongest source
+  reuse evidence available for this title.
 
-- Function-family grouping found repeated resident wrappers and return-value
-  leaves. One generic C body is now compiled under explicit function/callee
-  macros for each address, and every instance is independently byte-checked.
-- Candidate selection now rejects catalogue entries marked `invalid` or
-  `falls_through` before quick-win work. Direct disassembly confirmed that
-  several tempting 8- and 12-byte entries are internal basic blocks, not
-  functions.
-- Exact raw-byte families are preferred inside this image. Relocation-masked
-  comparison is reserved for cross-project objects where relocation records
-  distinguish addresses from genuine constants.
-- Bulk m2c screening is the next automation target, but generated drafts will
-  receive no progress credit unless the existing compiler and ROM comparison
-  gate reports an exact match.
+## Next process improvements
 
-## Findings from the 250-search campaign
-
-- The public Madden-specific trail remains sparse. No independent Madden 64
-  source tree, symbol map, archive parser, or implementation of the `TNMF`,
-  `TMot`, or `TSpr` containers was found. Searches for sibling EA N64 titles
-  also produced no source-compatible game engine.
-- [lfgfx](https://github.com/ethteck/lfgfx) was validated directly against an
-  uncompressed Madden `TNMF` record. With the container's segment base, it
-  resolves the record into a 32-byte header, an F3DEX display list, vertices,
-  a 512-byte palette, and texture payload at the offsets stored by the file.
-  This is useful structural evidence, but is not reconstruction credit.
-- [vgmstream](https://github.com/vgmstream/vgmstream/blob/master/src/meta/ea_schl.c)
-  documents EA's later `SCHl` block format and both N64 codec identifiers.
-  Madden's 237 audio records do not contain the `SCHl`, `SCDl`, or related
-  block signatures, so that decoder is not directly applicable to this title.
-- [mips-gcc-2.7.2](https://github.com/decompals/mips-gcc-2.7.2) remains the
-  best source-level reference for KMC-tailored register allocation, scheduling,
-  reload, combine, and delay-slot behavior. Compiler-pass inspection is more
-  useful for stubborn near matches than changing the established toolchain.
-- [fn64](https://github.com/fn64/fn64) demonstrates a conservative function
-  discovery policy that measures recall while accepting no known false splits.
-  Madden now applies the same principle operationally: the candidate-ranking
-  tool joins each overlay catalogue with its retained boundary findings and
-  excludes contradicted starts before proposing small unmatched functions.
-- [objdiff](https://github.com/encounter/objdiff) confirms that code, data, and
-  per-object progress should remain separate measures. The public report keeps
-  catalogued assets outside matching credit and does not turn research coverage
-  into completed units.
-
-Run `make candidates` to list the smallest credible unmatched overlay entries.
-The list is a work queue only; each item still requires disassembly review and
-the normal exact-byte gate.
-
-The whole-ROM attack audit subsequently found an exact 36-byte body shared by
-resident functions `func_80008E48` and `func_80033360`. Reusing the already
-matched channel-call source produced another exact match. This validates raw
-body-family transfer as a practical source-reuse path, not merely a search
-theory.
-
-## Binary comparison
-
-Two locally available 1998 titles were surveyed with the same tooling. Nagano
-Winter Olympics '98 is approximately 98.3 percent IDO game code and is a poor
-compiler match. WWF War Zone is approximately 94.2 percent KMC game code and
-was therefore compared function-by-function against Madden.
-
-The WWF comparison found extensive identical SDK/library routines, all already
-covered or named by the existing SDK work. Outside Madden's SDK address range,
-the only nontrivial exact whole-function collision was the leaf routine at
-`0x8000047C`. It is now represented by `src/code/early_noop.c` and verified by
-the normal matching gate. This comparison is useful as a quick-win filter, but
-does not support treating WWF as a shared-engine source tree.
+1. Add a ROM-ordered initialized-data mismatch command.
+2. Feed register-only and scheduling-only candidates to bounded permutation
+   campaigns in groups.
+3. Store candidate compiler/symbol fingerprints so stale results are rejected.
+4. Add normalized instruction-family fingerprints for cross-project SDK and
+   runtime matching without mistaking shared libraries for game code.
+5. Keep the physical ROM map, runtime virtual maps, and 32-bit offset envelope
+   as separate address spaces in every report.
