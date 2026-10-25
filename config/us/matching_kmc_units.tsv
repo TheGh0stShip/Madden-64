@@ -479,3 +479,5 @@
 0x3B8A0	0x8C	src/code/play_record_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d72643311d9f47b56380a26a57cf8459c39a4821df4eb2c128fea944662aaf73
 0x346A8	0x68	src/code/runtime_context_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7951a7f58d5e3cba7b6c375c7a5793e0937c74cb89c53621a1f7170c78c35388
 0x371B8	0x68	src/code/buffer_cache_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a10c8df205906d978415c280048623a84bd2f66c60a96441e4ec7dbe5e697ab1
+0x2C1EC	0x38	src/code/game_mode_pair_test.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f70d1179c6231af8d08ac969944d33ac49088913344dbe50a06074b08f29331
+0x353B4	0x50	src/code/record_offsets_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d00bba358605c94024e6c504fa381e9588942e436b73cabe1c937d8ea7f5a04b
