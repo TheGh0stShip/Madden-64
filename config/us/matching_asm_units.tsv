@@ -296,3 +296,11 @@
 0x3BC2C	0x374	src/code/audio_table_decode_primary.s	-O2 -G0 -mips3 -mgp32 -mfp32	f1842b3583d22a2b7856683666566b4eab73235f1bc8da776076f16c6e82ed68
 0x3BFA0	0x30C	src/code/audio_table_decode_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	04c6b97fc31b2eb2bc130c82c8afa77c6031225091008a4805c5535077ed6921
 0x3C5C0	0x3A8	src/code/audio_sequence_channel_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	dd24f99c149f9ae4ce37a841fd2bc6f44573165f83d3f44dbccb7d673e221e86
+0x1D68C	0x5FC	src/code/ui_text_block_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	a28d396cadc704c53621bf93af7871a4ae0db1461d8ef8d366374ea9833730e1
+0x1E690	0x508	src/code/ui_text_layout_forward.s	-O2 -G0 -mips3 -mgp32 -mfp32	79557dffbe6289089b3a91e444df3f316e1828d31a79b716f99c434fb38e1e45
+0x1EB98	0x518	src/code/ui_text_layout_reverse.s	-O2 -G0 -mips3 -mgp32 -mfp32	92a03370be82eb1c3a0f4e060559bc29658722b6f002b3e47c3663dd1dbe9470
+0x20908	0x4B0	src/code/menu_player_state_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	7cf76afec18d4f470d14ad7f13ada531cf62d2a411f17defabee73a39a33fdbc
+0x20DB8	0x474	src/code/menu_animation_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	384772214c1a36394a25729fba048aef19b15cbf1666f829eac9d2e199d5026b
+0x21778	0x500	src/code/menu_screen_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	a22be73d74c2053add03cc95a312dd9e3397503be160e515867407108784b7f9
+0x24428	0x438	src/code/gameplay_record_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	17d3fe88b15a8001660436c793f890a63105700cd4d63b42137b4fbd7a09e4f1
+0x25294	0x4FC	src/code/gameplay_state_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	a624bbdd2b9e90de55e0d3460e299092b62265b16176a50e5c06f1cdb74cecd4
