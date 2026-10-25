@@ -323,3 +323,11 @@
 0x2AA88	0x4D0	src/code/gameplay_selection_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	cdc69c2b0d46b81c34d929632bad3d9e6ba12cd15abe25f4b53a2edcdebcec4f
 0x18CA8	0x498	src/code/resource_archive_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	916488c5131f244aedc9f9c5f9c9c2960ec8bcb67712dfe2ff1924d08156bdd9
 0x61D68	0x48C	src/code/object_index_stream_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	f3fffc10e983a76e11efefd20197dc895089775e2b5180b2156e36e64b39cf81
+0x38194	0x568	src/code/audio_voice_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	c901e4237158096c6dec79b9f7f0db7a565ccc237f8dd19ff73685799eda4d9b
+0x2B868	0x550	src/code/gameplay_interface_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	f182a4fa48ca9ce085d4244e3921ca79914e0099fedde89871636def0c726253
+0x3E9F8	0x444	src/code/audio_bank_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	92da4e40e2ec40056a7d4fc1244b56178bc258cfe80ea1b305fbbf3823bcd837
+0x410D0	0x3F8	src/code/interface_runtime_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	e608045ed05cface6846129ce5290a0b7abb3c1a504d8bc49b84b67442681be1
+0x43604	0x3C4	src/code/display_command_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	26ab645e18b2edc00bdf5b09fe28b20f1c5c49f7d5a9b9b10def015bb4c97daa
+0x34720	0x404	src/code/memory_arena_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	6f8e7f7bf6e41481c4d09f5f58357ec49ece099716f59be07155dbd3e03d8ca9
+0x32C88	0x410	src/code/runtime_input_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0bc885dfadda04befa7a6ffc7b3f41959564cad74c6dd5e8145595d6ca147583
+0x2FC38	0x414	src/code/gameplay_command_execute.s	-O2 -G0 -mips3 -mgp32 -mfp32	5517f7338e5695ba082bc22eadbbeaffb74b295ef974c9cadf630440229dcf6f
