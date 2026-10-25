@@ -1,4 +1,6 @@
 # KMC GCC 2.7.2; ROM_START SIZE SOURCE FLAGS SHA256
+0x16BD0	0x84	src/code/strided_state_consume.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	95ac9c7449387855424aa4f2a4b0f36e65fb930c91c0bc5e914d62558959ccbe
+0x45344	0x80	src/code/indexed_range_submit.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	24e5da85c6528b3a38c56dc70fedcc9d2d1795619cf498135511baefd3d8e489
 0xC3E4	0x7C	src/code/object_resource_cleanup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4a6fcb2e4b316119fa60d62da34564650a643be91a50eff934e4b09664eaffb9
 0x28734	0x84	src/code/interface_command_group.c	-DFUNCTION=interface_command_group_primary -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2eb9fb43642fd2f75252eb72da7cc666b7acfb19fb4d9cd4a0af5c48bcc75cde
 0x287B8	0x84	src/code/interface_command_group.c	-DFUNCTION=interface_command_group_secondary -DFIRST_COMMAND=0x21 -DSECOND_COMMAND=0x22 -DTHIRD_COMMAND=0x2D -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c2159b669e67271fc1ddb3eeeb3fd60ed735c2895afef07bd58c64bb347d56cb

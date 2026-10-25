@@ -1,4 +1,7 @@
 # GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
+0xE720	0x84	src/code/node_callbacks_apply.s	--symbol=D_800782FC:0x800782FC -O2 -G0 -mips3 -mgp32 -mfp32	085385ea3569037035661be4e45d14e7ec202f1d156db88e6232da8408f6f0a4
+0x350E8	0x84	src/code/object_state_initialize.s	--symbol=func_80034388:0x80034388 --symbol=func_80033B20:0x80033B20 -O2 -G0 -mips3 -mgp32 -mfp32	10b0e3a5b4155a5ddb343714ab2a1c3bc079df656c7527e2d68923c694660ab3
+0x375A0	0x84	src/code/audio_channel_wait_release.s	--symbol=D_8007A500:0x8007A500 --symbol=D_8008B07C:0x8008B07C --symbol=D_8008B080:0x8008B080 --symbol=func_80036540:0x80036540 -O2 -G0 -mips3 -mgp32 -mfp32	0e8825f33692f41b19071c6d3ed14a686439391ed1217bda5c3451ff44556211
 0x368FC	0x80	src/code/audio_channel_replace.s	--symbol=D_8008B080:0x8008B080 --symbol=func_80036540:0x80036540 --symbol=func_80036A24:0x80036A24 -O2 -G0 -mips3 -mgp32 -mfp32	74814a888ab9e2e62afe46559844307014e97e0c34dc037fb88c0cd534ea4884
 0x3B200	0x120	src/code/audio_frame_storage_mode.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5cdcdab4b1e7a36296edde1f24459b28193bb796d6d2f452b15ac43ade393699
 0x3BA80	0x1AC	src/code/audio_frame_collision_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afeabe508a0e5514d0ff3409d02b3a8d79cb5fb2812c8ae42ba648621013a71b
