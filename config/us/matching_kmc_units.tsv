@@ -460,3 +460,4 @@
 0x1A544	0x5C	src/code/value_update_mode.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2f43e25d1b799faddf73d9210c2645523ec4bf215096919d2964c7c2b792a899
 0x3F580	0x30	src/code/runtime_channel_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bda161fe309789cdb0fdc3e8a8a3a4cd4623371872e474e9a9a0fca6e3cd0901
 0x16880	0x7C	src/code/system_resource_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4b141d740c355cbcd0ac35e7f6d1453e26f37e6766f46188ce4c4eab5f217d78
+0x3DE4C	0x88	src/code/audio_record_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b3c54270436de449b9dcb4bc86e085884faaa263010be26b3a2cab50527110be
