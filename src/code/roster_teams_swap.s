@@ -1,0 +1,67 @@
+.text
+.align 2
+.set noreorder
+.globl roster_teams_swap
+.ent roster_teams_swap
+roster_teams_swap:
+    addiu $sp,$sp,-0x28
+    sw $s3,0x1c($sp)
+    move $s3,$a0
+    sw $s4,0x20($sp)
+    move $s4,$a1
+    sw $ra,0x24($sp)
+    sw $s2,0x18($sp)
+    sw $s1,0x14($sp)
+    jal func_80037258
+     sw $s0,0x10($sp)
+    andi $s3,$s3,0xffff
+    lui $v1,0x8008
+    addiu $v1,$v1,0xcfc
+    sll $s2,$s3,1
+    addu $s2,$s2,$v1
+    lhu $a0,0($s2)
+    andi $s4,$s4,0xffff
+    addiu $v1,$v1,0x214c
+    sll $s0,$s4,1
+    addu $s0,$s0,$v1
+    lhu $a1,0($s0)
+    jal func_80029E88
+     move $s1,$v0
+    jal func_80037290
+     move $a0,$s1
+    lhu $a2,0($s2)
+    lhu $v0,0($s0)
+    sll $v1,$s3,2
+    addu $v1,$v1,$s3
+    sll $v1,$v1,3
+    sh $v0,0($s2)
+    sh $a2,0($s0)
+    lui $at,0x8008
+    addu $at,$at,$v1
+    lbu $a2,0xd78($at)
+    sll $v0,$s4,2
+    addu $v0,$v0,$s4
+    sll $v0,$v0,3
+    lui $at,0x8008
+    addu $at,$at,$v0
+    lbu $a1,0x2ec4($at)
+    lui $at,0x8008
+    addu $at,$at,$v1
+    sb $a1,0xd78($at)
+    lui $at,0x8008
+    addu $at,$at,$v0
+    sb $a2,0x2ec4($at)
+    jal roster_runtime_copy
+     move $a0,$zero
+    jal roster_runtime_copy
+     addiu $a0,$zero,1
+    lw $ra,0x24($sp)
+    lw $s4,0x20($sp)
+    lw $s3,0x1c($sp)
+    lw $s2,0x18($sp)
+    lw $s1,0x14($sp)
+    lw $s0,0x10($sp)
+    addiu $sp,$sp,0x28
+    jr $ra
+     nop
+.end roster_teams_swap

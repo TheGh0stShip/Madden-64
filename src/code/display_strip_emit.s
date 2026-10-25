@@ -1,0 +1,66 @@
+.text
+.align 2
+.set noreorder
+.globl display_strip_emit
+.ent display_strip_emit
+display_strip_emit:
+    addiu $sp,$sp,-0x18
+    sw $s0,0x10($sp)
+    sw $ra,0x14($sp)
+    jal func_80045394
+     move $s0,$a1
+    move $t0,$zero
+    andi $a3,$v0,0xffff
+    lui $t1,0xb100
+    addiu $a2,$s0,6
+.Lloop:
+    lui $a1,0x8008
+    lw $a1,-0x54dc($a1)
+    lhu $a0,-4($a2)
+    addiu $t0,$t0,1
+    addiu $v0,$a1,8
+    lui $at,0x8008
+    sw $v0,-0x54dc($at)
+    lhu $v1,0($s0)
+    addu $a0,$a0,$a3
+    sll $a0,$a0,9
+    lhu $v0,-2($a2)
+    andi $a0,$a0,0xfe00
+    addu $v1,$v1,$a3
+    sll $v1,$v1,1
+    andi $v1,$v1,0xff
+    sll $v1,$v1,16
+    or $v1,$v1,$a0
+    addu $v0,$v0,$a3
+    sll $v0,$v0,1
+    andi $v0,$v0,0xff
+    or $v1,$v1,$v0
+    or $v1,$v1,$t1
+    sw $v1,0($a1)
+    lhu $v0,0($s0)
+    lhu $v1,-2($a2)
+    lhu $a0,0($a2)
+    addiu $a2,$a2,2
+    addu $v0,$v0,$a3
+    sll $v0,$v0,1
+    andi $v0,$v0,0xff
+    sll $v0,$v0,16
+    addu $v1,$v1,$a3
+    sll $v1,$v1,9
+    andi $v1,$v1,0xfe00
+    or $v0,$v0,$v1
+    addu $a0,$a0,$a3
+    sll $a0,$a0,1
+    andi $a0,$a0,0xff
+    or $v0,$v0,$a0
+    sw $v0,4($a1)
+    andi $v0,$t0,0xffff
+    sltiu $v0,$v0,6
+    bnez $v0,.Lloop
+     addiu $s0,$s0,2
+    lw $ra,0x14($sp)
+    lw $s0,0x10($sp)
+    addiu $sp,$sp,0x18
+    jr $ra
+     nop
+.end display_strip_emit

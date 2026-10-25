@@ -220,3 +220,11 @@
 0x3D3E4	0xE4	src/code/audio_output_select.s	-O2 -G0 -mips3 -mgp32 -mfp32	f8136f643a63a24db9e46833ef8942f0751f031af84bae0ef26e1b0b91fee5f4
 0x40C10	0xE4	src/code/audio_slots_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	a9fa453eb8f8d80239aa4badec80e93e8efe40bcc043b37cedefe3b69e0fbe1b
 0x444B4	0xE8	src/code/object_vector_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	4816d0ba36102a53382866fd15e2200cf4ba2f8fcbe2602fefe2f356b30db394
+0x1D184	0xEC	src/code/layout_coordinates_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	e2f40b511b70ea490356c86502ec2054cc07a9bb58be071a4a92d080904286ff
+0x2CD08	0xEC	src/code/team_secondary_stats_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	ee20a9dafe069cf426fcd1622bc99625aef0a776ee4ae8b12dc00879bdef46a2
+0x2EC1C	0xEC	src/code/matrix_vector_transform.s	-O2 -G0 -mips3 -mgp32 -mfp32	f4f8a91fb416038788f5a0f0479fe4405e8d0320c31071ab4b5e0ea6e73979d9
+0x31C40	0xEC	src/code/controller_axes_resolve.s	--symbol=controller_flags_resolve:0x80030B9C -O2 -G0 -mips3 -mgp32 -mfp32	f656b489de33a21d3dc2e8e4541cf40c37740877cda9455d189467d1309a05fd
+0x36590	0xEC	src/code/audio_slot_allocate.s	-O2 -G0 -mips3 -mgp32 -mfp32	5c93ea50925e7ecbf8485240fb2d103a725c675530830b829482f00928e775af
+0x3A814	0xF0	src/code/roster_teams_swap.s	--symbol=roster_runtime_copy:0x80039ACC -O2 -G0 -mips3 -mgp32 -mfp32	5e544f0267c49b84d26281ceeb54f9a3f64451c0c5056035e7d8b013526cadf2
+0x41B60	0xF0	src/code/audio_vectors_transform.s	-O2 -G0 -mips3 -mgp32 -mfp32	8a66dc5f7a1d4416928b1bc1943a0d60605c8dfc4cef7cfb5db9c999fb71ef2f
+0x46050	0xE8	src/code/display_strip_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	a523820edc5fd86786070e78c60f4afa205b09fae7aa23498a6e505e80c7acaf

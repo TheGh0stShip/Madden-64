@@ -1,0 +1,66 @@
+.text
+.align 2
+.set noreorder
+.globl matrix_vector_transform
+.ent matrix_vector_transform
+matrix_vector_transform:
+    addiu $sp,$sp,-0x10
+    swc1 $f23,8($sp)
+    swc1 $f22,0xc($sp)
+    swc1 $f21,0($sp)
+    swc1 $f20,4($sp)
+    lwc1 $f10,0($a2)
+    lwc1 $f18,0($a1)
+    mul.s $f10,$f10,$f18
+    lwc1 $f2,0x10($a2)
+    lwc1 $f20,4($a1)
+    mul.s $f2,$f2,$f20
+    lwc1 $f0,0x20($a2)
+    lwc1 $f22,8($a1)
+    mul.s $f0,$f0,$f22
+    lwc1 $f8,4($a2)
+    mul.s $f8,$f8,$f18
+    lwc1 $f4,0x14($a2)
+    mul.s $f4,$f4,$f20
+    lwc1 $f6,8($a2)
+    mul.s $f6,$f6,$f18
+    lwc1 $f16,0x18($a2)
+    mul.s $f16,$f16,$f20
+    lwc1 $f14,0x24($a2)
+    add.s $f10,$f10,$f2
+    mul.s $f14,$f14,$f22
+    add.s $f8,$f8,$f4
+    lwc1 $f12,0x28($a2)
+    add.s $f6,$f6,$f16
+    mul.s $f12,$f12,$f22
+    add.s $f10,$f10,$f0
+    lwc1 $f2,0xc($a2)
+    add.s $f8,$f8,$f14
+    mul.s $f2,$f2,$f18
+    add.s $f6,$f6,$f12
+    lwc1 $f0,0x30($a2)
+    lwc1 $f4,0x1c($a2)
+    add.s $f10,$f10,$f0
+    lwc1 $f0,0x34($a2)
+    mul.s $f4,$f4,$f20
+    add.s $f8,$f8,$f0
+    lwc1 $f12,0x38($a2)
+    lwc1 $f0,0x2c($a2)
+    add.s $f6,$f6,$f12
+    mul.s $f0,$f0,$f22
+    add.s $f2,$f2,$f4
+    add.s $f2,$f2,$f0
+    lwc1 $f0,0x3c($a2)
+    add.s $f2,$f2,$f0
+    swc1 $f10,0($a0)
+    swc1 $f8,4($a0)
+    swc1 $f6,8($a0)
+    swc1 $f2,0xc($a0)
+    lwc1 $f23,8($sp)
+    lwc1 $f22,0xc($sp)
+    lwc1 $f21,0($sp)
+    lwc1 $f20,4($sp)
+    addiu $sp,$sp,0x10
+    jr $ra
+     nop
+.end matrix_vector_transform
