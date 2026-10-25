@@ -204,3 +204,11 @@
 0x251B8	0xDC	src/code/team_stat_ratio_pack_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	5b9344a22dd77d85f982e11525c496e2810a7d19e02c52f2183db7ccb0d9200d
 0x28658	0xDC	src/code/play_event_state_build.s	--symbol=team_event_append:0x80025794 --symbol=team_event_append_secondary:0x8002586C -O2 -G0 -mips3 -mgp32 -mfp32	731ef2ecd97600284c1d1aee1406258bd0442113f9732b1c73828dd8a356134e
 0x223F4	0xE0	src/code/game_session_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	cfe5ba10b6505a253c7aaaebb5b7d15c4de62bfb899d7170a4c0b15514d102f0
+0x2A458	0xDC	src/code/play_event_queue_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
+0x33C50	0xDC	src/code/memory_block_split.s	-O2 -G0 -mips3 -mgp32 -mfp32	7d191d556e18131a17dd055bae01e96cc4426f45758a5496d27b80cc7ae86cba
+0x3428C	0xDC	src/code/memory_block_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	de14c54a1a5e84e5501690d97ad6fe33bbe491f0d196b16438f5507a68bda25a
+0x40894	0xDC	src/code/team_slot_available_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	aff6d0ffbbafc359123018c561677ce60b773d5577b0f016bcc2e238d3c136b5
+0x40CF4	0xDC	src/code/audio_record_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	f1784526551e86eaf31cf81c0a858842f3dece0da539687ee17ea8f6bcc80cb1
+0x28D44	0xE0	src/code/play_flags_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	5e67960de9fc342223227211bead4fe35cbf448f8cd0ec07a06eaaaf0746af9c
+0x3D64C	0xE0	src/code/audio_runtime_shutdown.s	-O2 -G0 -mips3 -mgp32 -mfp32	144e6068437e96b8214780b31f611331b9e9e6e7f1be5e22f2cfc80f95ecefaf
+0x40B30	0xE0	src/code/audio_record_field_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	b27d4b16c4ec76533f9d0b7dfbbc6c8d2602fc54b34c3c894ef825ad4a9ae9e3
