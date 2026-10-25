@@ -470,3 +470,6 @@
 0x45E8C	0x70	src/code/vector_records_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2f5e349db674c3b7994a3d4eebcd00bb111d8dc58ca571e186d1ad5640f489fb
 0x3516C	0x7C	src/code/typed_nodes_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	91063eb6536256f56c549bf8db66ac0b7c9ee61b89195be7c8739a3ca1a05dbf
 0x358B4	0x7C	src/code/three_mode_value_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ae45749e5275527d3dfb917cfee62857ae6a6b20bcd23fd9823ea7811c6b909b
+0x35A58	0x7C	src/code/runtime_entry_count_adjust.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f5e1da881db32954808e73dfc1c9d2232acabebc9cea869464e14ebfea7a2296
+0x35AD4	0x8C	src/code/runtime_entry_resolved_adjust.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	287fdb668309dbcbf71b540e2e1f61241b7fd4a5ddef1f6e8e87e66828caf771
+0x35BD8	0x8C	src/code/runtime_entries_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0022ff25b1aa9c90c017a5098588a7e93ab2b6391c5ec20eace6020b92676f88
