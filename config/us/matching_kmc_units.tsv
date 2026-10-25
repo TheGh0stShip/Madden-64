@@ -405,3 +405,5 @@
 0x3A2E0	0x70	src/code/audio_resources_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1f58625823f56c136829937e4627f9de45f21c8fb79f383d657d606d4515e0c5
 0x3A7B0	0x64	src/code/frame_values_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	39da252e666a4abe462189be8fccdc2a4afeaedd8b9f88e33bf5e89b93843c1c
 0x575A0	0x68	src/code/display_owner_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e3671a9ad06b49e67cdf16df5e5988a481660cfad453d9dc3fa2ce287e4f7bf7
+0x380B0	0x40	src/code/audio_grid_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1e626aa37b705b5b277df85eb9437ff6e8facc0fd87e2e7ceccbc6e852198684
+0x5FA48	0x40	src/code/indexed_byte_lookup_store.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	905fc3d4e2779f19055e0f905aaa19cb4552f56a3c4021738d927728a21831e3
