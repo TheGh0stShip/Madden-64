@@ -1,0 +1,49 @@
+.text
+.align 2
+.set noreorder
+.globl vector_transform_to_bytes
+.ent vector_transform_to_bytes
+vector_transform_to_bytes:
+    addiu $sp,$sp,-0x30
+    sw $s1,0x24($sp)
+    move $s1,$a1
+    sw $ra,0x28($sp)
+    sw $s0,0x20($sp)
+    lw $v0,0($a0)
+    lw $v1,4($a0)
+    lw $a1,8($a0)
+    sw $v0,0x10($sp)
+    sw $v1,0x14($sp)
+    sw $a1,0x18($sp)
+    lw $v0,0x10($sp)
+    lw $v1,0x14($sp)
+    lw $a0,0x18($sp)
+    lui $s0,0x8008
+    addiu $s0,$s0,-0x7bc0
+    move $a1,$s0
+    sw $a0,0x18($sp)
+    addiu $a0,$sp,0x10
+    sw $v0,0x10($sp)
+    jal func_8002DD68
+     sw $v1,0x14($sp)
+    lw $v0,0($s0)
+    addiu $v0,$v0,0x200
+    sra $v0,$v0,10
+    sb $v0,0($s1)
+    lui $v0,0x8008
+    lw $v0,-0x7bbc($v0)
+    addiu $v0,$v0,0x200
+    sra $v0,$v0,10
+    sb $v0,1($s1)
+    lui $v0,0x8008
+    lw $v0,-0x7bb8($v0)
+    addiu $v0,$v0,0x200
+    sra $v0,$v0,10
+    sb $v0,2($s1)
+    lw $ra,0x28($sp)
+    lw $s1,0x24($sp)
+    lw $s0,0x20($sp)
+    addiu $sp,$sp,0x30
+    jr $ra
+     nop
+.end vector_transform_to_bytes
