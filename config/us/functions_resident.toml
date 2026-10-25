@@ -86,7 +86,7 @@ functions = [
     { name = "display_surface_clone", vram = 0x8000b860, size = 0xcc }, # asm
     { name = "display_buffer_sync", vram = 0x8000b92c, size = 0xa8 }, # asm
     { name = "display_system_run", vram = 0x8000b9d4, size = 0x11c }, # asm
-    { name = "display_page_activate", vram = 0x8000baf0, size = 0xa8 }, # asm
+    { name = "display_page_activate", vram = 0x8000baf0, size = 0xa8 }, # c
     { name = "display_page_configure", vram = 0x8000bb98, size = 0xdc }, # asm
     { name = "display_frame_setup", vram = 0x8000bc74, size = 0x20c }, # asm
     { name = "func_8000BE80", vram = 0x8000be80, size = 0x68 }, # leaf
@@ -94,8 +94,8 @@ functions = [
     { name = "func_8000BEF8", vram = 0x8000bef8, size = 0x10 }, # stub
     { name = "display_frame_context_initialize", vram = 0x8000bf08, size = 0x358 }, # asm
     { name = "display_frame_build", vram = 0x8000c260, size = 0x530 }, # asm
-    { name = "object_display_segment_emit", vram = 0x8000c790, size = 0x80 }, # asm
-    { name = "object_display_segment_enable", vram = 0x8000c810, size = 0x88 }, # asm
+    { name = "object_display_segment_emit", vram = 0x8000c790, size = 0x80 }, # c
+    { name = "object_display_segment_enable", vram = 0x8000c810, size = 0x88 }, # c
     { name = "func_8000C898", vram = 0x8000c898, size = 0x8 }, # stub
     { name = "func_8000C8A0", vram = 0x8000c8a0, size = 0xc }, # stub
     { name = "func_8000C8AC", vram = 0x8000c8ac, size = 0x10 }, # stub

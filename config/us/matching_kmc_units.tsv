@@ -585,3 +585,6 @@
 0xE1BC	0xC8	src/code/object_children_create.c	--assembler=asn64 --symbol=D_800782F0:0x800782F0 --symbol=D_80064BA8:0x80064BA8 --symbol=func_80033298:0x80033298 --symbol=func_8000D740:0x8000D740 -O2 -G0 -mips3 -mgp32 -mfp32	e1edb238e953bd991eaed5733b0d1b0a99f01c31e59d77734f0c739edfdd7bfd
 0x352DC	0x8C	src/code/resource_offsets_relocate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	1443afab2e5bee65932fd35cf82b46816bd707b3dbe33ab30fa40b8f8ce53def
 0x5BDB4	0xC4	src/code/object_task_schedule.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	43648184e22db56f9b784f7c0486ed50cc1340557016a21c0ec7cc8c7394af30
+0xC6F0	0xA8	src/code/display_page_activate.c	--assembler=asn64 --symbol=D_80087908:0x80087908 --symbol=D_80086170:0x80086170 -O2 -G0 -mips3 -mgp32 -mfp32	047dfefd5c30231ed804a2c0e95bcaed9e4f87c6e6e2a208f097ce867764cfa7
+0xD390	0x80	src/code/object_display_segment_emit.c	--assembler=asn64 --symbol=D_80084F5C:0x80084F5C --symbol=D_8008AFD4:0x8008AFD4 -O2 -G0 -mips3 -mgp32 -mfp32	a7258fc77ae348c1aa13d6e389485569358b25dc0648bba55c5ad927d10cd38a
+0xD410	0x88	src/code/object_display_segment_enable.c	--assembler=asn64 --symbol=D_80084F5C:0x80084F5C --symbol=D_8008AFD4:0x8008AFD4 -O2 -G0 -mips3 -mgp32 -mfp32	f50fddcd10d7092cdbaec3574eaacc11e7976763e0d7405b3603570cbf0076a3

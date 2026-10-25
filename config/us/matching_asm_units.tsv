@@ -27,7 +27,6 @@
 0x3AEC8	0x90	src/code/frame_halfword_remove.s	-O2 -G0 -mips3 -mgp32 -mfp32	07b9ae64e56421d140d70bd5a8c212de905e2170d6829232c662d45772de0530
 0xDBA4	0x78	src/code/object_active_children_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
 0x3A350	0x78	src/code/roster_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e32c8d15b061901377f1f128d8c3a478272a5b82f8e2fc1ccde0c0f0a7e31a3
-0xD390	0x80	src/code/object_display_segment_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	a7258fc77ae348c1aa13d6e389485569358b25dc0648bba55c5ad927d10cd38a
 0x22E80	0x84	src/code/roster_attribute_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	cdadcb7477b01290fb436c04310d48fc6066373098fadb9592c1d7123ce44142
 0x2373C	0x84	src/code/roster_symbol_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef1c0e46dfcff4c11e592a4448dd1e1a38505c4040150457e2e0269ecdb26ba6
 0x25818	0x84	src/code/frame_group_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	ace800bfb226efbb9e2fbd3e7c1f8dc32f71c4c985a4c26587f42f4bc9f41cd1
@@ -35,7 +34,6 @@
 0x44E70	0x84	src/code/texture_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ac1391ac9363bb7b9d57d253a806a8c9d1c69a2013617c098f6f4db389418e5
 0x2038C	0x90	src/code/player_index_selection_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	1f5b5f3ae494dde37695129d9c8709e0c4cba0d02d05b35d03ad57df9d85da8b
 0xFFBC	0x94	src/code/object_index_rows_shift.s	-O2 -G0 -mips3 -mgp32 -mfp32	38e3a286b6a4408b2982f307b8a12b2fbd98c1157503384eed0cdfa4ce6e43ba
-0xD410	0x88	src/code/object_display_segment_enable.s	-O2 -G0 -mips3 -mgp32 -mfp32	f50fddcd10d7092cdbaec3574eaacc11e7976763e0d7405b3603570cbf0076a3
 0x1B088	0x98	src/code/animation_step_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	feaf14dc842e030c09bfc94eacd6ff853a21c21b9f6b9e269ce8f021f4271321
 0x36AF0	0x98	src/code/audio_entry_resource_mark.s	-O2 -G0 -mips3 -mgp32 -mfp32	707b6f54b8d4df00f9c14b3c8c33ff6cc551685038169ffc39bb1c06867a3fa3
 0x45EFC	0x98	src/code/display_vectors_integrate.s	-O2 -G0 -mips3 -mgp32 -mfp32	f7dee0a6db9c3eeda89dc0c50d392c044897ad285ba56eff7c456104a47d86c2
@@ -59,7 +57,6 @@
 0xED64	0xA8	src/code/vector_transform_to_bytes.s	-O2 -G0 -mips3 -mgp32 -mfp32	556db0309262b5ba8ffbcd303a96c96f4508ded5f8601905eb42ac5a3ee4dbe3
 0x453C4	0xA8	src/code/grid_handles_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e3a4f42d3df7090589d4b14067683a83aa3851f7ac70974f1ebc8c8ea8b1e5e
 0xC52C	0xA8	src/code/display_buffer_sync.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ed05d530c6bb2d8d8be5584adf81f739ca91d650d791452b61103c6f79ad2a6
-0xC6F0	0xA8	src/code/display_page_activate.s	-O2 -G0 -mips3 -mgp32 -mfp32	047dfefd5c30231ed804a2c0e95bcaed9e4f87c6e6e2a208f097ce867764cfa7
 0x25C6C	0xA8	src/code/menu_buffer_prepare_once.s	-O2 -G0 -mips3 -mgp32 -mfp32	cd687517004713babe9dbb0cb90718b4befef8e562ec309880550c715d507b93
 0x3419C	0xA8	src/code/resource_node_unlink.s	-O2 -G0 -mips3 -mgp32 -mfp32	ad0c9dcd8d459ae503d85e2cc5bc35131309e1fd0ef9bc04f3121cf97492ef8b
 0x35ED8	0xA8	src/code/resource_request_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	c62d31a658e2352fb60dbcf502d721e8d77856308c17d182ee71609b020f0089
