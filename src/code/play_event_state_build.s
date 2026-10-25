@@ -1,0 +1,62 @@
+.text
+.align 2
+.set noreorder
+.globl play_event_state_build
+.ent play_event_state_build
+play_event_state_build:
+    addiu $sp,$sp,-0x20
+    sw $s1,0x14($sp)
+    move $s1,$a0
+    sw $s2,0x18($sp)
+    move $s2,$a1
+    sw $ra,0x1c($sp)
+    sw $s0,0x10($sp)
+    lbu $a0,0x1e($s1)
+    lbu $a1,0x1f($s1)
+    addiu $a2,$zero,9
+    jal team_event_append
+     addiu $a3,$zero,1
+    lbu $a0,0x1e($s1)
+    lbu $a1,0x1f($s1)
+    addiu $a2,$zero,0xa
+    sll $s0,$s2,16
+    sra $s0,$s0,16
+    jal team_event_append
+     move $a3,$s0
+    lbu $a0,0x1e($s1)
+    lbu $a1,0x1f($s1)
+    addiu $a2,$zero,0x2a
+    jal team_event_append_secondary
+     move $a3,$s0
+    lbu $a0,0x1e($s1)
+    addiu $a1,$zero,2
+    jal func_80025944
+     move $a2,$s0
+    lbu $a0,0x1e($s1)
+    move $a1,$zero
+    jal func_80025944
+     move $a2,$s0
+    lbu $a0,0x1e($s1)
+    addiu $a1,$zero,0xa
+    jal func_80025944
+     move $a2,$s0
+    addiu $v0,$zero,1
+    lui $at,0x8009
+    sb $v0,-0x6d5c($at)
+    lui $at,0x8009
+    sb $s2,-0x6d5b($at)
+    jal func_800297FC
+     move $a0,$s1
+    lui $at,0x8009
+    sb $v0,-0x6d5a($at)
+    addiu $v0,$zero,0xff
+    lui $at,0x8009
+    sb $v0,-0x6d59($at)
+    lw $ra,0x1c($sp)
+    lw $s2,0x18($sp)
+    lw $s1,0x14($sp)
+    lw $s0,0x10($sp)
+    addiu $sp,$sp,0x20
+    jr $ra
+     nop
+.end play_event_state_build
