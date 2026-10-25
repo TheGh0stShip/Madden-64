@@ -491,3 +491,6 @@
 0x63E50	0x78	src/code/pointer_array_blocks_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	25b08eba282362f93cb6878a081825b439652e8cf12b04070df226ca1f2da87b
 0x429D4	0x78	src/code/audio_grid_value_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e6afce56eb60cb224227edf5a352037bc53cce3d4fa4a40626e5bce3c77fec7d
 0x5C28C	0x78	src/code/object_callback_select.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	abe2a5845fa7db287c2c37325abb9aef5294d4b4cf7bf4470a29279d7d2b4b02
+0x24B94	0x7C	src/code/menu_code_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	826d376202c9ea679a213da400d5bb56158bdad886768fd025860f427d938f34
+0x38CD4	0x7C	src/code/frame_buffer_pairs_apply.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	40cff69a1e5224dd44bdeeeb9dc5a5e9af27f51db1ffd9a41844d95df6557cf9
+0x3B184	0x7C	src/code/frame_slot_next.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	049fecb46176c9073777dd0475973a57b2f971c6372d7924bea032cabc20ecce
