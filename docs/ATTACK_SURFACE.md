@@ -78,7 +78,7 @@ register dependency, and no contradictory boundary finding.
 
 | Module | Sweep candidates | Published candidates | Gap ranges | Gap bytes | Contradictory findings |
 |---|---:|---:|---:|---:|---:|
-| resident | 1,370 | 1,370 | 1 | 14,536 | 3 |
+| resident | 1,370 | 1,370 | 1 | 14,536 | 5 |
 | overlay_1 | 1,071 | 1,025 | 231 | 43,696 | 987 |
 | overlay_4 | 420 | 420 | 87 | 17,500 | 348 |
 

@@ -214,7 +214,8 @@
           "in_text_data_bytes": 14536,
           "findings": {
             "in_text_data": 1,
-            "rejected_start": 2
+            "rejected_start": 2,
+            "rsp_text": 2
           }
         },
         "overlay_1": {

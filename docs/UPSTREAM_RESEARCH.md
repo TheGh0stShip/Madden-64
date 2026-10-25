@@ -20,6 +20,14 @@ reproducible.
 
 ## Findings applied to Madden Football 64
 
+- RSP research isolated the first two components inside the formerly opaque
+  resident microcode interval. The 204-byte task bootstrap matches the standard
+  SDK control flow and now has an exact in-tree assembly reconstruction. The
+  following 5,168 bytes are byte-identical to the F3DEX FIFO program in the
+  contemporary BattleTanx image. SDK documentation confirms that boot,
+  graphics, and audio programs are separately linked text/data objects; the
+  remaining bytes are therefore retained as unresolved microcode/data rather
+  than credited speculatively.
 - KMC GCC 2.7.2 remains the correct dominant game-code compiler. Upstream KMC
   examples corroborate `-G0 -mgp32 -mfp32 -mips3`; this project additionally
   preserves its verified `-O2` and R4300 multiply assembler behavior.

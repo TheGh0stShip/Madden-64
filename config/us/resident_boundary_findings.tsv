@@ -1,4 +1,6 @@
 address	kind	function	detail
 0x80050EA0	in_text_data		0x38C8-byte resident RSP microcode/data region ending at 0x80054768
+0x80050EA8	rsp_text	rspbootTextStart	0xCC-byte standard RSP task bootstrap ending at 0x80050F74
+0x80050F78	rsp_text	gspF3DEX_fifoTextStart	0x1430-byte graphics microcode ending at 0x800523A8; byte-identical to the contemporary BattleTanx image
 0x80050ED8	rejected_start		word inside RSP microcode, formerly miscatalogued as a CPU function
 0x80050EF0	rejected_start		word inside RSP microcode, formerly miscatalogued as a CPU function

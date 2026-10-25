@@ -139,8 +139,13 @@ class RomLayoutTests(unittest.TestCase):
     def test_resident_rsp_region_is_not_catalogued_as_cpu_functions(self):
         lines = RESIDENT_FINDINGS.read_text().splitlines()
         self.assertEqual(lines[0], "address\tkind\tfunction\tdetail")
-        self.assertEqual(len(lines) - 1, 3)
+        self.assertEqual(len(lines) - 1, 5)
         self.assertIn("0x38C8-byte resident RSP microcode/data region", lines[1])
+        fields = [line.split("\t", 3) for line in lines[1:]]
+        self.assertEqual(fields[1][:3],
+                         ["0x80050EA8", "rsp_text", "rspbootTextStart"])
+        self.assertEqual(fields[2][:3],
+                         ["0x80050F78", "rsp_text", "gspF3DEX_fifoTextStart"])
         self.assertFalse(any(
             function["vram"] in (0x80050ED8, 0x80050EF0)
             for function in tomllib.loads(

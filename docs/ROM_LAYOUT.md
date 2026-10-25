@@ -148,8 +148,14 @@ are explicitly candidates until source/linker reconstruction proves every
 boundary. The corrected resident count excludes nine archive-pointer words and
 the first rodata word that the broad executable-envelope scan had mistaken for
 functions. It also excludes two interior words in the 14,536-byte resident RSP
-microcode/data region that had been misidentified as CPU entry points. Byte
-totals and ROM locations are exact. The expanded program rows
+microcode/data region that had been misidentified as CPU entry points. The
+region begins with eight alignment bytes, the standard 204-byte RSP task
+bootstrap at `0x80050EA8..0x80050F74`, four more alignment bytes, and a
+5,168-byte F3DEX FIFO graphics program at `0x80050F78..0x800523A8`. The
+bootstrap is reconstructed and assembled byte-for-byte; the graphics boundary
+is confirmed by an exact cross-image comparison but remains unmatched until a
+source reconstruction is in-tree. Byte totals and ROM locations are exact.
+The expanded program rows
 sum to 1,237,968 bytes including the loader, and the code/data split above sums
 to the same value.
 
