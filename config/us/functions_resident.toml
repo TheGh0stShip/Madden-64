@@ -620,7 +620,7 @@ functions = [
     { name = "func_800324FC", vram = 0x800324fc, size = 0xc4 }, # c
     { name = "func_800325C0", vram = 0x800325c0, size = 0x3c4 }, # leaf
     { name = "func_80032984", vram = 0x80032984, size = 0x34 }, # leaf
-    { name = "func_800329B8", vram = 0x800329b8, size = 0x94 }, # c
+    { name = "rom_dma_read", vram = 0x800329b8, size = 0x94 }, # c
     { name = "func_80032A4C", vram = 0x80032a4c, size = 0x34 }, # c
     { name = "func_80032A80", vram = 0x80032a80, size = 0x3c }, # c
     { name = "func_80032ABC", vram = 0x80032abc, size = 0x44 }, # c

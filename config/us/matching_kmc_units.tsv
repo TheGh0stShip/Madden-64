@@ -1,4 +1,5 @@
 # KMC GCC 2.7.2; ROM_START SIZE SOURCE FLAGS SHA256
+0x335B8	0x94	src/code/rom_dma_read.c	--symbol=osCreateMesgQueue:0x80045B68 --symbol=osPiStartDma:0x8004BDB8 --symbol=osRecvMesg:0x8004CDA8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a9802b2b18fd9efc283b3fb5e13dce73b8aae863395d33fe474046c690d8bb12
 0x9A48	0x24	src/code/channel_call.c	-DFUNCTION=func_80008E48 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f35cd1e43b0f75d8439a7a8153c88d8aa1e50706cb8b87d057182f372bcd9b7
 0x107C	0x8	src/code/early_noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x9B20	0x10	src/code/early_state_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	474e9c2464a502506935a62b595bf97b1196cd1e7eb46f9573232ac6ecca3ac1

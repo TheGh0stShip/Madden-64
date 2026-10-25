@@ -170,3 +170,16 @@ and call target and matches `0x80000440..0x8000047B` byte for byte. The absolute
 call instruction is encoded explicitly because this GNU assembler path treats
 the numeric jump operand as a relocation against address zero; mnemonic form
 therefore did not reproduce the linked ROM word.
+
+## Blocking ROM DMA transfer
+
+The same structural batch ranked `0x800329B8` against BattleTanx's synchronous
+ROM reader. Follow-up comparisons with the public Mario Kart 64 and Super
+Mario 64 DMA implementations confirmed the standard `osPiStartDma` followed
+by blocking `osRecvMesg` pattern, while Madden's disassembly showed a distinct
+per-call message queue and no cache invalidation inside this routine.
+
+Compiler experiments recovered the exact local ordering and the actual
+destination-first interface. Madden rounds the requested byte count to an even
+value, creates a one-entry queue, starts the transfer, and waits for completion.
+The resulting KMC GCC source matches all 148 bytes at `0x800329B8`.
