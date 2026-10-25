@@ -1,0 +1,51 @@
+.text
+.align 2
+.set noreorder
+.globl display_viewport_configure
+.ent display_viewport_configure
+display_viewport_configure:
+    lhu $a1,0x1fc($a0)
+    lhu $a2,0x1f8($a0)
+    lhu $v1,0x1fa($a0)
+    lhu $a3,0x1fe($a0)
+    lui $at,0x8000
+    lwc1 $f0,0x6a0($at)
+    lui $at,0x8000
+    lwc1 $f2,0x6a4($at)
+    addiu $v0,$zero,0x280
+    sh $v0,0x218($a0)
+    addiu $v0,$zero,0x1e0
+    sh $v0,0x21a($a0)
+    addiu $v0,$zero,0x3ff
+    sh $v0,0x21c($a0)
+    addu $v0,$a2,$a1
+    addu $v1,$v1,$a3
+    srl $a1,$a1,1
+    addu $a2,$a2,$a1
+    sh $v1,0xc($a0)
+    lhu $v1,0x1fe($a0)
+    lhu $a1,0x1fa($a0)
+    sh $zero,0x21e($a0)
+    sh $zero,0x224($a0)
+    sh $zero,0x226($a0)
+    sh $v0,0xa($a0)
+    sll $v0,$a2,16
+    sra $v0,$v0,16
+    swc1 $f0,0x228($a0)
+    mtc1 $v0,$f0
+    cvt.s.w $f0,$f0
+    sll $a2,$a2,2
+    swc1 $f2,0x22c($a0)
+    swc1 $f0,0x230($a0)
+    sh $a2,0x220($a0)
+    srl $v1,$v1,1
+    addu $a1,$a1,$v1
+    sll $v0,$a1,16
+    sra $v0,$v0,16
+    mtc1 $v0,$f0
+    cvt.s.w $f0,$f0
+    sll $a1,$a1,2
+    swc1 $f0,0x234($a0)
+    jr $ra
+     sh $a1,0x222($a0)
+.end display_viewport_configure

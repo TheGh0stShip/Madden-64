@@ -135,3 +135,11 @@
 0x1FBC4	0xAC	src/code/ui_range_apply_reverse.s	-O2 -G0 -mips3 -mgp32 -mfp32	7f390ef2cc7f8db2a00a4d35d59675497143d603358d203cd13677626e88326b
 0x215BC	0xAC	src/code/menu_slots_threshold_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	adc55982dcc4d3a4700bb02a1c4be220e5cf435cab1afb82e66f8befe24ca28d
 0x5BD08	0xAC	src/code/object_mode_handler_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	148507b506d9bf785c2eed1640ff3245ba262567789512bf88c38033fdcc8a28
+0xABDC	0xB0	src/code/display_env_color_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	9f1083eb7aaccf0ef83aa3366bacc8537ccee06d978000c3e1b185eac5d2128b
+0xAC8C	0xB0	src/code/display_fog_color_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	1c743d05a886edd9a07a635da2d72414c767047c8dac88ac9f9205cb92739469
+0xAD3C	0xB0	src/code/display_blend_color_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	aa67f665d43d032cab06c7e750c615ff08bb27912ffd80df798278939db0c35a
+0xD818	0xB0	src/code/display_viewport_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	efcb5af62b9ff6fe46b46e1812629f404b9d268c55bea3ed64197c204b3652e8
+0x29658	0xB0	src/code/frame_identifier_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef33ef45607ee65ac67df7e6139f04a1247f4ef7ded5a40c4b2ca979548542ac
+0x42924	0xB0	src/code/audio_transition_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	c2d673d45505ec633fa5bf35efc335f6ad65aa20470f849f662cdd4703fcdb8c
+0x44088	0xB0	src/code/box_vertices_fixed_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	996b29e31de75defab12666bf1b1edd48da86aeffa7d149f4ae3d8a611ceda26
+0x45294	0xB0	src/code/grid_row_handles_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	01b8ae9e5d749fe082a308fb38d9fcea578968a3bdff0e22462f74f9a11d6160

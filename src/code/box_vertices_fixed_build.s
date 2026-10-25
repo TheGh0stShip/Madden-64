@@ -1,0 +1,51 @@
+.text
+.align 2
+.set noreorder
+.globl box_vertices_fixed_build
+.ent box_vertices_fixed_build
+box_vertices_fixed_build:
+    lw $v0,0($a1)
+    lw $v1,4($a1)
+    lw $a1,8($a1)
+    lw $a3,0($a2)
+    lw $t2,4($a2)
+    lw $t0,8($a2)
+    negu $v0,$v0
+    sll $v0,$v0,16
+    sll $a3,$a3,16
+    subu $t3,$v0,$a3
+    sll $v1,$v1,16
+    sll $t2,$t2,16
+    addu $a2,$v1,$t2
+    sll $a1,$a1,16
+    sll $t0,$t0,16
+    subu $t1,$a1,$t0
+    addu $v0,$v0,$a3
+    addu $a1,$a1,$t0
+    subu $v1,$v1,$t2
+    sw $t3,0($a0)
+    sw $a2,4($a0)
+    sw $t1,8($a0)
+    sw $v0,0x10($a0)
+    sw $a2,0x14($a0)
+    sw $t1,0x18($a0)
+    sw $v0,0x20($a0)
+    sw $a2,0x24($a0)
+    sw $a1,0x28($a0)
+    sw $t3,0x30($a0)
+    sw $a2,0x34($a0)
+    sw $a1,0x38($a0)
+    sw $t3,0x40($a0)
+    sw $v1,0x44($a0)
+    sw $t1,0x48($a0)
+    sw $v0,0x50($a0)
+    sw $v1,0x54($a0)
+    sw $t1,0x58($a0)
+    sw $v0,0x60($a0)
+    sw $v1,0x64($a0)
+    sw $a1,0x68($a0)
+    sw $t3,0x70($a0)
+    sw $v1,0x74($a0)
+    jr $ra
+     sw $a1,0x78($a0)
+.end box_vertices_fixed_build
