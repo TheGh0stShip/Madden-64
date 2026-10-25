@@ -31,3 +31,8 @@
 0x4FDD8	0x30	src/libultra/os_writeback_dcache_all.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e2e910cf2dcf19b0d2826eea41187a62acc4584b8fb7316cc74acbd40f4b04f
 0x4F648	0xC0	src/libultra/os_probe_tlb.s	-O2 -G0 -mips3 -mgp32 -mfp32	349227b84b51cb246abaf9de4bf56eba78054d85575e1bfb09acfdb8d1bc0c28
 0x4DD68	0xA0	src/libultra/os_set_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	86cb8015715ed857a8877c8f765e022385d51b5c1e2cb8645586b08a05f91a23
+0x1F72C	0x8C	src/code/ui_slot_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	64f9a02ea9e05f343b2c62e6a8cc5c53a179d26b0e82c5a4e816def7ff003205
+0x2589C	0x8C	src/code/frame_index_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	44bb99165571ea6a2bf9e19dc599eb104d73e6c8009924540d11328c5d818179
+0x28508	0x8C	src/code/interface_mode_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	a91bc29f0e12897d462d6bf731701b809046b05abcf323a52ea57a51e06d38bd
+0x618F0	0x8C	src/code/object_children_allocate.s	-O2 -G0 -mips3 -mgp32 -mfp32	40cb4b19b7195b50aaa5a19237a18eb7a4b9ec42ab185f298d271b4706a41098
+0x3AEC8	0x90	src/code/frame_halfword_remove.s	-O2 -G0 -mips3 -mgp32 -mfp32	07b9ae64e56421d140d70bd5a8c212de905e2170d6829232c662d45772de0530
