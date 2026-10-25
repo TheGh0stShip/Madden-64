@@ -319,7 +319,7 @@ functions = [
     { name = "func_8001B590", vram = 0x8001b590, size = 0x28 }, # leaf
     { name = "func_8001B5B8", vram = 0x8001b5b8, size = 0x8 }, # stub
     { name = "resource_buffers_process", vram = 0x8001b5c0, size = 0x178 }, # asm
-    { name = "packed_position_apply", vram = 0x8001b738, size = 0x88 }, # asm
+    { name = "packed_position_apply", vram = 0x8001b738, size = 0x88 }, # c
     { name = "ui_resource_update", vram = 0x8001b7c0, size = 0x444 }, # asm
     { name = "ui_resource_render", vram = 0x8001bc04, size = 0x840 }, # asm
     { name = "func_8001C444", vram = 0x8001c444, size = 0x50 }, # leaf
@@ -431,7 +431,7 @@ functions = [
     { name = "frame_index_resolve", vram = 0x80024c9c, size = 0x8c }, # asm
     { name = "roster_state_process", vram = 0x80024d28, size = 0x174 }, # asm
     { name = "func_80024E9C", vram = 0x80024e9c, size = 0x40 }, # c
-    { name = "interface_transfer_begin", vram = 0x80024edc, size = 0x80 }, # asm
+    { name = "interface_transfer_begin", vram = 0x80024edc, size = 0x80 }, # c
     { name = "interface_transfer_finalize", vram = 0x80024f5c, size = 0x7c }, # c
     { name = "func_80024FD8", vram = 0x80024fd8, size = 0x50 }, # c
     { name = "func_80025028", vram = 0x80025028, size = 0x44 }, # c
@@ -462,7 +462,7 @@ functions = [
     { name = "func_800280FC", vram = 0x800280fc, size = 0x48 }, # leaf
     { name = "play_flags_finalize", vram = 0x80028144, size = 0xe0 }, # asm
     { name = "func_80028224", vram = 0x80028224, size = 0x10 }, # stub
-    { name = "top_bits_dispatch", vram = 0x80028234, size = 0x94 }, # asm
+    { name = "top_bits_dispatch", vram = 0x80028234, size = 0x94 }, # c
     { name = "packed_field_dispatch", vram = 0x800282c8, size = 0xa4 }, # asm
     { name = "frame_resource_finalize", vram = 0x8002836c, size = 0x1ac }, # asm
     { name = "frame_resource_update", vram = 0x80028518, size = 0x22c }, # asm

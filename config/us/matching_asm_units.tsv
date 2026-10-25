@@ -1,5 +1,4 @@
 # GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
-0x28E34	0x94	src/code/top_bits_dispatch.s	--symbol=func_8002B624:0x8002B624 --symbol=func_8002B870:0x8002B870 --symbol=func_8002BA18:0x8002BA18 --symbol=func_8002BBB0:0x8002BBB0 -O2 -G0 -mips3 -mgp32 -mfp32	11770147c0a18c5934b9c873da8201877c69a1f3cd6ec7b9da560dd324382194
 0x41530	0x88	src/code/integer_vectors_submit.s	--symbol=D_80002E88:0x80002E88 --symbol=func_8000F344:0x8000F344 -O2 -G0 -mips3 -mgp32 -mfp32	e99a8daa6dd81731d22337b99718b3330d6787c2d398666e8f9d9832dc4e5fe0
 0x3B200	0x120	src/code/audio_frame_storage_mode.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5cdcdab4b1e7a36296edde1f24459b28193bb796d6d2f452b15ac43ade393699
 0x3BA80	0x1AC	src/code/audio_frame_collision_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afeabe508a0e5514d0ff3409d02b3a8d79cb5fb2812c8ae42ba648621013a71b
@@ -30,7 +29,6 @@
 0xDBA4	0x78	src/code/object_active_children_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
 0x3A350	0x78	src/code/roster_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e32c8d15b061901377f1f128d8c3a478272a5b82f8e2fc1ccde0c0f0a7e31a3
 0xD390	0x80	src/code/object_display_segment_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	a7258fc77ae348c1aa13d6e389485569358b25dc0648bba55c5ad927d10cd38a
-0x25ADC	0x80	src/code/interface_transfer_begin.s	-O2 -G0 -mips3 -mgp32 -mfp32	b48e0e6a932f64b3bb78a7f3e00e0ece346b83ddf4934f4007153f9dd99913cd
 0x22E80	0x84	src/code/roster_attribute_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	cdadcb7477b01290fb436c04310d48fc6066373098fadb9592c1d7123ce44142
 0x2373C	0x84	src/code/roster_symbol_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef1c0e46dfcff4c11e592a4448dd1e1a38505c4040150457e2e0269ecdb26ba6
 0x25818	0x84	src/code/frame_group_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	ace800bfb226efbb9e2fbd3e7c1f8dc32f71c4c985a4c26587f42f4bc9f41cd1
@@ -41,7 +39,6 @@
 0x2038C	0x90	src/code/player_index_selection_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	1f5b5f3ae494dde37695129d9c8709e0c4cba0d02d05b35d03ad57df9d85da8b
 0xFFBC	0x94	src/code/object_index_rows_shift.s	-O2 -G0 -mips3 -mgp32 -mfp32	38e3a286b6a4408b2982f307b8a12b2fbd98c1157503384eed0cdfa4ce6e43ba
 0xD410	0x88	src/code/object_display_segment_enable.s	-O2 -G0 -mips3 -mgp32 -mfp32	f50fddcd10d7092cdbaec3574eaacc11e7976763e0d7405b3603570cbf0076a3
-0x1C338	0x88	src/code/packed_position_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	5b4eef09dcd44f2d83ebe0443388d7506ad2a96554bc5dba12e89c52b58ea09b
 0x3F4F4	0x88	src/code/string_tail_clear.s	-O2 -G0 -mips3 -mgp32 -mfp32	c5c9bba6caa75c760ca382ec56eb53147643e789b891f34aece25d9f1245d6a1
 0x1B088	0x98	src/code/animation_step_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	feaf14dc842e030c09bfc94eacd6ff853a21c21b9f6b9e269ce8f021f4271321
 0x36AF0	0x98	src/code/audio_entry_resource_mark.s	-O2 -G0 -mips3 -mgp32 -mfp32	707b6f54b8d4df00f9c14b3c8c33ff6cc551685038169ffc39bb1c06867a3fa3
