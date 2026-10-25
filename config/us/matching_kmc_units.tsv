@@ -481,3 +481,5 @@
 0x371B8	0x68	src/code/buffer_cache_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a10c8df205906d978415c280048623a84bd2f66c60a96441e4ec7dbe5e697ab1
 0x2C1EC	0x38	src/code/game_mode_pair_test.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f70d1179c6231af8d08ac969944d33ac49088913344dbe50a06074b08f29331
 0x353B4	0x50	src/code/record_offsets_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d00bba358605c94024e6c504fa381e9588942e436b73cabe1c937d8ea7f5a04b
+0x37D08	0x6C	src/code/runtime_entry_payload_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2c525c14fb820056d9f2c4c1c77430fc69587027736c40157b19431bab355c16
+0x3CAE4	0x70	src/code/value_compatibility_test.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ee372341286ee6170cf87311852dbac6cfbd9b366e1448d9539b24c3185e705b
