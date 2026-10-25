@@ -1,0 +1,56 @@
+.text
+.align 2
+.set noreorder
+.globl roster_profile_update
+.ent roster_profile_update
+roster_profile_update:
+    addiu $sp,$sp,-0x20
+    sw $s0,0x10($sp)
+    move $s0,$a0
+    sw $s2,0x18($sp)
+    move $s2,$a1
+    sw $ra,0x1c($sp)
+    sw $s1,0x14($sp)
+    lbu $a0,0x1e($s0)
+    lbu $a1,0x1f($s0)
+    addiu $a2,$zero,0xd
+    jal func_80025794
+     addiu $a3,$zero,1
+    lbu $a0,0x1e($s0)
+    lbu $a1,0x1f($s0)
+    addiu $a2,$zero,0xe
+    sll $s1,$s2,16
+    sra $s1,$s1,16
+    jal func_80025794
+     move $a3,$s1
+    lbu $a0,0x1e($s0)
+    lbu $a1,0x1f($s0)
+    addiu $a2,$zero,0x2b
+    jal func_8002586C
+     move $a3,$s1
+    lbu $a0,0x1e($s0)
+    addiu $a1,$zero,1
+    jal func_80025944
+     move $a2,$s1
+    lbu $a0,0x1e($s0)
+    move $a1,$zero
+    jal func_80025944
+     move $a2,$s1
+    lbu $a0,0x1e($s0)
+    addiu $a1,$zero,0xa
+    jal func_80025944
+     move $a2,$s1
+    lui $at,0x8009
+    sb $s2,-0x6d5b($at)
+    jal func_800297FC
+     move $a0,$s0
+    lui $at,0x8009
+    sb $v0,-0x6d59($at)
+    lw $ra,0x1c($sp)
+    lw $s2,0x18($sp)
+    lw $s1,0x14($sp)
+    lw $s0,0x10($sp)
+    addiu $sp,$sp,0x20
+    jr $ra
+     nop
+.end roster_profile_update

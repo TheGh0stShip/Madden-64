@@ -167,3 +167,11 @@
 0x56CDC	0xC0	src/code/object_animation_activate.s	-O2 -G0 -mips3 -mgp32 -mfp32	047036344dc119ab7aed18ab49134b3f47e13b18375367e1044caf6772ad78e2
 0x57690	0xC0	src/code/object_round_state_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	164a08db6bf5483b35ccd7824da9d7c024adb0847af49ee92fddda6664393713
 0x59648	0xC0	src/code/object_cycle_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	e56e9b70037365d4bc16e83a4d89e7aa8973d3d79133a61a8903e8dbc1e01fbc
+0x28594	0xC4	src/code/roster_profile_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	bebcbc3caf0ea192d35d5d484d56510cb21abccb4d8347a113069f67d3ab2300
+0x330FC	0xC4	src/code/resource_pool_reset_wait.s	-O2 -G0 -mips3 -mgp32 -mfp32	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
+0x3C4FC	0xC4	src/code/menu_grid_record_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	6829bdf2a52c6f3e7cd1fa83720177795c4d36578e2214cd67acda668a88fc22
+0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
+0x598B0	0xC4	src/code/object_services_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	49fcd49cd6b356b541e65f37a5e390e80f725b5615980f44461acddc915eb167
+0x5BDB4	0xC4	src/code/object_task_schedule.s	-O2 -G0 -mips3 -mgp32 -mfp32	43648184e22db56f9b784f7c0486ed50cc1340557016a21c0ec7cc8c7394af30
+0xE1BC	0xC8	src/code/object_children_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	e1edb238e953bd991eaed5733b0d1b0a99f01c31e59d77734f0c739edfdd7bfd
+0x29FCC	0xC8	src/code/menu_cursor_state_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	49ba6c42f3e9d00b34806c600086024f0b26bb80787c8f1b52a6e13146aaf370

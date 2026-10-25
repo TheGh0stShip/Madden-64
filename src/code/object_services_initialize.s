@@ -1,0 +1,57 @@
+.text
+.align 2
+.set noreorder
+.globl object_services_initialize
+.ent object_services_initialize
+object_services_initialize:
+    addiu $sp,$sp,-0x18
+    sw $s0,0x10($sp)
+    move $s0,$a0
+    sw $ra,0x14($sp)
+    lw $v0,4($s0)
+    lw $v0,0($v0)
+    move $a1,$zero
+    jalr $v0
+     addiu $a2,$zero,0x60
+    lui $v1,0x8006
+    addiu $v1,$v1,-0x7378
+    sw $v0,0x1b4($s0)
+    sw $v1,0($v0)
+    lw $v1,0x1b4($s0)
+    lui $v0,0x8006
+    addiu $v0,$v0,-0x78d4
+    sw $v0,4($v1)
+    lw $v1,0x1b4($s0)
+    move $a0,$zero
+    lui $v0,0x8006
+    addiu $v0,$v0,-0x75b8
+    sw $v0,8($v1)
+    lw $v1,0x1b4($s0)
+    lui $v0,0x8006
+    addiu $v0,$v0,-0x7c7c
+    move $a1,$v0
+    sw $a1,0xc($v1)
+.Lloop:
+    lw $v0,0x1b4($s0)
+    sll $v1,$a0,2
+    addiu $a0,$a0,1
+    addu $v1,$v1,$v0
+    slti $v0,$a0,0x10
+    bnez $v0,.Lloop
+     sw $a1,0x10($v1)
+    lw $v1,0x1b4($s0)
+    lui $v0,0x8005
+    addiu $v0,$v0,0x7344
+    sw $v0,0x10($v1)
+    lw $v1,0x1b4($s0)
+    move $a0,$s0
+    lui $v0,0x8005
+    addiu $v0,$v0,0x767c
+    jal func_80058C88
+     sw $v0,0x48($v1)
+    lw $ra,0x14($sp)
+    lw $s0,0x10($sp)
+    addiu $sp,$sp,0x18
+    jr $ra
+     nop
+.end object_services_initialize

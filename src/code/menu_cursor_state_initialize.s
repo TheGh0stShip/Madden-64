@@ -1,0 +1,57 @@
+.text
+.align 2
+.set noreorder
+.globl menu_cursor_state_initialize
+.ent menu_cursor_state_initialize
+menu_cursor_state_initialize:
+    addiu $sp,$sp,-0x18
+    move $a0,$zero
+    lui $a1,0x8009
+    addiu $a1,$a1,-0x7518
+    addiu $a2,$zero,0x8c
+    sw $ra,0x10($sp)
+    jal func_80033308
+     move $a3,$zero
+    lui $a1,0x8008
+    lw $a1,0x4f34($a1)
+    lui $v1,0x8008
+    lhu $v1,0x7a60($v1)
+    lui $v0,0x8008
+    lh $v0,0x76dc($v0)
+    lui $at,0x8009
+    sb $zero,-0x750e($at)
+    lui $at,0x8009
+    sb $zero,-0x7506($at)
+    lui $at,0x8009
+    sb $zero,-0x7507($at)
+    srl $a2,$a1,16
+    sll $a0,$v1,16
+    sra $a0,$a0,16
+    addiu $v0,$v0,-1
+    mult $a0,$v0
+    mflo $a0
+    lui $at,0x8009
+    sh $a2,-0x7514($at)
+    lui $at,0x8009
+    sh $a2,-0x7516($at)
+    lui $a2,0x8008
+    lhu $a2,0x7aac($a2)
+    lui $v0,0x8009
+    lhu $v0,-0x751c($v0)
+    sra $a1,$a1,20
+    addiu $a1,$a1,0x32
+    lui $at,0x8009
+    sb $a1,-0x7508($at)
+    subu $v1,$v1,$a2
+    lui $at,0x8009
+    sb $v0,-0x750d($at)
+    addu $v1,$v1,$a0
+    lui $at,0x8009
+    sh $v1,-0x7510($at)
+    lui $at,0x8009
+    sh $v1,-0x7512($at)
+    lw $ra,0x10($sp)
+    addiu $sp,$sp,0x18
+    jr $ra
+     nop
+.end menu_cursor_state_initialize
