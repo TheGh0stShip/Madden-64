@@ -195,8 +195,8 @@
       "resident": {
         "functions": 1370,
         "bytes": 378060,
-        "matched_functions": 1242,
-        "matched_bytes": 327732
+        "matched_functions": 1370,
+        "matched_bytes": 378060
       }
     },
     "catalogue_status": {
@@ -266,8 +266,8 @@
       "000-0016": {
         "functions": 324,
         "bytes": 3912,
-        "matched_functions": 210,
-        "matched_bytes": 2472
+        "matched_functions": 220,
+        "matched_bytes": 2552
       },
       "000-0032": {
         "functions": 224,
@@ -284,20 +284,20 @@
       "000-0128": {
         "functions": 553,
         "bytes": 51828,
-        "matched_functions": 305,
-        "matched_bytes": 28500
+        "matched_functions": 306,
+        "matched_bytes": 28620
       },
       "000-0256": {
         "functions": 553,
         "bytes": 102424,
-        "matched_functions": 281,
-        "matched_bytes": 51480
+        "matched_functions": 306,
+        "matched_bytes": 57340
       },
       "000-0512": {
         "functions": 477,
         "bytes": 171328,
-        "matched_functions": 176,
-        "matched_bytes": 69128
+        "matched_functions": 267,
+        "matched_bytes": 97172
       },
       "000-1024": {
         "functions": 203,
@@ -308,8 +308,8 @@
       "1025+": {
         "functions": 99,
         "bytes": 181196,
-        "matched_functions": 52,
-        "matched_bytes": 93500
+        "matched_functions": 53,
+        "matched_bytes": 109724
       }
     },
     "exact_duplicate_families": 17,
