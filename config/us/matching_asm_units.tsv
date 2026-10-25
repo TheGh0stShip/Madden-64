@@ -315,3 +315,11 @@
 0x25D4C	0x648	src/code/gameplay_state_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	e9e6777188aca2e86528894aa879f9131b80405f12b43a8b7787aec5d417216c
 0x224D4	0x604	src/code/game_session_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	1211479c47001b386db964b39a88ad29117e54cce72f6528cefac932977127bc
 0x38D50	0x5D8	src/code/audio_mixer_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ffc7301f1186193a9523cafb741cd1dafce8b9a6a0c5ee8479e14a583db9476
+0x5E000	0x550	src/code/object_block_transform.s	-O2 -G0 -mips3 -mgp32 -mfp32	de60e0fa32678b279760bd69791646a750af27ac3de257aad4b492f122debf9f
+0x5F1E8	0x550	src/code/object_block_transform_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	599140a3cf73e24258789ec7eb63d79931f6253d22f5aa14f60110e8a006edeb
+0x5A0D8	0x528	src/code/object_state_machine_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	37742a04b77144e284977ea42a4eee9a6d23253d3b75e46591331719eca213e5
+0x5B1C0	0x510	src/code/object_state_machine_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	98bd9193c3dbbd5e6befe0e7c65628df3917f6353acaca68aa39cab9fafd2bba
+0x5E550	0x504	src/code/object_rows_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	b4f19a09cfbc238ce39e5abc123e841a23a21c7066b6af4a681951405367cdf9
+0x2AA88	0x4D0	src/code/gameplay_selection_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	cdc69c2b0d46b81c34d929632bad3d9e6ba12cd15abe25f4b53a2edcdebcec4f
+0x18CA8	0x498	src/code/resource_archive_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	916488c5131f244aedc9f9c5f9c9c2960ec8bcb67712dfe2ff1924d08156bdd9
+0x61D68	0x48C	src/code/object_index_stream_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	f3fffc10e983a76e11efefd20197dc895089775e2b5180b2156e36e64b39cf81

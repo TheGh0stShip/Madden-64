@@ -272,7 +272,7 @@ functions = [
     { name = "func_80017ED0", vram = 0x80017ed0, size = 0x178 }, # c
     { name = "func_80018048", vram = 0x80018048, size = 0x8 }, # stub
     { name = "func_80018050", vram = 0x80018050, size = 0x58 }, # c
-    { name = "func_800180A8", vram = 0x800180a8, size = 0x498 }, # c
+    { name = "resource_archive_process", vram = 0x800180a8, size = 0x498 }, # asm
     { name = "ui_scene_render", vram = 0x80018540, size = 0x1258 }, # asm
     { name = "strided_rows_copy", vram = 0x80019798, size = 0xac }, # asm
     { name = "func_80019844", vram = 0x80019844, size = 0x24 }, # c
@@ -488,7 +488,7 @@ functions = [
     { name = "func_80029BD4", vram = 0x80029bd4, size = 0x10 }, # stub
     { name = "menu_record_copy_wrapped", vram = 0x80029be4, size = 0xb4 }, # asm
     { name = "func_80029C98", vram = 0x80029c98, size = 0x1f0 }, # c
-    { name = "func_80029E88", vram = 0x80029e88, size = 0x4d0 }, # c
+    { name = "gameplay_selection_process", vram = 0x80029e88, size = 0x4d0 }, # asm
     { name = "func_8002A358", vram = 0x8002a358, size = 0x354 }, # c
     { name = "func_8002A6AC", vram = 0x8002a6ac, size = 0x26c }, # c
     { name = "interface_lowest_cost_select", vram = 0x8002a918, size = 0x9c }, # asm
@@ -1246,7 +1246,7 @@ functions = [
     { name = "func_80059154", vram = 0x80059154, size = 0x194 }, # c
     { name = "func_800592E8", vram = 0x800592e8, size = 0x14c }, # c
     { name = "object_output_reset", vram = 0x80059434, size = 0xa4 }, # asm
-    { name = "func_800594D8", vram = 0x800594d8, size = 0x528 }, # c
+    { name = "object_state_machine_update", vram = 0x800594d8, size = 0x528 }, # asm
     { name = "func_80059A00", vram = 0x80059a00, size = 0x74 }, # c
     { name = "func_80059A78", vram = 0x80059a78, size = 0x8 }, # c falls_through
     { name = "func_80059A80", vram = 0x80059a80, size = 0x394 }, # c
@@ -1254,7 +1254,7 @@ functions = [
     { name = "func_80059EBC", vram = 0x80059ebc, size = 0x2d0 }, # c
     { name = "func_8005A18C", vram = 0x8005a18c, size = 0x2d0 }, # c
     { name = "func_8005A45C", vram = 0x8005a45c, size = 0x164 }, # c
-    { name = "func_8005A5C0", vram = 0x8005a5c0, size = 0x510 }, # c
+    { name = "object_state_machine_advance", vram = 0x8005a5c0, size = 0x510 }, # asm
     { name = "object_work_buffers_initialize", vram = 0x8005aad0, size = 0xbc }, # asm
     { name = "func_8005AB90", vram = 0x8005ab90, size = 0x14c }, # c
     { name = "func_8005ACDC", vram = 0x8005acdc, size = 0x1b4 }, # c
@@ -1284,10 +1284,10 @@ functions = [
     { name = "func_8005D018", vram = 0x8005d018, size = 0x8 }, # c falls_through
     { name = "func_8005D020", vram = 0x8005d020, size = 0x314 }, # c
     { name = "func_8005D334", vram = 0x8005d334, size = 0xcc }, # c
-    { name = "func_8005D400", vram = 0x8005d400, size = 0x550 }, # c
-    { name = "func_8005D950", vram = 0x8005d950, size = 0x504 }, # c
+    { name = "object_block_transform", vram = 0x8005d400, size = 0x550 }, # asm
+    { name = "object_rows_decode", vram = 0x8005d950, size = 0x504 }, # asm
     { name = "object_plane_decode", vram = 0x8005de60, size = 0x788 }, # asm
-    { name = "func_8005E5E8", vram = 0x8005e5e8, size = 0x550 }, # c
+    { name = "object_block_transform_secondary", vram = 0x8005e5e8, size = 0x550 }, # asm
     { name = "func_8005EB38", vram = 0x8005eb38, size = 0x310 }, # c
     { name = "func_8005EE48", vram = 0x8005ee48, size = 0x40 }, # leaf
     { name = "func_8005EE88", vram = 0x8005ee88, size = 0x18 }, # leaf
@@ -1327,7 +1327,7 @@ functions = [
     { name = "indexed_texel_increment", vram = 0x80061028, size = 0xa4 }, # asm
     { name = "func_800610CC", vram = 0x800610cc, size = 0x54 }, # c
     { name = "func_80061120", vram = 0x80061120, size = 0x48 }, # c
-    { name = "func_80061168", vram = 0x80061168, size = 0x48c }, # leaf
+    { name = "object_index_stream_decode", vram = 0x80061168, size = 0x48c }, # asm
     { name = "func_800615F4", vram = 0x800615f4, size = 0x1d4 }, # c
     { name = "func_800617C8", vram = 0x800617c8, size = 0x248 }, # c
     { name = "func_80061A10", vram = 0x80061a10, size = 0x100 }, # c
