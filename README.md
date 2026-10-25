@@ -25,7 +25,7 @@ No ROM or extracted game data should be distributed with this project.
 Madden's IPL loads a packed block at ROM `0x1318..0x46C00`. Emulating the
 game's decompressor recovers the initialized program at
 `0x80000400..0x800776C0` (488,128 bytes), followed by BSS through
-`0x8008B8E0`. The corrected resident-program catalogue has 1,373 provisional function
+`0x8008B8E0`. The corrected resident-program catalogue has 1,372 provisional function
 boundaries and identifies 147 libultra routines. Its compiler fingerprint is
 predominantly KMC GCC, while detected library code is IDO-built.
 
@@ -35,8 +35,8 @@ overlays, separate overlay data, every archive table, each payload's logical
 length, and alignment padding. See [the ROM layout audit](docs/ROM_LAYOUT.md)
 for the gap-free map and per-archive counts and sizes.
 
-Seven hundred eighty-eight reviewed source units fully cover 930 catalogued function
-candidates and currently match 86,384 whole-program code bytes and 496 data bytes exactly, including the
+Seven hundred eighty-nine reviewed source units fully cover 931 catalogued function
+candidates and currently match 86,488 whole-program code bytes and 496 data bytes exactly, including the
 contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
 boundaries are research leads, not decompilation credit, until a source unit is
 compiled and compared byte-for-byte.
@@ -90,9 +90,9 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching whole-program code | 86,384 bytes | 753,428 bytes | 11.47% |
+| Matching whole-program code | 86,488 bytes | 753,428 bytes | 11.48% |
 | Whole-program initialized data | 496 bytes | 484,540 bytes | 0.10% |
-| Matching function candidates | 930 | 2,823 | 32.94% |
+| Matching function candidates | 931 | 2,822 | 32.99% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |

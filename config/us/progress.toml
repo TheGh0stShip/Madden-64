@@ -7,11 +7,11 @@ rom = 0x1000
 code_size = 753428
 data_size = 484540
 libultra_vram = 0x80045928
-total_functions = 2823
+total_functions = 2822
 
 [progress]
 matched_data = 496
-matched_functions = 930
+matched_functions = 931
 loader_manifest = "config/us/matching_loader_asm_units.tsv"
 resident_functions = "config/us/functions_resident.toml"
 

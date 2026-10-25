@@ -651,8 +651,7 @@ functions = [
     { name = "func_80033768", vram = 0x80033768, size = 0x64 }, # c
     { name = "func_800337CC", vram = 0x800337cc, size = 0x1e4 }, # c
     { name = "func_800339B0", vram = 0x800339b0, size = 0xf4 }, # c
-    { name = "func_80033AA8", vram = 0x80033aa8, size = 0x8 }, # c falls_through
-    { name = "func_80033AB0", vram = 0x80033ab0, size = 0x60 }, # c
+    { name = "func_80033AA8", vram = 0x80033aa8, size = 0x68 }, # c
     { name = "func_80033B10", vram = 0x80033b10, size = 0x10 }, # stub
     { name = "func_80033B20", vram = 0x80033b20, size = 0x404 }, # c
     { name = "func_80033F24", vram = 0x80033f24, size = 0x17c }, # c
