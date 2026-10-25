@@ -1,4 +1,9 @@
 # GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
+0xE698	0x88	src/code/node_resource_destroy.s	--symbol=D_800782FC:0x800782FC --symbol=D_800782F8:0x800782F8 --symbol=D_800782F4:0x800782F4 --symbol=func_8000BE80:0x8000BE80 --symbol=func_800332C8:0x800332C8 -O2 -G0 -mips3 -mgp32 -mfp32	0a5fd9ee274cc5fa129aea6ed1beab8427a64d25152d7fc670bfcf4f4993132f
+0xF090	0x88	src/code/record_key_replace.s	--symbol=func_8002E148:0x8002E148 -O2 -G0 -mips3 -mgp32 -mfp32	8e0a34ea54b089f8f7a53bece47a958840902fac028b17801639cd68e2f38b59
+0x28E34	0x94	src/code/top_bits_dispatch.s	--symbol=func_8002B624:0x8002B624 --symbol=func_8002B870:0x8002B870 --symbol=func_8002BA18:0x8002BA18 --symbol=func_8002BBB0:0x8002BBB0 -O2 -G0 -mips3 -mgp32 -mfp32	11770147c0a18c5934b9c873da8201877c69a1f3cd6ec7b9da560dd324382194
+0x2F3A0	0x88	src/code/fixed_ratio_scale.s	--symbol=D_80001550:0x80001550 --symbol=func_8002CA88:0x8002CA88 -O2 -G0 -mips3 -mgp32 -mfp32	a236e1fde2367fb8bc7252d7496d9c9c6638fcdc990a4ad1c272257b847d3c68
+0x41530	0x88	src/code/integer_vectors_submit.s	--symbol=D_80002E88:0x80002E88 --symbol=func_8000F344:0x8000F344 -O2 -G0 -mips3 -mgp32 -mfp32	e99a8daa6dd81731d22337b99718b3330d6787c2d398666e8f9d9832dc4e5fe0
 0xE720	0x84	src/code/node_callbacks_apply.s	--symbol=D_800782FC:0x800782FC -O2 -G0 -mips3 -mgp32 -mfp32	085385ea3569037035661be4e45d14e7ec202f1d156db88e6232da8408f6f0a4
 0x350E8	0x84	src/code/object_state_initialize.s	--symbol=func_80034388:0x80034388 --symbol=func_80033B20:0x80033B20 -O2 -G0 -mips3 -mgp32 -mfp32	10b0e3a5b4155a5ddb343714ab2a1c3bc079df656c7527e2d68923c694660ab3
 0x375A0	0x84	src/code/audio_channel_wait_release.s	--symbol=D_8007A500:0x8007A500 --symbol=D_8008B07C:0x8008B07C --symbol=D_8008B080:0x8008B080 --symbol=func_80036540:0x80036540 -O2 -G0 -mips3 -mgp32 -mfp32	0e8825f33692f41b19071c6d3ed14a686439391ed1217bda5c3451ff44556211
