@@ -1,4 +1,5 @@
 # GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
+0x368FC	0x80	src/code/audio_channel_replace.s	--symbol=D_8008B080:0x8008B080 --symbol=func_80036540:0x80036540 --symbol=func_80036A24:0x80036A24 -O2 -G0 -mips3 -mgp32 -mfp32	74814a888ab9e2e62afe46559844307014e97e0c34dc037fb88c0cd534ea4884
 0x3B200	0x120	src/code/audio_frame_storage_mode.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5cdcdab4b1e7a36296edde1f24459b28193bb796d6d2f452b15ac43ade393699
 0x3BA80	0x1AC	src/code/audio_frame_collision_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afeabe508a0e5514d0ff3409d02b3a8d79cb5fb2812c8ae42ba648621013a71b
 0x3B3DC	0xF0	src/code/audio_frame_header_copy.s	--symbol=D_80073434:0x80073434 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e86d56625d051ed1318165633ea7f5b7f6f756d57c2c2b2eb2e20f38dede755a

@@ -1,4 +1,5 @@
 # GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
+0x4B34	0xF0	src/overlays/overlay1/weighted_group_object_count.s	--symbol=D_8008B672:0x8008B672 --symbol=D_80088AE4:0x80088AE4 --symbol=D_80085040:0x80085040 --symbol=func_8008F4E0:0x8008F4E0 -O2 -G0 -mips3 -mgp32 -mfp32	06f14d198446e01b72df34c4dd1177d7c429c972b7736c43f570e6217573c517
 0x811C	0x8	src/overlays/overlay1/call_80092B48_enabled.s	-O2 -G0 -mips3 -mgp32 -mfp32 --symbol=func_80092B48:0x80092B48	0b3f1d22913eafe9109acfa31930aac3024953a738c15f60d4c79176c1da9403
 0xA518	0xC	src/overlays/overlay1/offset_call_80094E10.s	-O2 -G0 -mips3 -mgp32 -mfp32 --symbol=func_80094E10:0x80094E10	65359f8c7a22da276fb1817a2ecacc5be6bbe7ac858a2ec40f22d49b37f40403
 0x28A44	0x8	src/overlays/overlay1/call_800B3334.s	-O2 -G0 -mips3 -mgp32 -mfp32 --symbol=func_800B3334:0x800B3334	99d80b56f228e050b1ca958961b9dccd44becbf681ce4265059d96f5a2e308d8

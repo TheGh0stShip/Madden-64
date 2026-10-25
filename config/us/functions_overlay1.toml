@@ -42,7 +42,7 @@ functions = [
     { name = "func_8009386C", vram = 0x8009386c, size = 0x1b4 }, # c falls_through
     { name = "func_80093A20", vram = 0x80093a20, size = 0x1c }, # leaf
     { name = "func_80093ABC", vram = 0x80093abc, size = 0x7c }, # c
-    { name = "func_80093B38", vram = 0x80093b38, size = 0xf0 }, # leaf
+    { name = "weighted_group_object_count", vram = 0x80093b38, size = 0xf0 }, # asm
     { name = "func_80093C28", vram = 0x80093c28, size = 0x88 }, # leaf
     { name = "func_80093CB0", vram = 0x80093cb0, size = 0x74 }, # leaf
     { name = "func_80093D24", vram = 0x80093d24, size = 0x24 }, # leaf

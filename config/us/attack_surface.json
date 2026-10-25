@@ -183,8 +183,8 @@
       "overlay_1": {
         "functions": 1025,
         "bytes": 183528,
-        "matched_functions": 169,
-        "matched_bytes": 7152
+        "matched_functions": 170,
+        "matched_bytes": 7392
       },
       "overlay_4": {
         "functions": 420,
@@ -195,8 +195,8 @@
       "resident": {
         "functions": 1370,
         "bytes": 378060,
-        "matched_functions": 733,
-        "matched_bytes": 80840
+        "matched_functions": 737,
+        "matched_bytes": 81356
       }
     },
     "catalogue_status": {
@@ -284,14 +284,14 @@
       "000-0128": {
         "functions": 553,
         "bytes": 51828,
-        "matched_functions": 286,
-        "matched_bytes": 26148
+        "matched_functions": 288,
+        "matched_bytes": 26400
       },
       "000-0256": {
         "functions": 553,
         "bytes": 102424,
-        "matched_functions": 67,
-        "matched_bytes": 12224
+        "matched_functions": 70,
+        "matched_bytes": 12728
       },
       "000-0512": {
         "functions": 477,
@@ -321,7 +321,7 @@
         "vram": 2148088632,
         "rom": 19252,
         "size": 240,
-        "name": "func_80093B38"
+        "name": "weighted_group_object_count"
       }
     ]
   },

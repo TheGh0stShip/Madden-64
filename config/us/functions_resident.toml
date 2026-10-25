@@ -82,7 +82,7 @@ functions = [
     { name = "func_8000B614", vram = 0x8000b614, size = 0xe4 }, # c
     { name = "func_8000B6F8", vram = 0x8000b6f8, size = 0xac }, # c
     { name = "func_8000B7A4", vram = 0x8000b7a4, size = 0x40 }, # c
-    { name = "func_8000B7E4", vram = 0x8000b7e4, size = 0x7c }, # c
+    { name = "object_resource_cleanup", vram = 0x8000b7e4, size = 0x7c }, # c
     { name = "func_8000B860", vram = 0x8000b860, size = 0xcc }, # c
     { name = "func_8000B92C", vram = 0x8000b92c, size = 0xa8 }, # c
     { name = "func_8000B9D4", vram = 0x8000b9d4, size = 0x11c }, # c
@@ -452,8 +452,8 @@ functions = [
     { name = "func_80027908", vram = 0x80027908, size = 0x8c }, # c
     { name = "func_80027994", vram = 0x80027994, size = 0xc4 }, # c
     { name = "func_80027A58", vram = 0x80027a58, size = 0xdc }, # c
-    { name = "func_80027B34", vram = 0x80027b34, size = 0x84 }, # c
-    { name = "func_80027BB8", vram = 0x80027bb8, size = 0x84 }, # c
+    { name = "interface_command_group_primary", vram = 0x80027b34, size = 0x84 }, # c
+    { name = "interface_command_group_secondary", vram = 0x80027bb8, size = 0x84 }, # c
     { name = "func_80027C3C", vram = 0x80027c3c, size = 0x5c }, # c
     { name = "func_80027C98", vram = 0x80027c98, size = 0x1a0 }, # c
     { name = "func_80027E38", vram = 0x80027e38, size = 0xb8 }, # c
@@ -699,7 +699,7 @@ functions = [
     { name = "func_80035990", vram = 0x80035990, size = 0xec }, # c
     { name = "func_80035A7C", vram = 0x80035a7c, size = 0x258 }, # c
     { name = "func_80035CD4", vram = 0x80035cd4, size = 0x28 }, # c
-    { name = "func_80035CFC", vram = 0x80035cfc, size = 0x80 }, # c
+    { name = "audio_channel_replace", vram = 0x80035cfc, size = 0x80 }, # asm
     { name = "func_80035D7C", vram = 0x80035d7c, size = 0x174 }, # c
     { name = "func_80035EF0", vram = 0x80035ef0, size = 0x98 }, # c
     { name = "func_80035F88", vram = 0x80035f88, size = 0x178 }, # c

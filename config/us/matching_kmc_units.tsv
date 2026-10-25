@@ -1,4 +1,7 @@
 # KMC GCC 2.7.2; ROM_START SIZE SOURCE FLAGS SHA256
+0xC3E4	0x7C	src/code/object_resource_cleanup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4a6fcb2e4b316119fa60d62da34564650a643be91a50eff934e4b09664eaffb9
+0x28734	0x84	src/code/interface_command_group.c	-DFUNCTION=interface_command_group_primary -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2eb9fb43642fd2f75252eb72da7cc666b7acfb19fb4d9cd4a0af5c48bcc75cde
+0x287B8	0x84	src/code/interface_command_group.c	-DFUNCTION=interface_command_group_secondary -DFIRST_COMMAND=0x21 -DSECOND_COMMAND=0x22 -DTHIRD_COMMAND=0x2D -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c2159b669e67271fc1ddb3eeeb3fd60ed735c2895afef07bd58c64bb347d56cb
 0x335B8	0x94	src/code/rom_dma_read.c	--symbol=osCreateMesgQueue:0x80045B68 --symbol=osPiStartDma:0x8004BDB8 --symbol=osRecvMesg:0x8004CDA8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a9802b2b18fd9efc283b3fb5e13dce73b8aae863395d33fe474046c690d8bb12
 0x9A48	0x24	src/code/channel_call.c	-DFUNCTION=func_80008E48 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f35cd1e43b0f75d8439a7a8153c88d8aa1e50706cb8b87d057182f372bcd9b7
 0x107C	0x8	src/code/early_noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
