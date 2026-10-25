@@ -212,3 +212,11 @@
 0x28D44	0xE0	src/code/play_flags_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	5e67960de9fc342223227211bead4fe35cbf448f8cd0ec07a06eaaaf0746af9c
 0x3D64C	0xE0	src/code/audio_runtime_shutdown.s	-O2 -G0 -mips3 -mgp32 -mfp32	144e6068437e96b8214780b31f611331b9e9e6e7f1be5e22f2cfc80f95ecefaf
 0x40B30	0xE0	src/code/audio_record_field_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	b27d4b16c4ec76533f9d0b7dfbbc6c8d2602fc54b34c3c894ef825ad4a9ae9e3
+0xC214	0xE4	src/code/display_system_shutdown.s	-O2 -G0 -mips3 -mgp32 -mfp32	889bb29a64f3cfb28727d65f7793ebeb6e703d769bf7e8b7a421210e53212226
+0x24860	0xE4	src/code/team_stat_value_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	b50b9d86f8b3cd938ed1f41a6d85440db33840afbacbbf6d7c758b8310b92c32
+0x2D100	0xE4	src/code/team_record_pointer_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	a9d599b2859be23b82cb78537a62448a91efea242a21df1c5fc43777dbccef1d
+0x33D74	0xE4	src/code/memory_table_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	d93aa31398617c7a5dc375d4196d2177fafa7efeaac978191731b73cff6d689a
+0x3A6CC	0xE4	src/code/roster_runtime_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	d61621aaa6a8dff87c9f777ac9c539184e0f38af7120cf63af48973fa74dabf3
+0x3D3E4	0xE4	src/code/audio_output_select.s	-O2 -G0 -mips3 -mgp32 -mfp32	f8136f643a63a24db9e46833ef8942f0751f031af84bae0ef26e1b0b91fee5f4
+0x40C10	0xE4	src/code/audio_slots_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	a9fa453eb8f8d80239aa4badec80e93e8efe40bcc043b37cedefe3b69e0fbe1b
+0x444B4	0xE8	src/code/object_vector_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	4816d0ba36102a53382866fd15e2200cf4ba2f8fcbe2602fefe2f356b30db394
