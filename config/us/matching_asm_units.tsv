@@ -183,3 +183,8 @@
 0xC460	0xCC	src/code/display_surface_clone.s	-O2 -G0 -mips3 -mgp32 -mfp32	616da9367056e81fb36909814f7bc4a95cff8e0622983348e86ab8ba502aca28
 0x2CC3C	0xCC	src/code/packed_field_extended_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	7509e71f0c09bdd6a813532c8ef82487c77dfc5ba43d8124887fa6a5943b87f0
 0x30AA4	0xCC	src/code/runtime_node_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	d4d2665a3ed1b996d6ae3f4b359c30731eb366e160741b7568cb90eb96b24b54
+0x1C04C	0xD0	src/code/display_record_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	f414768564ecbb2e60e8a5d502447da4ed2f0b89d3ff3846340bb155a0c6ae80
+0x1F420	0xD0	src/code/text_glyph_width_sum.s	-O2 -G0 -mips3 -mgp32 -mfp32	f9cdbe48abeec6ff78efbc60d84c88b24a69664bc270c18cdf34b00ee021ce08
+0x2B798	0xD0	src/code/team_best_slot_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	b815668b77a4299b04415fced2e221e51f9f1f71643f960e22a7927c10a69a13
+0x40E74	0xD0	src/code/audio_range_randomize.s	-O2 -G0 -mips3 -mgp32 -mfp32	b7beb92c49adae993b236c7a9ecd91d012b4571dfeaf15e9615d967819c168e9
+0x3DBA0	0xD4	src/code/audio_position_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	da295f58a8307704798bf7915581fb1c2b647114ac6729fd35490bffa4f184a6
