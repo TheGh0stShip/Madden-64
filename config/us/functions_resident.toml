@@ -531,7 +531,7 @@ functions = [
     { name = "func_8002D398", vram = 0x8002d398, size = 0x48 }, # leaf
     { name = "func_8002D3E0", vram = 0x8002d3e0, size = 0x48 }, # leaf
     { name = "func_8002D428", vram = 0x8002d428, size = 0x8 }, # stub
-    { name = "func_8002D430", vram = 0x8002d430, size = 0x3d0 }, # leaf
+    { name = "matrix_multiply_fixed", vram = 0x8002d430, size = 0x3d0 }, # asm
     { name = "runtime_record_copy", vram = 0x8002d800, size = 0x84 }, # asm
     { name = "func_8002D884", vram = 0x8002d884, size = 0x3c }, # leaf
     { name = "func_8002D8C0", vram = 0x8002d8c0, size = 0x8 }, # stub
@@ -546,7 +546,7 @@ functions = [
     { name = "matrix_vector_transform", vram = 0x8002e01c, size = 0xec }, # asm
     { name = "func_8002E108", vram = 0x8002e108, size = 0x40 }, # leaf
     { name = "func_8002E148", vram = 0x8002e148, size = 0x34 }, # leaf
-    { name = "func_8002E17C", vram = 0x8002e17c, size = 0x410 }, # leaf
+    { name = "memory_move_overlap", vram = 0x8002e17c, size = 0x410 }, # asm
     { name = "func_8002E58C", vram = 0x8002e58c, size = 0x9c }, # leaf
     { name = "func_8002E628", vram = 0x8002e628, size = 0x34 }, # leaf
     { name = "func_8002E65C", vram = 0x8002e65c, size = 0x2c }, # leaf
@@ -569,7 +569,7 @@ functions = [
     { name = "func_8002F594", vram = 0x8002f594, size = 0x2a4 }, # c
     { name = "func_8002F838", vram = 0x8002f838, size = 0xf8 }, # leaf
     { name = "func_8002F930", vram = 0x8002f930, size = 0x8 }, # stub
-    { name = "func_8002F938", vram = 0x8002f938, size = 0x330 }, # c
+    { name = "bitstream_record_decode", vram = 0x8002f938, size = 0x330 }, # asm
     { name = "func_8002FC68", vram = 0x8002fc68, size = 0x1a8 }, # leaf
     { name = "func_8002FE10", vram = 0x8002fe10, size = 0x48 }, # c
     { name = "func_8002FE58", vram = 0x8002fe58, size = 0x4c }, # c
@@ -614,11 +614,11 @@ functions = [
     { name = "func_80031A98", vram = 0x80031a98, size = 0x20 }, # c
     { name = "packed_command_measure", vram = 0x80031ab8, size = 0x168 }, # asm
     { name = "func_80031C20", vram = 0x80031c20, size = 0x34 }, # leaf
-    { name = "func_80031C54", vram = 0x80031c54, size = 0x434 }, # leaf
+    { name = "runtime_flags_update", vram = 0x80031c54, size = 0x434 }, # asm
     { name = "func_80032088", vram = 0x80032088, size = 0x410 }, # c
     { name = "func_80032498", vram = 0x80032498, size = 0x64 }, # c
     { name = "resource_pool_reset_wait", vram = 0x800324fc, size = 0xc4 }, # asm
-    { name = "func_800325C0", vram = 0x800325c0, size = 0x3c4 }, # leaf
+    { name = "math_tables_initialize", vram = 0x800325c0, size = 0x3c4 }, # asm
     { name = "func_80032984", vram = 0x80032984, size = 0x34 }, # leaf
     { name = "rom_dma_read", vram = 0x800329b8, size = 0x94 }, # c
     { name = "func_80032A4C", vram = 0x80032a4c, size = 0x34 }, # c
@@ -797,13 +797,13 @@ functions = [
     { name = "audio_frame_record_find", vram = 0x8003aca0, size = 0x8c }, # leaf
     { name = "audio_frame_record_copy", vram = 0x8003ad2c, size = 0x154 }, # asm
     { name = "audio_frame_collision_resolve", vram = 0x8003ae80, size = 0x1ac }, # asm
-    { name = "func_8003B02C", vram = 0x8003b02c, size = 0x374 }, # c
-    { name = "func_8003B3A0", vram = 0x8003b3a0, size = 0x30c }, # c
+    { name = "audio_table_decode_primary", vram = 0x8003b02c, size = 0x374 }, # asm
+    { name = "audio_table_decode_secondary", vram = 0x8003b3a0, size = 0x30c }, # asm
     { name = "func_8003B6AC", vram = 0x8003b6ac, size = 0x150 }, # leaf
     { name = "frame_value_combine", vram = 0x8003b7fc, size = 0x90 }, # asm
     { name = "func_8003B88C", vram = 0x8003b88c, size = 0x70 }, # leaf
     { name = "menu_grid_record_dispatch", vram = 0x8003b8fc, size = 0xc4 }, # asm
-    { name = "func_8003B9C0", vram = 0x8003b9c0, size = 0x3a8 }, # c
+    { name = "audio_sequence_channel_configure", vram = 0x8003b9c0, size = 0x3a8 }, # asm
     { name = "func_8003BD68", vram = 0x8003bd68, size = 0x17c }, # c
     { name = "func_8003BEE4", vram = 0x8003bee4, size = 0x70 }, # leaf
     { name = "func_8003BF54", vram = 0x8003bf54, size = 0x48 }, # c
