@@ -1,0 +1,40 @@
+#include "types.h"
+
+typedef s32 (*ObjectFinalizeCallback)(u8 *object);
+
+s32 object_state_finalize(u8 *object)
+{
+    register u8 *saved_object __asm__("$16") = object;
+    register u8 *state __asm__("$17") = *(u8 **)(saved_object + 0x1B8);
+    s32 delta = *(s32 *)(state + 0xC);
+    register u8 *owner __asm__("$4") = *(u8 **)(saved_object + 0x1B4);
+    s32 index;
+    u32 final_value;
+    s32 result;
+    volatile u64 unused;
+
+    if (delta < 0) {
+        delta += 7;
+    }
+    *(s32 *)(owner + 0x5C) += delta >> 3;
+    *(s32 *)(state + 0xC) = 0;
+    if (((ObjectFinalizeCallback)*(u32 *)(*(u8 **)(saved_object + 0x1B4) + 8))
+        (saved_object) == 0) {
+        return 0;
+    }
+    if (*(s32 *)(saved_object + 0x144) > 0) {
+        index = 0;
+        owner = state;
+        do {
+            *(u32 *)(owner + 0x18) = 0;
+            index++;
+            owner += 4;
+        } while (index < *(s32 *)(saved_object + 0x144));
+    }
+    *(u32 *)(state + 0x14) = 0;
+    final_value = *(u32 *)(saved_object + 0x114);
+    result = 1;
+    *(u32 *)(state + 0x10) = 0;
+    *(u32 *)(state + 0x28) = final_value;
+    return result;
+}

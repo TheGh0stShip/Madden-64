@@ -369,7 +369,7 @@ functions = [
     { name = "func_8001FA38", vram = 0x8001fa38, size = 0x18 }, # leaf
     { name = "func_8001FA50", vram = 0x8001fa50, size = 0x18 }, # leaf
     { name = "menu_player_update", vram = 0x8001fa68, size = 0x200 }, # asm
-    { name = "menu_scroll_initialize", vram = 0x8001fc68, size = 0xa0 }, # asm
+    { name = "menu_scroll_initialize", vram = 0x8001fc68, size = 0xa0 }, # c
     { name = "menu_player_state_update", vram = 0x8001fd08, size = 0x4b0 }, # asm
     { name = "menu_animation_update", vram = 0x800201b8, size = 0x474 }, # asm
     { name = "menu_state_render", vram = 0x8002062c, size = 0x30c }, # asm
@@ -587,7 +587,7 @@ functions = [
     { name = "func_80030620", vram = 0x80030620, size = 0x120 }, # asm
     { name = "func_80030740", vram = 0x80030740, size = 0x38 }, # leaf
     { name = "func_80030778", vram = 0x80030778, size = 0x10c }, # asm
-    { name = "display_values_refresh", vram = 0x80030884, size = 0x8c }, # asm
+    { name = "display_values_refresh", vram = 0x80030884, size = 0x8c }, # c
     { name = "func_80030910", vram = 0x80030910, size = 0x118 }, # asm
     { name = "func_80030A28", vram = 0x80030a28, size = 0x12c }, # asm
     { name = "func_80030B54", vram = 0x80030b54, size = 0x48 }, # c
@@ -952,7 +952,7 @@ functions = [
     { name = "display_list_copy_or_branch", vram = 0x800427c8, size = 0x80 }, # c
     { name = "display_pipeline_setup", vram = 0x80042848, size = 0xd4 }, # asm
     { name = "func_8004291C", vram = 0x8004291c, size = 0x40 }, # c
-    { name = "color_tables_refresh", vram = 0x8004295c, size = 0xa8 }, # asm
+    { name = "color_tables_refresh", vram = 0x8004295c, size = 0xa8 }, # c
     { name = "display_command_process", vram = 0x80042a04, size = 0x3c4 }, # asm
     { name = "display_command_link", vram = 0x80042dc8, size = 0xc8 }, # asm
     { name = "func_80042E90", vram = 0x80042e90, size = 0x30 }, # leaf
@@ -1245,12 +1245,12 @@ functions = [
     { name = "object_cycle_update", vram = 0x80058f2c, size = 0x228 }, # asm
     { name = "object_cycle_finalize", vram = 0x80059154, size = 0x194 }, # asm
     { name = "func_800592E8", vram = 0x800592e8, size = 0x14c }, # asm
-    { name = "object_output_reset", vram = 0x80059434, size = 0xa4 }, # asm
+    { name = "object_output_reset", vram = 0x80059434, size = 0xa4 }, # c
     { name = "object_state_machine_update", vram = 0x800594d8, size = 0x528 }, # asm
     { name = "func_80059A00", vram = 0x80059a00, size = 0x74 }, # c
     { name = "func_80059A78", vram = 0x80059a78, size = 0x8 }, # asm
     { name = "object_state_transition", vram = 0x80059a80, size = 0x394 }, # asm
-    { name = "object_state_finalize", vram = 0x80059e14, size = 0xa8 }, # asm
+    { name = "object_state_finalize", vram = 0x80059e14, size = 0xa8 }, # c
     { name = "object_state_update_primary", vram = 0x80059ebc, size = 0x2d0 }, # asm
     { name = "object_state_update_secondary", vram = 0x8005a18c, size = 0x2d0 }, # asm
     { name = "func_8005A45C", vram = 0x8005a45c, size = 0x164 }, # asm

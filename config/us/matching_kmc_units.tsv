@@ -565,3 +565,8 @@
 0x1BC98	0xA0	src/code/resource_buffers_allocate.c	--assembler=asn64 --symbol=func_8001C6B8:0x8001C6B8 --symbol=func_800337CC:0x800337CC --symbol=func_80033308:0x80033308 -O2 -G0 -mips3 -mgp32 -mfp32	b102366205d8257808438392e95f2b00d7ab2f6b1a1f314464b5ff36dbb21e66
 0x45DF8	0x94	src/code/box_vertices_build.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	48e051c1a53060c12d3dfdea7fac202acf52b0f299ccfee9056fa254a62f3410
 0x4618C	0x94	src/code/display_context_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	130a10f227a03a8ebae55ce4da7c743ccfe36d876561371efaf5d0bd7edda6b6
+0x31484	0x8C	src/code/display_values_refresh.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	90ca8004a0dee6937ab1e3014a11c741e71507c67f13d83264eeb0291638cb75
+0x20868	0xA0	src/code/menu_scroll_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	abbbdc060ebb9e44de205e7ce47649ba67d0fcbeb017060cb3fdde792ded2b69
+0x4355C	0xA8	src/code/color_tables_refresh.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	22b984aa785a912b1378490b7c1b14d7b6289fa4c92f82968efda395259eda6f
+0x5A034	0xA4	src/code/object_output_reset.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	cd6a5d0759f348ba72283d414700babbe27ad2a78ac41d86107aa4662e861531
+0x5AA14	0xA8	src/code/object_state_finalize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	21ff457fc96a6d133b412b9cd88ac465f799118d7024aa53e9383ae9fb1f47f7
