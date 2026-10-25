@@ -434,3 +434,5 @@
 0x2F59C	0x4C	src/code/fixed_square_root.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	91f11e005ea503c562a1f79ca871f9dc3468dd91c618a87d5b06f9e3cd5a1529
 0xB1D4	0x68	src/code/render_primitive_depth_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d1b7cd495a3bad6b94f00665555013e29ede69a95925bd108cd4713b704a8f64
 0xB23C	0x64	src/code/render_mode_pair_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	66171e97079b127f75ad549ae7918579e71d779055114b7bc40ed99e3efdc22e
+0x450D0	0x60	src/code/audio_buffer_pair_release.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	88bdb2c3c67f775505f9f70f1e2d8b2fb95386b443c20880709cdf8c0cd06cba
+0x36274	0x50	src/code/record_pointer_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	62e8f985b1dcd99ba93a4406ee543334ddede8f55277b1e463d8aa2fe073ee73
