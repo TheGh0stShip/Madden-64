@@ -749,7 +749,7 @@ functions = [
     { name = "func_800B8DD8", vram = 0x800b8dd8, size = 0xd8 }, # asm
     { name = "func_800B8EB0", vram = 0x800b8eb0, size = 0x1a0 }, # asm
     { name = "func_800B9050", vram = 0x800b9050, size = 0x5c }, # asm
-    { name = "func_800B90AC", vram = 0x800b90ac, size = 0x44 }, # asm
+    { name = "masked_lookup_value", vram = 0x800b90ac, size = 0x44 }, # C
     { name = "func_800B9184", vram = 0x800b9184, size = 0x84 }, # asm
     { name = "func_800B9208", vram = 0x800b9208, size = 0x6c }, # asm
     { name = "func_800B9274", vram = 0x800b9274, size = 0x88 }, # asm
