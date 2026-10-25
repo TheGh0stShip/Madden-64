@@ -16,9 +16,9 @@ void func_800347B4(OffsetRecordOwner* owner) {
     register u32 offset __asm__("$6");
     register u32* first __asm__("$2");
     register u32 count __asm__("$3");
+    volatile u64 unused;
 
     first = (u32*)owner->records;
-    __asm__("addiu $sp,$sp,-8" : : "r"(first));
     i = 0;
     count = owner->records->count;
     offset = owner->offset;
@@ -26,12 +26,11 @@ void func_800347B4(OffsetRecordOwner* owner) {
     if (count != 0) {
         register u32* value __asm__("$3");
 
-        __asm__("addu %0,%1,$0" : "=r"(value) : "r"(first));
+        value = first;
         do {
             *value += offset;
             i++;
             value++;
         } while (i < owner->records->count);
     }
-    __asm__("addiu $sp,$sp,8");
 }
