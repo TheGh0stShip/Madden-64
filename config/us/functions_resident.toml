@@ -513,16 +513,16 @@ functions = [
     { name = "func_8002C304", vram = 0x8002c304, size = 0xf8 }, # c
     { name = "func_8002C3FC", vram = 0x8002c3fc, size = 0x104 }, # c
     { name = "team_record_pointer_find", vram = 0x8002c500, size = 0xe4 }, # asm
-    { name = "func_8002C5E4", vram = 0x8002c5e4, size = 0x17c }, # c
+    { name = "team_player_stats_update", vram = 0x8002c5e4, size = 0x17c }, # asm
     { name = "func_8002C760", vram = 0x8002c760, size = 0x114 }, # c
-    { name = "func_8002C874", vram = 0x8002c874, size = 0x13c }, # c
+    { name = "team_player_pair_update", vram = 0x8002c874, size = 0x13c }, # asm
     { name = "team_color_resolve", vram = 0x8002c9b0, size = 0xd8 }, # asm
     { name = "func_8002CA88", vram = 0x8002ca88, size = 0x18 }, # leaf
     { name = "func_8002CAA0", vram = 0x8002caa0, size = 0x30 }, # c
     { name = "func_8002CAD0", vram = 0x8002cad0, size = 0x48 }, # c
     { name = "func_8002CB18", vram = 0x8002cb18, size = 0x38 }, # leaf
     { name = "func_8002CB50", vram = 0x8002cb50, size = 0x84 }, # leaf
-    { name = "func_8002CBD4", vram = 0x8002cbd4, size = 0x154 }, # leaf
+    { name = "matrix_stack_duplicate", vram = 0x8002cbd4, size = 0x154 }, # asm
     { name = "func_8002CD28", vram = 0x8002cd28, size = 0x1c }, # leaf
     { name = "func_8002CD44", vram = 0x8002cd44, size = 0x204 }, # c
     { name = "func_8002CF48", vram = 0x8002cf48, size = 0x204 }, # c
@@ -536,13 +536,13 @@ functions = [
     { name = "func_8002D884", vram = 0x8002d884, size = 0x3c }, # leaf
     { name = "func_8002D8C0", vram = 0x8002d8c0, size = 0x8 }, # stub
     { name = "func_8002D8C8", vram = 0x8002d8c8, size = 0x8 }, # stub
-    { name = "func_8002D8D0", vram = 0x8002d8d0, size = 0x144 }, # leaf
-    { name = "func_8002DA14", vram = 0x8002da14, size = 0x168 }, # leaf
+    { name = "matrix_stack_scale_fixed", vram = 0x8002d8d0, size = 0x144 }, # asm
+    { name = "matrix_stack_transform_vector", vram = 0x8002da14, size = 0x168 }, # asm
     { name = "func_8002DB7C", vram = 0x8002db7c, size = 0x54 }, # leaf
     { name = "func_8002DBD0", vram = 0x8002dbd0, size = 0x198 }, # leaf
-    { name = "func_8002DD68", vram = 0x8002dd68, size = 0x168 }, # leaf
+    { name = "matrix_stack_transform_point", vram = 0x8002dd68, size = 0x168 }, # asm
     { name = "func_8002DED0", vram = 0x8002ded0, size = 0x24 }, # leaf
-    { name = "func_8002DEF4", vram = 0x8002def4, size = 0x128 }, # leaf
+    { name = "matrix_stack_export_fixed", vram = 0x8002def4, size = 0x128 }, # asm
     { name = "matrix_vector_transform", vram = 0x8002e01c, size = 0xec }, # asm
     { name = "func_8002E108", vram = 0x8002e108, size = 0x40 }, # leaf
     { name = "func_8002E148", vram = 0x8002e148, size = 0x34 }, # leaf
@@ -612,7 +612,7 @@ functions = [
     { name = "func_80031A68", vram = 0x80031a68, size = 0x10 }, # stub
     { name = "func_80031A78", vram = 0x80031a78, size = 0x20 }, # c
     { name = "func_80031A98", vram = 0x80031a98, size = 0x20 }, # c
-    { name = "func_80031AB8", vram = 0x80031ab8, size = 0x168 }, # leaf
+    { name = "packed_command_measure", vram = 0x80031ab8, size = 0x168 }, # asm
     { name = "func_80031C20", vram = 0x80031c20, size = 0x34 }, # leaf
     { name = "func_80031C54", vram = 0x80031c54, size = 0x434 }, # leaf
     { name = "func_80032088", vram = 0x80032088, size = 0x410 }, # c
@@ -625,10 +625,10 @@ functions = [
     { name = "func_80032A80", vram = 0x80032a80, size = 0x3c }, # c
     { name = "func_80032ABC", vram = 0x80032abc, size = 0x44 }, # c
     { name = "func_80032B00", vram = 0x80032b00, size = 0x78 }, # c
-    { name = "func_80032B78", vram = 0x80032b78, size = 0x150 }, # c
-    { name = "func_80032CC8", vram = 0x80032cc8, size = 0x138 }, # c
-    { name = "func_80032E00", vram = 0x80032e00, size = 0x13c }, # c
-    { name = "func_80032F3C", vram = 0x80032f3c, size = 0x114 }, # c
+    { name = "memory_pool_region_load", vram = 0x80032b78, size = 0x150 }, # asm
+    { name = "memory_pool_initialize", vram = 0x80032cc8, size = 0x138 }, # asm
+    { name = "memory_pool_range_allocate", vram = 0x80032e00, size = 0x13c }, # asm
+    { name = "memory_pool_resize", vram = 0x80032f3c, size = 0x114 }, # asm
     { name = "memory_block_split", vram = 0x80033050, size = 0xdc }, # asm
     { name = "func_8003312C", vram = 0x8003312c, size = 0x48 }, # leaf
     { name = "memory_table_create", vram = 0x80033174, size = 0xe4 }, # asm
