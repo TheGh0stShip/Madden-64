@@ -1,0 +1,2 @@
+# KMC GCC 2.7.2; ROM_START SIZE SOURCE FLAGS SHA256
+0x1010	0xCC	src/boot/load_program.c	--symbol=decode_lz_type_1:0x802004DC --symbol=boot_cache_invalidate:0x80200660 --symbol=boot_cache_writeback_invalidate:0x802005E0 --symbol=boot_copy_source:0x802006CC --symbol=packed_program:0x802006D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	09fc81a83e9d2f3e97c3f35827ef3e8e0a564aadb219fb50187708083fc5ff7b

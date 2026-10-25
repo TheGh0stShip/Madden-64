@@ -177,26 +177,26 @@
       "boot_loader": {
         "functions": 5,
         "bytes": 632,
-        "matched_functions": 3,
-        "matched_bytes": 172
+        "matched_functions": 1,
+        "matched_bytes": 204
       },
       "overlay_1": {
         "functions": 1025,
         "bytes": 183528,
-        "matched_functions": 1024,
-        "matched_bytes": 182008
+        "matched_functions": 167,
+        "matched_bytes": 7728
       },
       "overlay_4": {
         "functions": 420,
         "bytes": 115116,
-        "matched_functions": 73,
-        "matched_bytes": 3724
+        "matched_functions": 71,
+        "matched_bytes": 3672
       },
       "resident": {
         "functions": 1370,
         "bytes": 378060,
-        "matched_functions": 1370,
-        "matched_bytes": 378060
+        "matched_functions": 695,
+        "matched_bytes": 74712
       }
     },
     "catalogue_status": {
@@ -266,50 +266,50 @@
       "000-0016": {
         "functions": 324,
         "bytes": 3912,
-        "matched_functions": 297,
-        "matched_bytes": 3580
+        "matched_functions": 189,
+        "matched_bytes": 2168
       },
       "000-0032": {
         "functions": 224,
         "bytes": 5824,
-        "matched_functions": 203,
-        "matched_bytes": 5336
+        "matched_functions": 102,
+        "matched_bytes": 2732
       },
       "000-0064": {
         "functions": 387,
         "bytes": 19208,
-        "matched_functions": 363,
-        "matched_bytes": 17976
+        "matched_functions": 236,
+        "matched_bytes": 11660
       },
       "000-0128": {
         "functions": 553,
         "bytes": 51828,
-        "matched_functions": 495,
-        "matched_bytes": 46496
+        "matched_functions": 285,
+        "matched_bytes": 25928
       },
       "000-0256": {
         "functions": 553,
         "bytes": 102424,
-        "matched_functions": 474,
-        "matched_bytes": 87572
+        "matched_functions": 63,
+        "matched_bytes": 11304
       },
       "000-0512": {
         "functions": 477,
         "bytes": 171328,
-        "matched_functions": 394,
-        "matched_bytes": 142688
+        "matched_functions": 38,
+        "matched_bytes": 14232
       },
       "000-1024": {
         "functions": 203,
         "bytes": 141616,
-        "matched_functions": 166,
-        "matched_bytes": 116116
+        "matched_functions": 15,
+        "matched_bytes": 10400
       },
       "1025+": {
         "functions": 99,
         "bytes": 181196,
-        "matched_functions": 78,
-        "matched_bytes": 144200
+        "matched_functions": 6,
+        "matched_bytes": 7892
       }
     },
     "exact_duplicate_families": 17,

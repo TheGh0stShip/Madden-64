@@ -61,13 +61,15 @@ COMMON_IMMEDIATES = {
 }
 
 
-def manifest_ranges(paths: tuple[str, ...]) -> list[tuple[int, int, str]]:
+def manifest_ranges(paths: tuple[str, ...], suffix: str = ".c") -> list[tuple[int, int, str]]:
     ranges = []
     for relpath in paths:
         path = ROOT / relpath
         with path.open(newline="") as stream:
             for row in csv.reader(stream, delimiter="\t"):
                 if not row or not row[0].startswith("0x"):
+                    continue
+                if not row[2].endswith(suffix):
                     continue
                 start, size = int(row[0], 0), int(row[1], 0)
                 ranges.append((start, start + size, row[2]))
@@ -188,7 +190,10 @@ def catalogue_module(spec: dict[str, object]) -> list[dict[str, object]]:
 
 def loader_catalogue() -> list[dict[str, object]]:
     image = (ROOT / "Madden Football 64 (USA).z64").read_bytes()
-    ranges = manifest_ranges(("config/us/matching_loader_asm_units.tsv",))
+    ranges = manifest_ranges((
+        "config/us/matching_loader_kmc_units.tsv",
+        "config/us/matching_loader_asm_units.tsv",
+    ))
     functions = []
     rows = (ROOT / "config/us/loader_map.tsv").read_text().splitlines()[1:]
     for line in rows:

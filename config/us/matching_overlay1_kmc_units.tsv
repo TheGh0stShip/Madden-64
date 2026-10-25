@@ -126,3 +126,18 @@
 0x4C24	0x88	src/overlays/overlay1/active_group_object_count.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9c8088baea36f88cf24201709ec7497f99d53fe64829ee34ea54b69eb2462f4d
 0x2D2E0	0xC0	src/overlays/overlay1/index_list_capture.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c3d7fc05f5c6cbea95c4f53a9f97376ffe2323b2512acfbc541ce479118e2436
 0x1C0F8	0x98	src/overlays/overlay1/vector_length_integer.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	47435f0c47c258100278e83bd25db14a6684308dd1319ecf6b0376f50fe6ad92
+0x180E0	0x28	src/overlays/overlay1/stack_result_query.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d7a3206a979946b7d905ef2ba4b1ec7a09a5086f46b631180462900f6a4ee3b2
+0x1F690	0x28	src/overlays/overlay1/command_26_69_10.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	017e6cdf294df68b4747dc6ad77a5041c98ecc010427025d9c5e37f970f0774a
+0x183B8	0x38	src/overlays/overlay1/global_word_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6289e9ab39180efd6b1bc3d2aba9f8fab217caadf390828da033e76089ef367f
+0x227D8	0x40	src/overlays/overlay1/transition_command_submit.c	--symbol=func_800AD0F8:0x800AD0F8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	eecdf16776a965ff480ddb8e486c134051b3e1c7ce769304ef0c1bedb5376714
+0xC914	0x30	src/overlays/overlay1/fixed_record_transfer.c	--symbol=D_80097224:0x80097224 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f5432efb04713d06b32ea389f55f23e2b49be45a8db06e45394e5689db042bf9
+0xC870	0x44	src/overlays/overlay1/object_fields_clear_10.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0c86705d62df668269c5a66c3a16743b3b444ab5e2b1f4f078e866765268fe88
+0xCFA8	0x44	src/overlays/overlay1/object_fields_clear_14.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a907b781ea20460a89fd50a96ef6f73312855f0c8f5c55585e1f2de726506ee4
+0xAD4C	0x38	src/overlays/overlay1/object_table_value_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fddef45674de05e37e81481853606d69aee4705843f7d13203cd9a383fe24ea3
+0xC8B4	0x48	src/overlays/overlay1/resource_pointer_table_initialize.c	--symbol=D_80078460:0x80078460 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e05027df108d707e654fc0e0c77dcd8aa693501b8037fb25c19d3bff8be7baac
+0x22A8C	0x3C	src/overlays/overlay1/global_buffer_prepare.c	--symbol=D_80087740:0x80087740 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	dd16246adef79f3230640b55f073cdc0f59ff6fd78ecd2b92b29fd75feb7174c
+0x2465C	0x4C	src/overlays/overlay1/subsystem_sequence_start.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	73e61461b17eb7b698dccbedb43aedd2c9bd32a4c9344d4fbdf81ee7c08c04e9
+0x246D4	0x44	src/overlays/overlay1/transition_state_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b522d3f5eccc0929e7ef65b6f6b4381f9c6d11734b796dfb3c5412e88e4f97b2
+0x30D30	0x34	src/overlays/overlay1/flagged_status_query.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4ad8e7d3669f45d93b8a825cf66479a007b7b72377db689f9c1c953fe3ae86c7
+0x37870	0x40	src/overlays/overlay1/encoded_mode_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7b1a124cd5b3af0899b76cf82be89d8798fbdde4497c0c92112596e4e1ba230c
+0x35680	0x3C	src/overlays/overlay1/object_active_callback_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a0e267a2943ca7e29b26c361a803ec463d63d6ed843312e6c6dbfbd80054cf58

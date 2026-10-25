@@ -40,7 +40,7 @@ def measures(total_code: int, matched_code: int, total_functions: int,
     }
 
 
-def manifest_ranges(paths: list[Path]) -> list[tuple[int, int, str]]:
+def manifest_ranges(paths: list[Path], suffix: str | None = None) -> list[tuple[int, int, str]]:
     ranges = []
     for path in paths:
         for number, line in enumerate(path.read_text().splitlines(), 1):
@@ -50,6 +50,8 @@ def manifest_ranges(paths: list[Path]) -> list[tuple[int, int, str]]:
             if len(fields) < 3:
                 raise ValueError(f"{path}:{number}: malformed manifest row")
             start, size = int(fields[0], 0), int(fields[1], 0)
+            if suffix is not None and not fields[2].endswith(suffix):
+                continue
             if size <= 0:
                 raise ValueError(f"{path}:{number}: size must be positive")
             ranges.append((start, start + size, fields[2]))
@@ -137,9 +139,15 @@ def build_report() -> dict[str, object]:
     image = config["image"]
     progress = config["progress"]
     manifests = [ROOT / path for path in progress["manifests"]]
-    ranges = manifest_ranges(manifests)
+    ranges = manifest_ranges(manifests, ".c")
+    assembly_ranges = manifest_ranges(manifests, ".s")
     overlay_configs = progress.get("overlay_manifests", [])
-    loader_ranges = manifest_ranges([ROOT / progress["loader_manifest"]])
+    loader_paths = progress.get("loader_manifests")
+    if loader_paths is None:
+        loader_paths = [progress["loader_manifest"]]
+    loader_manifest_paths = [ROOT / path for path in loader_paths]
+    loader_ranges = manifest_ranges(loader_manifest_paths, ".c")
+    loader_assembly_ranges = manifest_ranges(loader_manifest_paths, ".s")
     vram_base, rom_base = image["vram"], image["rom"]
     units = []
 
@@ -152,7 +160,7 @@ def build_report() -> dict[str, object]:
         overlay_paths = [ROOT / overlay["path"]]
         if overlay.get("asm_path"):
             overlay_paths.append(ROOT / overlay["asm_path"])
-        overlay_ranges = manifest_ranges(overlay_paths)
+        overlay_ranges = manifest_ranges(overlay_paths, ".c")
         functions = catalogue(ROOT / overlay["functions"])
         module = overlay["id"]
         for function in functions:
@@ -168,8 +176,15 @@ def build_report() -> dict[str, object]:
                         for start, end, _source in manifest_ranges(
                             [ROOT / overlay["path"]] +
                             ([ROOT / overlay["asm_path"]]
-                             if overlay.get("asm_path") else []))) +
+                             if overlay.get("asm_path") else []), ".c")) +
                     sum(end - start for start, end, _source in loader_ranges))
+    assembly_code = (sum(end - start for start, end, _source in assembly_ranges) +
+                     sum(end - start for overlay in overlay_configs
+                         for start, end, _source in manifest_ranges(
+                             [ROOT / overlay["path"]] +
+                             ([ROOT / overlay["asm_path"]]
+                              if overlay.get("asm_path") else []), ".s")) +
+                     sum(end - start for start, end, _source in loader_assembly_ranges))
     total_functions = len(units)
     matched_functions = sum(int(unit["measures"]["complete_units"])
                             for unit in units)
@@ -180,9 +195,14 @@ def build_report() -> dict[str, object]:
     categories = [
         {
             "id": "code",
-            "name": "Program code",
+            "name": "Decompiled C",
             "measures": measures(image["code_size"], matched_code,
                                  total_functions, matched_functions),
+        },
+        {
+            "id": "assembly_reference",
+            "name": "Matching assembly reference coverage",
+            "measures": measures(image["code_size"], assembly_code, 0, 0),
         },
         {
             "id": "program_data",
@@ -212,15 +232,34 @@ def build_decomphub_report(report: dict[str, object]) -> dict[str, object]:
         "tracks": [
             {
                 "id": "matching-code",
-                "label": "Matching whole-program code",
+                "label": "Matching decompiled C code",
                 "scope": (
                     "USA Rev 0 (N8ME) loader, resident executable, and both "
-                    "executable overlays; only byte-identical compiled or "
-                    "assembled code counts."
+                    "executable overlays; only byte-identical code compiled "
+                    "from .c sources counts."
                 ),
                 "measurement": {
                     "kind": "ratio",
                     "completed": int(totals["matched_code"]),
+                    "total": int(totals["total_code"]),
+                    "unit": "bytes",
+                },
+            },
+            {
+                "id": "assembly-reference",
+                "label": "Matching assembly reference coverage",
+                "scope": (
+                    "Byte-identical .s units retained as disassembly and "
+                    "reverse-engineering reference; excluded from C "
+                    "decompilation progress."
+                ),
+                "measurement": {
+                    "kind": "ratio",
+                    "completed": int(next(
+                        category["measures"]["matched_code"]
+                        for category in report["categories"]
+                        if category["id"] == "assembly_reference"
+                    )),
                     "total": int(totals["total_code"]),
                     "unit": "bytes",
                 },
@@ -242,11 +281,12 @@ def build_decomphub_report(report: dict[str, object]) -> dict[str, object]:
             },
             {
                 "id": "matching-functions",
-                "label": "Matching function candidates",
+                "label": "C-decompiled function candidates",
                 "scope": (
                     "Audited candidate boundaries across the loader, resident "
                     "image, and both executable overlays; a function counts "
-                    "only when its complete machine code matches."
+                    "only when its complete machine code is reproduced from "
+                    "a compiled .c source."
                 ),
                 "measurement": {
                     "kind": "ratio",

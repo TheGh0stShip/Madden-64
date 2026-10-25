@@ -35,8 +35,8 @@ overlays, separate overlay data, every archive table, each payload's logical
 length, and alignment padding. See [the ROM layout audit](docs/ROM_LAYOUT.md)
 for the gap-free map and per-archive counts and sizes.
 
-Eight hundred eight reviewed source units fully cover 950 catalogued function
-candidates and currently match 88,684 whole-program code bytes and 496 data bytes exactly, including the
+Eight hundred twelve reviewed C compilation units fully cover 934 catalogued function
+candidates and currently match 86,356 whole-program code bytes and 496 data bytes exactly, including the
 contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
 boundaries are research leads, not decompilation credit, until a source unit is
 compiled and compared byte-for-byte.
@@ -52,6 +52,8 @@ configured in `n64dk.toml`.
 make verify
 make survey
 make audit
+make match-c
+make match-asm
 make match
 make check
 make report
@@ -62,6 +64,10 @@ retail program is packed, `make match` first creates
 `build/us/main_unpacked.z64`, an analysis-only linear wrapper around the
 recovered executable. It must never be mistaken for or distributed as a game
 ROM.
+
+`make match-c` is the decompilation gate and verifies only compiled `.c`
+sources. `make match-asm` separately verifies assembly reference units.
+`make match` runs both without combining their progress totals.
 
 ## Architecture
 
@@ -90,16 +96,18 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching whole-program code | 564,336 bytes | 753,428 bytes | 74.90% |
+| Matching decompiled C code | 86,356 bytes | 753,428 bytes | 11.46% |
+| Matching assembly reference coverage | 478,184 bytes | 753,428 bytes | 63.47% |
 | Whole-program initialized data | 496 bytes | 484,540 bytes | 0.10% |
-| Matching function candidates | 2,470 | 2,820 | 87.59% |
+| C-decompiled function candidates | 934 | 2,820 | 33.12% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |
 
 The program denominator covers the loader, resident executable, both overlays,
-and their initialized data records. Function boundaries remain candidates until
-source reconstruction proves them. ROM mapping and content classification are
+and their initialized data records. Matching `.s` units are retained as useful
+reference coverage but never count as C decompilation. Function boundaries remain
+candidates until compiled C reconstruction proves them. ROM mapping and content classification are
 research coverage, not decompilation credit: the 516 texture containers, 43
 JPEGs, 262 models, 67 motions, 2 sprites, 237 audio streams, and 214 auxiliary
 graphics records are inventoried but not counted as reconstructed assets.
