@@ -449,3 +449,5 @@
 0xCA80	0x68	src/code/runtime_words_wait_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0858d6e3cc0e23c121a60c9f45753574b5c5a76aafa8a0f00462e1ff95123d68
 0xE474	0x68	src/code/intrusive_node_remove.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	53872b0db6b07809fa5b11d3f0f169e7228253fde3cbf879bbfce5f56469b6bd
 0x2F2C8	0x68	src/code/runtime_thread_start.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4c21e90b9b6844a2a1433509c63f1e4cb9fee39264d26d998026aa65604b9cb8
+0x1B4A8	0x6C	src/code/resource_pointer_group_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	34052d1c1e1eef37b4a1fcdd9ca15b38bef382a9cfffd1f52e996c66bd38aa02
+0x414C8	0x68	src/code/object_values_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e15f547b6513e4995ace9dd2e935eb5897693d523368f73dc2c20388f4e3f4fa
