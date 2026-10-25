@@ -120,3 +120,10 @@
 0x4355C	0xA8	src/code/color_tables_refresh.s	-O2 -G0 -mips3 -mgp32 -mfp32	22b984aa785a912b1378490b7c1b14d7b6289fa4c92f82968efda395259eda6f
 0x453C4	0xA8	src/code/grid_handles_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e3a4f42d3df7090589d4b14067683a83aa3851f7ac70974f1ebc8c8ea8b1e5e
 0x5AA14	0xA8	src/code/object_state_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	21ff457fc96a6d133b412b9cd88ac465f799118d7024aa53e9383ae9fb1f47f7
+0xC52C	0xA8	src/code/display_buffer_sync.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ed05d530c6bb2d8d8be5584adf81f739ca91d650d791452b61103c6f79ad2a6
+0xC6F0	0xA8	src/code/display_page_activate.s	-O2 -G0 -mips3 -mgp32 -mfp32	047dfefd5c30231ed804a2c0e95bcaed9e4f87c6e6e2a208f097ce867764cfa7
+0x25C6C	0xA8	src/code/menu_buffer_prepare_once.s	-O2 -G0 -mips3 -mgp32 -mfp32	cd687517004713babe9dbb0cb90718b4befef8e562ec309880550c715d507b93
+0x3419C	0xA8	src/code/resource_node_unlink.s	-O2 -G0 -mips3 -mgp32 -mfp32	ad0c9dcd8d459ae503d85e2cc5bc35131309e1fd0ef9bc04f3121cf97492ef8b
+0x35ED8	0xA8	src/code/resource_request_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	c62d31a658e2352fb60dbcf502d721e8d77856308c17d182ee71609b020f0089
+0x3D20C	0xA8	src/code/audio_value_seek.s	-O2 -G0 -mips3 -mgp32 -mfp32	66a573daa1b0378edfcbe3458970cf75ef7ebbdc2a47e38d089b115cac4b2dee
+0x5582C	0xA8	src/code/object_duration_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	8460efaf90de30de2720f51a0cd1c572b0e2427f9bb5650e8eb772890564006a
