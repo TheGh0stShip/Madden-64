@@ -90,9 +90,9 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching whole-program code | 261,784 bytes | 753,428 bytes | 34.75% |
+| Matching whole-program code | 269,976 bytes | 753,428 bytes | 35.83% |
 | Whole-program initialized data | 496 bytes | 484,540 bytes | 0.10% |
-| Matching function candidates | 1,325 | 2,820 | 46.99% |
+| Matching function candidates | 1,337 | 2,820 | 47.41% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |

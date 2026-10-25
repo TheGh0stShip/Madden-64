@@ -363,3 +363,15 @@
 0xA0D0	0x2CC	src/code/display_texture_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	5992cce6d77b74fd03666a9ff3ab81fd07898d5858738c8b2931cae38857c0e5
 0x22100	0x2C8	src/code/game_session_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	c8ba103afdd134157418743473934af2c2735b8cb5b95b7633e05d93387792fc
 0x3AB08	0x2C8	src/code/roster_table_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	ee0362f743a35a98a8302402058e72a118f95cf44b6ee94a504b30e185448c96
+0x1A710	0x2C0	src/code/resource_display_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	b5101dd440e301a6fef6cc9f5705cf59300242ccbc014136f7c745c42d7dd00d
+0x4588C	0x2BC	src/code/scheduler_task_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	1a402ee81c389a31103a28e8e250d4bccf5619825965c9993370baaee59f7ef7
+0x648A4	0x2BC	src/code/object_stream_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	f3b1c634e9767b0b3395545cb55c918b3ffab6421745d9ea9fd967b6a9f7088e
+0x3D7D8	0x2B0	src/code/audio_voice_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	5941b6a8330ddbde3081f9b4519dd5f1a6515270e15a7afcd636da8469c6dd2f
+0x56E00	0x2B0	src/code/object_animation_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	3a3abfbd12b6f3086b9f36bc5b1a53b69d76797009424cc29f6510b84ec7adf6
+0x2C7B0	0x2AC	src/code/packed_field_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	738906d22be55aa24e94d0c6d441f9fa83da39b279c3f5d8cdb70218489698d5
+0x1692C	0x2A4	src/code/render_state_consume.s	-O2 -G0 -mips3 -mgp32 -mfp32	69b6cbfc61bf5b8666b6511ff20e0193e02892f7860dcdeb5c3d33e5756530cc
+0x30194	0x2A4	src/code/runtime_command_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	3843473bf4d6e46f08db907a832379697f37357f935225db8ca13875762575d5
+0xF998	0x2A0	src/code/object_resource_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	10c5f16e7ee6b3e1fcdddd3895686a5edf41c73b0f9ae1f957b5653208ef62b5
+0x29B34	0x2A0	src/code/menu_mode_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	414d74e43146ca27a86770c7dedb2ff9df761157ae8a27701f3c32fa79f763ea
+0x63A68	0x29C	src/code/object_stream_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	5992c0f767c0e8725b4173ed42666a99cbedb2fc7549b9089cb5f0a280726aba
+0x2A10C	0x298	src/code/menu_cursor_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	9b2ef9b6cc9fa7eb79b9bd62707f24ec6ff5f6c3504cd98a5c6b600265e8cfa4
