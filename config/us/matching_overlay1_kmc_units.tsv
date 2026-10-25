@@ -144,3 +144,6 @@
 0x2A0A8	0x44	src/overlays/overlay1/masked_lookup_value.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4cf8b6c232f496b0b54827e89293baf5bbcc6b153f269691d871de98c28dd56c
 0x2D198	0x44	src/overlays/overlay1/workspace_initialize.c	--symbol=D_8007A268:0x8007A268 --symbol=D_8007A26C:0x8007A26C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fcea9fe13eb82a3f7068622ac3c3e57d3294b9e319a547a2e0a8b5883b5e75b6
 0x22794	0x44	src/overlays/overlay1/resource_index_dispatch.c	--symbol=D_80088472:0x80088472 --symbol=D_8006B9D4:0x8006B9D4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0bd9957308f982473b893cb2f29ea023a983ffc50b5a7d5821597003fcb7250d
+0x15320	0x44	src/overlays/overlay1/object_mode_reset_3c.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f9a23793ac354b8fc99beb4e75deab044a0a3cc16829235f3cc23b52c4785674
+0x27970	0x54	src/overlays/overlay1/resource_quad_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bef05f5ddb615a1a55db2adc12eff4e38f0a9d9d3605a6b6742a56650deb2319
+0x20BAC	0x54	src/overlays/overlay1/percent_suffix_append.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	55c60d3a493b6b4c05c760c090385f47ccb1f1a3a66c8509eb079429b9d0e7a0

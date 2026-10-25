@@ -337,7 +337,7 @@ functions = [
     { name = "func_800A3A74", vram = 0x800a3a74, size = 0x2c }, # leaf
     { name = "func_800A3AA0", vram = 0x800a3aa0, size = 0x158 }, # asm
     { name = "func_800A3BF8", vram = 0x800a3bf8, size = 0x72c }, # asm
-    { name = "func_800A4324", vram = 0x800a4324, size = 0x44 }, # asm
+    { name = "object_mode_reset_3c", vram = 0x800a4324, size = 0x44 }, # C
     { name = "func_800A4368", vram = 0x800a4368, size = 0x6c }, # asm
     { name = "func_800A4484", vram = 0x800a4484, size = 0x30c }, # asm
     { name = "func_800A4790", vram = 0x800a4790, size = 0x378 }, # asm
@@ -568,7 +568,7 @@ functions = [
     { name = "func_800AF8E0", vram = 0x800af8e0, size = 0x114 }, # asm
     { name = "func_800AFA30", vram = 0x800afa30, size = 0xe0 }, # asm
     { name = "func_800AFB10", vram = 0x800afb10, size = 0xa0 }, # asm
-    { name = "func_800AFBB0", vram = 0x800afbb0, size = 0x54 }, # asm
+    { name = "percent_suffix_append", vram = 0x800afbb0, size = 0x54 }, # C
     { name = "func_800AFC04", vram = 0x800afc04, size = 0x700 }, # asm
     { name = "func_800B0304", vram = 0x800b0304, size = 0xc0 }, # asm
     { name = "func_800B03C4", vram = 0x800b03c4, size = 0xa4 }, # asm
@@ -709,7 +709,7 @@ functions = [
     { name = "func_800B6944", vram = 0x800b6944, size = 0x10 }, # stub
     { name = "func_800B6954", vram = 0x800b6954, size = 0x10 }, # stub
     { name = "func_800B6964", vram = 0x800b6964, size = 0x10 }, # stub
-    { name = "func_800B6974", vram = 0x800b6974, size = 0x54 }, # asm
+    { name = "resource_quad_release", vram = 0x800b6974, size = 0x54 }, # C
     { name = "func_800B69C8", vram = 0x800b69c8, size = 0x58 }, # asm
     { name = "func_800B6A20", vram = 0x800b6a20, size = 0x98 }, # asm
     { name = "func_800B6D1C", vram = 0x800b6d1c, size = 0x2bc }, # asm

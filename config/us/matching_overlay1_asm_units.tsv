@@ -291,7 +291,6 @@
 0x148FC	0x174	src/overlays/overlay1/func_800A3900.s	-O2 -G0 -mips3 -mgp32 -mfp32	a3c2f40081663d256e554efbe4bf9fd7623bd954c4d6abdc7617ba1594039393
 0x14A9C	0x158	src/overlays/overlay1/func_800A3AA0.s	-O2 -G0 -mips3 -mgp32 -mfp32	5be5811088483ac7cd0357bcb825dc2932c46316502bdf4d5f5e8509cc5258ad
 0x14BF4	0x72C	src/overlays/overlay1/func_800A3BF8.s	-O2 -G0 -mips3 -mgp32 -mfp32	3798a6b1f3a6e69c797340852b4d54d9b218b074b54fccb4e48f4d76328fcbe2
-0x15320	0x44	src/overlays/overlay1/func_800A4324.s	-O2 -G0 -mips3 -mgp32 -mfp32	f9a23793ac354b8fc99beb4e75deab044a0a3cc16829235f3cc23b52c4785674
 0x15364	0x6C	src/overlays/overlay1/func_800A4368.s	-O2 -G0 -mips3 -mgp32 -mfp32	3d4b9d264a1e1d672e4893a1c1c04405837608c5f35cbcc985df0a3da2120bbc
 0x15480	0x30C	src/overlays/overlay1/func_800A4484.s	-O2 -G0 -mips3 -mgp32 -mfp32	fdf0195529b0d01000fcec25f2649a17a50ee72eb173fbb44578cc7e1353d197
 0x1578C	0x378	src/overlays/overlay1/func_800A4790.s	-O2 -G0 -mips3 -mgp32 -mfp32	1689142bd5bb1f1aa8110014b58f550ffbe01dba265a57b820de65902e4a6f75
@@ -482,7 +481,6 @@
 0x208DC	0x114	src/overlays/overlay1/func_800AF8E0.s	-O2 -G0 -mips3 -mgp32 -mfp32	84f5c3268ca205962d85a94a19c432b8f6568ed4e2485be74a636708a756662f
 0x20A2C	0xE0	src/overlays/overlay1/func_800AFA30.s	-O2 -G0 -mips3 -mgp32 -mfp32	4e4dc037e7c7bd715991ea39bb07a355dac6b5df6b1631f29ed843b1ee8089b2
 0x20B0C	0xA0	src/overlays/overlay1/func_800AFB10.s	-O2 -G0 -mips3 -mgp32 -mfp32	ece8fdcc4739cfba2cf5de7ac8dd81c1819b8e0d2d17d62d9b58a0029264c2a0
-0x20BAC	0x54	src/overlays/overlay1/func_800AFBB0.s	-O2 -G0 -mips3 -mgp32 -mfp32	55c60d3a493b6b4c05c760c090385f47ccb1f1a3a66c8509eb079429b9d0e7a0
 0x20C00	0x700	src/overlays/overlay1/func_800AFC04.s	-O2 -G0 -mips3 -mgp32 -mfp32	54e67248f9d2a920cffce13278108f853eea0105536c6643a95ff62ba4acf5fb
 0x21300	0xC0	src/overlays/overlay1/func_800B0304.s	-O2 -G0 -mips3 -mgp32 -mfp32	87edadb7bfee8cc249063afa688af16c9db20fe6f42e324ddb75719313a34c3d
 0x213C0	0xA4	src/overlays/overlay1/func_800B03C4.s	-O2 -G0 -mips3 -mgp32 -mfp32	35d8c047322807f9a7aca58210e43da271d2d55719cd64f45dea2d9b8db6513c
@@ -597,7 +595,6 @@
 0x277D0	0x10	src/overlays/overlay1/func_800B67D4.s	-O2 -G0 -mips3 -mgp32 -mfp32	14daf01d4debde1abeface01fe4021c2fc2d5e5168db78a90f31b612016561c8
 0x27858	0x9C	src/overlays/overlay1/func_800B685C.s	-O2 -G0 -mips3 -mgp32 -mfp32	c76aeb8bdf9aa3942bd29d273c8cabecdd8c3613c9cc08c2e2e36e579cbf1bd0
 0x278F4	0x20	src/overlays/overlay1/func_800B68F8.s	-O2 -G0 -mips3 -mgp32 -mfp32	d8b02c84bcc75e90f0aeb49d45e7c6a1957676a27b1f6168663fff8672ae3921
-0x27970	0x54	src/overlays/overlay1/func_800B6974.s	-O2 -G0 -mips3 -mgp32 -mfp32	bef05f5ddb615a1a55db2adc12eff4e38f0a9d9d3605a6b6742a56650deb2319
 0x279C4	0x58	src/overlays/overlay1/func_800B69C8.s	-O2 -G0 -mips3 -mgp32 -mfp32	7190ae43abd8afb625ed843fb779ff756c6fcade95062fac56aff94ab3e95dd0
 0x27A1C	0x98	src/overlays/overlay1/func_800B6A20.s	-O2 -G0 -mips3 -mgp32 -mfp32	3d5dfcd476e1c575d490b87f98af7f838a08aedfc182644f3044ded866f6f459
 0x27D18	0x2BC	src/overlays/overlay1/func_800B6D1C.s	-O2 -G0 -mips3 -mgp32 -mfp32	fac5d63b8fccbab8136ed5fc6bcb84e6641a78559a48e898bb3f2b3daa73d0c7
