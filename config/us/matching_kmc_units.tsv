@@ -438,3 +438,5 @@
 0x36274	0x50	src/code/record_pointer_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	62e8f985b1dcd99ba93a4406ee543334ddede8f55277b1e463d8aa2fe073ee73
 0x37E0C	0x4C	src/code/byte_values_sum.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	63663ed713a60f8ec3f7afe8f4fb48ab99012c9ecdd5920c8350e4b9a0622893
 0x31AA0	0x54	src/code/signed_byte_reverse_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	369ae047623c4990333cfc86fda53c22a874069a2087d0d15225cbe4e395c2d8
+0x36210	0x64	src/code/record_stream_submit.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b3d68869437251c1d23e00809faea04c6986399143b7808770405fc17e02f9d8
+0x3D380	0x64	src/code/runtime_bootstrap_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	00aaca48c6c206929368d21977ed03e681f444214a96d054ecdfd4b56ce55939
