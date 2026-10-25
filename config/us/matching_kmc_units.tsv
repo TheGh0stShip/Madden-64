@@ -489,3 +489,5 @@
 0x64130	0x70	src/code/callback_table_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2269d5b445ef991e9b6303257a0bd15f39541534eddc54aa094484d12281456d
 0x2A094	0x78	src/code/selection_state_advance.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3f7bb24da536c8aa15fd7d57b12076e5717b42122add22db3e04c88caf3ad4d7
 0x63E50	0x78	src/code/pointer_array_blocks_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	25b08eba282362f93cb6878a081825b439652e8cf12b04070df226ca1f2da87b
+0x429D4	0x78	src/code/audio_grid_value_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e6afce56eb60cb224227edf5a352037bc53cce3d4fa4a40626e5bce3c77fec7d
+0x5C28C	0x78	src/code/object_callback_select.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	abe2a5845fa7db287c2c37325abb9aef5294d4b4cf7bf4470a29279d7d2b4b02
