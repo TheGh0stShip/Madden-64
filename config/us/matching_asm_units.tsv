@@ -27,9 +27,6 @@
 0x2589C	0x8C	src/code/frame_index_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	44bb99165571ea6a2bf9e19dc599eb104d73e6c8009924540d11328c5d818179
 0x618F0	0x8C	src/code/object_children_allocate.s	-O2 -G0 -mips3 -mgp32 -mfp32	40cb4b19b7195b50aaa5a19237a18eb7a4b9ec42ab185f298d271b4706a41098
 0x3AEC8	0x90	src/code/frame_halfword_remove.s	-O2 -G0 -mips3 -mgp32 -mfp32	07b9ae64e56421d140d70bd5a8c212de905e2170d6829232c662d45772de0530
-0x1B660	0x74	src/code/rgb5551_pack_many.s	-O2 -G0 -mips3 -mgp32 -mfp32	81b097f2188461593c96cae571a0c3e95e6ac453627d32380e77e2bebd238e42
-0x422A4	0x74	src/code/audio_entry_dispatch_primary.s	-O2 -G0 -mips3 -mgp32 -mfp32	22bac594430610fb1c48486d9a3bfa2d9087edc8276eba1e848a02ae823e3a72
-0x42318	0x74	src/code/audio_entry_dispatch_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	e904a9f33462a5153601f002fda2f4521fc79f8d06b74f846c1a6818a2a73af7
 0xDBA4	0x78	src/code/object_active_children_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
 0x3A350	0x78	src/code/roster_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e32c8d15b061901377f1f128d8c3a478272a5b82f8e2fc1ccde0c0f0a7e31a3
 0xD390	0x80	src/code/object_display_segment_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	a7258fc77ae348c1aa13d6e389485569358b25dc0648bba55c5ad927d10cd38a
