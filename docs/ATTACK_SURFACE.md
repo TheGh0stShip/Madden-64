@@ -46,7 +46,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | boot_loader | 5 | 3 | 632 | 172 |
 | overlay_1 | 1,025 | 170 | 183,528 | 7,392 |
 | overlay_4 | 420 | 73 | 115,116 | 3,724 |
-| resident | 1,370 | 984 | 378,060 | 128,496 |
+| resident | 1,370 | 996 | 378,060 | 133,928 |
 
 ### Size distribution
 
@@ -57,8 +57,8 @@ heuristic boundary catalogues and are not equivalent measures.
 | 000-0064 | 387 | 150 | 19,208 | 7,560 |
 | 000-0128 | 553 | 248 | 51,828 | 23,328 |
 | 000-0256 | 553 | 278 | 102,424 | 52,176 |
-| 000-0512 | 477 | 409 | 171,328 | 147,792 |
-| 000-1024 | 203 | 187 | 141,616 | 130,432 |
+| 000-0512 | 477 | 399 | 171,328 | 143,408 |
+| 000-1024 | 203 | 185 | 141,616 | 129,384 |
 | 1025+ | 99 | 92 | 181,196 | 172,016 |
 
 - Exact duplicate body families: 17

@@ -66,7 +66,11 @@ def source_for(name: str, start: int, size: int, image: bytes) -> str:
                 instruction = instruction[:instruction.index(". +")] + label
             elif (word >> 26) == 2:
                 instruction = instruction.split(maxsplit=1)[0] + " " + label
-        if (word >> 26) == 0x11:
+        special_hazard = (
+            (word >> 26) == 0
+            and (word & 0x3F) in {0x10, 0x12, 0x18, 0x19, 0x1A, 0x1B}
+        )
+        if (word >> 26) == 0x11 or special_hazard:
             instruction = f".word       0x{word:08X}  # {decoded_instruction}"
         lines.append(f"    {instruction}")
     lines.extend((f".end {name}", ""))

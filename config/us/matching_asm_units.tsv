@@ -268,3 +268,15 @@
 0x338C8	0x138	src/code/memory_pool_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	05c358a5d07c97218b09ab5a0ff5df5199da7b496e8301d2db488f1842857221
 0x33A00	0x13C	src/code/memory_pool_range_allocate.s	-O2 -G0 -mips3 -mgp32 -mfp32	b8b726fd1bf519c8011faaffdf675543882967eb0264d714a83a937a5f63287a
 0x33B3C	0x114	src/code/memory_pool_resize.s	-O2 -G0 -mips3 -mgp32 -mfp32	9b1f069c34bee6f40757f33b538234c68986e9cf825423dd949b8b16871910bb
+0xA39C	0x20C	src/code/display_texture_block_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	7aef0388acbd7689c29735d4c211f8b357a36988f52d23edebd733e1ef7d629f
+0xA818	0x1FC	src/code/display_texture_tile_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	c04ee2dd73957175f9d6709bb72eaadc80feb3abf2bb470f1c29b33b36b9f8f7
+0xB2A0	0x190	src/code/display_combine_mode_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	df19d3e7c6bc6b1154c4e2826642bff9361b242f3d8f32d33c1833b400fbfb08
+0xC874	0x20C	src/code/display_frame_setup.s	-O2 -G0 -mips3 -mgp32 -mfp32	569fb0a15bc00f9fd3038649414baee37548977c7e6a252e72dc7007b37dce61
+0xDA10	0x194	src/code/object_transform_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	d99c0f1edf8a1fb32d2577a2e611dc04b12638c57e743cdc371c9015d0d25b54
+0xDEC0	0x1EC	src/code/object_scene_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	8248c6d9e2b3d072ff97caca392c9bd4df66bff76c00c77e232d6972fa7efe2f
+0xEE0C	0x1BC	src/code/vector_display_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	0c6605f207e5d32dc4ab14f4771784d7e794602b76c4d7e00aeadf28b9dbe0e3
+0xF1F8	0x190	src/code/object_geometry_upload.s	-O2 -G0 -mips3 -mgp32 -mfp32	fcaca7e2306fcfbcbda2dabd0702f08f309faf193f9004d5d9eb6f1f431fbcae
+0x116B4	0x1C4	src/code/display_camera_vector_compute.s	-O2 -G0 -mips3 -mgp32 -mfp32	8e2ed6d7e88148ff8e9c92c7c441b351d8493651434bfe48648cbcf6374f4384
+0x11F08	0x180	src/code/render_system_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	07f04fdf717cdfaf152e5549fb1c49396d4b9eeb7e3c92dfe3965b7ff2f0c7ea
+0x120D0	0x1E8	src/code/render_buffers_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	daa6af7a68cea9a9bd27d3ffdbbaf7b75f33dedfd5691de6f3ea99057503ba3c
+0x124FC	0x19C	src/code/render_system_shutdown.s	-O2 -G0 -mips3 -mgp32 -mfp32	27e2a7e8f3227f55cdfae3fe133245359c6e92d3c8539aa30e1a57883f6477d8
