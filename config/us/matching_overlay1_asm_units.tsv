@@ -651,7 +651,6 @@
 0x2B25C	0xE8	src/overlays/overlay1/func_800BA260.s	-O2 -G0 -mips3 -mgp32 -mfp32	9c11be17a8de7962148616e77b00d1f06791a93b78166cc9d67328a5e12af7bf
 0x2B344	0x164	src/overlays/overlay1/func_800BA348.s	-O2 -G0 -mips3 -mgp32 -mfp32	b865ddf66f19db13ce7b39f967caa12faa8a2a4997c37175280516204d6d97c1
 0x2B4E0	0x78	src/overlays/overlay1/func_800BA4E4.s	-O2 -G0 -mips3 -mgp32 -mfp32	2c0ce5b6089e1242f84b855d2119c62b4da056d5141799c66f19e723afbbc314
-0x2B558	0x48	src/overlays/overlay1/func_800BA55C.s	-O2 -G0 -mips3 -mgp32 -mfp32	fb1642b8627fa1682ec09d89ad2b5d475794367e9bcce6cd3253abf388865a73
 0x2B6D8	0xA8	src/overlays/overlay1/func_800BA6DC.s	-O2 -G0 -mips3 -mgp32 -mfp32	6410130036f6184907f16057d5e71ff94af9245716831ea90f5c29e3099da1a8
 0x2B780	0x2C0	src/overlays/overlay1/func_800BA784.s	-O2 -G0 -mips3 -mgp32 -mfp32	0f025cc02f96aa1bfc80e69133bc3276fbef2f4b11987d2eebfd3f90102ae3a9
 0x2BB04	0x38	src/overlays/overlay1/func_800BAB08.s	-O2 -G0 -mips3 -mgp32 -mfp32	68f92fdab6b6e2c6d9d6157a401a60e9dfd836f8c5c29cd1dce66d608fa6c048
@@ -711,7 +710,6 @@
 0x2DFB8	0x1C	src/overlays/overlay1/func_800BCFBC.s	-O2 -G0 -mips3 -mgp32 -mfp32	2c879ed152957e35e1eee27aabb117bb027f87b0363d388f56437810792034cb
 0x2DFD4	0x320	src/overlays/overlay1/func_800BCFD8.s	-O2 -G0 -mips3 -mgp32 -mfp32	88f7992485c9acaa08fcb787cc3a977f7be7572689eecda40c1602a4363fe24a
 0x2E36C	0x44	src/overlays/overlay1/func_800BD370.s	-O2 -G0 -mips3 -mgp32 -mfp32	ba19bcffd1a9fe81f77f6692c45c571ee32bc939cd45b4bdf2dd9b917431b1b1
-0x2E3B0	0x54	src/overlays/overlay1/func_800BD3B4.s	-O2 -G0 -mips3 -mgp32 -mfp32	453a4fbe74aa6fbd56e29971a614b8c80eb1e80976d6171748c7c45014e6bbcf
 0x2E404	0xF4	src/overlays/overlay1/func_800BD408.s	-O2 -G0 -mips3 -mgp32 -mfp32	de47309ecd2e64ad1e082905fb863117de5f49bb12aad6458a7c0455cd2e7d19
 0x2E4F8	0xD8	src/overlays/overlay1/func_800BD4FC.s	-O2 -G0 -mips3 -mgp32 -mfp32	9326a419a292c632dba453d0a9220577c4b011766f9f9a7413dd5cdf3bcc563b
 0x2E690	0x2C	src/overlays/overlay1/func_800BD694.s	-O2 -G0 -mips3 -mgp32 -mfp32	59641cdb30a1fa5a70085b05f56c41085c821ecb297a7ecc567fdc93b47d3512

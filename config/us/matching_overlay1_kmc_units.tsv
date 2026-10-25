@@ -149,3 +149,5 @@
 0x20BAC	0x54	src/overlays/overlay1/percent_suffix_append.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	55c60d3a493b6b4c05c760c090385f47ccb1f1a3a66c8509eb079429b9d0e7a0
 0x279C4	0x58	src/overlays/overlay1/indexed_resource_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7190ae43abd8afb625ed843fb779ff756c6fcade95062fac56aff94ab3e95dd0
 0x2C43C	0x50	src/overlays/overlay1/global_resource_state_reset.c	--symbol=D_80071934:0x80071934 --symbol=D_80071938:0x80071938 --symbol=D_80071948:0x80071948 --symbol=D_80071949:0x80071949 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3894eaad0c43df238baaa6401f8159f4d4627d787b8ab9f054a85ea93ceed693
+0x2E3B0	0x54	src/overlays/overlay1/three_stage_value_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	453a4fbe74aa6fbd56e29971a614b8c80eb1e80976d6171748c7c45014e6bbcf
+0x2B558	0x48	src/overlays/overlay1/oriented_value_bucket.c	--symbol=D_80088090:0x80088090 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fb1642b8627fa1682ec09d89ad2b5d475794367e9bcce6cd3253abf388865a73

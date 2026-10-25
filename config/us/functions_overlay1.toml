@@ -778,7 +778,7 @@ functions = [
     { name = "func_800BA4AC", vram = 0x800ba4ac, size = 0x20 }, # leaf
     { name = "func_800BA4CC", vram = 0x800ba4cc, size = 0x18 }, # leaf
     { name = "func_800BA4E4", vram = 0x800ba4e4, size = 0x78 }, # asm
-    { name = "func_800BA55C", vram = 0x800ba55c, size = 0x48 }, # asm
+    { name = "oriented_value_bucket", vram = 0x800ba55c, size = 0x48 }, # C
     { name = "func_800BA6DC", vram = 0x800ba6dc, size = 0xa8 }, # asm
     { name = "func_800BA784", vram = 0x800ba784, size = 0x2c0 }, # asm
     { name = "func_800BAA80", vram = 0x800baa80, size = 0x1c }, # leaf
@@ -857,7 +857,7 @@ functions = [
     { name = "func_800BD300", vram = 0x800bd300, size = 0x8 }, # stub
     { name = "func_800BD308", vram = 0x800bd308, size = 0x68 }, # leaf
     { name = "func_800BD370", vram = 0x800bd370, size = 0x44 }, # asm
-    { name = "func_800BD3B4", vram = 0x800bd3b4, size = 0x54 }, # asm
+    { name = "three_stage_value_update", vram = 0x800bd3b4, size = 0x54 }, # C
     { name = "func_800BD408", vram = 0x800bd408, size = 0xf4 }, # asm
     { name = "func_800BD4FC", vram = 0x800bd4fc, size = 0xd8 }, # asm
     { name = "func_800BD5D4", vram = 0x800bd5d4, size = 0x3c }, # leaf
