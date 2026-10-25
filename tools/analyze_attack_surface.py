@@ -117,6 +117,21 @@ def function_analysis() -> dict:
     program = AUDIT.build_audit(AUDIT.load_rom(ROM), MAIN.read_bytes())["summary"]["program"]
     catalogue_bytes = sum(values["bytes"] for values in modules.values())
     boundary_audits = {}
+    resident_findings = []
+    for line in (ROOT / "config/us/resident_boundary_findings.tsv").read_text().splitlines()[1:]:
+        if line:
+            address, kind, function, detail = line.split("\t")
+            resident_findings.append({"address": address, "kind": kind,
+                                      "function": function, "detail": detail})
+    resident_counts = Counter(item["kind"] for item in resident_findings)
+    boundary_audits["resident"] = {
+        "text_bytes": 0x645FC,
+        "sweep_candidates": modules["resident"]["functions"],
+        "catalogue_candidates": modules["resident"]["functions"],
+        "in_text_data_ranges": resident_counts["in_text_data"],
+        "in_text_data_bytes": 0x38C8,
+        "findings": dict(sorted(resident_counts.items())),
+    }
     for module in ("overlay_1", "overlay_4"):
         path = ROOT / "build/us/audit" / f"{module}_functions/summary.json"
         summary = json.loads(path.read_text())

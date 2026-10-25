@@ -46,13 +46,13 @@ heuristic boundary catalogues and are not equivalent measures.
 | boot_loader | 5 | 3 | 632 | 172 |
 | overlay_1 | 1,025 | 152 | 183,528 | 6,836 |
 | overlay_4 | 420 | 71 | 115,116 | 3,672 |
-| resident | 1,372 | 724 | 378,084 | 77,944 |
+| resident | 1,370 | 724 | 378,060 | 77,944 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 326 | 127 | 3,936 | 1,608 |
+| 000-0016 | 324 | 125 | 3,912 | 1,584 |
 | 000-0032 | 224 | 119 | 5,824 | 2,996 |
 | 000-0064 | 387 | 151 | 19,208 | 7,596 |
 | 000-0128 | 553 | 267 | 51,828 | 25,680 |
@@ -66,8 +66,8 @@ heuristic boundary catalogues and are not equivalent measures.
 - Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 1
 - Program-region code bytes: 753,428
-- Bytes assigned to provisional candidate bodies: 677,360
-- Code bytes outside provisional candidate bodies: 76,068
+- Bytes assigned to provisional candidate bodies: 677,336
+- Code bytes outside provisional candidate bodies: 76,092
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally
@@ -78,6 +78,7 @@ register dependency, and no contradictory boundary finding.
 
 | Module | Sweep candidates | Published candidates | Gap ranges | Gap bytes | Contradictory findings |
 |---|---:|---:|---:|---:|---:|
+| resident | 1,370 | 1,370 | 1 | 14,536 | 3 |
 | overlay_1 | 1,071 | 1,025 | 231 | 43,696 | 987 |
 | overlay_4 | 420 | 420 | 87 | 17,500 | 348 |
 

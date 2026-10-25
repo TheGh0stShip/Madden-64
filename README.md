@@ -25,8 +25,8 @@ No ROM or extracted game data should be distributed with this project.
 Madden's IPL loads a packed block at ROM `0x1318..0x46C00`. Emulating the
 game's decompressor recovers the initialized program at
 `0x80000400..0x800776C0` (488,128 bytes), followed by BSS through
-`0x8008B8E0`. The corrected resident-program catalogue has 1,372 provisional function
-boundaries and identifies 147 libultra routines. Its compiler fingerprint is
+`0x8008B8E0`. The corrected resident-program catalogue has 1,370 provisional
+function boundaries and identifies 147 libultra routines. Its compiler fingerprint is
 predominantly KMC GCC, while detected library code is IDO-built.
 
 A complete physical ROM sweep identifies 1,353 file records in fourteen
@@ -92,7 +92,7 @@ project percentage. Current audited measures are:
 |---|---:|---:|---:|
 | Matching whole-program code | 88,684 bytes | 753,428 bytes | 11.77% |
 | Whole-program initialized data | 496 bytes | 484,540 bytes | 0.10% |
-| Matching function candidates | 950 | 2,822 | 33.66% |
+| Matching function candidates | 950 | 2,820 | 33.69% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |

@@ -128,11 +128,11 @@ and subtracting identified in-text data gives:
 | Module | Code bytes | Initialized data/metadata | Function candidates |
 |---|---:|---:|---:|
 | Boot loader | 644 | 76 | 5 |
-| Resident image | 393,288 | 94,840 | 1,372 |
+| Resident image | 393,288 | 94,840 | 1,370 |
 | Overlay record 1 | 226,792 | 12,416 | 1,025 |
 | Overlay record 4 | 132,704 | 24 | 420 |
 | Separate overlay data records | 0 | 377,184 | 0 |
-| **Total** | **753,428** | **484,540** | **2,822** |
+| **Total** | **753,428** | **484,540** | **2,820** |
 
 The boot-loader total is partitioned byte-for-byte in
 [`config/us/loader_map.tsv`](../config/us/loader_map.tsv). Its five instruction
@@ -147,7 +147,9 @@ The resident BSS is a further 82,464 zero-initialized bytes. Function totals
 are explicitly candidates until source/linker reconstruction proves every
 boundary. The corrected resident count excludes nine archive-pointer words and
 the first rodata word that the broad executable-envelope scan had mistaken for
-functions. Byte totals and ROM locations are exact. The expanded program rows
+functions. It also excludes two interior words in the 14,536-byte resident RSP
+microcode/data region that had been misidentified as CPU entry points. Byte
+totals and ROM locations are exact. The expanded program rows
 sum to 1,237,968 bytes including the loader, and the code/data split above sums
 to the same value.
 

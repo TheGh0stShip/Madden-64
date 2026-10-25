@@ -1,0 +1,4 @@
+address	kind	function	detail
+0x80050EA0	in_text_data		0x38C8-byte resident RSP microcode/data region ending at 0x80054768
+0x80050ED8	rejected_start		word inside RSP microcode, formerly miscatalogued as a CPU function
+0x80050EF0	rejected_start		word inside RSP microcode, formerly miscatalogued as a CPU function

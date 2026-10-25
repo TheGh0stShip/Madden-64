@@ -18,6 +18,7 @@ MAP = ROOT / "config/us/rom_map.tsv"
 PROGRESS = ROOT / "config/us/progress.toml"
 OVERLAY1_FINDINGS = ROOT / "config/us/overlay1_boundary_findings.tsv"
 OVERLAY4_FINDINGS = ROOT / "config/us/overlay4_boundary_findings.tsv"
+RESIDENT_FINDINGS = ROOT / "config/us/resident_boundary_findings.tsv"
 
 
 @unittest.skipUnless(ROM.is_file() and MAIN.is_file(), "requires verified ROM survey")
@@ -54,7 +55,7 @@ class RomLayoutTests(unittest.TestCase):
         program = self.audit["summary"]["program"]
         self.assertEqual(program["code_bytes"], 753428)
         self.assertEqual(program["initialized_data_bytes"], 484540)
-        self.assertEqual(program["function_candidates"], 2822)
+        self.assertEqual(program["function_candidates"], 2820)
         self.assertEqual(program["code_bytes"] + program["initialized_data_bytes"],
                          1237968)
 
@@ -134,6 +135,18 @@ class RomLayoutTests(unittest.TestCase):
             self.assertLess(int(address, 16), 0x800C75EC)
             self.assertIn(kind, allowed_kinds)
             self.assertTrue(detail)
+
+    def test_resident_rsp_region_is_not_catalogued_as_cpu_functions(self):
+        lines = RESIDENT_FINDINGS.read_text().splitlines()
+        self.assertEqual(lines[0], "address\tkind\tfunction\tdetail")
+        self.assertEqual(len(lines) - 1, 3)
+        self.assertIn("0x38C8-byte resident RSP microcode/data region", lines[1])
+        self.assertFalse(any(
+            function["vram"] in (0x80050ED8, 0x80050EF0)
+            for function in tomllib.loads(
+                (ROOT / "config/us/functions_resident.toml").read_text()
+            )["section"][0]["functions"]
+        ))
 
     def test_overlay4_boundary_findings_are_well_formed(self):
         lines = OVERLAY4_FINDINGS.read_text().splitlines()

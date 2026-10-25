@@ -1185,8 +1185,6 @@ functions = [
     { name = "func_80050A18", vram = 0x80050a18, size = 0xfc }, # c
     { name = "func_80050B14", vram = 0x80050b14, size = 0x320 }, # c
     { name = "func_80050E34", vram = 0x80050e34, size = 0x6c }, # c
-    { name = "func_80050ED8", vram = 0x80050ed8, size = 0xc }, # asm
-    { name = "func_80050EF0", vram = 0x80050ef0, size = 0xc }, # asm
     { name = "func_80054768", vram = 0x80054768, size = 0x150 }, # c
     { name = "func_800548B8", vram = 0x800548b8, size = 0x130 }, # c
     { name = "func_800549E8", vram = 0x800549e8, size = 0x104 }, # c
