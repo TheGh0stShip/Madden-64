@@ -374,3 +374,13 @@
 0x3DC74	0x50	src/code/indexed_audio_range_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e131565ffc0e3aaffaab778602b8f5c367dd36eac7b0a06a049403e57aa6d96d
 0x2F624	0x38	src/code/runtime_defaults_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2cca6ee545e9cd025c5c9c9e9af5c2a08a17a8f19ece0efa379b5ee8d14c1fb4
 0x2F5E8	0x3C	src/code/runtime_offset_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f3fab230d72aa6c6770b6c026f0a3c400040cb8e6d21e09c63bf9d90dcb74d1a
+0x55F7C	0x64	src/code/display_result_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	051e85f42d6cd71d0a3f11c031512b27925e22be3240bb8ced111ac8bff7fc74
+0x55FE0	0x64	src/code/display_result_get.c	-DRANGE_BASE=202 -DRANGE_COUNT=9 -DRESULT_INDEX=4 -DFUNCTION=func_800553E0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f636f9ed0fb5aa918b36f8b1e162dc0f1a9ac2416b6838bfa7069373d887fcd4
+0x3FE30	0x5C	src/code/runtime_entry_resolve.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aa8beb6e23739da4f63b6f063519a8187a1bc7423c88454eb683ca99b1d09b32
+0x37CB0	0x58	src/code/runtime_record_create.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	617c2dc6b27d436cf7688cbe0ea9f2176f296fe8309cc06267b72589ce73f0f3
+0x57408	0x60	src/code/display_interfaces_refresh.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8011302461e7379a4549372f95f8bd374025549bdcbfdb56e6b357f6470abe33
+0x56D9C	0x60	src/code/interface_payload_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f818917ea004014292c4055d803ee3f58f49fd92fe4a0fe1fdc6f56a405c9a0c
+0x3F72C	0x4C	src/code/audio_command_buffer_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9146f20495eea8b4cef2a82781d62b7d68ac3471d7ba526d5465f6c0bd464b3c
+0x21538	0x54	src/code/gameplay_mode_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	77211e6e101e962bb5fdba7cb6e23614b2f2bd8614a94a526dd4886f92b00d7c
+0x4505C	0x74	src/code/audio_buffers_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	73c4661a9fa5db802b7a6a23bc0926f5c9ed6b4cc1879a14710d5528f026bae1
+0x1FC70	0x54	src/code/resource_coordinates_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8e612a5f6edd5006ac4b4a79ad373e4015007379759f9a74222fdab28d06ea01
