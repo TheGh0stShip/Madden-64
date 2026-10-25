@@ -1,4 +1,9 @@
 # KMC GCC 2.7.2; ROM_START SIZE SOURCE FLAGS SHA256
+0x1BABC	0xDC	src/code/resource_buffers_replace.c	--assembler=asn64 --symbol=func_80032F3C:0x80032F3C --symbol=func_80032E00:0x80032E00 --symbol=func_80033308:0x80033308 --symbol=func_8001B314:0x8001B314 -O2 -G0 -mips3 -mgp32 -mfp32	67c2f7c79095f58284dca3f9faa1c6e12edac30a93b82e4b2230448d7e518d3b
+0x5582C	0xA8	src/code/object_duration_apply.c	--assembler=asn64 --symbol=func_800548B8:0x800548B8 -O2 -G0 -mips3 -mgp32 -mfp32	8460efaf90de30de2720f51a0cd1c572b0e2427f9bb5650e8eb772890564006a
+0x55DB4	0xC8	src/code/object_action_update.c	--assembler=asn64 --symbol=func_8005527C:0x8005527C --symbol=func_80063318:0x80063318 -O2 -G0 -mips3 -mgp32 -mfp32	451be2b666cafe5cf7d2f43f99f8e053404a41ad13220cd9c8ca458e639345e1
+0x56CDC	0xC0	src/code/object_animation_activate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	047036344dc119ab7aed18ab49134b3f47e13b18375367e1044caf6772ad78e2
+0x59648	0xC0	src/code/object_cycle_advance.c	--assembler=asn64 --symbol=func_8005848C:0x8005848C -O2 -G0 -mips3 -mgp32 -mfp32	e56e9b70037365d4bc16e83a4d89e7aa8973d3d79133a61a8903e8dbc1e01fbc
 0x16BD0	0x84	src/code/strided_state_consume.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	95ac9c7449387855424aa4f2a4b0f36e65fb930c91c0bc5e914d62558959ccbe
 0x45344	0x80	src/code/indexed_range_submit.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	24e5da85c6528b3a38c56dc70fedcc9d2d1795619cf498135511baefd3d8e489
 0xC3E4	0x7C	src/code/object_resource_cleanup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4a6fcb2e4b316119fa60d62da34564650a643be91a50eff934e4b09664eaffb9

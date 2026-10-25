@@ -303,7 +303,7 @@ functions = [
     { name = "resource_context_load", vram = 0x8001ac70, size = 0x108 }, # asm
     { name = "func_8001AD78", vram = 0x8001ad78, size = 0x130 }, # asm
     { name = "func_8001AEA8", vram = 0x8001aea8, size = 0x14 }, # leaf
-    { name = "resource_buffers_replace", vram = 0x8001aebc, size = 0xdc }, # asm
+    { name = "resource_buffers_replace", vram = 0x8001aebc, size = 0xdc }, # c
     { name = "func_8001AF98", vram = 0x8001af98, size = 0xc }, # stub
     { name = "resource_node_configure", vram = 0x8001afa4, size = 0x88 }, # asm
     { name = "func_8001B02C", vram = 0x8001b02c, size = 0x24 }, # leaf
@@ -1189,14 +1189,14 @@ functions = [
     { name = "func_800548B8", vram = 0x800548b8, size = 0x130 }, # asm
     { name = "func_800549E8", vram = 0x800549e8, size = 0x104 }, # asm
     { name = "func_80054AEC", vram = 0x80054aec, size = 0x140 }, # asm
-    { name = "object_duration_apply", vram = 0x80054c2c, size = 0xa8 }, # asm
+    { name = "object_duration_apply", vram = 0x80054c2c, size = 0xa8 }, # c
     { name = "func_80054CD4", vram = 0x80054cd4, size = 0xdc }, # asm
     { name = "func_80054DB0", vram = 0x80054db0, size = 0x120 }, # asm
     { name = "func_80054ED0", vram = 0x80054ed0, size = 0x20 }, # c
     { name = "func_80054EF0", vram = 0x80054ef0, size = 0x20 }, # c
     { name = "func_80054F10", vram = 0x80054f10, size = 0x70 }, # c
     { name = "object_driver_initialize", vram = 0x80054f80, size = 0x234 }, # asm
-    { name = "object_action_update", vram = 0x800551b4, size = 0xc8 }, # asm
+    { name = "object_action_update", vram = 0x800551b4, size = 0xc8 }, # c
     { name = "func_8005527C", vram = 0x8005527c, size = 0x100 }, # asm
     { name = "func_8005537C", vram = 0x8005537c, size = 0x64 }, # c
     { name = "func_800553E0", vram = 0x800553e0, size = 0x64 }, # c
@@ -1212,7 +1212,7 @@ functions = [
     { name = "object_driver_process", vram = 0x80055bbc, size = 0x2d0 }, # asm
     { name = "object_animation_apply", vram = 0x80055e8c, size = 0x204 }, # asm
     { name = "func_80056090", vram = 0x80056090, size = 0x4c }, # c
-    { name = "object_animation_activate", vram = 0x800560dc, size = 0xc0 }, # asm
+    { name = "object_animation_activate", vram = 0x800560dc, size = 0xc0 }, # c
     { name = "func_8005619C", vram = 0x8005619c, size = 0x60 }, # c
     { name = "object_animation_configure", vram = 0x80056200, size = 0x2b0 }, # asm
     { name = "object_animation_state_update", vram = 0x800564b0, size = 0x22c }, # asm
@@ -1236,7 +1236,7 @@ functions = [
     { name = "object_cycle_state_update", vram = 0x8005848c, size = 0x198 }, # asm
     { name = "func_80058624", vram = 0x80058624, size = 0x108 }, # asm
     { name = "object_cycle_process", vram = 0x8005872c, size = 0x31c }, # asm
-    { name = "object_cycle_advance", vram = 0x80058a48, size = 0xc0 }, # asm
+    { name = "object_cycle_advance", vram = 0x80058a48, size = 0xc0 }, # c
     { name = "object_cycle_prepare", vram = 0x80058b08, size = 0x180 }, # asm
     { name = "func_80058C88", vram = 0x80058c88, size = 0x28 }, # leaf
     { name = "object_services_initialize", vram = 0x80058cb0, size = 0xc4 }, # c

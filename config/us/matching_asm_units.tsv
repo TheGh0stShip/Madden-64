@@ -101,7 +101,6 @@
 0x3419C	0xA8	src/code/resource_node_unlink.s	-O2 -G0 -mips3 -mgp32 -mfp32	ad0c9dcd8d459ae503d85e2cc5bc35131309e1fd0ef9bc04f3121cf97492ef8b
 0x35ED8	0xA8	src/code/resource_request_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	c62d31a658e2352fb60dbcf502d721e8d77856308c17d182ee71609b020f0089
 0x3D20C	0xA8	src/code/audio_value_seek.s	-O2 -G0 -mips3 -mgp32 -mfp32	66a573daa1b0378edfcbe3458970cf75ef7ebbdc2a47e38d089b115cac4b2dee
-0x5582C	0xA8	src/code/object_duration_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	8460efaf90de30de2720f51a0cd1c572b0e2427f9bb5650e8eb772890564006a
 0x43D14	0xA8	src/code/stream_position_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	4616b7c8d4eeecfb0ce8afaada899d46d56821d9af34c19988c47b750480e90f
 0xC2F8	0xAC	src/code/display_surface_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	c3889cc86541c07c94aeb46e2ae573273ffb1f046f70b5cae7cfb73bcf506353
 0x1A398	0xAC	src/code/strided_rows_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	c59922ddfe5a62cfec4638609148d0a3bf45b1535dca8d4f6229eb165f1885ee
@@ -132,9 +131,7 @@
 0x23338	0xC0	src/code/roster_selection_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	2c5d2954e7e3c11bdd2a49b0205e6d9e0ab11b65b2a9170c790691bb5350f2d2
 0x3DAB8	0xC0	src/code/audio_range_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	aa7f590af21f3e955c056a3008e4b75325635d2cbb9e01b7a4e9cf521b34d36f
 0x44F64	0xC0	src/code/grid_record_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	b05c20a030ff9cc847caeea6593568ecf438ed2f3a60d9064ac386381c5f3125
-0x56CDC	0xC0	src/code/object_animation_activate.s	-O2 -G0 -mips3 -mgp32 -mfp32	047036344dc119ab7aed18ab49134b3f47e13b18375367e1044caf6772ad78e2
 0x57690	0xC0	src/code/object_round_state_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	164a08db6bf5483b35ccd7824da9d7c024adb0847af49ee92fddda6664393713
-0x59648	0xC0	src/code/object_cycle_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	e56e9b70037365d4bc16e83a4d89e7aa8973d3d79133a61a8903e8dbc1e01fbc
 0x28594	0xC4	src/code/roster_profile_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	bebcbc3caf0ea192d35d5d484d56510cb21abccb4d8347a113069f67d3ab2300
 0x330FC	0xC4	src/code/resource_pool_reset_wait.s	-O2 -G0 -mips3 -mgp32 -mfp32	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
 0x3C4FC	0xC4	src/code/menu_grid_record_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	6829bdf2a52c6f3e7cd1fa83720177795c4d36578e2214cd67acda668a88fc22
@@ -145,7 +142,6 @@
 0x3A1AC	0xC8	src/code/resource_groups_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc499dc3bf2057a11eb33f860f6981ecce8695e71d54fb071049d44816ee5773
 0x3EEC0	0xC8	src/code/audio_name_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	bd3cc36156c1133d9163fffbe6a5ab46fd13bf86d94d934756c2175fb7d2a18a
 0x439C8	0xC8	src/code/display_command_link.s	-O2 -G0 -mips3 -mgp32 -mfp32	3c1cca20f11227dbe6321ef4bc0986ed44aab6b99fb96422a3968f71a025a884
-0x55DB4	0xC8	src/code/object_action_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	451be2b666cafe5cf7d2f43f99f8e053404a41ad13220cd9c8ca458e639345e1
 0x5D804	0xC8	src/code/object_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
 0xC460	0xCC	src/code/display_surface_clone.s	-O2 -G0 -mips3 -mgp32 -mfp32	616da9367056e81fb36909814f7bc4a95cff8e0622983348e86ab8ba502aca28
 0x30AA4	0xCC	src/code/runtime_node_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	d4d2665a3ed1b996d6ae3f4b359c30731eb366e160741b7568cb90eb96b24b54
@@ -165,7 +161,6 @@
 0xC798	0xDC	src/code/display_page_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	ba5320c8d8c15aa42c44fe30877ab08aa1337f40bfba3d0632a43022f8b53cf7
 0xEA34	0xDC	src/code/vector_slots_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	f26cf764e126b874306e8d34b69cf26df94a5457f782b9f258933d9f0a6f30fb
 0x1A468	0xDC	src/code/resource_bytes_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	5769e2040d9f214f21460d0240a9733d55c927f4554c5a9959d30d7ac9cc34c6
-0x1BABC	0xDC	src/code/resource_buffers_replace.s	-O2 -G0 -mips3 -mgp32 -mfp32	67c2f7c79095f58284dca3f9faa1c6e12edac30a93b82e4b2230448d7e518d3b
 0x24CC4	0xDC	src/code/team_stat_ratio_pack.s	-O2 -G0 -mips3 -mgp32 -mfp32	125188830130ab796cd7f353452933389d5975ce7c0f5cc71055bdc738b890f9
 0x251B8	0xDC	src/code/team_stat_ratio_pack_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	5b9344a22dd77d85f982e11525c496e2810a7d19e02c52f2183db7ccb0d9200d
 0x28658	0xDC	src/code/play_event_state_build.s	--symbol=team_event_append:0x80025794 --symbol=team_event_append_secondary:0x8002586C -O2 -G0 -mips3 -mgp32 -mfp32	731ef2ecd97600284c1d1aee1406258bd0442113f9732b1c73828dd8a356134e
