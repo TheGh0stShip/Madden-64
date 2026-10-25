@@ -495,3 +495,5 @@
 0x38CD4	0x7C	src/code/frame_buffer_pairs_apply.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	40cff69a1e5224dd44bdeeeb9dc5a5e9af27f51db1ffd9a41844d95df6557cf9
 0x3B184	0x7C	src/code/frame_slot_next.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	049fecb46176c9073777dd0475973a57b2f971c6372d7924bea032cabc20ecce
 0x30B70	0x7C	src/code/runtime_record_unlink.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d04493dc7c6dc9db8f3b4ee676faf05398bca05c134e8f0268aba134476a8e8a
+0x30C50	0xC0	src/code/runtime_records_process.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	53f177a5439c3acfcae7b24a5a25e153c4d18fecfd9c889ae57c8d61e7219d2b
+0x30D10	0x7C	src/code/runtime_records_tick.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aa9dc0f3fb44783664ca1314fb60c6d1685bbf293e9c41c617f861af763801b1
