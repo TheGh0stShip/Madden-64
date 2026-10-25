@@ -104,3 +104,11 @@
 0x10414	0xA4	src/code/object_resources_release_full.s	-O2 -G0 -mips3 -mgp32 -mfp32	ddeb4c2e26fd008343e082a29c213f44a5e396030ce3079303ec6912d2c73a08
 0x18780	0xA4	src/code/resource_payload_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	798c262fb9cc304d96da4444130017f6dd59fd5366a85ca40dc18f4405ebfe20
 0x28EC8	0xA4	src/code/packed_field_dispatch.s	--symbol=packed_field_primary_get:0x8002BF10 --symbol=packed_field_secondary_get:0x8002BFA4 -O2 -G0 -mips3 -mgp32 -mfp32	f48e89aab2f80547098f1fac702c37388b5f6e5be74ea26109631096401d8ff2
+0x31D2C	0xA4	src/code/display_offsets_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	a84b02c7a67392b0b09c26dbae2e4a525b073e0e960a5407d603ee2aab1bff2e
+0x33F84	0xA4	src/code/resource_slots_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	970aa9396c841cf8ee557cf2ea90a9e22c2c024a84a13147dddb8941da6a5cba
+0x380F0	0xA4	src/code/frame_attribute_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	8cfee5bb97ff8da2939ddcd7216792f3fa5e30e1520c96dd6ba7f6fa10572e2a
+0x3E7B0	0xA4	src/code/audio_profile_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	5dd9998de282e9dbf9f87ec3f41169172134dd8d574a9f523a071a59cd4ed888
+0x3F450	0xA4	src/code/formatted_pair_append.s	-O2 -G0 -mips3 -mgp32 -mfp32	81c5419240707aa23910667bdc65a87219d2e9c52e340c0d03549614cb2f1bf3
+0x5A034	0xA4	src/code/object_output_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	cd6a5d0759f348ba72283d414700babbe27ad2a78ac41d86107aa4662e861531
+0x613CC	0xA4	src/code/indexed_rgb_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	d3bccb53ddd118bb88196543d7c5bf68ed6fca21eec850b92f685484e8eedc47
+0x61C28	0xA4	src/code/indexed_texel_increment.s	-O2 -G0 -mips3 -mgp32 -mfp32	c1a4947f460be26cd6b3b6aac4f99adaaa50be20b5fdf7d6a098b7671fa0e935

@@ -1,0 +1,48 @@
+.text
+.align 2
+.set noreorder
+.globl formatted_pair_append
+.ent formatted_pair_append
+formatted_pair_append:
+    addiu $sp,$sp,-0x28
+    sw $s1,0x1c($sp)
+    move $s1,$a0
+    lui $v0,0xaaaa
+    ori $v0,$v0,0xaaab
+    multu $s1,$v0
+    sw $s2,0x20($sp)
+    move $s2,$a1
+    sw $ra,0x24($sp)
+    sw $s0,0x18($sp)
+    mfhi $v1
+    srl $s0,$v1,3
+    sll $a0,$s0,16
+    jal func_800167FC
+     sra $a0,$a0,16
+    lui $a1,%hi(D_80002D18)
+    addiu $a1,$a1,%lo(D_80002D18)
+    jal func_8002E688
+     move $a0,$s2
+    sll $v0,$s0,1
+    addu $v0,$v0,$s0
+    sll $v0,$v0,2
+    subu $s1,$s1,$v0
+    sll $s1,$s1,16
+    sra $a0,$s1,16
+    jal func_800167FC
+     addiu $a1,$sp,0x10
+    move $a0,$s2
+    jal func_8002E688
+     addiu $a1,$sp,0x10
+    lui $a1,%hi(D_80002D1C)
+    addiu $a1,$a1,%lo(D_80002D1C)
+    jal func_8002E688
+     move $a0,$s2
+    lw $ra,0x24($sp)
+    lw $s2,0x20($sp)
+    lw $s1,0x1c($sp)
+    lw $s0,0x18($sp)
+    addiu $sp,$sp,0x28
+    jr $ra
+     nop
+.end formatted_pair_append
