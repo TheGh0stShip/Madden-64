@@ -2,7 +2,7 @@
 
 extern u8 D_80080CFC[];
 
-void* func_8003ACA0(u16 primary, s32 value) {
+void* audio_frame_record_find(u16 primary, s32 value) {
     register u32 offset __asm__("$2");
     register u8* base __asm__("$3");
     register u16 index __asm__("$6");

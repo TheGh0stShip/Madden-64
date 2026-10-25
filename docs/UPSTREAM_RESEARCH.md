@@ -208,3 +208,32 @@ allocator-register difference. The 107-byte header copier reached a similarly
 small scheduling/register difference. Both recovered routines are now retained
 as readable exact assembly, adding 240 bytes at `0x8003A7DC` and 340 bytes at
 `0x8003AD2C` without crediting either nonmatching C experiment.
+
+## Whole-catalogue public-source sampling
+
+The project generated an authoritative research catalogue from every function
+boundary and matching manifest. It reconciled exactly with the public totals:
+2,820 candidates, 970 matched candidates at the start of the pass, and 1,850
+pending candidates across the loader, resident program, and both overlays.
+Three independent repository-code queries were defined for each pending body:
+distinguishing C constants, MIPS assembly structure, and exact instruction-word
+prefixes. Collection ended after 168 bodies had completed all three rounds so
+the evidence could be integrated rather than extending the search.
+
+The most frequent results came from public N64 disassembly repositories, but
+whole-body review rejected them as transfers: the exact-word hits were generic
+prologues embedded in differently sized functions, while the constant hits
+were predominantly unrelated animation, scene, and texture tables. This adds
+an important campaign filter: prefix or constant equality is discovery evidence
+only; a candidate must also agree on function extent and full control-flow
+shape before compiler experiments are warranted.
+
+The useful local result was the adjacent audio-frame cluster. The storage-mode
+routine controls the 0x1456-byte frame-value allocation and the 0x3C0-byte
+40-byte-record array. The collision pass populates 55 records, skips the
+0xFFFF sentinel, and resolves duplicate group bytes through the neighboring
+selector. Both are retained as exact assembly after readable C experiments
+reached close KMC scheduling and allocation shapes. Together they add 716
+verified bytes at `0x8003A600` and `0x8003AE80`. Two already exact neighbors
+are now named `audio_frame_storage_update` and `audio_frame_record_find` from
+the same recovered layout without being counted again.
