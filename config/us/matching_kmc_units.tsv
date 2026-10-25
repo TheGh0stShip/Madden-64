@@ -442,3 +442,6 @@
 0x3D380	0x64	src/code/runtime_bootstrap_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	00aaca48c6c206929368d21977ed03e681f444214a96d054ecdfd4b56ce55939
 0x33098	0x64	src/code/runtime_worker_main.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a65fd62864581ed7475257ffbc1a34418e1fa0bdb06debe64df384573d64b741
 0x2A554	0x64	src/code/cyclic_packed_value_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2edffc157bcff2661afc7ec92fed0fbd3116fa97fb3b6e68bf2f3d67c39aef2f
+0x1F7B8	0x68	src/code/ui_index_state_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	31040ec32f6920e69a97f104b2abf590462ee65de9f14ff9bd3f4118b838aa17
+0x1F8AC	0x68	src/code/ui_index_state_set.c	-DFUNCTION=func_8001ECAC -DBYTE_OFFSET=0x20 -DOBJECT_OFFSET=0x2C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d2f923383ffee6ba8d16a41169fa27d0d93173905a3b3a497032ffb3e46888de
+0x265E4	0x68	src/code/grid_halfword_adjust.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e70ab00fedb00db3645903200096fe6b50477e38c8adab43cf5bf7b3721c9d64
