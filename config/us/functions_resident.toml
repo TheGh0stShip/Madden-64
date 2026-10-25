@@ -196,7 +196,7 @@ functions = [
     { name = "func_8000F8B8", vram = 0x8000f8b8, size = 0x8 }, # stub
     { name = "func_8000F8C0", vram = 0x8000f8c0, size = 0x2c }, # leaf
     { name = "func_8000F8EC", vram = 0x8000f8ec, size = 0x48 }, # c
-    { name = "func_8000F934", vram = 0x8000f934, size = 0x1070 }, # c
+    { name = "display_object_process", vram = 0x8000f934, size = 0x1070 }, # asm
     { name = "display_material_setup", vram = 0x800109a4, size = 0x110 }, # asm
     { name = "display_camera_vector_compute", vram = 0x80010ab4, size = 0x1c4 }, # asm
     { name = "display_scene_render", vram = 0x80010c78, size = 0x5b0 }, # asm
@@ -214,9 +214,9 @@ functions = [
     { name = "func_80011B3C", vram = 0x80011b3c, size = 0x10 }, # stub
     { name = "func_80011B4C", vram = 0x80011b4c, size = 0x10 }, # stub
     { name = "func_80011B5C", vram = 0x80011b5c, size = 0x8 }, # stub
-    { name = "func_80011B64", vram = 0x80011b64, size = 0xc50 }, # c
+    { name = "render_command_dispatch", vram = 0x80011b64, size = 0xc50 }, # asm
     { name = "func_800127B8", vram = 0x800127b8, size = 0x8 }, # c falls_through
-    { name = "func_800127C0", vram = 0x800127c0, size = 0x1228 }, # c
+    { name = "render_object_dispatch", vram = 0x800127c0, size = 0x1228 }, # asm
     { name = "func_800139E8", vram = 0x800139e8, size = 0x16c }, # c
     { name = "func_80013B54", vram = 0x80013b54, size = 0x8 }, # stub
     { name = "func_80013B5C", vram = 0x80013b5c, size = 0x30 }, # c
@@ -320,7 +320,7 @@ functions = [
     { name = "func_8001B5B8", vram = 0x8001b5b8, size = 0x8 }, # stub
     { name = "func_8001B5C0", vram = 0x8001b5c0, size = 0x178 }, # c
     { name = "packed_position_apply", vram = 0x8001b738, size = 0x88 }, # asm
-    { name = "func_8001B7C0", vram = 0x8001b7c0, size = 0x444 }, # c
+    { name = "ui_resource_update", vram = 0x8001b7c0, size = 0x444 }, # asm
     { name = "ui_resource_render", vram = 0x8001bc04, size = 0x840 }, # asm
     { name = "func_8001C444", vram = 0x8001c444, size = 0x50 }, # leaf
     { name = "func_8001C494", vram = 0x8001c494, size = 0x50 }, # leaf
@@ -1224,12 +1224,12 @@ functions = [
     { name = "func_80056A08", vram = 0x80056a08, size = 0x7c }, # c
     { name = "func_80056A88", vram = 0x80056a88, size = 0x8 }, # c falls_through
     { name = "object_round_state_reset", vram = 0x80056a90, size = 0xc0 }, # asm
-    { name = "func_80056B50", vram = 0x80056b50, size = 0x43c }, # c
+    { name = "object_animation_process", vram = 0x80056b50, size = 0x43c }, # asm
     { name = "func_80056F8C", vram = 0x80056f8c, size = 0x3b8 }, # c
     { name = "func_80057344", vram = 0x80057344, size = 0x338 }, # c
     { name = "func_8005767C", vram = 0x8005767c, size = 0x23c }, # c
     { name = "func_800578B8", vram = 0x800578b8, size = 0x1f8 }, # c
-    { name = "func_80057AB0", vram = 0x80057ab0, size = 0x440 }, # c
+    { name = "object_animation_update", vram = 0x80057ab0, size = 0x440 }, # asm
     { name = "func_80057EF0", vram = 0x80057ef0, size = 0x320 }, # c
     { name = "func_80058210", vram = 0x80058210, size = 0x174 }, # c
     { name = "func_80058384", vram = 0x80058384, size = 0x108 }, # c

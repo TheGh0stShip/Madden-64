@@ -331,3 +331,9 @@
 0x34720	0x404	src/code/memory_arena_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	6f8e7f7bf6e41481c4d09f5f58357ec49ece099716f59be07155dbd3e03d8ca9
 0x32C88	0x410	src/code/runtime_input_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0bc885dfadda04befa7a6ffc7b3f41959564cad74c6dd5e8145595d6ca147583
 0x2FC38	0x414	src/code/gameplay_command_execute.s	-O2 -G0 -mips3 -mgp32 -mfp32	5517f7338e5695ba082bc22eadbbeaffb74b295ef974c9cadf630440229dcf6f
+0x10534	0x1070	src/code/display_object_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	2b8d50ecd697654af8797b353ff0ab83018aff665d1debd7177e159846ef7892
+0x12764	0xC50	src/code/render_command_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	c4344c589a0abeb25c7558f71c7e842a767e4d05ad194d2d79ee5576bc17e9e5
+0x133C0	0x1228	src/code/render_object_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	55b0814c3aed6bc3467136a5d20e3777f1300d715ae96199f7a1c4c5695a4884
+0x1C3C0	0x444	src/code/ui_resource_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e4381c7dde74552ea94c0f1a7c2e74b2f27f083e8deefd27db11764e44acaa7
+0x57750	0x43C	src/code/object_animation_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	afc42c6ab5c98e2d4a78b78327b3dd4e70cd7e1a77dbbced01bd3db3bc014ad8
+0x586B0	0x440	src/code/object_animation_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	61247d19a75e6357fcdd8ad4ee49e17037e52361b844a803500e90805930a179
