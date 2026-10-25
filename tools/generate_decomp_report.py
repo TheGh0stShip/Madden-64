@@ -149,7 +149,10 @@ def build_report() -> dict[str, object]:
         units.append(function_unit("resident", function, rom_start, ranges))
 
     for overlay in overlay_configs:
-        overlay_ranges = manifest_ranges([ROOT / overlay["path"]])
+        overlay_paths = [ROOT / overlay["path"]]
+        if overlay.get("asm_path"):
+            overlay_paths.append(ROOT / overlay["asm_path"])
+        overlay_ranges = manifest_ranges(overlay_paths)
         functions = catalogue(ROOT / overlay["functions"])
         module = overlay["id"]
         for function in functions:
@@ -162,8 +165,10 @@ def build_report() -> dict[str, object]:
 
     matched_code = (sum(end - start for start, end, _source in ranges) +
                     sum(end - start for overlay in overlay_configs
-                        for start, end, _source in
-                        manifest_ranges([ROOT / overlay["path"]])) +
+                        for start, end, _source in manifest_ranges(
+                            [ROOT / overlay["path"]] +
+                            ([ROOT / overlay["asm_path"]]
+                             if overlay.get("asm_path") else []))) +
                     sum(end - start for start, end, _source in loader_ranges))
     total_functions = len(units)
     matched_functions = sum(int(unit["measures"]["complete_units"])

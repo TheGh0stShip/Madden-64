@@ -28,6 +28,19 @@ reproducible.
   graphics, and audio programs are separately linked text/data objects; the
   remaining bytes are therefore retained as unresolved microcode/data rather
   than credited speculatively.
+- A whole-backlog byte sweep compared all 1,799 unmatched candidates of at
+  least 16 bytes against the reconstructed BattleTanx, Rugrats, and Global
+  Assault images and the verified Nagano image. Four independent corpus rounds
+  isolated thirteen callable shared-entry, frame-restore, and argument-spill
+  units totaling 304 bytes. Each was then decoded, classified against its
+  incoming calls or branches, reconstructed as assembly, and verified against
+  its correct overlay image. Repeated sequences with no unique ownership were
+  not used as source-provenance claims.
+- Follow-up compiler and process research confirmed that orphan epilogues and
+  alternate mid-function entries must be represented explicitly instead of
+  forced through C. The project now supports separate exact-assembly manifests
+  for both overlays, allowing future shared-tail batches to be verified without
+  weakening the C-manifest rules.
 - KMC GCC 2.7.2 remains the correct dominant game-code compiler. Upstream KMC
   examples corroborate `-G0 -mgp32 -mfp32 -mips3`; this project additionally
   preserves its verified `-O2` and R4300 multiply assembler behavior.

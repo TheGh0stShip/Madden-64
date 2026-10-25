@@ -1,0 +1,12 @@
+# GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
+0x287C	0x20	src/overlays/overlay1/shared_entry_80091880.s	-O2 -G0 -mips3 -mgp32 -mfp32	0eec9a5d77dea5ae0073d4e3a3417effda02c87d1e4fdda6d4419bfd5516d45a
+0x4A1C	0x1C	src/overlays/overlay1/shared_entry_80093A20.s	-O2 -G0 -mips3 -mgp32 -mfp32	2a0ac9c9bdae429f92ca195b58b258141d1eebd88bb460bc62baccb290ed319d
+0x148E8	0x14	src/overlays/overlay1/spill_argument_registers.s	-O2 -G0 -mips3 -mgp32 -mfp32	7008cedc7bc7666823ccb635b2fcb91203276ea030284707c9e8f52db2ea3448
+0x1BC90	0x10	src/overlays/overlay1/shared_entry_800AAC94.s	-O2 -G0 -mips3 -mgp32 -mfp32	1136b20e18d1dda31045e99c30919b02018c8dea24e7691b2235ddc937032800
+0x1F658	0x10	src/overlays/overlay1/shared_entry_800AE65C.s	-O2 -G0 -mips3 -mgp32 -mfp32	6384c8ef7ba716db03e74370658cff2ec1d895b1037735715c0b73e8a2d5c865
+0x1F67C	0x14	src/overlays/overlay1/shared_entry_800AE680.s	-O2 -G0 -mips3 -mgp32 -mfp32	53cf29c69ad1c35c351d081780cb164a370655fd55ca38a68cf91d63a1497dec
+0x1FAA8	0x10	src/overlays/overlay1/shared_entry_800AEAAC.s	-O2 -G0 -mips3 -mgp32 -mfp32	55f393b87b282e79b38ee081581269de5b90906293605b36bab5b01b6104c581
+0x22A7C	0x10	src/overlays/overlay1/shared_entry_800B1A80.s	-O2 -G0 -mips3 -mgp32 -mfp32	1031fb152f063ede1323eff370106cb08d8c327bbd860fc6634ccd640ed0c9dc
+0x284F8	0x20	src/overlays/overlay1/shared_entry_800B74FC.s	-O2 -G0 -mips3 -mgp32 -mfp32	92d1a7a873cd4c447fc1bb3e778a58bd9214a44999b93796ed8efe9e3d025cb3
+0x2B0C4	0x1C	src/overlays/overlay1/shared_entry_800BA0C8.s	-O2 -G0 -mips3 -mgp32 -mfp32	99956c0f01ca5ec69930579a207dae4533b5931e5df3ebf30c7db9420a48ac06
+0x2BA7C	0x1C	src/overlays/overlay1/shared_entry_800BAA80.s	-O2 -G0 -mips3 -mgp32 -mfp32	b4407ff8ef96c66a05477a33e134bf99bcbda4aec434e90c3f084073354849e0

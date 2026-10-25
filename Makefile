@@ -36,12 +36,14 @@ match: audit
 		--rom build/us/audit/overlay_1.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		--symbols build/us/audit/overlay_1_functions/symbol_addrs.txt \
-		config/us/matching_overlay1_kmc_units.tsv=kmc+builtin
+		config/us/matching_overlay1_kmc_units.tsv=kmc+builtin \
+		config/us/matching_overlay1_asm_units.tsv=as
 	$(N64DK) match-batch --project . \
 		--rom build/us/audit/overlay_4.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		--symbols build/us/audit/overlay_4_functions/symbol_addrs.txt \
-		config/us/matching_overlay4_kmc_units.tsv=kmc+builtin
+		config/us/matching_overlay4_kmc_units.tsv=kmc+builtin \
+		config/us/matching_overlay4_asm_units.tsv=as
 
 check: verify
 	$(PYTHON) -m unittest discover -s tests -v

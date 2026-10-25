@@ -183,14 +183,14 @@
       "overlay_1": {
         "functions": 1025,
         "bytes": 183528,
-        "matched_functions": 152,
-        "matched_bytes": 6836
+        "matched_functions": 163,
+        "matched_bytes": 7088
       },
       "overlay_4": {
         "functions": 420,
         "bytes": 115116,
-        "matched_functions": 71,
-        "matched_bytes": 3672
+        "matched_functions": 73,
+        "matched_bytes": 3724
       },
       "resident": {
         "functions": 1370,
@@ -266,20 +266,20 @@
       "000-0016": {
         "functions": 324,
         "bytes": 3912,
-        "matched_functions": 199,
-        "matched_bytes": 2328
+        "matched_functions": 204,
+        "matched_bytes": 2408
       },
       "000-0032": {
         "functions": 224,
         "bytes": 5824,
-        "matched_functions": 105,
-        "matched_bytes": 2828
+        "matched_functions": 112,
+        "matched_bytes": 3016
       },
       "000-0064": {
         "functions": 387,
         "bytes": 19208,
-        "matched_functions": 236,
-        "matched_bytes": 11612
+        "matched_functions": 237,
+        "matched_bytes": 11648
       },
       "000-0128": {
         "functions": 553,
