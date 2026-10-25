@@ -36,3 +36,15 @@
 0x28508	0x8C	src/code/interface_mode_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	a91bc29f0e12897d462d6bf731701b809046b05abcf323a52ea57a51e06d38bd
 0x618F0	0x8C	src/code/object_children_allocate.s	-O2 -G0 -mips3 -mgp32 -mfp32	40cb4b19b7195b50aaa5a19237a18eb7a4b9ec42ab185f298d271b4706a41098
 0x3AEC8	0x90	src/code/frame_halfword_remove.s	-O2 -G0 -mips3 -mgp32 -mfp32	07b9ae64e56421d140d70bd5a8c212de905e2170d6829232c662d45772de0530
+0x1B660	0x74	src/code/rgb5551_pack_many.s	-O2 -G0 -mips3 -mgp32 -mfp32	81b097f2188461593c96cae571a0c3e95e6ac453627d32380e77e2bebd238e42
+0x37C3C	0x74	src/code/audio_channel_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	fed29d32e5774748c5b93f20781d00b5c2fed58024344f1ef4e02b0f3da1675c
+0x422A4	0x74	src/code/audio_entry_dispatch_primary.s	-O2 -G0 -mips3 -mgp32 -mfp32	22bac594430610fb1c48486d9a3bfa2d9087edc8276eba1e848a02ae823e3a72
+0x42318	0x74	src/code/audio_entry_dispatch_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	e904a9f33462a5153601f002fda2f4521fc79f8d06b74f846c1a6818a2a73af7
+0xDBA4	0x78	src/code/object_active_children_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
+0x35FB0	0x78	src/code/runtime_entries_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	b2199fdd9d119aef7a61189d66efcdb9335cf22ce3796968a27462f74401244b
+0x3A350	0x78	src/code/roster_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e32c8d15b061901377f1f128d8c3a478272a5b82f8e2fc1ccde0c0f0a7e31a3
+0x25B5C	0x7C	src/code/interface_transfer_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	7c21b776be15e03a6224d164635ab930b552959cac1dec3752e567f7759a2182
+0x230B8	0x80	src/code/attribute_count_matches.s	-O2 -G0 -mips3 -mgp32 -mfp32	dea398bf94319c9b478f15d348e5ff8d1ad090b56356691a1b6973f2b639d626
+0x355FC	0x80	src/code/runtime_entry_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	94269dc6a57532b173f4d9d3ac109ba38e225b85cf40e3f44d4c60aff8e92a1a
+0x433C8	0x80	src/code/display_list_copy_or_branch.s	-O2 -G0 -mips3 -mgp32 -mfp32	24c635eab22c97eadf9cc9667ac7ae86f97499d25894e6e17a73ad5b80abe927
+0x64094	0x80	src/code/object_callback_threshold.s	-O2 -G0 -mips3 -mgp32 -mfp32	eda4de069e1db0c85163d8e3a4ef106ea41d547fe48be43a29f58d969738ac8c
