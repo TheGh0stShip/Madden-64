@@ -595,7 +595,6 @@
 0x277D0	0x10	src/overlays/overlay1/func_800B67D4.s	-O2 -G0 -mips3 -mgp32 -mfp32	14daf01d4debde1abeface01fe4021c2fc2d5e5168db78a90f31b612016561c8
 0x27858	0x9C	src/overlays/overlay1/func_800B685C.s	-O2 -G0 -mips3 -mgp32 -mfp32	c76aeb8bdf9aa3942bd29d273c8cabecdd8c3613c9cc08c2e2e36e579cbf1bd0
 0x278F4	0x20	src/overlays/overlay1/func_800B68F8.s	-O2 -G0 -mips3 -mgp32 -mfp32	d8b02c84bcc75e90f0aeb49d45e7c6a1957676a27b1f6168663fff8672ae3921
-0x279C4	0x58	src/overlays/overlay1/func_800B69C8.s	-O2 -G0 -mips3 -mgp32 -mfp32	7190ae43abd8afb625ed843fb779ff756c6fcade95062fac56aff94ab3e95dd0
 0x27A1C	0x98	src/overlays/overlay1/func_800B6A20.s	-O2 -G0 -mips3 -mgp32 -mfp32	3d5dfcd476e1c575d490b87f98af7f838a08aedfc182644f3044ded866f6f459
 0x27D18	0x2BC	src/overlays/overlay1/func_800B6D1C.s	-O2 -G0 -mips3 -mgp32 -mfp32	fac5d63b8fccbab8136ed5fc6bcb84e6641a78559a48e898bb3f2b3daa73d0c7
 0x28000	0x18	src/overlays/overlay1/func_800B7004.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0e4f9b76ab16b71455be764401a56be13f82c5c239e241889adc96eee66de29
@@ -663,7 +662,6 @@
 0x2BEA8	0x4C	src/overlays/overlay1/func_800BAEAC.s	-O2 -G0 -mips3 -mgp32 -mfp32	a439f36bfbbc5431c2803a7ce28bff7899e53a9e62e16f6a717d3e0a011d8719
 0x2BEF4	0x88	src/overlays/overlay1/func_800BAEF8.s	-O2 -G0 -mips3 -mgp32 -mfp32	13f5fd25a97ac203f0891e50df8750cd89b374ab52b93b6053ce57fa0f749aef
 0x2C16C	0x274	src/overlays/overlay1/func_800BB170.s	-O2 -G0 -mips3 -mgp32 -mfp32	8c76887715abb34edcda71037e0b37b182ec2049f374fd8215923d0d6bb1a664
-0x2C43C	0x50	src/overlays/overlay1/func_800BB440.s	-O2 -G0 -mips3 -mgp32 -mfp32	3894eaad0c43df238baaa6401f8159f4d4627d787b8ab9f054a85ea93ceed693
 0x2C640	0xE4	src/overlays/overlay1/func_800BB644.s	-O2 -G0 -mips3 -mgp32 -mfp32	7e06868d5b04bb3944abf137224967ae3cf0791f0eef4c9a5595ee96c22bcddf
 0x2C760	0x28	src/overlays/overlay1/func_800BB764.s	-O2 -G0 -mips3 -mgp32 -mfp32	294dfa6c499cb98f930210914c7b1ca568aaf997196620a8b8f40dfadb9f586f
 0x2C7B4	0xC	src/overlays/overlay1/func_800BB7B8.s	-O2 -G0 -mips3 -mgp32 -mfp32	4f2fdb769ccbc109bdf4d7fd5010cadb680fb57d781d6bd37455b42d03e0e163

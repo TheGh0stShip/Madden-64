@@ -710,7 +710,7 @@ functions = [
     { name = "func_800B6954", vram = 0x800b6954, size = 0x10 }, # stub
     { name = "func_800B6964", vram = 0x800b6964, size = 0x10 }, # stub
     { name = "resource_quad_release", vram = 0x800b6974, size = 0x54 }, # C
-    { name = "func_800B69C8", vram = 0x800b69c8, size = 0x58 }, # asm
+    { name = "indexed_resource_release", vram = 0x800b69c8, size = 0x58 }, # C
     { name = "func_800B6A20", vram = 0x800b6a20, size = 0x98 }, # asm
     { name = "func_800B6D1C", vram = 0x800b6d1c, size = 0x2bc }, # asm
     { name = "func_800B6FD8", vram = 0x800b6fd8, size = 0x10 }, # stub
@@ -792,7 +792,7 @@ functions = [
     { name = "func_800BAEF8", vram = 0x800baef8, size = 0x88 }, # asm
     { name = "func_800BB170", vram = 0x800bb170, size = 0x274 }, # asm
     { name = "func_800BB438", vram = 0x800bb438, size = 0x8 }, # stub
-    { name = "func_800BB440", vram = 0x800bb440, size = 0x50 }, # asm
+    { name = "global_resource_state_reset", vram = 0x800bb440, size = 0x50 }, # C
     { name = "func_800BB644", vram = 0x800bb644, size = 0xe4 }, # asm
     { name = "func_800BB764", vram = 0x800bb764, size = 0x28 }, # asm
     { name = "func_800BB7B8", vram = 0x800bb7b8, size = 0xc }, # asm
