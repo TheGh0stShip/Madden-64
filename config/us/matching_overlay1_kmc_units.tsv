@@ -143,3 +143,4 @@
 0x35680	0x3C	src/overlays/overlay1/object_active_callback_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a0e267a2943ca7e29b26c361a803ec463d63d6ed843312e6c6dbfbd80054cf58
 0x2A0A8	0x44	src/overlays/overlay1/masked_lookup_value.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4cf8b6c232f496b0b54827e89293baf5bbcc6b153f269691d871de98c28dd56c
 0x2D198	0x44	src/overlays/overlay1/workspace_initialize.c	--symbol=D_8007A268:0x8007A268 --symbol=D_8007A26C:0x8007A26C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fcea9fe13eb82a3f7068622ac3c3e57d3294b9e319a547a2e0a8b5883b5e75b6
+0x22794	0x44	src/overlays/overlay1/resource_index_dispatch.c	--symbol=D_80088472:0x80088472 --symbol=D_8006B9D4:0x8006B9D4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0bd9957308f982473b893cb2f29ea023a983ffc50b5a7d5821597003fcb7250d

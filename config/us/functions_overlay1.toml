@@ -597,7 +597,7 @@ functions = [
     { name = "func_800B13A4", vram = 0x800b13a4, size = 0x74 }, # asm
     { name = "func_800B1418", vram = 0x800b1418, size = 0x234 }, # asm
     { name = "func_800B1744", vram = 0x800b1744, size = 0x54 }, # asm
-    { name = "func_800B1798", vram = 0x800b1798, size = 0x44 }, # asm
+    { name = "resource_index_dispatch", vram = 0x800b1798, size = 0x44 }, # C
     { name = "transition_command_submit", vram = 0x800b17dc, size = 0x40 }, # C
     { name = "func_800B181C", vram = 0x800b181c, size = 0x2c }, # c
     { name = "func_800B1848", vram = 0x800b1848, size = 0x60 }, # leaf
