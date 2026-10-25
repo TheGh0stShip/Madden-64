@@ -1,0 +1,60 @@
+.text
+.align 2
+.set noreorder
+.globl display_surface_clone
+.ent display_surface_clone
+display_surface_clone:
+    addiu $sp,$sp,-0x20
+    sw $s1,0x14($sp)
+    move $s1,$a0
+    lui $a0,0x8006
+    lw $a0,0x4ba0($a0)
+    sw $s2,0x18($sp)
+    move $s2,$a1
+    sw $ra,0x1c($sp)
+    jal func_80033298
+     sw $s0,0x10($sp)
+    move $s0,$v0
+    move $a3,$s0
+    move $a2,$s1
+    addiu $t0,$s1,0x240
+.Lcopy:
+    lw $v0,0($a2)
+    lw $v1,4($a2)
+    lw $a0,8($a2)
+    lw $a1,0xc($a2)
+    sw $v0,0($a3)
+    sw $v1,4($a3)
+    sw $a0,8($a3)
+    sw $a1,0xc($a3)
+    addiu $a2,$a2,0x10
+    bne $a2,$t0,.Lcopy
+     addiu $a3,$a3,0x10
+    lw $v0,0($a2)
+    lw $v1,4($a2)
+    sw $v0,0($a3)
+    sw $v1,4($a3)
+    lhu $v0,0x206($s0)
+    move $a0,$s0
+    sh $s2,0x204($s0)
+    ori $v0,$v0,0x60
+    jal func_8000CBA8
+     sh $v0,0x206($s0)
+    lhu $v0,0x206($s1)
+    andi $v0,$v0,0x10
+    beqz $v0,.Ldone
+     move $a0,$s0
+    lhu $v0,0x206($s0)
+    andi $v0,$v0,0xffef
+    jal func_8000C8F8
+     sh $v0,0x206($s0)
+.Ldone:
+    move $v0,$s0
+    lw $ra,0x1c($sp)
+    lw $s2,0x18($sp)
+    lw $s1,0x14($sp)
+    lw $s0,0x10($sp)
+    addiu $sp,$sp,0x20
+    jr $ra
+     nop
+.end display_surface_clone

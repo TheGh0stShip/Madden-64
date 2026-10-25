@@ -175,3 +175,11 @@
 0x5BDB4	0xC4	src/code/object_task_schedule.s	-O2 -G0 -mips3 -mgp32 -mfp32	43648184e22db56f9b784f7c0486ed50cc1340557016a21c0ec7cc8c7394af30
 0xE1BC	0xC8	src/code/object_children_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	e1edb238e953bd991eaed5733b0d1b0a99f01c31e59d77734f0c739edfdd7bfd
 0x29FCC	0xC8	src/code/menu_cursor_state_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	49ba6c42f3e9d00b34806c600086024f0b26bb80787c8f1b52a6e13146aaf370
+0x3A1AC	0xC8	src/code/resource_groups_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc499dc3bf2057a11eb33f860f6981ecce8695e71d54fb071049d44816ee5773
+0x3EEC0	0xC8	src/code/audio_name_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	bd3cc36156c1133d9163fffbe6a5ab46fd13bf86d94d934756c2175fb7d2a18a
+0x439C8	0xC8	src/code/display_command_link.s	-O2 -G0 -mips3 -mgp32 -mfp32	3c1cca20f11227dbe6321ef4bc0986ed44aab6b99fb96422a3968f71a025a884
+0x55DB4	0xC8	src/code/object_action_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	451be2b666cafe5cf7d2f43f99f8e053404a41ad13220cd9c8ca458e639345e1
+0x5D804	0xC8	src/code/object_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
+0xC460	0xCC	src/code/display_surface_clone.s	-O2 -G0 -mips3 -mgp32 -mfp32	616da9367056e81fb36909814f7bc4a95cff8e0622983348e86ab8ba502aca28
+0x2CC3C	0xCC	src/code/packed_field_extended_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	7509e71f0c09bdd6a813532c8ef82487c77dfc5ba43d8124887fa6a5943b87f0
+0x30AA4	0xCC	src/code/runtime_node_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	d4d2665a3ed1b996d6ae3f4b359c30731eb366e160741b7568cb90eb96b24b54

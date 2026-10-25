@@ -1,0 +1,58 @@
+.text
+.align 2
+.set noreorder
+.globl object_stream_process
+.ent object_stream_process
+object_stream_process:
+    addiu $sp,$sp,-0x40
+    sw $s2,0x30($sp)
+    lw $s2,0x54($sp)
+    sw $s0,0x28($sp)
+    move $s0,$a0
+    sw $ra,0x38($sp)
+    sw $s3,0x34($sp)
+    sw $s1,0x2c($sp)
+    lw $s1,0x1ac($s0)
+    lw $v1,0x58($sp)
+    lw $v0,0($s2)
+    lw $a0,0x10($s1)
+    lw $s3,0x50($sp)
+    subu $t0,$v1,$v0
+    sltu $v0,$a0,$t0
+    beqz $v0,.Lclamped
+     move $t1,$a2
+    move $t0,$a0
+.Lclamped:
+    lw $a2,0x1c0($s0)
+    lw $v1,0xc($s1)
+    addiu $v0,$sp,0x20
+    sw $zero,0x20($sp)
+    sw $v0,0x14($sp)
+    sw $t0,0x18($sp)
+    sw $v1,0x10($sp)
+    lw $v0,4($a2)
+    move $a0,$s0
+    jalr $v0
+     move $a2,$t1
+    move $a0,$s0
+    lw $a1,0xc($s1)
+    lw $v0,0x1c8($a0)
+    lw $a2,0($s2)
+    lw $a3,0x20($sp)
+    lw $v0,4($v0)
+    sll $a2,$a2,2
+    jalr $v0
+     addu $a2,$s3,$a2
+    lw $v0,0($s2)
+    lw $v1,0x20($sp)
+    addu $v0,$v0,$v1
+    sw $v0,0($s2)
+    lw $ra,0x38($sp)
+    lw $s3,0x34($sp)
+    lw $s2,0x30($sp)
+    lw $s1,0x2c($sp)
+    lw $s0,0x28($sp)
+    addiu $sp,$sp,0x40
+    jr $ra
+     nop
+.end object_stream_process
