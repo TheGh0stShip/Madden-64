@@ -476,3 +476,4 @@
 0x3EE3C	0x84	src/code/pointer_list_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1d01c6f9fb6d84712bdffae84f004cf87372762b4fa2f8f480df3124b44d9fc2
 0x42848	0x84	src/code/transition_request_start.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0cc13a5f3efc4b4e3b946f797d22afeb8d67dd034385c574df1533b2ba349829
 0x415B8	0x8C	src/code/object_transform_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c11a5013be0587850c22f4daf377981bd05002c1ae20cb52d5b9daafd4236a32
+0x3B8A0	0x8C	src/code/play_record_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d72643311d9f47b56380a26a57cf8459c39a4821df4eb2c128fea944662aaf73
