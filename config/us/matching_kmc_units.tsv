@@ -1,4 +1,14 @@
 # KMC GCC 2.7.2; ROM_START SIZE SOURCE FLAGS SHA256
+0xE698	0x88	src/code/node_resource_destroy.c	--assembler=asn64 --symbol=D_800782FC:0x800782FC --symbol=D_800782F8:0x800782F8 --symbol=D_800782F4:0x800782F4 --symbol=func_8000BE80:0x8000BE80 --symbol=func_800332C8:0x800332C8 -O2 -G0 -mips3 -mgp32 -mfp32	0a5fd9ee274cc5fa129aea6ed1beab8427a64d25152d7fc670bfcf4f4993132f
+0x216E8	0x90	src/code/menu_option_dispatch.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	048e18353238654443e7f9f5e62e26449155b0342fdecc3939ef9e8e1a74a179
+0x22C9C	0x90	src/code/roster_attribute_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	18b339bacdf4cddd67203ea051c4741040f2e2510bea86a98823d46e6da57a90
+0x2981C	0x8C	src/code/mode_resources_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	762308a184109b44367906c21bffe5093ce8952b043b355d8efddee3e1164731
+0x319F0	0x94	src/code/display_flags_accumulate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	06d9e9408f9d78c64de4ffe6a594e3c11df924de641be3c51a9f3e9c1602c4f0
+0x36F64	0x90	src/code/audio_channel_configure.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	47177c5f873db4e2c1a17eb05616a99dc6fb6af462f6be05a12e3835031eeeca
+0x375A0	0x84	src/code/audio_channel_wait_release.c	--assembler=asn64 --symbol=D_8007A500:0x8007A500 --symbol=D_8008B07C:0x8008B07C --symbol=D_8008B080:0x8008B080 --symbol=func_80036540:0x80036540 -O2 -G0 -mips3 -mgp32 -mfp32	0e8825f33692f41b19071c6d3ed14a686439391ed1217bda5c3451ff44556211
+0x37984	0x98	src/code/audio_record_resolve.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	03e818d5620c4c6331e21c4413659bd58cde926edc4c8743244f5c69ba99128d
+0x3E728	0x88	src/code/audio_level_calculate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	08f6a61368121a4d1e593f971f90b6c26a2998f0b73de076bf47ba49392ddcdc
+0x407F8	0x9C	src/code/audio_mapping_lookup.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	eca45f4b1cdcb7e881ebb2ea12e77f9295f8c7e0776c8d28b7b56a4951fc8380
 0xE720	0x84	src/code/node_callbacks_apply.c	--assembler=asn64 --symbol=D_800782FC:0x800782FC -O2 -G0 -mips3 -mgp32 -mfp32	085385ea3569037035661be4e45d14e7ec202f1d156db88e6232da8408f6f0a4
 0xF090	0x88	src/code/record_key_replace.c	--assembler=asn64 --symbol=func_8002E148:0x8002E148 -O2 -G0 -mips3 -mgp32 -mfp32	8e0a34ea54b089f8f7a53bece47a958840902fac028b17801639cd68e2f38b59
 0x1BBA4	0x88	src/code/resource_node_configure.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	1109dc52675cf6ba8ff4e2fbd0035d0e2c0c7a6d542f8911cdfd0d80e7caac8f

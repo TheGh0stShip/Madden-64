@@ -133,7 +133,7 @@ functions = [
     { name = "func_8000D874", vram = 0x8000d874, size = 0x68 }, # leaf
     { name = "object_chain_create", vram = 0x8000d8dc, size = 0xbc }, # asm
     { name = "node_resource_attach", vram = 0x8000d998, size = 0x100 }, # asm
-    { name = "node_resource_destroy", vram = 0x8000da98, size = 0x88 }, # asm
+    { name = "node_resource_destroy", vram = 0x8000da98, size = 0x88 }, # c
     { name = "node_callbacks_apply", vram = 0x8000db20, size = 0x84 }, # c
     { name = "func_8000DBA4", vram = 0x8000dba4, size = 0x54 }, # c
     { name = "func_8000DBF8", vram = 0x8000dbf8, size = 0x8 }, # stub
@@ -379,7 +379,7 @@ functions = [
     { name = "func_800209AC", vram = 0x800209ac, size = 0x10 }, # stub
     { name = "menu_slots_threshold_update", vram = 0x800209bc, size = 0xac }, # asm
     { name = "menu_selection_confirm", vram = 0x80020a68, size = 0x80 }, # asm
-    { name = "menu_option_dispatch", vram = 0x80020ae8, size = 0x90 }, # asm
+    { name = "menu_option_dispatch", vram = 0x80020ae8, size = 0x90 }, # c
     { name = "menu_screen_update", vram = 0x80020b78, size = 0x500 }, # asm
     { name = "menu_input_activation_update", vram = 0x80021078, size = 0x104 }, # asm
     { name = "menu_input_poll", vram = 0x8002117c, size = 0xa0 }, # asm
@@ -392,7 +392,7 @@ functions = [
     { name = "func_80021ED8", vram = 0x80021ed8, size = 0x8 }, # stub
     { name = "game_session_process", vram = 0x80021ee0, size = 0x198 }, # asm
     { name = "func_80022078", vram = 0x80022078, size = 0x24 }, # c
-    { name = "roster_attribute_find", vram = 0x8002209c, size = 0x90 }, # asm
+    { name = "roster_attribute_find", vram = 0x8002209c, size = 0x90 }, # c
     { name = "func_8002212C", vram = 0x8002212c, size = 0x5c }, # c
     { name = "func_80022188", vram = 0x80022188, size = 0x60 }, # leaf
     { name = "func_800221E8", vram = 0x800221e8, size = 0x4c }, # leaf
@@ -469,7 +469,7 @@ functions = [
     { name = "frame_identifier_resolve", vram = 0x80028744, size = 0x314 }, # asm
     { name = "frame_identifier_find", vram = 0x80028a58, size = 0xb0 }, # asm
     { name = "func_80028B08", vram = 0x80028b08, size = 0x114 }, # asm
-    { name = "mode_resources_initialize", vram = 0x80028c1c, size = 0x8c }, # asm
+    { name = "mode_resources_initialize", vram = 0x80028c1c, size = 0x8c }, # c
     { name = "mode_resource_update", vram = 0x80028ca8, size = 0x28c }, # asm
     { name = "menu_mode_update", vram = 0x80028f34, size = 0x2a0 }, # asm
     { name = "menu_mode_process", vram = 0x800291d4, size = 0x1f8 }, # asm
@@ -593,7 +593,7 @@ functions = [
     { name = "func_80030B54", vram = 0x80030b54, size = 0x48 }, # c
     { name = "controller_flags_resolve", vram = 0x80030b9c, size = 0xd8 }, # asm
     { name = "runtime_callback_configure", vram = 0x80030c74, size = 0x17c }, # asm
-    { name = "display_flags_accumulate", vram = 0x80030df0, size = 0x94 }, # asm
+    { name = "display_flags_accumulate", vram = 0x80030df0, size = 0x94 }, # c
     { name = "func_80030E84", vram = 0x80030e84, size = 0x1c }, # leaf
     { name = "func_80030EA0", vram = 0x80030ea0, size = 0x54 }, # leaf
     { name = "func_80030EF4", vram = 0x80030ef4, size = 0x14c }, # asm
@@ -707,7 +707,7 @@ functions = [
     { name = "func_80036130", vram = 0x80036130, size = 0x30 }, # leaf
     { name = "func_80036160", vram = 0x80036160, size = 0x108 }, # asm
     { name = "func_80036268", vram = 0x80036268, size = 0xfc }, # asm
-    { name = "audio_channel_configure", vram = 0x80036364, size = 0x90 }, # asm
+    { name = "audio_channel_configure", vram = 0x80036364, size = 0x90 }, # c
     { name = "func_800363F4", vram = 0x800363f4, size = 0x34 }, # c
     { name = "func_80036428", vram = 0x80036428, size = 0x8 }, # stub
     { name = "func_80036430", vram = 0x80036430, size = 0x8 }, # stub
@@ -724,7 +724,7 @@ functions = [
     { name = "func_80036628", vram = 0x80036628, size = 0x14 }, # leaf
     { name = "func_8003663C", vram = 0x8003663c, size = 0x128 }, # asm
     { name = "memory_pool_process", vram = 0x80036764, size = 0x23c }, # asm
-    { name = "audio_channel_wait_release", vram = 0x800369a0, size = 0x84 }, # asm
+    { name = "audio_channel_wait_release", vram = 0x800369a0, size = 0x84 }, # c
     { name = "memory_pool_finalize_secondary", vram = 0x80036a24, size = 0x170 }, # asm
     { name = "func_80036B94", vram = 0x80036b94, size = 0x120 }, # asm
     { name = "func_80036CB4", vram = 0x80036cb4, size = 0x8 }, # stub
@@ -737,7 +737,7 @@ functions = [
     { name = "func_80036D28", vram = 0x80036d28, size = 0x8 }, # stub
     { name = "func_80036D30", vram = 0x80036d30, size = 0x8 }, # stub
     { name = "func_80036D38", vram = 0x80036d38, size = 0x4c }, # c
-    { name = "audio_record_resolve", vram = 0x80036d84, size = 0x98 }, # asm
+    { name = "audio_record_resolve", vram = 0x80036d84, size = 0x98 }, # c
     { name = "memory_pool_update", vram = 0x80036e1c, size = 0x220 }, # asm
     { name = "audio_channel_find", vram = 0x8003703c, size = 0x74 }, # c
     { name = "func_800370B0", vram = 0x800370b0, size = 0x58 }, # c
@@ -845,7 +845,7 @@ functions = [
     { name = "func_8003D78C", vram = 0x8003d78c, size = 0x134 }, # asm
     { name = "func_8003D8C0", vram = 0x8003d8c0, size = 0x34 }, # leaf
     { name = "audio_channel_process", vram = 0x8003d8f4, size = 0x234 }, # asm
-    { name = "audio_level_calculate", vram = 0x8003db28, size = 0x88 }, # asm
+    { name = "audio_level_calculate", vram = 0x8003db28, size = 0x88 }, # c
     { name = "audio_profile_load", vram = 0x8003dbb0, size = 0xa4 }, # c
     { name = "func_8003DC54", vram = 0x8003dc54, size = 0x150 }, # asm
     { name = "func_8003DDA4", vram = 0x8003dda4, size = 0x54 }, # leaf
@@ -876,7 +876,7 @@ functions = [
     { name = "audio_sequence_configure", vram = 0x8003f4e8, size = 0x1c4 }, # asm
     { name = "audio_sequence_update", vram = 0x8003f6ac, size = 0x394 }, # asm
     { name = "audio_sequence_finalize", vram = 0x8003fa40, size = 0x1b8 }, # asm
-    { name = "audio_mapping_lookup", vram = 0x8003fbf8, size = 0x9c }, # asm
+    { name = "audio_mapping_lookup", vram = 0x8003fbf8, size = 0x9c }, # c
     { name = "team_slot_available_test", vram = 0x8003fc94, size = 0xdc }, # asm
     { name = "func_8003FD70", vram = 0x8003fd70, size = 0x14 }, # leaf
     { name = "func_8003FD84", vram = 0x8003fd84, size = 0x10 }, # stub
