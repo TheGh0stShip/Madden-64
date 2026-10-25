@@ -570,3 +570,6 @@
 0x4355C	0xA8	src/code/color_tables_refresh.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	22b984aa785a912b1378490b7c1b14d7b6289fa4c92f82968efda395259eda6f
 0x5A034	0xA4	src/code/object_output_reset.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	cd6a5d0759f348ba72283d414700babbe27ad2a78ac41d86107aa4662e861531
 0x5AA14	0xA8	src/code/object_state_finalize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	21ff457fc96a6d133b412b9cd88ac465f799118d7024aa53e9383ae9fb1f47f7
+0x5B6D0	0xBC	src/code/object_work_buffers_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	387700f3710096e82c413670963b728fd5b5a0c58ee736e2900e8649e6dc432a
+0xE284	0xBC	src/code/object_chain_release.c	--assembler=asn64 --symbol=D_80064BA8:0x80064BA8 --symbol=D_800782F0:0x800782F0 --symbol=func_8000D998:0x8000D998 --symbol=func_800332C8:0x800332C8 -O2 -G0 -mips3 -mgp32 -mfp32	19b79013cdcbbc3d9300e3ac6dd8edd5f9ad619b1d9e4e3509aae46f8912cf32
+0xE4DC	0xBC	src/code/object_chain_create.c	--assembler=asn64 --symbol=D_800782F4:0x800782F4 --symbol=D_800782F8:0x800782F8 --symbol=D_800782FC:0x800782FC --symbol=func_80033298:0x80033298 -O2 -G0 -mips3 -mgp32 -mfp32	548251717738ccc4b70d36029e5e82813c854f9767b1211577c6dca380f5edbb

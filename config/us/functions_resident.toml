@@ -127,11 +127,11 @@ functions = [
     { name = "object_scene_create", vram = 0x8000d2c0, size = 0x1ec }, # asm
     { name = "object_scene_reset", vram = 0x8000d4ac, size = 0x110 }, # asm
     { name = "object_children_create", vram = 0x8000d5bc, size = 0xc8 }, # asm
-    { name = "object_chain_release", vram = 0x8000d684, size = 0xbc }, # asm
+    { name = "object_chain_release", vram = 0x8000d684, size = 0xbc }, # c
     { name = "display_node_create", vram = 0x8000d740, size = 0xf4 }, # asm
     { name = "func_8000D834", vram = 0x8000d834, size = 0x40 }, # leaf
     { name = "func_8000D874", vram = 0x8000d874, size = 0x68 }, # leaf
-    { name = "object_chain_create", vram = 0x8000d8dc, size = 0xbc }, # asm
+    { name = "object_chain_create", vram = 0x8000d8dc, size = 0xbc }, # c
     { name = "node_resource_attach", vram = 0x8000d998, size = 0x100 }, # asm
     { name = "node_resource_destroy", vram = 0x8000da98, size = 0x88 }, # c
     { name = "node_callbacks_apply", vram = 0x8000db20, size = 0x84 }, # c
@@ -1255,7 +1255,7 @@ functions = [
     { name = "object_state_update_secondary", vram = 0x8005a18c, size = 0x2d0 }, # asm
     { name = "func_8005A45C", vram = 0x8005a45c, size = 0x164 }, # asm
     { name = "object_state_machine_advance", vram = 0x8005a5c0, size = 0x510 }, # asm
-    { name = "object_work_buffers_initialize", vram = 0x8005aad0, size = 0xbc }, # asm
+    { name = "object_work_buffers_initialize", vram = 0x8005aad0, size = 0xbc }, # c
     { name = "func_8005AB90", vram = 0x8005ab90, size = 0x14c }, # asm
     { name = "object_state_process", vram = 0x8005acdc, size = 0x1b4 }, # asm
     { name = "func_8005AE90", vram = 0x8005ae90, size = 0x140 }, # asm
