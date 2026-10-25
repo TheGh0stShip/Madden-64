@@ -78,7 +78,7 @@ functions = [
     { name = "func_8000B140", vram = 0x8000b140, size = 0x44 }, # leaf
     { name = "func_8000B184", vram = 0x8000b184, size = 0x54 }, # leaf
     { name = "display_texture_parameters_set", vram = 0x8000b1d8, size = 0x104 }, # asm
-    { name = "func_8000B2E0", vram = 0x8000b2e0, size = 0x334 }, # c
+    { name = "display_texture_cache_initialize", vram = 0x8000b2e0, size = 0x334 }, # asm
     { name = "display_system_shutdown", vram = 0x8000b614, size = 0xe4 }, # asm
     { name = "display_surface_create", vram = 0x8000b6f8, size = 0xac }, # asm
     { name = "func_8000B7A4", vram = 0x8000b7a4, size = 0x40 }, # c
@@ -92,8 +92,8 @@ functions = [
     { name = "func_8000BE80", vram = 0x8000be80, size = 0x68 }, # leaf
     { name = "func_8000BEE8", vram = 0x8000bee8, size = 0x10 }, # stub
     { name = "func_8000BEF8", vram = 0x8000bef8, size = 0x10 }, # stub
-    { name = "func_8000BF08", vram = 0x8000bf08, size = 0x358 }, # c
-    { name = "func_8000C260", vram = 0x8000c260, size = 0x530 }, # c
+    { name = "display_frame_context_initialize", vram = 0x8000bf08, size = 0x358 }, # asm
+    { name = "display_frame_build", vram = 0x8000c260, size = 0x530 }, # asm
     { name = "object_display_segment_emit", vram = 0x8000c790, size = 0x80 }, # asm
     { name = "object_display_segment_enable", vram = 0x8000c810, size = 0x88 }, # asm
     { name = "func_8000C898", vram = 0x8000c898, size = 0x8 }, # stub
@@ -191,7 +191,7 @@ functions = [
     { name = "func_8000F330", vram = 0x8000f330, size = 0x14 }, # leaf
     { name = "func_8000F344", vram = 0x8000f344, size = 0x78 }, # c
     { name = "object_index_rows_shift", vram = 0x8000f3bc, size = 0x94 }, # asm
-    { name = "func_8000F450", vram = 0x8000f450, size = 0x3c4 }, # c
+    { name = "object_resources_initialize", vram = 0x8000f450, size = 0x3c4 }, # asm
     { name = "object_resources_release_full", vram = 0x8000f814, size = 0xa4 }, # asm
     { name = "func_8000F8B8", vram = 0x8000f8b8, size = 0x8 }, # stub
     { name = "func_8000F8C0", vram = 0x8000f8c0, size = 0x2c }, # leaf
@@ -199,7 +199,7 @@ functions = [
     { name = "func_8000F934", vram = 0x8000f934, size = 0x1070 }, # c
     { name = "display_material_setup", vram = 0x800109a4, size = 0x110 }, # asm
     { name = "display_camera_vector_compute", vram = 0x80010ab4, size = 0x1c4 }, # asm
-    { name = "func_80010C78", vram = 0x80010c78, size = 0x5b0 }, # c
+    { name = "display_scene_render", vram = 0x80010c78, size = 0x5b0 }, # asm
     { name = "func_80011228", vram = 0x80011228, size = 0x10 }, # stub
     { name = "func_80011238", vram = 0x80011238, size = 0x10 }, # stub
     { name = "object_texture_descriptor_get", vram = 0x80011248, size = 0xc0 }, # asm
@@ -229,7 +229,7 @@ functions = [
     { name = "func_80016054", vram = 0x80016054, size = 0x4c }, # c
     { name = "func_800160A0", vram = 0x800160a0, size = 0x14 }, # leaf
     { name = "func_800160B4", vram = 0x800160b4, size = 0x10 }, # stub
-    { name = "func_800160C4", vram = 0x800160c4, size = 0x4dc }, # c
+    { name = "resource_stream_decode", vram = 0x800160c4, size = 0x4dc }, # asm
     { name = "func_800165A0", vram = 0x800165a0, size = 0x25c }, # leaf
     { name = "func_800167FC", vram = 0x800167fc, size = 0x1d8 }, # c
     { name = "func_800169D4", vram = 0x800169d4, size = 0x10 }, # stub
@@ -254,13 +254,13 @@ functions = [
     { name = "func_80017000", vram = 0x80017000, size = 0x10 }, # stub
     { name = "func_80017010", vram = 0x80017010, size = 0xc }, # stub
     { name = "func_8001701C", vram = 0x8001701c, size = 0x14 }, # leaf
-    { name = "func_80017030", vram = 0x80017030, size = 0x390 }, # c
+    { name = "resource_file_load", vram = 0x80017030, size = 0x390 }, # asm
     { name = "func_800173C0", vram = 0x800173c0, size = 0x12c }, # c
     { name = "func_800174EC", vram = 0x800174ec, size = 0x18 }, # leaf
     { name = "func_80017504", vram = 0x80017504, size = 0x14c }, # c
     { name = "func_80017650", vram = 0x80017650, size = 0x1f0 }, # c
     { name = "func_80017840", vram = 0x80017840, size = 0x40 }, # leaf
-    { name = "func_80017880", vram = 0x80017880, size = 0x300 }, # c
+    { name = "resource_archive_open", vram = 0x80017880, size = 0x300 }, # asm
     { name = "resource_payload_prepare", vram = 0x80017b80, size = 0xa4 }, # asm
     { name = "func_80017C24", vram = 0x80017c24, size = 0x58 }, # c
     { name = "func_80017C7C", vram = 0x80017c7c, size = 0x28 }, # leaf

@@ -280,3 +280,11 @@
 0x11F08	0x180	src/code/render_system_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	07f04fdf717cdfaf152e5549fb1c49396d4b9eeb7e3c92dfe3965b7ff2f0c7ea
 0x120D0	0x1E8	src/code/render_buffers_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	daa6af7a68cea9a9bd27d3ffdbbaf7b75f33dedfd5691de6f3ea99057503ba3c
 0x124FC	0x19C	src/code/render_system_shutdown.s	-O2 -G0 -mips3 -mgp32 -mfp32	27e2a7e8f3227f55cdfae3fe133245359c6e92d3c8539aa30e1a57883f6477d8
+0xBEE0	0x334	src/code/display_texture_cache_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	6026df1f74f17f295e4714d019d7fdf4d716042349650d7c31ee8350e4c4a36a
+0xCB08	0x358	src/code/display_frame_context_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	f9b465a7804ab800a612b84ce4ed14db0f4b3861266749e45976cdaf0bcab16f
+0xCE60	0x530	src/code/display_frame_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	ac5ffd49de96de5846aea0fd5dd145c33707cc567c205a01c0c4133a7b4298ff
+0x10050	0x3C4	src/code/object_resources_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	36bc211f3c67a64876b4bdee9535ab41e4bf4e0d979df82269a88f1252c6e214
+0x11878	0x5B0	src/code/display_scene_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	adb6a1bbbf7e8e055b979de41bf349a877ef7a8d2510eccda5c73bc36e205316
+0x16CC4	0x4DC	src/code/resource_stream_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	013790c958fb87843e64c65cd9b77762cda321e368ef2344fb7ffedbd9db9465
+0x17C30	0x390	src/code/resource_file_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	427f64fc5f37912404edf7fa5ff54e00b8f5e61f7e0e47feeed11d9457c625be
+0x18480	0x300	src/code/resource_archive_open.s	-O2 -G0 -mips3 -mgp32 -mfp32	62286bdd09bc84064179c39e8995f2d3ddc431405ccf2089047e506b41aef4b7
