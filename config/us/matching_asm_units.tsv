@@ -307,3 +307,11 @@
 0x14984	0x1EF8	src/code/render_world_pipeline.s	-O2 -G0 -mips3 -mgp32 -mfp32	7bf2d56d5063a1f08984cf08a5780871b3e01e53e91896caf8e7ef111772dc92
 0x26ED0	0x1608	src/code/gameplay_event_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	a2a455d3b3234fb80631784fc5e62c865f63ef9b041f523955c2e723ecc85fda
 0x19140	0x1258	src/code/ui_scene_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	cc5d2902d9874ce4437a85cbbafcfe11bd5496c90a6c6ee7d38d169c4407375c
+0x3950C	0xAD4	src/code/audio_sequence_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	b31b376b8db6aaf8bb3ed3a2fa8f7cc05937a2fc2d2a37c546d86fd1f420e0f3
+0x23A74	0x9B4	src/code/gameplay_roster_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	46e67d1db04e13c1550c720c34411557e6abf88eb47577f9f330a8de6c88e254
+0x5CBE0	0x950	src/code/object_decode_pipeline.s	-O2 -G0 -mips3 -mgp32 -mfp32	f6fb316e4b2a25e267af047985236e4dd370221e92333b29a081fb72990e1e0a
+0x1C804	0x840	src/code/ui_resource_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	cfc5b16f09ff577675ac008c9c4af607ee40091cdd278cbd332c483b016d8642
+0x5EA60	0x788	src/code/object_plane_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	d1e84ddca53059a35e3aa16e7df3c729aa442fc03afe1b6369017c2323d159e2
+0x25D4C	0x648	src/code/gameplay_state_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	e9e6777188aca2e86528894aa879f9131b80405f12b43a8b7787aec5d417216c
+0x224D4	0x604	src/code/game_session_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	1211479c47001b386db964b39a88ad29117e54cce72f6528cefac932977127bc
+0x38D50	0x5D8	src/code/audio_mixer_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ffc7301f1186193a9523cafb741cd1dafce8b9a6a0c5ee8479e14a583db9476
