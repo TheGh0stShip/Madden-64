@@ -11,9 +11,9 @@ from n64dk.mips import disassemble
 
 
 ROOT = Path(__file__).resolve().parent.parent
-ROM = ROOT / "build/us/main_unpacked.z64"
-BASE_VRAM = 0x80000400
-BASE_ROM = 0x1000
+DEFAULT_ROM = ROOT / "build/us/main_unpacked.z64"
+DEFAULT_BASE_VRAM = 0x80000400
+DEFAULT_BASE_ROM = 0x1000
 
 
 def branch_target(address: int, word: int) -> int | None:
@@ -33,8 +33,9 @@ def branch_target(address: int, word: int) -> int | None:
     return None
 
 
-def source_for(name: str, start: int, size: int, image: bytes) -> str:
-    offset = BASE_ROM + start - BASE_VRAM
+def source_for(name: str, start: int, size: int, image: bytes,
+               base_vram: int, base_rom: int) -> str:
+    offset = base_rom + start - base_vram
     body = image[offset:offset + size]
     if len(body) != size or size % 4:
         raise ValueError(f"invalid range for {name}")
@@ -85,14 +86,23 @@ def source_for(name: str, start: int, size: int, image: bytes) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--rom", type=Path, default=DEFAULT_ROM)
+    parser.add_argument("--base-vram", type=lambda value: int(value, 0),
+                        default=DEFAULT_BASE_VRAM)
+    parser.add_argument("--base-rom", type=lambda value: int(value, 0),
+                        default=DEFAULT_BASE_ROM)
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "src/code")
     parser.add_argument("units", nargs="+", metavar="NAME:VRAM:SIZE")
     args = parser.parse_args()
-    image = ROM.read_bytes()
+    image = args.rom.read_bytes()
+    output_dir = (args.output_dir if args.output_dir.is_absolute()
+                  else ROOT / args.output_dir)
     for spec in args.units:
         name, start_text, size_text = spec.split(":")
         start, size = int(start_text, 0), int(size_text, 0)
-        destination = ROOT / "src/code" / f"{name}.s"
-        destination.write_text(source_for(name, start, size, image))
+        destination = output_dir / f"{name}.s"
+        destination.write_text(source_for(
+            name, start, size, image, args.base_vram, args.base_rom))
         print(destination.relative_to(ROOT))
 
 
