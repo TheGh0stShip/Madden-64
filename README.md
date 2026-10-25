@@ -35,8 +35,8 @@ overlays, separate overlay data, every archive table, each payload's logical
 length, and alignment padding. See [the ROM layout audit](docs/ROM_LAYOUT.md)
 for the gap-free map and per-archive counts and sizes.
 
-Eight hundred thirteen reviewed C compilation units fully cover 935 catalogued function
-candidates and currently match 86,424 whole-program code bytes and 496 data bytes exactly, including the
+Eight hundred fourteen reviewed C compilation units fully cover 936 catalogued function
+candidates and currently match 86,492 whole-program code bytes and 496 data bytes exactly, including the
 contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
 boundaries are research leads, not decompilation credit, until a source unit is
 compiled and compared byte-for-byte.
@@ -96,10 +96,10 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching decompiled C code | 86,424 bytes | 753,428 bytes | 11.47% |
-| Matching assembly reference coverage | 478,116 bytes | 753,428 bytes | 63.46% |
+| Matching decompiled C code | 86,492 bytes | 753,428 bytes | 11.48% |
+| Matching assembly reference coverage | 478,048 bytes | 753,428 bytes | 63.45% |
 | Whole-program initialized data | 496 bytes | 484,540 bytes | 0.10% |
-| C-decompiled function candidates | 935 | 2,820 | 33.16% |
+| C-decompiled function candidates | 936 | 2,820 | 33.19% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |

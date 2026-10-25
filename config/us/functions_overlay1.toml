@@ -812,7 +812,7 @@ functions = [
     { name = "func_800BC174", vram = 0x800bc174, size = 0x8 }, # stub
     { name = "func_800BC17C", vram = 0x800bc17c, size = 0x8 }, # stub
     { name = "func_800BC184", vram = 0x800bc184, size = 0x18 }, # leaf
-    { name = "func_800BC19C", vram = 0x800bc19c, size = 0x44 }, # asm
+    { name = "workspace_initialize", vram = 0x800bc19c, size = 0x44 }, # C
     { name = "func_800BC1E0", vram = 0x800bc1e0, size = 0x48 }, # asm
     { name = "func_800BC228", vram = 0x800bc228, size = 0x8 }, # stub
     { name = "func_800BC230", vram = 0x800bc230, size = 0x8 }, # stub
