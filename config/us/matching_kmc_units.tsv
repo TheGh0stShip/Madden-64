@@ -582,3 +582,6 @@
 0x606D4	0x8C	src/code/tiled_columns_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	0be1fcf3a6d13b9816b2b2f9e1153135dffab3dd58dce4621fe31fb93e609845
 0x618F0	0x8C	src/code/object_children_allocate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	40cb4b19b7195b50aaa5a19237a18eb7a4b9ec42ab185f298d271b4706a41098
 0x3F4F4	0x88	src/code/string_tail_clear.c	--assembler=asn64 --symbol=func_8004DF94:0x8004DF94 --symbol=func_80016A24:0x80016A24 -O2 -G0 -mips3 -mgp32 -mfp32	c5c9bba6caa75c760ca382ec56eb53147643e789b891f34aece25d9f1245d6a1
+0xE1BC	0xC8	src/code/object_children_create.c	--assembler=asn64 --symbol=D_800782F0:0x800782F0 --symbol=D_80064BA8:0x80064BA8 --symbol=func_80033298:0x80033298 --symbol=func_8000D740:0x8000D740 -O2 -G0 -mips3 -mgp32 -mfp32	e1edb238e953bd991eaed5733b0d1b0a99f01c31e59d77734f0c739edfdd7bfd
+0x352DC	0x8C	src/code/resource_offsets_relocate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	1443afab2e5bee65932fd35cf82b46816bd707b3dbe33ab30fa40b8f8ce53def
+0x5BDB4	0xC4	src/code/object_task_schedule.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	43648184e22db56f9b784f7c0486ed50cc1340557016a21c0ec7cc8c7394af30
