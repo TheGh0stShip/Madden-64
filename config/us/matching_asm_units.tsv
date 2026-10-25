@@ -185,7 +185,7 @@
 0x30AA4	0xCC	src/code/runtime_node_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	d4d2665a3ed1b996d6ae3f4b359c30731eb366e160741b7568cb90eb96b24b54
 0x1C04C	0xD0	src/code/display_record_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	f414768564ecbb2e60e8a5d502447da4ed2f0b89d3ff3846340bb155a0c6ae80
 0x1F420	0xD0	src/code/text_glyph_width_sum.s	-O2 -G0 -mips3 -mgp32 -mfp32	f9cdbe48abeec6ff78efbc60d84c88b24a69664bc270c18cdf34b00ee021ce08
-0x2B798	0xD0	src/code/team_best_slot_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	b815668b77a4299b04415fced2e221e51f9f1f71643f960e22a7927c10a69a13
+0x2B798	0xD0	src/code/team_best_slot_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	b815668b77a4299b04415fced2e221e51f9f1f71643f960e22e7927c10a69a13
 0x40E74	0xD0	src/code/audio_range_randomize.s	-O2 -G0 -mips3 -mgp32 -mfp32	b7beb92c49adae993b236c7a9ecd91d012b4571dfeaf15e9615d967819c168e9
 0x3DBA0	0xD4	src/code/audio_position_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	da295f58a8307704798bf7915581fb1c2b647114ac6729fd35490bffa4f184a6
 0x43448	0xD4	src/code/display_pipeline_setup.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc1bce253d3f85c7c88c07e83a55cd2bb9bd91932a619d77bbf8092aeb3da09f
@@ -304,3 +304,6 @@
 0x21778	0x500	src/code/menu_screen_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	a22be73d74c2053add03cc95a312dd9e3397503be160e515867407108784b7f9
 0x24428	0x438	src/code/gameplay_record_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	17d3fe88b15a8001660436c793f890a63105700cd4d63b42137b4fbd7a09e4f1
 0x25294	0x4FC	src/code/gameplay_state_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	a624bbdd2b9e90de55e0d3460e299092b62265b16176a50e5c06f1cdb74cecd4
+0x14984	0x1EF8	src/code/render_world_pipeline.s	-O2 -G0 -mips3 -mgp32 -mfp32	7bf2d56d5063a1f08984cf08a5780871b3e01e53e91896caf8e7ef111772dc92
+0x26ED0	0x1608	src/code/gameplay_event_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	a2a455d3b3234fb80631784fc5e62c865f63ef9b041f523955c2e723ecc85fda
+0x19140	0x1258	src/code/ui_scene_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	cc5d2902d9874ce4437a85cbbafcfe11bd5496c90a6c6ee7d38d169c4407375c

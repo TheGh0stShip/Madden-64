@@ -221,7 +221,7 @@ functions = [
     { name = "func_80013B54", vram = 0x80013b54, size = 0x8 }, # stub
     { name = "func_80013B5C", vram = 0x80013b5c, size = 0x30 }, # c
     { name = "func_80013B8C", vram = 0x80013b8c, size = 0x1f8 }, # c
-    { name = "func_80013D84", vram = 0x80013d84, size = 0x1ef8 }, # c
+    { name = "render_world_pipeline", vram = 0x80013d84, size = 0x1ef8 }, # asm
     { name = "func_80015C80", vram = 0x80015c80, size = 0x7c }, # c
     { name = "func_80015CFC", vram = 0x80015cfc, size = 0x30 }, # c
     { name = "func_80015D2C", vram = 0x80015d2c, size = 0x2a4 }, # c
@@ -273,7 +273,7 @@ functions = [
     { name = "func_80018048", vram = 0x80018048, size = 0x8 }, # stub
     { name = "func_80018050", vram = 0x80018050, size = 0x58 }, # c
     { name = "func_800180A8", vram = 0x800180a8, size = 0x498 }, # c
-    { name = "func_80018540", vram = 0x80018540, size = 0x1258 }, # c
+    { name = "ui_scene_render", vram = 0x80018540, size = 0x1258 }, # asm
     { name = "strided_rows_copy", vram = 0x80019798, size = 0xac }, # asm
     { name = "func_80019844", vram = 0x80019844, size = 0x24 }, # c
     { name = "resource_bytes_copy", vram = 0x80019868, size = 0xdc }, # asm
@@ -447,7 +447,7 @@ functions = [
     { name = "func_80025B10", vram = 0x80025b10, size = 0x434 }, # c
     { name = "func_80025F44", vram = 0x80025f44, size = 0x258 }, # c
     { name = "func_8002619C", vram = 0x8002619c, size = 0x134 }, # c
-    { name = "func_800262D0", vram = 0x800262d0, size = 0x1608 }, # c
+    { name = "gameplay_event_dispatch", vram = 0x800262d0, size = 0x1608 }, # asm
     { name = "func_800278D8", vram = 0x800278d8, size = 0x30 }, # c
     { name = "interface_mode_configure", vram = 0x80027908, size = 0x8c }, # asm
     { name = "roster_profile_update", vram = 0x80027994, size = 0xc4 }, # asm
