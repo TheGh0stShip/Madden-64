@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import tomllib
 from pathlib import Path
 
@@ -12,6 +13,10 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config/us/progress.toml"
 LOADER_MAP = ROOT / "config/us/loader_map.tsv"
 DECOMPHUB_REPORT = ROOT / "decomphub.progress.json"
+INSTRUCTION_ASM = re.compile(
+    r'^\s*(?:__asm__|asm)\s*(?:volatile\s*)?\(\s*"([^"]+)',
+    re.MULTILINE,
+)
 
 
 def measures(total_code: int, matched_code: int, total_functions: int,
@@ -40,7 +45,13 @@ def measures(total_code: int, matched_code: int, total_functions: int,
     }
 
 
-def manifest_ranges(paths: list[Path], suffix: str | None = None) -> list[tuple[int, int, str]]:
+def contains_instruction_asm(source: str) -> bool:
+    """Return whether a C unit emits instructions through an asm statement."""
+    return bool(INSTRUCTION_ASM.search((ROOT / source).read_text()))
+
+
+def manifest_ranges(paths: list[Path], suffix: str | None = None,
+                    reject_instruction_asm: bool = False) -> list[tuple[int, int, str]]:
     ranges = []
     for path in paths:
         for number, line in enumerate(path.read_text().splitlines(), 1):
@@ -51,6 +62,8 @@ def manifest_ranges(paths: list[Path], suffix: str | None = None) -> list[tuple[
                 raise ValueError(f"{path}:{number}: malformed manifest row")
             start, size = int(fields[0], 0), int(fields[1], 0)
             if suffix is not None and not fields[2].endswith(suffix):
+                continue
+            if reject_instruction_asm and contains_instruction_asm(fields[2]):
                 continue
             if size <= 0:
                 raise ValueError(f"{path}:{number}: size must be positive")
@@ -139,14 +152,22 @@ def build_report() -> dict[str, object]:
     image = config["image"]
     progress = config["progress"]
     manifests = [ROOT / path for path in progress["manifests"]]
-    ranges = manifest_ranges(manifests, ".c")
+    ranges = manifest_ranges(manifests, ".c", reject_instruction_asm=True)
+    assembly_assisted_ranges = [
+        item for item in manifest_ranges(manifests, ".c") if item not in ranges
+    ]
     assembly_ranges = manifest_ranges(manifests, ".s")
     overlay_configs = progress.get("overlay_manifests", [])
     loader_paths = progress.get("loader_manifests")
     if loader_paths is None:
         loader_paths = [progress["loader_manifest"]]
     loader_manifest_paths = [ROOT / path for path in loader_paths]
-    loader_ranges = manifest_ranges(loader_manifest_paths, ".c")
+    loader_ranges = manifest_ranges(loader_manifest_paths, ".c",
+                                    reject_instruction_asm=True)
+    loader_assisted_ranges = [
+        item for item in manifest_ranges(loader_manifest_paths, ".c")
+        if item not in loader_ranges
+    ]
     loader_assembly_ranges = manifest_ranges(loader_manifest_paths, ".s")
     vram_base, rom_base = image["vram"], image["rom"]
     units = []
@@ -160,7 +181,8 @@ def build_report() -> dict[str, object]:
         overlay_paths = [ROOT / overlay["path"]]
         if overlay.get("asm_path"):
             overlay_paths.append(ROOT / overlay["asm_path"])
-        overlay_ranges = manifest_ranges(overlay_paths, ".c")
+        overlay_ranges = manifest_ranges(overlay_paths, ".c",
+                                         reject_instruction_asm=True)
         functions = catalogue(ROOT / overlay["functions"])
         module = overlay["id"]
         for function in functions:
@@ -176,7 +198,8 @@ def build_report() -> dict[str, object]:
                         for start, end, _source in manifest_ranges(
                             [ROOT / overlay["path"]] +
                             ([ROOT / overlay["asm_path"]]
-                             if overlay.get("asm_path") else []), ".c")) +
+                             if overlay.get("asm_path") else []), ".c",
+                            reject_instruction_asm=True)) +
                     sum(end - start for start, end, _source in loader_ranges))
     assembly_code = (sum(end - start for start, end, _source in assembly_ranges) +
                      sum(end - start for overlay in overlay_configs
@@ -185,13 +208,26 @@ def build_report() -> dict[str, object]:
                              ([ROOT / overlay["asm_path"]]
                               if overlay.get("asm_path") else []), ".s")) +
                      sum(end - start for start, end, _source in loader_assembly_ranges))
+    assembly_assisted_code = (
+        sum(end - start for start, end, _source in assembly_assisted_ranges) +
+        sum(end - start for overlay in overlay_configs
+            for start, end, _source in manifest_ranges(
+                [ROOT / overlay["path"]] +
+                ([ROOT / overlay["asm_path"]]
+                 if overlay.get("asm_path") else []), ".c")
+            if contains_instruction_asm(_source)) +
+        sum(end - start for start, end, _source in loader_assisted_ranges)
+    )
     total_functions = len(units)
     matched_functions = sum(int(unit["measures"]["complete_units"])
                             for unit in units)
     if total_functions != image["total_functions"]:
         raise ValueError("function catalogues disagree with configured total")
     if matched_functions != progress["matched_functions"]:
-        raise ValueError("function catalogues disagree with configured matched count")
+        raise ValueError(
+            "function catalogues disagree with configured matched count: "
+            f"catalogue={matched_functions}, configured={progress['matched_functions']}"
+        )
     categories = [
         {
             "id": "code",
@@ -203,6 +239,11 @@ def build_report() -> dict[str, object]:
             "id": "assembly_reference",
             "name": "Matching assembly reference coverage",
             "measures": measures(image["code_size"], assembly_code, 0, 0),
+        },
+        {
+            "id": "assembly_assisted_reference",
+            "name": "Assembly-assisted C reference coverage",
+            "measures": measures(image["code_size"], assembly_assisted_code, 0, 0),
         },
         {
             "id": "program_data",
@@ -259,6 +300,24 @@ def build_decomphub_report(report: dict[str, object]) -> dict[str, object]:
                         category["measures"]["matched_code"]
                         for category in report["categories"]
                         if category["id"] == "assembly_reference"
+                    )),
+                    "total": int(totals["total_code"]),
+                    "unit": "bytes",
+                },
+            },
+            {
+                "id": "assembly-assisted-reference",
+                "label": "Assembly-assisted C reference coverage",
+                "scope": (
+                    "Byte-identical .c units containing instruction-emitting "
+                    "inline assembly; excluded from C decompilation progress."
+                ),
+                "measurement": {
+                    "kind": "ratio",
+                    "completed": int(next(
+                        category["measures"]["matched_code"]
+                        for category in report["categories"]
+                        if category["id"] == "assembly_assisted_reference"
                     )),
                     "total": int(totals["total_code"]),
                     "unit": "bytes",

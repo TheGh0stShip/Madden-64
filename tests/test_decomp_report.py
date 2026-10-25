@@ -13,23 +13,35 @@ SPEC.loader.exec_module(REPORT)
 
 
 class DecompReportTests(unittest.TestCase):
+    def test_instruction_emitting_inline_assembly_receives_no_c_credit(self):
+        self.assertTrue(REPORT.contains_instruction_asm(
+            "src/code/vector_fixed_scale.c"
+        ))
+        self.assertFalse(REPORT.contains_instruction_asm(
+            "src/code/audio_level_calculate.c"
+        ))
+
     def test_report_totals_match_reviewed_manifests(self):
         report = REPORT.build_report()
         totals = report["measures"]
         self.assertEqual(report["version"], 2)
         self.assertEqual(totals["total_code"], "753428")
-        self.assertEqual(totals["matched_code"], "87640")
+        self.assertEqual(totals["matched_code"], "101128")
         self.assertEqual(totals["total_data"], "484540")
         self.assertEqual(totals["matched_data"], "496")
         self.assertEqual(totals["total_functions"], 2820)
-        self.assertEqual(totals["matched_functions"], 950)
+        self.assertEqual(totals["matched_functions"], 1048)
         categories = {item["id"]: item["measures"] for item in report["categories"]}
-        self.assertEqual(set(categories), {"code", "assembly_reference", "program_data"})
+        self.assertEqual(set(categories), {
+            "code", "assembly_reference", "assembly_assisted_reference",
+            "program_data",
+        })
         self.assertEqual(categories["code"]["total_code"], "753428")
-        self.assertEqual(categories["code"]["matched_code"], "87640")
+        self.assertEqual(categories["code"]["matched_code"], "101128")
         self.assertEqual(categories["code"]["total_functions"], 2820)
-        self.assertEqual(categories["code"]["matched_functions"], 950)
-        self.assertEqual(categories["assembly_reference"]["matched_code"], "476900")
+        self.assertEqual(categories["code"]["matched_functions"], 1048)
+        self.assertEqual(categories["assembly_reference"]["matched_code"], "462924")
+        self.assertEqual(categories["assembly_assisted_reference"]["matched_code"], "488")
         self.assertEqual(categories["program_data"]["total_code"], "0")
         self.assertEqual(categories["program_data"]["matched_code"], "0")
         self.assertEqual(categories["program_data"]["total_data"], "484540")
@@ -40,12 +52,20 @@ class DecompReportTests(unittest.TestCase):
                                  for unit in report["units"]), 2820)
         self.assertEqual(len(report["units"]), 2820)
         self.assertEqual(sum(unit["metadata"]["complete"]
-                             for unit in report["units"]), 950)
-        self.assertFalse(any(
-            0 < int(unit["measures"]["matched_code"])
-            < int(unit["measures"]["total_code"])
+                             for unit in report["units"]), 1048)
+        partial_units = {
+            unit["name"]: (
+                int(unit["measures"]["matched_code"]),
+                int(unit["measures"]["total_code"]),
+            )
             for unit in report["units"]
-        ))
+            if 0 < int(unit["measures"]["matched_code"])
+            < int(unit["measures"]["total_code"])
+        }
+        self.assertEqual(partial_units, {
+            "overlay_1/func_800B4F08": (136, 140),
+            "overlay_1/func_800BD370": (64, 68),
+        })
         self.assertTrue(all(len(unit["functions"]) == 1
                             for unit in report["units"]))
         self.assertTrue(all("unmatched" not in unit["name"]
@@ -72,7 +92,7 @@ class DecompReportTests(unittest.TestCase):
         tracks = {track["id"]: track for track in report["tracks"]}
         self.assertEqual(report["format"], "decomphub.progress/v1")
         self.assertEqual(tracks["matching-code"]["measurement"], {
-            "kind": "ratio", "completed": 87640, "total": 753428,
+            "kind": "ratio", "completed": 101128, "total": 753428,
             "unit": "bytes",
         })
         self.assertEqual(tracks["initialized-data"]["measurement"], {
@@ -80,11 +100,15 @@ class DecompReportTests(unittest.TestCase):
             "unit": "bytes",
         })
         self.assertEqual(tracks["matching-functions"]["measurement"], {
-            "kind": "ratio", "completed": 950, "total": 2820,
+            "kind": "ratio", "completed": 1048, "total": 2820,
             "unit": "functions",
         })
         self.assertEqual(tracks["assembly-reference"]["measurement"], {
-            "kind": "ratio", "completed": 476900, "total": 753428,
+            "kind": "ratio", "completed": 462924, "total": 753428,
+            "unit": "bytes",
+        })
+        self.assertEqual(tracks["assembly-assisted-reference"]["measurement"], {
+            "kind": "ratio", "completed": 488, "total": 753428,
             "unit": "bytes",
         })
         self.assertIsNone(tracks["asset-reconstruction"]["measurement"])

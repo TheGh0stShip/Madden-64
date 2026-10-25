@@ -96,17 +96,20 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching decompiled C code | 87,640 bytes | 753,428 bytes | 11.63% |
-| Matching assembly reference coverage | 476,900 bytes | 753,428 bytes | 63.30% |
+| Matching decompiled C code | 101,128 bytes | 753,428 bytes | 13.42% |
+| Assembly-assisted C reference coverage | 488 bytes | 753,428 bytes | 0.06% |
+| Matching assembly reference coverage | 462,924 bytes | 753,428 bytes | 61.44% |
 | Whole-program initialized data | 496 bytes | 484,540 bytes | 0.10% |
-| C-decompiled function candidates | 950 | 2,820 | 33.69% |
+| C-decompiled function candidates | 1,048 | 2,820 | 37.16% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |
 
 The program denominator covers the loader, resident executable, both overlays,
 and their initialized data records. Matching `.s` units are retained as useful
-reference coverage but never count as C decompilation. Function boundaries remain
+reference coverage but never count as C decompilation. C units containing
+instruction-emitting inline assembly are likewise tracked separately and receive
+no C-decompilation credit. Function boundaries remain
 candidates until compiled C reconstruction proves them. ROM mapping and content classification are
 research coverage, not decompilation credit: the 516 texture containers, 43
 JPEGs, 262 models, 67 motions, 2 sprites, 237 audio streams, and 214 auxiliary
