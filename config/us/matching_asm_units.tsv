@@ -159,3 +159,11 @@
 0x45F94	0xBC	src/code/display_vertex_batch_append.s	-O2 -G0 -mips3 -mgp32 -mfp32	c370e9bf77cfbc794f6db63fab794da0c4159d8e13f46c5580d07622beebcb7b
 0x4643C	0xBC	src/code/audio_timeline_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	deb1ddb393d931653cb4e5ee513b8a480b4b66f074f8964e483362911548db42
 0x5B6D0	0xBC	src/code/object_work_buffers_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	387700f3710096e82c413670963b728fd5b5a0c58ee736e2900e8649e6dc432a
+0x11E48	0xC0	src/code/object_texture_descriptor_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	297bab0e40fc6f734f73e39c81747b0ced8143118e932f3539be4cc0811c3b85
+0x23338	0xC0	src/code/roster_selection_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	2c5d2954e7e3c11bdd2a49b0205e6d9e0ab11b65b2a9170c790691bb5350f2d2
+0x3DAB8	0xC0	src/code/audio_range_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	aa7f590af21f3e955c056a3008e4b75325635d2cbb9e01b7a4e9cf521b34d36f
+0x3FE8C	0xC0	src/code/audio_slot_markers_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	e7732202217b86e3ae9f7d0c07436f2811e4aef8c4f4afe716262bc19ec80952
+0x44F64	0xC0	src/code/grid_record_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	b05c20a030ff9cc847caeea6593568ecf438ed2f3a60d9064ac386381c5f3125
+0x56CDC	0xC0	src/code/object_animation_activate.s	-O2 -G0 -mips3 -mgp32 -mfp32	047036344dc119ab7aed18ab49134b3f47e13b18375367e1044caf6772ad78e2
+0x57690	0xC0	src/code/object_round_state_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	164a08db6bf5483b35ccd7824da9d7c024adb0847af49ee92fddda6664393713
+0x59648	0xC0	src/code/object_cycle_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	e56e9b70037365d4bc16e83a4d89e7aa8973d3d79133a61a8903e8dbc1e01fbc

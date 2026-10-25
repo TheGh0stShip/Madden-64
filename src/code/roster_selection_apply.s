@@ -1,0 +1,55 @@
+.text
+.align 2
+.set noreorder
+.globl roster_selection_apply
+.ent roster_selection_apply
+roster_selection_apply:
+    addiu $sp,$sp,-0x20
+    sw $s1,0x14($sp)
+    andi $s1,$a1,0xffff
+    sll $v1,$s1,2
+    addu $v1,$v1,$s1
+    sll $v1,$v1,3
+    sw $s0,0x10($sp)
+    andi $s0,$a0,0xffff
+    sll $v0,$s0,5
+    addu $v0,$v0,$s0
+    sll $v0,$v0,2
+    addu $v0,$v0,$s0
+    sll $v0,$v0,2
+    addu $v0,$v0,$s0
+    sll $v0,$v0,2
+    subu $v0,$v0,$s0
+    sll $v0,$v0,2
+    addu $v1,$v1,$v0
+    sw $ra,0x18($sp)
+    lui $at,0x8008
+    addu $at,$at,$v1
+    lbu $a1,0xd78($at)
+    lui $a0,0x8008
+    addiu $a0,$a0,0xcfc
+    sll $v1,$s1,1
+    addu $v0,$v0,$a0
+    addu $v1,$v1,$v0
+    lhu $a2,0($v1)
+    move $a0,$s0
+    jal func_80023828
+     andi $a1,$a1,0x3f
+    move $a0,$s0
+    andi $a1,$v0,0xffff
+    lui $at,0x8008
+    sh $v0,0x79b0($at)
+    jal func_800227F8
+     move $a2,$s1
+    lui $a1,0x8008
+    lhu $a1,0x79b0($a1)
+    move $a0,$s0
+    jal func_80022918
+     move $a2,$s1
+    lw $ra,0x18($sp)
+    lw $s1,0x14($sp)
+    lw $s0,0x10($sp)
+    addiu $sp,$sp,0x20
+    jr $ra
+     nop
+.end roster_selection_apply

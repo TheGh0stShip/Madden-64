@@ -1,0 +1,55 @@
+.text
+.align 2
+.set noreorder
+.globl grid_record_initialize
+.ent grid_record_initialize
+grid_record_initialize:
+    addiu $sp,$sp,-0x20
+    sw $s0,0x10($sp)
+    move $s0,$a0
+    sw $s1,0x14($sp)
+    move $s1,$a1
+    sw $ra,0x1c($sp)
+    sw $s2,0x18($sp)
+    lw $v0,0xc($s1)
+    lw $s2,8($s0)
+    sw $v0,0x1c($s0)
+    lw $v0,0x10($s1)
+    move $a1,$zero
+    sw $v0,0x20($s0)
+    lw $v0,0x14($s1)
+    addiu $a2,$zero,0x58
+    move $a0,$s2
+    sw $s2,8($s0)
+    jal func_8002E58C
+     sw $v0,0x24($s0)
+    lw $v0,0($s1)
+    sw $v0,0($s2)
+    lw $v0,0xc($v0)
+    sw $v0,0x18($s2)
+    lhu $v0,8($s1)
+    sh $v0,0x12($s2)
+    lw $a1,4($s1)
+    jal func_80034388
+     move $a0,$s0
+    move $a0,$s0
+    jal func_80033B20
+     addiu $a1,$zero,1
+    lui $a0,0x8007
+    lw $a0,0x48e8($a0)
+    jal func_80033298
+     nop
+    lui $v1,0x8007
+    lbu $v1,0x4a60($v1)
+    sw $v0,0x28($s2)
+    addiu $v1,$v1,1
+    lui $at,0x8007
+    sb $v1,0x4a60($at)
+    lw $ra,0x1c($sp)
+    lw $s2,0x18($sp)
+    lw $s1,0x14($sp)
+    lw $s0,0x10($sp)
+    addiu $sp,$sp,0x20
+    jr $ra
+     nop
+.end grid_record_initialize
