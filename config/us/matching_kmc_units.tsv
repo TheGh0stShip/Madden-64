@@ -417,3 +417,5 @@
 0x3AE48	0x80	src/code/frame_value_slot_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8ee0dce56cce9c2588aa1861724767558c492de22d04c6e6144b5a9ce50c41cb
 0x40A94	0x80	src/code/interface_slot_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7270c0b4690812f7027962dc130880440aede19bd319d2ca52d3b1bef1acf04b
 0x3EFE0	0x80	src/code/active_flag_index_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fead11ebc4ee50b530f7a62dfac723105f107009b8da6b100e2fb928219b1aff
+0x35578	0x84	src/code/resource_entries_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2b55a881415fde613ab96063db41d9efd1e34dca644b201a2d01f32d69f6d7d6
+0x2D750	0x84	src/code/active_record_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	47c7572c80c52f74adadb4c95fff00cc46b4a8c3d603972cb036c342d06e460e
