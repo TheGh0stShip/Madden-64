@@ -445,3 +445,7 @@
 0x1F7B8	0x68	src/code/ui_index_state_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	31040ec32f6920e69a97f104b2abf590462ee65de9f14ff9bd3f4118b838aa17
 0x1F8AC	0x68	src/code/ui_index_state_set.c	-DFUNCTION=func_8001ECAC -DBYTE_OFFSET=0x20 -DOBJECT_OFFSET=0x2C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d2f923383ffee6ba8d16a41169fa27d0d93173905a3b3a497032ffb3e46888de
 0x265E4	0x68	src/code/grid_halfword_adjust.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e70ab00fedb00db3645903200096fe6b50477e38c8adab43cf5bf7b3721c9d64
+0x30BEC	0x64	src/code/record_find_and_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f16001339dd3098e1b8c105233109034207e4d7c73e8f314c2f15d48d960df6d
+0xCA80	0x68	src/code/runtime_words_wait_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0858d6e3cc0e23c121a60c9f45753574b5c5a76aafa8a0f00462e1ff95123d68
+0xE474	0x68	src/code/intrusive_node_remove.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	53872b0db6b07809fa5b11d3f0f169e7228253fde3cbf879bbfce5f56469b6bd
+0x2F2C8	0x68	src/code/runtime_thread_start.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4c21e90b9b6844a2a1433509c63f1e4cb9fee39264d26d998026aa65604b9cb8
