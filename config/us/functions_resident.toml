@@ -1046,7 +1046,7 @@ functions = [
     { name = "func_800474CC", vram = 0x800474cc, size = 0xe8 }, # c
     { name = "func_800475B4", vram = 0x800475b4, size = 0xf4 }, # c
     { name = "func_800476A8", vram = 0x800476a8, size = 0x224 }, # c
-    { name = "func_800478D8", vram = 0x800478d8, size = 0x100 }, # c
+    { name = "osLeoDiskInit", vram = 0x800478d8, size = 0x100 }, # c
     { name = "func_800479D8", vram = 0x800479d8, size = 0x2c }, # leaf
     { name = "func_80047A04", vram = 0x80047a04, size = 0x3c }, # leaf
     { name = "func_80047A40", vram = 0x80047a40, size = 0x3c }, # leaf
@@ -1093,13 +1093,13 @@ functions = [
     { name = "func_8004B348", vram = 0x8004b348, size = 0x144 }, # c
     { name = "func_8004B498", vram = 0x8004b498, size = 0xfc }, # c
     { name = "func_8004B594", vram = 0x8004b594, size = 0x400 }, # c
-    { name = "func_8004B998", vram = 0x8004b998, size = 0x260 }, # c
+    { name = "osPfsRepairId", vram = 0x8004b998, size = 0x260 }, # c
     { name = "func_8004BBF8", vram = 0x8004bbf8, size = 0x1b4 }, # c
     { name = "func_8004BDB8", vram = 0x8004bdb8, size = 0x10c }, # c
     { name = "func_8004BEC8", vram = 0x8004bec8, size = 0x150 }, # c
     { name = "func_8004C018", vram = 0x8004c018, size = 0x28 }, # leaf
     { name = "func_8004C048", vram = 0x8004c048, size = 0x188 }, # c
-    { name = "func_8004C1D8", vram = 0x8004c1d8, size = 0xf0 }, # c
+    { name = "osCartRomInit", vram = 0x8004c1d8, size = 0xf0 }, # c
     { name = "func_8004C2C8", vram = 0x8004c2c8, size = 0x490 }, # c
     { name = "func_8004C758", vram = 0x8004c758, size = 0x50 }, # c
     { name = "func_8004C7A8", vram = 0x8004c7a8, size = 0x4c }, # c

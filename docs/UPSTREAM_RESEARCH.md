@@ -135,3 +135,21 @@ source-compatible engine.
    runtime matching without mistaking shared libraries for game code.
 5. Keep the physical ROM map, runtime virtual maps, and 32-bit offset envelope
    as separate address spaces in every report.
+
+## Relocation-normalized SDK sweep
+
+A cross-project fingerprint pass compared 1,786 remaining Madden candidates
+against 2,561 verified functions from three public N64 projects. Exact
+relocation-normalized signatures produced no transfers, while a second pass
+using opcode three-gram similarity isolated three high-confidence runtime
+library candidates. Source and compiler experiments then established exact
+ROM matches for `osLeoDiskInit` (256 bytes), `osPfsRepairId` (608 bytes), and
+`osCartRomInit` (240 bytes).
+
+The cart initialization result also captured a version-specific distinction:
+Madden's routine does not initialize the handle's `speed` field. Retaining the
+store used by another SDK revision caused instruction, scheduling, hazard, and
+branch displacement differences. Removing only that store yielded the exact
+240-byte body. This confirms structural fingerprints are valuable as a batch
+triage tool, but final credit must continue to require byte equality against
+the Madden ROM.
