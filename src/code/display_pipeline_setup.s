@@ -1,0 +1,60 @@
+.text
+.align 2
+.set noreorder
+.globl display_pipeline_setup
+.ent display_pipeline_setup
+display_pipeline_setup:
+    addiu $sp,$sp,-0x18
+    lui $v0,0x106
+    ori $v0,$v0,0x40
+    lui $v1,0x8008
+    lw $v1,0x4f5c($v1)
+    lui $a3,0xbc00
+    ori $a3,$a3,0x406
+    sw $ra,0x10($sp)
+    sw $v0,0($v1)
+    lui $v0,0x8000
+    subu $a1,$a1,$v0
+    sw $a1,4($v1)
+    sw $a3,8($v1)
+    lw $v0,0xc($a0)
+    sw $v0,0xc($v1)
+    lw $a1,0xc($a0)
+    addiu $v0,$v1,8
+    addiu $v1,$v1,0x10
+    lui $at,0x8008
+    sw $v0,0x4f5c($at)
+    lui $at,0x8008
+    sw $v1,0x4f5c($at)
+    jal func_800427C8
+     move $a0,$a2
+    lui $a2,0xb900
+    ori $a2,$a2,0x31d
+    lui $a1,0x55
+    ori $a1,$a1,0x2078
+    lui $a3,0xfc60
+    ori $a3,$a3,0xfec1
+    lui $v0,0x8008
+    lw $v0,0x4f5c($v0)
+    lui $a0,0x55fe
+    ori $a0,$a0,0x793c
+    addiu $v1,$v0,8
+    lui $at,0x8008
+    sw $v1,0x4f5c($at)
+    lui $v1,0xbd00
+    sw $v1,0($v0)
+    addiu $v1,$v0,0x10
+    lui $at,0x8008
+    sw $v1,0x4f5c($at)
+    addiu $v1,$v0,0x18
+    sw $zero,4($v0)
+    sw $a2,8($v0)
+    sw $a1,0xc($v0)
+    lui $at,0x8008
+    sw $v1,0x4f5c($at)
+    sw $a3,0x10($v0)
+    lw $ra,0x10($sp)
+    sw $a0,0x14($v0)
+    jr $ra
+     addiu $sp,$sp,0x18
+.end display_pipeline_setup

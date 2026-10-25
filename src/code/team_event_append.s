@@ -1,0 +1,63 @@
+.text
+.align 2
+.set noreorder
+.globl team_event_append
+.ent team_event_append
+team_event_append:
+    lui $v0,0x8009
+    lh $v0,-0x6ce0($v0)
+    bnez $v0,.Lstore
+     andi $v0,$a0,0xffff
+    andi $v1,$a2,0xffff
+    slti $v0,$v1,0x1d
+    beqz $v0,.Ldone
+     slti $v0,$v1,0x1a
+    bnez $v0,.Ldone
+     andi $v0,$a0,0xffff
+.Lstore:
+    sll $v1,$v0,5
+    addu $v1,$v1,$v0
+    sll $v1,$v1,2
+    addu $v1,$v1,$v0
+    sll $v1,$v1,2
+    addu $v1,$v1,$v0
+    sll $v1,$v1,2
+    subu $v1,$v1,$v0
+    sll $v1,$v1,2
+    lui $at,0x8008
+    addu $at,$at,$v1
+    lh $a0,0x2ca8($at)
+    slti $v0,$a0,0x1e
+    beqz $v0,.Ldone
+     sll $v0,$a0,2
+    addu $v0,$v0,$v1
+    lui $at,0x8008
+    addu $at,$at,$v0
+    sb $a1,0x2caa($at)
+    lui $at,0x8008
+    addu $at,$at,$v1
+    lh $v0,0x2ca8($at)
+    sll $v0,$v0,2
+    addu $v0,$v0,$v1
+    lui $at,0x8008
+    addu $at,$at,$v0
+    sb $a2,0x2cab($at)
+    lui $at,0x8008
+    addu $at,$at,$v1
+    lh $v0,0x2ca8($at)
+    sll $v0,$v0,2
+    addu $v0,$v0,$v1
+    lui $at,0x8008
+    addu $at,$at,$v0
+    sh $a3,0x2cac($at)
+    lui $at,0x8008
+    addu $at,$at,$v1
+    lhu $v0,0x2ca8($at)
+    addiu $v0,$v0,1
+    lui $at,0x8008
+    addu $at,$at,$v1
+    sh $v0,0x2ca8($at)
+.Ldone:
+    jr $ra
+     nop
+.end team_event_append

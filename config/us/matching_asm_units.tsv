@@ -188,3 +188,11 @@
 0x2B798	0xD0	src/code/team_best_slot_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	b815668b77a4299b04415fced2e221e51f9f1f71643f960e22a7927c10a69a13
 0x40E74	0xD0	src/code/audio_range_randomize.s	-O2 -G0 -mips3 -mgp32 -mfp32	b7beb92c49adae993b236c7a9ecd91d012b4571dfeaf15e9615d967819c168e9
 0x3DBA0	0xD4	src/code/audio_position_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	da295f58a8307704798bf7915581fb1c2b647114ac6729fd35490bffa4f184a6
+0x43448	0xD4	src/code/display_pipeline_setup.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc1bce253d3f85c7c88c07e83a55cd2bb9bd91932a619d77bbf8092aeb3da09f
+0x63D04	0xD4	src/code/object_stream_state_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	69830bba04a83e47b9889fcd960f4eadbb9da0346b742929a563b633df87e78e
+0x1AD4C	0xD8	src/code/resource_command_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cec63fbfac1a7db19867df28fda26f0d316e84569b0b26749e16caad8600744
+0x26394	0xD8	src/code/team_event_append.s	-O2 -G0 -mips3 -mgp32 -mfp32	963af8ed847281fb8e1aa2d139b0b25c87d1f7e433509c3cc1c8f9ede0418e32
+0x2646C	0xD8	src/code/team_event_append_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	963af8ed847281fb8e1aa2d139b0b25c87d1f7e433509c3cc1c8f9ede0418e32
+0x2B5B4	0xD8	src/code/league_best_player_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	5bf52d598f1bf595f9e6a6106b15c444f6a544182d5fdcbdbd6e1fed0af269a3
+0x2D5B0	0xD8	src/code/team_color_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	64f3a182c48c9dd4419724d40fcd8813c8af0904349219fff2010186b59aeb12
+0x3179C	0xD8	src/code/controller_flags_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	9a6c975f2faa1632b4a1fa80a6f5c03b9afb3106b00012c6ed0843153ee05249

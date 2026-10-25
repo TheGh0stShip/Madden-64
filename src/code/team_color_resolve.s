@@ -1,0 +1,61 @@
+.text
+.align 2
+.set noreorder
+.globl team_color_resolve
+.ent team_color_resolve
+team_color_resolve:
+    addiu $sp,$sp,-0x30
+    sw $s2,0x20($sp)
+    andi $s2,$a0,0xffff
+    move $a0,$s2
+    sw $s0,0x18($sp)
+    andi $s0,$a1,0xffff
+    move $a1,$s0
+    addiu $a2,$zero,3
+    sw $ra,0x2c($sp)
+    sw $s4,0x28($sp)
+    sw $s3,0x24($sp)
+    jal func_8002C5E4
+     sw $s1,0x1c($sp)
+    move $a0,$s2
+    move $a1,$s0
+    addiu $a2,$zero,4
+    sll $s4,$v0,16
+    jal func_8002C5E4
+     sra $s4,$s4,16
+    move $a0,$s2
+    move $a1,$s0
+    addiu $a2,$zero,5
+    sll $s3,$v0,16
+    jal func_8002C5E4
+     sra $s3,$s3,16
+    move $a0,$s2
+    move $a1,$s0
+    addiu $a2,$zero,6
+    sll $s1,$v0,16
+    jal func_8002C5E4
+     sra $s1,$s1,16
+    move $a0,$s2
+    move $a1,$s0
+    addiu $a2,$zero,7
+    sll $s0,$v0,16
+    jal func_8002C5E4
+     sra $s0,$s0,16
+    sll $v0,$v0,16
+    sra $v0,$v0,16
+    move $a0,$s4
+    move $a1,$s3
+    move $a2,$s1
+    move $a3,$s0
+    jal func_80027EF0
+     sw $v0,0x10($sp)
+    lw $ra,0x2c($sp)
+    lw $s4,0x28($sp)
+    lw $s3,0x24($sp)
+    lw $s2,0x20($sp)
+    lw $s1,0x1c($sp)
+    lw $s0,0x18($sp)
+    addiu $sp,$sp,0x30
+    jr $ra
+     nop
+.end team_color_resolve
