@@ -199,5 +199,12 @@ and block-shape experiments did not remove that allocator-only difference.
 The recovered routine was therefore retained as readable exact assembly rather
 than granting credit to nonmatching C. It selects one of two record stores,
 copies the full payload through the compiler's aligned or unaligned path, and
-matches all 348 bytes at `0x8003A8CC`. The related 40-byte routine remains
-uncredited pending resolution of its anomalous unreachable tail.
+matches all 348 bytes at `0x8003A8CC`.
+
+A whole-image control-flow audit then proved that the apparent unreachable tail
+of the related 40-byte copier has one valid predecessor: its own `0xFFFF`
+sentinel branch. Correcting that condition reduced the C experiment to one
+allocator-register difference. The 107-byte header copier reached a similarly
+small scheduling/register difference. Both recovered routines are now retained
+as readable exact assembly, adding 240 bytes at `0x8003A7DC` and 340 bytes at
+`0x8003AD2C` without crediting either nonmatching C experiment.
