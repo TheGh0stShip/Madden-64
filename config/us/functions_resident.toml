@@ -44,16 +44,16 @@ functions = [
     { name = "func_80009E58", vram = 0x80009e58, size = 0x44 }, # leaf
     { name = "func_80009E9C", vram = 0x80009e9c, size = 0x44 }, # leaf
     { name = "display_prim_color_set", vram = 0x80009ee0, size = 0xfc }, # asm
-    { name = "display_env_color_set", vram = 0x80009fdc, size = 0xb0 }, # asm
-    { name = "display_fog_color_set", vram = 0x8000a08c, size = 0xb0 }, # asm
-    { name = "display_blend_color_set", vram = 0x8000a13c, size = 0xb0 }, # asm
+    { name = "display_env_color_set", vram = 0x80009fdc, size = 0xb0 }, # c
+    { name = "display_fog_color_set", vram = 0x8000a08c, size = 0xb0 }, # c
+    { name = "display_blend_color_set", vram = 0x8000a13c, size = 0xb0 }, # c
     { name = "func_8000A1EC", vram = 0x8000a1ec, size = 0x40 }, # leaf
     { name = "func_8000A22C", vram = 0x8000a22c, size = 0x44 }, # leaf
     { name = "func_8000A270", vram = 0x8000a270, size = 0x44 }, # leaf
     { name = "display_convert_coefficients_set", vram = 0x8000a2b4, size = 0x10c }, # asm
     { name = "func_8000A3C0", vram = 0x8000a3c0, size = 0x44 }, # leaf
     { name = "func_8000A404", vram = 0x8000a404, size = 0x44 }, # leaf
-    { name = "display_scissor_cache", vram = 0x8000a448, size = 0x90 }, # asm
+    { name = "display_scissor_cache", vram = 0x8000a448, size = 0x90 }, # c
     { name = "display_key_parameters_set", vram = 0x8000a4d8, size = 0xfc }, # asm
     { name = "func_8000A5D4", vram = 0x8000a5d4, size = 0x68 }, # leaf
     { name = "func_8000A63C", vram = 0x8000a63c, size = 0x64 }, # leaf
@@ -73,7 +73,7 @@ functions = [
     { name = "func_8000AECC", vram = 0x8000aecc, size = 0xdc }, # leaf
     { name = "func_8000AFA8", vram = 0x8000afa8, size = 0x60 }, # leaf
     { name = "func_8000B008", vram = 0x8000b008, size = 0x64 }, # leaf
-    { name = "display_texture_pair_update", vram = 0x8000b06c, size = 0x80 }, # asm
+    { name = "display_texture_pair_update", vram = 0x8000b06c, size = 0x80 }, # c
     { name = "func_8000B0EC", vram = 0x8000b0ec, size = 0x54 }, # leaf
     { name = "func_8000B140", vram = 0x8000b140, size = 0x44 }, # leaf
     { name = "func_8000B184", vram = 0x8000b184, size = 0x54 }, # leaf
@@ -343,7 +343,7 @@ functions = [
     { name = "ui_menu_secondary", vram = 0x8001e668, size = 0x1b8 }, # asm
     { name = "text_glyph_width_sum", vram = 0x8001e820, size = 0xd0 }, # asm
     { name = "ui_menu_tertiary", vram = 0x8001e8f0, size = 0x1b8 }, # asm
-    { name = "ui_slots_release_all", vram = 0x8001eaa8, size = 0x84 }, # asm
+    { name = "ui_slots_release_all", vram = 0x8001eaa8, size = 0x84 }, # c
     { name = "ui_slot_release", vram = 0x8001eb2c, size = 0x8c }, # c
     { name = "func_8001EBB8", vram = 0x8001ebb8, size = 0x68 }, # c
     { name = "ui_slot_clear", vram = 0x8001ec20, size = 0x8c }, # c
@@ -699,7 +699,7 @@ functions = [
     { name = "audio_slot_allocate", vram = 0x80035990, size = 0xec }, # asm
     { name = "memory_block_process", vram = 0x80035a7c, size = 0x258 }, # asm
     { name = "func_80035CD4", vram = 0x80035cd4, size = 0x28 }, # c
-    { name = "audio_channel_replace", vram = 0x80035cfc, size = 0x80 }, # asm
+    { name = "audio_channel_replace", vram = 0x80035cfc, size = 0x80 }, # c
     { name = "memory_pool_prepare", vram = 0x80035d7c, size = 0x174 }, # asm
     { name = "audio_entry_resource_mark", vram = 0x80035ef0, size = 0x98 }, # asm
     { name = "memory_pool_finalize", vram = 0x80035f88, size = 0x178 }, # asm
@@ -865,7 +865,7 @@ functions = [
     { name = "audio_bank_prepare", vram = 0x8003e9b0, size = 0x17c }, # asm
     { name = "func_8003EB2C", vram = 0x8003eb2c, size = 0x4c }, # c
     { name = "func_8003EB78", vram = 0x8003eb78, size = 0x50 }, # c
-    { name = "audio_slots_release_all", vram = 0x8003ebc8, size = 0xb4 }, # asm
+    { name = "audio_slots_release_all", vram = 0x8003ebc8, size = 0xb4 }, # c
     { name = "audio_sequence_prepare", vram = 0x8003ec7c, size = 0x194 }, # asm
     { name = "audio_sequence_advance", vram = 0x8003ee10, size = 0x250 }, # asm
     { name = "func_8003F060", vram = 0x8003f060, size = 0x10c }, # asm
@@ -949,7 +949,7 @@ functions = [
     { name = "func_80042420", vram = 0x80042420, size = 0x14c }, # asm
     { name = "func_8004256C", vram = 0x8004256c, size = 0x4c }, # c
     { name = "display_command_update", vram = 0x800425b8, size = 0x210 }, # asm
-    { name = "display_list_copy_or_branch", vram = 0x800427c8, size = 0x80 }, # asm
+    { name = "display_list_copy_or_branch", vram = 0x800427c8, size = 0x80 }, # c
     { name = "display_pipeline_setup", vram = 0x80042848, size = 0xd4 }, # asm
     { name = "func_8004291C", vram = 0x8004291c, size = 0x40 }, # c
     { name = "color_tables_refresh", vram = 0x8004295c, size = 0xa8 }, # asm

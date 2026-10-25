@@ -6,7 +6,6 @@
 0xE720	0x84	src/code/node_callbacks_apply.s	--symbol=D_800782FC:0x800782FC -O2 -G0 -mips3 -mgp32 -mfp32	085385ea3569037035661be4e45d14e7ec202f1d156db88e6232da8408f6f0a4
 0x350E8	0x84	src/code/object_state_initialize.s	--symbol=func_80034388:0x80034388 --symbol=func_80033B20:0x80033B20 -O2 -G0 -mips3 -mgp32 -mfp32	10b0e3a5b4155a5ddb343714ab2a1c3bc079df656c7527e2d68923c694660ab3
 0x375A0	0x84	src/code/audio_channel_wait_release.s	--symbol=D_8007A500:0x8007A500 --symbol=D_8008B07C:0x8008B07C --symbol=D_8008B080:0x8008B080 --symbol=func_80036540:0x80036540 -O2 -G0 -mips3 -mgp32 -mfp32	0e8825f33692f41b19071c6d3ed14a686439391ed1217bda5c3451ff44556211
-0x368FC	0x80	src/code/audio_channel_replace.s	--symbol=D_8008B080:0x8008B080 --symbol=func_80036540:0x80036540 --symbol=func_80036A24:0x80036A24 -O2 -G0 -mips3 -mgp32 -mfp32	74814a888ab9e2e62afe46559844307014e97e0c34dc037fb88c0cd534ea4884
 0x3B200	0x120	src/code/audio_frame_storage_mode.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5cdcdab4b1e7a36296edde1f24459b28193bb796d6d2f452b15ac43ade393699
 0x3BA80	0x1AC	src/code/audio_frame_collision_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afeabe508a0e5514d0ff3409d02b3a8d79cb5fb2812c8ae42ba648621013a71b
 0x3B3DC	0xF0	src/code/audio_frame_header_copy.s	--symbol=D_80073434:0x80073434 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e86d56625d051ed1318165633ea7f5b7f6f756d57c2c2b2eb2e20f38dede755a
@@ -40,11 +39,8 @@
 0xDBA4	0x78	src/code/object_active_children_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
 0x3A350	0x78	src/code/roster_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e32c8d15b061901377f1f128d8c3a478272a5b82f8e2fc1ccde0c0f0a7e31a3
 0x355FC	0x80	src/code/runtime_entry_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	94269dc6a57532b173f4d9d3ac109ba38e225b85cf40e3f44d4c60aff8e92a1a
-0x433C8	0x80	src/code/display_list_copy_or_branch.s	-O2 -G0 -mips3 -mgp32 -mfp32	24c635eab22c97eadf9cc9667ac7ae86f97499d25894e6e17a73ad5b80abe927
-0xBC6C	0x80	src/code/display_texture_pair_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	c4e8ae174cf1e1f823dd0b7de01477577c03c96053ff88e99a0fb665d3a738a6
 0xD390	0x80	src/code/object_display_segment_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	a7258fc77ae348c1aa13d6e389485569358b25dc0648bba55c5ad927d10cd38a
 0x25ADC	0x80	src/code/interface_transfer_begin.s	-O2 -G0 -mips3 -mgp32 -mfp32	b48e0e6a932f64b3bb78a7f3e00e0ece346b83ddf4934f4007153f9dd99913cd
-0x1F6A8	0x84	src/code/ui_slots_release_all.s	--symbol=ui_slot_release:0x8001EB2C -O2 -G0 -mips3 -mgp32 -mfp32	d31527676535f75888e7f93346247ef46d9fdc847a1d2c72ccc991b80f2b782f
 0x22E80	0x84	src/code/roster_attribute_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	cdadcb7477b01290fb436c04310d48fc6066373098fadb9592c1d7123ce44142
 0x2373C	0x84	src/code/roster_symbol_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef1c0e46dfcff4c11e592a4448dd1e1a38505c4040150457e2e0269ecdb26ba6
 0x25818	0x84	src/code/frame_group_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	ace800bfb226efbb9e2fbd3e7c1f8dc32f71c4c985a4c26587f42f4bc9f41cd1
@@ -54,7 +50,6 @@
 0x31484	0x8C	src/code/display_values_refresh.s	-O2 -G0 -mips3 -mgp32 -mfp32	90ca8004a0dee6937ab1e3014a11c741e71507c67f13d83264eeb0291638cb75
 0x352DC	0x8C	src/code/resource_offsets_relocate.s	-O2 -G0 -mips3 -mgp32 -mfp32	1443afab2e5bee65932fd35cf82b46816bd707b3dbe33ab30fa40b8f8ce53def
 0x606D4	0x8C	src/code/tiled_columns_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	0be1fcf3a6d13b9816b2b2f9e1153135dffab3dd58dce4621fe31fb93e609845
-0xB048	0x90	src/code/display_scissor_cache.s	-O2 -G0 -mips3 -mgp32 -mfp32	da9d20b5d20077c884cce609c0c013e40737b8c3f4c7e51f2a9e5d37d8c34555
 0x2038C	0x90	src/code/player_index_selection_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	1f5b5f3ae494dde37695129d9c8709e0c4cba0d02d05b35d03ad57df9d85da8b
 0x216E8	0x90	src/code/menu_option_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	048e18353238654443e7f9f5e62e26449155b0342fdecc3939ef9e8e1a74a179
 0x22C9C	0x90	src/code/roster_attribute_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	18b339bacdf4cddd67203ea051c4741040f2e2510bea86a98823d46e6da57a90
@@ -121,9 +116,6 @@
 0x1FBC4	0xAC	src/code/ui_range_apply_reverse.s	-O2 -G0 -mips3 -mgp32 -mfp32	7f390ef2cc7f8db2a00a4d35d59675497143d603358d203cd13677626e88326b
 0x215BC	0xAC	src/code/menu_slots_threshold_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	adc55982dcc4d3a4700bb02a1c4be220e5cf435cab1afb82e66f8befe24ca28d
 0x5BD08	0xAC	src/code/object_mode_handler_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	148507b506d9bf785c2eed1640ff3245ba262567789512bf88c38033fdcc8a28
-0xABDC	0xB0	src/code/display_env_color_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	9f1083eb7aaccf0ef83aa3366bacc8537ccee06d978000c3e1b185eac5d2128b
-0xAC8C	0xB0	src/code/display_fog_color_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	1c743d05a886edd9a07a635da2d72414c767047c8dac88ac9f9205cb92739469
-0xAD3C	0xB0	src/code/display_blend_color_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	aa67f665d43d032cab06c7e750c615ff08bb27912ffd80df798278939db0c35a
 0xD818	0xB0	src/code/display_viewport_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	efcb5af62b9ff6fe46b46e1812629f404b9d268c55bea3ed64197c204b3652e8
 0x29658	0xB0	src/code/frame_identifier_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef33ef45607ee65ac67df7e6139f04a1247f4ef7ded5a40c4b2ca979548542ac
 0x42924	0xB0	src/code/audio_transition_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	c2d673d45505ec633fa5bf35efc335f6ad65aa20470f849f662cdd4703fcdb8c
@@ -134,7 +126,6 @@
 0x25104	0xB4	src/code/roster_value_ratio_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	2da3a05688d09432ee2f778bf5426bf93b8d8cf06fa9c01a9f5d03334f65a19b
 0x2A7E4	0xB4	src/code/menu_record_copy_wrapped.s	-O2 -G0 -mips3 -mgp32 -mfp32	f483bdc196d071479d753e169f362d6441017978440c7fa24243b875fda5bfe6
 0x34CA0	0xB4	src/code/resource_scale_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	8e31d51ba8de479fc7662e8cc15224e71937e45389acc8bcc54c521ea8055785
-0x3F7C8	0xB4	src/code/audio_slots_release_all.s	-O2 -G0 -mips3 -mgp32 -mfp32	9dd9d3705b6aff04b8c0a53b596a60cc9e6a2ddaaac3f11f308d6a1f6d9882c4
 0x61280	0xB4	src/code/object_shared_buffers_assign.s	-O2 -G0 -mips3 -mgp32 -mfp32	0c29af0e509a78f289d023c9374101f4129152e6af4419d5ac823c90da81f2a2
 0x28A38	0xB8	src/code/roster_rating_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	81a58ff22f256cabc765aecb67ac2694ce2469adbcc2e880afbb39fe114f9a1d
 0x32564	0xB8	src/code/runtime_sequence_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	c33d2c36f814b14d5c3fc31519b00cfa6ff6a6a7f352e0c640e4e64fe567c04e
