@@ -407,3 +407,7 @@
 0x575A0	0x68	src/code/display_owner_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e3671a9ad06b49e67cdf16df5e5988a481660cfad453d9dc3fa2ce287e4f7bf7
 0x380B0	0x40	src/code/audio_grid_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1e626aa37b705b5b277df85eb9437ff6e8facc0fd87e2e7ceccbc6e852198684
 0x5FA48	0x40	src/code/indexed_byte_lookup_store.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	905fc3d4e2779f19055e0f905aaa19cb4552f56a3c4021738d927728a21831e3
+0xFECC	0x50	src/code/render_callback_submit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	15364b0f422c63c081e164dbf74074a4d24c41ba132347417cd1a114aed7b386
+0x18C50	0x58	src/code/menu_callback_submit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c50da993355d63eafba4ffafe54de489cea4fc4ef68cd1841109fd4c422ccad4
+0x104EC	0x48	src/code/render_mode_submit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f51503cd2d9979836b6309abb06d54d17e144bb1342d235f9378cb01da841860
+0x3F0B4	0x5C	src/code/resource_record_load.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	64daff230f48832d7a88e3e1d277446a6916bb2f9b925f9e0baded974774b0f0
