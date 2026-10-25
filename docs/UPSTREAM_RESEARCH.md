@@ -153,3 +153,20 @@ branch displacement differences. Removing only that store yielded the exact
 240-byte body. This confirms structural fingerprints are valuable as a batch
 triage tool, but final credit must continue to require byte equality against
 the Madden ROM.
+
+## Startup-entry structural transfer
+
+The next relocation-masked pass compared 634 remaining resident bodies with
+2,476 verified functions from BattleTanx, Rugrats, and Nagano. The only exact
+instruction-shape result was Madden's 60-byte startup entry. Independent
+BattleTanx and Rugrats implementations confirmed the same stack setup, BSS
+clear loop, entry call, and terminal break sequence. Broader public searches
+also confirmed that N64 projects conventionally isolate this startup assembly
+as an entry object, including [Mario Kart 64's linker layout](https://github.com/n64decomp/mk64/blob/master/mk64.ld)
+and the [N64 decompilation project collection](https://github.com/n64decomp).
+
+The integrated Madden version preserves its actual stack top, BSS interval,
+and call target and matches `0x80000440..0x8000047B` byte for byte. The absolute
+call instruction is encoded explicitly because this GNU assembler path treats
+the numeric jump operand as a relocation against address zero; mnemonic form
+therefore did not reproduce the linked ROM word.

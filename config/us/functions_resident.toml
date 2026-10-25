@@ -16,7 +16,7 @@ functions = [
     { name = "func_80000420", vram = 0x80000420, size = 0x10 }, # asm falls_through
     { name = "func_80000430", vram = 0x80000430, size = 0x8 }, # stub falls_through
     { name = "func_80000438", vram = 0x80000438, size = 0x8 }, # stub falls_through
-    { name = "func_80000440", vram = 0x80000440, size = 0x3c }, # c
+    { name = "program_entry", vram = 0x80000440, size = 0x3c }, # asm
     { name = "func_8000047C", vram = 0x8000047c, size = 0x8 }, # stub
     { name = "func_800049F0", vram = 0x800049f0, size = 0x150 }, # c
     { name = "func_80004B40", vram = 0x80004b40, size = 0x14 }, # leaf

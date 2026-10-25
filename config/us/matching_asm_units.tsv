@@ -1,4 +1,5 @@
 # GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
+0x1040	0x3C	src/runtime/program_entry.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e26c5ef4301d640ffa5a4303b238bf4bf54993b42137833937b0ecbee0e5b67
 0x51AA8	0xCC	src/rsp/rspboot.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ba0243414cec468a9bd90fc91f5b5efa918208e2cf799ae54fb09673442c001
 0x478A8	0x50	src/libultra/os_interrupt.s	-O2 -G0 -mips3 -mgp32 -mfp32	eea139088241ae2e4f665c8d86a50a8665f9835530da37e4dbb888c7c3b8ee3d
 0x478F8	0xB0	src/libultra/os_inval_dcache.s	-O2 -G0 -mips3 -mgp32 -mfp32	7ea4c6bffed307fe915ab8ef0ae37d86482e17b132eb99598f82ad5cbca40a71
