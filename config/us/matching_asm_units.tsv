@@ -72,3 +72,15 @@
 0x36F64	0x90	src/code/audio_channel_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	47177c5f873db4e2c1a17eb05616a99dc6fb6af462f6be05a12e3835031eeeca
 0x3C3FC	0x90	src/code/frame_value_combine.s	-O2 -G0 -mips3 -mgp32 -mfp32	5197294f754c61c320d7e948f67ae24bcda251d37516396d66f928784fdc1903
 0xFFBC	0x94	src/code/object_index_rows_shift.s	-O2 -G0 -mips3 -mgp32 -mfp32	38e3a286b6a4408b2982f307b8a12b2fbd98c1157503384eed0cdfa4ce6e43ba
+0xD410	0x88	src/code/object_display_segment_enable.s	-O2 -G0 -mips3 -mgp32 -mfp32	f50fddcd10d7092cdbaec3574eaacc11e7976763e0d7405b3603570cbf0076a3
+0x1BBA4	0x88	src/code/resource_node_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	1109dc52675cf6ba8ff4e2fbd0035d0e2c0c7a6d542f8911cdfd0d80e7caac8f
+0x1C338	0x88	src/code/packed_position_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	5b4eef09dcd44f2d83ebe0443388d7506ad2a96554bc5dba12e89c52b58ea09b
+0x3E728	0x88	src/code/audio_level_calculate.s	-O2 -G0 -mips3 -mgp32 -mfp32	08f6a61368121a4d1e593f971f90b6c26a2998f0b73de076bf47ba49392ddcdc
+0x3F4F4	0x88	src/code/string_tail_clear.s	-O2 -G0 -mips3 -mgp32 -mfp32	c5c9bba6caa75c760ca382ec56eb53147643e789b891f34aece25d9f1245d6a1
+0x2CB10	0x94	src/code/packed_field_primary_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	0f10e6075d1156b3ac6a086ce5495050445466dd8df8f604070e28baeaff02e
+0x319F0	0x94	src/code/display_flags_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	06d9e9408f9d78c64de4ffe6a594e3c11df924de641be3c51a9f3e9c1602c4f0
+0x3567C	0x94	src/code/runtime_entry_find_available.s	-O2 -G0 -mips3 -mgp32 -mfp32	4519bc5c70cae56f45127932bfe730ff69b26fbcd353f0d7a81b04d75ca2e016
+0x45DF8	0x94	src/code/box_vertices_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	48e051c1a53060c12d3dfdea7fac202acf52b0f299ccfee9056fa254a62f3410
+0x4618C	0x94	src/code/display_context_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	130a10f227a03a8ebae55ce4da7c743ccfe36d876561371efaf5d0bd7edda6b6
+0x1B088	0x98	src/code/animation_step_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	feaf14dc842e030c09bfc94eacd6ff853a21c21b9f6b9e269ce8f021f4271321
+0x2CBA4	0x98	src/code/packed_field_secondary_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	1615257ac4fae1693f3da2cdba1669bdc93a6865055650894d07b2f1453bb1c2

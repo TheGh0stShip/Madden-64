@@ -1,0 +1,44 @@
+.text
+.align 2
+.set noreorder
+.globl box_vertices_build
+.ent box_vertices_build
+box_vertices_build:
+    lw $v0,0($a1)
+    lw $a3,4($a1)
+    lw $a1,8($a1)
+    lw $t1,0($a2)
+    lw $t3,4($a2)
+    lw $t2,8($a2)
+    subu $t0,$v0,$t1
+    addu $v1,$a3,$t3
+    subu $a2,$a1,$t2
+    addu $v0,$v0,$t1
+    addu $a1,$a1,$t2
+    subu $a3,$a3,$t3
+    sw $t0,0($a0)
+    sw $v1,4($a0)
+    sw $a2,8($a0)
+    sw $v0,0x10($a0)
+    sw $v1,0x14($a0)
+    sw $a2,0x18($a0)
+    sw $v0,0x20($a0)
+    sw $v1,0x24($a0)
+    sw $a1,0x28($a0)
+    sw $t0,0x30($a0)
+    sw $v1,0x34($a0)
+    sw $a1,0x38($a0)
+    sw $t0,0x40($a0)
+    sw $a3,0x44($a0)
+    sw $a2,0x48($a0)
+    sw $v0,0x50($a0)
+    sw $a3,0x54($a0)
+    sw $a2,0x58($a0)
+    sw $v0,0x60($a0)
+    sw $a3,0x64($a0)
+    sw $a1,0x68($a0)
+    sw $t0,0x70($a0)
+    sw $a3,0x74($a0)
+    jr $ra
+     sw $a1,0x78($a0)
+.end box_vertices_build
