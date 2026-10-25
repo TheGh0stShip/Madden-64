@@ -430,3 +430,5 @@
 0x1B024	0x64	src/code/payload_pair_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	72d7145babdeb251943d1418695640d96c269e3d2259072b5a49d33d02a38d20
 0x40E14	0x60	src/code/packed_command_remove.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ebfb8bd899131f68b3f1f20a2e3f6a8011ae326458a0c8d7350f5a2301c0d2a4
 0x64018	0x44	src/code/runtime_dispatch_loop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4d805a5669aa9867443b4453c0864ea86fa73571540cb5c223470c0e019b3b4b
+0xEC5C	0x60	src/code/indexed_color_pair_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	08c5d5b307918605cc8bda326e0ebd81a8c95fc1300295ba6a698a4b0c984769
+0x2F59C	0x4C	src/code/fixed_square_root.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	91f11e005ea503c562a1f79ca871f9dc3468dd91c618a87d5b06f9e3cd5a1529
