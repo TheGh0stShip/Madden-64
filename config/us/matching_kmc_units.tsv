@@ -458,3 +458,4 @@
 0x35B60	0x78	src/code/resource_entry_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	67cb123da3c03b26d435a3e5d4bed7eb0ec2fe2a3930ea4fe2b1779592c70c5d
 0x33700	0x78	src/code/input_record_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0cfd8e99a7b51fdb820a2cf7e73535201d73c9cb0f10db3ff318ebeb14765ede
 0x1A544	0x5C	src/code/value_update_mode.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2f43e25d1b799faddf73d9210c2645523ec4bf215096919d2964c7c2b792a899
+0x3F580	0x30	src/code/runtime_channel_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bda161fe309789cdb0fdc3e8a8a3a4cd4623371872e474e9a9a0fca6e3cd0901

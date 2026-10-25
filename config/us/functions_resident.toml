@@ -862,7 +862,7 @@ functions = [
     { name = "func_8003E668", vram = 0x8003e668, size = 0x1e8 }, # c
     { name = "func_8003E850", vram = 0x8003e850, size = 0xa4 }, # c
     { name = "func_8003E8F4", vram = 0x8003e8f4, size = 0x88 }, # c
-    { name = "func_8003E97C", vram = 0x8003e97c, size = 0x34 }, # c
+    { name = "func_8003E980", vram = 0x8003e980, size = 0x30 }, # c
     { name = "func_8003E9B0", vram = 0x8003e9b0, size = 0x17c }, # c
     { name = "func_8003EB2C", vram = 0x8003eb2c, size = 0x4c }, # c
     { name = "func_8003EB78", vram = 0x8003eb78, size = 0x50 }, # c
