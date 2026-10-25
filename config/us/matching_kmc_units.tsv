@@ -468,3 +468,5 @@
 0x2664C	0x6C	src/code/play_table_halfword_add.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	459a18dd203c7b1854233d4119922b676de3cb8f6a78af632fc4c5da2f431fc7
 0x38934	0x70	src/code/audio_entries_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4aac56c4bdacbade18c1936086774a4e93ec59d6b1fd31886d505ccfa833a6fa
 0x45E8C	0x70	src/code/vector_records_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2f5e349db674c3b7994a3d4eebcd00bb111d8dc58ca571e186d1ad5640f489fb
+0x3516C	0x7C	src/code/typed_nodes_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	91063eb6536256f56c549bf8db66ac0b7c9ee61b89195be7c8739a3ca1a05dbf
+0x358B4	0x7C	src/code/three_mode_value_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ae45749e5275527d3dfb917cfee62857ae6a6b20bcd23fd9823ea7811c6b909b
