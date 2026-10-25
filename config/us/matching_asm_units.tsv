@@ -1,4 +1,5 @@
 # GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
+0x3B4CC	0x15C	src/code/audio_frame_payload_copy.s	--symbol=D_8008AF9C:0x8008AF9C --symbol=D_80073434:0x80073434 --symbol=D_80073438:0x80073438 --symbol=func_80028A58:0x80028A58 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	58b1bb5019046a3827d13f8450f401ac498cec61239e3238a4af4ac3611aadef
 0x1040	0x3C	src/runtime/program_entry.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e26c5ef4301d640ffa5a4303b238bf4bf54993b42137833937b0ecbee0e5b67
 0x51AA8	0xCC	src/rsp/rspboot.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ba0243414cec468a9bd90fc91f5b5efa918208e2cf799ae54fb09673442c001
 0x478A8	0x50	src/libultra/os_interrupt.s	-O2 -G0 -mips3 -mgp32 -mfp32	eea139088241ae2e4f665c8d86a50a8665f9835530da37e4dbb888c7c3b8ee3d

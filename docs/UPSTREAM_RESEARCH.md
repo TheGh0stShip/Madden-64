@@ -183,3 +183,21 @@ Compiler experiments recovered the exact local ordering and the actual
 destination-first interface. Madden rounds the requested byte count to an even
 value, creates a one-entry queue, starts the transfer, and waits for completion.
 The resulting KMC GCC source matches all 148 bytes at `0x800329B8`.
+
+## Audio frame aggregate-copy cluster
+
+Structural comparison initially associated `0x8003A8CC` and `0x8003AD2C`
+with controller-runtime functions, but instruction-level review showed that
+the apparent similarity came from KMC GCC's expanded struct-copy loops rather
+than shared protocol logic. Cross-project source searches, the public KMC/GCC
+pattern notes, and direct compiler experiments established 217-byte source
+records with a 107-byte header and 110-byte payload.
+
+The 110-byte payload routine reached a two-register C near match. A 3,000-case
+bounded permutation pass and further expression-order, typed-member, temporary,
+and block-shape experiments did not remove that allocator-only difference.
+The recovered routine was therefore retained as readable exact assembly rather
+than granting credit to nonmatching C. It selects one of two record stores,
+copies the full payload through the compiler's aligned or unaligned path, and
+matches all 348 bytes at `0x8003A8CC`. The related 40-byte routine remains
+uncredited pending resolution of its anomalous unreachable tail.

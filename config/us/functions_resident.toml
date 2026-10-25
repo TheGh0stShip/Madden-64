@@ -792,7 +792,7 @@ functions = [
     { name = "func_8003A720", vram = 0x8003a720, size = 0x98 }, # c
     { name = "func_8003A7B8", vram = 0x8003a7b8, size = 0x24 }, # leaf
     { name = "func_8003A7DC", vram = 0x8003a7dc, size = 0xf0 }, # leaf
-    { name = "func_8003A8CC", vram = 0x8003a8cc, size = 0x15c }, # c
+    { name = "audio_frame_payload_copy", vram = 0x8003a8cc, size = 0x15c }, # asm
     { name = "func_8003AA28", vram = 0x8003aa28, size = 0x278 }, # c
     { name = "func_8003ACA0", vram = 0x8003aca0, size = 0x8c }, # leaf
     { name = "func_8003AD2C", vram = 0x8003ad2c, size = 0x154 }, # c
