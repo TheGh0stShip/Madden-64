@@ -665,7 +665,7 @@ functions = [
     { name = "func_800B3310", vram = 0x800b3310, size = 0x1bc }, # asm
     { name = "func_800B34CC", vram = 0x800b34cc, size = 0x20 }, # c
     { name = "func_800B34EC", vram = 0x800b34ec, size = 0x20 }, # c
-    { name = "func_800B350C", vram = 0x800b350c, size = 0x4c }, # asm
+    { name = "state_values_submit", vram = 0x800b350c, size = 0x4c }, # C
     { name = "func_800B3558", vram = 0x800b3558, size = 0x108 }, # asm
     { name = "subsystem_sequence_start", vram = 0x800b3660, size = 0x4c }, # C
     { name = "func_800B36AC", vram = 0x800b36ac, size = 0x2c }, # c
