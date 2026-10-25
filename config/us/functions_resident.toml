@@ -38,7 +38,7 @@ functions = [
     { name = "func_800093F4", vram = 0x800093f4, size = 0xdc }, # c
     { name = "display_texture_prepare", vram = 0x800094d0, size = 0x2cc }, # asm
     { name = "display_texture_block_load", vram = 0x8000979c, size = 0x20c }, # asm
-    { name = "func_800099A8", vram = 0x800099a8, size = 0x270 }, # c
+    { name = "display_texture_update", vram = 0x800099a8, size = 0x270 }, # asm
     { name = "display_texture_tile_load", vram = 0x80009c18, size = 0x1fc }, # asm
     { name = "func_80009E14", vram = 0x80009e14, size = 0x44 }, # leaf
     { name = "func_80009E58", vram = 0x80009e58, size = 0x44 }, # leaf
@@ -65,7 +65,7 @@ functions = [
     { name = "func_8000A940", vram = 0x8000a940, size = 0x44 }, # leaf
     { name = "func_8000A984", vram = 0x8000a984, size = 0x44 }, # leaf
     { name = "display_tile_size_set", vram = 0x8000a9c8, size = 0x10c }, # asm
-    { name = "func_8000AAD4", vram = 0x8000aad4, size = 0x258 }, # leaf
+    { name = "display_texture_configure", vram = 0x8000aad4, size = 0x258 }, # asm
     { name = "func_8000AD2C", vram = 0x8000ad2c, size = 0x58 }, # c
     { name = "func_8000AD84", vram = 0x8000ad84, size = 0x3c }, # c
     { name = "func_8000ADC0", vram = 0x8000adc0, size = 0xa0 }, # leaf
@@ -122,7 +122,7 @@ functions = [
     { name = "func_8000CDC0", vram = 0x8000cdc0, size = 0x50 }, # c
     { name = "object_transform_configure", vram = 0x8000ce10, size = 0x194 }, # asm
     { name = "object_active_children_update", vram = 0x8000cfa4, size = 0x78 }, # asm
-    { name = "func_8000D01C", vram = 0x8000d01c, size = 0x294 }, # c
+    { name = "display_object_transform", vram = 0x8000d01c, size = 0x294 }, # asm
     { name = "func_8000D2B0", vram = 0x8000d2b0, size = 0x10 }, # stub
     { name = "object_scene_create", vram = 0x8000d2c0, size = 0x1ec }, # asm
     { name = "object_scene_reset", vram = 0x8000d4ac, size = 0x110 }, # asm
@@ -184,7 +184,7 @@ functions = [
     { name = "func_8000ED04", vram = 0x8000ed04, size = 0x20 }, # leaf
     { name = "func_8000ED24", vram = 0x8000ed24, size = 0x74 }, # leaf
     { name = "object_resource_process", vram = 0x8000ed98, size = 0x2a0 }, # asm
-    { name = "func_8000F038", vram = 0x8000f038, size = 0x294 }, # c
+    { name = "object_resource_update", vram = 0x8000f038, size = 0x294 }, # asm
     { name = "func_8000F2CC", vram = 0x8000f2cc, size = 0x50 }, # c
     { name = "func_8000F31C", vram = 0x8000f31c, size = 0x8 }, # stub
     { name = "func_8000F324", vram = 0x8000f324, size = 0xc }, # stub
@@ -230,7 +230,7 @@ functions = [
     { name = "func_800160A0", vram = 0x800160a0, size = 0x14 }, # leaf
     { name = "func_800160B4", vram = 0x800160b4, size = 0x10 }, # stub
     { name = "resource_stream_decode", vram = 0x800160c4, size = 0x4dc }, # asm
-    { name = "func_800165A0", vram = 0x800165a0, size = 0x25c }, # leaf
+    { name = "resource_stream_process", vram = 0x800165a0, size = 0x25c }, # asm
     { name = "func_800167FC", vram = 0x800167fc, size = 0x1d8 }, # c
     { name = "func_800169D4", vram = 0x800169d4, size = 0x10 }, # stub
     { name = "func_800169E4", vram = 0x800169e4, size = 0x30 }, # leaf
@@ -445,7 +445,7 @@ functions = [
     { name = "func_80025A4C", vram = 0x80025a4c, size = 0x6c }, # leaf
     { name = "func_80025AB8", vram = 0x80025ab8, size = 0x58 }, # c
     { name = "gameplay_event_prepare", vram = 0x80025b10, size = 0x434 }, # asm
-    { name = "func_80025F44", vram = 0x80025f44, size = 0x258 }, # c
+    { name = "gameplay_event_update", vram = 0x80025f44, size = 0x258 }, # asm
     { name = "func_8002619C", vram = 0x8002619c, size = 0x134 }, # c
     { name = "gameplay_event_dispatch", vram = 0x800262d0, size = 0x1608 }, # asm
     { name = "func_800278D8", vram = 0x800278d8, size = 0x30 }, # c
@@ -470,7 +470,7 @@ functions = [
     { name = "frame_identifier_find", vram = 0x80028a58, size = 0xb0 }, # asm
     { name = "func_80028B08", vram = 0x80028b08, size = 0x114 }, # c
     { name = "mode_resources_initialize", vram = 0x80028c1c, size = 0x8c }, # asm
-    { name = "func_80028CA8", vram = 0x80028ca8, size = 0x28c }, # c
+    { name = "mode_resource_update", vram = 0x80028ca8, size = 0x28c }, # asm
     { name = "menu_mode_update", vram = 0x80028f34, size = 0x2a0 }, # asm
     { name = "func_800291D4", vram = 0x800291d4, size = 0x1f8 }, # c
     { name = "menu_cursor_state_initialize", vram = 0x800293cc, size = 0xc8 }, # asm
@@ -490,7 +490,7 @@ functions = [
     { name = "func_80029C98", vram = 0x80029c98, size = 0x1f0 }, # c
     { name = "gameplay_selection_process", vram = 0x80029e88, size = 0x4d0 }, # asm
     { name = "gameplay_selection_update", vram = 0x8002a358, size = 0x354 }, # asm
-    { name = "func_8002A6AC", vram = 0x8002a6ac, size = 0x26c }, # c
+    { name = "gameplay_selection_finalize", vram = 0x8002a6ac, size = 0x26c }, # asm
     { name = "interface_lowest_cost_select", vram = 0x8002a918, size = 0x9c }, # asm
     { name = "league_best_player_find", vram = 0x8002a9b4, size = 0xd8 }, # asm
     { name = "func_8002AA8C", vram = 0x8002aa8c, size = 0x10c }, # c
@@ -697,7 +697,7 @@ functions = [
     { name = "func_800356C4", vram = 0x800356c4, size = 0x1a8 }, # c
     { name = "func_8003586C", vram = 0x8003586c, size = 0x124 }, # c
     { name = "audio_slot_allocate", vram = 0x80035990, size = 0xec }, # asm
-    { name = "func_80035A7C", vram = 0x80035a7c, size = 0x258 }, # c
+    { name = "memory_block_process", vram = 0x80035a7c, size = 0x258 }, # asm
     { name = "func_80035CD4", vram = 0x80035cd4, size = 0x28 }, # c
     { name = "audio_channel_replace", vram = 0x80035cfc, size = 0x80 }, # asm
     { name = "func_80035D7C", vram = 0x80035d7c, size = 0x174 }, # c
@@ -770,7 +770,7 @@ functions = [
     { name = "roster_value_resolve", vram = 0x80039750, size = 0x78 }, # asm
     { name = "func_800397C8", vram = 0x800397c8, size = 0x5c }, # c
     { name = "func_80039824", vram = 0x80039824, size = 0x2c }, # c
-    { name = "func_80039850", vram = 0x80039850, size = 0x27c }, # c
+    { name = "roster_record_process", vram = 0x80039850, size = 0x27c }, # asm
     { name = "roster_runtime_copy", vram = 0x80039acc, size = 0xe4 }, # asm
     { name = "func_80039BB0", vram = 0x80039bb0, size = 0x64 }, # c
     { name = "roster_teams_swap", vram = 0x80039c14, size = 0xf0 }, # asm
@@ -793,7 +793,7 @@ functions = [
     { name = "func_8003A7B8", vram = 0x8003a7b8, size = 0x24 }, # leaf
     { name = "audio_frame_header_copy", vram = 0x8003a7dc, size = 0xf0 }, # asm
     { name = "audio_frame_payload_copy", vram = 0x8003a8cc, size = 0x15c }, # asm
-    { name = "func_8003AA28", vram = 0x8003aa28, size = 0x278 }, # c
+    { name = "roster_selection_update", vram = 0x8003aa28, size = 0x278 }, # asm
     { name = "audio_frame_record_find", vram = 0x8003aca0, size = 0x8c }, # leaf
     { name = "audio_frame_record_copy", vram = 0x8003ad2c, size = 0x154 }, # asm
     { name = "audio_frame_collision_resolve", vram = 0x8003ae80, size = 0x1ac }, # asm
@@ -899,10 +899,10 @@ functions = [
     { name = "func_800409B8", vram = 0x800409b8, size = 0x8c }, # c
     { name = "func_80040A44", vram = 0x80040a44, size = 0x1c0 }, # c
     { name = "func_80040C04", vram = 0x80040c04, size = 0x108 }, # c
-    { name = "func_80040D0C", vram = 0x80040d0c, size = 0x254 }, # c
+    { name = "interface_runtime_prepare", vram = 0x80040d0c, size = 0x254 }, # asm
     { name = "audio_vectors_transform", vram = 0x80040f60, size = 0xf0 }, # asm
     { name = "func_80041050", vram = 0x80041050, size = 0x38 }, # c
-    { name = "func_80041088", vram = 0x80041088, size = 0x254 }, # c
+    { name = "interface_runtime_finalize", vram = 0x80041088, size = 0x254 }, # asm
     { name = "func_800412DC", vram = 0x800412dc, size = 0x15c }, # c
     { name = "func_80041438", vram = 0x80041438, size = 0xcc }, # c
     { name = "func_80041504", vram = 0x80041504, size = 0x8 }, # stub
@@ -970,7 +970,7 @@ functions = [
     { name = "func_8004367C", vram = 0x8004367c, size = 0x238 }, # c
     { name = "object_vector_resolve", vram = 0x800438b4, size = 0xe8 }, # asm
     { name = "func_8004399C", vram = 0x8004399c, size = 0x184 }, # c
-    { name = "func_80043B20", vram = 0x80043b20, size = 0x25c }, # c
+    { name = "display_frame_dispatch", vram = 0x80043b20, size = 0x25c }, # asm
     { name = "func_80043D7C", vram = 0x80043d7c, size = 0x100 }, # c
     { name = "func_80043E7C", vram = 0x80043e7c, size = 0x100 }, # c
     { name = "func_80043F7C", vram = 0x80043f7c, size = 0x18c }, # c
@@ -1271,7 +1271,7 @@ functions = [
     { name = "object_geometry_prepare", vram = 0x8005b704, size = 0x2e4 }, # asm
     { name = "func_8005B9E8", vram = 0x8005b9e8, size = 0x8 }, # stub
     { name = "func_8005B9F0", vram = 0x8005b9f0, size = 0x230 }, # c
-    { name = "func_8005BC20", vram = 0x8005bc20, size = 0x26c }, # c
+    { name = "object_geometry_update", vram = 0x8005bc20, size = 0x26c }, # asm
     { name = "func_8005BE8C", vram = 0x8005be8c, size = 0x154 }, # c
     { name = "object_decode_pipeline", vram = 0x8005bfe0, size = 0x950 }, # asm
     { name = "func_8005C930", vram = 0x8005c930, size = 0x194 }, # c
@@ -1331,7 +1331,7 @@ functions = [
     { name = "func_800615F4", vram = 0x800615f4, size = 0x1d4 }, # c
     { name = "func_800617C8", vram = 0x800617c8, size = 0x248 }, # c
     { name = "func_80061A10", vram = 0x80061a10, size = 0x100 }, # c
-    { name = "func_80061B10", vram = 0x80061b10, size = 0x270 }, # c
+    { name = "object_lookup_update", vram = 0x80061b10, size = 0x270 }, # asm
     { name = "func_80061D80", vram = 0x80061d80, size = 0x190 }, # c
     { name = "func_80061F10", vram = 0x80061f10, size = 0x144 }, # c
     { name = "func_80062054", vram = 0x80062054, size = 0x11c }, # c
