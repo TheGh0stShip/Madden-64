@@ -394,3 +394,8 @@
 0x42CB0	0x6C	src/code/audio_tables_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	46c7a55ed6dd92856d01acf10e1515aa0181e0b86e95526d319f655082d1b2b5
 0x427DC	0x6C	src/code/randomized_trigger.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c57af587f685a24c1a7652a5d7f2e86912303abe63a5c86ab2f48279f1c7686b
 0x3A274	0x6C	src/code/audio_resources_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b8d79048636d8473756961297cb7241b66c5ea66641c06a0f33029e64a51ae78
+0x65390	0x60	src/code/interface_destroy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ee3243fea4f3e91bcc30757fc119324403e3d29cfe9026104b01691359da94ac
+0x46138	0x54	src/code/vector_block_process.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f94c676cc3a2c4ab8e15492f8e6133722067defd80e8aa5de5c1f87fc3ae00f
+0x4316C	0x4C	src/code/audio_mode_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	06e70dd47c29bdfb1dcd9fd7153d2bf3b990d81e49f685e0790e714e35dcf2fd
+0x18824	0x58	src/code/resource_flag_toggle.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	439ca49ed649ed0dfcad2582f92e7d6b9ec6c4625357a660346de1aa953c16bd
+0x1B774	0x50	src/code/pending_audio_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aa18ba615397e5ede378acdfa0275a33b939aeaab58705f4467741bf0bb5e84c
