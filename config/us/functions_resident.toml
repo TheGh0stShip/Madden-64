@@ -808,7 +808,7 @@ functions = [
     { name = "func_8003BEE4", vram = 0x8003bee4, size = 0x70 }, # leaf
     { name = "func_8003BF54", vram = 0x8003bf54, size = 0x48 }, # c
     { name = "audio_stream_configure", vram = 0x8003bf9c, size = 0x1b8 }, # asm
-    { name = "audio_range_value_get", vram = 0x8003c154, size = 0x9c }, # asm
+    { name = "audio_range_value_get", vram = 0x8003c154, size = 0x9c }, # c
     { name = "func_8003C1F0", vram = 0x8003c1f0, size = 0x8 }, # stub
     { name = "audio_stream_update", vram = 0x8003c1f8, size = 0x214 }, # asm
     { name = "audio_stream_process", vram = 0x8003c40c, size = 0x200 }, # asm

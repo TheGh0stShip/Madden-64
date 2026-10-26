@@ -23,7 +23,6 @@
 0x44004	0x84	src/code/rectangle_overlap_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cd7c9b89353bb2dc57262e49222b134650efd184b26e8a14b27c24815a40188
 0x44E70	0x84	src/code/texture_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ac1391ac9363bb7b9d57d253a806a8c9d1c69a2013617c098f6f4db389418e5
 0x45EFC	0x98	src/code/display_vectors_integrate.s	-O2 -G0 -mips3 -mgp32 -mfp32	f7dee0a6db9c3eeda89dc0c50d392c044897ad285ba56eff7c456104a47d86c2
-0x3CD54	0x9C	src/code/audio_range_value_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	d9cc86c54dcc6485e041bd6942f591e8ac0e87fe82ee52257d347443c3bd4273
 0x26544	0xA0	src/code/roster_stat_add.s	-O2 -G0 -mips3 -mgp32 -mfp32	5d2c5be4f9d7849a7919db63abf730adb395fa83573c63380bc99f960f7ae80a
 0x10414	0xA4	src/code/object_resources_release_full.s	-O2 -G0 -mips3 -mgp32 -mfp32	ddeb4c2e26fd008343e082a29c213f44a5e396030ce3079303ec6912d2c73a08
 0x28EC8	0xA4	src/code/packed_field_dispatch.s	--symbol=packed_field_primary_get:0x8002BF10 --symbol=packed_field_secondary_get:0x8002BFA4 -O2 -G0 -mips3 -mgp32 -mfp32	f48e89aab2f80547098f1fac702c37388b5f6e5be74ea26109631096401d8ff2
