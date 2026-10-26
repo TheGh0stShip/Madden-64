@@ -57,7 +57,7 @@ functions = [
     { name = "display_key_parameters_set", vram = 0x8000a4d8, size = 0xfc }, # c
     { name = "func_8000A5D4", vram = 0x8000a5d4, size = 0x68 }, # leaf
     { name = "func_8000A63C", vram = 0x8000a63c, size = 0x64 }, # leaf
-    { name = "display_combine_mode_set", vram = 0x8000a6a0, size = 0x190 }, # asm
+    { name = "display_combine_mode_set", vram = 0x8000a6a0, size = 0x190 }, # c
     { name = "func_8000A830", vram = 0x8000a830, size = 0x44 }, # leaf
     { name = "func_8000A874", vram = 0x8000a874, size = 0x44 }, # leaf
     { name = "func_8000A8B8", vram = 0x8000a8b8, size = 0x44 }, # leaf

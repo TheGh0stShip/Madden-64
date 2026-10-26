@@ -35,8 +35,8 @@ overlays, separate overlay data, every archive table, each payload's logical
 length, and alignment padding. See [the ROM layout audit](docs/ROM_LAYOUT.md)
 for the gap-free map and per-archive counts and sizes.
 
-One thousand one hundred thirty-one reviewed C compilation units fully cover 1,292 catalogued function
-candidates and currently match 158,868 whole-program code bytes and 496 data bytes exactly, including the
+One thousand one hundred thirty-two reviewed C compilation units fully cover 1,293 catalogued function
+candidates and currently match 159,268 whole-program code bytes and 496 data bytes exactly, including the
 contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
 boundaries are research leads, not decompilation credit, until a source unit is
 compiled and compared byte-for-byte.
