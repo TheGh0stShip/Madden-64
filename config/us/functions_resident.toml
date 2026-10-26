@@ -1137,7 +1137,7 @@ functions = [
     { name = "func_8004DD28", vram = 0x8004dd28, size = 0x8c }, # c
     { name = "func_8004DDB8", vram = 0x8004ddb8, size = 0x34 }, # c
     { name = "func_8004DDF8", vram = 0x8004ddf8, size = 0xc }, # stub
-    { name = "func_8004DE08", vram = 0x8004de08, size = 0x10 }, # stub
+    { name = "func_8004DE08", vram = 0x8004de08, size = 0x10 }, # c
     { name = "func_8004DE18", vram = 0x8004de18, size = 0x150 }, # c
     { name = "func_8004DF68", vram = 0x8004df68, size = 0x2c }, # leaf
     { name = "func_8004DF94", vram = 0x8004df94, size = 0x28 }, # leaf
