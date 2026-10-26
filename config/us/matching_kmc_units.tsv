@@ -646,3 +646,6 @@
 0x44088	0xB0	src/code/box_vertices_fixed_build.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	996b29e31de75defab12666bf1b1edd48da86aeffa7d149f4ae3d8a611ceda26
 0xF6B4	0xB4	src/code/object_texture_state_refresh.c	--assembler=asn64 --symbol=D_80087A94:0x80087A94 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	00f2f15f29c771da95ae5d512407aa55f8cf04375ae76539c98342c7bf6394ab
 0xC2F8	0xAC	src/code/display_surface_create.c	--assembler=asn64 --symbol=D_80064BA0:0x80064BA0 --symbol=D_8008B3D4:0x8008B3D4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c3889cc86541c07c94aeb46e2ae573273ffb1f046f70b5cae7cfb73bcf506353
+0x3F450	0xA4	src/code/formatted_pair_append.c	--assembler=asn64 --symbol=D_80002D18:0x80002D18 --symbol=D_80002D1C:0x80002D1C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	81c5419240707aa23910667bdc65a87219d2e9c52e340c0d03549614cb2f1bf3
+0x223F4	0xE0	src/code/game_session_release.c	--assembler=asn64 --symbol=D_8006A534:0x8006A534 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cfe5ba10b6505a253c7aaaebb5b7d15c4de62bfb899d7170a4c0b15514d102f0
+0x1C04C	0xD0	src/code/display_record_release.c	--assembler=asn64 --symbol=D_800692AC:0x800692AC --symbol=D_8007947C:0x8007947C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f414768564ecbb2e60e8a5d502447da4ed2f0b89d3ff3846340bb155a0c6ae80

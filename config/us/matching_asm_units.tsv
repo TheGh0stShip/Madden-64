@@ -30,7 +30,6 @@
 0x26544	0xA0	src/code/roster_stat_add.s	-O2 -G0 -mips3 -mgp32 -mfp32	5d2c5be4f9d7849a7919db63abf730adb395fa83573c63380bc99f960f7ae80a
 0x10414	0xA4	src/code/object_resources_release_full.s	-O2 -G0 -mips3 -mgp32 -mfp32	ddeb4c2e26fd008343e082a29c213f44a5e396030ce3079303ec6912d2c73a08
 0x28EC8	0xA4	src/code/packed_field_dispatch.s	--symbol=packed_field_primary_get:0x8002BF10 --symbol=packed_field_secondary_get:0x8002BFA4 -O2 -G0 -mips3 -mgp32 -mfp32	f48e89aab2f80547098f1fac702c37388b5f6e5be74ea26109631096401d8ff2
-0x3F450	0xA4	src/code/formatted_pair_append.s	-O2 -G0 -mips3 -mgp32 -mfp32	81c5419240707aa23910667bdc65a87219d2e9c52e340c0d03549614cb2f1bf3
 0x3419C	0xA8	src/code/resource_node_unlink.s	-O2 -G0 -mips3 -mgp32 -mfp32	ad0c9dcd8d459ae503d85e2cc5bc35131309e1fd0ef9bc04f3121cf97492ef8b
 0x1B7C4	0xAC	src/code/ui_context_clone.s	-O2 -G0 -mips3 -mgp32 -mfp32	ab2e2118247e0723d05a46ce45b890033c146483fdbeeb2317bccf6527d40ec8
 0x1A398	0xAC	src/code/strided_rows_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	c59922ddfe5a62cfec4638609148d0a3bf45b1535dca8d4f6229eb165f1885ee
@@ -50,7 +49,6 @@
 0x5D804	0xC8	src/code/object_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
 0xC460	0xCC	src/code/display_surface_clone.s	-O2 -G0 -mips3 -mgp32 -mfp32	616da9367056e81fb36909814f7bc4a95cff8e0622983348e86ab8ba502aca28
 0x30AA4	0xCC	src/code/runtime_node_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	d4d2665a3ed1b996d6ae3f4b359c30731eb366e160741b7568cb90eb96b24b54
-0x1C04C	0xD0	src/code/display_record_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	f414768564ecbb2e60e8a5d502447da4ed2f0b89d3ff3846340bb155a0c6ae80
 0x1F420	0xD0	src/code/text_glyph_width_sum.s	-O2 -G0 -mips3 -mgp32 -mfp32	f9cdbe48abeec6ff78efbc60d84c88b24a69664bc270c18cdf34b00ee021ce08
 0x40E74	0xD0	src/code/audio_range_randomize.s	-O2 -G0 -mips3 -mgp32 -mfp32	b7beb92c49adae993b236c7a9ecd91d012b4571dfeaf15e9615d967819c168e9
 0x3DBA0	0xD4	src/code/audio_position_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	da295f58a8307704798bf7915581fb1c2b647114ac6729fd35490bffa4f184a6
@@ -61,7 +59,6 @@
 0xC798	0xDC	src/code/display_page_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	ba5320c8d8c15aa42c44fe30877ab08aa1337f40bfba3d0632a43022f8b53cf7
 0xEA34	0xDC	src/code/vector_slots_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	f26cf764e126b874306e8d34b69cf26df94a5457f782b9f258933d9f0a6f30fb
 0x1A468	0xDC	src/code/resource_bytes_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	5769e2040d9f214f21460d0240a9733d55c927f4554c5a9959d30d7ac9cc34c6
-0x223F4	0xE0	src/code/game_session_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	cfe5ba10b6505a253c7aaaebb5b7d15c4de62bfb899d7170a4c0b15514d102f0
 0x2A458	0xDC	src/code/play_event_queue_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
 0x33C50	0xDC	src/code/memory_block_split.s	-O2 -G0 -mips3 -mgp32 -mfp32	7d191d556e18131a17dd055bae01e96cc4426f45758a5496d27b80cc7ae86cba
 0x3428C	0xDC	src/code/memory_block_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	de14c54a1a5e84e5501690d97ad6fe33bbe491f0d196b16438f5507a68bda25a

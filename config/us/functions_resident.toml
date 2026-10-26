@@ -312,7 +312,7 @@ functions = [
     { name = "resource_buffers_update", vram = 0x8001b138, size = 0x1dc }, # asm
     { name = "resource_children_detach", vram = 0x8001b314, size = 0xfc }, # asm
     { name = "func_8001B410", vram = 0x8001b410, size = 0x3c }, # c
-    { name = "display_record_release", vram = 0x8001b44c, size = 0xd0 }, # asm
+    { name = "display_record_release", vram = 0x8001b44c, size = 0xd0 }, # c
     { name = "func_8001B51C", vram = 0x8001b51c, size = 0x28 }, # leaf
     { name = "func_8001B544", vram = 0x8001b544, size = 0x8 }, # stub
     { name = "func_8001B54C", vram = 0x8001b54c, size = 0x44 }, # c
@@ -387,7 +387,7 @@ functions = [
     { name = "game_mode_initialize", vram = 0x800213e4, size = 0x118 }, # asm
     { name = "game_session_update", vram = 0x80021500, size = 0x2c8 }, # asm
     { name = "func_800217C8", vram = 0x800217c8, size = 0x2c }, # c
-    { name = "game_session_release", vram = 0x800217f4, size = 0xe0 }, # asm
+    { name = "game_session_release", vram = 0x800217f4, size = 0xe0 }, # c
     { name = "game_session_initialize", vram = 0x800218d4, size = 0x604 }, # asm
     { name = "func_80021ED8", vram = 0x80021ed8, size = 0x8 }, # stub
     { name = "game_session_process", vram = 0x80021ee0, size = 0x198 }, # asm
@@ -859,7 +859,7 @@ functions = [
     { name = "func_8003E4B4", vram = 0x8003e4b4, size = 0x5c }, # c
     { name = "func_8003E510", vram = 0x8003e510, size = 0x158 }, # asm
     { name = "audio_bank_update", vram = 0x8003e668, size = 0x1e8 }, # asm
-    { name = "formatted_pair_append", vram = 0x8003e850, size = 0xa4 }, # asm
+    { name = "formatted_pair_append", vram = 0x8003e850, size = 0xa4 }, # c
     { name = "string_tail_clear", vram = 0x8003e8f4, size = 0x88 }, # c
     { name = "func_8003E980", vram = 0x8003e980, size = 0x30 }, # c
     { name = "audio_bank_prepare", vram = 0x8003e9b0, size = 0x17c }, # asm
