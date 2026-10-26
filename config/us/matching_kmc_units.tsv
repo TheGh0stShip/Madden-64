@@ -780,3 +780,5 @@
 0x3A814	0xF0	src/code/roster_teams_swap.c	--assembler=asn64 --normalizer-enable-KMC-INDEX-TABLE-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5e544f0267c49b84d26281ceeb54f9a3f64451c0c5056035e7d8b013526cadf2
 0xDBA4	0x78	src/code/object_active_children_update.c	--assembler=asn64 --normalizer-enable-KMC-PRELOAD-BOUND-SAVE-DELAY -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
 0x33D74	0xE4	src/code/memory_table_create.c	--assembler=asn64 --normalizer-enable-KMC-LATE-S0-SETUP -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d93aa31398617c7a5dc375d4196d2177fafa7efeaac978191731b73cff6d689a
+0x43448	0xD4	src/code/display_pipeline_setup.c	--assembler=asn64 --normalizer-enable-KMC-JAL-ARG-DELAY -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bc1bce253d3f85c7c88c07e83a55cd2bb9bd91932a619d77bbf8092aeb3da09f
+0x45294	0xB0	src/code/grid_row_handles_build.c	--assembler=asn64 --normalizer-enable-KMC-STAGED-SAVED-REGISTERS --normalizer-enable-KMC-JAL-ARG-ORDER -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	01b8ae9e5d749fe082a308fb38d9fcea578968a3bdff0e22462f74f9a11d6160

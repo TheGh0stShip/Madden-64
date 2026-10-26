@@ -950,7 +950,7 @@ functions = [
     { name = "func_8004256C", vram = 0x8004256c, size = 0x4c }, # c
     { name = "display_command_update", vram = 0x800425b8, size = 0x210 }, # asm
     { name = "display_list_copy_or_branch", vram = 0x800427c8, size = 0x80 }, # c
-    { name = "display_pipeline_setup", vram = 0x80042848, size = 0xd4 }, # asm
+    { name = "display_pipeline_setup", vram = 0x80042848, size = 0xd4 }, # c
     { name = "func_8004291C", vram = 0x8004291c, size = 0x40 }, # c
     { name = "color_tables_refresh", vram = 0x8004295c, size = 0xa8 }, # c
     { name = "display_command_process", vram = 0x80042a04, size = 0x3c4 }, # asm
@@ -983,7 +983,7 @@ functions = [
     { name = "func_8004445C", vram = 0x8004445c, size = 0x74 }, # c
     { name = "func_800444D0", vram = 0x800444d0, size = 0x60 }, # c
     { name = "func_80044530", vram = 0x80044530, size = 0x164 }, # asm
-    { name = "grid_row_handles_build", vram = 0x80044694, size = 0xb0 }, # asm
+    { name = "grid_row_handles_build", vram = 0x80044694, size = 0xb0 }, # c
     { name = "indexed_range_submit", vram = 0x80044744, size = 0x80 }, # c
     { name = "grid_handles_build", vram = 0x800447c4, size = 0xa8 }, # c
     { name = "func_8004486C", vram = 0x8004486c, size = 0x58 }, # c
