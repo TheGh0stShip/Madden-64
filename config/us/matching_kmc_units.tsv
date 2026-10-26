@@ -694,3 +694,6 @@
 0x23338	0xC0	src/code/roster_selection_apply.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2c5d2954e7e3c11bdd2a49b0205e6d9e0ab11b65b2a9170c790691bb5350f2d2
 0x11E48	0xC0	src/code/object_texture_descriptor_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	297bab0e40fc6f734f73e39c81747b0ced8143118e932f3539be4cc0811c3b85
 0x3F87C	0x194	src/code/audio_sequence_prepare.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4326a3a22df38e78d6e0e48b915c41fc9dfda861b4ad5b04a730375075aa92c7
+0x28D44	0xE0	src/code/play_flags_finalize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5e67960de9fc342223227211bead4fe35cbf448f8cd0ec07a06eaaaf0746af9c
+0x330FC	0xC4	src/code/resource_pool_reset_wait.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
+0x33C50	0xDC	src/code/memory_block_split.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7d191d556e18131a17dd055bae01e96cc4426f45758a5496d27b80cc7ae86cba

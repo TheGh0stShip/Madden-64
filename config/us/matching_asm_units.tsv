@@ -35,7 +35,6 @@
 0x28A38	0xB8	src/code/roster_rating_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	81a58ff22f256cabc765aecb67ac2694ce2469adbcc2e880afbb39fe114f9a1d
 0x45F94	0xBC	src/code/display_vertex_batch_append.s	-O2 -G0 -mips3 -mgp32 -mfp32	c370e9bf77cfbc794f6db63fab794da0c4159d8e13f46c5580d07622beebcb7b
 0x57690	0xC0	src/code/object_round_state_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	164a08db6bf5483b35ccd7824da9d7c024adb0847af49ee92fddda6664393713
-0x330FC	0xC4	src/code/resource_pool_reset_wait.s	-O2 -G0 -mips3 -mgp32 -mfp32	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
 0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
 0x5D804	0xC8	src/code/object_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
 0x43448	0xD4	src/code/display_pipeline_setup.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc1bce253d3f85c7c88c07e83a55cd2bb9bd91932a619d77bbf8092aeb3da09f
@@ -44,9 +43,7 @@
 0x3179C	0xD8	src/code/controller_flags_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	9a6c975f2faa1632b4a1fa80a6f5c03b9afb3106b00012c6ed0843153ee05249
 0xC798	0xDC	src/code/display_page_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	ba5320c8d8c15aa42c44fe30877ab08aa1337f40bfba3d0632a43022f8b53cf7
 0x2A458	0xDC	src/code/play_event_queue_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
-0x33C50	0xDC	src/code/memory_block_split.s	-O2 -G0 -mips3 -mgp32 -mfp32	7d191d556e18131a17dd055bae01e96cc4426f45758a5496d27b80cc7ae86cba
 0x3428C	0xDC	src/code/memory_block_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	de14c54a1a5e84e5501690d97ad6fe33bbe491f0d196b16438f5507a68bda25a
-0x28D44	0xE0	src/code/play_flags_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	5e67960de9fc342223227211bead4fe35cbf448f8cd0ec07a06eaaaf0746af9c
 0x24860	0xE4	src/code/team_stat_value_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	b50b9d86f8b3cd938ed1f41a6d85440db33840afbacbbf6d7c758b8310b92c32
 0x2D100	0xE4	src/code/team_record_pointer_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	a9d599b2859be23b82cb78537a62448a91efea242a21df1c5fc43777dbccef1d
 0x33D74	0xE4	src/code/memory_table_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	d93aa31398617c7a5dc375d4196d2177fafa7efeaac978191731b73cff6d689a

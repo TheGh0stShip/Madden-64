@@ -460,7 +460,7 @@ functions = [
     { name = "frame_resource_process", vram = 0x80027ef0, size = 0x1c0 }, # asm
     { name = "func_800280B0", vram = 0x800280b0, size = 0x4c }, # leaf
     { name = "func_800280FC", vram = 0x800280fc, size = 0x48 }, # leaf
-    { name = "play_flags_finalize", vram = 0x80028144, size = 0xe0 }, # asm
+    { name = "play_flags_finalize", vram = 0x80028144, size = 0xe0 }, # c
     { name = "func_80028224", vram = 0x80028224, size = 0x10 }, # stub
     { name = "top_bits_dispatch", vram = 0x80028234, size = 0x94 }, # c
     { name = "packed_field_dispatch", vram = 0x800282c8, size = 0xa4 }, # asm
@@ -617,7 +617,7 @@ functions = [
     { name = "runtime_flags_update", vram = 0x80031c54, size = 0x434 }, # asm
     { name = "runtime_input_process", vram = 0x80032088, size = 0x410 }, # asm
     { name = "func_80032498", vram = 0x80032498, size = 0x64 }, # c
-    { name = "resource_pool_reset_wait", vram = 0x800324fc, size = 0xc4 }, # asm
+    { name = "resource_pool_reset_wait", vram = 0x800324fc, size = 0xc4 }, # c
     { name = "math_tables_initialize", vram = 0x800325c0, size = 0x3c4 }, # asm
     { name = "func_80032984", vram = 0x80032984, size = 0x34 }, # leaf
     { name = "rom_dma_read", vram = 0x800329b8, size = 0x94 }, # c
@@ -629,7 +629,7 @@ functions = [
     { name = "memory_pool_initialize", vram = 0x80032cc8, size = 0x138 }, # asm
     { name = "memory_pool_range_allocate", vram = 0x80032e00, size = 0x13c }, # asm
     { name = "memory_pool_resize", vram = 0x80032f3c, size = 0x114 }, # asm
-    { name = "memory_block_split", vram = 0x80033050, size = 0xdc }, # asm
+    { name = "memory_block_split", vram = 0x80033050, size = 0xdc }, # c
     { name = "func_8003312C", vram = 0x8003312c, size = 0x48 }, # leaf
     { name = "memory_table_create", vram = 0x80033174, size = 0xe4 }, # asm
     { name = "func_80033258", vram = 0x80033258, size = 0x40 }, # c
