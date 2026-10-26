@@ -869,7 +869,7 @@ functions = [
     { name = "audio_sequence_prepare", vram = 0x8003ec7c, size = 0x194 }, # c
     { name = "audio_sequence_advance", vram = 0x8003ee10, size = 0x250 }, # asm
     { name = "func_8003F060", vram = 0x8003f060, size = 0x10c }, # c
-    { name = "audio_slot_active_test", vram = 0x8003f16c, size = 0xc4 }, # asm
+    { name = "audio_slot_active_test", vram = 0x8003f16c, size = 0xc4 }, # c
     { name = "func_8003F230", vram = 0x8003f230, size = 0x5c }, # c
     { name = "audio_slot_markers_reset", vram = 0x8003f28c, size = 0xc0 }, # c
     { name = "audio_slot_update", vram = 0x8003f34c, size = 0x19c }, # asm

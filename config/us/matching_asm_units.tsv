@@ -17,7 +17,6 @@
 0x4DD68	0xA0	src/libultra/os_set_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	86cb8015715ed857a8877c8f765e022385d51b5c1e2cb8645586b08a05f91a23
 0x1A398	0xAC	src/code/strided_rows_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	c59922ddfe5a62cfec4638609148d0a3bf45b1535dca8d4f6229eb165f1885ee
 0x57690	0xC0	src/code/object_round_state_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	164a08db6bf5483b35ccd7824da9d7c024adb0847af49ee92fddda6664393713
-0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
 0xC798	0xDC	src/code/display_page_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	ba5320c8d8c15aa42c44fe30877ab08aa1337f40bfba3d0632a43022f8b53cf7
 0x2A458	0xDC	src/code/play_event_queue_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
 0x3428C	0xDC	src/code/memory_block_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	de14c54a1a5e84e5501690d97ad6fe33bbe491f0d196b16438f5507a68bda25a
