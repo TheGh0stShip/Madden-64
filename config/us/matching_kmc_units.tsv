@@ -778,3 +778,5 @@
 0x3C968	0x17C	src/code/audio_stream_prepare.c	--assembler=asn64 --normalizer-enable-KMC-LATE-V0-ARG --normalizer-enable-KMC-SHARED-DIV3-CONSTANT -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6a441895a5887721ebe86226d8da7563d4732fa6cb6f3e8188b420595b7c13d0
 0x31C40	0xEC	src/code/controller_axes_resolve.c	--assembler=asn64 --normalizer-enable-KMC-COMPACT-FRAME-8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f656b489de33a21d3dc2e8e4541cf40c37740877cda9455d189467d1309a05fd
 0x3A814	0xF0	src/code/roster_teams_swap.c	--assembler=asn64 --normalizer-enable-KMC-INDEX-TABLE-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5e544f0267c49b84d26281ceeb54f9a3f64451c0c5056035e7d8b013526cadf2
+0xDBA4	0x78	src/code/object_active_children_update.c	--assembler=asn64 --normalizer-enable-KMC-PRELOAD-BOUND-SAVE-DELAY -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
+0x33D74	0xE4	src/code/memory_table_create.c	--assembler=asn64 --normalizer-enable-KMC-LATE-S0-SETUP -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d93aa31398617c7a5dc375d4196d2177fafa7efeaac978191731b73cff6d689a

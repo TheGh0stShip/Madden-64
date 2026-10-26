@@ -121,7 +121,7 @@ functions = [
     { name = "projection_scale_configure", vram = 0x8000ccc8, size = 0xf8 }, # asm
     { name = "func_8000CDC0", vram = 0x8000cdc0, size = 0x50 }, # c
     { name = "object_transform_configure", vram = 0x8000ce10, size = 0x194 }, # asm
-    { name = "object_active_children_update", vram = 0x8000cfa4, size = 0x78 }, # asm
+    { name = "object_active_children_update", vram = 0x8000cfa4, size = 0x78 }, # c
     { name = "display_object_transform", vram = 0x8000d01c, size = 0x294 }, # asm
     { name = "func_8000D2B0", vram = 0x8000d2b0, size = 0x10 }, # stub
     { name = "object_scene_create", vram = 0x8000d2c0, size = 0x1ec }, # asm
@@ -631,7 +631,7 @@ functions = [
     { name = "memory_pool_resize", vram = 0x80032f3c, size = 0x114 }, # asm
     { name = "memory_block_split", vram = 0x80033050, size = 0xdc }, # c
     { name = "func_8003312C", vram = 0x8003312c, size = 0x48 }, # leaf
-    { name = "memory_table_create", vram = 0x80033174, size = 0xe4 }, # asm
+    { name = "memory_table_create", vram = 0x80033174, size = 0xe4 }, # c
     { name = "func_80033258", vram = 0x80033258, size = 0x40 }, # c
     { name = "func_80033298", vram = 0x80033298, size = 0x30 }, # leaf
     { name = "func_800332C8", vram = 0x800332c8, size = 0x40 }, # leaf
