@@ -479,7 +479,7 @@ functions = [
     { name = "func_800297A4", vram = 0x800297a4, size = 0x38 }, # leaf
     { name = "func_800297DC", vram = 0x800297dc, size = 0x20 }, # leaf
     { name = "func_800297FC", vram = 0x800297fc, size = 0x5c }, # c
-    { name = "play_event_queue_advance", vram = 0x80029858, size = 0xdc }, # asm
+    { name = "play_event_queue_advance", vram = 0x80029858, size = 0xdc }, # c
     { name = "func_80029934", vram = 0x80029934, size = 0x10 }, # stub
     { name = "func_80029944", vram = 0x80029944, size = 0x10 }, # stub
     { name = "func_80029954", vram = 0x80029954, size = 0x64 }, # leaf
