@@ -26,7 +26,6 @@
 0x2EC1C	0xEC	src/code/matrix_vector_transform.s	-O2 -G0 -mips3 -mgp32 -mfp32	f4f8a91fb416038788f5a0f0479fe4405e8d0320c31071ab4b5e0ea6e73979d9
 0x345B0	0xF4	src/code/memory_table_create_with_data.s	-O2 -G0 -mips3 -mgp32 -mfp32	3f3b10d45bec06d780b3cf4ff4a27266d73b6f00747ecda44259e9cafbc7b05a
 0xD620	0x118	src/code/object_orientation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	4b07a347661fd37d5f854d7aeccce5e048c2bf657a3f6695ae536c9c20f31144
-0xD8C8	0xF8	src/code/projection_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	1031efd1e940e65f082065297b5fc5a4d4b52bb63e73677f9c77fbbf841a2e5b
 0xEB34	0xF8	src/code/vector_signed_components_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	639afcb1bf63baf9699161edadf03489afa79fc2fd5537e3c3d6a700d25b29d5
 0x1DDE0	0x120	src/code/text_line_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	51aa9460357e06aaa4cd4b0b1d1995064d2accf3c3624b13540f147d28ffb9a9
 0x21C78	0x104	src/code/menu_input_activation_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	bfb3fce4d56f0f39628a87e06c670a6edbbb25040b1f64ff3b41e6b9a30ee591

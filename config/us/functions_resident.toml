@@ -118,7 +118,7 @@ functions = [
     { name = "func_8000CBA8", vram = 0x8000cba8, size = 0x44 }, # leaf
     { name = "func_8000CBEC", vram = 0x8000cbec, size = 0x2c }, # leaf
     { name = "display_viewport_configure", vram = 0x8000cc18, size = 0xb0 }, # c
-    { name = "projection_scale_configure", vram = 0x8000ccc8, size = 0xf8 }, # asm
+    { name = "projection_scale_configure", vram = 0x8000ccc8, size = 0xf8 }, # c
     { name = "func_8000CDC0", vram = 0x8000cdc0, size = 0x50 }, # c
     { name = "object_transform_configure", vram = 0x8000ce10, size = 0x194 }, # asm
     { name = "object_active_children_update", vram = 0x8000cfa4, size = 0x78 }, # c
