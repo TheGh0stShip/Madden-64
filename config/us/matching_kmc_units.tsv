@@ -622,3 +622,6 @@
 0x24C10	0xB4	src/code/roster_value_ratio_primary.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	120378401374e80cb3cb2e199588b1e1d9cacecfa5542477391a0dd928a3ed75
 0x25104	0xB4	src/code/roster_value_ratio_secondary.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	2da3a05688d09432ee2f778bf5426bf93b8d8cf06fa9c01a9f5d03334f65a19b
 0x42924	0xB0	src/code/audio_transition_update.c	--assembler=asn64 --symbol=D_800712C8:0x800712C8 --symbol=D_800734F8:0x800734F8 --symbol=D_80086DE0:0x80086DE0 --symbol=D_800876C0:0x800876C0 --symbol=D_8008A5B4:0x8008A5B4 -O2 -G0 -mips3 -mgp32 -mfp32	c2d673d45505ec633fa5bf35efc335f6ad65aa20470f849f662cdd4703fcdb8c
+0x25818	0x84	src/code/frame_group_value_resolve.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ace800bfb226efbb9e2fbd3e7c1f8dc32f71c4c985a4c26587f42f4bc9f41cd1
+0x2B518	0x9C	src/code/interface_lowest_cost_select.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6359041e922025f6613ea311de07da3774e0cbf652b6d42b1402772dd02be977
+0x28594	0xC4	src/code/roster_profile_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bebcbc3caf0ea192d35d5d484d56510cb21abccb4d8347a113069f67d3ab2300

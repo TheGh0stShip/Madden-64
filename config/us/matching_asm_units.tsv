@@ -26,13 +26,11 @@
 0xDBA4	0x78	src/code/object_active_children_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
 0x3A350	0x78	src/code/roster_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e32c8d15b061901377f1f128d8c3a478272a5b82f8e2fc1ccde0c0f0a7e31a3
 0x2373C	0x84	src/code/roster_symbol_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef1c0e46dfcff4c11e592a4448dd1e1a38505c4040150457e2e0269ecdb26ba6
-0x25818	0x84	src/code/frame_group_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	ace800bfb226efbb9e2fbd3e7c1f8dc32f71c4c985a4c26587f42f4bc9f41cd1
 0x44004	0x84	src/code/rectangle_overlap_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cd7c9b89353bb2dc57262e49222b134650efd184b26e8a14b27c24815a40188
 0x44E70	0x84	src/code/texture_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ac1391ac9363bb7b9d57d253a806a8c9d1c69a2013617c098f6f4db389418e5
 0xFFBC	0x94	src/code/object_index_rows_shift.s	-O2 -G0 -mips3 -mgp32 -mfp32	38e3a286b6a4408b2982f307b8a12b2fbd98c1157503384eed0cdfa4ce6e43ba
 0x45EFC	0x98	src/code/display_vectors_integrate.s	-O2 -G0 -mips3 -mgp32 -mfp32	f7dee0a6db9c3eeda89dc0c50d392c044897ad285ba56eff7c456104a47d86c2
 0x61334	0x98	src/code/index_planes_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	f64d1f207eaaf8ef85b1141425da927e255308def1a2d8c14e65cfdcaf2644d9
-0x2B518	0x9C	src/code/interface_lowest_cost_select.s	-O2 -G0 -mips3 -mgp32 -mfp32	6359041e922025f6613ea311de07da3774e0cbf652b6d42b1402772dd02be977
 0x3CD54	0x9C	src/code/audio_range_value_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	d9cc86c54dcc6485e041bd6942f591e8ac0e87fe82ee52257d347443c3bd4273
 0x42184	0x9C	src/code/audio_chain_flag_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	09e7e4092dff4a95ff549f42527a2a4d19a3f81b46ced176d57c11c8088615ba
 0x45D00	0x9C	src/code/display_system_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	191f225271feddde2156caf94717827cdb28ae64036e5d6a853ccc7f77771df1
@@ -66,7 +64,6 @@
 0x23338	0xC0	src/code/roster_selection_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	2c5d2954e7e3c11bdd2a49b0205e6d9e0ab11b65b2a9170c790691bb5350f2d2
 0x3DAB8	0xC0	src/code/audio_range_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	aa7f590af21f3e955c056a3008e4b75325635d2cbb9e01b7a4e9cf521b34d36f
 0x57690	0xC0	src/code/object_round_state_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	164a08db6bf5483b35ccd7824da9d7c024adb0847af49ee92fddda6664393713
-0x28594	0xC4	src/code/roster_profile_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	bebcbc3caf0ea192d35d5d484d56510cb21abccb4d8347a113069f67d3ab2300
 0x330FC	0xC4	src/code/resource_pool_reset_wait.s	-O2 -G0 -mips3 -mgp32 -mfp32	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
 0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
 0x3EEC0	0xC8	src/code/audio_name_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	bd3cc36156c1133d9163fffbe6a5ab46fd13bf86d94d934756c2175fb7d2a18a
