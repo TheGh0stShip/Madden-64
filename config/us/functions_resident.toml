@@ -1047,16 +1047,16 @@ functions = [
     { name = "func_800475B4", vram = 0x800475b4, size = 0xf4 }, # c
     { name = "func_800476A8", vram = 0x800476a8, size = 0x224 }, # c
     { name = "osLeoDiskInit", vram = 0x800478d8, size = 0x100 }, # c
-    { name = "func_800479D8", vram = 0x800479d8, size = 0x2c }, # leaf
-    { name = "func_80047A04", vram = 0x80047a04, size = 0x3c }, # leaf
-    { name = "func_80047A40", vram = 0x80047a40, size = 0x3c }, # leaf
-    { name = "func_80047A7C", vram = 0x80047a7c, size = 0x2c }, # leaf
-    { name = "func_80047AA8", vram = 0x80047aa8, size = 0x3c }, # leaf
-    { name = "func_80047AE4", vram = 0x80047ae4, size = 0x5c }, # leaf
-    { name = "func_80047B40", vram = 0x80047b40, size = 0x30 }, # leaf
-    { name = "func_80047B70", vram = 0x80047b70, size = 0x60 }, # leaf
+    { name = "func_800479D8", vram = 0x800479d8, size = 0x2c }, # c
+    { name = "func_80047A04", vram = 0x80047a04, size = 0x3c }, # c
+    { name = "func_80047A40", vram = 0x80047a40, size = 0x3c }, # c
+    { name = "func_80047A7C", vram = 0x80047a7c, size = 0x2c }, # c
+    { name = "func_80047AA8", vram = 0x80047aa8, size = 0x3c }, # c
+    { name = "func_80047AE4", vram = 0x80047ae4, size = 0x5c }, # c
+    { name = "func_80047B40", vram = 0x80047b40, size = 0x30 }, # c
+    { name = "func_80047B70", vram = 0x80047b70, size = 0x60 }, # c
     { name = "func_80047BD0", vram = 0x80047bd0, size = 0x9c }, # c
-    { name = "func_80047C6C", vram = 0x80047c6c, size = 0x2c }, # leaf
+    { name = "func_80047C6C", vram = 0x80047c6c, size = 0x2c }, # c
     { name = "func_80047C98", vram = 0x80047c98, size = 0x440 }, # c
     { name = "func_800480D8", vram = 0x800480d8, size = 0x80 }, # c
     { name = "func_80048158", vram = 0x80048158, size = 0x60 }, # asm

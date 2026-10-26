@@ -35,6 +35,16 @@
 0x4EB68	0x94	src/libultra/string.c	-O2 -Wo,-loopunroll,0 -mips2 -non_shared -G 0 -Iinclude	d0faa33f870cd2023dfd3394ececc5b9f24b98b21b5fe3ccb7bd8c62a5e76fd0
 0x4F5C8	0x7C	src/libultra/os_virtual_to_physical.c	--symbol=__osProbeTLB:0x8004EA48 -O1 -mips2 -Wab,-r4300_mul -non_shared -G 0 -Iinclude	70292c4d120121a568e54b8e18adade189e95484a655fb3f58414964c449701b
 0x50478	0x84	src/libultra/os_get_time.c	--symbol=__osDisableInt:0x80046CB8 --symbol=osGetCount:0x8004E598 --symbol=__osRestoreInt:0x80046CD8 -O1 -mips2 -non_shared -G 0 -Iinclude	8709daf6d80e5ab7876844133400bba9788eb3298f35ce7c008af5ffd1b33b20
+0x485D8	0x2C	src/libgcc/ull_rshift.c	-O1 -mips3 -32 -non_shared -G 0	675cfd7ae5bb2dead54ece083b62caea4b89a02698826dc4ae301701effb8bdd
+0x48604	0x3C	src/libgcc/ull_rem.c	-O1 -mips3 -32 -non_shared -G 0	443a882a09623e43e504262ae6c3153bf3380e56defd82b0d9b3a0945cd5b467
+0x48640	0x3C	src/libgcc/ull_div.c	-O1 -mips3 -32 -non_shared -G 0	d23ded15fa515f8703c3978be0059ae854f70f07e9d9554b76ee6aaeb587419b
+0x4867C	0x2C	src/libgcc/ll_lshift.c	-O1 -mips3 -32 -non_shared -G 0	f77aab92ad5cc45115c9fc3fcd0c3bd0d88c2404de136dae2c80660b21302d7b
+0x486A8	0x3C	src/libgcc/ll_rem.c	-O1 -mips3 -32 -non_shared -G 0	443a882a09623e43e504262ae6c3153bf3380e56defd82b0d9b3a0945cd5b467
+0x486E4	0x5C	src/libgcc/ll_div.c	-O1 -mips3 -32 -non_shared -G 0	ad1ec2c0626553f19a061562ca4e6a401634710b08c69faef884c6784be1d129
+0x48740	0x30	src/libgcc/ll_mul.c	-O1 -mips3 -32 -non_shared -G 0	deb3d19732cb6f876f0c3c367210dd4e094a4eee114b0e409a307c64fc292596
+0x48770	0x60	src/libgcc/ull_divremi.c	-O1 -mips3 -32 -non_shared -G 0	b5999d5b01a6650ebf056b9106a465b2fc5dd3de630e1b20ffed19a52458ec30
+0x487D0	0x9C	src/libgcc/ll_mod.c	-O1 -mips3 -32 -non_shared -G 0	b9073be5a5aff0b39a538e2ebe2581b5b909de1093c324bf7db16b412a0cbbef
+0x4886C	0x2C	src/libgcc/ll_rshift.c	-O1 -mips3 -32 -non_shared -G 0	f947c8dc8dcd2bc0b62bf25945bc1815051fade3c2f24f7454b9420b94c699f6
 0x50D48	0xC4	src/libultra/os_pfs_checksum.c	-O1 -mips2 -Wab,-r4300_mul -non_shared -G 0 -Iinclude	0a2bc00bd4ce680fa23bc6b870f78a5bf69809efb988e3c74c700a22501fcb49
 0x46798	0x144	src/libultra/os_create_thread.c	--symbol=__osCleanupThread:0x80046738 --symbol=__osDisableInt:0x80046CB8 --symbol=__osRestoreInt:0x80046CD8 -O1 -mips2 -non_shared -G 0 -Iinclude	6db8aae9f76f1ac8b1d16ae8431e0ebaa97428b4782bbffbbc02311a5544057d
 0x468E8	0xF8	src/libultra/os_destroy_thread.c	--symbol=__osDisableInt:0x80046CB8 --symbol=__osDequeueThread:0x8004E008 --symbol=__osDispatchThread:0x800465BC --symbol=__osRestoreInt:0x80046CD8 -O1 -mips2 -non_shared -G 0 -Iinclude	4720ab50328474e23004521cbbdc232469ab6191eaac8e89ca13d60964207299
