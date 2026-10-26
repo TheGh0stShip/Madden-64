@@ -536,13 +536,13 @@ functions = [
     { name = "func_8002D884", vram = 0x8002d884, size = 0x3c }, # leaf
     { name = "func_8002D8C0", vram = 0x8002d8c0, size = 0x8 }, # stub
     { name = "func_8002D8C8", vram = 0x8002d8c8, size = 0x8 }, # stub
-    { name = "matrix_stack_scale_fixed", vram = 0x8002d8d0, size = 0x144 }, # asm
-    { name = "matrix_stack_transform_vector", vram = 0x8002da14, size = 0x168 }, # asm
+    { name = "matrix_stack_scale_fixed", vram = 0x8002d8d0, size = 0x144 }, # c
+    { name = "matrix_stack_transform_vector", vram = 0x8002da14, size = 0x168 }, # c
     { name = "func_8002DB7C", vram = 0x8002db7c, size = 0x54 }, # leaf
     { name = "gameplay_record_dispatch", vram = 0x8002dbd0, size = 0x198 }, # asm
-    { name = "matrix_stack_transform_point", vram = 0x8002dd68, size = 0x168 }, # asm
+    { name = "matrix_stack_transform_point", vram = 0x8002dd68, size = 0x168 }, # c
     { name = "func_8002DED0", vram = 0x8002ded0, size = 0x24 }, # leaf
-    { name = "matrix_stack_export_fixed", vram = 0x8002def4, size = 0x128 }, # asm
+    { name = "matrix_stack_export_fixed", vram = 0x8002def4, size = 0x128 }, # c
     { name = "matrix_vector_transform", vram = 0x8002e01c, size = 0xec }, # asm
     { name = "func_8002E108", vram = 0x8002e108, size = 0x40 }, # leaf
     { name = "func_8002E148", vram = 0x8002e148, size = 0x34 }, # leaf

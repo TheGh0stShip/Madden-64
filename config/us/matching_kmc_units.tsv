@@ -735,3 +735,7 @@
 0x45F94	0xBC	src/code/display_vertex_batch_append.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c370e9bf77cfbc794f6db63fab794da0c4159d8e13f46c5580d07622beebcb7b
 0x2ED7C	0x410	src/code/memory_move_overlap.c	--assembler=asn64 -O1 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b3bb564c51a03ca20924ca9333245cd921a5d89043e428576d6ad67b8f451a50
 0x2E030	0x3D0	src/code/matrix_multiply_fixed.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	164c13f772d6abec1bc2375eb85b10e198f58504ee7e8e222b9cdda26d44d8dc
+0x2E4D0	0x144	src/code/matrix_stack_scale_fixed.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	555ea11189131fc1292bc85a96bd4a707ce257c1c2202acc17a48d3e3f748521
+0x2E614	0x168	src/code/matrix_stack_transform_vector.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3bcc96d7aaaaea23ef51d361c6363085590c285979e844cf7764c7f5d77bf069
+0x2E968	0x168	src/code/matrix_stack_transform_point.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	549980e65c0d478972aed84683656423a1617b58bf97eac9711140e01d36f452
+0x2EAF4	0x128	src/code/matrix_stack_export_fixed.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f075d17d9d3778c4677eb50a4223aa63097f5f81e3e436dbad930d2819febd2c
