@@ -382,7 +382,7 @@ functions = [
     { name = "menu_option_dispatch", vram = 0x80020ae8, size = 0x90 }, # c
     { name = "menu_screen_update", vram = 0x80020b78, size = 0x500 }, # asm
     { name = "menu_input_activation_update", vram = 0x80021078, size = 0x104 }, # asm
-    { name = "menu_input_poll", vram = 0x8002117c, size = 0xa0 }, # asm
+    { name = "menu_input_poll", vram = 0x8002117c, size = 0xa0 }, # c
     { name = "game_mode_update", vram = 0x8002121c, size = 0x1c8 }, # asm
     { name = "game_mode_initialize", vram = 0x800213e4, size = 0x118 }, # asm
     { name = "game_session_update", vram = 0x80021500, size = 0x2c8 }, # asm
@@ -638,7 +638,7 @@ functions = [
     { name = "func_80033308", vram = 0x80033308, size = 0x24 }, # c
     { name = "func_8003332C", vram = 0x8003332c, size = 0x34 }, # c
     { name = "func_80033360", vram = 0x80033360, size = 0x24 }, # c
-    { name = "resource_slots_release", vram = 0x80033384, size = 0xa4 }, # asm
+    { name = "resource_slots_release", vram = 0x80033384, size = 0xa4 }, # c
     { name = "func_80033428", vram = 0x80033428, size = 0x5c }, # leaf
     { name = "func_80033484", vram = 0x80033484, size = 0x34 }, # c
     { name = "func_800334B8", vram = 0x800334b8, size = 0x28 }, # c
@@ -701,7 +701,7 @@ functions = [
     { name = "func_80035CD4", vram = 0x80035cd4, size = 0x28 }, # c
     { name = "audio_channel_replace", vram = 0x80035cfc, size = 0x80 }, # c
     { name = "memory_pool_prepare", vram = 0x80035d7c, size = 0x174 }, # asm
-    { name = "audio_entry_resource_mark", vram = 0x80035ef0, size = 0x98 }, # asm
+    { name = "audio_entry_resource_mark", vram = 0x80035ef0, size = 0x98 }, # c
     { name = "memory_pool_finalize", vram = 0x80035f88, size = 0x178 }, # asm
     { name = "func_80036100", vram = 0x80036100, size = 0x30 }, # leaf
     { name = "func_80036130", vram = 0x80036130, size = 0x30 }, # leaf
