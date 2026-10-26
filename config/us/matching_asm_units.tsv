@@ -49,7 +49,6 @@
 0xD620	0x118	src/code/object_orientation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	4b07a347661fd37d5f854d7aeccce5e048c2bf657a3f6695ae536c9c20f31144
 0xD8C8	0xF8	src/code/projection_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	1031efd1e940e65f082065297b5fc5a4d4b52bb63e73677f9c77fbbf841a2e5b
 0xEB34	0xF8	src/code/vector_signed_components_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	639afcb1bf63baf9699161edadf03489afa79fc2fd5537e3c3d6a700d25b29d5
-0x115A4	0x110	src/code/display_material_setup.s	-O2 -G0 -mips3 -mgp32 -mfp32	f14cdf5a7c3ba50ecb09dd2a2e3e2c1c20119be5fa6f77848d14dfc612773a05
 0x1DDE0	0x120	src/code/text_line_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	51aa9460357e06aaa4cd4b0b1d1995064d2accf3c3624b13540f147d28ffb9a9
 0x20088	0x11C	src/code/player_ui_state_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	45795526a7002880f7e5b2df6ff9a24ad79c01b1b13e2369d935ca528d3296fb
 0x21C78	0x104	src/code/menu_input_activation_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	bfb3fce4d56f0f39628a87e06c670a6edbbb25040b1f64ff3b41e6b9a30ee591

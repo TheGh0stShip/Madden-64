@@ -96,11 +96,11 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching decompiled C code | 134,592 bytes | 753,428 bytes | 17.86% |
+| Matching decompiled C code | 134,864 bytes | 753,428 bytes | 17.90% |
 | Assembly-assisted C reference coverage | 296 bytes | 753,428 bytes | 0.04% |
-| Matching assembly reference coverage | 429,652 bytes | 753,428 bytes | 57.03% |
+| Matching assembly reference coverage | 429,380 bytes | 753,428 bytes | 56.99% |
 | Whole-program initialized data | 496 bytes | 484,540 bytes | 0.10% |
-| C-decompiled function candidates | 1,215 | 2,820 | 43.09% |
+| C-decompiled function candidates | 1,216 | 2,820 | 43.12% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |
@@ -109,7 +109,12 @@ The program denominator covers the loader, resident executable, both overlays,
 and their initialized data records. Matching `.s` units are retained as useful
 reference coverage but never count as C decompilation. C units containing
 instruction-emitting inline assembly are likewise tracked separately and receive
-no C-decompilation credit. Function boundaries remain
+no C-decompilation credit. A donor repository, familiar SDK symbol, matching
+assembly hash, or `.c` filename is not provenance for C: credit requires the
+reviewed C source plus a reproducible compiler invocation and retail-byte hash.
+Anything whose provenance cannot establish compiler-generated output from that
+C source remains assembly reference coverage until it is truly decompiled.
+Function boundaries remain
 candidates until compiled C reconstruction proves them. ROM mapping and content classification are
 research coverage, not decompilation credit: the 516 texture containers, 43
 JPEGs, 262 models, 67 motions, 2 sprites, 237 audio streams, and 214 auxiliary

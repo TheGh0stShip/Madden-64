@@ -717,3 +717,4 @@
 0xC5D4	0x11C	src/code/display_system_run.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bb3237e291b8ee1f444356772563e67fe63fc379980b22fd7a6eabf4642bb971
 0x1FCC4	0x198	src/code/menu_state_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	926706154e8e8055718ea72cce55d9f33c6527d3c3ef6521232c0714be4a2dc4
 0x1BF14	0xFC	src/code/resource_children_detach.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2dcadea86e54e7b230da8d9b7526920b4386520c09d9c178d44b63382da257bd
+0x115A4	0x110	src/code/display_material_setup.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f14cdf5a7c3ba50ecb09dd2a2e3e2c1c20119be5fa6f77848d14dfc612773a05

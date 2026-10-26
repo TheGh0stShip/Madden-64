@@ -197,7 +197,7 @@ functions = [
     { name = "func_8000F8C0", vram = 0x8000f8c0, size = 0x2c }, # leaf
     { name = "func_8000F8EC", vram = 0x8000f8ec, size = 0x48 }, # c
     { name = "display_object_process", vram = 0x8000f934, size = 0x1070 }, # asm
-    { name = "display_material_setup", vram = 0x800109a4, size = 0x110 }, # asm
+    { name = "display_material_setup", vram = 0x800109a4, size = 0x110 }, # c
     { name = "display_camera_vector_compute", vram = 0x80010ab4, size = 0x1c4 }, # asm
     { name = "display_scene_render", vram = 0x80010c78, size = 0x5b0 }, # asm
     { name = "func_80011228", vram = 0x80011228, size = 0x10 }, # stub
