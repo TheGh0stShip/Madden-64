@@ -730,3 +730,6 @@
 0x28A38	0xB8	src/code/roster_rating_dispatch.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	81a58ff22f256cabc765aecb67ac2694ce2469adbcc2e880afbb39fe114f9a1d
 0x28EC8	0xA4	src/code/packed_field_dispatch.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f48e89aab2f80547098f1fac702c37388b5f6e5be74ea26109631096401d8ff2
 0x2F18C	0x9C	src/code/func_8002E58C.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	94b17ab75ad9585974bb57af3953b2572fd45388bc468e3b4dd0d5b53a090f55
+0x26544	0xA0	src/code/roster_stat_add.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5d2c5be4f9d7849a7919db63abf730adb395fa83573c63380bc99f960f7ae80a
+0x61280	0xB4	src/code/object_shared_buffers_assign.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0c29af0e509a78f289d023c9374101f4129152e6af4419d5ac823c90da81f2a2
+0x45F94	0xBC	src/code/display_vertex_batch_append.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c370e9bf77cfbc794f6db63fab794da0c4159d8e13f46c5580d07622beebcb7b

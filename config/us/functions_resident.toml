@@ -440,7 +440,7 @@ functions = [
     { name = "gameplay_state_render", vram = 0x8002514c, size = 0x648 }, # asm
     { name = "team_event_append", vram = 0x80025794, size = 0xd8 }, # c
     { name = "team_event_append_secondary", vram = 0x8002586c, size = 0xd8 }, # c
-    { name = "roster_stat_add", vram = 0x80025944, size = 0xa0 }, # asm
+    { name = "roster_stat_add", vram = 0x80025944, size = 0xa0 }, # c
     { name = "func_800259E4", vram = 0x800259e4, size = 0x68 }, # leaf
     { name = "func_80025A4C", vram = 0x80025a4c, size = 0x6c }, # leaf
     { name = "func_80025AB8", vram = 0x80025ab8, size = 0x58 }, # c
@@ -1003,7 +1003,7 @@ functions = [
     { name = "box_vertices_build", vram = 0x800451f8, size = 0x94 }, # c
     { name = "func_8004528C", vram = 0x8004528c, size = 0x70 }, # c
     { name = "display_vectors_integrate", vram = 0x800452fc, size = 0x98 }, # asm
-    { name = "display_vertex_batch_append", vram = 0x80045394, size = 0xbc }, # asm
+    { name = "display_vertex_batch_append", vram = 0x80045394, size = 0xbc }, # c
     { name = "display_strip_emit", vram = 0x80045450, size = 0xe8 }, # asm
     { name = "func_80045538", vram = 0x80045538, size = 0x54 }, # c
     { name = "display_context_initialize", vram = 0x8004558c, size = 0x94 }, # c
@@ -1313,7 +1313,7 @@ functions = [
     { name = "image_table_process", vram = 0x80060178, size = 0x1f8 }, # asm
     { name = "image_table_decode", vram = 0x80060370, size = 0x1fc }, # asm
     { name = "func_8006056C", vram = 0x8006056c, size = 0x114 }, # asm
-    { name = "object_shared_buffers_assign", vram = 0x80060680, size = 0xb4 }, # asm
+    { name = "object_shared_buffers_assign", vram = 0x80060680, size = 0xb4 }, # c
     { name = "index_planes_accumulate", vram = 0x80060734, size = 0x98 }, # c
     { name = "indexed_rgb_accumulate", vram = 0x800607cc, size = 0xa4 }, # c
     { name = "func_80060870", vram = 0x80060870, size = 0x12c }, # asm
