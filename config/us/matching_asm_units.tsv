@@ -46,7 +46,6 @@
 0x21C78	0x104	src/code/menu_input_activation_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	bfb3fce4d56f0f39628a87e06c670a6edbbb25040b1f64ff3b41e6b9a30ee591
 0x2D1E4	0x17C	src/code/team_player_stats_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	b7fe8507ed96dafed611bf5732d3ac08f4f1652473cefdd80f2066db538ad9ca
 0x2D474	0x13C	src/code/team_player_pair_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	cdde49ee4c42c4415eb2d2bcd964d41c98ca5a3be96615c268848a4a1d82ad66
-0x2D7D4	0x154	src/code/matrix_stack_duplicate.s	-O2 -G0 -mips3 -mgp32 -mfp32	73193b2373cfb65790f6bdd5f8787f953f5c7db076d0e5125110bad973b14048
 0x326B8	0x168	src/code/packed_command_measure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ef36112edf9c6eb62edc26b40da9ad99fd855303494c10827d31d1efb369d47
 0x33778	0x150	src/code/memory_pool_region_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	0dcfb63ac0a1a1f488a57a4cec79b882c54598d33488ee23e30b08a7bc21b8fb
 0x338C8	0x138	src/code/memory_pool_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	05c358a5d07c97218b09ab5a0ff5df5199da7b496e8301d2db488f1842857221

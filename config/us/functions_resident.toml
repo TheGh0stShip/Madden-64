@@ -522,7 +522,7 @@ functions = [
     { name = "func_8002CAD0", vram = 0x8002cad0, size = 0x48 }, # c
     { name = "func_8002CB18", vram = 0x8002cb18, size = 0x38 }, # leaf
     { name = "func_8002CB50", vram = 0x8002cb50, size = 0x84 }, # leaf
-    { name = "matrix_stack_duplicate", vram = 0x8002cbd4, size = 0x154 }, # asm
+    { name = "matrix_stack_duplicate", vram = 0x8002cbd4, size = 0x154 }, # c
     { name = "func_8002CD28", vram = 0x8002cd28, size = 0x1c }, # leaf
     { name = "gameplay_record_update_primary", vram = 0x8002cd44, size = 0x204 }, # asm
     { name = "gameplay_record_update_secondary", vram = 0x8002cf48, size = 0x204 }, # asm

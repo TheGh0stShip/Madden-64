@@ -739,3 +739,4 @@
 0x2E614	0x168	src/code/matrix_stack_transform_vector.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3bcc96d7aaaaea23ef51d361c6363085590c285979e844cf7764c7f5d77bf069
 0x2E968	0x168	src/code/matrix_stack_transform_point.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	549980e65c0d478972aed84683656423a1617b58bf97eac9711140e01d36f452
 0x2EAF4	0x128	src/code/matrix_stack_export_fixed.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f075d17d9d3778c4677eb50a4223aa63097f5f81e3e436dbad930d2819febd2c
+0x2D7D4	0x154	src/code/matrix_stack_duplicate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	73193b2373cfb65790f6bdd5f8787f953f5c7db076d0e5125110bad973b14048
