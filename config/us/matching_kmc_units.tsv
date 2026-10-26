@@ -786,3 +786,4 @@
 0xD8C8	0xF8	src/code/projection_scale_configure.c	--assembler=asn64 --section-base=.rodata:0x800006A8 --normalizer-enable-KMC-LID-PAIR -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1031efd1e940e65f082065297b5fc5a4d4b52bb63e73677f9c77fbbf841a2e5b
 0x3FD6C	0xC4	src/code/audio_slot_active_test.c	--assembler=asn64 --normalizer-enable-KMC-AUDIO-SLOT-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
 0x345B0	0xF4	src/code/memory_table_create_with_data.c	--assembler=asn64 --normalizer-enable-KMC-LATE-S0-SETUP --normalizer-enable-KMC-TABLE-S0-SAVE-ORDER -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3f3b10d45bec06d780b3cf4ff4a27266d73b6f00747ecda44259e9cafbc7b05a
+0x2CD08	0xEC	src/code/team_secondary_stats_accumulate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ee20a9dafe069cf426fcd1622bc99625aef0a776ee4ae8b12dc00879bdef46a2

@@ -508,7 +508,7 @@ functions = [
     { name = "packed_field_primary_get", vram = 0x8002bf10, size = 0x94 }, # asm
     { name = "packed_field_secondary_get", vram = 0x8002bfa4, size = 0x98 }, # c
     { name = "packed_field_extended_get", vram = 0x8002c03c, size = 0xcc }, # c
-    { name = "team_secondary_stats_accumulate", vram = 0x8002c108, size = 0xec }, # asm
+    { name = "team_secondary_stats_accumulate", vram = 0x8002c108, size = 0xec }, # c
     { name = "func_8002C1F4", vram = 0x8002c1f4, size = 0x110 }, # asm
     { name = "func_8002C304", vram = 0x8002c304, size = 0xf8 }, # asm
     { name = "func_8002C3FC", vram = 0x8002c3fc, size = 0x104 }, # asm
