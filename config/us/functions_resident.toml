@@ -128,7 +128,7 @@ functions = [
     { name = "object_scene_reset", vram = 0x8000d4ac, size = 0x110 }, # asm
     { name = "object_children_create", vram = 0x8000d5bc, size = 0xc8 }, # c
     { name = "object_chain_release", vram = 0x8000d684, size = 0xbc }, # c
-    { name = "display_node_create", vram = 0x8000d740, size = 0xf4 }, # asm
+    { name = "display_node_create", vram = 0x8000d740, size = 0xf4 }, # c
     { name = "func_8000D834", vram = 0x8000d834, size = 0x40 }, # leaf
     { name = "func_8000D874", vram = 0x8000d874, size = 0x68 }, # leaf
     { name = "object_chain_create", vram = 0x8000d8dc, size = 0xbc }, # c
@@ -1280,7 +1280,7 @@ functions = [
     { name = "object_stream_process", vram = 0x8005cc04, size = 0xc8 }, # asm
     { name = "func_8005CCCC", vram = 0x8005cccc, size = 0x134 }, # asm
     { name = "func_8005CE00", vram = 0x8005ce00, size = 0x124 }, # asm
-    { name = "object_decode_state_create", vram = 0x8005cf24, size = 0xf0 }, # asm
+    { name = "object_decode_state_create", vram = 0x8005cf24, size = 0xf0 }, # c
     { name = "func_8005D018", vram = 0x8005d018, size = 0x8 }, # asm
     { name = "object_decode_transform", vram = 0x8005d020, size = 0x314 }, # asm
     { name = "func_8005D334", vram = 0x8005d334, size = 0xcc }, # asm

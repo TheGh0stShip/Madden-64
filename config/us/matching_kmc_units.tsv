@@ -654,3 +654,5 @@
 0x5FEAC	0xEC	src/code/byte_plane_filter.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	dbfd355f2cd9b4b5522eba8403d1d53b6a0136390ec04ca1dd48cb20759f2e73
 0xC460	0xCC	src/code/display_surface_clone.c	--assembler=asn64 --symbol=D_80064BA0:0x80064BA0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	616da9367056e81fb36909814f7bc4a95cff8e0622983348e86ab8ba502aca28
 0x30AA4	0xCC	src/code/runtime_node_insert.c	--assembler=asn64 --symbol=D_8008773C:0x8008773C --symbol=D_8008AFBC:0x8008AFBC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d4d2665a3ed1b996d6ae3f4b359c30731eb366e160741b7568cb90eb96b24b54
+0xE340	0xF4	src/code/display_node_create.c	--assembler=asn64 --symbol=D_800782F4:0x800782F4 --symbol=D_800782F8:0x800782F8 --symbol=D_800782FC:0x800782FC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f3612a0884c57bcd8f5ec18f7e4a389649ebdc39b618eeabf87dfe3bdbe98994
+0x5DB24	0xF0	src/code/object_decode_state_create.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	556473e391ebff13e6e2caa0db3e86d08eb51a3b6602f1d48dfa08f6723cf1f4
