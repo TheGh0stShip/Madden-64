@@ -799,7 +799,7 @@ functions = [
     { name = "audio_frame_collision_resolve", vram = 0x8003ae80, size = 0x1ac }, # asm
     { name = "audio_table_decode_primary", vram = 0x8003b02c, size = 0x374 }, # asm
     { name = "audio_table_decode_secondary", vram = 0x8003b3a0, size = 0x30c }, # asm
-    { name = "func_8003B6AC", vram = 0x8003b6ac, size = 0x150 }, # asm
+    { name = "func_8003B6AC", vram = 0x8003b6ac, size = 0x150 }, # c
     { name = "frame_value_combine", vram = 0x8003b7fc, size = 0x90 }, # asm
     { name = "func_8003B88C", vram = 0x8003b88c, size = 0x70 }, # leaf
     { name = "menu_grid_record_dispatch", vram = 0x8003b8fc, size = 0xc4 }, # c

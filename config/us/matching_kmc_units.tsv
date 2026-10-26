@@ -533,6 +533,7 @@
 0x21668	0x80	src/code/menu_selection_confirm.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4bfba5d2eefaaf7db8a8ef9e49dbc22bd4da9113f4d5b566d773518cbfdcb2b0
 0x237C0	0x84	src/code/player_mode_apply.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9d3e55d2e4c885fd815a1abac2af881d5660bf0a449fabfb2f5ff69da9df6e15
 0x3C3FC	0x90	src/code/frame_value_combine.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5197294f754c61c320d7e948f67ae24bcda251d37516396d66f928784fdc1903
+0x3C2AC	0x150	src/code/func_8003B6AC.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9f38e4370ff85d401bcfc5ae62c386e1ac76ba8749c1b6d5fd44d435417c20f3
 0x3CD54	0x9C	src/code/audio_range_value_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d9cc86c54dcc6485e041bd6942f591e8ac0e87fe82ee52257d347443c3bd4273
 0x2CB10	0x94	src/code/packed_field_primary_get.c	--assembler=asn64 --section-base=.rodata:0x800012B0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0f10e6075d1156b3ac6a086ce5495050445466dd8df8f604070e28baeaff02e
 0x2E400	0x84	src/code/runtime_record_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	00a26d22ac3d88b2f084c7dedd2cf4e4746bdb4b5a88c70d045263ee48b2b0d5

@@ -349,7 +349,6 @@
 0x58E10	0x174	src/code/object_cycle_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	832dab41cfe489c28378edaf8ef49e59f971642cfe767f66c974aeb692f14001
 0x37624	0x170	src/code/memory_pool_finalize_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	8b5bcf864dab844c4e6be1f72c6e1b3dcbb86055c8181f6cf24dfc05bfd57a95
 0x145E8	0x16C	src/code/render_pipeline_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	ce39c9f69d342063912ea002cdf2d1b547261ae939fb9e460cc8f5a2069afb9a
-0x3C2AC	0x150	src/code/func_8003B6AC.s	-O2 -G0 -mips3 -mgp32 -mfp32	9f38e4370ff85d401bcfc5ae62c386e1ac76ba8749c1b6d5fd44d435417c20f3
 0x2A5B8	0x118	src/code/func_800299B8.s	-O2 -G0 -mips3 -mgp32 -mfp32	c0d79c234a0e3adee20f33c0f2e71221bf3275539c480b4aec20c55f192a0363
 0x3AF78	0x114	src/code/func_8003A378.s	-O2 -G0 -mips3 -mgp32 -mfp32	d3c65bef2aa169820c1eb6dff11739cb6115c245a07e9646a94a7a21c7c3bc27
 0x2CDF4	0x110	src/code/func_8002C1F4.s	-O2 -G0 -mips3 -mgp32 -mfp32	c8d05cf12b4ddd80956a4d3cda7555b5b3d8071d64c306128d8da7af19e6ce90
