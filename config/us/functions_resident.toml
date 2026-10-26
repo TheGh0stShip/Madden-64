@@ -64,7 +64,7 @@ functions = [
     { name = "func_8000A8FC", vram = 0x8000a8fc, size = 0x44 }, # leaf
     { name = "func_8000A940", vram = 0x8000a940, size = 0x44 }, # leaf
     { name = "func_8000A984", vram = 0x8000a984, size = 0x44 }, # leaf
-    { name = "display_tile_size_set", vram = 0x8000a9c8, size = 0x10c }, # asm
+    { name = "display_tile_size_set", vram = 0x8000a9c8, size = 0x10c }, # c
     { name = "display_texture_configure", vram = 0x8000aad4, size = 0x258 }, # asm
     { name = "func_8000AD2C", vram = 0x8000ad2c, size = 0x58 }, # c
     { name = "func_8000AD84", vram = 0x8000ad84, size = 0x3c }, # c
@@ -77,9 +77,9 @@ functions = [
     { name = "func_8000B0EC", vram = 0x8000b0ec, size = 0x54 }, # leaf
     { name = "func_8000B140", vram = 0x8000b140, size = 0x44 }, # leaf
     { name = "func_8000B184", vram = 0x8000b184, size = 0x54 }, # leaf
-    { name = "display_texture_parameters_set", vram = 0x8000b1d8, size = 0x104 }, # asm
+    { name = "display_texture_parameters_set", vram = 0x8000b1d8, size = 0x104 }, # c
     { name = "display_texture_cache_initialize", vram = 0x8000b2e0, size = 0x334 }, # asm
-    { name = "display_system_shutdown", vram = 0x8000b614, size = 0xe4 }, # asm
+    { name = "display_system_shutdown", vram = 0x8000b614, size = 0xe4 }, # c
     { name = "display_surface_create", vram = 0x8000b6f8, size = 0xac }, # c
     { name = "func_8000B7A4", vram = 0x8000b7a4, size = 0x40 }, # c
     { name = "object_resource_cleanup", vram = 0x8000b7e4, size = 0x7c }, # c
