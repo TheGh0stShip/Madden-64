@@ -740,3 +740,6 @@
 0x2E968	0x168	src/code/matrix_stack_transform_point.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	549980e65c0d478972aed84683656423a1617b58bf97eac9711140e01d36f452
 0x2EAF4	0x128	src/code/matrix_stack_export_fixed.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f075d17d9d3778c4677eb50a4223aa63097f5f81e3e436dbad930d2819febd2c
 0x2D7D4	0x154	src/code/matrix_stack_duplicate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	73193b2373cfb65790f6bdd5f8787f953f5c7db076d0e5125110bad973b14048
+0x1B7C4	0xAC	src/code/ui_context_clone.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ab2e2118247e0723d05a46ce45b890033c146483fdbeeb2317bccf6527d40ec8
+0x2D474	0x13C	src/code/team_player_pair_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cdde49ee4c42c4415eb2d2bcd964d41c98ca5a3be96615c268848a4a1d82ad66
+0x1B978	0x130	src/code/func_8001AD78.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c0d7a1ad8d8bdc325d85980602a664de640c32fd69afbb4675241180a8254da6

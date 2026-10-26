@@ -299,9 +299,9 @@ functions = [
     { name = "rgb5551_pack_many", vram = 0x8001aa60, size = 0x74 }, # c
     { name = "resource_context_reset", vram = 0x8001aad8, size = 0x9c }, # c
     { name = "func_8001AB74", vram = 0x8001ab74, size = 0x50 }, # c
-    { name = "ui_context_clone", vram = 0x8001abc4, size = 0xac }, # asm
+    { name = "ui_context_clone", vram = 0x8001abc4, size = 0xac }, # c
     { name = "resource_context_load", vram = 0x8001ac70, size = 0x108 }, # c
-    { name = "func_8001AD78", vram = 0x8001ad78, size = 0x130 }, # asm
+    { name = "func_8001AD78", vram = 0x8001ad78, size = 0x130 }, # c
     { name = "func_8001AEA8", vram = 0x8001aea8, size = 0x14 }, # leaf
     { name = "resource_buffers_replace", vram = 0x8001aebc, size = 0xdc }, # c
     { name = "func_8001AF98", vram = 0x8001af98, size = 0xc }, # stub
@@ -515,7 +515,7 @@ functions = [
     { name = "team_record_pointer_find", vram = 0x8002c500, size = 0xe4 }, # c
     { name = "team_player_stats_update", vram = 0x8002c5e4, size = 0x17c }, # asm
     { name = "func_8002C760", vram = 0x8002c760, size = 0x114 }, # asm
-    { name = "team_player_pair_update", vram = 0x8002c874, size = 0x13c }, # asm
+    { name = "team_player_pair_update", vram = 0x8002c874, size = 0x13c }, # c
     { name = "team_color_resolve", vram = 0x8002c9b0, size = 0xd8 }, # c
     { name = "func_8002CA88", vram = 0x8002ca88, size = 0x18 }, # leaf
     { name = "func_8002CAA0", vram = 0x8002caa0, size = 0x30 }, # c
