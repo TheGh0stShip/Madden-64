@@ -904,7 +904,7 @@ functions = [
     { name = "func_80041050", vram = 0x80041050, size = 0x38 }, # c
     { name = "interface_runtime_finalize", vram = 0x80041088, size = 0x254 }, # asm
     { name = "func_800412DC", vram = 0x800412dc, size = 0x15c }, # asm
-    { name = "func_80041438", vram = 0x80041438, size = 0xcc }, # asm
+    { name = "resource_container_release", vram = 0x80041438, size = 0xcc }, # c
     { name = "func_80041504", vram = 0x80041504, size = 0x8 }, # stub
     { name = "func_8004150C", vram = 0x8004150c, size = 0x40 }, # c
     { name = "func_8004154C", vram = 0x8004154c, size = 0x8 }, # stub
