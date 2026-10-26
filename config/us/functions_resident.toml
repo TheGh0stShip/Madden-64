@@ -890,7 +890,7 @@ functions = [
     { name = "func_80040214", vram = 0x80040214, size = 0x60 }, # c
     { name = "audio_range_randomize", vram = 0x80040274, size = 0xd0 }, # c
     { name = "func_80040348", vram = 0x80040348, size = 0x8 }, # asm
-    { name = "func_80040350", vram = 0x80040350, size = 0x16c }, # asm
+    { name = "func_80040350", vram = 0x80040350, size = 0x16c }, # c
     { name = "func_800404BC", vram = 0x800404bc, size = 0x8 }, # stub
     { name = "func_800404C8", vram = 0x800404c8, size = 0x8 }, # asm
     { name = "interface_runtime_update", vram = 0x800404d0, size = 0x3f8 }, # asm
