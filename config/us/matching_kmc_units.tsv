@@ -754,3 +754,7 @@
 0x1B120	0x204	src/code/resource_node_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	13f461c4f840a8286940656177c2ba2a0415a890f88aa8ffbb513f19157b96b5
 0x3E4F4	0x234	src/code/audio_channel_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	43cf995bc663276e8cebf1413d4c928569adb05a6dd36a18dc16a1c091484c87
 0x5FAA0	0x190	src/code/image_plane_decode.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bca77dd996e34c301aaf23e9c22e15a68cb5b86d0cae4c6775e6e7a67dbe53d1
+0x3419C	0xA8	src/code/resource_node_unlink.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ad0c9dcd8d459ae503d85e2cc5bc35131309e1fd0ef9bc04f3121cf97492ef8b
+0x44004	0x84	src/code/rectangle_overlap_test.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2cd7c9b89353bb2dc57262e49222b134650efd184b26e8a14b27c24815a40188
+0x44E70	0x84	src/code/texture_scale_configure.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4ac1391ac9363bb7b9d57d253a806a8c9d1c69a2013617c098f6f4db389418e5
+0x45EFC	0x98	src/code/display_vectors_integrate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f7dee0a6db9c3eeda89dc0c50d392c044897ad285ba56eff7c456104a47d86c2

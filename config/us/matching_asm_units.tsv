@@ -17,10 +17,6 @@
 0x4F648	0xC0	src/libultra/os_probe_tlb.s	-O2 -G0 -mips3 -mgp32 -mfp32	349227b84b51cb246abaf9de4bf56eba78054d85575e1bfb09acfdb8d1bc0c28
 0x4DD68	0xA0	src/libultra/os_set_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	86cb8015715ed857a8877c8f765e022385d51b5c1e2cb8645586b08a05f91a23
 0xDBA4	0x78	src/code/object_active_children_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
-0x44004	0x84	src/code/rectangle_overlap_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cd7c9b89353bb2dc57262e49222b134650efd184b26e8a14b27c24815a40188
-0x44E70	0x84	src/code/texture_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ac1391ac9363bb7b9d57d253a806a8c9d1c69a2013617c098f6f4db389418e5
-0x45EFC	0x98	src/code/display_vectors_integrate.s	-O2 -G0 -mips3 -mgp32 -mfp32	f7dee0a6db9c3eeda89dc0c50d392c044897ad285ba56eff7c456104a47d86c2
-0x3419C	0xA8	src/code/resource_node_unlink.s	-O2 -G0 -mips3 -mgp32 -mfp32	ad0c9dcd8d459ae503d85e2cc5bc35131309e1fd0ef9bc04f3121cf97492ef8b
 0x1A398	0xAC	src/code/strided_rows_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	c59922ddfe5a62cfec4638609148d0a3bf45b1535dca8d4f6229eb165f1885ee
 0xD818	0xB0	src/code/display_viewport_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	efcb5af62b9ff6fe46b46e1812629f404b9d268c55bea3ed64197c204b3652e8
 0x45294	0xB0	src/code/grid_row_handles_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	01b8ae9e5d749fe082a308fb38d9fcea578968a3bdff0e22462f74f9a11d6160
