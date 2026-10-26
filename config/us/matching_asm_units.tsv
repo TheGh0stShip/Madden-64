@@ -77,7 +77,6 @@
 0x17C30	0x390	src/code/resource_file_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	427f64fc5f37912404edf7fa5ff54e00b8f5e61f7e0e47feeed11d9457c625be
 0x18480	0x300	src/code/resource_archive_open.s	-O2 -G0 -mips3 -mgp32 -mfp32	62286bdd09bc84064179c39e8995f2d3ddc431405ccf2089047e506b41aef4b7
 0x2E030	0x3D0	src/code/matrix_multiply_fixed.s	-O2 -G0 -mips3 -mgp32 -mfp32	164c13f772d6abec1bc2375eb85b10e198f58504ee7e8e222b9cdda26d44d8dc
-0x2ED7C	0x410	src/code/memory_move_overlap.s	-O2 -G0 -mips3 -mgp32 -mfp32	b3bb564c51a03ca20924ca9333245cd921a5d89043e428576d6ad67b8f451a50
 0x30538	0x330	src/code/bitstream_record_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	293141820cae715f5d34fba3254c8644f3afb608b7539251ed7db73760f9926a
 0x32854	0x434	src/code/runtime_flags_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	b16bcd8eb0d270eaecc33c2b54465228f1ea60be63ed55f4f46172ee1329d560
 0x331C0	0x3C4	src/code/math_tables_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	1047f32e43229bc6cc47ba720f745b48989d07547eda01a61553bc9f656d52dd

@@ -546,7 +546,7 @@ functions = [
     { name = "matrix_vector_transform", vram = 0x8002e01c, size = 0xec }, # asm
     { name = "func_8002E108", vram = 0x8002e108, size = 0x40 }, # leaf
     { name = "func_8002E148", vram = 0x8002e148, size = 0x34 }, # leaf
-    { name = "memory_move_overlap", vram = 0x8002e17c, size = 0x410 }, # asm
+    { name = "memory_move_overlap", vram = 0x8002e17c, size = 0x410 }, # c
     { name = "func_8002E58C", vram = 0x8002e58c, size = 0x9c }, # c
     { name = "func_8002E628", vram = 0x8002e628, size = 0x34 }, # leaf
     { name = "func_8002E65C", vram = 0x8002e65c, size = 0x2c }, # leaf
