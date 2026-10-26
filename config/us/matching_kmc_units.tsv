@@ -625,3 +625,6 @@
 0x25818	0x84	src/code/frame_group_value_resolve.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ace800bfb226efbb9e2fbd3e7c1f8dc32f71c4c985a4c26587f42f4bc9f41cd1
 0x2B518	0x9C	src/code/interface_lowest_cost_select.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6359041e922025f6613ea311de07da3774e0cbf652b6d42b1402772dd02be977
 0x28594	0xC4	src/code/roster_profile_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bebcbc3caf0ea192d35d5d484d56510cb21abccb4d8347a113069f67d3ab2300
+0x42184	0x9C	src/code/audio_chain_flag_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	09e7e4092dff4a95ff549f42527a2a4d19a3f81b46ced176d57c11c8088615ba
+0x41530	0x88	src/code/integer_vectors_submit.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e99a8daa6dd81731d22337b99718b3330d6787c2d398666e8f9d9832dc4e5fe0
+0xFFBC	0x94	src/code/object_index_rows_shift.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	38e3a286b6a4408b2982f307b8a12b2fbd98c1157503384eed0cdfa4ce6e43ba

@@ -1,5 +1,4 @@
 # GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
-0x41530	0x88	src/code/integer_vectors_submit.s	--symbol=D_80002E88:0x80002E88 --symbol=func_8000F344:0x8000F344 -O2 -G0 -mips3 -mgp32 -mfp32	e99a8daa6dd81731d22337b99718b3330d6787c2d398666e8f9d9832dc4e5fe0
 0x3B200	0x120	src/code/audio_frame_storage_mode.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5cdcdab4b1e7a36296edde1f24459b28193bb796d6d2f452b15ac43ade393699
 0x3BA80	0x1AC	src/code/audio_frame_collision_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afeabe508a0e5514d0ff3409d02b3a8d79cb5fb2812c8ae42ba648621013a71b
 0x3B3DC	0xF0	src/code/audio_frame_header_copy.s	--symbol=D_80073434:0x80073434 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e86d56625d051ed1318165633ea7f5b7f6f756d57c2c2b2eb2e20f38dede755a
@@ -28,11 +27,9 @@
 0x2373C	0x84	src/code/roster_symbol_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef1c0e46dfcff4c11e592a4448dd1e1a38505c4040150457e2e0269ecdb26ba6
 0x44004	0x84	src/code/rectangle_overlap_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cd7c9b89353bb2dc57262e49222b134650efd184b26e8a14b27c24815a40188
 0x44E70	0x84	src/code/texture_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ac1391ac9363bb7b9d57d253a806a8c9d1c69a2013617c098f6f4db389418e5
-0xFFBC	0x94	src/code/object_index_rows_shift.s	-O2 -G0 -mips3 -mgp32 -mfp32	38e3a286b6a4408b2982f307b8a12b2fbd98c1157503384eed0cdfa4ce6e43ba
 0x45EFC	0x98	src/code/display_vectors_integrate.s	-O2 -G0 -mips3 -mgp32 -mfp32	f7dee0a6db9c3eeda89dc0c50d392c044897ad285ba56eff7c456104a47d86c2
 0x61334	0x98	src/code/index_planes_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	f64d1f207eaaf8ef85b1141425da927e255308def1a2d8c14e65cfdcaf2644d9
 0x3CD54	0x9C	src/code/audio_range_value_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	d9cc86c54dcc6485e041bd6942f591e8ac0e87fe82ee52257d347443c3bd4273
-0x42184	0x9C	src/code/audio_chain_flag_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	09e7e4092dff4a95ff549f42527a2a4d19a3f81b46ced176d57c11c8088615ba
 0x45D00	0x9C	src/code/display_system_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	191f225271feddde2156caf94717827cdb28ae64036e5d6a853ccc7f77771df1
 0x26544	0xA0	src/code/roster_stat_add.s	-O2 -G0 -mips3 -mgp32 -mfp32	5d2c5be4f9d7849a7919db63abf730adb395fa83573c63380bc99f960f7ae80a
 0x10414	0xA4	src/code/object_resources_release_full.s	-O2 -G0 -mips3 -mgp32 -mfp32	ddeb4c2e26fd008343e082a29c213f44a5e396030ce3079303ec6912d2c73a08
