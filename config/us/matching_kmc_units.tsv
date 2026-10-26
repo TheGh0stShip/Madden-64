@@ -745,3 +745,6 @@
 0x1B978	0x130	src/code/func_8001AD78.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c0d7a1ad8d8bdc325d85980602a664de640c32fd69afbb4675241180a8254da6
 0x1ABD4	0x178	src/code/resource_display_commit.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d0b9b9fdf32932abff677cb3efd251f5f65b0e423bffb69a95cab984eb9f6a97
 0x1BD38	0x1DC	src/code/resource_buffers_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7e6821485dcb9eee9ac68068fb6b45faaa7102fe0f8a019126bccc2bdd78c5c9
+0x11F08	0x180	src/code/render_system_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	07f04fdf717cdfaf152e5549fb1c49396d4b9eeb7e3c92dfe3965b7ff2f0c7ea
+0x1AE24	0x200	src/code/resource_display_finalize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7db31639dfe409b1508a69ad914b8d8dedaa72f3e11b34a318c176a58ab3ec14
+0x1FEB4	0x1D4	src/code/menu_player_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8c3af8d26ae9a9b7299664bc5b9b32726989f4a914eb501734459475fcca4915

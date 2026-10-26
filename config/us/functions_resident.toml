@@ -203,7 +203,7 @@ functions = [
     { name = "func_80011228", vram = 0x80011228, size = 0x10 }, # stub
     { name = "func_80011238", vram = 0x80011238, size = 0x10 }, # stub
     { name = "object_texture_descriptor_get", vram = 0x80011248, size = 0xc0 }, # c
-    { name = "render_system_initialize", vram = 0x80011308, size = 0x180 }, # asm
+    { name = "render_system_initialize", vram = 0x80011308, size = 0x180 }, # c
     { name = "func_80011488", vram = 0x80011488, size = 0x48 }, # c
     { name = "render_buffers_initialize", vram = 0x800114d0, size = 0x1e8 }, # asm
     { name = "render_buffer_process", vram = 0x800116b8, size = 0x244 }, # asm
@@ -284,7 +284,7 @@ functions = [
     { name = "resource_display_update", vram = 0x80019dd0, size = 0x204 }, # asm
     { name = "resource_display_commit", vram = 0x80019fd4, size = 0x178 }, # c
     { name = "resource_command_dispatch", vram = 0x8001a14c, size = 0xd8 }, # c
-    { name = "resource_display_finalize", vram = 0x8001a224, size = 0x200 }, # asm
+    { name = "resource_display_finalize", vram = 0x8001a224, size = 0x200 }, # c
     { name = "func_8001A424", vram = 0x8001a424, size = 0x64 }, # c
     { name = "animation_step_update", vram = 0x8001a488, size = 0x98 }, # c
     { name = "resource_node_update", vram = 0x8001a520, size = 0x204 }, # asm
@@ -355,7 +355,7 @@ functions = [
     { name = "func_8001F070", vram = 0x8001f070, size = 0x54 }, # c
     { name = "menu_state_process", vram = 0x8001f0c4, size = 0x198 }, # c
     { name = "func_8001F25C", vram = 0x8001f25c, size = 0x58 }, # c
-    { name = "menu_player_process", vram = 0x8001f2b4, size = 0x1d4 }, # asm
+    { name = "menu_player_process", vram = 0x8001f2b4, size = 0x1d4 }, # c
     { name = "player_ui_state_configure", vram = 0x8001f488, size = 0x11c }, # c
     { name = "func_8001F5A4", vram = 0x8001f5a4, size = 0x30 }, # c
     { name = "func_8001F5D4", vram = 0x8001f5d4, size = 0x138 }, # c

@@ -58,7 +58,6 @@
 0xEE0C	0x1BC	src/code/vector_display_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	0c6605f207e5d32dc4ab14f4771784d7e794602b76c4d7e00aeadf28b9dbe0e3
 0xF1F8	0x190	src/code/object_geometry_upload.s	-O2 -G0 -mips3 -mgp32 -mfp32	fcaca7e2306fcfbcbda2dabd0702f08f309faf193f9004d5d9eb6f1f431fbcae
 0x116B4	0x1C4	src/code/display_camera_vector_compute.s	-O2 -G0 -mips3 -mgp32 -mfp32	8e2ed6d7e88148ff8e9c92c7c441b351d8493651434bfe48648cbcf6374f4384
-0x11F08	0x180	src/code/render_system_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	07f04fdf717cdfaf152e5549fb1c49396d4b9eeb7e3c92dfe3965b7ff2f0c7ea
 0x120D0	0x1E8	src/code/render_buffers_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	daa6af7a68cea9a9bd27d3ffdbbaf7b75f33dedfd5691de6f3ea99057503ba3c
 0x124FC	0x19C	src/code/render_system_shutdown.s	-O2 -G0 -mips3 -mgp32 -mfp32	27e2a7e8f3227f55cdfae3fe133245359c6e92d3c8539aa30e1a57883f6477d8
 0xBEE0	0x334	src/code/display_texture_cache_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	6026df1f74f17f295e4714d019d7fdf4d716042349650d7c31ee8350e4c4a36a
@@ -200,7 +199,6 @@
 0x2DD4C	0x204	src/code/gameplay_record_update_tertiary.s	-O2 -G0 -mips3 -mgp32 -mfp32	4e68c6d4bcf65e6e633f8fd36adfd9fa42a2f9c69ee0f65c09b3948382547f7d
 0x3A904	0x204	src/code/roster_team_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	94cee8a9452de313daa0769fb0377227b532d3cc7d2b6ec1508da318ab67d802
 0x56A8C	0x204	src/code/object_animation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	75a7eb8087f9247d86d0c218bf269ac0f7f9a9c079853fc3c61dad89f61b04d4
-0x1AE24	0x200	src/code/resource_display_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	7db31639dfe409b1508a69ad914b8d8dedaa72f3e11b34a318c176a58ab3ec14
 0x20668	0x200	src/code/menu_player_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	6122f3bd16c8312f3107bf4259f6deaa1e3b63ed76a58438584e98a46cc782fd
 0x3D00C	0x200	src/code/audio_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	e2905fad917ec54a4b1ed4707ed27c5223fc010463a9692baef68ce332d0a75f
 0x60F70	0x1FC	src/code/image_table_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	e8d0413b6bb49409897c77ccbb3decc61668a1cbd444d71fc6a16dcc5ebdad2d
@@ -223,7 +221,6 @@
 0x633F0	0x1D8	src/code/object_stream_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	1f8a83b5ca64ef2f73d8468f6c10fa9acc2c2d3e68d55868661bc32c96b6dbbc
 0x1DF00	0x1D4	src/code/ui_text_line_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	1dd1f510c70fc094d6ce675c29feb7fd1c41ccc75abcc53f877d9e39d3e5e6fb
 0x1E0D4	0x1D4	src/code/ui_text_line_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	28b725715d6f3fc92cc79b5d765e9cd2294191129fa50138e110b7182d696a21
-0x1FEB4	0x1D4	src/code/menu_player_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	8c3af8d26ae9a9b7299664bc5b9b32726989f4a914eb501734459475fcca4915
 0x621F4	0x1D4	src/code/object_lookup_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	55bd3d9e33541696f0fb43820beafaf5b3f26f3b7a5e6ec7fc4f43c9042164b7
 0x38B08	0x1CC	src/code/audio_voice_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	744ffde924aa4f0e3578f6fa8498ec799d787f39674a42a31b3b867c8459ac84
 0x21E1C	0x1C8	src/code/game_mode_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	197a9e0b1c12c8e4e1d71fad603c96e3c5f2fea37fcc560245de305e93b6ebe9
