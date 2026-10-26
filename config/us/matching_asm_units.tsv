@@ -50,7 +50,6 @@
 0xD8C8	0xF8	src/code/projection_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	1031efd1e940e65f082065297b5fc5a4d4b52bb63e73677f9c77fbbf841a2e5b
 0xEB34	0xF8	src/code/vector_signed_components_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	639afcb1bf63baf9699161edadf03489afa79fc2fd5537e3c3d6a700d25b29d5
 0x1DDE0	0x120	src/code/text_line_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	51aa9460357e06aaa4cd4b0b1d1995064d2accf3c3624b13540f147d28ffb9a9
-0x20088	0x11C	src/code/player_ui_state_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	45795526a7002880f7e5b2df6ff9a24ad79c01b1b13e2369d935ca528d3296fb
 0x21C78	0x104	src/code/menu_input_activation_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	bfb3fce4d56f0f39628a87e06c670a6edbbb25040b1f64ff3b41e6b9a30ee591
 0x21FE4	0x118	src/code/game_mode_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	c292fe3cec665b6e4f4e2e65980c061ab7e171c6b3917e527a1935b1480369d5
 0x2D1E4	0x17C	src/code/team_player_stats_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	b7fe8507ed96dafed611bf5732d3ac08f4f1652473cefdd80f2066db538ad9ca
