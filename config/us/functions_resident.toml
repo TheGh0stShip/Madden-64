@@ -274,7 +274,7 @@ functions = [
     { name = "func_80018050", vram = 0x80018050, size = 0x58 }, # c
     { name = "resource_archive_process", vram = 0x800180a8, size = 0x498 }, # asm
     { name = "ui_scene_render", vram = 0x80018540, size = 0x1258 }, # asm
-    { name = "strided_rows_copy", vram = 0x80019798, size = 0xac }, # asm
+    { name = "strided_rows_copy", vram = 0x80019798, size = 0xac }, # c
     { name = "func_80019844", vram = 0x80019844, size = 0x24 }, # c
     { name = "resource_bytes_copy", vram = 0x80019868, size = 0xdc }, # c
     { name = "func_80019944", vram = 0x80019944, size = 0x5c }, # leaf
