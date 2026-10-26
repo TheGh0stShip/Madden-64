@@ -28,7 +28,7 @@ func_800A13F8:
     lh          $v0, -0x751C($v0)
     bnez        $v0, .L800A1460
     nop
-    jal         func_8004192C
+    jal         menu_sound_play
     addiu       $a0, $zero, 0x3
 .L800A1460:
     jal         func_8009BD04

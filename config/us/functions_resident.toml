@@ -663,7 +663,7 @@ functions = [
     { name = "func_80034388", vram = 0x80034388, size = 0x160 }, # asm
     { name = "object_state_initialize", vram = 0x800344e8, size = 0x84 }, # c
     { name = "func_8003456C", vram = 0x8003456c, size = 0x7c }, # c
-    { name = "func_800345E8", vram = 0x800345e8, size = 0xcc }, # asm
+    { name = "encoded_stream_weight_sum", vram = 0x800345e8, size = 0xcc }, # c
     { name = "func_800346B4", vram = 0x800346b4, size = 0x28 }, # c
     { name = "resource_offsets_relocate", vram = 0x800346dc, size = 0x8c }, # c
     { name = "func_80034768", vram = 0x80034768, size = 0x4c }, # leaf
@@ -925,7 +925,7 @@ functions = [
     { name = "func_80041804", vram = 0x80041804, size = 0x4c }, # c
     { name = "audio_runtime_prepare", vram = 0x80041850, size = 0xa8 }, # c
     { name = "func_800418F8", vram = 0x800418f8, size = 0x34 }, # c
-    { name = "func_8004192C", vram = 0x8004192c, size = 0xcc }, # asm
+    { name = "menu_sound_play", vram = 0x8004192c, size = 0xcc }, # c
     { name = "func_800419F8", vram = 0x800419f8, size = 0x28 }, # c
     { name = "func_80041A20", vram = 0x80041a20, size = 0x20 }, # c
     { name = "interface_state_process", vram = 0x80041a40, size = 0x174 }, # asm

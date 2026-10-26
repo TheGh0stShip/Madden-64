@@ -73,7 +73,7 @@ func_800C74C4:
     j           func_800C2EB4
     nop
 .L800C75D0:
-    jal         func_8004192C
+    jal         menu_sound_play
     addiu       $a0, $zero, 0x1
 .L800C75D8:
     lw          $ra, 0x14($sp)

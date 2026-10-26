@@ -34,11 +34,11 @@ func_80034388:
     beq         $s2, $a0, .L800344C4
     nop
     lh          $a1, 0xC($s1)
-    jal         func_800345E8
+    jal         encoded_stream_weight_sum
     nop
     addu        $a0, $s2, $zero
     addu        $a1, $zero, $zero
-    jal         func_800345E8
+    jal         encoded_stream_weight_sum
     addu        $s0, $v0, $zero
     lhu         $v1, 0x10($s1)
     andi        $v0, $v0, 0xFFFF

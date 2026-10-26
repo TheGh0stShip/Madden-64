@@ -33,7 +33,7 @@ func_800A1B9C:
     beqz        $v0, .L800A1C24
     addiu       $fp, $zero, 0x1
 .L800A1C04:
-    jal         func_8004192C
+    jal         menu_sound_play
     addiu       $a0, $zero, 0x1
     j           func_8009D7A0
     addiu       $s1, $s1, 0x1

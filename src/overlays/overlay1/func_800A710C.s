@@ -61,7 +61,7 @@ func_800A710C:
     j           func_800A2AC0
     nop
 .L800A71DC:
-    jal         func_8004192C
+    jal         menu_sound_play
     addiu       $a0, $zero, 0x1
 .L800A71E4:
     lui         $v0, 0x8007
@@ -106,7 +106,7 @@ func_800A710C:
     j           func_800A2B94
     addiu       $a2, $zero, 0xF0
 .L800A7280:
-    jal         func_8004192C
+    jal         menu_sound_play
     addiu       $a0, $zero, 0x1
     j           func_800A2B9C
     nop

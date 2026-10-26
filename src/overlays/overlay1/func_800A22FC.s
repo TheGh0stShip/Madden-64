@@ -72,7 +72,7 @@ func_800A22FC:
     lh          $v0, 0x7AF0($v0)
     bgezl       $v0, .L800A2424
     addiu       $s7, $zero, 0x1
-    jal         func_8004192C
+    jal         menu_sound_play
     addiu       $a0, $zero, 0x1
     jal         func_8009BD04
     addiu       $a0, $zero, 0x3
