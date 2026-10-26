@@ -80,7 +80,7 @@ functions = [
     { name = "display_texture_parameters_set", vram = 0x8000b1d8, size = 0x104 }, # asm
     { name = "display_texture_cache_initialize", vram = 0x8000b2e0, size = 0x334 }, # asm
     { name = "display_system_shutdown", vram = 0x8000b614, size = 0xe4 }, # asm
-    { name = "display_surface_create", vram = 0x8000b6f8, size = 0xac }, # asm
+    { name = "display_surface_create", vram = 0x8000b6f8, size = 0xac }, # c
     { name = "func_8000B7A4", vram = 0x8000b7a4, size = 0x40 }, # c
     { name = "object_resource_cleanup", vram = 0x8000b7e4, size = 0x7c }, # c
     { name = "display_surface_clone", vram = 0x8000b860, size = 0xcc }, # asm
@@ -172,7 +172,7 @@ functions = [
     { name = "func_8000E7EC", vram = 0x8000e7ec, size = 0x8 }, # stub
     { name = "func_8000E7F4", vram = 0x8000e7f4, size = 0x160 }, # asm
     { name = "func_8000E954", vram = 0x8000e954, size = 0x160 }, # asm
-    { name = "object_texture_state_refresh", vram = 0x8000eab4, size = 0xb4 }, # asm
+    { name = "object_texture_state_refresh", vram = 0x8000eab4, size = 0xb4 }, # c
     { name = "func_8000EB68", vram = 0x8000eb68, size = 0x24 }, # leaf
     { name = "func_8000EB8C", vram = 0x8000eb8c, size = 0x60 }, # c
     { name = "func_8000EBEC", vram = 0x8000ebec, size = 0x6c }, # c
@@ -963,7 +963,7 @@ functions = [
     { name = "func_800431BC", vram = 0x800431bc, size = 0x124 }, # asm
     { name = "func_800432E0", vram = 0x800432e0, size = 0x124 }, # asm
     { name = "rectangle_overlap_test", vram = 0x80043404, size = 0x84 }, # asm
-    { name = "box_vertices_fixed_build", vram = 0x80043488, size = 0xb0 }, # asm
+    { name = "box_vertices_fixed_build", vram = 0x80043488, size = 0xb0 }, # c
     { name = "func_80043538", vram = 0x80043538, size = 0xd8 }, # asm
     { name = "func_80043610", vram = 0x80043610, size = 0x38 }, # c
     { name = "func_80043648", vram = 0x80043648, size = 0x34 }, # c
