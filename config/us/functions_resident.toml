@@ -531,7 +531,7 @@ functions = [
     { name = "func_8002D398", vram = 0x8002d398, size = 0x48 }, # leaf
     { name = "func_8002D3E0", vram = 0x8002d3e0, size = 0x48 }, # leaf
     { name = "func_8002D428", vram = 0x8002d428, size = 0x8 }, # stub
-    { name = "matrix_multiply_fixed", vram = 0x8002d430, size = 0x3d0 }, # asm
+    { name = "matrix_multiply_fixed", vram = 0x8002d430, size = 0x3d0 }, # c
     { name = "runtime_record_copy", vram = 0x8002d800, size = 0x84 }, # c
     { name = "func_8002D884", vram = 0x8002d884, size = 0x3c }, # leaf
     { name = "func_8002D8C0", vram = 0x8002d8c0, size = 0x8 }, # stub

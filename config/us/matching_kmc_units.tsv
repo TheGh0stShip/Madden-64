@@ -734,3 +734,4 @@
 0x61280	0xB4	src/code/object_shared_buffers_assign.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0c29af0e509a78f289d023c9374101f4129152e6af4419d5ac823c90da81f2a2
 0x45F94	0xBC	src/code/display_vertex_batch_append.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c370e9bf77cfbc794f6db63fab794da0c4159d8e13f46c5580d07622beebcb7b
 0x2ED7C	0x410	src/code/memory_move_overlap.c	--assembler=asn64 -O1 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b3bb564c51a03ca20924ca9333245cd921a5d89043e428576d6ad67b8f451a50
+0x2E030	0x3D0	src/code/matrix_multiply_fixed.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	164c13f772d6abec1bc2375eb85b10e198f58504ee7e8e222b9cdda26d44d8dc
