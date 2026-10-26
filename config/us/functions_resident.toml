@@ -84,7 +84,7 @@ functions = [
     { name = "func_8000B7A4", vram = 0x8000b7a4, size = 0x40 }, # c
     { name = "object_resource_cleanup", vram = 0x8000b7e4, size = 0x7c }, # c
     { name = "display_surface_clone", vram = 0x8000b860, size = 0xcc }, # asm
-    { name = "display_buffer_sync", vram = 0x8000b92c, size = 0xa8 }, # asm
+    { name = "display_buffer_sync", vram = 0x8000b92c, size = 0xa8 }, # c
     { name = "display_system_run", vram = 0x8000b9d4, size = 0x11c }, # asm
     { name = "display_page_activate", vram = 0x8000baf0, size = 0xa8 }, # c
     { name = "display_page_configure", vram = 0x8000bb98, size = 0xdc }, # asm
@@ -428,7 +428,7 @@ functions = [
     { name = "func_80024B90", vram = 0x80024b90, size = 0x44 }, # leaf
     { name = "func_80024BD4", vram = 0x80024bd4, size = 0x44 }, # leaf
     { name = "frame_group_value_resolve", vram = 0x80024c18, size = 0x84 }, # asm
-    { name = "frame_index_resolve", vram = 0x80024c9c, size = 0x8c }, # asm
+    { name = "frame_index_resolve", vram = 0x80024c9c, size = 0x8c }, # c
     { name = "roster_state_process", vram = 0x80024d28, size = 0x174 }, # asm
     { name = "func_80024E9C", vram = 0x80024e9c, size = 0x40 }, # c
     { name = "interface_transfer_begin", vram = 0x80024edc, size = 0x80 }, # c
@@ -954,12 +954,12 @@ functions = [
     { name = "func_8004291C", vram = 0x8004291c, size = 0x40 }, # c
     { name = "color_tables_refresh", vram = 0x8004295c, size = 0xa8 }, # c
     { name = "display_command_process", vram = 0x80042a04, size = 0x3c4 }, # asm
-    { name = "display_command_link", vram = 0x80042dc8, size = 0xc8 }, # asm
+    { name = "display_command_link", vram = 0x80042dc8, size = 0xc8 }, # c
     { name = "func_80042E90", vram = 0x80042e90, size = 0x30 }, # leaf
     { name = "func_80042EC0", vram = 0x80042ec0, size = 0x90 }, # leaf
     { name = "display_command_finalize", vram = 0x80042f50, size = 0x1a4 }, # asm
     { name = "func_800430F4", vram = 0x800430f4, size = 0x20 }, # leaf
-    { name = "stream_position_resolve", vram = 0x80043114, size = 0xa8 }, # asm
+    { name = "stream_position_resolve", vram = 0x80043114, size = 0xa8 }, # c
     { name = "func_800431BC", vram = 0x800431bc, size = 0x124 }, # asm
     { name = "func_800432E0", vram = 0x800432e0, size = 0x124 }, # asm
     { name = "rectangle_overlap_test", vram = 0x80043404, size = 0x84 }, # asm

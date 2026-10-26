@@ -23,7 +23,6 @@
 0x4FDD8	0x30	src/libultra/os_writeback_dcache_all.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e2e910cf2dcf19b0d2826eea41187a62acc4584b8fb7316cc74acbd40f4b04f
 0x4F648	0xC0	src/libultra/os_probe_tlb.s	-O2 -G0 -mips3 -mgp32 -mfp32	349227b84b51cb246abaf9de4bf56eba78054d85575e1bfb09acfdb8d1bc0c28
 0x4DD68	0xA0	src/libultra/os_set_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	86cb8015715ed857a8877c8f765e022385d51b5c1e2cb8645586b08a05f91a23
-0x2589C	0x8C	src/code/frame_index_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	44bb99165571ea6a2bf9e19dc599eb104d73e6c8009924540d11328c5d818179
 0x3AEC8	0x90	src/code/frame_halfword_remove.s	-O2 -G0 -mips3 -mgp32 -mfp32	07b9ae64e56421d140d70bd5a8c212de905e2170d6829232c662d45772de0530
 0xDBA4	0x78	src/code/object_active_children_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
 0x3A350	0x78	src/code/roster_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e32c8d15b061901377f1f128d8c3a478272a5b82f8e2fc1ccde0c0f0a7e31a3
@@ -56,12 +55,10 @@
 0xECBC	0xA8	src/code/vector_slot_negate_store.s	-O2 -G0 -mips3 -mgp32 -mfp32	55473fa5c5dce4b546509320948142d4de7a8c7f030c60161e6160d457afbcc9
 0xED64	0xA8	src/code/vector_transform_to_bytes.s	-O2 -G0 -mips3 -mgp32 -mfp32	556db0309262b5ba8ffbcd303a96c96f4508ded5f8601905eb42ac5a3ee4dbe3
 0x453C4	0xA8	src/code/grid_handles_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e3a4f42d3df7090589d4b14067683a83aa3851f7ac70974f1ebc8c8ea8b1e5e
-0xC52C	0xA8	src/code/display_buffer_sync.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ed05d530c6bb2d8d8be5584adf81f739ca91d650d791452b61103c6f79ad2a6
 0x25C6C	0xA8	src/code/menu_buffer_prepare_once.s	-O2 -G0 -mips3 -mgp32 -mfp32	cd687517004713babe9dbb0cb90718b4befef8e562ec309880550c715d507b93
 0x3419C	0xA8	src/code/resource_node_unlink.s	-O2 -G0 -mips3 -mgp32 -mfp32	ad0c9dcd8d459ae503d85e2cc5bc35131309e1fd0ef9bc04f3121cf97492ef8b
 0x35ED8	0xA8	src/code/resource_request_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	c62d31a658e2352fb60dbcf502d721e8d77856308c17d182ee71609b020f0089
 0x3D20C	0xA8	src/code/audio_value_seek.s	-O2 -G0 -mips3 -mgp32 -mfp32	66a573daa1b0378edfcbe3458970cf75ef7ebbdc2a47e38d089b115cac4b2dee
-0x43D14	0xA8	src/code/stream_position_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	4616b7c8d4eeecfb0ce8afaada899d46d56821d9af34c19988c47b750480e90f
 0xC2F8	0xAC	src/code/display_surface_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	c3889cc86541c07c94aeb46e2ae573273ffb1f046f70b5cae7cfb73bcf506353
 0x1A398	0xAC	src/code/strided_rows_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	c59922ddfe5a62cfec4638609148d0a3bf45b1535dca8d4f6229eb165f1885ee
 0x1B7C4	0xAC	src/code/ui_context_clone.s	-O2 -G0 -mips3 -mgp32 -mfp32	ab2e2118247e0723d05a46ce45b890033c146483fdbeeb2317bccf6527d40ec8
@@ -96,7 +93,6 @@
 0x29FCC	0xC8	src/code/menu_cursor_state_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	49ba6c42f3e9d00b34806c600086024f0b26bb80787c8f1b52a6e13146aaf370
 0x3A1AC	0xC8	src/code/resource_groups_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc499dc3bf2057a11eb33f860f6981ecce8695e71d54fb071049d44816ee5773
 0x3EEC0	0xC8	src/code/audio_name_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	bd3cc36156c1133d9163fffbe6a5ab46fd13bf86d94d934756c2175fb7d2a18a
-0x439C8	0xC8	src/code/display_command_link.s	-O2 -G0 -mips3 -mgp32 -mfp32	3c1cca20f11227dbe6321ef4bc0986ed44aab6b99fb96422a3968f71a025a884
 0x5D804	0xC8	src/code/object_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
 0xC460	0xCC	src/code/display_surface_clone.s	-O2 -G0 -mips3 -mgp32 -mfp32	616da9367056e81fb36909814f7bc4a95cff8e0622983348e86ab8ba502aca28
 0x30AA4	0xCC	src/code/runtime_node_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	d4d2665a3ed1b996d6ae3f4b359c30731eb366e160741b7568cb90eb96b24b54
