@@ -703,3 +703,7 @@
 0x3FC60	0x10C	src/code/func_8003F060.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	52c883c055ad028900d490e2de00769171fff70045a5a5a2e64a76e796e477d7
 0x24860	0xE4	src/code/team_stat_value_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b50b9d86f8b3cd938ed1f41a6d85440db33840afbacbbf6d7c758b8310b92c32
 0x5D804	0xC8	src/code/object_stream_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
+0x2D100	0xE4	src/code/team_record_pointer_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a9d599b2859be23b82cb78537a62448a91efea242a21df1c5fc43777dbccef1d
+0x3A6CC	0xE4	src/code/roster_runtime_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d61621aaa6a8dff87c9f777ac9c539184e0f38af7120cf63af48973fa74dabf3
+0x630F8	0xE8	src/code/object_lookup_table_create.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7e7774b27b4649246bb9c873493fd3c31fc0a8df5b5a959211857116667c2934
+0x63D04	0xD4	src/code/object_stream_state_create.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	69830bba04a83e47b9889fcd960f4eadbb9da0346b742929a563b633df87e78e

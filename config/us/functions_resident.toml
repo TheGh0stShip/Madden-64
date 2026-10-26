@@ -512,7 +512,7 @@ functions = [
     { name = "func_8002C1F4", vram = 0x8002c1f4, size = 0x110 }, # asm
     { name = "func_8002C304", vram = 0x8002c304, size = 0xf8 }, # asm
     { name = "func_8002C3FC", vram = 0x8002c3fc, size = 0x104 }, # asm
-    { name = "team_record_pointer_find", vram = 0x8002c500, size = 0xe4 }, # asm
+    { name = "team_record_pointer_find", vram = 0x8002c500, size = 0xe4 }, # c
     { name = "team_player_stats_update", vram = 0x8002c5e4, size = 0x17c }, # asm
     { name = "func_8002C760", vram = 0x8002c760, size = 0x114 }, # asm
     { name = "team_player_pair_update", vram = 0x8002c874, size = 0x13c }, # asm
@@ -771,7 +771,7 @@ functions = [
     { name = "func_800397C8", vram = 0x800397c8, size = 0x5c }, # c
     { name = "func_80039824", vram = 0x80039824, size = 0x2c }, # c
     { name = "roster_record_process", vram = 0x80039850, size = 0x27c }, # asm
-    { name = "roster_runtime_copy", vram = 0x80039acc, size = 0xe4 }, # asm
+    { name = "roster_runtime_copy", vram = 0x80039acc, size = 0xe4 }, # c
     { name = "func_80039BB0", vram = 0x80039bb0, size = 0x64 }, # c
     { name = "roster_teams_swap", vram = 0x80039c14, size = 0xf0 }, # asm
     { name = "roster_team_update", vram = 0x80039d04, size = 0x204 }, # asm
@@ -1336,7 +1336,7 @@ functions = [
     { name = "func_80061F10", vram = 0x80061f10, size = 0x144 }, # asm
     { name = "func_80062054", vram = 0x80062054, size = 0x11c }, # asm
     { name = "object_lookup_table_build", vram = 0x80062170, size = 0x388 }, # asm
-    { name = "object_lookup_table_create", vram = 0x800624f8, size = 0xe8 }, # asm
+    { name = "object_lookup_table_create", vram = 0x800624f8, size = 0xe8 }, # c
     { name = "func_800625E0", vram = 0x800625e0, size = 0x40 }, # c
     { name = "func_80062620", vram = 0x80062620, size = 0x8 }, # stub
     { name = "object_stream_state_process", vram = 0x80062628, size = 0x1b8 }, # asm
@@ -1348,7 +1348,7 @@ functions = [
     { name = "func_80062C40", vram = 0x80062c40, size = 0x68 }, # c
     { name = "object_stream_state_update", vram = 0x80062ca8, size = 0x1c0 }, # asm
     { name = "object_stream_decode", vram = 0x80062e68, size = 0x29c }, # asm
-    { name = "object_stream_state_create", vram = 0x80063104, size = 0xd4 }, # asm
+    { name = "object_stream_state_create", vram = 0x80063104, size = 0xd4 }, # c
     { name = "func_800631D8", vram = 0x800631d8, size = 0x3c }, # leaf
     { name = "func_80063214", vram = 0x80063214, size = 0x3c }, # leaf
     { name = "func_80063250", vram = 0x80063250, size = 0x78 }, # c
