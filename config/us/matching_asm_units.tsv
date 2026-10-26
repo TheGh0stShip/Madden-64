@@ -397,6 +397,4 @@
 0x643A4	0xF8	src/code/func_800637A4.s	-O2 -G0 -mips3 -mgp32 -mfp32	b49b118e173468d19684636e5389d205d2dbaff39e87004914a856cc8fb66ba6
 0x6449C	0x130	src/code/func_8006389C.s	-O2 -G0 -mips3 -mgp32 -mfp32	872b25523f195143e816b68ff3feeb0f306d9e7d1fdae9c2bc96b8c2f1ecbcc4
 0x645CC	0x140	src/code/func_800639CC.s	-O2 -G0 -mips3 -mgp32 -mfp32	fb5994e8701fd43786fd8eaf7fca7509ffbaaa8cd4d311ce33ce94efb3bc7e47
-0x64B60	0x130	src/code/func_80063F60.s	-O2 -G0 -mips3 -mgp32 -mfp32	333db92efd9ab1576a0ac59b26affe123d6e010b71a6f09aae080cda811573fc
-0x64C90	0x134	src/code/func_80064090.s	-O2 -G0 -mips3 -mgp32 -mfp32	648d037aad9eab475151b87a0abaef4145acfa69dec47f391c3329964f0da5bf
 0x653F0	0x13C	src/code/func_800647F0.s	-O2 -G0 -mips3 -mgp32 -mfp32	3b108c6d6a9b9d641c7e6a100a716a75ed10e6035ad1ccda409651188a9a8560
