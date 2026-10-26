@@ -681,3 +681,4 @@
 0x3B92C	0x154	src/code/audio_frame_record_copy.c	--assembler=asn64 --symbol=D_80073430:0x80073430 --symbol=D_8007343C:0x8007343C --symbol=D_80073438:0x80073438 --symbol=func_800372B4:0x800372B4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c6f38eecefdd0ff4028ad89bfe0736c0644ccb397d0f6a7fef927487fd7fb5c9
 0x3D7D8	0x2B0	src/code/audio_voice_render.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5941b6a8330ddbde3081f9b4519dd5f1a6515270e15a7afcd636da8469c6dd2f
 0x3EEC0	0xC8	src/code/audio_name_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bd3cc36156c1133d9163fffbe6a5ab46fd13bf86d94d934756c2175fb7d2a18a
+0x38738	0xF4	src/code/audio_record_remap.c	--assembler=asn64 --section-base=.rodata:0x80002A68 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	41bc70bb706bd675834b3f447ae780469f1da60ab777502843ddc7bf0966676e

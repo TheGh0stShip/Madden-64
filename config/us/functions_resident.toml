@@ -753,7 +753,7 @@ functions = [
     { name = "frame_attribute_set", vram = 0x800374f0, size = 0xa4 }, # c
     { name = "audio_voice_update", vram = 0x80037594, size = 0x568 }, # asm
     { name = "func_80037AFC", vram = 0x80037afc, size = 0x3c }, # leaf
-    { name = "audio_record_remap", vram = 0x80037b38, size = 0xf4 }, # asm
+    { name = "audio_record_remap", vram = 0x80037b38, size = 0xf4 }, # c
     { name = "func_80037C2C", vram = 0x80037c2c, size = 0x108 }, # asm
     { name = "func_80037D34", vram = 0x80037d34, size = 0x70 }, # c
     { name = "func_80037DA4", vram = 0x80037da4, size = 0x164 }, # asm
