@@ -257,7 +257,7 @@ functions = [
     { name = "resource_file_load", vram = 0x80017030, size = 0x390 }, # asm
     { name = "func_800173C0", vram = 0x800173c0, size = 0x12c }, # c
     { name = "func_800174EC", vram = 0x800174ec, size = 0x18 }, # leaf
-    { name = "func_80017504", vram = 0x80017504, size = 0x14c }, # asm
+    { name = "func_80017504", vram = 0x80017504, size = 0x14c }, # c
     { name = "resource_archive_decode", vram = 0x80017650, size = 0x1f0 }, # asm
     { name = "func_80017840", vram = 0x80017840, size = 0x40 }, # leaf
     { name = "resource_archive_open", vram = 0x80017880, size = 0x300 }, # asm

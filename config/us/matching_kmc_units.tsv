@@ -722,3 +722,4 @@
 0x17FC0	0x12C	src/code/func_800173C0.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	37167f7f36e32d77d4f34cb985302f3f1a816fe0774e38c68c6fa6d7e972e8a5
 0x201D4	0x138	src/code/func_8001F5D4.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9a183d5bdc2cc9c81da7205fb2a2c4ef1e0d03c45dcb6b3eb946d6919370575a
 0x21FE4	0x118	src/code/game_mode_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c292fe3cec665b6e4f4e2e65980c061ab7e171c6b3917e527a1935b1480369d5
+0x18104	0x14C	src/code/func_80017504.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	27dfef502fd8f864cf1fd88c437dbe77cd25414d910f8d92705fff6112f4a9cd
