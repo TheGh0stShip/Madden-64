@@ -40,7 +40,6 @@
 0x330FC	0xC4	src/code/resource_pool_reset_wait.s	-O2 -G0 -mips3 -mgp32 -mfp32	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
 0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
 0x5D804	0xC8	src/code/object_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
-0x40E74	0xD0	src/code/audio_range_randomize.s	-O2 -G0 -mips3 -mgp32 -mfp32	b7beb92c49adae993b236c7a9ecd91d012b4571dfeaf15e9615d967819c168e9
 0x43448	0xD4	src/code/display_pipeline_setup.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc1bce253d3f85c7c88c07e83a55cd2bb9bd91932a619d77bbf8092aeb3da09f
 0x63D04	0xD4	src/code/object_stream_state_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	69830bba04a83e47b9889fcd960f4eadbb9da0346b742929a563b633df87e78e
 0x1AD4C	0xD8	src/code/resource_command_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cec63fbfac1a7db19867df28fda26f0d316e84569b0b26749e16caad8600744
@@ -49,10 +48,8 @@
 0x2A458	0xDC	src/code/play_event_queue_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
 0x33C50	0xDC	src/code/memory_block_split.s	-O2 -G0 -mips3 -mgp32 -mfp32	7d191d556e18131a17dd055bae01e96cc4426f45758a5496d27b80cc7ae86cba
 0x3428C	0xDC	src/code/memory_block_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	de14c54a1a5e84e5501690d97ad6fe33bbe491f0d196b16438f5507a68bda25a
-0x40894	0xDC	src/code/team_slot_available_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	aff6d0ffbbafc359123018c561677ce60b773d5577b0f016bcc2e238d3c136b5
 0x40CF4	0xDC	src/code/audio_record_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	f1784526551e86eaf31cf81c0a858842f3dece0da539687ee17ea8f6bcc80cb1
 0x28D44	0xE0	src/code/play_flags_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	5e67960de9fc342223227211bead4fe35cbf448f8cd0ec07a06eaaaf0746af9c
-0x40B30	0xE0	src/code/audio_record_field_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	b27d4b16c4ec76533f9d0b7dfbbc6c8d2602fc54b34c3c894ef825ad4a9ae9e3
 0x24860	0xE4	src/code/team_stat_value_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	b50b9d86f8b3cd938ed1f41a6d85440db33840afbacbbf6d7c758b8310b92c32
 0x2D100	0xE4	src/code/team_record_pointer_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	a9d599b2859be23b82cb78537a62448a91efea242a21df1c5fc43777dbccef1d
 0x33D74	0xE4	src/code/memory_table_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	d93aa31398617c7a5dc375d4196d2177fafa7efeaac978191731b73cff6d689a

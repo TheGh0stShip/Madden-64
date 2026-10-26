@@ -877,18 +877,18 @@ functions = [
     { name = "audio_sequence_update", vram = 0x8003f6ac, size = 0x394 }, # asm
     { name = "audio_sequence_finalize", vram = 0x8003fa40, size = 0x1b8 }, # asm
     { name = "audio_mapping_lookup", vram = 0x8003fbf8, size = 0x9c }, # c
-    { name = "team_slot_available_test", vram = 0x8003fc94, size = 0xdc }, # asm
+    { name = "team_slot_available_test", vram = 0x8003fc94, size = 0xdc }, # c
     { name = "func_8003FD70", vram = 0x8003fd70, size = 0x14 }, # leaf
     { name = "func_8003FD84", vram = 0x8003fd84, size = 0x10 }, # stub
     { name = "func_8003FD94", vram = 0x8003fd94, size = 0x100 }, # asm
     { name = "func_8003FE94", vram = 0x8003fe94, size = 0x80 }, # leaf
     { name = "func_8003FF14", vram = 0x8003ff14, size = 0x1c }, # leaf
-    { name = "audio_record_field_get", vram = 0x8003ff30, size = 0xe0 }, # asm
+    { name = "audio_record_field_get", vram = 0x8003ff30, size = 0xe0 }, # c
     { name = "audio_slots_release", vram = 0x80040010, size = 0xe4 }, # c
     { name = "audio_record_find", vram = 0x800400f4, size = 0xdc }, # asm
     { name = "func_800401D0", vram = 0x800401d0, size = 0x44 }, # c
     { name = "func_80040214", vram = 0x80040214, size = 0x60 }, # c
-    { name = "audio_range_randomize", vram = 0x80040274, size = 0xd0 }, # asm
+    { name = "audio_range_randomize", vram = 0x80040274, size = 0xd0 }, # c
     { name = "func_80040348", vram = 0x80040348, size = 0x8 }, # asm
     { name = "func_80040350", vram = 0x80040350, size = 0x16c }, # asm
     { name = "func_800404BC", vram = 0x800404bc, size = 0x8 }, # stub
