@@ -1376,9 +1376,9 @@ functions = [
     { name = "func_80064090", vram = 0x80064090, size = 0x134 }, # c
     { name = "object_stream_finalize", vram = 0x800641c4, size = 0x224 }, # c
     { name = "object_stream_commit", vram = 0x800643e8, size = 0x224 }, # c
-    { name = "object_stream_complete", vram = 0x8006460c, size = 0x184 }, # asm
+    { name = "object_stream_complete", vram = 0x8006460c, size = 0x184 }, # c
     { name = "func_80064790", vram = 0x80064790, size = 0x60 }, # c
-    { name = "func_800647F0", vram = 0x800647f0, size = 0x13c }, # asm
+    { name = "func_800647F0", vram = 0x800647f0, size = 0x13c }, # c
     { name = "func_80064930", vram = 0x80064930, size = 0x20 }, # c
     { name = "func_80064950", vram = 0x80064950, size = 0x20 }, # c
     { name = "func_80064970", vram = 0x80064970, size = 0x20 }, # c

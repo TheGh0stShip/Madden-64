@@ -248,7 +248,6 @@
 0x3A028	0x184	src/code/roster_record_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	fbd920cf69bcd619aa3ec533616bbdade5eec662909695f01eae01a3e99bb6de
 0x4459C	0x184	src/code/display_context_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	9dc57a8e25f3c2f97fdd1826a4fb9fb5a6bd476b58acdb1ced3ac69869930210
 0x5FF98	0x184	src/code/image_plane_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	7eca78886fb50761390be654dc92b652ec30d7e1692dcc62972ea560367e741e
-0x6520C	0x184	src/code/object_stream_complete.s	-O2 -G0 -mips3 -mgp32 -mfp32	557a71b1c19686d2969877ba9debae343a5bb1943fe1082b8cee1b1b2e4094b0
 0x59708	0x180	src/code/object_cycle_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	76137ef0a083edb508323ed1e5348f5a961d97b945a0046770dd47742556db76
 0x31874	0x17C	src/code/runtime_callback_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	2241481f337d567fc5f72a15737d1e95e49584e9f2a9ba133ea177e7e54d9c9a
 0x34B24	0x17C	src/code/memory_arena_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	8842bb4526d5433b2bd9c02bb1fa973c70c39a001fa32056e97eb45c14c43fb2
@@ -390,4 +389,3 @@
 0x62C54	0x11C	src/code/func_80062054.s	-O2 -G0 -mips3 -mgp32 -mfp32	f489e4c4cf68af91696fb460911b5db2dde3a150832d0934db692f7ebc3d3247
 0x635C8	0x130	src/code/func_800629C8.s	-O2 -G0 -mips3 -mgp32 -mfp32	6d9e2eb639d3afc9676b9615007a098148113c8b03279c09c4a2eb215db06fbd
 0x6370C	0x134	src/code/func_80062B0C.s	-O2 -G0 -mips3 -mgp32 -mfp32	c391001664c951890a236b93c00843b00f0487711321ca83d119a6dc74f26bd8
-0x653F0	0x13C	src/code/func_800647F0.s	-O2 -G0 -mips3 -mgp32 -mfp32	3b108c6d6a9b9d641c7e6a100a716a75ed10e6035ad1ccda409651188a9a8560

@@ -772,3 +772,5 @@
 0x648A4	0x2BC	src/code/object_stream_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f3b1c634e9767b0b3395545cb55c918b3ffab6421745d9ea9fd967b6a9f7088e
 0x64DC4	0x224	src/code/object_stream_finish.c	--assembler=asn64 -DFUNCTION=object_stream_finalize -DPROCESS=func_80063F60 -DSCALE_SHIFT=0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	97f6e64bf38b6bcbe1590857e4e2086dac94c72b837cadb4459cd57379a1c1b4
 0x64FE8	0x224	src/code/object_stream_finish.c	--assembler=asn64 -DFUNCTION=object_stream_commit -DPROCESS=func_80064090 -DSCALE_SHIFT=7 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	27de99112b2fff28726b369c86b568bc2d6bbb099b4d538d1d2f81b73094dfa3
+0x6520C	0x184	src/code/object_stream_complete.c	--assembler=asn64 --normalizer-enable-KMC-JALR-ARG-BEFORE-STORE-DELAY -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	557a71b1c19686d2969877ba9debae343a5bb1943fe1082b8cee1b1b2e4094b0
+0x653F0	0x13C	src/code/object_stream_create.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3b108c6d6a9b9d641c7e6a100a716a75ed10e6035ad1ccda409651188a9a8560
