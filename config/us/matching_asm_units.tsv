@@ -304,7 +304,6 @@
 0x362C4	0x1A8	src/code/memory_block_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	11b06ea8e816d7059a88332e50bca8367dd3e1c002cbaa5f14bc48b1deaf546a
 0x43B50	0x1A4	src/code/display_command_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	11433d69a0a9aed4a8492224cc853ec5a07b9917466712f7a9ed9c8e4c1f4f2c
 0x28898	0x1A0	src/code/frame_resource_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	cfc9bd4becfdaffa7263133e4ee8f9527306954b53b4101f1cece228bb54afb6
-0x3E064	0x19C	src/code/audio_channel_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	401039070f995fe30102555c69797c9ec499dfb9e7c909844a580937c35f36de
 0x3FF4C	0x19C	src/code/audio_slot_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	aa16095c027917b345cd9c223ebaff1ee0aeb4f088296bf3efec5f272f812db6
 0x1FCC4	0x198	src/code/menu_state_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	926706154e8e8055718ea72cce55d9f33c6527d3c3ef6521232c0714be4a2dc4
 0x22AE0	0x198	src/code/game_session_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	22f36c08bb2e5a3b8262d990ec4235a94b2b8dde83ad5299ec23a9c29696d283
