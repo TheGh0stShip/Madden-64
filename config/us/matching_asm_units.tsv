@@ -137,7 +137,6 @@
 0x3AB08	0x2C8	src/code/roster_table_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	ee0362f743a35a98a8302402058e72a118f95cf44b6ee94a504b30e185448c96
 0x1A710	0x2C0	src/code/resource_display_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	b5101dd440e301a6fef6cc9f5705cf59300242ccbc014136f7c745c42d7dd00d
 0x4588C	0x2BC	src/code/scheduler_task_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	1a402ee81c389a31103a28e8e250d4bccf5619825965c9993370baaee59f7ef7
-0x648A4	0x2BC	src/code/object_stream_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	f3b1c634e9767b0b3395545cb55c918b3ffab6421745d9ea9fd967b6a9f7088e
 0x56E00	0x2B0	src/code/object_animation_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	3a3abfbd12b6f3086b9f36bc5b1a53b69d76797009424cc29f6510b84ec7adf6
 0x2C7B0	0x2AC	src/code/packed_field_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	738906d22be55aa24e94d0c6d441f9fa83da39b279c3f5d8cdb70218489698d5
 0x1692C	0x2A4	src/code/render_state_consume.s	-O2 -G0 -mips3 -mgp32 -mfp32	69b6cbfc61bf5b8666b6511ff20e0193e02892f7860dcdeb5c3d33e5756530cc
@@ -176,8 +175,6 @@
 0x29118	0x22C	src/code/frame_resource_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	a72dd0db4ab3d5baac5c46ceb32207b3309ed239079c8c7bc47b0acb688ec8a3
 0x570B0	0x22C	src/code/object_animation_state_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	249656383e719ba7a8cf6d8a83ba0f03e6b238044914709db5030b47250bc6de
 0x59B2C	0x228	src/code/object_cycle_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	d3c33ad0259e3676278403f3477ce8039793b04daf9cb0d2fa5bc1530b575dc3
-0x64DC4	0x224	src/code/object_stream_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	97f6e64bf38b6bcbe1590857e4e2086dac94c72b837cadb4459cd57379a1c1b4
-0x64FE8	0x224	src/code/object_stream_commit.s	-O2 -G0 -mips3 -mgp32 -mfp32	27de99112b2fff28726b369c86b568bc2d6bbb099b4d538d1d2f81b73094dfa3
 0x37A1C	0x220	src/code/memory_pool_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	52e5906efed4d7ffbf849c69c7dc171f10ef9e811e1bf129827a3d932f103533
 0x23858	0x21C	src/code/gameplay_state_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	a1f60fac198b808669531a21b596412eec0fbe1af9b84afc67006b259840e166
 0x31FAC	0x21C	src/code/runtime_callback_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	9498db540d0af001e01156aebc7012d0170540a36536cf307bfe3d461e9bd02d
