@@ -857,7 +857,7 @@ functions = [
     { name = "func_8003E460", vram = 0x8003e460, size = 0x38 }, # c
     { name = "func_8003E498", vram = 0x8003e498, size = 0x1c }, # leaf
     { name = "func_8003E4B4", vram = 0x8003e4b4, size = 0x5c }, # c
-    { name = "func_8003E510", vram = 0x8003e510, size = 0x158 }, # asm
+    { name = "func_8003E510", vram = 0x8003e510, size = 0x158 }, # c
     { name = "audio_bank_update", vram = 0x8003e668, size = 0x1e8 }, # asm
     { name = "formatted_pair_append", vram = 0x8003e850, size = 0xa4 }, # c
     { name = "string_tail_clear", vram = 0x8003e8f4, size = 0x88 }, # c
