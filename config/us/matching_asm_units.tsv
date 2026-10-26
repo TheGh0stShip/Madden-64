@@ -316,7 +316,6 @@
 0x3F87C	0x194	src/code/audio_sequence_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	4326a3a22df38e78d6e0e48b915c41fc9dfda861b4ad5b04a730375075aa92c7
 0x59D54	0x194	src/code/object_cycle_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	c350605835ec090127ddc23fbca224e68919e908a0893af0b20bd5418f6da289
 0x5D530	0x194	src/code/object_decode_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	6670bce120a97bff01c9c2bcd7a5f555e395e321786e9a4bfc313154f495d3eb
-0x3DED4	0x190	src/code/audio_channel_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	892dbb713e69f0667215cfebe76f89b91a2852442e351220b89432917faf52f3
 0x5FAA0	0x190	src/code/image_plane_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	bca77dd996e34c301aaf23e9c22e15a68cb5b86d0cae4c6775e6e7a67dbe53d1
 0x62980	0x190	src/code/object_lookup_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	4c59ea69e49839ed3a1c7688f1f2adcc2af77d09ac5aff376d58ad4013d7b893
 0x2BDB8	0x18C	src/code/gameplay_interface_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	305d379df74bba16a48ca84d1fa8dc69d6902318c4a751d7bf6905dfbfdd25a7
