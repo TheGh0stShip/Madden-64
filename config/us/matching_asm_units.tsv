@@ -181,7 +181,6 @@
 0x29DD4	0x1F8	src/code/menu_mode_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	32acffb7892567d36a15c97b0ced5e8dce0f7fb60ca96f225b224a011445f616
 0x584B8	0x1F8	src/code/object_animation_step.s	-O2 -G0 -mips3 -mgp32 -mfp32	4229ab577c6489a359dd63e74150081923acd5f360218546ff36ddbe05f950c7
 0x60D78	0x1F8	src/code/image_table_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	3d4fa009fa2668eb624d143f27717b9ee15c598119f5e9e0ffb5900564980a78
-0x18250	0x1F0	src/code/resource_archive_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	aa5cccfedf721646b522a20b4875e57f9fb76a958894ab6ea0e502859b16c718
 0x1E2A8	0x1F0	src/code/ui_text_layout_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	f1265a75b3d4aa57d03fc0038b430d5a3e790e77daaf33d9f7c6d43620ab4f98
 0x2A898	0x1F0	src/code/menu_record_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	8db15eab71898a8c05f7b3112c0b1f225f6bbaa21ec707688241f51447d96eed
 0x3F268	0x1E8	src/code/audio_bank_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	44520e467607e9a39bf9c21a5d26af3fa1c367b709fcfc1b7973cae2790e8271

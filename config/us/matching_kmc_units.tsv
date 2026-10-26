@@ -790,3 +790,4 @@
 0x2EC1C	0xEC	src/code/matrix_vector_transform.c	--assembler=asn64 --normalizer-enable-KMC-FP-PAIR-WORDS -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f4f8a91fb416038788f5a0f0479fe4405e8d0320c31071ab4b5e0ea6e73979d9
 0x3428C	0xDC	src/code/memory_block_insert.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	de14c54a1a5e84e5501690d97ad6fe33bbe491f0d196b16438f5507a68bda25a
 0x2A458	0xDC	src/code/play_event_queue_advance.c	--assembler=asn64 --normalizer-enable-KMC-PLAY-QUEUE-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
+0x18250	0x1F0	src/code/resource_archive_decode.c	--assembler=asn64 --normalizer-enable-KMC-ARCHIVE-DECODE-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aa5cccfedf721646b522a20b4875e57f9fb76a958894ab6ea0e502859b16c718
