@@ -707,3 +707,4 @@
 0x3A6CC	0xE4	src/code/roster_runtime_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d61621aaa6a8dff87c9f777ac9c539184e0f38af7120cf63af48973fa74dabf3
 0x630F8	0xE8	src/code/object_lookup_table_create.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7e7774b27b4649246bb9c873493fd3c31fc0a8df5b5a959211857116667c2934
 0x63D04	0xD4	src/code/object_stream_state_create.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	69830bba04a83e47b9889fcd960f4eadbb9da0346b742929a563b633df87e78e
+0x1B870	0x108	src/code/resource_context_load.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ff93daa49ca6141d33c6bccee63ab23b75cb0bac2b82b08eb205f914923da726
