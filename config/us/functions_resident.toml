@@ -438,8 +438,8 @@ functions = [
     { name = "menu_buffer_prepare_once", vram = 0x8002506c, size = 0xa8 }, # c
     { name = "func_80025114", vram = 0x80025114, size = 0x38 }, # c
     { name = "gameplay_state_render", vram = 0x8002514c, size = 0x648 }, # asm
-    { name = "team_event_append", vram = 0x80025794, size = 0xd8 }, # asm
-    { name = "team_event_append_secondary", vram = 0x8002586c, size = 0xd8 }, # asm
+    { name = "team_event_append", vram = 0x80025794, size = 0xd8 }, # c
+    { name = "team_event_append_secondary", vram = 0x8002586c, size = 0xd8 }, # c
     { name = "roster_stat_add", vram = 0x80025944, size = 0xa0 }, # asm
     { name = "func_800259E4", vram = 0x800259e4, size = 0x68 }, # leaf
     { name = "func_80025A4C", vram = 0x80025a4c, size = 0x6c }, # leaf
@@ -494,7 +494,7 @@ functions = [
     { name = "interface_lowest_cost_select", vram = 0x8002a918, size = 0x9c }, # asm
     { name = "league_best_player_find", vram = 0x8002a9b4, size = 0xd8 }, # asm
     { name = "func_8002AA8C", vram = 0x8002aa8c, size = 0x10c }, # asm
-    { name = "team_best_slot_find", vram = 0x8002ab98, size = 0xd0 }, # asm
+    { name = "team_best_slot_find", vram = 0x8002ab98, size = 0xd0 }, # c
     { name = "gameplay_interface_dispatch", vram = 0x8002ac68, size = 0x550 }, # asm
     { name = "gameplay_interface_configure", vram = 0x8002b1b8, size = 0x18c }, # asm
     { name = "func_8002B344", vram = 0x8002b344, size = 0x110 }, # asm

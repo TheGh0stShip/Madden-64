@@ -610,3 +610,6 @@
 0x45790	0xB8	src/code/grid_pair_dispatch.c	--assembler=asn64 --symbol=D_8007A908:0x8007A908 --symbol=D_8007A90C:0x8007A90C -O2 -G0 -mips3 -mgp32 -mfp32	f63b82907508e21f8e6e652cdd22a201cf433c15a1a3615b1443229aa866f1c2
 0x44F64	0xC0	src/code/grid_record_initialize.c	--assembler=asn64 --symbol=D_800748E8:0x800748E8 --symbol=D_80074A60:0x80074A60 -O2 -G0 -mips3 -mgp32 -mfp32	b05c20a030ff9cc847caeea6593568ecf438ed2f3a60d9064ac386381c5f3125
 0x3C4FC	0xC4	src/code/menu_grid_record_dispatch.c	--assembler=asn64 --symbol=D_80080D6A:0x80080D6A --symbol=D_80085040:0x80085040 -O2 -G0 -mips3 -mgp32 -mfp32	6829bdf2a52c6f3e7cd1fa83720177795c4d36578e2214cd67acda668a88fc22
+0x26394	0xD8	src/code/team_event_append.c	--assembler=asn64 --symbol=D_80089320:0x80089320 --symbol=D_80082CA8:0x80082CA8 -O2 -G0 -mips3 -mgp32 -mfp32	963af8ed847281fb8e1aa2d139b0b25c87d1f7e433509c3cc1c8f9ede0418e32
+0x2646C	0xD8	src/code/team_event_append_secondary.c	--assembler=asn64 --symbol=D_80089320:0x80089320 --symbol=D_80082CA8:0x80082CA8 -O2 -G0 -mips3 -mgp32 -mfp32	963af8ed847281fb8e1aa2d139b0b25c87d1f7e433509c3cc1c8f9ede0418e32
+0x2B798	0xD0	src/code/team_best_slot_find.c	--assembler=asn64 --symbol=D_80080CFC:0x80080CFC -O2 -G0 -mips3 -mgp32 -mfp32	b815668b77a4299b04415fced2e221e51f9f1f71643f960e22e7927c10a69a13
