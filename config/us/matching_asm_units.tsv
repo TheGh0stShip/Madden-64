@@ -318,7 +318,6 @@
 0x5FAA0	0x190	src/code/image_plane_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	bca77dd996e34c301aaf23e9c22e15a68cb5b86d0cae4c6775e6e7a67dbe53d1
 0x62980	0x190	src/code/object_lookup_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	4c59ea69e49839ed3a1c7688f1f2adcc2af77d09ac5aff376d58ad4013d7b893
 0x2BDB8	0x18C	src/code/gameplay_interface_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	305d379df74bba16a48ca84d1fa8dc69d6902318c4a751d7bf6905dfbfdd25a7
-0x3E200	0x18C	src/code/audio_channel_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	a883a783720447bbdd39d72f38328d9d8f9ce55f7b1dfa91df296e655572252e
 0x44B7C	0x18C	src/code/display_frame_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	49bc5f02a4f3b851176da35ff998e6b682c09fee29258dbd9a347dc12ce067d3
 0x5C08C	0x188	src/code/object_geometry_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	669ad0962d57724dd96055788ecab4143d749e608734aac0ea91ea354307200f
 0x1B324	0x184	src/code/resource_node_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	a8f3323b383fa0af2749b09857ef38625ca48319047d2e023155bdc2deb563b4
