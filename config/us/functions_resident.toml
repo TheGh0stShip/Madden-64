@@ -831,7 +831,7 @@ functions = [
     { name = "func_8003CBC8", vram = 0x8003cbc8, size = 0x10 }, # stub
     { name = "audio_voice_render", vram = 0x8003cbd8, size = 0x2b0 }, # asm
     { name = "func_8003CE88", vram = 0x8003ce88, size = 0x30 }, # c
-    { name = "audio_range_render", vram = 0x8003ceb8, size = 0xc0 }, # asm
+    { name = "audio_range_render", vram = 0x8003ceb8, size = 0xc0 }, # c
     { name = "func_8003CF78", vram = 0x8003cf78, size = 0x28 }, # c
     { name = "audio_position_prepare", vram = 0x8003cfa0, size = 0xd4 }, # c
     { name = "func_8003D074", vram = 0x8003d074, size = 0x50 }, # c
