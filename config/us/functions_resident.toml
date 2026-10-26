@@ -363,7 +363,7 @@ functions = [
     { name = "func_8001F754", vram = 0x8001f754, size = 0x38 }, # leaf
     { name = "player_index_selection_set", vram = 0x8001f78c, size = 0x90 }, # c
     { name = "func_8001F81C", vram = 0x8001f81c, size = 0x2c }, # leaf
-    { name = "menu_player_finalize", vram = 0x8001f848, size = 0x1c4 }, # asm
+    { name = "menu_player_finalize", vram = 0x8001f848, size = 0x1c4 }, # c
     { name = "func_8001FA0C", vram = 0x8001fa0c, size = 0x10 }, # stub
     { name = "func_8001FA20", vram = 0x8001fa20, size = 0x18 }, # leaf
     { name = "func_8001FA38", vram = 0x8001fa38, size = 0x18 }, # leaf
