@@ -269,7 +269,7 @@ functions = [
     { name = "func_80017CDC", vram = 0x80017cdc, size = 0x10 }, # stub
     { name = "resource_archive_finalize", vram = 0x80017cec, size = 0x1c0 }, # c
     { name = "func_80017EAC", vram = 0x80017eac, size = 0x24 }, # c
-    { name = "resource_archive_commit", vram = 0x80017ed0, size = 0x178 }, # asm
+    { name = "resource_archive_commit", vram = 0x80017ed0, size = 0x178 }, # c
     { name = "func_80018048", vram = 0x80018048, size = 0x8 }, # stub
     { name = "func_80018050", vram = 0x80018050, size = 0x58 }, # c
     { name = "resource_archive_process", vram = 0x800180a8, size = 0x498 }, # asm
@@ -1297,7 +1297,7 @@ functions = [
     { name = "func_8005F040", vram = 0x8005f040, size = 0x11c }, # asm
     { name = "func_8005F15C", vram = 0x8005f15c, size = 0x74 }, # c
     { name = "func_8005F1D0", vram = 0x8005f1d0, size = 0xdc }, # asm
-    { name = "byte_plane_filter", vram = 0x8005f2ac, size = 0xec }, # asm
+    { name = "byte_plane_filter", vram = 0x8005f2ac, size = 0xec }, # c
     { name = "image_plane_process", vram = 0x8005f398, size = 0x184 }, # asm
     { name = "image_plane_transform", vram = 0x8005f51c, size = 0x348 }, # asm
     { name = "func_8005F868", vram = 0x8005f868, size = 0x130 }, # asm

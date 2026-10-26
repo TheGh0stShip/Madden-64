@@ -84,7 +84,6 @@
 0x46050	0xE8	src/code/display_strip_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	a523820edc5fd86786070e78c60f4afa205b09fae7aa23498a6e505e80c7acaf
 0x46220	0xE4	src/code/display_overlay_flush.s	-O2 -G0 -mips3 -mgp32 -mfp32	c7373c13dabc186f1e774c25545c14d8c533188cd7667f92921d64acba64c7e4
 0x5DB24	0xF0	src/code/object_decode_state_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	556473e391ebff13e6e2caa0db3e86d08eb51a3b6602f1d48dfa08f6723cf1f4
-0x5FEAC	0xEC	src/code/byte_plane_filter.s	-O2 -G0 -mips3 -mgp32 -mfp32	dbfd355f2cd9b4b5522eba8403d1d53b6a0136390ec04ca1dd48cb20759f2e73
 0x630F8	0xE8	src/code/object_lookup_table_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	7e7774b27b4649246bb9c873493fd3c31fc0a8df5b5a959211857116667c2934
 0xE340	0xF4	src/code/display_node_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	f3612a0884c57bcd8f5ec18f7e4a389649ebdc39b618eeabf87dfe3bdbe98994
 0x345B0	0xF4	src/code/memory_table_create_with_data.s	-O2 -G0 -mips3 -mgp32 -mfp32	3f3b10d45bec06d780b3cf4ff4a27266d73b6f00747ecda44259e9cafbc7b05a
@@ -355,7 +354,6 @@
 0x35D5C	0x17C	src/code/memory_block_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	98719db3c0e0241613b9f2279b0672c8962add27a17f6aa388924ed3803cca11
 0x3C968	0x17C	src/code/audio_stream_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	6a441895a5887721ebe86226d8da7563d4732fa6cb6f3e8188b420595b7c13d0
 0x3F5B0	0x17C	src/code/audio_bank_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	948999baf435c93e571ab77f27345dfbf42574168971cd399e17b81ec57c876b
-0x18AD0	0x178	src/code/resource_archive_commit.s	-O2 -G0 -mips3 -mgp32 -mfp32	d4a2b790c94a058db18b82035fc9500d8c1146dd2504e79d8f7b81aada75c5e8
 0x1ABD4	0x178	src/code/resource_display_commit.s	-O2 -G0 -mips3 -mgp32 -mfp32	d0b9b9fdf32932abff677cb3efd251f5f65b0e423bffb69a95cab984eb9f6a97
 0x1C1C0	0x178	src/code/resource_buffers_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	e758b5858366bd13b02692361bb2e5423a12ee79da8f238dbf998f7c3e2d0f9e
 0x36B88	0x178	src/code/memory_pool_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	25725cbda057fa1e39b9e389afdd537ef6fdb8feddd619e30bbb7a426105e779
