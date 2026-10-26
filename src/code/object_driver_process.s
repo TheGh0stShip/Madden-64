@@ -108,7 +108,7 @@ object_driver_process:
     jal         func_8005CF24
     addu        $a0, $s0, $zero
 .L80055D28:
-    jal         func_8005D334
+    jal         object_subresources_allocate
     addu        $a0, $s0, $zero
     lw          $v0, 0xE0($s0)
     beqz        $v0, .L80055D5C

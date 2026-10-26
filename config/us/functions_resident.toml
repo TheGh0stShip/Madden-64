@@ -1283,7 +1283,7 @@ functions = [
     { name = "object_decode_state_create", vram = 0x8005cf24, size = 0xf0 }, # c
     { name = "func_8005D018", vram = 0x8005d018, size = 0x8 }, # asm
     { name = "object_decode_transform", vram = 0x8005d020, size = 0x314 }, # asm
-    { name = "func_8005D334", vram = 0x8005d334, size = 0xcc }, # asm
+    { name = "object_subresources_allocate", vram = 0x8005d334, size = 0xcc }, # c
     { name = "object_block_transform", vram = 0x8005d400, size = 0x550 }, # asm
     { name = "object_rows_decode", vram = 0x8005d950, size = 0x504 }, # asm
     { name = "object_plane_decode", vram = 0x8005de60, size = 0x788 }, # asm

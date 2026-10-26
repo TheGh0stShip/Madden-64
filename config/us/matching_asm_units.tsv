@@ -349,7 +349,6 @@
 0x5D8CC	0x134	src/code/func_8005CCCC.s	-O2 -G0 -mips3 -mgp32 -mfp32	a9cc607a5a8cc24b5e9d321023f8d584dfb25ce9eb92f008105e15d460a6eefd
 0x5DA00	0x124	src/code/func_8005CE00.s	-O2 -G0 -mips3 -mgp32 -mfp32	2a52653687a5a938c74be666fdf7b28c267765fcd8ff7bb645fa0c2b34460016
 0x5DC18	0x8	src/code/func_8005D018.s	-O2 -G0 -mips3 -mgp32 -mfp32	ee8d9d21767a1749171f8e1de41aafcca6cc16eff16128a0e77683abfd0c817c
-0x5DF34	0xCC	src/code/func_8005D334.s	-O2 -G0 -mips3 -mgp32 -mfp32	20278d9ad85a198c595bd3af40f37cc7372ed5f7f0c051d167b9101441f25fbb
 0x5FC40	0x11C	src/code/func_8005F040.s	-O2 -G0 -mips3 -mgp32 -mfp32	8fde9f652864b6b81e99de431f8705591a9292fd327f2cae9d1f2ba188d91621
 0x5FDD0	0xDC	src/code/func_8005F1D0.s	-O2 -G0 -mips3 -mgp32 -mfp32	fce74a14ac970ad0c3f330965dcfdc22f9c672468e2b237bc44caf3b7e31b621
 0x60468	0x130	src/code/func_8005F868.s	-O2 -G0 -mips3 -mgp32 -mfp32	46e793f52ad67bf315800ceaafdfdd2f62e90fbfe5c358eb90d66aeb073068cb
