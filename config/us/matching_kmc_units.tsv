@@ -758,3 +758,8 @@
 0x44004	0x84	src/code/rectangle_overlap_test.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2cd7c9b89353bb2dc57262e49222b134650efd184b26e8a14b27c24815a40188
 0x44E70	0x84	src/code/texture_scale_configure.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4ac1391ac9363bb7b9d57d253a806a8c9d1c69a2013617c098f6f4db389418e5
 0x45EFC	0x98	src/code/display_vectors_integrate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f7dee0a6db9c3eeda89dc0c50d392c044897ad285ba56eff7c456104a47d86c2
+0xD818	0xB0	src/code/display_viewport_configure.c	--assembler=asn64 --symbol=D_800006A0:0x800006A0 --symbol=D_800006A4:0x800006A4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	efcb5af62b9ff6fe46b46e1812629f404b9d268c55bea3ed64197c204b3652e8
+0x5898	0x9C	src/code/func_80004C98.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	153fca43a871c0c0887ac2cda56da692fe9b9f64546d5d7ade03aa303afc4a35
+0xFF44	0x78	src/code/func_8000F344.c	--assembler=asn64 --symbol=D_800006D0:0x800006D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d428546a8db53fda413179d3899735fd82c8159e62a57ea6eb8f3812dae0b733
+0x6470C	0xCC	src/code/object_list_insert.c	--assembler=asn64 -DFUNCTION=func_80063B0C -DLIST_OFFSET=0x40 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b9574c002324b85ad2fdf758aa72168af02690defea0a1b0eb4d93d7354d0b35
+0x647D8	0xCC	src/code/object_list_insert.c	--assembler=asn64 -DFUNCTION=func_80063BD8 -DLIST_OFFSET=0x44 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6650cdcde4029e3b3e8db7f5d55dcbe7e3e43499dc4f35bd78895c1fe473e728
