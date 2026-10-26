@@ -649,3 +649,4 @@
 0x3F450	0xA4	src/code/formatted_pair_append.c	--assembler=asn64 --symbol=D_80002D18:0x80002D18 --symbol=D_80002D1C:0x80002D1C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	81c5419240707aa23910667bdc65a87219d2e9c52e340c0d03549614cb2f1bf3
 0x223F4	0xE0	src/code/game_session_release.c	--assembler=asn64 --symbol=D_8006A534:0x8006A534 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cfe5ba10b6505a253c7aaaebb5b7d15c4de62bfb899d7170a4c0b15514d102f0
 0x1C04C	0xD0	src/code/display_record_release.c	--assembler=asn64 --symbol=D_800692AC:0x800692AC --symbol=D_8007947C:0x8007947C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f414768564ecbb2e60e8a5d502447da4ed2f0b89d3ff3846340bb155a0c6ae80
+0x188EC	0x1C0	src/code/resource_archive_finalize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e09b94f02c5e3715336d48aa070ffed41f8cc9c1f5365e4a1fb8e823d93c9f37

@@ -307,7 +307,6 @@
 0x641DC	0x1C8	src/code/object_stream_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e375a3c6c34e61bcd33af9cec50ba847afee5253c1e8e85eb3da221711024a8
 0x20448	0x1C4	src/code/menu_player_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	c4cea4ca78a7e774eeec1dd339d002544723c75350bf4e48f524f65477440a2f
 0x400E8	0x1C4	src/code/audio_sequence_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	55aa1a2f1fba84a827e229a39dd1418c636f7c25107af30141a15deb2bbd462d
-0x188EC	0x1C0	src/code/resource_archive_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	e09b94f02c5e3715336d48aa070ffed41f8cc9c1f5365e4a1fb8e823d93c9f37
 0x28AF0	0x1C0	src/code/frame_resource_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	b0a602841c2e528ff71ae2bc1778181fca0788634d2a9b13bbbfa04295098743
 0x41644	0x1C0	src/code/interface_runtime_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	f4dfdc6d1f078de854587ecc1f96366812fbf0304b732dba27ddd9254278c828
 0x638A8	0x1C0	src/code/object_stream_state_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	6f0a554b7f05fee846ba6ba1708a233861dc0b1c9c0205ccad8136c333e6dcb4

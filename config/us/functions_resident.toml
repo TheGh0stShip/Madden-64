@@ -267,7 +267,7 @@ functions = [
     { name = "func_80017CA4", vram = 0x80017ca4, size = 0x24 }, # c
     { name = "func_80017CC8", vram = 0x80017cc8, size = 0x14 }, # leaf
     { name = "func_80017CDC", vram = 0x80017cdc, size = 0x10 }, # stub
-    { name = "resource_archive_finalize", vram = 0x80017cec, size = 0x1c0 }, # asm
+    { name = "resource_archive_finalize", vram = 0x80017cec, size = 0x1c0 }, # c
     { name = "func_80017EAC", vram = 0x80017eac, size = 0x24 }, # c
     { name = "resource_archive_commit", vram = 0x80017ed0, size = 0x178 }, # asm
     { name = "func_80018048", vram = 0x80018048, size = 0x8 }, # stub
