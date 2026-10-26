@@ -628,3 +628,6 @@
 0x42184	0x9C	src/code/audio_chain_flag_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	09e7e4092dff4a95ff549f42527a2a4d19a3f81b46ced176d57c11c8088615ba
 0x41530	0x88	src/code/integer_vectors_submit.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e99a8daa6dd81731d22337b99718b3330d6787c2d398666e8f9d9832dc4e5fe0
 0xFFBC	0x94	src/code/object_index_rows_shift.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	38e3a286b6a4408b2982f307b8a12b2fbd98c1157503384eed0cdfa4ce6e43ba
+0x61334	0x98	src/code/index_planes_accumulate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f64d1f207eaaf8ef85b1141425da927e255308def1a2d8c14e65cfdcaf2644d9
+0x2373C	0x84	src/code/roster_symbol_lookup.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ef1c0e46dfcff4c11e592a4448dd1e1a38505c4040150457e2e0269ecdb26ba6
+0x45D00	0x9C	src/code/display_system_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	191f225271feddde2156caf94717827cdb28ae64036e5d6a853ccc7f77771df1

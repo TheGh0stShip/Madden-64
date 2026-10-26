@@ -409,7 +409,7 @@ functions = [
     { name = "func_80022A3C", vram = 0x80022a3c, size = 0x4c }, # leaf
     { name = "func_80022A88", vram = 0x80022a88, size = 0x50 }, # leaf
     { name = "func_80022AD8", vram = 0x80022ad8, size = 0x64 }, # leaf
-    { name = "roster_symbol_lookup", vram = 0x80022b3c, size = 0x84 }, # asm
+    { name = "roster_symbol_lookup", vram = 0x80022b3c, size = 0x84 }, # c
     { name = "player_mode_apply", vram = 0x80022bc0, size = 0x84 }, # asm
     { name = "func_80022C44", vram = 0x80022c44, size = 0x14 }, # leaf
     { name = "gameplay_state_process", vram = 0x80022c58, size = 0x21c }, # asm
@@ -997,7 +997,7 @@ functions = [
     { name = "func_80044F48", vram = 0x80044f48, size = 0x24 }, # c
     { name = "func_80044F6C", vram = 0x80044f6c, size = 0x28 }, # c
     { name = "func_80044F94", vram = 0x80044f94, size = 0x16c }, # asm
-    { name = "display_system_initialize", vram = 0x80045100, size = 0x9c }, # asm
+    { name = "display_system_initialize", vram = 0x80045100, size = 0x9c }, # c
     { name = "func_8004519C", vram = 0x8004519c, size = 0x2c }, # leaf
     { name = "func_800451C8", vram = 0x800451c8, size = 0x30 }, # leaf
     { name = "box_vertices_build", vram = 0x800451f8, size = 0x94 }, # c
@@ -1314,7 +1314,7 @@ functions = [
     { name = "image_table_decode", vram = 0x80060370, size = 0x1fc }, # asm
     { name = "func_8006056C", vram = 0x8006056c, size = 0x114 }, # asm
     { name = "object_shared_buffers_assign", vram = 0x80060680, size = 0xb4 }, # asm
-    { name = "index_planes_accumulate", vram = 0x80060734, size = 0x98 }, # asm
+    { name = "index_planes_accumulate", vram = 0x80060734, size = 0x98 }, # c
     { name = "indexed_rgb_accumulate", vram = 0x800607cc, size = 0xa4 }, # asm
     { name = "func_80060870", vram = 0x80060870, size = 0x12c }, # asm
     { name = "func_8006099C", vram = 0x8006099c, size = 0x140 }, # asm
