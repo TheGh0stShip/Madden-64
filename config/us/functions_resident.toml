@@ -543,7 +543,7 @@ functions = [
     { name = "matrix_stack_transform_point", vram = 0x8002dd68, size = 0x168 }, # c
     { name = "func_8002DED0", vram = 0x8002ded0, size = 0x24 }, # leaf
     { name = "matrix_stack_export_fixed", vram = 0x8002def4, size = 0x128 }, # c
-    { name = "matrix_vector_transform", vram = 0x8002e01c, size = 0xec }, # asm
+    { name = "matrix_vector_transform", vram = 0x8002e01c, size = 0xec }, # c
     { name = "func_8002E108", vram = 0x8002e108, size = 0x40 }, # leaf
     { name = "func_8002E148", vram = 0x8002e148, size = 0x34 }, # leaf
     { name = "memory_move_overlap", vram = 0x8002e17c, size = 0x410 }, # c
