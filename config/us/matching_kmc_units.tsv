@@ -715,3 +715,4 @@
 0xE0AC	0x110	src/code/object_scene_reset.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	74b1d18e5d8e4d25d821c7279dcbdebc80b40dd1d870c5607dd3d754c7fcfe5c
 0xE598	0x100	src/code/node_resource_attach.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afb4a8ac19ad3b47b7eac4109b774dc471dde54ad73a04be462131cceab059b4
 0xC5D4	0x11C	src/code/display_system_run.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bb3237e291b8ee1f444356772563e67fe63fc379980b22fd7a6eabf4642bb971
+0x1FCC4	0x198	src/code/menu_state_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	926706154e8e8055718ea72cce55d9f33c6527d3c3ef6521232c0714be4a2dc4
