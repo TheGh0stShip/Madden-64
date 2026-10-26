@@ -788,3 +788,4 @@
 0x345B0	0xF4	src/code/memory_table_create_with_data.c	--assembler=asn64 --normalizer-enable-KMC-LATE-S0-SETUP --normalizer-enable-KMC-TABLE-S0-SAVE-ORDER -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3f3b10d45bec06d780b3cf4ff4a27266d73b6f00747ecda44259e9cafbc7b05a
 0x2CD08	0xEC	src/code/team_secondary_stats_accumulate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ee20a9dafe069cf426fcd1622bc99625aef0a776ee4ae8b12dc00879bdef46a2
 0x2EC1C	0xEC	src/code/matrix_vector_transform.c	--assembler=asn64 --normalizer-enable-KMC-FP-PAIR-WORDS -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f4f8a91fb416038788f5a0f0479fe4405e8d0320c31071ab4b5e0ea6e73979d9
+0x3428C	0xDC	src/code/memory_block_insert.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	de14c54a1a5e84e5501690d97ad6fe33bbe491f0d196b16438f5507a68bda25a

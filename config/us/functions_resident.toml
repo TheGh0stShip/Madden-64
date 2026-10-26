@@ -647,7 +647,7 @@ functions = [
     { name = "func_80033558", vram = 0x80033558, size = 0x44 }, # c
     { name = "resource_node_unlink", vram = 0x8003359c, size = 0xa8 }, # c
     { name = "func_80033644", vram = 0x80033644, size = 0x48 }, # c
-    { name = "memory_block_insert", vram = 0x8003368c, size = 0xdc }, # asm
+    { name = "memory_block_insert", vram = 0x8003368c, size = 0xdc }, # c
     { name = "func_80033768", vram = 0x80033768, size = 0x64 }, # c
     { name = "memory_arena_process", vram = 0x800337cc, size = 0x1e4 }, # asm
     { name = "memory_table_create_with_data", vram = 0x800339b0, size = 0xf4 }, # c
