@@ -592,3 +592,6 @@
 0x2589C	0x8C	src/code/frame_index_resolve.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	44bb99165571ea6a2bf9e19dc599eb104d73e6c8009924540d11328c5d818179
 0x439C8	0xC8	src/code/display_command_link.c	--assembler=asn64 --symbol=D_80074924:0x80074924 --symbol=D_80074934:0x80074934 --symbol=D_8007A9A0:0x8007A9A0 --symbol=D_8007A9C0:0x8007A9C0 -O2 -G0 -mips3 -mgp32 -mfp32	3c1cca20f11227dbe6321ef4bc0986ed44aab6b99fb96422a3968f71a025a884
 0x43D14	0xA8	src/code/stream_position_resolve.c	--assembler=asn64 --symbol=D_80002FA0:0x80002FA0 --symbol=D_80002FDC:0x80002FDC -O2 -G0 -mips3 -mgp32 -mfp32	4616b7c8d4eeecfb0ce8afaada899d46d56821d9af34c19988c47b750480e90f
+0x2038C	0x90	src/code/player_index_selection_set.c	--assembler=asn64 --symbol=D_800785A5:0x800785A5 --symbol=D_80086DD8:0x80086DD8 --symbol=D_800908B8:0x800908B8 --symbol=D_80087954:0x80087954 -O2 -G0 -mips3 -mgp32 -mfp32	1f5b5f3ae494dde37695129d9c8709e0c4cba0d02d05b35d03ad57df9d85da8b
+0x22E80	0x84	src/code/roster_attribute_lookup.c	--assembler=asn64 --symbol=D_800816A7:0x800816A7 --symbol=D_80088094:0x80088094 -O2 -G0 -mips3 -mgp32 -mfp32	cdadcb7477b01290fb436c04310d48fc6066373098fadb9592c1d7123ce44142
+0x3AEC8	0x90	src/code/frame_halfword_remove.c	--assembler=asn64 --symbol=D_80073438:0x80073438 -O2 -G0 -mips3 -mgp32 -mfp32	07b9ae64e56421d140d70bd5a8c212de905e2170d6829232c662d45772de0530

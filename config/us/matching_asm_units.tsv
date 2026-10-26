@@ -23,15 +23,12 @@
 0x4FDD8	0x30	src/libultra/os_writeback_dcache_all.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e2e910cf2dcf19b0d2826eea41187a62acc4584b8fb7316cc74acbd40f4b04f
 0x4F648	0xC0	src/libultra/os_probe_tlb.s	-O2 -G0 -mips3 -mgp32 -mfp32	349227b84b51cb246abaf9de4bf56eba78054d85575e1bfb09acfdb8d1bc0c28
 0x4DD68	0xA0	src/libultra/os_set_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	86cb8015715ed857a8877c8f765e022385d51b5c1e2cb8645586b08a05f91a23
-0x3AEC8	0x90	src/code/frame_halfword_remove.s	-O2 -G0 -mips3 -mgp32 -mfp32	07b9ae64e56421d140d70bd5a8c212de905e2170d6829232c662d45772de0530
 0xDBA4	0x78	src/code/object_active_children_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
 0x3A350	0x78	src/code/roster_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e32c8d15b061901377f1f128d8c3a478272a5b82f8e2fc1ccde0c0f0a7e31a3
-0x22E80	0x84	src/code/roster_attribute_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	cdadcb7477b01290fb436c04310d48fc6066373098fadb9592c1d7123ce44142
 0x2373C	0x84	src/code/roster_symbol_lookup.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef1c0e46dfcff4c11e592a4448dd1e1a38505c4040150457e2e0269ecdb26ba6
 0x25818	0x84	src/code/frame_group_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	ace800bfb226efbb9e2fbd3e7c1f8dc32f71c4c985a4c26587f42f4bc9f41cd1
 0x44004	0x84	src/code/rectangle_overlap_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cd7c9b89353bb2dc57262e49222b134650efd184b26e8a14b27c24815a40188
 0x44E70	0x84	src/code/texture_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ac1391ac9363bb7b9d57d253a806a8c9d1c69a2013617c098f6f4db389418e5
-0x2038C	0x90	src/code/player_index_selection_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	1f5b5f3ae494dde37695129d9c8709e0c4cba0d02d05b35d03ad57df9d85da8b
 0xFFBC	0x94	src/code/object_index_rows_shift.s	-O2 -G0 -mips3 -mgp32 -mfp32	38e3a286b6a4408b2982f307b8a12b2fbd98c1157503384eed0cdfa4ce6e43ba
 0x1B088	0x98	src/code/animation_step_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	feaf14dc842e030c09bfc94eacd6ff853a21c21b9f6b9e269ce8f021f4271321
 0x36AF0	0x98	src/code/audio_entry_resource_mark.s	-O2 -G0 -mips3 -mgp32 -mfp32	707b6f54b8d4df00f9c14b3c8c33ff6cc551685038169ffc39bb1c06867a3fa3
