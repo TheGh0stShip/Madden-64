@@ -837,7 +837,7 @@ functions = [
     { name = "func_8003D074", vram = 0x8003d074, size = 0x50 }, # c
     { name = "func_8003D0C4", vram = 0x8003d0c4, size = 0x20 }, # c
     { name = "func_8003D0E4", vram = 0x8003d0e4, size = 0x74 }, # leaf
-    { name = "audio_bank_records_load", vram = 0x8003d158, size = 0xf4 }, # asm
+    { name = "audio_bank_records_load", vram = 0x8003d158, size = 0xf4 }, # c
     { name = "func_8003D24C", vram = 0x8003d24c, size = 0x88 }, # c
     { name = "audio_channel_prepare", vram = 0x8003d2d4, size = 0x190 }, # asm
     { name = "audio_channel_update", vram = 0x8003d464, size = 0x19c }, # asm

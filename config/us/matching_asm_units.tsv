@@ -76,7 +76,6 @@
 0x630F8	0xE8	src/code/object_lookup_table_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	7e7774b27b4649246bb9c873493fd3c31fc0a8df5b5a959211857116667c2934
 0x345B0	0xF4	src/code/memory_table_create_with_data.s	-O2 -G0 -mips3 -mgp32 -mfp32	3f3b10d45bec06d780b3cf4ff4a27266d73b6f00747ecda44259e9cafbc7b05a
 0x38738	0xF4	src/code/audio_record_remap.s	-O2 -G0 -mips3 -mgp32 -mfp32	41bc70bb706bd675834b3f447ae780469f1da60ab777502843ddc7bf0966676e
-0x3DD58	0xF4	src/code/audio_bank_records_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	12a0f53784e81ffa2456ea58beaf696765e0a92e7840436d96eaeb8dbf362ba7
 0xC5D4	0x11C	src/code/display_system_run.s	-O2 -G0 -mips3 -mgp32 -mfp32	bb3237e291b8ee1f444356772563e67fe63fc379980b22fd7a6eabf4642bb971
 0xD620	0x118	src/code/object_orientation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	4b07a347661fd37d5f854d7aeccce5e048c2bf657a3f6695ae536c9c20f31144
 0xD8C8	0xF8	src/code/projection_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	1031efd1e940e65f082065297b5fc5a4d4b52bb63e73677f9c77fbbf841a2e5b

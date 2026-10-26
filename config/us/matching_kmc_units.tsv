@@ -537,6 +537,7 @@
 0x3CD54	0x9C	src/code/audio_range_value_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d9cc86c54dcc6485e041bd6942f591e8ac0e87fe82ee52257d347443c3bd4273
 0x3D3E4	0xE4	src/code/audio_output_select.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f8136f643a63a24db9e46833ef8942f0751f031af84bae0ef26e1b0b91fee5f4
 0x3D64C	0xE0	src/code/audio_runtime_shutdown.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	144e6068437e96b8214780b31f611331b9e9e6e7f1be5e22f2cfc80f95ecefaf
+0x3DD58	0xF4	src/code/audio_bank_records_load.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	12a0f53784e81ffa2456ea58beaf696765e0a92e7840436d96eaeb8dbf362ba7
 0x3D4E0	0x16C	src/code/func_8003C8E0.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8ffe12869e385a66585148f383358e1bc3b3b97c9b53e53cd4dfa6dd11023834
 0x2CB10	0x94	src/code/packed_field_primary_get.c	--assembler=asn64 --section-base=.rodata:0x800012B0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0f10e6075d1156b3ac6a086ce5495050445466dd8df8f604070e28baeaff02e
 0x2E400	0x84	src/code/runtime_record_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	00a26d22ac3d88b2f084c7dedd2cf4e4746bdb4b5a88c70d045263ee48b2b0d5
