@@ -711,3 +711,4 @@
 0x1F914	0x108	src/code/ui_slot_resource_bind_primary.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	674508edb5b53c80d6b7933b230c8ef43c2b883e94e4fb459b6154f4c88d2af2
 0x1FA1C	0xFC	src/code/ui_slot_resource_bind_secondary.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	17b6f8ba7523ae76817f0f37eb576be8d2237691c9e09b43b8c1bae49a7bcade
 0x3E854	0x150	src/code/func_8003DC54.c	--assembler=asn64 --section-base=.rodata:0x80002C80 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	eee181cc3e3f05d25152ddaa008c243ca97899c93603d50cd880040e93526626
+0x3006C	0x128	src/code/func_8002F46C.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5d3474b23f197ff86cb665d4ec0db01e73a565ab827ee8ebda2b314bae0919e8
