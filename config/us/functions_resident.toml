@@ -43,18 +43,18 @@ functions = [
     { name = "func_80009E14", vram = 0x80009e14, size = 0x44 }, # leaf
     { name = "func_80009E58", vram = 0x80009e58, size = 0x44 }, # leaf
     { name = "func_80009E9C", vram = 0x80009e9c, size = 0x44 }, # leaf
-    { name = "display_prim_color_set", vram = 0x80009ee0, size = 0xfc }, # asm
+    { name = "display_prim_color_set", vram = 0x80009ee0, size = 0xfc }, # c
     { name = "display_env_color_set", vram = 0x80009fdc, size = 0xb0 }, # c
     { name = "display_fog_color_set", vram = 0x8000a08c, size = 0xb0 }, # c
     { name = "display_blend_color_set", vram = 0x8000a13c, size = 0xb0 }, # c
     { name = "func_8000A1EC", vram = 0x8000a1ec, size = 0x40 }, # leaf
     { name = "func_8000A22C", vram = 0x8000a22c, size = 0x44 }, # leaf
     { name = "func_8000A270", vram = 0x8000a270, size = 0x44 }, # leaf
-    { name = "display_convert_coefficients_set", vram = 0x8000a2b4, size = 0x10c }, # asm
+    { name = "display_convert_coefficients_set", vram = 0x8000a2b4, size = 0x10c }, # c
     { name = "func_8000A3C0", vram = 0x8000a3c0, size = 0x44 }, # leaf
     { name = "func_8000A404", vram = 0x8000a404, size = 0x44 }, # leaf
     { name = "display_scissor_cache", vram = 0x8000a448, size = 0x90 }, # c
-    { name = "display_key_parameters_set", vram = 0x8000a4d8, size = 0xfc }, # asm
+    { name = "display_key_parameters_set", vram = 0x8000a4d8, size = 0xfc }, # c
     { name = "func_8000A5D4", vram = 0x8000a5d4, size = 0x68 }, # leaf
     { name = "func_8000A63C", vram = 0x8000a63c, size = 0x64 }, # leaf
     { name = "display_combine_mode_set", vram = 0x8000a6a0, size = 0x190 }, # asm
