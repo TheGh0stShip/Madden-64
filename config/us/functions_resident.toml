@@ -125,7 +125,7 @@ functions = [
     { name = "display_object_transform", vram = 0x8000d01c, size = 0x294 }, # asm
     { name = "func_8000D2B0", vram = 0x8000d2b0, size = 0x10 }, # stub
     { name = "object_scene_create", vram = 0x8000d2c0, size = 0x1ec }, # asm
-    { name = "object_scene_reset", vram = 0x8000d4ac, size = 0x110 }, # asm
+    { name = "object_scene_reset", vram = 0x8000d4ac, size = 0x110 }, # c
     { name = "object_children_create", vram = 0x8000d5bc, size = 0xc8 }, # c
     { name = "object_chain_release", vram = 0x8000d684, size = 0xbc }, # c
     { name = "display_node_create", vram = 0x8000d740, size = 0xf4 }, # c
