@@ -207,7 +207,7 @@ functions = [
     { name = "func_80011488", vram = 0x80011488, size = 0x48 }, # c
     { name = "render_buffers_initialize", vram = 0x800114d0, size = 0x1e8 }, # asm
     { name = "render_buffer_process", vram = 0x800116b8, size = 0x244 }, # asm
-    { name = "render_system_shutdown", vram = 0x800118fc, size = 0x19c }, # asm
+    { name = "render_system_shutdown", vram = 0x800118fc, size = 0x19c }, # c
     { name = "func_80011A98", vram = 0x80011a98, size = 0x10 }, # stub
     { name = "func_80011AA8", vram = 0x80011aa8, size = 0x4c }, # c
     { name = "func_80011AF4", vram = 0x80011af4, size = 0x48 }, # c
@@ -288,7 +288,7 @@ functions = [
     { name = "func_8001A424", vram = 0x8001a424, size = 0x64 }, # c
     { name = "animation_step_update", vram = 0x8001a488, size = 0x98 }, # c
     { name = "resource_node_update", vram = 0x8001a520, size = 0x204 }, # asm
-    { name = "resource_node_process", vram = 0x8001a724, size = 0x184 }, # asm
+    { name = "resource_node_process", vram = 0x8001a724, size = 0x184 }, # c
     { name = "func_8001A8A8", vram = 0x8001a8a8, size = 0x6c }, # c
     { name = "func_8001A914", vram = 0x8001a914, size = 0x44 }, # c
     { name = "func_8001A958", vram = 0x8001a958, size = 0x18 }, # leaf

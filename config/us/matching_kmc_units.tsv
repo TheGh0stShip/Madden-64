@@ -749,3 +749,5 @@
 0x1AE24	0x200	src/code/resource_display_finalize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7db31639dfe409b1508a69ad914b8d8dedaa72f3e11b34a318c176a58ab3ec14
 0x1FEB4	0x1D4	src/code/menu_player_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8c3af8d26ae9a9b7299664bc5b9b32726989f4a914eb501734459475fcca4915
 0x20448	0x1C4	src/code/menu_player_finalize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c4cea4ca78a7e774eeec1dd339d002544723c75350bf4e48f524f65477440a2f
+0x124FC	0x19C	src/code/render_system_shutdown.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	27e2a7e8f3227f55cdfae3fe133245359c6e92d3c8539aa30e1a57883f6477d8
+0x1B324	0x184	src/code/resource_node_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a8f3323b383fa0af2749b09857ef38625ca48319047d2e023155bdc2deb563b4

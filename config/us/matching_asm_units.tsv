@@ -59,7 +59,6 @@
 0xF1F8	0x190	src/code/object_geometry_upload.s	-O2 -G0 -mips3 -mgp32 -mfp32	fcaca7e2306fcfbcbda2dabd0702f08f309faf193f9004d5d9eb6f1f431fbcae
 0x116B4	0x1C4	src/code/display_camera_vector_compute.s	-O2 -G0 -mips3 -mgp32 -mfp32	8e2ed6d7e88148ff8e9c92c7c441b351d8493651434bfe48648cbcf6374f4384
 0x120D0	0x1E8	src/code/render_buffers_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	daa6af7a68cea9a9bd27d3ffdbbaf7b75f33dedfd5691de6f3ea99057503ba3c
-0x124FC	0x19C	src/code/render_system_shutdown.s	-O2 -G0 -mips3 -mgp32 -mfp32	27e2a7e8f3227f55cdfae3fe133245359c6e92d3c8539aa30e1a57883f6477d8
 0xBEE0	0x334	src/code/display_texture_cache_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	6026df1f74f17f295e4714d019d7fdf4d716042349650d7c31ee8350e4c4a36a
 0xCB08	0x358	src/code/display_frame_context_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	f9b465a7804ab800a612b84ce4ed14db0f4b3861266749e45976cdaf0bcab16f
 0xCE60	0x530	src/code/display_frame_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	ac5ffd49de96de5846aea0fd5dd145c33707cc567c205a01c0c4133a7b4298ff
@@ -258,7 +257,6 @@
 0x2BDB8	0x18C	src/code/gameplay_interface_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	305d379df74bba16a48ca84d1fa8dc69d6902318c4a751d7bf6905dfbfdd25a7
 0x44B7C	0x18C	src/code/display_frame_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	49bc5f02a4f3b851176da35ff998e6b682c09fee29258dbd9a347dc12ce067d3
 0x5C08C	0x188	src/code/object_geometry_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	669ad0962d57724dd96055788ecab4143d749e608734aac0ea91ea354307200f
-0x1B324	0x184	src/code/resource_node_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	a8f3323b383fa0af2749b09857ef38625ca48319047d2e023155bdc2deb563b4
 0x3A028	0x184	src/code/roster_record_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	fbd920cf69bcd619aa3ec533616bbdade5eec662909695f01eae01a3e99bb6de
 0x4459C	0x184	src/code/display_context_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	9dc57a8e25f3c2f97fdd1826a4fb9fb5a6bd476b58acdb1ced3ac69869930210
 0x5FF98	0x184	src/code/image_plane_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	7eca78886fb50761390be654dc92b652ec30d7e1692dcc62972ea560367e741e
