@@ -35,7 +35,6 @@
 0x28A38	0xB8	src/code/roster_rating_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	81a58ff22f256cabc765aecb67ac2694ce2469adbcc2e880afbb39fe114f9a1d
 0x45F94	0xBC	src/code/display_vertex_batch_append.s	-O2 -G0 -mips3 -mgp32 -mfp32	c370e9bf77cfbc794f6db63fab794da0c4159d8e13f46c5580d07622beebcb7b
 0x11E48	0xC0	src/code/object_texture_descriptor_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	297bab0e40fc6f734f73e39c81747b0ced8143118e932f3539be4cc0811c3b85
-0x23338	0xC0	src/code/roster_selection_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	2c5d2954e7e3c11bdd2a49b0205e6d9e0ab11b65b2a9170c790691bb5350f2d2
 0x57690	0xC0	src/code/object_round_state_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	164a08db6bf5483b35ccd7824da9d7c024adb0847af49ee92fddda6664393713
 0x330FC	0xC4	src/code/resource_pool_reset_wait.s	-O2 -G0 -mips3 -mgp32 -mfp32	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
 0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
@@ -48,7 +47,6 @@
 0x2A458	0xDC	src/code/play_event_queue_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
 0x33C50	0xDC	src/code/memory_block_split.s	-O2 -G0 -mips3 -mgp32 -mfp32	7d191d556e18131a17dd055bae01e96cc4426f45758a5496d27b80cc7ae86cba
 0x3428C	0xDC	src/code/memory_block_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	de14c54a1a5e84e5501690d97ad6fe33bbe491f0d196b16438f5507a68bda25a
-0x40CF4	0xDC	src/code/audio_record_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	f1784526551e86eaf31cf81c0a858842f3dece0da539687ee17ea8f6bcc80cb1
 0x28D44	0xE0	src/code/play_flags_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	5e67960de9fc342223227211bead4fe35cbf448f8cd0ec07a06eaaaf0746af9c
 0x24860	0xE4	src/code/team_stat_value_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	b50b9d86f8b3cd938ed1f41a6d85440db33840afbacbbf6d7c758b8310b92c32
 0x2D100	0xE4	src/code/team_record_pointer_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	a9d599b2859be23b82cb78537a62448a91efea242a21df1c5fc43777dbccef1d
@@ -59,7 +57,6 @@
 0x2CD08	0xEC	src/code/team_secondary_stats_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	ee20a9dafe069cf426fcd1622bc99625aef0a776ee4ae8b12dc00879bdef46a2
 0x2EC1C	0xEC	src/code/matrix_vector_transform.s	-O2 -G0 -mips3 -mgp32 -mfp32	f4f8a91fb416038788f5a0f0479fe4405e8d0320c31071ab4b5e0ea6e73979d9
 0x31C40	0xEC	src/code/controller_axes_resolve.s	--symbol=controller_flags_resolve:0x80030B9C -O2 -G0 -mips3 -mgp32 -mfp32	f656b489de33a21d3dc2e8e4541cf40c37740877cda9455d189467d1309a05fd
-0x36590	0xEC	src/code/audio_slot_allocate.s	-O2 -G0 -mips3 -mgp32 -mfp32	5c93ea50925e7ecbf8485240fb2d103a725c675530830b829482f00928e775af
 0x3A814	0xF0	src/code/roster_teams_swap.s	--symbol=roster_runtime_copy:0x80039ACC -O2 -G0 -mips3 -mgp32 -mfp32	5e544f0267c49b84d26281ceeb54f9a3f64451c0c5056035e7d8b013526cadf2
 0x46050	0xE8	src/code/display_strip_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	a523820edc5fd86786070e78c60f4afa205b09fae7aa23498a6e505e80c7acaf
 0x630F8	0xE8	src/code/object_lookup_table_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	7e7774b27b4649246bb9c873493fd3c31fc0a8df5b5a959211857116667c2934

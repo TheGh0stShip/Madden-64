@@ -689,3 +689,6 @@
 0x40B30	0xE0	src/code/audio_record_field_get.c	--assembler=asn64 --section-base=.rodata:0x80002E70 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b27d4b16c4ec76533f9d0b7dfbbc6c8d2602fc54b34c3c894ef825ad4a9ae9e3
 0x40E74	0xD0	src/code/audio_range_randomize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b7beb92c49adae993b236c7a9ecd91d012b4571dfeaf15e9615d967819c168e9
 0x40894	0xDC	src/code/team_slot_available_test.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aff6d0ffbbafc359123018c561677ce60b773d5577b0f016bcc2e238d3c136b5
+0x40CF4	0xDC	src/code/audio_record_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f1784526551e86eaf31cf81c0a858842f3dece0da539687ee17ea8f6bcc80cb1
+0x36590	0xEC	src/code/audio_slot_allocate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5c93ea50925e7ecbf8485240fb2d103a725c675530830b829482f00928e775af
+0x23338	0xC0	src/code/roster_selection_apply.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2c5d2954e7e3c11bdd2a49b0205e6d9e0ab11b65b2a9170c790691bb5350f2d2
