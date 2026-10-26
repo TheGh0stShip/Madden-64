@@ -21,6 +21,20 @@ class DecompReportTests(unittest.TestCase):
             "src/code/audio_level_calculate.c"
         ))
 
+    def test_assembly_escape_patterns_are_rejected(self):
+        self.assertTrue(REPORT.AMBIGUOUS_ASM.search(
+            '__asm__("" ".word 0");'
+        ))
+        self.assertTrue(REPORT.AMBIGUOUS_ASM.search(
+            '__asm__(OPCODE);'
+        ))
+        self.assertTrue(REPORT.ASSEMBLY_SOURCE_ESCAPE.search(
+            '#include "handwritten.s"'
+        ))
+        self.assertTrue(REPORT.ASSEMBLY_SOURCE_ESCAPE.search(
+            '__attribute__((naked)) void function(void);'
+        ))
+
     def test_report_totals_match_reviewed_manifests(self):
         report = REPORT.build_report()
         totals = report["measures"]

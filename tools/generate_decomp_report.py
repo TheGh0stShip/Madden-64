@@ -17,6 +17,15 @@ INSTRUCTION_ASM = re.compile(
     r'^\s*(?:__asm__|asm)\s*(?:volatile\s*)?\(\s*"([^"]+)',
     re.MULTILINE,
 )
+AMBIGUOUS_ASM = re.compile(
+    r'^\s*(?:__asm__|asm)\s*(?:volatile\s*)?\(\s*(?:""\s*"[^\"]+|[^"\s])',
+    re.MULTILINE,
+)
+ASSEMBLY_SOURCE_ESCAPE = re.compile(
+    r'^\s*#\s*include\s*[<"][^>"]+\.(?:s|S|asm|inc)[>"]|'
+    r'\.incbin\b|__attribute__\s*\(\(\s*naked\s*\)\)',
+    re.MULTILINE,
+)
 
 
 def measures(total_code: int, matched_code: int, total_functions: int,
@@ -46,8 +55,10 @@ def measures(total_code: int, matched_code: int, total_functions: int,
 
 
 def contains_instruction_asm(source: str) -> bool:
-    """Return whether a C unit emits instructions through an asm statement."""
-    return bool(INSTRUCTION_ASM.search((ROOT / source).read_text()))
+    """Return whether a C unit can bypass compiler-generated instructions."""
+    text = (ROOT / source).read_text()
+    return bool(INSTRUCTION_ASM.search(text) or AMBIGUOUS_ASM.search(text)
+                or ASSEMBLY_SOURCE_ESCAPE.search(text))
 
 
 def manifest_ranges(paths: list[Path], suffix: str | None = None,
