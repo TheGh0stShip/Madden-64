@@ -516,7 +516,7 @@ functions = [
     { name = "team_player_stats_update", vram = 0x8002c5e4, size = 0x17c }, # asm
     { name = "func_8002C760", vram = 0x8002c760, size = 0x114 }, # asm
     { name = "team_player_pair_update", vram = 0x8002c874, size = 0x13c }, # asm
-    { name = "team_color_resolve", vram = 0x8002c9b0, size = 0xd8 }, # asm
+    { name = "team_color_resolve", vram = 0x8002c9b0, size = 0xd8 }, # c
     { name = "func_8002CA88", vram = 0x8002ca88, size = 0x18 }, # leaf
     { name = "func_8002CAA0", vram = 0x8002caa0, size = 0x30 }, # c
     { name = "func_8002CAD0", vram = 0x8002cad0, size = 0x48 }, # c
@@ -767,7 +767,7 @@ functions = [
     { name = "resource_groups_release", vram = 0x800395ac, size = 0xc8 }, # c
     { name = "func_80039674", vram = 0x80039674, size = 0x6c }, # c
     { name = "func_800396E0", vram = 0x800396e0, size = 0x70 }, # c
-    { name = "roster_value_resolve", vram = 0x80039750, size = 0x78 }, # asm
+    { name = "roster_value_resolve", vram = 0x80039750, size = 0x78 }, # c
     { name = "func_800397C8", vram = 0x800397c8, size = 0x5c }, # c
     { name = "func_80039824", vram = 0x80039824, size = 0x2c }, # c
     { name = "roster_record_process", vram = 0x80039850, size = 0x27c }, # asm
@@ -1013,7 +1013,7 @@ functions = [
     { name = "func_80045794", vram = 0x80045794, size = 0x58 }, # c
     { name = "func_800457F0", vram = 0x800457f0, size = 0x8 }, # stub
     { name = "func_800457F8", vram = 0x800457f8, size = 0x44 }, # c
-    { name = "audio_timeline_update", vram = 0x8004583c, size = 0xbc }, # asm
+    { name = "audio_timeline_update", vram = 0x8004583c, size = 0xbc }, # c
     { name = "func_800458F8", vram = 0x800458f8, size = 0x30 }, # c
     { name = "func_80045928", vram = 0x80045928, size = 0x160 }, # c
     { name = "osAiSetNextBuffer", vram = 0x80045a88, size = 0xa8 }, # c

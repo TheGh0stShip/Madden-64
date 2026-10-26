@@ -640,3 +640,6 @@
 0x32564	0xB8	src/code/runtime_sequence_advance.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c33d2c36f814b14d5c3fc31519b00cfa6ff6a6a7f352e0c640e4e64fe567c04e
 0x2A7E4	0xB4	src/code/menu_record_copy_wrapped.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f483bdc196d071479d753e169f362d6441017978440c7fa24243b875fda5bfe6
 0x34CA0	0xB4	src/code/resource_scale_advance.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8e31d51ba8de479fc7662e8cc15224e71937e45389acc8bcc54c521ea8055785
+0x4643C	0xBC	src/code/audio_timeline_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	deb1ddb393d931653cb4e5ee513b8a480b4b66f074f8964e483362911548db42
+0x3A350	0x78	src/code/roster_value_resolve.c	--assembler=asn64 --symbol=D_80081860:0x80081860 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1e32c8d15b061901377f1f128d8c3a478272a5b82f8e2fc1ccde0c0f0a7e31a3
+0x2D5B0	0xD8	src/code/team_color_resolve.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	64f3a182c48c9dd4419724d40fcd8813c8af0904349219fff2010186b59aeb12

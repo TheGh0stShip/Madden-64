@@ -23,7 +23,6 @@
 0x4F648	0xC0	src/libultra/os_probe_tlb.s	-O2 -G0 -mips3 -mgp32 -mfp32	349227b84b51cb246abaf9de4bf56eba78054d85575e1bfb09acfdb8d1bc0c28
 0x4DD68	0xA0	src/libultra/os_set_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	86cb8015715ed857a8877c8f765e022385d51b5c1e2cb8645586b08a05f91a23
 0xDBA4	0x78	src/code/object_active_children_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0df5736407d401baa58754f82fc394f009fa71d8b250f91f303ecebbceeabe0
-0x3A350	0x78	src/code/roster_value_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e32c8d15b061901377f1f128d8c3a478272a5b82f8e2fc1ccde0c0f0a7e31a3
 0x44004	0x84	src/code/rectangle_overlap_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cd7c9b89353bb2dc57262e49222b134650efd184b26e8a14b27c24815a40188
 0x44E70	0x84	src/code/texture_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ac1391ac9363bb7b9d57d253a806a8c9d1c69a2013617c098f6f4db389418e5
 0x45EFC	0x98	src/code/display_vectors_integrate.s	-O2 -G0 -mips3 -mgp32 -mfp32	f7dee0a6db9c3eeda89dc0c50d392c044897ad285ba56eff7c456104a47d86c2
@@ -44,7 +43,6 @@
 0x61280	0xB4	src/code/object_shared_buffers_assign.s	-O2 -G0 -mips3 -mgp32 -mfp32	0c29af0e509a78f289d023c9374101f4129152e6af4419d5ac823c90da81f2a2
 0x28A38	0xB8	src/code/roster_rating_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	81a58ff22f256cabc765aecb67ac2694ce2469adbcc2e880afbb39fe114f9a1d
 0x45F94	0xBC	src/code/display_vertex_batch_append.s	-O2 -G0 -mips3 -mgp32 -mfp32	c370e9bf77cfbc794f6db63fab794da0c4159d8e13f46c5580d07622beebcb7b
-0x4643C	0xBC	src/code/audio_timeline_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	deb1ddb393d931653cb4e5ee513b8a480b4b66f074f8964e483362911548db42
 0x11E48	0xC0	src/code/object_texture_descriptor_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	297bab0e40fc6f734f73e39c81747b0ced8143118e932f3539be4cc0811c3b85
 0x23338	0xC0	src/code/roster_selection_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	2c5d2954e7e3c11bdd2a49b0205e6d9e0ab11b65b2a9170c790691bb5350f2d2
 0x3DAB8	0xC0	src/code/audio_range_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	aa7f590af21f3e955c056a3008e4b75325635d2cbb9e01b7a4e9cf521b34d36f
@@ -62,7 +60,6 @@
 0x43448	0xD4	src/code/display_pipeline_setup.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc1bce253d3f85c7c88c07e83a55cd2bb9bd91932a619d77bbf8092aeb3da09f
 0x63D04	0xD4	src/code/object_stream_state_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	69830bba04a83e47b9889fcd960f4eadbb9da0346b742929a563b633df87e78e
 0x1AD4C	0xD8	src/code/resource_command_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cec63fbfac1a7db19867df28fda26f0d316e84569b0b26749e16caad8600744
-0x2D5B0	0xD8	src/code/team_color_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	64f3a182c48c9dd4419724d40fcd8813c8af0904349219fff2010186b59aeb12
 0x3179C	0xD8	src/code/controller_flags_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	9a6c975f2faa1632b4a1fa80a6f5c03b9afb3106b00012c6ed0843153ee05249
 0xC798	0xDC	src/code/display_page_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	ba5320c8d8c15aa42c44fe30877ab08aa1337f40bfba3d0632a43022f8b53cf7
 0xEA34	0xDC	src/code/vector_slots_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	f26cf764e126b874306e8d34b69cf26df94a5457f782b9f258933d9f0a6f30fb
