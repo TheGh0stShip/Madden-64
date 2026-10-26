@@ -1,5 +1,4 @@
 # GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
-0x3BA80	0x1AC	src/code/audio_frame_collision_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afeabe508a0e5514d0ff3409d02b3a8d79cb5fb2812c8ae42ba648621013a71b
 0x1040	0x3C	src/runtime/program_entry.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e26c5ef4301d640ffa5a4303b238bf4bf54993b42137833937b0ecbee0e5b67
 0x51AA8	0xCC	src/rsp/rspboot.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ba0243414cec468a9bd90fc91f5b5efa918208e2cf799ae54fb09673442c001
 0x478A8	0x50	src/libultra/os_interrupt.s	-O2 -G0 -mips3 -mgp32 -mfp32	eea139088241ae2e4f665c8d86a50a8665f9835530da37e4dbb888c7c3b8ee3d
@@ -29,8 +28,6 @@
 0x444B4	0xE8	src/code/object_vector_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	4816d0ba36102a53382866fd15e2200cf4ba2f8fcbe2602fefe2f356b30db394
 0x2CD08	0xEC	src/code/team_secondary_stats_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	ee20a9dafe069cf426fcd1622bc99625aef0a776ee4ae8b12dc00879bdef46a2
 0x2EC1C	0xEC	src/code/matrix_vector_transform.s	-O2 -G0 -mips3 -mgp32 -mfp32	f4f8a91fb416038788f5a0f0479fe4405e8d0320c31071ab4b5e0ea6e73979d9
-0x31C40	0xEC	src/code/controller_axes_resolve.s	--symbol=controller_flags_resolve:0x80030B9C -O2 -G0 -mips3 -mgp32 -mfp32	f656b489de33a21d3dc2e8e4541cf40c37740877cda9455d189467d1309a05fd
-0x3A814	0xF0	src/code/roster_teams_swap.s	--symbol=roster_runtime_copy:0x80039ACC -O2 -G0 -mips3 -mgp32 -mfp32	5e544f0267c49b84d26281ceeb54f9a3f64451c0c5056035e7d8b013526cadf2
 0x46050	0xE8	src/code/display_strip_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	a523820edc5fd86786070e78c60f4afa205b09fae7aa23498a6e505e80c7acaf
 0x345B0	0xF4	src/code/memory_table_create_with_data.s	-O2 -G0 -mips3 -mgp32 -mfp32	3f3b10d45bec06d780b3cf4ff4a27266d73b6f00747ecda44259e9cafbc7b05a
 0xD620	0x118	src/code/object_orientation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	4b07a347661fd37d5f854d7aeccce5e048c2bf657a3f6695ae536c9c20f31144
@@ -252,7 +249,6 @@
 0x31874	0x17C	src/code/runtime_callback_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	2241481f337d567fc5f72a15737d1e95e49584e9f2a9ba133ea177e7e54d9c9a
 0x34B24	0x17C	src/code/memory_arena_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	8842bb4526d5433b2bd9c02bb1fa973c70c39a001fa32056e97eb45c14c43fb2
 0x35D5C	0x17C	src/code/memory_block_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	98719db3c0e0241613b9f2279b0672c8962add27a17f6aa388924ed3803cca11
-0x3C968	0x17C	src/code/audio_stream_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	6a441895a5887721ebe86226d8da7563d4732fa6cb6f3e8188b420595b7c13d0
 0x3F5B0	0x17C	src/code/audio_bank_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	948999baf435c93e571ab77f27345dfbf42574168971cd399e17b81ec57c876b
 0x1C1C0	0x178	src/code/resource_buffers_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	e758b5858366bd13b02692361bb2e5423a12ee79da8f238dbf998f7c3e2d0f9e
 0x36B88	0x178	src/code/memory_pool_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	25725cbda057fa1e39b9e389afdd537ef6fdb8feddd619e30bbb7a426105e779
