@@ -30,15 +30,12 @@
 0x3CD54	0x9C	src/code/audio_range_value_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	d9cc86c54dcc6485e041bd6942f591e8ac0e87fe82ee52257d347443c3bd4273
 0x26544	0xA0	src/code/roster_stat_add.s	-O2 -G0 -mips3 -mgp32 -mfp32	5d2c5be4f9d7849a7919db63abf730adb395fa83573c63380bc99f960f7ae80a
 0x10414	0xA4	src/code/object_resources_release_full.s	-O2 -G0 -mips3 -mgp32 -mfp32	ddeb4c2e26fd008343e082a29c213f44a5e396030ce3079303ec6912d2c73a08
-0x18780	0xA4	src/code/resource_payload_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	798c262fb9cc304d96da4444130017f6dd59fd5366a85ca40dc18f4405ebfe20
 0x28EC8	0xA4	src/code/packed_field_dispatch.s	--symbol=packed_field_primary_get:0x8002BF10 --symbol=packed_field_secondary_get:0x8002BFA4 -O2 -G0 -mips3 -mgp32 -mfp32	f48e89aab2f80547098f1fac702c37388b5f6e5be74ea26109631096401d8ff2
-0x380F0	0xA4	src/code/frame_attribute_set.s	-O2 -G0 -mips3 -mgp32 -mfp32	8cfee5bb97ff8da2939ddcd7216792f3fa5e30e1520c96dd6ba7f6fa10572e2a
 0x3F450	0xA4	src/code/formatted_pair_append.s	-O2 -G0 -mips3 -mgp32 -mfp32	81c5419240707aa23910667bdc65a87219d2e9c52e340c0d03549614cb2f1bf3
 0x3419C	0xA8	src/code/resource_node_unlink.s	-O2 -G0 -mips3 -mgp32 -mfp32	ad0c9dcd8d459ae503d85e2cc5bc35131309e1fd0ef9bc04f3121cf97492ef8b
 0xC2F8	0xAC	src/code/display_surface_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	c3889cc86541c07c94aeb46e2ae573273ffb1f046f70b5cae7cfb73bcf506353
 0x1A398	0xAC	src/code/strided_rows_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	c59922ddfe5a62cfec4638609148d0a3bf45b1535dca8d4f6229eb165f1885ee
 0x1B7C4	0xAC	src/code/ui_context_clone.s	-O2 -G0 -mips3 -mgp32 -mfp32	ab2e2118247e0723d05a46ce45b890033c146483fdbeeb2317bccf6527d40ec8
-0x215BC	0xAC	src/code/menu_slots_threshold_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	adc55982dcc4d3a4700bb02a1c4be220e5cf435cab1afb82e66f8befe24ca28d
 0xD818	0xB0	src/code/display_viewport_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	efcb5af62b9ff6fe46b46e1812629f404b9d268c55bea3ed64197c204b3652e8
 0x29658	0xB0	src/code/frame_identifier_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef33ef45607ee65ac67df7e6139f04a1247f4ef7ded5a40c4b2ca979548542ac
 0x44088	0xB0	src/code/box_vertices_fixed_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	996b29e31de75defab12666bf1b1edd48da86aeffa7d149f4ae3d8a611ceda26
