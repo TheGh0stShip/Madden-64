@@ -1,6 +1,5 @@
 # GNU assembler; ROM_START SIZE SOURCE FLAGS SHA256
 0x3BA80	0x1AC	src/code/audio_frame_collision_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afeabe508a0e5514d0ff3409d02b3a8d79cb5fb2812c8ae42ba648621013a71b
-0x3B92C	0x154	src/code/audio_frame_record_copy.s	--symbol=D_80073430:0x80073430 --symbol=D_8007343C:0x8007343C --symbol=D_80073438:0x80073438 --symbol=func_800372B4:0x800372B4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c6f38eecefdd0ff4028ad89bfe0736c0644ccb397d0f6a7fef927487fd7fb5c9
 0x1040	0x3C	src/runtime/program_entry.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e26c5ef4301d640ffa5a4303b238bf4bf54993b42137833937b0ecbee0e5b67
 0x51AA8	0xCC	src/rsp/rspboot.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ba0243414cec468a9bd90fc91f5b5efa918208e2cf799ae54fb09673442c001
 0x478A8	0x50	src/libultra/os_interrupt.s	-O2 -G0 -mips3 -mgp32 -mfp32	eea139088241ae2e4f665c8d86a50a8665f9835530da37e4dbb888c7c3b8ee3d
@@ -40,7 +39,6 @@
 0x57690	0xC0	src/code/object_round_state_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	164a08db6bf5483b35ccd7824da9d7c024adb0847af49ee92fddda6664393713
 0x330FC	0xC4	src/code/resource_pool_reset_wait.s	-O2 -G0 -mips3 -mgp32 -mfp32	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
 0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
-0x3EEC0	0xC8	src/code/audio_name_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	bd3cc36156c1133d9163fffbe6a5ab46fd13bf86d94d934756c2175fb7d2a18a
 0x5D804	0xC8	src/code/object_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
 0x1F420	0xD0	src/code/text_glyph_width_sum.s	-O2 -G0 -mips3 -mgp32 -mfp32	f9cdbe48abeec6ff78efbc60d84c88b24a69664bc270c18cdf34b00ee021ce08
 0x40E74	0xD0	src/code/audio_range_randomize.s	-O2 -G0 -mips3 -mgp32 -mfp32	b7beb92c49adae993b236c7a9ecd91d012b4571dfeaf15e9615d967819c168e9
@@ -199,7 +197,6 @@
 0x1A710	0x2C0	src/code/resource_display_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	b5101dd440e301a6fef6cc9f5705cf59300242ccbc014136f7c745c42d7dd00d
 0x4588C	0x2BC	src/code/scheduler_task_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	1a402ee81c389a31103a28e8e250d4bccf5619825965c9993370baaee59f7ef7
 0x648A4	0x2BC	src/code/object_stream_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	f3b1c634e9767b0b3395545cb55c918b3ffab6421745d9ea9fd967b6a9f7088e
-0x3D7D8	0x2B0	src/code/audio_voice_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	5941b6a8330ddbde3081f9b4519dd5f1a6515270e15a7afcd636da8469c6dd2f
 0x56E00	0x2B0	src/code/object_animation_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	3a3abfbd12b6f3086b9f36bc5b1a53b69d76797009424cc29f6510b84ec7adf6
 0x2C7B0	0x2AC	src/code/packed_field_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	738906d22be55aa24e94d0c6d441f9fa83da39b279c3f5d8cdb70218489698d5
 0x1692C	0x2A4	src/code/render_state_consume.s	-O2 -G0 -mips3 -mgp32 -mfp32	69b6cbfc61bf5b8666b6511ff20e0193e02892f7860dcdeb5c3d33e5756530cc

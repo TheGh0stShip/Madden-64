@@ -795,7 +795,7 @@ functions = [
     { name = "audio_frame_payload_copy", vram = 0x8003a8cc, size = 0x15c }, # c
     { name = "roster_selection_update", vram = 0x8003aa28, size = 0x278 }, # asm
     { name = "audio_frame_record_find", vram = 0x8003aca0, size = 0x8c }, # leaf
-    { name = "audio_frame_record_copy", vram = 0x8003ad2c, size = 0x154 }, # asm
+    { name = "audio_frame_record_copy", vram = 0x8003ad2c, size = 0x154 }, # c
     { name = "audio_frame_collision_resolve", vram = 0x8003ae80, size = 0x1ac }, # asm
     { name = "audio_table_decode_primary", vram = 0x8003b02c, size = 0x374 }, # asm
     { name = "audio_table_decode_secondary", vram = 0x8003b3a0, size = 0x30c }, # asm
@@ -829,7 +829,7 @@ functions = [
     { name = "func_8003CB98", vram = 0x8003cb98, size = 0x20 }, # leaf
     { name = "func_8003CBB8", vram = 0x8003cbb8, size = 0x10 }, # stub
     { name = "func_8003CBC8", vram = 0x8003cbc8, size = 0x10 }, # stub
-    { name = "audio_voice_render", vram = 0x8003cbd8, size = 0x2b0 }, # asm
+    { name = "audio_voice_render", vram = 0x8003cbd8, size = 0x2b0 }, # c
     { name = "func_8003CE88", vram = 0x8003ce88, size = 0x30 }, # c
     { name = "audio_range_render", vram = 0x8003ceb8, size = 0xc0 }, # c
     { name = "func_8003CF78", vram = 0x8003cf78, size = 0x28 }, # c
@@ -851,7 +851,7 @@ functions = [
     { name = "func_8003DDA4", vram = 0x8003dda4, size = 0x54 }, # leaf
     { name = "audio_bank_process", vram = 0x8003ddf8, size = 0x444 }, # asm
     { name = "func_8003E23C", vram = 0x8003e23c, size = 0x84 }, # c
-    { name = "audio_name_find", vram = 0x8003e2c0, size = 0xc8 }, # asm
+    { name = "audio_name_find", vram = 0x8003e2c0, size = 0xc8 }, # c
     { name = "func_8003E388", vram = 0x8003e388, size = 0x58 }, # c
     { name = "func_8003E3E0", vram = 0x8003e3e0, size = 0x80 }, # c
     { name = "func_8003E460", vram = 0x8003e460, size = 0x38 }, # c
