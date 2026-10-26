@@ -486,7 +486,7 @@ functions = [
     { name = "func_800299B8", vram = 0x800299b8, size = 0x118 }, # asm
     { name = "func_80029AD0", vram = 0x80029ad0, size = 0x104 }, # asm
     { name = "func_80029BD4", vram = 0x80029bd4, size = 0x10 }, # stub
-    { name = "menu_record_copy_wrapped", vram = 0x80029be4, size = 0xb4 }, # asm
+    { name = "menu_record_copy_wrapped", vram = 0x80029be4, size = 0xb4 }, # c
     { name = "menu_record_process", vram = 0x80029c98, size = 0x1f0 }, # asm
     { name = "gameplay_selection_process", vram = 0x80029e88, size = 0x4d0 }, # asm
     { name = "gameplay_selection_update", vram = 0x8002a358, size = 0x354 }, # asm
@@ -606,7 +606,7 @@ functions = [
     { name = "func_800318E0", vram = 0x800318e0, size = 0x2c }, # leaf
     { name = "func_8003190C", vram = 0x8003190c, size = 0x48 }, # c
     { name = "func_80031954", vram = 0x80031954, size = 0x10 }, # stub
-    { name = "runtime_sequence_advance", vram = 0x80031964, size = 0xb8 }, # asm
+    { name = "runtime_sequence_advance", vram = 0x80031964, size = 0xb8 }, # c
     { name = "func_80031A1C", vram = 0x80031a1c, size = 0x3c }, # c
     { name = "func_80031A58", vram = 0x80031a58, size = 0x10 }, # stub
     { name = "func_80031A68", vram = 0x80031a68, size = 0x10 }, # stub
@@ -655,7 +655,7 @@ functions = [
     { name = "func_80033B10", vram = 0x80033b10, size = 0x10 }, # stub
     { name = "memory_arena_update", vram = 0x80033b20, size = 0x404 }, # asm
     { name = "memory_arena_finalize", vram = 0x80033f24, size = 0x17c }, # asm
-    { name = "resource_scale_advance", vram = 0x800340a0, size = 0xb4 }, # asm
+    { name = "resource_scale_advance", vram = 0x800340a0, size = 0xb4 }, # c
     { name = "func_80034154", vram = 0x80034154, size = 0x10 }, # stub
     { name = "func_80034164", vram = 0x80034164, size = 0x34 }, # c
     { name = "func_80034198", vram = 0x80034198, size = 0x118 }, # asm

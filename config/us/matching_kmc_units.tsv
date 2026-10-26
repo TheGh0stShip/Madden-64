@@ -637,3 +637,6 @@
 0x215BC	0xAC	src/code/menu_slots_threshold_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	adc55982dcc4d3a4700bb02a1c4be220e5cf435cab1afb82e66f8befe24ca28d
 0x380F0	0xA4	src/code/frame_attribute_set.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8cfee5bb97ff8da2939ddcd7216792f3fa5e30e1520c96dd6ba7f6fa10572e2a
 0x18780	0xA4	src/code/resource_payload_prepare.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	798c262fb9cc304d96da4444130017f6dd59fd5366a85ca40dc18f4405ebfe20
+0x32564	0xB8	src/code/runtime_sequence_advance.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c33d2c36f814b14d5c3fc31519b00cfa6ff6a6a7f352e0c640e4e64fe567c04e
+0x2A7E4	0xB4	src/code/menu_record_copy_wrapped.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f483bdc196d071479d753e169f362d6441017978440c7fa24243b875fda5bfe6
+0x34CA0	0xB4	src/code/resource_scale_advance.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8e31d51ba8de479fc7662e8cc15224e71937e45389acc8bcc54c521ea8055785
