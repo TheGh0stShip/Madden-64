@@ -381,7 +381,7 @@ functions = [
     { name = "menu_selection_confirm", vram = 0x80020a68, size = 0x80 }, # asm
     { name = "menu_option_dispatch", vram = 0x80020ae8, size = 0x90 }, # c
     { name = "menu_screen_update", vram = 0x80020b78, size = 0x500 }, # asm
-    { name = "menu_input_activation_update", vram = 0x80021078, size = 0x104 }, # asm
+    { name = "menu_input_activation_update", vram = 0x80021078, size = 0x104 }, # c
     { name = "menu_input_poll", vram = 0x8002117c, size = 0xa0 }, # c
     { name = "game_mode_update", vram = 0x8002121c, size = 0x1c8 }, # asm
     { name = "game_mode_initialize", vram = 0x800213e4, size = 0x118 }, # c

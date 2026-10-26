@@ -21,7 +21,6 @@
 0xD620	0x118	src/code/object_orientation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	4b07a347661fd37d5f854d7aeccce5e048c2bf657a3f6695ae536c9c20f31144
 0xEB34	0xF8	src/code/vector_signed_components_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	639afcb1bf63baf9699161edadf03489afa79fc2fd5537e3c3d6a700d25b29d5
 0x1DDE0	0x120	src/code/text_line_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	51aa9460357e06aaa4cd4b0b1d1995064d2accf3c3624b13540f147d28ffb9a9
-0x21C78	0x104	src/code/menu_input_activation_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	bfb3fce4d56f0f39628a87e06c670a6edbbb25040b1f64ff3b41e6b9a30ee591
 0x2D1E4	0x17C	src/code/team_player_stats_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	b7fe8507ed96dafed611bf5732d3ac08f4f1652473cefdd80f2066db538ad9ca
 0x326B8	0x168	src/code/packed_command_measure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ef36112edf9c6eb62edc26b40da9ad99fd855303494c10827d31d1efb369d47
 0x33778	0x150	src/code/memory_pool_region_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	0dcfb63ac0a1a1f488a57a4cec79b882c54598d33488ee23e30b08a7bc21b8fb

@@ -792,3 +792,4 @@
 0x2A458	0xDC	src/code/play_event_queue_advance.c	--assembler=asn64 --normalizer-enable-KMC-PLAY-QUEUE-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
 0x18250	0x1F0	src/code/resource_archive_decode.c	--assembler=asn64 --normalizer-enable-KMC-ARCHIVE-DECODE-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aa5cccfedf721646b522a20b4875e57f9fb76a958894ab6ea0e502859b16c718
 0x444B4	0xE8	src/code/object_vector_resolve.c	--assembler=asn64 --normalizer-enable-KMC-OBJECT-VECTOR-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4816d0ba36102a53382866fd15e2200cf4ba2f8fcbe2602fefe2f356b30db394
+0x21C78	0x104	src/code/menu_input_activation_update.c	--assembler=asn64 --normalizer-enable-KMC-MENU-ACTIVATION-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bfb3fce4d56f0f39628a87e06c670a6edbbb25040b1f64ff3b41e6b9a30ee591
