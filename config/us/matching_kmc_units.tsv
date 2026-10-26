@@ -782,3 +782,4 @@
 0x33D74	0xE4	src/code/memory_table_create.c	--assembler=asn64 --normalizer-enable-KMC-LATE-S0-SETUP -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d93aa31398617c7a5dc375d4196d2177fafa7efeaac978191731b73cff6d689a
 0x43448	0xD4	src/code/display_pipeline_setup.c	--assembler=asn64 --normalizer-enable-KMC-JAL-ARG-DELAY -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bc1bce253d3f85c7c88c07e83a55cd2bb9bd91932a619d77bbf8092aeb3da09f
 0x45294	0xB0	src/code/grid_row_handles_build.c	--assembler=asn64 --normalizer-enable-KMC-STAGED-SAVED-REGISTERS --normalizer-enable-KMC-JAL-ARG-ORDER -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	01b8ae9e5d749fe082a308fb38d9fcea578968a3bdff0e22462f74f9a11d6160
+0x46050	0xE8	src/code/display_strip_emit.c	--assembler=asn64 --normalizer-enable-KMC-STRIP-LOOP-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a523820edc5fd86786070e78c60f4afa205b09fae7aa23498a6e505e80c7acaf
