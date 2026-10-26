@@ -463,7 +463,7 @@ functions = [
     { name = "play_flags_finalize", vram = 0x80028144, size = 0xe0 }, # c
     { name = "func_80028224", vram = 0x80028224, size = 0x10 }, # stub
     { name = "top_bits_dispatch", vram = 0x80028234, size = 0x94 }, # c
-    { name = "packed_field_dispatch", vram = 0x800282c8, size = 0xa4 }, # asm
+    { name = "packed_field_dispatch", vram = 0x800282c8, size = 0xa4 }, # c
     { name = "frame_resource_finalize", vram = 0x8002836c, size = 0x1ac }, # asm
     { name = "frame_resource_update", vram = 0x80028518, size = 0x22c }, # asm
     { name = "frame_identifier_resolve", vram = 0x80028744, size = 0x314 }, # asm
@@ -547,7 +547,7 @@ functions = [
     { name = "func_8002E108", vram = 0x8002e108, size = 0x40 }, # leaf
     { name = "func_8002E148", vram = 0x8002e148, size = 0x34 }, # leaf
     { name = "memory_move_overlap", vram = 0x8002e17c, size = 0x410 }, # asm
-    { name = "func_8002E58C", vram = 0x8002e58c, size = 0x9c }, # asm
+    { name = "func_8002E58C", vram = 0x8002e58c, size = 0x9c }, # c
     { name = "func_8002E628", vram = 0x8002e628, size = 0x34 }, # leaf
     { name = "func_8002E65C", vram = 0x8002e65c, size = 0x2c }, # leaf
     { name = "func_8002E688", vram = 0x8002e688, size = 0x3c }, # leaf

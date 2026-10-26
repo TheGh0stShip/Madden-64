@@ -728,3 +728,5 @@
 0x10414	0xA4	src/code/object_resources_release_full.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ddeb4c2e26fd008343e082a29c213f44a5e396030ce3079303ec6912d2c73a08
 0x29658	0xB0	src/code/frame_identifier_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ef33ef45607ee65ac67df7e6139f04a1247f4ef7ded5a40c4b2ca979548542ac
 0x28A38	0xB8	src/code/roster_rating_dispatch.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	81a58ff22f256cabc765aecb67ac2694ce2469adbcc2e880afbb39fe114f9a1d
+0x28EC8	0xA4	src/code/packed_field_dispatch.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f48e89aab2f80547098f1fac702c37388b5f6e5be74ea26109631096401d8ff2
+0x2F18C	0x9C	src/code/func_8002E58C.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	94b17ab75ad9585974bb57af3953b2572fd45388bc468e3b4dd0d5b53a090f55
