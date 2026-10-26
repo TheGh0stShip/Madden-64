@@ -30,7 +30,6 @@
 0x44004	0x84	src/code/rectangle_overlap_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cd7c9b89353bb2dc57262e49222b134650efd184b26e8a14b27c24815a40188
 0x44E70	0x84	src/code/texture_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ac1391ac9363bb7b9d57d253a806a8c9d1c69a2013617c098f6f4db389418e5
 0xFFBC	0x94	src/code/object_index_rows_shift.s	-O2 -G0 -mips3 -mgp32 -mfp32	38e3a286b6a4408b2982f307b8a12b2fbd98c1157503384eed0cdfa4ce6e43ba
-0x1B088	0x98	src/code/animation_step_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	feaf14dc842e030c09bfc94eacd6ff853a21c21b9f6b9e269ce8f021f4271321
 0x36AF0	0x98	src/code/audio_entry_resource_mark.s	-O2 -G0 -mips3 -mgp32 -mfp32	707b6f54b8d4df00f9c14b3c8c33ff6cc551685038169ffc39bb1c06867a3fa3
 0x45EFC	0x98	src/code/display_vectors_integrate.s	-O2 -G0 -mips3 -mgp32 -mfp32	f7dee0a6db9c3eeda89dc0c50d392c044897ad285ba56eff7c456104a47d86c2
 0x61334	0x98	src/code/index_planes_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	f64d1f207eaaf8ef85b1141425da927e255308def1a2d8c14e65cfdcaf2644d9
@@ -49,8 +48,6 @@
 0x3F450	0xA4	src/code/formatted_pair_append.s	-O2 -G0 -mips3 -mgp32 -mfp32	81c5419240707aa23910667bdc65a87219d2e9c52e340c0d03549614cb2f1bf3
 0x613CC	0xA4	src/code/indexed_rgb_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	d3bccb53ddd118bb88196543d7c5bf68ed6fca21eec850b92f685484e8eedc47
 0x61C28	0xA4	src/code/indexed_texel_increment.s	-O2 -G0 -mips3 -mgp32 -mfp32	c1a4947f460be26cd6b3b6aac4f99adaaa50be20b5fdf7d6a098b7671fa0e935
-0xECBC	0xA8	src/code/vector_slot_negate_store.s	-O2 -G0 -mips3 -mgp32 -mfp32	55473fa5c5dce4b546509320948142d4de7a8c7f030c60161e6160d457afbcc9
-0xED64	0xA8	src/code/vector_transform_to_bytes.s	-O2 -G0 -mips3 -mgp32 -mfp32	556db0309262b5ba8ffbcd303a96c96f4508ded5f8601905eb42ac5a3ee4dbe3
 0x453C4	0xA8	src/code/grid_handles_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e3a4f42d3df7090589d4b14067683a83aa3851f7ac70974f1ebc8c8ea8b1e5e
 0x25C6C	0xA8	src/code/menu_buffer_prepare_once.s	-O2 -G0 -mips3 -mgp32 -mfp32	cd687517004713babe9dbb0cb90718b4befef8e562ec309880550c715d507b93
 0x3419C	0xA8	src/code/resource_node_unlink.s	-O2 -G0 -mips3 -mgp32 -mfp32	ad0c9dcd8d459ae503d85e2cc5bc35131309e1fd0ef9bc04f3121cf97492ef8b

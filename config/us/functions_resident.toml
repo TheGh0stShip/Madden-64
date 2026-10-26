@@ -157,8 +157,8 @@ functions = [
     { name = "vector_signed_components_load", vram = 0x8000df34, size = 0xf8 }, # asm
     { name = "func_8000E02C", vram = 0x8000e02c, size = 0x30 }, # leaf
     { name = "func_8000E05C", vram = 0x8000e05c, size = 0x60 }, # leaf
-    { name = "vector_slot_negate_store", vram = 0x8000e0bc, size = 0xa8 }, # asm
-    { name = "vector_transform_to_bytes", vram = 0x8000e164, size = 0xa8 }, # asm
+    { name = "vector_slot_negate_store", vram = 0x8000e0bc, size = 0xa8 }, # c
+    { name = "vector_transform_to_bytes", vram = 0x8000e164, size = 0xa8 }, # c
     { name = "vector_display_emit", vram = 0x8000e20c, size = 0x1bc }, # asm
     { name = "func_8000E3C8", vram = 0x8000e3c8, size = 0x30 }, # c
     { name = "func_8000E3F8", vram = 0x8000e3f8, size = 0x2c }, # c
@@ -286,7 +286,7 @@ functions = [
     { name = "resource_command_dispatch", vram = 0x8001a14c, size = 0xd8 }, # asm
     { name = "resource_display_finalize", vram = 0x8001a224, size = 0x200 }, # asm
     { name = "func_8001A424", vram = 0x8001a424, size = 0x64 }, # c
-    { name = "animation_step_update", vram = 0x8001a488, size = 0x98 }, # asm
+    { name = "animation_step_update", vram = 0x8001a488, size = 0x98 }, # c
     { name = "resource_node_update", vram = 0x8001a520, size = 0x204 }, # asm
     { name = "resource_node_process", vram = 0x8001a724, size = 0x184 }, # asm
     { name = "func_8001A8A8", vram = 0x8001a8a8, size = 0x6c }, # c
