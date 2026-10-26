@@ -697,3 +697,7 @@
 0x28D44	0xE0	src/code/play_flags_finalize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5e67960de9fc342223227211bead4fe35cbf448f8cd0ec07a06eaaaf0746af9c
 0x330FC	0xC4	src/code/resource_pool_reset_wait.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
 0x33C50	0xDC	src/code/memory_block_split.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7d191d556e18131a17dd055bae01e96cc4426f45758a5496d27b80cc7ae86cba
+0x1AD4C	0xD8	src/code/resource_command_dispatch.c	--assembler=asn64 --section-base=.rodata:0x80000A00 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2cec63fbfac1a7db19867df28fda26f0d316e84569b0b26749e16caad8600744
+0x1D184	0xEC	src/code/layout_coordinates_build.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e2f40b511b70ea490356c86502ec2054cc07a9bb58be071a4a92d080904286ff
+0x3179C	0xD8	src/code/controller_flags_resolve.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9a6c975f2faa1632b4a1fa80a6f5c03b9afb3106b00012c6ed0843153ee05249
+0x3FC60	0x10C	src/code/func_8003F060.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	52c883c055ad028900d490e2de00769171fff70045a5a5a2e64a76e796e477d7

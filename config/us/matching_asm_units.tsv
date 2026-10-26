@@ -39,8 +39,6 @@
 0x5D804	0xC8	src/code/object_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
 0x43448	0xD4	src/code/display_pipeline_setup.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc1bce253d3f85c7c88c07e83a55cd2bb9bd91932a619d77bbf8092aeb3da09f
 0x63D04	0xD4	src/code/object_stream_state_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	69830bba04a83e47b9889fcd960f4eadbb9da0346b742929a563b633df87e78e
-0x1AD4C	0xD8	src/code/resource_command_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cec63fbfac1a7db19867df28fda26f0d316e84569b0b26749e16caad8600744
-0x3179C	0xD8	src/code/controller_flags_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	9a6c975f2faa1632b4a1fa80a6f5c03b9afb3106b00012c6ed0843153ee05249
 0xC798	0xDC	src/code/display_page_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	ba5320c8d8c15aa42c44fe30877ab08aa1337f40bfba3d0632a43022f8b53cf7
 0x2A458	0xDC	src/code/play_event_queue_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
 0x3428C	0xDC	src/code/memory_block_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	de14c54a1a5e84e5501690d97ad6fe33bbe491f0d196b16438f5507a68bda25a
@@ -49,7 +47,6 @@
 0x33D74	0xE4	src/code/memory_table_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	d93aa31398617c7a5dc375d4196d2177fafa7efeaac978191731b73cff6d689a
 0x3A6CC	0xE4	src/code/roster_runtime_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	d61621aaa6a8dff87c9f777ac9c539184e0f38af7120cf63af48973fa74dabf3
 0x444B4	0xE8	src/code/object_vector_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	4816d0ba36102a53382866fd15e2200cf4ba2f8fcbe2602fefe2f356b30db394
-0x1D184	0xEC	src/code/layout_coordinates_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	e2f40b511b70ea490356c86502ec2054cc07a9bb58be071a4a92d080904286ff
 0x2CD08	0xEC	src/code/team_secondary_stats_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	ee20a9dafe069cf426fcd1622bc99625aef0a776ee4ae8b12dc00879bdef46a2
 0x2EC1C	0xEC	src/code/matrix_vector_transform.s	-O2 -G0 -mips3 -mgp32 -mfp32	f4f8a91fb416038788f5a0f0479fe4405e8d0320c31071ab4b5e0ea6e73979d9
 0x31C40	0xEC	src/code/controller_axes_resolve.s	--symbol=controller_flags_resolve:0x80030B9C -O2 -G0 -mips3 -mgp32 -mfp32	f656b489de33a21d3dc2e8e4541cf40c37740877cda9455d189467d1309a05fd
@@ -396,7 +393,6 @@
 0x389A4	0x164	src/code/func_80037DA4.s	-O2 -G0 -mips3 -mgp32 -mfp32	30f8c7f8b4e2410bbc0b5f46cb32b1f4f5dc07f602316252f1b0c3ce73e5ca84
 0x3E854	0x150	src/code/func_8003DC54.s	-O2 -G0 -mips3 -mgp32 -mfp32	eee181cc3e3f05d25152ddaa008c243ca97899c93603d50cd880040e93526626
 0x3F110	0x158	src/code/func_8003E510.s	-O2 -G0 -mips3 -mgp32 -mfp32	e56a64eca28001e44e8506a960eaf24296c8c287f134a047bc137d9b248f6515
-0x3FC60	0x10C	src/code/func_8003F060.s	-O2 -G0 -mips3 -mgp32 -mfp32	52c883c055ad028900d490e2de00769171fff70045a5a5a2e64a76e796e477d7
 0x40994	0x100	src/code/func_8003FD94.s	-O2 -G0 -mips3 -mgp32 -mfp32	eee6502578f6368331f780da587bc74eb0243d398db90b0ac609906bb09ca174
 0x40F48	0x8	src/code/func_80040348.s	-O2 -G0 -mips3 -mgp32 -mfp32	670bf0aa009e3bb6dd3685ed504c980bbea3c14fed75e0197577d8f42f78d71b
 0x40F50	0x16C	src/code/func_80040350.s	-O2 -G0 -mips3 -mgp32 -mfp32	5ef0110154cc245e508a82a537d11a4cac4b28ea2b9a45a2557ede389f81e819
