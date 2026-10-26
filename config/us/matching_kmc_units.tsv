@@ -613,3 +613,6 @@
 0x26394	0xD8	src/code/team_event_append.c	--assembler=asn64 --symbol=D_80089320:0x80089320 --symbol=D_80082CA8:0x80082CA8 -O2 -G0 -mips3 -mgp32 -mfp32	963af8ed847281fb8e1aa2d139b0b25c87d1f7e433509c3cc1c8f9ede0418e32
 0x2646C	0xD8	src/code/team_event_append_secondary.c	--assembler=asn64 --symbol=D_80089320:0x80089320 --symbol=D_80082CA8:0x80082CA8 -O2 -G0 -mips3 -mgp32 -mfp32	963af8ed847281fb8e1aa2d139b0b25c87d1f7e433509c3cc1c8f9ede0418e32
 0x2B798	0xD0	src/code/team_best_slot_find.c	--assembler=asn64 --symbol=D_80080CFC:0x80080CFC -O2 -G0 -mips3 -mgp32 -mfp32	b815668b77a4299b04415fced2e221e51f9f1f71643f960e22e7927c10a69a13
+0x24CC4	0xDC	src/code/team_stat_ratio_pack.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	125188830130ab796cd7f353452933389d5975ce7c0f5cc71055bdc738b890f9
+0x251B8	0xDC	src/code/team_stat_ratio_pack_secondary.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	5b9344a22dd77d85f982e11525c496e2810a7d19e02c52f2183db7ccb0d9200d
+0x2B5B4	0xD8	src/code/league_best_player_find.c	--assembler=asn64 --symbol=D_80080CFC:0x80080CFC -O2 -G0 -mips3 -mgp32 -mfp32	5bf52d598f1bf595f9e6a6106b15c444f6a544182d5fdcbdbd6e1fed0af269a3

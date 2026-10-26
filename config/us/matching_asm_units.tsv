@@ -85,14 +85,11 @@
 0x43448	0xD4	src/code/display_pipeline_setup.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc1bce253d3f85c7c88c07e83a55cd2bb9bd91932a619d77bbf8092aeb3da09f
 0x63D04	0xD4	src/code/object_stream_state_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	69830bba04a83e47b9889fcd960f4eadbb9da0346b742929a563b633df87e78e
 0x1AD4C	0xD8	src/code/resource_command_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cec63fbfac1a7db19867df28fda26f0d316e84569b0b26749e16caad8600744
-0x2B5B4	0xD8	src/code/league_best_player_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	5bf52d598f1bf595f9e6a6106b15c444f6a544182d5fdcbdbd6e1fed0af269a3
 0x2D5B0	0xD8	src/code/team_color_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	64f3a182c48c9dd4419724d40fcd8813c8af0904349219fff2010186b59aeb12
 0x3179C	0xD8	src/code/controller_flags_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	9a6c975f2faa1632b4a1fa80a6f5c03b9afb3106b00012c6ed0843153ee05249
 0xC798	0xDC	src/code/display_page_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	ba5320c8d8c15aa42c44fe30877ab08aa1337f40bfba3d0632a43022f8b53cf7
 0xEA34	0xDC	src/code/vector_slots_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	f26cf764e126b874306e8d34b69cf26df94a5457f782b9f258933d9f0a6f30fb
 0x1A468	0xDC	src/code/resource_bytes_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	5769e2040d9f214f21460d0240a9733d55c927f4554c5a9959d30d7ac9cc34c6
-0x24CC4	0xDC	src/code/team_stat_ratio_pack.s	-O2 -G0 -mips3 -mgp32 -mfp32	125188830130ab796cd7f353452933389d5975ce7c0f5cc71055bdc738b890f9
-0x251B8	0xDC	src/code/team_stat_ratio_pack_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	5b9344a22dd77d85f982e11525c496e2810a7d19e02c52f2183db7ccb0d9200d
 0x28658	0xDC	src/code/play_event_state_build.s	--symbol=team_event_append:0x80025794 --symbol=team_event_append_secondary:0x8002586C -O2 -G0 -mips3 -mgp32 -mfp32	731ef2ecd97600284c1d1aee1406258bd0442113f9732b1c73828dd8a356134e
 0x223F4	0xE0	src/code/game_session_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	cfe5ba10b6505a253c7aaaebb5b7d15c4de62bfb899d7170a4c0b15514d102f0
 0x2A458	0xDC	src/code/play_event_queue_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
