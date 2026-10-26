@@ -543,6 +543,7 @@
 0x3DED4	0x190	src/code/audio_channel_prepare.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	892dbb713e69f0667215cfebe76f89b91a2852442e351220b89432917faf52f3
 0x3E064	0x19C	src/code/audio_channel_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	401039070f995fe30102555c69797c9ec499dfb9e7c909844a580937c35f36de
 0x3E200	0x18C	src/code/audio_channel_finalize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a883a783720447bbdd39d72f38328d9d8f9ce55f7b1dfa91df296e655572252e
+0x3E38C	0x134	src/code/func_8003D78C.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2167c57e5462e57f90a89c8559782cf506c5637753d23c76819a93ebd92f1d1d
 0x3D4E0	0x16C	src/code/func_8003C8E0.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8ffe12869e385a66585148f383358e1bc3b3b97c9b53e53cd4dfa6dd11023834
 0x2CB10	0x94	src/code/packed_field_primary_get.c	--assembler=asn64 --section-base=.rodata:0x800012B0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0f10e6075d1156b3ac6a086ce5495050445466dd8df8f604070e28baeaff02e
 0x2E400	0x84	src/code/runtime_record_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	00a26d22ac3d88b2f084c7dedd2cf4e4746bdb4b5a88c70d045263ee48b2b0d5

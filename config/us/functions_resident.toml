@@ -842,7 +842,7 @@ functions = [
     { name = "audio_channel_prepare", vram = 0x8003d2d4, size = 0x190 }, # c
     { name = "audio_channel_update", vram = 0x8003d464, size = 0x19c }, # c
     { name = "audio_channel_finalize", vram = 0x8003d600, size = 0x18c }, # c
-    { name = "func_8003D78C", vram = 0x8003d78c, size = 0x134 }, # asm
+    { name = "func_8003D78C", vram = 0x8003d78c, size = 0x134 }, # c
     { name = "func_8003D8C0", vram = 0x8003d8c0, size = 0x34 }, # leaf
     { name = "audio_channel_process", vram = 0x8003d8f4, size = 0x234 }, # asm
     { name = "audio_level_calculate", vram = 0x8003db28, size = 0x88 }, # c
