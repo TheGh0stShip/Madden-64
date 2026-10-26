@@ -287,7 +287,7 @@ functions = [
     { name = "resource_display_finalize", vram = 0x8001a224, size = 0x200 }, # c
     { name = "func_8001A424", vram = 0x8001a424, size = 0x64 }, # c
     { name = "animation_step_update", vram = 0x8001a488, size = 0x98 }, # c
-    { name = "resource_node_update", vram = 0x8001a520, size = 0x204 }, # asm
+    { name = "resource_node_update", vram = 0x8001a520, size = 0x204 }, # c
     { name = "resource_node_process", vram = 0x8001a724, size = 0x184 }, # c
     { name = "func_8001A8A8", vram = 0x8001a8a8, size = 0x6c }, # c
     { name = "func_8001A914", vram = 0x8001a914, size = 0x44 }, # c
@@ -844,7 +844,7 @@ functions = [
     { name = "audio_channel_finalize", vram = 0x8003d600, size = 0x18c }, # c
     { name = "func_8003D78C", vram = 0x8003d78c, size = 0x134 }, # c
     { name = "func_8003D8C0", vram = 0x8003d8c0, size = 0x34 }, # leaf
-    { name = "audio_channel_process", vram = 0x8003d8f4, size = 0x234 }, # asm
+    { name = "audio_channel_process", vram = 0x8003d8f4, size = 0x234 }, # c
     { name = "audio_level_calculate", vram = 0x8003db28, size = 0x88 }, # c
     { name = "audio_profile_load", vram = 0x8003dbb0, size = 0xa4 }, # c
     { name = "func_8003DC54", vram = 0x8003dc54, size = 0x150 }, # c
@@ -1291,7 +1291,7 @@ functions = [
     { name = "object_plane_transform", vram = 0x8005eb38, size = 0x310 }, # asm
     { name = "func_8005EE48", vram = 0x8005ee48, size = 0x40 }, # leaf
     { name = "func_8005EE88", vram = 0x8005ee88, size = 0x18 }, # leaf
-    { name = "image_plane_decode", vram = 0x8005eea0, size = 0x190 }, # asm
+    { name = "image_plane_decode", vram = 0x8005eea0, size = 0x190 }, # c
     { name = "func_8005F030", vram = 0x8005f030, size = 0x8 }, # stub
     { name = "func_8005F038", vram = 0x8005f038, size = 0x8 }, # stub
     { name = "func_8005F040", vram = 0x8005f040, size = 0x11c }, # asm

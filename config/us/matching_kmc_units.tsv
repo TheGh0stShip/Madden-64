@@ -751,3 +751,6 @@
 0x20448	0x1C4	src/code/menu_player_finalize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c4cea4ca78a7e774eeec1dd339d002544723c75350bf4e48f524f65477440a2f
 0x124FC	0x19C	src/code/render_system_shutdown.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	27e2a7e8f3227f55cdfae3fe133245359c6e92d3c8539aa30e1a57883f6477d8
 0x1B324	0x184	src/code/resource_node_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a8f3323b383fa0af2749b09857ef38625ca48319047d2e023155bdc2deb563b4
+0x1B120	0x204	src/code/resource_node_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	13f461c4f840a8286940656177c2ba2a0415a890f88aa8ffbb513f19157b96b5
+0x3E4F4	0x234	src/code/audio_channel_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	43cf995bc663276e8cebf1413d4c928569adb05a6dd36a18dc16a1c091484c87
+0x5FAA0	0x190	src/code/image_plane_decode.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bca77dd996e34c301aaf23e9c22e15a68cb5b86d0cae4c6775e6e7a67dbe53d1

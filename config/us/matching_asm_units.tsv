@@ -176,7 +176,6 @@
 0x5827C	0x23C	src/code/object_animation_cycle.s	-O2 -G0 -mips3 -mgp32 -mfp32	a4d0f9abfc20fc29304195961fa38e7e5f54e96e78530f59066839805651700c
 0x4427C	0x238	src/code/display_context_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	25527a2d1eb8bacc6038054e32d534cbfa0358454b62ba4e85a17f58131a94fe
 0x1784C	0x234	src/code/resource_archive_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	88379c9110ff18fbdf888be547cb522d2512d97a43571bddd1cba0466f648598
-0x3E4F4	0x234	src/code/audio_channel_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	43cf995bc663276e8cebf1413d4c928569adb05a6dd36a18dc16a1c091484c87
 0x55B80	0x234	src/code/object_driver_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	49679c08e077741d5b795ee4a2c09df0c96b0b0d75908abb95d1309443794bbf
 0x5C5F0	0x230	src/code/object_geometry_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	bae7f0182ec246a1135b8b55f6afb613d2f5c874e5a439695fb10e0adaa08384
 0x29118	0x22C	src/code/frame_resource_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	a72dd0db4ab3d5baac5c46ceb32207b3309ed239079c8c7bc47b0acb688ec8a3
@@ -192,7 +191,6 @@
 0x321C8	0x210	src/code/runtime_state_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	09340ac360132917dc9df882b7e6b7a616cc8e33bbe231560822080c59c4a7d0
 0x431B8	0x210	src/code/display_command_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	c2214a98d22203401cdab8d49a045b0bf0fd9c1025874e61f039226831a79790
 0x1A9D0	0x204	src/code/resource_display_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	14306b481f929f41ed98c7e04cb29281cff424520322f22e87fc83d810c791d9
-0x1B120	0x204	src/code/resource_node_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	13f461c4f840a8286940656177c2ba2a0415a890f88aa8ffbb513f19157b96b5
 0x2D944	0x204	src/code/gameplay_record_update_primary.s	-O2 -G0 -mips3 -mgp32 -mfp32	96a3466be3b13f79139fffd1b45e8b703b4f3e8e359e407c7d59c34d06e7756e
 0x2DB48	0x204	src/code/gameplay_record_update_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	1f71abd0426132ef0bfda9df96f48271a395ddbda6bd7f164d266f578278c6a3
 0x2DD4C	0x204	src/code/gameplay_record_update_tertiary.s	-O2 -G0 -mips3 -mgp32 -mfp32	4e68c6d4bcf65e6e633f8fd36adfd9fa42a2f9c69ee0f65c09b3948382547f7d
@@ -252,7 +250,6 @@
 0x60B48	0x198	src/code/image_table_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	98cf373e9fee8507d9c7442a2981128c792c8c0cddbfb4d8a57955975aec949a
 0x59D54	0x194	src/code/object_cycle_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	c350605835ec090127ddc23fbca224e68919e908a0893af0b20bd5418f6da289
 0x5D530	0x194	src/code/object_decode_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	6670bce120a97bff01c9c2bcd7a5f555e395e321786e9a4bfc313154f495d3eb
-0x5FAA0	0x190	src/code/image_plane_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	bca77dd996e34c301aaf23e9c22e15a68cb5b86d0cae4c6775e6e7a67dbe53d1
 0x62980	0x190	src/code/object_lookup_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	4c59ea69e49839ed3a1c7688f1f2adcc2af77d09ac5aff376d58ad4013d7b893
 0x2BDB8	0x18C	src/code/gameplay_interface_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	305d379df74bba16a48ca84d1fa8dc69d6902318c4a751d7bf6905dfbfdd25a7
 0x44B7C	0x18C	src/code/display_frame_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	49bc5f02a4f3b851176da35ff998e6b682c09fee29258dbd9a347dc12ce067d3
