@@ -46,8 +46,6 @@
 0x1AD4C	0xD8	src/code/resource_command_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	2cec63fbfac1a7db19867df28fda26f0d316e84569b0b26749e16caad8600744
 0x3179C	0xD8	src/code/controller_flags_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	9a6c975f2faa1632b4a1fa80a6f5c03b9afb3106b00012c6ed0843153ee05249
 0xC798	0xDC	src/code/display_page_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	ba5320c8d8c15aa42c44fe30877ab08aa1337f40bfba3d0632a43022f8b53cf7
-0xEA34	0xDC	src/code/vector_slots_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	f26cf764e126b874306e8d34b69cf26df94a5457f782b9f258933d9f0a6f30fb
-0x1A468	0xDC	src/code/resource_bytes_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	5769e2040d9f214f21460d0240a9733d55c927f4554c5a9959d30d7ac9cc34c6
 0x2A458	0xDC	src/code/play_event_queue_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
 0x33C50	0xDC	src/code/memory_block_split.s	-O2 -G0 -mips3 -mgp32 -mfp32	7d191d556e18131a17dd055bae01e96cc4426f45758a5496d27b80cc7ae86cba
 0x3428C	0xDC	src/code/memory_block_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	de14c54a1a5e84e5501690d97ad6fe33bbe491f0d196b16438f5507a68bda25a
@@ -66,7 +64,6 @@
 0x31C40	0xEC	src/code/controller_axes_resolve.s	--symbol=controller_flags_resolve:0x80030B9C -O2 -G0 -mips3 -mgp32 -mfp32	f656b489de33a21d3dc2e8e4541cf40c37740877cda9455d189467d1309a05fd
 0x36590	0xEC	src/code/audio_slot_allocate.s	-O2 -G0 -mips3 -mgp32 -mfp32	5c93ea50925e7ecbf8485240fb2d103a725c675530830b829482f00928e775af
 0x3A814	0xF0	src/code/roster_teams_swap.s	--symbol=roster_runtime_copy:0x80039ACC -O2 -G0 -mips3 -mgp32 -mfp32	5e544f0267c49b84d26281ceeb54f9a3f64451c0c5056035e7d8b013526cadf2
-0x41B60	0xF0	src/code/audio_vectors_transform.s	-O2 -G0 -mips3 -mgp32 -mfp32	8a66dc5f7a1d4416928b1bc1943a0d60605c8dfc4cef7cfb5db9c999fb71ef2f
 0x46050	0xE8	src/code/display_strip_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	a523820edc5fd86786070e78c60f4afa205b09fae7aa23498a6e505e80c7acaf
 0x630F8	0xE8	src/code/object_lookup_table_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	7e7774b27b4649246bb9c873493fd3c31fc0a8df5b5a959211857116667c2934
 0x345B0	0xF4	src/code/memory_table_create_with_data.s	-O2 -G0 -mips3 -mgp32 -mfp32	3f3b10d45bec06d780b3cf4ff4a27266d73b6f00747ecda44259e9cafbc7b05a

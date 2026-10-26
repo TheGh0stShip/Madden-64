@@ -152,7 +152,7 @@ functions = [
     { name = "func_8000DDE8", vram = 0x8000dde8, size = 0x8 }, # stub
     { name = "func_8000DDF0", vram = 0x8000ddf0, size = 0x28 }, # leaf
     { name = "func_8000DE18", vram = 0x8000de18, size = 0x1c }, # leaf
-    { name = "vector_slots_initialize", vram = 0x8000de34, size = 0xdc }, # asm
+    { name = "vector_slots_initialize", vram = 0x8000de34, size = 0xdc }, # c
     { name = "func_8000DF10", vram = 0x8000df10, size = 0x24 }, # leaf
     { name = "vector_signed_components_load", vram = 0x8000df34, size = 0xf8 }, # asm
     { name = "func_8000E02C", vram = 0x8000e02c, size = 0x30 }, # leaf
@@ -276,7 +276,7 @@ functions = [
     { name = "ui_scene_render", vram = 0x80018540, size = 0x1258 }, # asm
     { name = "strided_rows_copy", vram = 0x80019798, size = 0xac }, # asm
     { name = "func_80019844", vram = 0x80019844, size = 0x24 }, # c
-    { name = "resource_bytes_copy", vram = 0x80019868, size = 0xdc }, # asm
+    { name = "resource_bytes_copy", vram = 0x80019868, size = 0xdc }, # c
     { name = "func_80019944", vram = 0x80019944, size = 0x5c }, # leaf
     { name = "func_800199A0", vram = 0x800199a0, size = 0x44 }, # c
     { name = "func_800199E4", vram = 0x800199e4, size = 0x12c }, # asm
@@ -900,7 +900,7 @@ functions = [
     { name = "interface_runtime_process", vram = 0x80040a44, size = 0x1c0 }, # asm
     { name = "func_80040C04", vram = 0x80040c04, size = 0x108 }, # asm
     { name = "interface_runtime_prepare", vram = 0x80040d0c, size = 0x254 }, # asm
-    { name = "audio_vectors_transform", vram = 0x80040f60, size = 0xf0 }, # asm
+    { name = "audio_vectors_transform", vram = 0x80040f60, size = 0xf0 }, # c
     { name = "func_80041050", vram = 0x80041050, size = 0x38 }, # c
     { name = "interface_runtime_finalize", vram = 0x80041088, size = 0x254 }, # asm
     { name = "func_800412DC", vram = 0x800412dc, size = 0x15c }, # asm
