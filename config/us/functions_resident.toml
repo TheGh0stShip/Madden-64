@@ -419,10 +419,10 @@ functions = [
     { name = "func_80023D44", vram = 0x80023d44, size = 0x114 }, # asm
     { name = "func_80023E58", vram = 0x80023e58, size = 0x13c }, # asm
     { name = "func_80023F94", vram = 0x80023f94, size = 0x7c }, # c
-    { name = "roster_value_ratio_primary", vram = 0x80024010, size = 0xb4 }, # asm
+    { name = "roster_value_ratio_primary", vram = 0x80024010, size = 0xb4 }, # c
     { name = "team_stat_ratio_pack", vram = 0x800240c4, size = 0xdc }, # c
     { name = "roster_stat_process", vram = 0x800241a0, size = 0x364 }, # asm
-    { name = "roster_value_ratio_secondary", vram = 0x80024504, size = 0xb4 }, # asm
+    { name = "roster_value_ratio_secondary", vram = 0x80024504, size = 0xb4 }, # c
     { name = "team_stat_ratio_pack_secondary", vram = 0x800245b8, size = 0xdc }, # c
     { name = "gameplay_state_update", vram = 0x80024694, size = 0x4fc }, # asm
     { name = "func_80024B90", vram = 0x80024b90, size = 0x44 }, # leaf
@@ -933,7 +933,7 @@ functions = [
     { name = "func_80041BDC", vram = 0x80041bdc, size = 0x6c }, # c
     { name = "func_80041C48", vram = 0x80041c48, size = 0x84 }, # c
     { name = "func_80041CCC", vram = 0x80041ccc, size = 0x58 }, # c
-    { name = "audio_transition_update", vram = 0x80041d24, size = 0xb0 }, # asm
+    { name = "audio_transition_update", vram = 0x80041d24, size = 0xb0 }, # c
     { name = "func_80041DD4", vram = 0x80041dd4, size = 0x78 }, # c
     { name = "func_80041E4C", vram = 0x80041e4c, size = 0x8 }, # stub
     { name = "func_80041E54", vram = 0x80041e54, size = 0x68 }, # c
