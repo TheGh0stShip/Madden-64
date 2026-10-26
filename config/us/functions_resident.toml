@@ -310,7 +310,7 @@ functions = [
     { name = "func_8001B050", vram = 0x8001b050, size = 0x48 }, # leaf
     { name = "resource_buffers_allocate", vram = 0x8001b098, size = 0xa0 }, # c
     { name = "resource_buffers_update", vram = 0x8001b138, size = 0x1dc }, # asm
-    { name = "resource_children_detach", vram = 0x8001b314, size = 0xfc }, # asm
+    { name = "resource_children_detach", vram = 0x8001b314, size = 0xfc }, # c
     { name = "func_8001B410", vram = 0x8001b410, size = 0x3c }, # c
     { name = "display_record_release", vram = 0x8001b44c, size = 0xd0 }, # c
     { name = "func_8001B51C", vram = 0x8001b51c, size = 0x28 }, # leaf
