@@ -341,7 +341,7 @@ functions = [
     { name = "ui_text_layout_reverse", vram = 0x8001df98, size = 0x518 }, # asm
     { name = "ui_menu_primary", vram = 0x8001e4b0, size = 0x1b8 }, # asm
     { name = "ui_menu_secondary", vram = 0x8001e668, size = 0x1b8 }, # asm
-    { name = "text_glyph_width_sum", vram = 0x8001e820, size = 0xd0 }, # asm
+    { name = "text_glyph_width_sum", vram = 0x8001e820, size = 0xd0 }, # c
     { name = "ui_menu_tertiary", vram = 0x8001e8f0, size = 0x1b8 }, # asm
     { name = "ui_slots_release_all", vram = 0x8001eaa8, size = 0x84 }, # c
     { name = "ui_slot_release", vram = 0x8001eb2c, size = 0x8c }, # c

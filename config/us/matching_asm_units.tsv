@@ -40,7 +40,6 @@
 0x330FC	0xC4	src/code/resource_pool_reset_wait.s	-O2 -G0 -mips3 -mgp32 -mfp32	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
 0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
 0x5D804	0xC8	src/code/object_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
-0x1F420	0xD0	src/code/text_glyph_width_sum.s	-O2 -G0 -mips3 -mgp32 -mfp32	f9cdbe48abeec6ff78efbc60d84c88b24a69664bc270c18cdf34b00ee021ce08
 0x40E74	0xD0	src/code/audio_range_randomize.s	-O2 -G0 -mips3 -mgp32 -mfp32	b7beb92c49adae993b236c7a9ecd91d012b4571dfeaf15e9615d967819c168e9
 0x43448	0xD4	src/code/display_pipeline_setup.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc1bce253d3f85c7c88c07e83a55cd2bb9bd91932a619d77bbf8092aeb3da09f
 0x63D04	0xD4	src/code/object_stream_state_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	69830bba04a83e47b9889fcd960f4eadbb9da0346b742929a563b633df87e78e
