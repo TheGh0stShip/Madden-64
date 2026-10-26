@@ -14,7 +14,7 @@ func_80034388:
     sw          $s0, 0x10($sp)
     lw          $s1, 0x8($s4)
     addu        $s3, $a1, $zero
-    jal         func_800342B0
+    jal         resource_descriptor_select
     addu        $a0, $s1, $zero
     addu        $v0, $s3, $zero
     lw          $v1, 0x18($s1)

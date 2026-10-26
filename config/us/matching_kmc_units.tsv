@@ -800,3 +800,4 @@
 0x4252C	0xCC	src/code/menu_sound_play.c	--assembler=asn64 --normalizer-enable-KMC-SWITCH-SHARED-CASE-SPLIT -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	20bc7f6fcb0dbb5f43b4588c6b205d29289018c00435ba4fef5d9ea48808f223
 0x42038	0xCC	src/code/resource_container_release.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	12317144a79b9dd861267ffd728b64d08b77086590447c4f35449b1bcec51351
 0x5DF34	0xCC	src/code/object_subresources_allocate.c	--assembler=asn64 --normalizer-enable-KMC-JALR-LOOP-ARG-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	20278d9ad85a198c595bd3af40f37cc7372ed5f7f0c051d167b9101441f25fbb
+0x34EB0	0xD8	src/code/resource_descriptor_select.c	--assembler=asn64 --symbol=D_80088630:0x80088630 --symbol=D_80069AB8:0x80069AB8 --symbol=D_80069A88:0x80069A88 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6722bec670b1a66e97bf94d887f1e6d0599ddfc82998a130c9ec01e4b80437ca

@@ -659,7 +659,7 @@ functions = [
     { name = "func_80034154", vram = 0x80034154, size = 0x10 }, # stub
     { name = "func_80034164", vram = 0x80034164, size = 0x34 }, # c
     { name = "func_80034198", vram = 0x80034198, size = 0x118 }, # asm
-    { name = "func_800342B0", vram = 0x800342b0, size = 0xd8 }, # asm
+    { name = "resource_descriptor_select", vram = 0x800342b0, size = 0xd8 }, # c
     { name = "func_80034388", vram = 0x80034388, size = 0x160 }, # asm
     { name = "object_state_initialize", vram = 0x800344e8, size = 0x84 }, # c
     { name = "func_8003456C", vram = 0x8003456c, size = 0x7c }, # c
