@@ -196,7 +196,7 @@ object_driver_update:
     lw          $v1, 0x78($s1)
 .L80055A40:
     sw          $v1, 0x7C($s1)
-    jal         func_800556A8
+    jal         object_state_pattern_test
     addu        $a0, $s1, $zero
     beqz        $v0, .L80055A60
     addiu       $v0, $zero, 0x1

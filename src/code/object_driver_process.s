@@ -15,7 +15,7 @@ object_driver_process:
     jal         func_80055A80
     addu        $a0, $s0, $zero
     addu        $a0, $s0, $zero
-    jal         func_800556A8
+    jal         object_state_pattern_test
     sw          $zero, 0xC($s1)
     sw          $v0, 0x10($s1)
     sw          $zero, 0x14($s1)

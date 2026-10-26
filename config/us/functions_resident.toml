@@ -1206,7 +1206,7 @@ functions = [
     { name = "func_80055588", vram = 0x80055588, size = 0x7c }, # c
     { name = "func_80055604", vram = 0x80055604, size = 0x8 }, # stub
     { name = "driver_callbacks_initialize", vram = 0x8005560c, size = 0x9c }, # c
-    { name = "func_800556A8", vram = 0x800556a8, size = 0xd8 }, # asm
+    { name = "object_state_pattern_test", vram = 0x800556a8, size = 0xd8 }, # c
     { name = "object_driver_update", vram = 0x80055780, size = 0x300 }, # asm
     { name = "func_80055A80", vram = 0x80055a80, size = 0x13c }, # asm
     { name = "object_driver_process", vram = 0x80055bbc, size = 0x2d0 }, # asm
