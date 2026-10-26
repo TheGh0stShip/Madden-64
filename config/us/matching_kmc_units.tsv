@@ -708,3 +708,5 @@
 0x630F8	0xE8	src/code/object_lookup_table_create.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7e7774b27b4649246bb9c873493fd3c31fc0a8df5b5a959211857116667c2934
 0x63D04	0xD4	src/code/object_stream_state_create.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	69830bba04a83e47b9889fcd960f4eadbb9da0346b742929a563b633df87e78e
 0x1B870	0x108	src/code/resource_context_load.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ff93daa49ca6141d33c6bccee63ab23b75cb0bac2b82b08eb205f914923da726
+0x1F914	0x108	src/code/ui_slot_resource_bind_primary.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	674508edb5b53c80d6b7933b230c8ef43c2b883e94e4fb459b6154f4c88d2af2
+0x1FA1C	0xFC	src/code/ui_slot_resource_bind_secondary.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	17b6f8ba7523ae76817f0f37eb576be8d2237691c9e09b43b8c1bae49a7bcade

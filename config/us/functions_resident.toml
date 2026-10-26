@@ -348,8 +348,8 @@ functions = [
     { name = "func_8001EBB8", vram = 0x8001ebb8, size = 0x68 }, # c
     { name = "ui_slot_clear", vram = 0x8001ec20, size = 0x8c }, # c
     { name = "func_8001ECAC", vram = 0x8001ecac, size = 0x68 }, # c
-    { name = "ui_slot_resource_bind_primary", vram = 0x8001ed14, size = 0x108 }, # asm
-    { name = "ui_slot_resource_bind_secondary", vram = 0x8001ee1c, size = 0xfc }, # asm
+    { name = "ui_slot_resource_bind_primary", vram = 0x8001ed14, size = 0x108 }, # c
+    { name = "ui_slot_resource_bind_secondary", vram = 0x8001ee1c, size = 0xfc }, # c
     { name = "ui_range_apply_forward", vram = 0x8001ef18, size = 0xac }, # c
     { name = "ui_range_apply_reverse", vram = 0x8001efc4, size = 0xac }, # c
     { name = "func_8001F070", vram = 0x8001f070, size = 0x54 }, # c
