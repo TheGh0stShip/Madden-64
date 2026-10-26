@@ -652,3 +652,5 @@
 0x188EC	0x1C0	src/code/resource_archive_finalize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e09b94f02c5e3715336d48aa070ffed41f8cc9c1f5365e4a1fb8e823d93c9f37
 0x18AD0	0x178	src/code/resource_archive_commit.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d4a2b790c94a058db18b82035fc9500d8c1146dd2504e79d8f7b81aada75c5e8
 0x5FEAC	0xEC	src/code/byte_plane_filter.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	dbfd355f2cd9b4b5522eba8403d1d53b6a0136390ec04ca1dd48cb20759f2e73
+0xC460	0xCC	src/code/display_surface_clone.c	--assembler=asn64 --symbol=D_80064BA0:0x80064BA0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	616da9367056e81fb36909814f7bc4a95cff8e0622983348e86ab8ba502aca28
+0x30AA4	0xCC	src/code/runtime_node_insert.c	--assembler=asn64 --symbol=D_8008773C:0x8008773C --symbol=D_8008AFBC:0x8008AFBC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d4d2665a3ed1b996d6ae3f4b359c30731eb366e160741b7568cb90eb96b24b54

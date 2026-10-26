@@ -47,8 +47,6 @@
 0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
 0x3EEC0	0xC8	src/code/audio_name_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	bd3cc36156c1133d9163fffbe6a5ab46fd13bf86d94d934756c2175fb7d2a18a
 0x5D804	0xC8	src/code/object_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
-0xC460	0xCC	src/code/display_surface_clone.s	-O2 -G0 -mips3 -mgp32 -mfp32	616da9367056e81fb36909814f7bc4a95cff8e0622983348e86ab8ba502aca28
-0x30AA4	0xCC	src/code/runtime_node_insert.s	-O2 -G0 -mips3 -mgp32 -mfp32	d4d2665a3ed1b996d6ae3f4b359c30731eb366e160741b7568cb90eb96b24b54
 0x1F420	0xD0	src/code/text_glyph_width_sum.s	-O2 -G0 -mips3 -mgp32 -mfp32	f9cdbe48abeec6ff78efbc60d84c88b24a69664bc270c18cdf34b00ee021ce08
 0x40E74	0xD0	src/code/audio_range_randomize.s	-O2 -G0 -mips3 -mgp32 -mfp32	b7beb92c49adae993b236c7a9ecd91d012b4571dfeaf15e9615d967819c168e9
 0x3DBA0	0xD4	src/code/audio_position_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	da295f58a8307704798bf7915581fb1c2b647114ac6729fd35490bffa4f184a6
