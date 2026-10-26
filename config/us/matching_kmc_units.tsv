@@ -743,3 +743,5 @@
 0x1B7C4	0xAC	src/code/ui_context_clone.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ab2e2118247e0723d05a46ce45b890033c146483fdbeeb2317bccf6527d40ec8
 0x2D474	0x13C	src/code/team_player_pair_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cdde49ee4c42c4415eb2d2bcd964d41c98ca5a3be96615c268848a4a1d82ad66
 0x1B978	0x130	src/code/func_8001AD78.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c0d7a1ad8d8bdc325d85980602a664de640c32fd69afbb4675241180a8254da6
+0x1ABD4	0x178	src/code/resource_display_commit.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d0b9b9fdf32932abff677cb3efd251f5f65b0e423bffb69a95cab984eb9f6a97
+0x1BD38	0x1DC	src/code/resource_buffers_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7e6821485dcb9eee9ac68068fb6b45faaa7102fe0f8a019126bccc2bdd78c5c9

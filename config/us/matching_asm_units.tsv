@@ -216,7 +216,6 @@
 0x343CC	0x1E4	src/code/memory_arena_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0dd88e625bd0775ef48d397a7df705432fda76ce9ad4c5b0da5963e181c028d8
 0x39328	0x1E4	src/code/audio_voice_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	7d6a09b08e0786071b13e403c17a654302eecbfc14e647d73c0ca9f26c3f72be
 0x454D8	0x1E0	src/code/scheduler_queue_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ffdd40df2782c3ff04d9d827f0cd70bd9b1fd6834d73708aebc41bb070d5479
-0x1BD38	0x1DC	src/code/resource_buffers_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	7e6821485dcb9eee9ac68068fb6b45faaa7102fe0f8a019126bccc2bdd78c5c9
 0x31DD0	0x1DC	src/code/runtime_callback_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	d880a7da6d41e728b162200e7a69ea697845c332a49a04e91367598a1a869539
 0x173FC	0x1D8	src/code/resource_stream_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	f5b6d9759c33b023f818c9e42adf85f3725b33aa3c76c7692e5c90bfdf9bc53a
 0x42E48	0x1D8	src/code/display_state_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	23aee079b1de62f4d934a46623d821a3b296450d529a5d04ad89c98b71bbd208
@@ -274,7 +273,6 @@
 0x35D5C	0x17C	src/code/memory_block_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	98719db3c0e0241613b9f2279b0672c8962add27a17f6aa388924ed3803cca11
 0x3C968	0x17C	src/code/audio_stream_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	6a441895a5887721ebe86226d8da7563d4732fa6cb6f3e8188b420595b7c13d0
 0x3F5B0	0x17C	src/code/audio_bank_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	948999baf435c93e571ab77f27345dfbf42574168971cd399e17b81ec57c876b
-0x1ABD4	0x178	src/code/resource_display_commit.s	-O2 -G0 -mips3 -mgp32 -mfp32	d0b9b9fdf32932abff677cb3efd251f5f65b0e423bffb69a95cab984eb9f6a97
 0x1C1C0	0x178	src/code/resource_buffers_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	e758b5858366bd13b02692361bb2e5423a12ee79da8f238dbf998f7c3e2d0f9e
 0x36B88	0x178	src/code/memory_pool_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	25725cbda057fa1e39b9e389afdd537ef6fdb8feddd619e30bbb7a426105e779
 0x6197C	0x178	src/code/image_table_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	d7f6eb31106f188d2b8005d9457a32bbc95c82bd5f0d5ad5c890d83380f677a6

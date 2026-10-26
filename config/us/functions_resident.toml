@@ -282,7 +282,7 @@ functions = [
     { name = "func_800199E4", vram = 0x800199e4, size = 0x12c }, # asm
     { name = "resource_display_process", vram = 0x80019b10, size = 0x2c0 }, # asm
     { name = "resource_display_update", vram = 0x80019dd0, size = 0x204 }, # asm
-    { name = "resource_display_commit", vram = 0x80019fd4, size = 0x178 }, # asm
+    { name = "resource_display_commit", vram = 0x80019fd4, size = 0x178 }, # c
     { name = "resource_command_dispatch", vram = 0x8001a14c, size = 0xd8 }, # c
     { name = "resource_display_finalize", vram = 0x8001a224, size = 0x200 }, # asm
     { name = "func_8001A424", vram = 0x8001a424, size = 0x64 }, # c
@@ -309,7 +309,7 @@ functions = [
     { name = "func_8001B02C", vram = 0x8001b02c, size = 0x24 }, # leaf
     { name = "func_8001B050", vram = 0x8001b050, size = 0x48 }, # leaf
     { name = "resource_buffers_allocate", vram = 0x8001b098, size = 0xa0 }, # c
-    { name = "resource_buffers_update", vram = 0x8001b138, size = 0x1dc }, # asm
+    { name = "resource_buffers_update", vram = 0x8001b138, size = 0x1dc }, # c
     { name = "resource_children_detach", vram = 0x8001b314, size = 0xfc }, # c
     { name = "func_8001B410", vram = 0x8001b410, size = 0x3c }, # c
     { name = "display_record_release", vram = 0x8001b44c, size = 0xd0 }, # c
