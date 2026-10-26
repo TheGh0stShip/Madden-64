@@ -631,3 +631,6 @@
 0x61334	0x98	src/code/index_planes_accumulate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f64d1f207eaaf8ef85b1141425da927e255308def1a2d8c14e65cfdcaf2644d9
 0x2373C	0x84	src/code/roster_symbol_lookup.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ef1c0e46dfcff4c11e592a4448dd1e1a38505c4040150457e2e0269ecdb26ba6
 0x45D00	0x9C	src/code/display_system_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	191f225271feddde2156caf94717827cdb28ae64036e5d6a853ccc7f77771df1
+0x613CC	0xA4	src/code/indexed_rgb_accumulate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d3bccb53ddd118bb88196543d7c5bf68ed6fca21eec850b92f685484e8eedc47
+0x61C28	0xA4	src/code/indexed_texel_increment.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c1a4947f460be26cd6b3b6aac4f99adaaa50be20b5fdf7d6a098b7671fa0e935
+0x31D2C	0xA4	src/code/display_offsets_accumulate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a84b02c7a67392b0b09c26dbae2e4a525b073e0e960a5407d603ee2aab1bff2e
