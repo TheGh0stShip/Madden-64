@@ -46,7 +46,6 @@
 0x3A814	0xF0	src/code/roster_teams_swap.s	--symbol=roster_runtime_copy:0x80039ACC -O2 -G0 -mips3 -mgp32 -mfp32	5e544f0267c49b84d26281ceeb54f9a3f64451c0c5056035e7d8b013526cadf2
 0x46050	0xE8	src/code/display_strip_emit.s	-O2 -G0 -mips3 -mgp32 -mfp32	a523820edc5fd86786070e78c60f4afa205b09fae7aa23498a6e505e80c7acaf
 0x345B0	0xF4	src/code/memory_table_create_with_data.s	-O2 -G0 -mips3 -mgp32 -mfp32	3f3b10d45bec06d780b3cf4ff4a27266d73b6f00747ecda44259e9cafbc7b05a
-0xC5D4	0x11C	src/code/display_system_run.s	-O2 -G0 -mips3 -mgp32 -mfp32	bb3237e291b8ee1f444356772563e67fe63fc379980b22fd7a6eabf4642bb971
 0xD620	0x118	src/code/object_orientation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	4b07a347661fd37d5f854d7aeccce5e048c2bf657a3f6695ae536c9c20f31144
 0xD8C8	0xF8	src/code/projection_scale_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	1031efd1e940e65f082065297b5fc5a4d4b52bb63e73677f9c77fbbf841a2e5b
 0xEB34	0xF8	src/code/vector_signed_components_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	639afcb1bf63baf9699161edadf03489afa79fc2fd5537e3c3d6a700d25b29d5

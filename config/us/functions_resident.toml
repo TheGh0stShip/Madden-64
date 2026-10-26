@@ -85,7 +85,7 @@ functions = [
     { name = "object_resource_cleanup", vram = 0x8000b7e4, size = 0x7c }, # c
     { name = "display_surface_clone", vram = 0x8000b860, size = 0xcc }, # c
     { name = "display_buffer_sync", vram = 0x8000b92c, size = 0xa8 }, # c
-    { name = "display_system_run", vram = 0x8000b9d4, size = 0x11c }, # asm
+    { name = "display_system_run", vram = 0x8000b9d4, size = 0x11c }, # c
     { name = "display_page_activate", vram = 0x8000baf0, size = 0xa8 }, # c
     { name = "display_page_configure", vram = 0x8000bb98, size = 0xdc }, # asm
     { name = "display_frame_setup", vram = 0x8000bc74, size = 0x20c }, # asm

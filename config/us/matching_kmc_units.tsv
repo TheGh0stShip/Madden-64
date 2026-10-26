@@ -714,3 +714,4 @@
 0x3006C	0x128	src/code/func_8002F46C.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5d3474b23f197ff86cb665d4ec0db01e73a565ab827ee8ebda2b314bae0919e8
 0xE0AC	0x110	src/code/object_scene_reset.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	74b1d18e5d8e4d25d821c7279dcbdebc80b40dd1d870c5607dd3d754c7fcfe5c
 0xE598	0x100	src/code/node_resource_attach.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afb4a8ac19ad3b47b7eac4109b774dc471dde54ad73a04be462131cceab059b4
+0xC5D4	0x11C	src/code/display_system_run.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bb3237e291b8ee1f444356772563e67fe63fc379980b22fd7a6eabf4642bb971
