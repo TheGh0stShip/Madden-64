@@ -451,7 +451,7 @@ functions = [
     { name = "func_800278D8", vram = 0x800278d8, size = 0x30 }, # c
     { name = "interface_mode_configure", vram = 0x80027908, size = 0x8c }, # c
     { name = "roster_profile_update", vram = 0x80027994, size = 0xc4 }, # asm
-    { name = "play_event_state_build", vram = 0x80027a58, size = 0xdc }, # asm
+    { name = "play_event_state_build", vram = 0x80027a58, size = 0xdc }, # c
     { name = "interface_command_group_primary", vram = 0x80027b34, size = 0x84 }, # c
     { name = "interface_command_group_secondary", vram = 0x80027bb8, size = 0x84 }, # c
     { name = "func_80027C3C", vram = 0x80027c3c, size = 0x5c }, # c
@@ -473,7 +473,7 @@ functions = [
     { name = "mode_resource_update", vram = 0x80028ca8, size = 0x28c }, # asm
     { name = "menu_mode_update", vram = 0x80028f34, size = 0x2a0 }, # asm
     { name = "menu_mode_process", vram = 0x800291d4, size = 0x1f8 }, # asm
-    { name = "menu_cursor_state_initialize", vram = 0x800293cc, size = 0xc8 }, # asm
+    { name = "menu_cursor_state_initialize", vram = 0x800293cc, size = 0xc8 }, # c
     { name = "func_80029494", vram = 0x80029494, size = 0x78 }, # leaf
     { name = "menu_cursor_update", vram = 0x8002950c, size = 0x298 }, # asm
     { name = "func_800297A4", vram = 0x800297a4, size = 0x38 }, # leaf
@@ -764,7 +764,7 @@ functions = [
     { name = "audio_sequence_process", vram = 0x8003890c, size = 0xad4 }, # asm
     { name = "func_800393E0", vram = 0x800393e0, size = 0x48 }, # c
     { name = "roster_record_update", vram = 0x80039428, size = 0x184 }, # asm
-    { name = "resource_groups_release", vram = 0x800395ac, size = 0xc8 }, # asm
+    { name = "resource_groups_release", vram = 0x800395ac, size = 0xc8 }, # c
     { name = "func_80039674", vram = 0x80039674, size = 0x6c }, # c
     { name = "func_800396E0", vram = 0x800396e0, size = 0x70 }, # c
     { name = "roster_value_resolve", vram = 0x80039750, size = 0x78 }, # asm

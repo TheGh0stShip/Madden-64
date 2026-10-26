@@ -72,8 +72,6 @@
 0x28594	0xC4	src/code/roster_profile_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	bebcbc3caf0ea192d35d5d484d56510cb21abccb4d8347a113069f67d3ab2300
 0x330FC	0xC4	src/code/resource_pool_reset_wait.s	-O2 -G0 -mips3 -mgp32 -mfp32	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
 0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
-0x29FCC	0xC8	src/code/menu_cursor_state_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	49ba6c42f3e9d00b34806c600086024f0b26bb80787c8f1b52a6e13146aaf370
-0x3A1AC	0xC8	src/code/resource_groups_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc499dc3bf2057a11eb33f860f6981ecce8695e71d54fb071049d44816ee5773
 0x3EEC0	0xC8	src/code/audio_name_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	bd3cc36156c1133d9163fffbe6a5ab46fd13bf86d94d934756c2175fb7d2a18a
 0x5D804	0xC8	src/code/object_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
 0xC460	0xCC	src/code/display_surface_clone.s	-O2 -G0 -mips3 -mgp32 -mfp32	616da9367056e81fb36909814f7bc4a95cff8e0622983348e86ab8ba502aca28
@@ -90,7 +88,6 @@
 0xC798	0xDC	src/code/display_page_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	ba5320c8d8c15aa42c44fe30877ab08aa1337f40bfba3d0632a43022f8b53cf7
 0xEA34	0xDC	src/code/vector_slots_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	f26cf764e126b874306e8d34b69cf26df94a5457f782b9f258933d9f0a6f30fb
 0x1A468	0xDC	src/code/resource_bytes_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	5769e2040d9f214f21460d0240a9733d55c927f4554c5a9959d30d7ac9cc34c6
-0x28658	0xDC	src/code/play_event_state_build.s	--symbol=team_event_append:0x80025794 --symbol=team_event_append_secondary:0x8002586C -O2 -G0 -mips3 -mgp32 -mfp32	731ef2ecd97600284c1d1aee1406258bd0442113f9732b1c73828dd8a356134e
 0x223F4	0xE0	src/code/game_session_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	cfe5ba10b6505a253c7aaaebb5b7d15c4de62bfb899d7170a4c0b15514d102f0
 0x2A458	0xDC	src/code/play_event_queue_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
 0x33C50	0xDC	src/code/memory_block_split.s	-O2 -G0 -mips3 -mgp32 -mfp32	7d191d556e18131a17dd055bae01e96cc4426f45758a5496d27b80cc7ae86cba
