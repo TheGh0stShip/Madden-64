@@ -34,7 +34,6 @@
 0x61280	0xB4	src/code/object_shared_buffers_assign.s	-O2 -G0 -mips3 -mgp32 -mfp32	0c29af0e509a78f289d023c9374101f4129152e6af4419d5ac823c90da81f2a2
 0x28A38	0xB8	src/code/roster_rating_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	81a58ff22f256cabc765aecb67ac2694ce2469adbcc2e880afbb39fe114f9a1d
 0x45F94	0xBC	src/code/display_vertex_batch_append.s	-O2 -G0 -mips3 -mgp32 -mfp32	c370e9bf77cfbc794f6db63fab794da0c4159d8e13f46c5580d07622beebcb7b
-0x11E48	0xC0	src/code/object_texture_descriptor_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	297bab0e40fc6f734f73e39c81747b0ced8143118e932f3539be4cc0811c3b85
 0x57690	0xC0	src/code/object_round_state_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	164a08db6bf5483b35ccd7824da9d7c024adb0847af49ee92fddda6664393713
 0x330FC	0xC4	src/code/resource_pool_reset_wait.s	-O2 -G0 -mips3 -mgp32 -mfp32	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
 0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
@@ -298,7 +297,6 @@
 0x2E7D0	0x198	src/code/gameplay_record_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	54cad0ef6ae1a5bd008b7657d91bffdd1aae6793ffb13e9f2c4cc2e01a4e210b
 0x5908C	0x198	src/code/object_cycle_state_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	6056c083991f34956fff34a517ce642d3dbe4b6ae89f6e8a012db46dc960bd7e
 0x60B48	0x198	src/code/image_table_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	98cf373e9fee8507d9c7442a2981128c792c8c0cddbfb4d8a57955975aec949a
-0x3F87C	0x194	src/code/audio_sequence_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	4326a3a22df38e78d6e0e48b915c41fc9dfda861b4ad5b04a730375075aa92c7
 0x59D54	0x194	src/code/object_cycle_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	c350605835ec090127ddc23fbca224e68919e908a0893af0b20bd5418f6da289
 0x5D530	0x194	src/code/object_decode_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	6670bce120a97bff01c9c2bcd7a5f555e395e321786e9a4bfc313154f495d3eb
 0x5FAA0	0x190	src/code/image_plane_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	bca77dd996e34c301aaf23e9c22e15a68cb5b86d0cae4c6775e6e7a67dbe53d1

@@ -202,7 +202,7 @@ functions = [
     { name = "display_scene_render", vram = 0x80010c78, size = 0x5b0 }, # asm
     { name = "func_80011228", vram = 0x80011228, size = 0x10 }, # stub
     { name = "func_80011238", vram = 0x80011238, size = 0x10 }, # stub
-    { name = "object_texture_descriptor_get", vram = 0x80011248, size = 0xc0 }, # asm
+    { name = "object_texture_descriptor_get", vram = 0x80011248, size = 0xc0 }, # c
     { name = "render_system_initialize", vram = 0x80011308, size = 0x180 }, # asm
     { name = "func_80011488", vram = 0x80011488, size = 0x48 }, # c
     { name = "render_buffers_initialize", vram = 0x800114d0, size = 0x1e8 }, # asm
@@ -866,7 +866,7 @@ functions = [
     { name = "func_8003EB2C", vram = 0x8003eb2c, size = 0x4c }, # c
     { name = "func_8003EB78", vram = 0x8003eb78, size = 0x50 }, # c
     { name = "audio_slots_release_all", vram = 0x8003ebc8, size = 0xb4 }, # c
-    { name = "audio_sequence_prepare", vram = 0x8003ec7c, size = 0x194 }, # asm
+    { name = "audio_sequence_prepare", vram = 0x8003ec7c, size = 0x194 }, # c
     { name = "audio_sequence_advance", vram = 0x8003ee10, size = 0x250 }, # asm
     { name = "func_8003F060", vram = 0x8003f060, size = 0x10c }, # asm
     { name = "audio_slot_active_test", vram = 0x8003f16c, size = 0xc4 }, # asm

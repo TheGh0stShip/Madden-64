@@ -692,3 +692,5 @@
 0x40CF4	0xDC	src/code/audio_record_find.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f1784526551e86eaf31cf81c0a858842f3dece0da539687ee17ea8f6bcc80cb1
 0x36590	0xEC	src/code/audio_slot_allocate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5c93ea50925e7ecbf8485240fb2d103a725c675530830b829482f00928e775af
 0x23338	0xC0	src/code/roster_selection_apply.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2c5d2954e7e3c11bdd2a49b0205e6d9e0ab11b65b2a9170c790691bb5350f2d2
+0x11E48	0xC0	src/code/object_texture_descriptor_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	297bab0e40fc6f734f73e39c81747b0ced8143118e932f3539be4cc0811c3b85
+0x3F87C	0x194	src/code/audio_sequence_prepare.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4326a3a22df38e78d6e0e48b915c41fc9dfda861b4ad5b04a730375075aa92c7
