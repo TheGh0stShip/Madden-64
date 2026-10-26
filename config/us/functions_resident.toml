@@ -358,7 +358,7 @@ functions = [
     { name = "menu_player_process", vram = 0x8001f2b4, size = 0x1d4 }, # asm
     { name = "player_ui_state_configure", vram = 0x8001f488, size = 0x11c }, # c
     { name = "func_8001F5A4", vram = 0x8001f5a4, size = 0x30 }, # c
-    { name = "func_8001F5D4", vram = 0x8001f5d4, size = 0x138 }, # asm
+    { name = "func_8001F5D4", vram = 0x8001f5d4, size = 0x138 }, # c
     { name = "func_8001F70C", vram = 0x8001f70c, size = 0x48 }, # c
     { name = "func_8001F754", vram = 0x8001f754, size = 0x38 }, # leaf
     { name = "player_index_selection_set", vram = 0x8001f78c, size = 0x90 }, # c

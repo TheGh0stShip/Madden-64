@@ -720,3 +720,4 @@
 0x115A4	0x110	src/code/display_material_setup.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f14cdf5a7c3ba50ecb09dd2a2e3e2c1c20119be5fa6f77848d14dfc612773a05
 0x20088	0x11C	src/code/player_ui_state_configure.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	45795526a7002880f7e5b2df6ff9a24ad79c01b1b13e2369d935ca528d3296fb
 0x17FC0	0x12C	src/code/func_800173C0.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	37167f7f36e32d77d4f34cb985302f3f1a816fe0774e38c68c6fa6d7e972e8a5
+0x201D4	0x138	src/code/func_8001F5D4.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9a183d5bdc2cc9c81da7205fb2a2c4ef1e0d03c45dcb6b3eb946d6919370575a
