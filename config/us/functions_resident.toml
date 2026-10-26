@@ -415,7 +415,7 @@ functions = [
     { name = "gameplay_state_process", vram = 0x80022c58, size = 0x21c }, # asm
     { name = "gameplay_roster_update", vram = 0x80022e74, size = 0x9b4 }, # asm
     { name = "gameplay_record_process", vram = 0x80023828, size = 0x438 }, # asm
-    { name = "team_stat_value_get", vram = 0x80023c60, size = 0xe4 }, # asm
+    { name = "team_stat_value_get", vram = 0x80023c60, size = 0xe4 }, # c
     { name = "func_80023D44", vram = 0x80023d44, size = 0x114 }, # asm
     { name = "func_80023E58", vram = 0x80023e58, size = 0x13c }, # asm
     { name = "func_80023F94", vram = 0x80023f94, size = 0x7c }, # c
@@ -1277,7 +1277,7 @@ functions = [
     { name = "object_decode_process", vram = 0x8005c930, size = 0x194 }, # asm
     { name = "func_8005CAC8", vram = 0x8005cac8, size = 0x8 }, # asm
     { name = "func_8005CAD0", vram = 0x8005cad0, size = 0x134 }, # asm
-    { name = "object_stream_process", vram = 0x8005cc04, size = 0xc8 }, # asm
+    { name = "object_stream_process", vram = 0x8005cc04, size = 0xc8 }, # c
     { name = "func_8005CCCC", vram = 0x8005cccc, size = 0x134 }, # asm
     { name = "func_8005CE00", vram = 0x8005ce00, size = 0x124 }, # asm
     { name = "object_decode_state_create", vram = 0x8005cf24, size = 0xf0 }, # c

@@ -701,3 +701,5 @@
 0x1D184	0xEC	src/code/layout_coordinates_build.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e2f40b511b70ea490356c86502ec2054cc07a9bb58be071a4a92d080904286ff
 0x3179C	0xD8	src/code/controller_flags_resolve.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9a6c975f2faa1632b4a1fa80a6f5c03b9afb3106b00012c6ed0843153ee05249
 0x3FC60	0x10C	src/code/func_8003F060.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	52c883c055ad028900d490e2de00769171fff70045a5a5a2e64a76e796e477d7
+0x24860	0xE4	src/code/team_stat_value_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b50b9d86f8b3cd938ed1f41a6d85440db33840afbacbbf6d7c758b8310b92c32
+0x5D804	0xC8	src/code/object_stream_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0a569da6e3a48a13cb108190093f3ce64562fb18706e58e549acdbd30ac30176
