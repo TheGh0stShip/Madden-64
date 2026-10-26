@@ -65,7 +65,6 @@
 0x2D100	0xE4	src/code/team_record_pointer_find.s	-O2 -G0 -mips3 -mgp32 -mfp32	a9d599b2859be23b82cb78537a62448a91efea242a21df1c5fc43777dbccef1d
 0x33D74	0xE4	src/code/memory_table_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	d93aa31398617c7a5dc375d4196d2177fafa7efeaac978191731b73cff6d689a
 0x3A6CC	0xE4	src/code/roster_runtime_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	d61621aaa6a8dff87c9f777ac9c539184e0f38af7120cf63af48973fa74dabf3
-0x3D3E4	0xE4	src/code/audio_output_select.s	-O2 -G0 -mips3 -mgp32 -mfp32	f8136f643a63a24db9e46833ef8942f0751f031af84bae0ef26e1b0b91fee5f4
 0x444B4	0xE8	src/code/object_vector_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	4816d0ba36102a53382866fd15e2200cf4ba2f8fcbe2602fefe2f356b30db394
 0x1D184	0xEC	src/code/layout_coordinates_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	e2f40b511b70ea490356c86502ec2054cc07a9bb58be071a4a92d080904286ff
 0x2CD08	0xEC	src/code/team_secondary_stats_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	ee20a9dafe069cf426fcd1622bc99625aef0a776ee4ae8b12dc00879bdef46a2

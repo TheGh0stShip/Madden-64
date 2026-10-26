@@ -818,7 +818,7 @@ functions = [
     { name = "func_8003C75C", vram = 0x8003c75c, size = 0x10 }, # stub
     { name = "func_8003C76C", vram = 0x8003c76c, size = 0x10 }, # stub
     { name = "func_8003C780", vram = 0x8003c780, size = 0x64 }, # c
-    { name = "audio_output_select", vram = 0x8003c7e4, size = 0xe4 }, # asm
+    { name = "audio_output_select", vram = 0x8003c7e4, size = 0xe4 }, # c
     { name = "func_8003C8C8", vram = 0x8003c8c8, size = 0x14 }, # leaf
     { name = "func_8003C8E0", vram = 0x8003c8e0, size = 0x16c }, # asm
     { name = "audio_runtime_shutdown", vram = 0x8003ca4c, size = 0xe0 }, # asm
