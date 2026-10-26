@@ -968,7 +968,7 @@ functions = [
     { name = "func_80043610", vram = 0x80043610, size = 0x38 }, # c
     { name = "func_80043648", vram = 0x80043648, size = 0x34 }, # c
     { name = "display_context_update", vram = 0x8004367c, size = 0x238 }, # asm
-    { name = "object_vector_resolve", vram = 0x800438b4, size = 0xe8 }, # asm
+    { name = "object_vector_resolve", vram = 0x800438b4, size = 0xe8 }, # c
     { name = "display_context_process", vram = 0x8004399c, size = 0x184 }, # asm
     { name = "display_frame_dispatch", vram = 0x80043b20, size = 0x25c }, # asm
     { name = "func_80043D7C", vram = 0x80043d7c, size = 0x100 }, # asm

@@ -18,7 +18,6 @@
 0x1A398	0xAC	src/code/strided_rows_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	c59922ddfe5a62cfec4638609148d0a3bf45b1535dca8d4f6229eb165f1885ee
 0x57690	0xC0	src/code/object_round_state_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	164a08db6bf5483b35ccd7824da9d7c024adb0847af49ee92fddda6664393713
 0xC798	0xDC	src/code/display_page_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	ba5320c8d8c15aa42c44fe30877ab08aa1337f40bfba3d0632a43022f8b53cf7
-0x444B4	0xE8	src/code/object_vector_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	4816d0ba36102a53382866fd15e2200cf4ba2f8fcbe2602fefe2f356b30db394
 0xD620	0x118	src/code/object_orientation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	4b07a347661fd37d5f854d7aeccce5e048c2bf657a3f6695ae536c9c20f31144
 0xEB34	0xF8	src/code/vector_signed_components_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	639afcb1bf63baf9699161edadf03489afa79fc2fd5537e3c3d6a700d25b29d5
 0x1DDE0	0x120	src/code/text_line_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	51aa9460357e06aaa4cd4b0b1d1995064d2accf3c3624b13540f147d28ffb9a9
