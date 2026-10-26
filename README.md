@@ -96,11 +96,11 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching decompiled C code | 121,908 bytes | 753,428 bytes | 16.18% |
+| Matching decompiled C code | 122,120 bytes | 753,428 bytes | 16.21% |
 | Assembly-assisted C reference coverage | 296 bytes | 753,428 bytes | 0.04% |
-| Matching assembly reference coverage | 442,336 bytes | 753,428 bytes | 58.71% |
+| Matching assembly reference coverage | 442,124 bytes | 753,428 bytes | 58.68% |
 | Whole-program initialized data | 496 bytes | 484,540 bytes | 0.10% |
-| C-decompiled function candidates | 1,159 | 2,820 | 41.10% |
+| C-decompiled function candidates | 1,160 | 2,820 | 41.13% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |
