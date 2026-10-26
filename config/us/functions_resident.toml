@@ -435,7 +435,7 @@ functions = [
     { name = "interface_transfer_finalize", vram = 0x80024f5c, size = 0x7c }, # c
     { name = "func_80024FD8", vram = 0x80024fd8, size = 0x50 }, # c
     { name = "func_80025028", vram = 0x80025028, size = 0x44 }, # c
-    { name = "menu_buffer_prepare_once", vram = 0x8002506c, size = 0xa8 }, # asm
+    { name = "menu_buffer_prepare_once", vram = 0x8002506c, size = 0xa8 }, # c
     { name = "func_80025114", vram = 0x80025114, size = 0x38 }, # c
     { name = "gameplay_state_render", vram = 0x8002514c, size = 0x648 }, # asm
     { name = "team_event_append", vram = 0x80025794, size = 0xd8 }, # asm
@@ -685,7 +685,7 @@ functions = [
     { name = "func_80034FD8", vram = 0x80034fd8, size = 0x8c }, # c
     { name = "func_80035064", vram = 0x80035064, size = 0xf8 }, # asm
     { name = "memory_block_finalize", vram = 0x8003515c, size = 0x17c }, # asm
-    { name = "resource_request_dispatch", vram = 0x800352d8, size = 0xa8 }, # asm
+    { name = "resource_request_dispatch", vram = 0x800352d8, size = 0xa8 }, # c
     { name = "func_80035380", vram = 0x80035380, size = 0x30 }, # c
     { name = "runtime_entries_reset", vram = 0x800353b0, size = 0x78 }, # c
     { name = "func_80035428", vram = 0x80035428, size = 0x134 }, # asm
@@ -812,7 +812,7 @@ functions = [
     { name = "func_8003C1F0", vram = 0x8003c1f0, size = 0x8 }, # stub
     { name = "audio_stream_update", vram = 0x8003c1f8, size = 0x214 }, # asm
     { name = "audio_stream_process", vram = 0x8003c40c, size = 0x200 }, # asm
-    { name = "audio_value_seek", vram = 0x8003c60c, size = 0xa8 }, # asm
+    { name = "audio_value_seek", vram = 0x8003c60c, size = 0xa8 }, # c
     { name = "func_8003C6B4", vram = 0x8003c6b4, size = 0x54 }, # leaf
     { name = "func_8003C708", vram = 0x8003c708, size = 0x54 }, # leaf
     { name = "func_8003C75C", vram = 0x8003c75c, size = 0x10 }, # stub

@@ -46,10 +46,7 @@
 0x613CC	0xA4	src/code/indexed_rgb_accumulate.s	-O2 -G0 -mips3 -mgp32 -mfp32	d3bccb53ddd118bb88196543d7c5bf68ed6fca21eec850b92f685484e8eedc47
 0x61C28	0xA4	src/code/indexed_texel_increment.s	-O2 -G0 -mips3 -mgp32 -mfp32	c1a4947f460be26cd6b3b6aac4f99adaaa50be20b5fdf7d6a098b7671fa0e935
 0x453C4	0xA8	src/code/grid_handles_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e3a4f42d3df7090589d4b14067683a83aa3851f7ac70974f1ebc8c8ea8b1e5e
-0x25C6C	0xA8	src/code/menu_buffer_prepare_once.s	-O2 -G0 -mips3 -mgp32 -mfp32	cd687517004713babe9dbb0cb90718b4befef8e562ec309880550c715d507b93
 0x3419C	0xA8	src/code/resource_node_unlink.s	-O2 -G0 -mips3 -mgp32 -mfp32	ad0c9dcd8d459ae503d85e2cc5bc35131309e1fd0ef9bc04f3121cf97492ef8b
-0x35ED8	0xA8	src/code/resource_request_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	c62d31a658e2352fb60dbcf502d721e8d77856308c17d182ee71609b020f0089
-0x3D20C	0xA8	src/code/audio_value_seek.s	-O2 -G0 -mips3 -mgp32 -mfp32	66a573daa1b0378edfcbe3458970cf75ef7ebbdc2a47e38d089b115cac4b2dee
 0xC2F8	0xAC	src/code/display_surface_create.s	-O2 -G0 -mips3 -mgp32 -mfp32	c3889cc86541c07c94aeb46e2ae573273ffb1f046f70b5cae7cfb73bcf506353
 0x1A398	0xAC	src/code/strided_rows_copy.s	-O2 -G0 -mips3 -mgp32 -mfp32	c59922ddfe5a62cfec4638609148d0a3bf45b1535dca8d4f6229eb165f1885ee
 0x1B7C4	0xAC	src/code/ui_context_clone.s	-O2 -G0 -mips3 -mgp32 -mfp32	ab2e2118247e0723d05a46ce45b890033c146483fdbeeb2317bccf6527d40ec8
