@@ -607,3 +607,6 @@
 0x1FB18	0xAC	src/code/ui_range_apply_forward.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	fcb9f78fb71ba3518e19643eeb00274a69291944114c824e76e939f82f8a0ddd
 0x1FBC4	0xAC	src/code/ui_range_apply_reverse.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	7f390ef2cc7f8db2a00a4d35d59675497143d603358d203cd13677626e88326b
 0x453C4	0xA8	src/code/grid_handles_build.c	--assembler=asn64 --symbol=D_8007A568:0x8007A568 -O2 -G0 -mips3 -mgp32 -mfp32	1e3a4f42d3df7090589d4b14067683a83aa3851f7ac70974f1ebc8c8ea8b1e5e
+0x45790	0xB8	src/code/grid_pair_dispatch.c	--assembler=asn64 --symbol=D_8007A908:0x8007A908 --symbol=D_8007A90C:0x8007A90C -O2 -G0 -mips3 -mgp32 -mfp32	f63b82907508e21f8e6e652cdd22a201cf433c15a1a3615b1443229aa866f1c2
+0x44F64	0xC0	src/code/grid_record_initialize.c	--assembler=asn64 --symbol=D_800748E8:0x800748E8 --symbol=D_80074A60:0x80074A60 -O2 -G0 -mips3 -mgp32 -mfp32	b05c20a030ff9cc847caeea6593568ecf438ed2f3a60d9064ac386381c5f3125
+0x3C4FC	0xC4	src/code/menu_grid_record_dispatch.c	--assembler=asn64 --symbol=D_80080D6A:0x80080D6A --symbol=D_80085040:0x80085040 -O2 -G0 -mips3 -mgp32 -mfp32	6829bdf2a52c6f3e7cd1fa83720177795c4d36578e2214cd67acda668a88fc22

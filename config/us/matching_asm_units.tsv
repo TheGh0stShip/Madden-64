@@ -63,17 +63,14 @@
 0x61280	0xB4	src/code/object_shared_buffers_assign.s	-O2 -G0 -mips3 -mgp32 -mfp32	0c29af0e509a78f289d023c9374101f4129152e6af4419d5ac823c90da81f2a2
 0x28A38	0xB8	src/code/roster_rating_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	81a58ff22f256cabc765aecb67ac2694ce2469adbcc2e880afbb39fe114f9a1d
 0x32564	0xB8	src/code/runtime_sequence_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	c33d2c36f814b14d5c3fc31519b00cfa6ff6a6a7f352e0c640e4e64fe567c04e
-0x45790	0xB8	src/code/grid_pair_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	f63b82907508e21f8e6e652cdd22a201cf433c15a1a3615b1443229aa866f1c2
 0x45F94	0xBC	src/code/display_vertex_batch_append.s	-O2 -G0 -mips3 -mgp32 -mfp32	c370e9bf77cfbc794f6db63fab794da0c4159d8e13f46c5580d07622beebcb7b
 0x4643C	0xBC	src/code/audio_timeline_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	deb1ddb393d931653cb4e5ee513b8a480b4b66f074f8964e483362911548db42
 0x11E48	0xC0	src/code/object_texture_descriptor_get.s	-O2 -G0 -mips3 -mgp32 -mfp32	297bab0e40fc6f734f73e39c81747b0ced8143118e932f3539be4cc0811c3b85
 0x23338	0xC0	src/code/roster_selection_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	2c5d2954e7e3c11bdd2a49b0205e6d9e0ab11b65b2a9170c790691bb5350f2d2
 0x3DAB8	0xC0	src/code/audio_range_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	aa7f590af21f3e955c056a3008e4b75325635d2cbb9e01b7a4e9cf521b34d36f
-0x44F64	0xC0	src/code/grid_record_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	b05c20a030ff9cc847caeea6593568ecf438ed2f3a60d9064ac386381c5f3125
 0x57690	0xC0	src/code/object_round_state_reset.s	-O2 -G0 -mips3 -mgp32 -mfp32	164a08db6bf5483b35ccd7824da9d7c024adb0847af49ee92fddda6664393713
 0x28594	0xC4	src/code/roster_profile_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	bebcbc3caf0ea192d35d5d484d56510cb21abccb4d8347a113069f67d3ab2300
 0x330FC	0xC4	src/code/resource_pool_reset_wait.s	-O2 -G0 -mips3 -mgp32 -mfp32	6dafc597efc09756e7df5c7320919c5ebd71dbf18070830db2fe2e95b76ad020
-0x3C4FC	0xC4	src/code/menu_grid_record_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	6829bdf2a52c6f3e7cd1fa83720177795c4d36578e2214cd67acda668a88fc22
 0x3FD6C	0xC4	src/code/audio_slot_active_test.s	-O2 -G0 -mips3 -mgp32 -mfp32	9e6b876a4a56b3549ec6939e87ecfa809705a43405b02bba480f64b58d8f664a
 0x29FCC	0xC8	src/code/menu_cursor_state_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	49ba6c42f3e9d00b34806c600086024f0b26bb80787c8f1b52a6e13146aaf370
 0x3A1AC	0xC8	src/code/resource_groups_release.s	-O2 -G0 -mips3 -mgp32 -mfp32	bc499dc3bf2057a11eb33f860f6981ecce8695e71d54fb071049d44816ee5773

@@ -802,7 +802,7 @@ functions = [
     { name = "func_8003B6AC", vram = 0x8003b6ac, size = 0x150 }, # asm
     { name = "frame_value_combine", vram = 0x8003b7fc, size = 0x90 }, # asm
     { name = "func_8003B88C", vram = 0x8003b88c, size = 0x70 }, # leaf
-    { name = "menu_grid_record_dispatch", vram = 0x8003b8fc, size = 0xc4 }, # asm
+    { name = "menu_grid_record_dispatch", vram = 0x8003b8fc, size = 0xc4 }, # c
     { name = "audio_sequence_channel_configure", vram = 0x8003b9c0, size = 0x3a8 }, # asm
     { name = "audio_stream_prepare", vram = 0x8003bd68, size = 0x17c }, # asm
     { name = "func_8003BEE4", vram = 0x8003bee4, size = 0x70 }, # leaf
@@ -977,7 +977,7 @@ functions = [
     { name = "func_80044108", vram = 0x80044108, size = 0x168 }, # asm
     { name = "texture_scale_configure", vram = 0x80044270, size = 0x84 }, # asm
     { name = "func_800442F4", vram = 0x800442f4, size = 0x70 }, # c
-    { name = "grid_record_initialize", vram = 0x80044364, size = 0xc0 }, # asm
+    { name = "grid_record_initialize", vram = 0x80044364, size = 0xc0 }, # c
     { name = "func_80044424", vram = 0x80044424, size = 0x30 }, # c
     { name = "func_80044454", vram = 0x80044454, size = 0x8 }, # stub
     { name = "func_8004445C", vram = 0x8004445c, size = 0x74 }, # c
@@ -990,7 +990,7 @@ functions = [
     { name = "func_800448C4", vram = 0x800448c4, size = 0x14 }, # leaf
     { name = "scheduler_queue_update", vram = 0x800448d8, size = 0x1e0 }, # asm
     { name = "func_80044AB8", vram = 0x80044ab8, size = 0xd8 }, # asm
-    { name = "grid_pair_dispatch", vram = 0x80044b90, size = 0xb8 }, # asm
+    { name = "grid_pair_dispatch", vram = 0x80044b90, size = 0xb8 }, # c
     { name = "func_80044C48", vram = 0x80044c48, size = 0x24 }, # leaf
     { name = "func_80044C6C", vram = 0x80044c6c, size = 0x20 }, # c
     { name = "scheduler_task_dispatch", vram = 0x80044c8c, size = 0x2bc }, # asm
