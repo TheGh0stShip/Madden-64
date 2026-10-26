@@ -604,3 +604,6 @@
 0x25C6C	0xA8	src/code/menu_buffer_prepare_once.c	--assembler=asn64 --symbol=D_8006B9DC:0x8006B9DC --symbol=D_8006B9D8:0x8006B9D8 --symbol=D_8006B9E0:0x8006B9E0 --symbol=D_8006B9E4:0x8006B9E4 --symbol=D_800C4EEB:0x800C4EEB --symbol=D_80086190:0x80086190 --symbol=D_800855D4:0x800855D4 -O2 -G0 -mips3 -mgp32 -mfp32	cd687517004713babe9dbb0cb90718b4befef8e562ec309880550c715d507b93
 0x35ED8	0xA8	src/code/resource_request_dispatch.c	--assembler=asn64 --symbol=D_8007A45C:0x8007A45C -O2 -G0 -mips3 -mgp32 -mfp32	c62d31a658e2352fb60dbcf502d721e8d77856308c17d182ee71609b020f0089
 0x3D20C	0xA8	src/code/audio_value_seek.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	66a573daa1b0378edfcbe3458970cf75ef7ebbdc2a47e38d089b115cac4b2dee
+0x1FB18	0xAC	src/code/ui_range_apply_forward.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	fcb9f78fb71ba3518e19643eeb00274a69291944114c824e76e939f82f8a0ddd
+0x1FBC4	0xAC	src/code/ui_range_apply_reverse.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	7f390ef2cc7f8db2a00a4d35d59675497143d603358d203cd13677626e88326b
+0x453C4	0xA8	src/code/grid_handles_build.c	--assembler=asn64 --symbol=D_8007A568:0x8007A568 -O2 -G0 -mips3 -mgp32 -mfp32	1e3a4f42d3df7090589d4b14067683a83aa3851f7ac70974f1ebc8c8ea8b1e5e
