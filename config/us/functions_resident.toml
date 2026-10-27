@@ -1296,7 +1296,7 @@ functions = [
     { name = "func_8005F038", vram = 0x8005f038, size = 0x8 }, # stub
     { name = "func_8005F040", vram = 0x8005f040, size = 0x11c }, # asm
     { name = "func_8005F15C", vram = 0x8005f15c, size = 0x74 }, # c
-    { name = "func_8005F1D0", vram = 0x8005f1d0, size = 0xdc }, # asm
+    { name = "image_rows_expand_horizontal", vram = 0x8005f1d0, size = 0xdc }, # c
     { name = "byte_plane_filter", vram = 0x8005f2ac, size = 0xec }, # c
     { name = "image_plane_process", vram = 0x8005f398, size = 0x184 }, # asm
     { name = "image_plane_transform", vram = 0x8005f51c, size = 0x348 }, # asm
@@ -1323,14 +1323,14 @@ functions = [
     { name = "image_table_update", vram = 0x80060d7c, size = 0x178 }, # asm
     { name = "func_80060EF4", vram = 0x80060ef4, size = 0x8 }, # stub
     { name = "func_80060EFC", vram = 0x80060efc, size = 0x34 }, # c
-    { name = "func_80060F30", vram = 0x80060f30, size = 0xf8 }, # asm
+    { name = "image_runtime_initialize", vram = 0x80060f30, size = 0xf8 }, # c
     { name = "indexed_texel_increment", vram = 0x80061028, size = 0xa4 }, # c
     { name = "func_800610CC", vram = 0x800610cc, size = 0x54 }, # c
     { name = "func_80061120", vram = 0x80061120, size = 0x48 }, # c
     { name = "object_index_stream_decode", vram = 0x80061168, size = 0x48c }, # asm
     { name = "object_lookup_finalize", vram = 0x800615f4, size = 0x1d4 }, # asm
     { name = "object_lookup_process", vram = 0x800617c8, size = 0x248 }, # asm
-    { name = "func_80061A10", vram = 0x80061a10, size = 0x100 }, # asm
+    { name = "object_lookup_initialize", vram = 0x80061a10, size = 0x100 }, # c
     { name = "object_lookup_update", vram = 0x80061b10, size = 0x270 }, # asm
     { name = "object_lookup_prepare", vram = 0x80061d80, size = 0x190 }, # asm
     { name = "func_80061F10", vram = 0x80061f10, size = 0x144 }, # asm

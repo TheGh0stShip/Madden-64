@@ -71,7 +71,7 @@ object_driver_process:
     lw          $v0, 0x64($s0)
     beqz        $v0, .L80055CBC
     nop
-    jal         func_80060F30
+    jal         image_runtime_initialize
     addu        $a0, $s0, $zero
     lw          $v0, 0x1C8($s0)
     sw          $v0, 0x14($s1)
