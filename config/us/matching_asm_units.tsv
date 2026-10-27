@@ -214,7 +214,6 @@
 0x5C08C	0x188	src/code/object_geometry_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	669ad0962d57724dd96055788ecab4143d749e608734aac0ea91ea354307200f
 0x3A028	0x184	src/code/roster_record_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	fbd920cf69bcd619aa3ec533616bbdade5eec662909695f01eae01a3e99bb6de
 0x4459C	0x184	src/code/display_context_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	9dc57a8e25f3c2f97fdd1826a4fb9fb5a6bd476b58acdb1ced3ac69869930210
-0x5FF98	0x184	src/code/image_plane_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	7eca78886fb50761390be654dc92b652ec30d7e1692dcc62972ea560367e741e
 0x59708	0x180	src/code/object_cycle_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	76137ef0a083edb508323ed1e5348f5a961d97b945a0046770dd47742556db76
 0x31874	0x17C	src/code/runtime_callback_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	2241481f337d567fc5f72a15737d1e95e49584e9f2a9ba133ea177e7e54d9c9a
 0x34B24	0x17C	src/code/memory_arena_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	8842bb4526d5433b2bd9c02bb1fa973c70c39a001fa32056e97eb45c14c43fb2

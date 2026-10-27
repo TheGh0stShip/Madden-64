@@ -1295,7 +1295,7 @@ functions = [
     { name = "func_8005F15C", vram = 0x8005f15c, size = 0x74 }, # c
     { name = "image_rows_expand_horizontal", vram = 0x8005f1d0, size = 0xdc }, # c
     { name = "byte_plane_filter", vram = 0x8005f2ac, size = 0xec }, # c
-    { name = "image_plane_process", vram = 0x8005f398, size = 0x184 }, # asm
+    { name = "image_plane_process", vram = 0x8005f398, size = 0x184 }, # c
     { name = "image_plane_transform", vram = 0x8005f51c, size = 0x348 }, # asm
     { name = "func_8005F868", vram = 0x8005f868, size = 0x130 }, # c
     { name = "func_8005F998", vram = 0x8005f998, size = 0x13c }, # c
