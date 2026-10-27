@@ -1275,8 +1275,8 @@ functions = [
     { name = "object_decode_process", vram = 0x8005c930, size = 0x194 }, # asm
     { name = "func_8005CAC8", vram = 0x8005cac8, size = 0x13c }, # c
     { name = "object_stream_process", vram = 0x8005cc04, size = 0xc8 }, # c
-    { name = "func_8005CCCC", vram = 0x8005cccc, size = 0x134 }, # asm
-    { name = "func_8005CE00", vram = 0x8005ce00, size = 0x124 }, # asm
+    { name = "func_8005CCCC", vram = 0x8005cccc, size = 0x134 }, # c
+    { name = "func_8005CE00", vram = 0x8005ce00, size = 0x124 }, # c
     { name = "object_decode_state_create", vram = 0x8005cf24, size = 0xf0 }, # c
     { name = "func_8005D018", vram = 0x8005d018, size = 0x8 }, # asm
     { name = "object_decode_transform", vram = 0x8005d020, size = 0x314 }, # asm

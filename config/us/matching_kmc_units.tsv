@@ -862,3 +862,5 @@
 0x56680	0x13C	src/code/object_buffer_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	99c8fc2539b802f341c30ef16f3b9da84b515b483a33a203325d395890dded52
 0x572DC	0x12C	src/code/object_resources_materialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6cdb94df27fb9e14d3d8a12053fcc7d687631d2a3a75aed646372adf13289206
 0x5747C	0x124	src/code/object_stream_status_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4df9142c2ab53e6ebc7d644cb2e26f77952c61adbb01c2f3109983f4602ee195
+0x5D8CC	0x134	src/code/object_decode_stream_produce.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a9cc607a5a8cc24b5e9d321023f8d584dfb25ce9eb92f008105e15d460a6eefd
+0x5DA00	0x124	src/code/object_decode_stream_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2a52653687a5a938c74be666fdf7b28c267765fcd8ff7bb645fa0c2b34460016
