@@ -4,6 +4,8 @@
 .globl object_plane_decode
 .ent object_plane_decode
 object_plane_decode:
+    addiu       $sp, $sp, -0x140
+    sw          $s2, 0x120($sp)
     addu        $s2, $a2, $zero
     sw          $fp, 0x138($sp)
     sw          $s7, 0x134($sp)

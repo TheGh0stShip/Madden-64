@@ -368,7 +368,7 @@ functions = [
     { name = "func_8001FA20", vram = 0x8001fa20, size = 0x18 }, # leaf
     { name = "func_8001FA38", vram = 0x8001fa38, size = 0x18 }, # leaf
     { name = "func_8001FA50", vram = 0x8001fa50, size = 0x18 }, # leaf
-    { name = "menu_player_update", vram = 0x8001fa68, size = 0x200 }, # asm
+    { name = "menu_player_update", vram = 0x8001fa68, size = 0x200 }, # c
     { name = "menu_scroll_initialize", vram = 0x8001fc68, size = 0xa0 }, # c
     { name = "menu_player_state_update", vram = 0x8001fd08, size = 0x4b0 }, # asm
     { name = "menu_animation_update", vram = 0x800201b8, size = 0x474 }, # asm
@@ -944,7 +944,7 @@ functions = [
     { name = "func_800420A8", vram = 0x800420a8, size = 0x8 }, # asm
     { name = "func_800420B0", vram = 0x800420b0, size = 0x6c }, # c
     { name = "func_8004211C", vram = 0x8004211c, size = 0x54 }, # c
-    { name = "func_80042170", vram = 0x80042170, size = 0xd8 }, # asm
+    { name = "func_80042170", vram = 0x80042170, size = 0xd8 }, # c
     { name = "display_state_update", vram = 0x80042248, size = 0x1d8 }, # asm
     { name = "func_80042420", vram = 0x80042420, size = 0x14c }, # asm
     { name = "func_8004256C", vram = 0x8004256c, size = 0x4c }, # c
@@ -1190,7 +1190,7 @@ functions = [
     { name = "func_800549E8", vram = 0x800549e8, size = 0x104 }, # c
     { name = "func_80054AEC", vram = 0x80054aec, size = 0x140 }, # asm
     { name = "object_duration_apply", vram = 0x80054c2c, size = 0xa8 }, # c
-    { name = "func_80054CD4", vram = 0x80054cd4, size = 0xdc }, # asm
+    { name = "func_80054CD4", vram = 0x80054cd4, size = 0xdc }, # c
     { name = "func_80054DB0", vram = 0x80054db0, size = 0x120 }, # asm
     { name = "func_80054ED0", vram = 0x80054ed0, size = 0x20 }, # c
     { name = "func_80054EF0", vram = 0x80054ef0, size = 0x20 }, # c
@@ -1283,7 +1283,7 @@ functions = [
     { name = "object_subresources_allocate", vram = 0x8005d334, size = 0xcc }, # c
     { name = "object_block_transform", vram = 0x8005d400, size = 0x550 }, # asm
     { name = "object_rows_decode", vram = 0x8005d950, size = 0x504 }, # asm
-    { name = "object_plane_decode", vram = 0x8005de60, size = 0x788 }, # asm
+    { name = "object_plane_decode", vram = 0x8005de58, size = 0x790 }, # asm
     { name = "object_block_transform_secondary", vram = 0x8005e5e8, size = 0x550 }, # asm
     { name = "object_plane_transform", vram = 0x8005eb38, size = 0x310 }, # asm
     { name = "func_8005EE48", vram = 0x8005ee48, size = 0x40 }, # leaf
