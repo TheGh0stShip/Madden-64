@@ -125,6 +125,10 @@ class DecompReportTests(unittest.TestCase):
             "kind": "ratio", "completed": 296, "total": 753428,
             "unit": "bytes",
         })
+        self.assertEqual(tracks["archive-payload-extraction"]["measurement"], {
+            "kind": "ratio", "completed": 14918923, "total": 14918923,
+            "unit": "bytes",
+        })
         self.assertIsNone(tracks["asset-reconstruction"]["measurement"])
         self.assertNotIn("overall", tracks)
 

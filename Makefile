@@ -4,7 +4,7 @@ N64DK_PYTHON ?= $(N64DK_ROOT)/.venv/bin/python
 N64DK := PYTHONPATH=$(N64DK_ROOT) $(N64DK_PYTHON) -m n64dk
 ROM ?= Madden Football 64 (USA).z64
 
-.PHONY: verify survey audit attack candidates match match-c match-asm check report research research-functions-catalog research-functions
+.PHONY: verify survey audit attack extract-assets candidates match match-c match-asm check report research research-functions-catalog research-functions
 
 verify:
 	$(PYTHON) tools/verify_rom.py "$(ROM)"
@@ -17,6 +17,9 @@ audit: verify
 
 attack: audit
 	$(PYTHON) tools/analyze_attack_surface.py
+
+extract-assets: audit
+	$(PYTHON) tools/extract_assets.py "$(ROM)" build/us/survey/main_segment.bin
 
 candidates:
 	$(PYTHON) tools/rank_overlay_candidates.py

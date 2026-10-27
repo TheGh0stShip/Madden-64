@@ -91,6 +91,17 @@
       }
     },
     {
+      "id": "archive-payload-extraction",
+      "label": "Lossless expanded archive payload extraction",
+      "scope": "Every physical archive record is stripped of alignment, expanded with the audited type-1 LZ decoder where needed, and covered by stored and expanded SHA-256 provenance; this does not claim semantic container reconstruction.",
+      "measurement": {
+        "kind": "ratio",
+        "completed": 14918923,
+        "total": 14918923,
+        "unit": "bytes"
+      }
+    },
+    {
       "id": "asset-reconstruction",
       "label": "Asset reconstruction",
       "scope": "Reconstruction of the inventoried texture, JPEG, model, motion, sprite, audio, auxiliary graphics, gameplay-table, and roster payloads; no completion denominator is established.",

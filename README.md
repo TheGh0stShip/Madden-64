@@ -52,6 +52,7 @@ configured in `n64dk.toml`.
 make verify
 make survey
 make audit
+make extract-assets
 make match-c
 make match-asm
 make match
@@ -64,6 +65,11 @@ retail program is packed, `make match` first creates
 `build/us/main_unpacked.z64`, an analysis-only linear wrapper around the
 recovered executable. It must never be mistaken for or distributed as a game
 ROM.
+
+`make extract-assets` verifies the cartridge, strips record alignment, expands
+every type-1 LZ stream, and writes all 1,353 payloads plus SHA-256 provenance to
+`build/us/extracted_records`. This proves lossless payload extraction; container
+parsing and semantic asset reconstruction remain separate work.
 
 `make match-c` is the decompilation gate and verifies only compiled `.c`
 sources. `make match-asm` separately verifies assembly reference units.
@@ -104,6 +110,7 @@ project percentage. Current audited measures are:
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |
+| Lossless expanded payload extraction | 14,918,923 bytes | 14,918,923 bytes | 100% |
 
 The program denominator covers the loader, resident executable, both overlays,
 and their initialized data records. Matching `.s` units are retained as useful
