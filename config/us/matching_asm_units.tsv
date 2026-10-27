@@ -152,7 +152,6 @@
 0x23858	0x21C	src/code/gameplay_state_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	a1f60fac198b808669531a21b596412eec0fbe1af9b84afc67006b259840e166
 0x31FAC	0x21C	src/code/runtime_callback_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	9498db540d0af001e01156aebc7012d0170540a36536cf307bfe3d461e9bd02d
 0x3CDF8	0x214	src/code/audio_stream_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	16424f7ef649c6750b6310514d1d274e1cd08ea7d45a2759cc39a7007f1c7d60
-0x616DC	0x214	src/code/object_table_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	6a53e3c91321d1b5dc8ce0ba6a08ea00be346d8b06763e819ecb5a225d7f78b6
 0x321C8	0x210	src/code/runtime_state_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	09340ac360132917dc9df882b7e6b7a616cc8e33bbe231560822080c59c4a7d0
 0x431B8	0x210	src/code/display_command_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	c2214a98d22203401cdab8d49a045b0bf0fd9c1025874e61f039226831a79790
 0x1A9D0	0x204	src/code/resource_display_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	14306b481f929f41ed98c7e04cb29281cff424520322f22e87fc83d810c791d9

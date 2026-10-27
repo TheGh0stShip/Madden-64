@@ -1315,7 +1315,7 @@ functions = [
     { name = "indexed_rgb_accumulate", vram = 0x800607cc, size = 0xa4 }, # c
     { name = "func_80060870", vram = 0x80060870, size = 0x12c }, # c
     { name = "func_8006099C", vram = 0x8006099c, size = 0x140 }, # c
-    { name = "object_table_process", vram = 0x80060adc, size = 0x214 }, # asm
+    { name = "object_table_process", vram = 0x80060adc, size = 0x214 }, # c
     { name = "object_children_allocate", vram = 0x80060cf0, size = 0x8c }, # c
     { name = "image_table_update", vram = 0x80060d7c, size = 0x178 }, # c
     { name = "func_80060EF4", vram = 0x80060ef4, size = 0x8 }, # stub
