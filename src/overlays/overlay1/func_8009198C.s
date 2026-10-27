@@ -126,7 +126,7 @@ func_8009198C:
     nop
     jal         func_8000DDE8
     nop
-    jal         func_80044AB8
+    jal         menu_resources_release
     nop
     lui         $a0, 0x8009
     lhu         $a0, -0x7B8E($a0)

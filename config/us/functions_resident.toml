@@ -989,7 +989,7 @@ functions = [
     { name = "func_8004486C", vram = 0x8004486c, size = 0x58 }, # c
     { name = "func_800448C4", vram = 0x800448c4, size = 0x14 }, # leaf
     { name = "scheduler_queue_update", vram = 0x800448d8, size = 0x1e0 }, # asm
-    { name = "func_80044AB8", vram = 0x80044ab8, size = 0xd8 }, # asm
+    { name = "menu_resources_release", vram = 0x80044ab8, size = 0xd8 }, # c
     { name = "grid_pair_dispatch", vram = 0x80044b90, size = 0xb8 }, # c
     { name = "func_80044C48", vram = 0x80044c48, size = 0x24 }, # leaf
     { name = "func_80044C6C", vram = 0x80044c6c, size = 0x20 }, # c
