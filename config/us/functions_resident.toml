@@ -1216,10 +1216,10 @@ functions = [
     { name = "func_8005619C", vram = 0x8005619c, size = 0x60 }, # c
     { name = "object_animation_configure", vram = 0x80056200, size = 0x2b0 }, # asm
     { name = "object_animation_state_update", vram = 0x800564b0, size = 0x22c }, # asm
-    { name = "func_800566DC", vram = 0x800566dc, size = 0x12c }, # asm
+    { name = "func_800566DC", vram = 0x800566dc, size = 0x12c }, # c
     { name = "func_80056808", vram = 0x80056808, size = 0x60 }, # c
     { name = "func_80056868", vram = 0x80056868, size = 0x14 }, # leaf
-    { name = "func_8005687C", vram = 0x8005687c, size = 0x124 }, # asm
+    { name = "func_8005687C", vram = 0x8005687c, size = 0x124 }, # c
     { name = "func_800569A0", vram = 0x800569a0, size = 0x68 }, # c
     { name = "func_80056A08", vram = 0x80056a08, size = 0x7c }, # c
     { name = "object_round_state_reset", vram = 0x80056a88, size = 0xc8 }, # c
