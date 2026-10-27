@@ -177,14 +177,14 @@
       "boot_loader": {
         "functions": 5,
         "bytes": 632,
-        "matched_functions": 1,
-        "matched_bytes": 204
+        "matched_functions": 2,
+        "matched_bytes": 460
       },
       "overlay_1": {
         "functions": 1025,
         "bytes": 183528,
-        "matched_functions": 183,
-        "matched_bytes": 9012
+        "matched_functions": 226,
+        "matched_bytes": 13572
       },
       "overlay_4": {
         "functions": 420,
@@ -193,10 +193,10 @@
         "matched_bytes": 3672
       },
       "resident": {
-        "functions": 1370,
+        "functions": 1369,
         "bytes": 378060,
-        "matched_functions": 695,
-        "matched_bytes": 74712
+        "matched_functions": 1016,
+        "matched_bytes": 146624
       }
     },
     "catalogue_status": {
@@ -204,12 +204,12 @@
       "program_code_bytes": 753428,
       "catalogue_body_bytes": 677336,
       "code_bytes_outside_catalogue_bodies": 76092,
-      "catalogue_candidates": 2820,
+      "catalogue_candidates": 2819,
       "boundary_audits": {
         "resident": {
           "text_bytes": 411132,
-          "sweep_candidates": 1370,
-          "catalogue_candidates": 1370,
+          "sweep_candidates": 1369,
+          "catalogue_candidates": 1369,
           "in_text_data_ranges": 1,
           "in_text_data_bytes": 14536,
           "findings": {
@@ -264,10 +264,10 @@
     },
     "size_buckets": {
       "000-0016": {
-        "functions": 324,
-        "bytes": 3912,
-        "matched_functions": 189,
-        "matched_bytes": 2168
+        "functions": 323,
+        "bytes": 3904,
+        "matched_functions": 190,
+        "matched_bytes": 2184
       },
       "000-0032": {
         "functions": 224,
@@ -278,38 +278,38 @@
       "000-0064": {
         "functions": 387,
         "bytes": 19208,
-        "matched_functions": 236,
-        "matched_bytes": 11660
+        "matched_functions": 246,
+        "matched_bytes": 12204
       },
       "000-0128": {
         "functions": 553,
         "bytes": 51828,
-        "matched_functions": 301,
-        "matched_bytes": 27212
+        "matched_functions": 352,
+        "matched_bytes": 32784
       },
       "000-0256": {
         "functions": 553,
-        "bytes": 102424,
-        "matched_functions": 63,
-        "matched_bytes": 11304
+        "bytes": 102432,
+        "matched_functions": 293,
+        "matched_bytes": 53888
       },
       "000-0512": {
         "functions": 477,
         "bytes": 171328,
-        "matched_functions": 38,
-        "matched_bytes": 14232
+        "matched_functions": 103,
+        "matched_bytes": 36664
       },
       "000-1024": {
         "functions": 203,
         "bytes": 141616,
-        "matched_functions": 15,
-        "matched_bytes": 10400
+        "matched_functions": 22,
+        "matched_bytes": 14940
       },
       "1025+": {
         "functions": 99,
         "bytes": 181196,
-        "matched_functions": 6,
-        "matched_bytes": 7892
+        "matched_functions": 7,
+        "matched_bytes": 8932
       }
     },
     "exact_duplicate_families": 17,

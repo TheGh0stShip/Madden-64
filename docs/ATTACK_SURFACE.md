@@ -43,23 +43,23 @@ heuristic boundary catalogues and are not equivalent measures.
 
 | Module | Functions | Matched | Candidate bytes | Matched bytes |
 |---|---:|---:|---:|---:|
-| boot_loader | 5 | 1 | 632 | 204 |
-| overlay_1 | 1,025 | 183 | 183,528 | 9,012 |
+| boot_loader | 5 | 2 | 632 | 460 |
+| overlay_1 | 1,025 | 226 | 183,528 | 13,572 |
 | overlay_4 | 420 | 71 | 115,116 | 3,672 |
-| resident | 1,370 | 695 | 378,060 | 74,712 |
+| resident | 1,369 | 1,016 | 378,060 | 146,624 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 324 | 135 | 3,912 | 1,744 |
+| 000-0016 | 323 | 133 | 3,904 | 1,720 |
 | 000-0032 | 224 | 122 | 5,824 | 3,092 |
-| 000-0064 | 387 | 151 | 19,208 | 7,548 |
-| 000-0128 | 553 | 252 | 51,828 | 24,616 |
-| 000-0256 | 553 | 490 | 102,424 | 91,120 |
-| 000-0512 | 477 | 439 | 171,328 | 157,096 |
-| 000-1024 | 203 | 188 | 141,616 | 131,216 |
-| 1025+ | 99 | 93 | 181,196 | 173,304 |
+| 000-0064 | 387 | 141 | 19,208 | 7,004 |
+| 000-0128 | 553 | 201 | 51,828 | 19,044 |
+| 000-0256 | 553 | 260 | 102,432 | 48,544 |
+| 000-0512 | 477 | 374 | 171,328 | 134,664 |
+| 000-1024 | 203 | 181 | 141,616 | 126,676 |
+| 1025+ | 99 | 92 | 181,196 | 172,264 |
 
 - Exact duplicate body families: 17
 - Functions participating in those families: 114
@@ -78,7 +78,7 @@ register dependency, and no contradictory boundary finding.
 
 | Module | Sweep candidates | Published candidates | Gap ranges | Gap bytes | Contradictory findings |
 |---|---:|---:|---:|---:|---:|
-| resident | 1,370 | 1,370 | 1 | 14,536 | 5 |
+| resident | 1,369 | 1,369 | 1 | 14,536 | 5 |
 | overlay_1 | 1,071 | 1,025 | 231 | 43,696 | 987 |
 | overlay_4 | 420 | 420 | 87 | 17,500 | 348 |
 

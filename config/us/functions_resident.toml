@@ -625,8 +625,8 @@ functions = [
     { name = "func_80032A80", vram = 0x80032a80, size = 0x3c }, # c
     { name = "func_80032ABC", vram = 0x80032abc, size = 0x44 }, # c
     { name = "func_80032B00", vram = 0x80032b00, size = 0x78 }, # c
-    { name = "memory_pool_region_load", vram = 0x80032b78, size = 0x150 }, # asm
-    { name = "memory_pool_initialize", vram = 0x80032cc8, size = 0x138 }, # asm
+    { name = "memory_pool_region_configure", vram = 0x80032b78, size = 0x150 }, # c
+    { name = "memory_pool_initialize", vram = 0x80032cc8, size = 0x138 }, # c
     { name = "memory_pool_range_take", vram = 0x80032e00, size = 0x13c }, # c
     { name = "memory_pool_block_resize", vram = 0x80032f3c, size = 0x114 }, # c
     { name = "memory_block_split", vram = 0x80033050, size = 0xdc }, # c
@@ -1222,8 +1222,7 @@ functions = [
     { name = "func_8005687C", vram = 0x8005687c, size = 0x124 }, # asm
     { name = "func_800569A0", vram = 0x800569a0, size = 0x68 }, # c
     { name = "func_80056A08", vram = 0x80056a08, size = 0x7c }, # c
-    { name = "func_80056A88", vram = 0x80056a88, size = 0x8 }, # asm
-    { name = "object_round_state_reset", vram = 0x80056a90, size = 0xc0 }, # asm
+    { name = "object_round_state_reset", vram = 0x80056a88, size = 0xc8 }, # c
     { name = "object_animation_process", vram = 0x80056b50, size = 0x43c }, # asm
     { name = "object_animation_blend", vram = 0x80056f8c, size = 0x3b8 }, # asm
     { name = "object_animation_advance", vram = 0x80057344, size = 0x338 }, # asm
