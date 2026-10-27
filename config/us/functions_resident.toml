@@ -154,7 +154,7 @@ functions = [
     { name = "func_8000DE18", vram = 0x8000de18, size = 0x1c }, # leaf
     { name = "vector_slots_initialize", vram = 0x8000de34, size = 0xdc }, # c
     { name = "func_8000DF10", vram = 0x8000df10, size = 0x24 }, # leaf
-    { name = "vector_signed_components_load", vram = 0x8000df34, size = 0xf8 }, # asm
+    { name = "vector_signed_components_load", vram = 0x8000df34, size = 0xf8 }, # c
     { name = "func_8000E02C", vram = 0x8000e02c, size = 0x30 }, # leaf
     { name = "func_8000E05C", vram = 0x8000e05c, size = 0x60 }, # leaf
     { name = "vector_slot_negate_store", vram = 0x8000e0bc, size = 0xa8 }, # c
@@ -676,7 +676,7 @@ functions = [
     { name = "runtime_entry_find", vram = 0x800349fc, size = 0x80 }, # c
     { name = "runtime_entry_find_available", vram = 0x80034a7c, size = 0x94 }, # c
     { name = "resource_entry_best_select", vram = 0x80034b10, size = 0xa8 }, # c
-    { name = "func_80034BB8", vram = 0x80034bb8, size = 0xfc }, # asm
+    { name = "func_80034BB8", vram = 0x80034bb8, size = 0xfc }, # c
     { name = "func_80034CB4", vram = 0x80034cb4, size = 0x7c }, # c
     { name = "func_80034D30", vram = 0x80034d30, size = 0x128 }, # asm
     { name = "func_80034E58", vram = 0x80034e58, size = 0x7c }, # c
@@ -746,7 +746,7 @@ functions = [
     { name = "func_8003720C", vram = 0x8003720c, size = 0x4c }, # c
     { name = "func_80037258", vram = 0x80037258, size = 0x38 }, # c
     { name = "func_80037290", vram = 0x80037290, size = 0x24 }, # c
-    { name = "func_800372B4", vram = 0x800372b4, size = 0xf8 }, # asm
+    { name = "func_800372B4", vram = 0x800372b4, size = 0xf8 }, # c
     { name = "func_800373AC", vram = 0x800373ac, size = 0x8 }, # stub
     { name = "func_800373B4", vram = 0x800373b4, size = 0xfc }, # asm
     { name = "func_800374B0", vram = 0x800374b0, size = 0x40 }, # leaf
