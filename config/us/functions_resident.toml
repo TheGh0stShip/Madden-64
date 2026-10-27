@@ -706,7 +706,7 @@ functions = [
     { name = "func_80036100", vram = 0x80036100, size = 0x30 }, # leaf
     { name = "func_80036130", vram = 0x80036130, size = 0x30 }, # leaf
     { name = "func_80036160", vram = 0x80036160, size = 0x108 }, # asm
-    { name = "func_80036268", vram = 0x80036268, size = 0xfc }, # asm
+    { name = "func_80036268", vram = 0x80036268, size = 0xfc }, # c
     { name = "audio_channel_configure", vram = 0x80036364, size = 0x90 }, # c
     { name = "func_800363F4", vram = 0x800363f4, size = 0x34 }, # c
     { name = "func_80036428", vram = 0x80036428, size = 0x8 }, # stub
@@ -748,7 +748,7 @@ functions = [
     { name = "func_80037290", vram = 0x80037290, size = 0x24 }, # c
     { name = "func_800372B4", vram = 0x800372b4, size = 0xf8 }, # c
     { name = "func_800373AC", vram = 0x800373ac, size = 0x8 }, # stub
-    { name = "func_800373B4", vram = 0x800373b4, size = 0xfc }, # asm
+    { name = "func_800373B4", vram = 0x800373b4, size = 0xfc }, # c
     { name = "func_800374B0", vram = 0x800374b0, size = 0x40 }, # leaf
     { name = "frame_attribute_set", vram = 0x800374f0, size = 0xa4 }, # c
     { name = "audio_voice_update", vram = 0x80037594, size = 0x568 }, # asm
