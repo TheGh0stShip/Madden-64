@@ -964,7 +964,7 @@ functions = [
     { name = "func_800432E0", vram = 0x800432e0, size = 0x124 }, # asm
     { name = "rectangle_overlap_test", vram = 0x80043404, size = 0x84 }, # c
     { name = "box_vertices_fixed_build", vram = 0x80043488, size = 0xb0 }, # c
-    { name = "func_80043538", vram = 0x80043538, size = 0xd8 }, # asm
+    { name = "transformed_points_outside_count", vram = 0x80043538, size = 0xd8 }, # c
     { name = "func_80043610", vram = 0x80043610, size = 0x38 }, # c
     { name = "func_80043648", vram = 0x80043648, size = 0x34 }, # c
     { name = "display_context_update", vram = 0x8004367c, size = 0x238 }, # asm
