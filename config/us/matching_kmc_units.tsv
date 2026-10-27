@@ -809,3 +809,5 @@
 0x5FDD0	0xDC	src/code/image_rows_expand_horizontal.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fce74a14ac970ad0c3f330965dcfdc22f9c672468e2b237bc44caf3b7e31b621
 0x61B30	0xF8	src/code/image_runtime_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	66fceb005ee01dc0b2cabdd157f994493a36eced73c319983abced5f7510bb55
 0x62610	0x100	src/code/object_lookup_initialize.c	--assembler=asn64 --normalizer-enable-KMC-DYNAMIC-ALLOC-ARG-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7524d0fdd003e56f1eef687a9d6081e117652b53285d3d166a96abeda77b6e23
+0x5FC40	0x11C	src/code/image_rows_expand_repeated.c	--assembler=asn64 --normalizer-enable-KMC-ROW-GROUP-LOOP-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8fde9f652864b6b81e99de431f8705591a9292fd327f2cae9d1f2ba188d91621
+0x62C54	0x11C	src/code/object_lookup_indices_decode.c	--assembler=asn64 --normalizer-enable-KMC-LOOKUP-DECODE-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f489e4c4cf68af91696fb460911b5db2dde3a150832d0934db692f7ebc3d3247

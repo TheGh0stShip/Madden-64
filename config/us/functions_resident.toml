@@ -1294,7 +1294,7 @@ functions = [
     { name = "image_plane_decode", vram = 0x8005eea0, size = 0x190 }, # c
     { name = "func_8005F030", vram = 0x8005f030, size = 0x8 }, # stub
     { name = "func_8005F038", vram = 0x8005f038, size = 0x8 }, # stub
-    { name = "func_8005F040", vram = 0x8005f040, size = 0x11c }, # asm
+    { name = "image_rows_expand_repeated", vram = 0x8005f040, size = 0x11c }, # c
     { name = "func_8005F15C", vram = 0x8005f15c, size = 0x74 }, # c
     { name = "image_rows_expand_horizontal", vram = 0x8005f1d0, size = 0xdc }, # c
     { name = "byte_plane_filter", vram = 0x8005f2ac, size = 0xec }, # c
@@ -1334,7 +1334,7 @@ functions = [
     { name = "object_lookup_update", vram = 0x80061b10, size = 0x270 }, # asm
     { name = "object_lookup_prepare", vram = 0x80061d80, size = 0x190 }, # asm
     { name = "func_80061F10", vram = 0x80061f10, size = 0x144 }, # asm
-    { name = "func_80062054", vram = 0x80062054, size = 0x11c }, # asm
+    { name = "object_lookup_indices_decode", vram = 0x80062054, size = 0x11c }, # c
     { name = "object_lookup_table_build", vram = 0x80062170, size = 0x388 }, # asm
     { name = "object_lookup_table_create", vram = 0x800624f8, size = 0xe8 }, # c
     { name = "func_800625E0", vram = 0x800625e0, size = 0x40 }, # c
