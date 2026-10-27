@@ -1197,10 +1197,10 @@ functions = [
     { name = "func_80054F10", vram = 0x80054f10, size = 0x70 }, # c
     { name = "object_driver_initialize", vram = 0x80054f80, size = 0x234 }, # asm
     { name = "object_action_update", vram = 0x800551b4, size = 0xc8 }, # c
-    { name = "func_8005527C", vram = 0x8005527c, size = 0x100 }, # asm
+    { name = "func_8005527C", vram = 0x8005527c, size = 0x100 }, # c
     { name = "func_8005537C", vram = 0x8005537c, size = 0x64 }, # c
     { name = "func_800553E0", vram = 0x800553e0, size = 0x64 }, # c
-    { name = "func_80055444", vram = 0x80055444, size = 0x114 }, # asm
+    { name = "func_80055444", vram = 0x80055444, size = 0x114 }, # c
     { name = "func_80055558", vram = 0x80055558, size = 0x10 }, # stub
     { name = "func_80055568", vram = 0x80055568, size = 0x20 }, # leaf
     { name = "func_80055588", vram = 0x80055588, size = 0x7c }, # c
@@ -1208,7 +1208,7 @@ functions = [
     { name = "driver_callbacks_initialize", vram = 0x8005560c, size = 0x9c }, # c
     { name = "object_state_pattern_test", vram = 0x800556a8, size = 0xd8 }, # c
     { name = "object_driver_update", vram = 0x80055780, size = 0x300 }, # asm
-    { name = "func_80055A80", vram = 0x80055a80, size = 0x13c }, # asm
+    { name = "func_80055A80", vram = 0x80055a80, size = 0x13c }, # c
     { name = "object_driver_process", vram = 0x80055bbc, size = 0x2d0 }, # asm
     { name = "object_animation_apply", vram = 0x80055e8c, size = 0x204 }, # asm
     { name = "func_80056090", vram = 0x80056090, size = 0x4c }, # c

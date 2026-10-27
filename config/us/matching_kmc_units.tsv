@@ -857,3 +857,6 @@
 0x554B8	0x130	src/code/object_stream_driver_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9185523d2a740e8f25c6571a5398c8dadd5c469edef2b46e75c29e052585e129
 0x556EC	0x140	src/code/object_stream_step.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1d22938213b2f5775cb0e4fd8107e7d775833418e13c2d32932374151b4d4713
 0x559B0	0x120	src/code/object_runtime_state_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a978483fe42f7254a9af6dbbb022a902f1157b5e9b37ddace550023e583dc788
+0x55E7C	0x100	src/code/object_state_dispatch.c	--assembler=asn64 --section-base=.rodata:0x800031E8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9ce6d58daa8b438dcb4abd657aada1a00acce1363decf619be41b9dcabc896a3
+0x56044	0x114	src/code/object_stream_finalize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fa4f8dae5fa6bcf18b092014bb638895bed8a6cf9960286e7782d23dbb702510
+0x56680	0x13C	src/code/object_buffer_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	99c8fc2539b802f341c30ef16f3b9da84b515b483a33a203325d395890dded52
