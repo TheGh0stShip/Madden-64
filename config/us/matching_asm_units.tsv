@@ -139,7 +139,6 @@
 0x2C224	0x24C	src/code/gameplay_interface_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ea3c576fdfd25dafa13172e14cc0413347309a4d15df556abba00d5cc169af0
 0x623C8	0x248	src/code/object_lookup_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	5d2a5c30968b427c2a3b22e7ac212736f9d57d92efc2dd823e30d591374eb02f
 0x122B8	0x244	src/code/render_buffer_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	e6a5643ab8b6adbc600d2675df17ed05186be5e8ba3b9c56b3c340202d0100cf
-0x60904	0x240	src/code/image_block_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	615ed1bceef623a601cf1cca499a40b071cf3c4412785d54456838074fe3cc30
 0x37364	0x23C	src/code/memory_pool_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0772237cd205e292cc9c11a831ba74f4cab293b0e1ed2345a5adeef0ab04df0b
 0x5827C	0x23C	src/code/object_animation_cycle.s	-O2 -G0 -mips3 -mgp32 -mfp32	a4d0f9abfc20fc29304195961fa38e7e5f54e96e78530f59066839805651700c
 0x4427C	0x238	src/code/display_context_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	25527a2d1eb8bacc6038054e32d534cbfa0358454b62ba4e85a17f58131a94fe
@@ -315,12 +314,9 @@
 0x5D8CC	0x134	src/code/func_8005CCCC.s	-O2 -G0 -mips3 -mgp32 -mfp32	a9cc607a5a8cc24b5e9d321023f8d584dfb25ce9eb92f008105e15d460a6eefd
 0x5DA00	0x124	src/code/func_8005CE00.s	-O2 -G0 -mips3 -mgp32 -mfp32	2a52653687a5a938c74be666fdf7b28c267765fcd8ff7bb645fa0c2b34460016
 0x5DC18	0x8	src/code/func_8005D018.s	-O2 -G0 -mips3 -mgp32 -mfp32	ee8d9d21767a1749171f8e1de41aafcca6cc16eff16128a0e77683abfd0c817c
-0x60468	0x130	src/code/func_8005F868.s	-O2 -G0 -mips3 -mgp32 -mfp32	46e793f52ad67bf315800ceaafdfdd2f62e90fbfe5c358eb90d66aeb073068cb
 0x60598	0x13C	src/code/func_8005F998.s	-O2 -G0 -mips3 -mgp32 -mfp32	55a453b5a9deaefaff29e81c520b4b168600436b3aae2411fabfadc9d5f1010d
 0x6079C	0x160	src/code/func_8005FB9C.s	-O2 -G0 -mips3 -mgp32 -mfp32	d657f5cbc1ddf79bf7846a54764df97c6bb9c6142a5bca910f0536cfaf1cb8fb
-0x6116C	0x114	src/code/func_8006056C.s	-O2 -G0 -mips3 -mgp32 -mfp32	794b07fe9a17461660b6e1688b764e0d81c01d1f0eae27767ecdee906c48603e
 0x61470	0x12C	src/code/func_80060870.s	-O2 -G0 -mips3 -mgp32 -mfp32	a93b8cba24e1e3992817cdbbd0caad914ed8ec4045ccf55e9fb2850f1454be58
-0x6159C	0x140	src/code/func_8006099C.s	-O2 -G0 -mips3 -mgp32 -mfp32	a47901841c20b7b8722e0fa9bd412ee7a7ca99ce802cebe6216b2b4f73cc162c
 0x62B10	0x144	src/code/func_80061F10.s	-O2 -G0 -mips3 -mgp32 -mfp32	f23ba12e2cf27fbaa6ee545d3f924c86b2b9c902a1d15241935c26f952372fe2
 0x635C8	0x130	src/code/func_800629C8.s	-O2 -G0 -mips3 -mgp32 -mfp32	6d9e2eb639d3afc9676b9615007a098148113c8b03279c09c4a2eb215db06fbd
 0x6370C	0x134	src/code/func_80062B0C.s	-O2 -G0 -mips3 -mgp32 -mfp32	c391001664c951890a236b93c00843b00f0487711321ca83d119a6dc74f26bd8

@@ -1297,24 +1297,24 @@ functions = [
     { name = "byte_plane_filter", vram = 0x8005f2ac, size = 0xec }, # c
     { name = "image_plane_process", vram = 0x8005f398, size = 0x184 }, # asm
     { name = "image_plane_transform", vram = 0x8005f51c, size = 0x348 }, # asm
-    { name = "func_8005F868", vram = 0x8005f868, size = 0x130 }, # asm
+    { name = "func_8005F868", vram = 0x8005f868, size = 0x130 }, # c
     { name = "func_8005F998", vram = 0x8005f998, size = 0x13c }, # asm
     { name = "tiled_columns_copy", vram = 0x8005fad4, size = 0x8c }, # c
     { name = "func_8005FB60", vram = 0x8005fb60, size = 0x3c }, # c
     { name = "func_8005FB9C", vram = 0x8005fb9c, size = 0x160 }, # asm
     { name = "func_8005FCFC", vram = 0x8005fcfc, size = 0x8 }, # stub
-    { name = "image_block_decode", vram = 0x8005fd04, size = 0x240 }, # asm
+    { name = "image_block_decode", vram = 0x8005fd04, size = 0x240 }, # c
     { name = "image_table_finalize", vram = 0x8005ff48, size = 0x198 }, # asm
     { name = "func_800600E0", vram = 0x800600e0, size = 0x4c }, # leaf
     { name = "func_8006012C", vram = 0x8006012c, size = 0x4c }, # leaf
     { name = "image_table_process", vram = 0x80060178, size = 0x1f8 }, # asm
     { name = "image_table_decode", vram = 0x80060370, size = 0x1fc }, # asm
-    { name = "func_8006056C", vram = 0x8006056c, size = 0x114 }, # asm
+    { name = "func_8006056C", vram = 0x8006056c, size = 0x114 }, # c
     { name = "object_shared_buffers_assign", vram = 0x80060680, size = 0xb4 }, # c
     { name = "index_planes_accumulate", vram = 0x80060734, size = 0x98 }, # c
     { name = "indexed_rgb_accumulate", vram = 0x800607cc, size = 0xa4 }, # c
     { name = "func_80060870", vram = 0x80060870, size = 0x12c }, # asm
-    { name = "func_8006099C", vram = 0x8006099c, size = 0x140 }, # asm
+    { name = "func_8006099C", vram = 0x8006099c, size = 0x140 }, # c
     { name = "object_table_process", vram = 0x80060adc, size = 0x214 }, # asm
     { name = "object_children_allocate", vram = 0x80060cf0, size = 0x8c }, # c
     { name = "image_table_update", vram = 0x80060d7c, size = 0x178 }, # asm
