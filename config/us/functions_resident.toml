@@ -567,7 +567,7 @@ functions = [
     { name = "func_8002F44C", vram = 0x8002f44c, size = 0x20 }, # c
     { name = "func_8002F46C", vram = 0x8002f46c, size = 0x128 }, # c
     { name = "runtime_command_update", vram = 0x8002f594, size = 0x2a4 }, # asm
-    { name = "func_8002F838", vram = 0x8002f838, size = 0xf8 }, # asm
+    { name = "global_runtime_state_initialize", vram = 0x8002f838, size = 0xf8 }, # c
     { name = "func_8002F930", vram = 0x8002f930, size = 0x8 }, # stub
     { name = "bitstream_record_decode", vram = 0x8002f938, size = 0x330 }, # asm
     { name = "runtime_command_finalize", vram = 0x8002fc68, size = 0x1a8 }, # asm

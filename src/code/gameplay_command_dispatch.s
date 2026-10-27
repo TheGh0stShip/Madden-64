@@ -139,7 +139,7 @@ gameplay_command_dispatch:
 .L8002EC48:
     jal         func_80035428
     addiu       $a0, $zero, 0x20
-    jal         func_8002F838
+    jal         global_runtime_state_initialize
     nop
     jal         func_80011B4C
     nop
