@@ -92,7 +92,6 @@
 0x62D70	0x388	src/code/object_lookup_table_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	88ae962f5de7d20e3cc94343effec53fb53ee5d283322ec7bdf5fcd889db338f
 0x24DA0	0x364	src/code/roster_stat_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	ac9a6a84c41454831b7c4e90d2cea9bf7d3608036a978676274b79892ae8c004
 0x2AF58	0x354	src/code/gameplay_selection_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	5002f6abedd87f5056c381064801a9bb35a2d2cb79d56d9e0bd92b53902dcfad
-0x6011C	0x348	src/code/image_plane_transform.s	-O2 -G0 -mips3 -mgp32 -mfp32	bbec790ec1b9d54194250f5b4a9901dddc0c92c72e069440632e3d19b195769f
 0x57F44	0x338	src/code/object_animation_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	deccf1c3bbd97ac212ccadc13b09428b5faba454573af8e580efc78f9f4ec3d3
 0x58AF0	0x320	src/code/object_animation_pose_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	3febec77d900097f715d7b151398f77f77b3caa2b9bed4ee25e8a9e9d35c97e5
 0x5932C	0x31C	src/code/object_cycle_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	334d6e4be99cf67accfdc851c697e84041b80f4538e641f211ac174556522760
