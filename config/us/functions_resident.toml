@@ -1307,8 +1307,8 @@ functions = [
     { name = "image_table_finalize", vram = 0x8005ff48, size = 0x198 }, # c
     { name = "func_800600E0", vram = 0x800600e0, size = 0x4c }, # leaf
     { name = "func_8006012C", vram = 0x8006012c, size = 0x4c }, # leaf
-    { name = "image_table_process", vram = 0x80060178, size = 0x1f8 }, # asm
-    { name = "image_table_decode", vram = 0x80060370, size = 0x1fc }, # asm
+    { name = "image_table_process", vram = 0x80060178, size = 0x1f8 }, # c
+    { name = "image_table_decode", vram = 0x80060370, size = 0x1fc }, # c
     { name = "func_8006056C", vram = 0x8006056c, size = 0x114 }, # c
     { name = "object_shared_buffers_assign", vram = 0x80060680, size = 0xb4 }, # c
     { name = "index_planes_accumulate", vram = 0x80060734, size = 0x98 }, # c
