@@ -23,8 +23,6 @@
 0x326B8	0x168	src/code/packed_command_measure.s	-O2 -G0 -mips3 -mgp32 -mfp32	4ef36112edf9c6eb62edc26b40da9ad99fd855303494c10827d31d1efb369d47
 0x33778	0x150	src/code/memory_pool_region_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	0dcfb63ac0a1a1f488a57a4cec79b882c54598d33488ee23e30b08a7bc21b8fb
 0x338C8	0x138	src/code/memory_pool_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	05c358a5d07c97218b09ab5a0ff5df5199da7b496e8301d2db488f1842857221
-0x33A00	0x13C	src/code/memory_pool_range_allocate.s	-O2 -G0 -mips3 -mgp32 -mfp32	b8b726fd1bf519c8011faaffdf675543882967eb0264d714a83a937a5f63287a
-0x33B3C	0x114	src/code/memory_pool_resize.s	-O2 -G0 -mips3 -mgp32 -mfp32	9b1f069c34bee6f40757f33b538234c68986e9cf825423dd949b8b16871910bb
 0xA39C	0x20C	src/code/display_texture_block_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	7aef0388acbd7689c29735d4c211f8b357a36988f52d23edebd733e1ef7d629f
 0xA818	0x1FC	src/code/display_texture_tile_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	c04ee2dd73957175f9d6709bb72eaadc80feb3abf2bb470f1c29b33b36b9f8f7
 0xC874	0x20C	src/code/display_frame_setup.s	-O2 -G0 -mips3 -mgp32 -mfp32	569fb0a15bc00f9fd3038649414baee37548977c7e6a252e72dc7007b37dce61

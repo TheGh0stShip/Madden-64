@@ -627,8 +627,8 @@ functions = [
     { name = "func_80032B00", vram = 0x80032b00, size = 0x78 }, # c
     { name = "memory_pool_region_load", vram = 0x80032b78, size = 0x150 }, # asm
     { name = "memory_pool_initialize", vram = 0x80032cc8, size = 0x138 }, # asm
-    { name = "memory_pool_range_allocate", vram = 0x80032e00, size = 0x13c }, # asm
-    { name = "memory_pool_resize", vram = 0x80032f3c, size = 0x114 }, # asm
+    { name = "memory_pool_range_take", vram = 0x80032e00, size = 0x13c }, # c
+    { name = "memory_pool_block_resize", vram = 0x80032f3c, size = 0x114 }, # c
     { name = "memory_block_split", vram = 0x80033050, size = 0xdc }, # c
     { name = "func_8003312C", vram = 0x8003312c, size = 0x48 }, # leaf
     { name = "memory_table_create", vram = 0x80033174, size = 0xe4 }, # c
