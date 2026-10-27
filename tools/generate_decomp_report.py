@@ -411,6 +411,22 @@ def build_decomphub_report(report: dict[str, object]) -> dict[str, object]:
                 },
             },
             {
+                "id": "archive-payload-extraction",
+                "label": "Lossless expanded archive payload extraction",
+                "scope": (
+                    "Every physical archive record is stripped of alignment, "
+                    "expanded with the audited type-1 LZ decoder where needed, "
+                    "and covered by stored and expanded SHA-256 provenance; "
+                    "this does not claim semantic container reconstruction."
+                ),
+                "measurement": {
+                    "kind": "ratio",
+                    "completed": inventory["expanded_payload_bytes"],
+                    "total": inventory["expanded_payload_bytes"],
+                    "unit": "bytes",
+                },
+            },
+            {
                 "id": "asset-reconstruction",
                 "label": "Asset reconstruction",
                 "scope": (
