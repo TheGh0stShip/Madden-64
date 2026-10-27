@@ -1304,7 +1304,7 @@ functions = [
     { name = "func_8005FB9C", vram = 0x8005fb9c, size = 0x160 }, # c
     { name = "func_8005FCFC", vram = 0x8005fcfc, size = 0x8 }, # stub
     { name = "image_block_decode", vram = 0x8005fd04, size = 0x240 }, # c
-    { name = "image_table_finalize", vram = 0x8005ff48, size = 0x198 }, # asm
+    { name = "image_table_finalize", vram = 0x8005ff48, size = 0x198 }, # c
     { name = "func_800600E0", vram = 0x800600e0, size = 0x4c }, # leaf
     { name = "func_8006012C", vram = 0x8006012c, size = 0x4c }, # leaf
     { name = "image_table_process", vram = 0x80060178, size = 0x1f8 }, # asm
@@ -1317,7 +1317,7 @@ functions = [
     { name = "func_8006099C", vram = 0x8006099c, size = 0x140 }, # c
     { name = "object_table_process", vram = 0x80060adc, size = 0x214 }, # asm
     { name = "object_children_allocate", vram = 0x80060cf0, size = 0x8c }, # c
-    { name = "image_table_update", vram = 0x80060d7c, size = 0x178 }, # asm
+    { name = "image_table_update", vram = 0x80060d7c, size = 0x178 }, # c
     { name = "func_80060EF4", vram = 0x80060ef4, size = 0x8 }, # stub
     { name = "func_80060EFC", vram = 0x80060efc, size = 0x34 }, # c
     { name = "image_runtime_initialize", vram = 0x80060f30, size = 0xf8 }, # c

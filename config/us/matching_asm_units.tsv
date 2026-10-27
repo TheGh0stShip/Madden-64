@@ -209,7 +209,6 @@
 0x2C618	0x198	src/code/gameplay_interface_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	36bb12cae0910cf3f3f732f590f131605dcc6e95fd84b4e7497971d4fea628b9
 0x2E7D0	0x198	src/code/gameplay_record_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	54cad0ef6ae1a5bd008b7657d91bffdd1aae6793ffb13e9f2c4cc2e01a4e210b
 0x5908C	0x198	src/code/object_cycle_state_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	6056c083991f34956fff34a517ce642d3dbe4b6ae89f6e8a012db46dc960bd7e
-0x60B48	0x198	src/code/image_table_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	98cf373e9fee8507d9c7442a2981128c792c8c0cddbfb4d8a57955975aec949a
 0x59D54	0x194	src/code/object_cycle_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	c350605835ec090127ddc23fbca224e68919e908a0893af0b20bd5418f6da289
 0x5D530	0x194	src/code/object_decode_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	6670bce120a97bff01c9c2bcd7a5f555e395e321786e9a4bfc313154f495d3eb
 0x62980	0x190	src/code/object_lookup_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	4c59ea69e49839ed3a1c7688f1f2adcc2af77d09ac5aff376d58ad4013d7b893
@@ -226,7 +225,6 @@
 0x3F5B0	0x17C	src/code/audio_bank_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	948999baf435c93e571ab77f27345dfbf42574168971cd399e17b81ec57c876b
 0x1C1C0	0x178	src/code/resource_buffers_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	e758b5858366bd13b02692361bb2e5423a12ee79da8f238dbf998f7c3e2d0f9e
 0x36B88	0x178	src/code/memory_pool_finalize.s	-O2 -G0 -mips3 -mgp32 -mfp32	25725cbda057fa1e39b9e389afdd537ef6fdb8feddd619e30bbb7a426105e779
-0x6197C	0x178	src/code/image_table_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	d7f6eb31106f188d2b8005d9457a32bbc95c82bd5f0d5ad5c890d83380f677a6
 0x25928	0x174	src/code/roster_state_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	9732d35322f0eaf057ee5fbbe772ecbfe021da48a51390ce12c8e0b5c7ac1b7d
 0x3697C	0x174	src/code/memory_pool_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	2ab64437b4a29424ebf9a8e75f4c1da787b843d002422e4c977aeb24d8e5f361
 0x42640	0x174	src/code/interface_state_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	5641767f6520323856530f5062ed62910d576b9b4da95d260f96d9454ef18e3c
