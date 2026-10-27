@@ -853,3 +853,7 @@
 0x60598	0x13C	src/code/image_rgb_rows_decode.c	--assembler=asn64 --normalizer-enable-KMC-IMAGE-RGB-DECODE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	55a453b5a9deaefaff29e81c520b4b168600436b3aae2411fabfadc9d5f1010d
 0x6079C	0x160	src/code/image_rgba_rows_decode.c	--assembler=asn64 --normalizer-enable-KMC-IMAGE-RGBA-DECODE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d657f5cbc1ddf79bf7846a54764df97c6bb9c6142a5bca910f0536cfaf1cb8fb
 0x61470	0x12C	src/code/image_planes_accumulate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a93b8cba24e1e3992817cdbbd0caad914ed8ec4045ccf55e9fb2850f1454be58
+0x55368	0x150	src/code/object_state_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30979702dd097b84d1799e2339779148fb740af50825c30d4e3c9422a34dcc3b
+0x554B8	0x130	src/code/object_stream_driver_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9185523d2a740e8f25c6571a5398c8dadd5c469edef2b46e75c29e052585e129
+0x556EC	0x140	src/code/object_stream_step.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1d22938213b2f5775cb0e4fd8107e7d775833418e13c2d32932374151b4d4713
+0x559B0	0x120	src/code/object_runtime_state_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a978483fe42f7254a9af6dbbb022a902f1157b5e9b37ddace550023e583dc788

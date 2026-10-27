@@ -1185,13 +1185,13 @@ functions = [
     { name = "func_80050A18", vram = 0x80050a18, size = 0xfc }, # c
     { name = "func_80050B14", vram = 0x80050b14, size = 0x320 }, # c
     { name = "func_80050E34", vram = 0x80050e34, size = 0x6c }, # c
-    { name = "func_80054768", vram = 0x80054768, size = 0x150 }, # asm
-    { name = "func_800548B8", vram = 0x800548b8, size = 0x130 }, # asm
+    { name = "func_80054768", vram = 0x80054768, size = 0x150 }, # c
+    { name = "func_800548B8", vram = 0x800548b8, size = 0x130 }, # c
     { name = "func_800549E8", vram = 0x800549e8, size = 0x104 }, # c
-    { name = "func_80054AEC", vram = 0x80054aec, size = 0x140 }, # asm
+    { name = "func_80054AEC", vram = 0x80054aec, size = 0x140 }, # c
     { name = "object_duration_apply", vram = 0x80054c2c, size = 0xa8 }, # c
     { name = "func_80054CD4", vram = 0x80054cd4, size = 0xdc }, # c
-    { name = "func_80054DB0", vram = 0x80054db0, size = 0x120 }, # asm
+    { name = "func_80054DB0", vram = 0x80054db0, size = 0x120 }, # c
     { name = "func_80054ED0", vram = 0x80054ed0, size = 0x20 }, # c
     { name = "func_80054EF0", vram = 0x80054ef0, size = 0x20 }, # c
     { name = "func_80054F10", vram = 0x80054f10, size = 0x70 }, # c
