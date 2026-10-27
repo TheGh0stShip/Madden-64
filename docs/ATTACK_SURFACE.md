@@ -46,23 +46,23 @@ heuristic boundary catalogues and are not equivalent measures.
 | boot_loader | 5 | 2 | 632 | 460 |
 | overlay_1 | 1,025 | 226 | 183,528 | 13,572 |
 | overlay_4 | 420 | 71 | 115,116 | 3,672 |
-| resident | 1,369 | 1,016 | 378,060 | 146,624 |
+| resident | 1,367 | 1,018 | 378,060 | 147,376 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 323 | 133 | 3,904 | 1,720 |
+| 000-0016 | 321 | 131 | 3,888 | 1,704 |
 | 000-0032 | 224 | 122 | 5,824 | 3,092 |
 | 000-0064 | 387 | 141 | 19,208 | 7,004 |
 | 000-0128 | 553 | 201 | 51,828 | 19,044 |
 | 000-0256 | 553 | 260 | 102,432 | 48,544 |
-| 000-0512 | 477 | 374 | 171,328 | 134,664 |
+| 000-0512 | 477 | 372 | 171,344 | 133,928 |
 | 000-1024 | 203 | 181 | 141,616 | 126,676 |
 | 1025+ | 99 | 92 | 181,196 | 172,264 |
 
-- Exact duplicate body families: 17
-- Functions participating in those families: 114
+- Exact duplicate body families: 16
+- Functions participating in those families: 112
 - Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 1
 - Program-region code bytes: 753,428
@@ -78,7 +78,7 @@ register dependency, and no contradictory boundary finding.
 
 | Module | Sweep candidates | Published candidates | Gap ranges | Gap bytes | Contradictory findings |
 |---|---:|---:|---:|---:|---:|
-| resident | 1,369 | 1,369 | 1 | 14,536 | 5 |
+| resident | 1,367 | 1,367 | 1 | 14,536 | 5 |
 | overlay_1 | 1,071 | 1,025 | 231 | 43,696 | 987 |
 | overlay_4 | 420 | 420 | 87 | 17,500 | 348 |
 

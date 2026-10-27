@@ -1239,8 +1239,7 @@ functions = [
     { name = "object_cycle_prepare", vram = 0x80058b08, size = 0x180 }, # asm
     { name = "func_80058C88", vram = 0x80058c88, size = 0x28 }, # leaf
     { name = "object_services_initialize", vram = 0x80058cb0, size = 0xc4 }, # c
-    { name = "func_80058D78", vram = 0x80058d78, size = 0x8 }, # asm
-    { name = "object_cycle_process_secondary", vram = 0x80058d80, size = 0x1ac }, # asm
+    { name = "func_80058D78", vram = 0x80058d78, size = 0x1b4 }, # c
     { name = "object_cycle_update", vram = 0x80058f2c, size = 0x228 }, # asm
     { name = "object_cycle_finalize", vram = 0x80059154, size = 0x194 }, # asm
     { name = "func_800592E8", vram = 0x800592e8, size = 0x14c }, # asm
@@ -1274,8 +1273,7 @@ functions = [
     { name = "func_8005BE8C", vram = 0x8005be8c, size = 0x154 }, # asm
     { name = "object_decode_pipeline", vram = 0x8005bfe0, size = 0x950 }, # asm
     { name = "object_decode_process", vram = 0x8005c930, size = 0x194 }, # asm
-    { name = "func_8005CAC8", vram = 0x8005cac8, size = 0x8 }, # asm
-    { name = "func_8005CAD0", vram = 0x8005cad0, size = 0x134 }, # asm
+    { name = "func_8005CAC8", vram = 0x8005cac8, size = 0x13c }, # c
     { name = "object_stream_process", vram = 0x8005cc04, size = 0xc8 }, # c
     { name = "func_8005CCCC", vram = 0x8005cccc, size = 0x134 }, # asm
     { name = "func_8005CE00", vram = 0x8005ce00, size = 0x124 }, # asm
