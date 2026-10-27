@@ -840,3 +840,6 @@
 0x60904	0x240	src/code/image_block_decode.c	--assembler=asn64 --section-base=.rodata:0x80003400 --normalizer-enable-KMC-IMAGE-BLOCK-DECODE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	615ed1bceef623a601cf1cca499a40b071cf3c4412785d54456838074fe3cc30
 0x6116C	0x114	src/code/image_scale_table_build.c	--assembler=asn64 --symbol=D_80003418:0x80003418 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	794b07fe9a17461660b6e1688b764e0d81c01d1f0eae27767ecdee906c48603e
 0x6159C	0x140	src/code/image_rgb_rows_accumulate.c	--assembler=asn64 --normalizer-enable-KMC-IMAGE-RGB-ACCUMULATE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a47901841c20b7b8722e0fa9bd412ee7a7ca99ce802cebe6216b2b4f73cc162c
+0x60598	0x13C	src/code/image_rgb_rows_decode.c	--assembler=asn64 --normalizer-enable-KMC-IMAGE-RGB-DECODE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	55a453b5a9deaefaff29e81c520b4b168600436b3aae2411fabfadc9d5f1010d
+0x6079C	0x160	src/code/image_rgba_rows_decode.c	--assembler=asn64 --normalizer-enable-KMC-IMAGE-RGBA-DECODE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d657f5cbc1ddf79bf7846a54764df97c6bb9c6142a5bca910f0536cfaf1cb8fb
+0x61470	0x12C	src/code/image_planes_accumulate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a93b8cba24e1e3992817cdbbd0caad914ed8ec4045ccf55e9fb2850f1454be58
