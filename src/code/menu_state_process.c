@@ -10,7 +10,7 @@ extern u8 D_800908B8[];
 extern void func_800353B0(void);
 extern u16 func_80034D30(u32 value, s32 arg1, s32 arg2);
 extern u8 func_80035380(u32 value);
-extern void func_80035064(void *state, u32 value, s32 arg2);
+extern u32 resource_selection_update(void *state, u32 value, u16 arg2);
 extern void func_80034388(void *state, u32 value);
 
 void menu_state_process(s32 index)
@@ -56,7 +56,7 @@ void menu_state_process(s32 index)
                 }
                 final_offset = saved_index * 0x7C8;
                 first_offset = (u32)D_800784FC;
-                func_80035064((void *)(final_offset + first_offset), value, 0);
+                resource_selection_update((void *)(final_offset + first_offset), value, 0);
             }
         }
     } else {

@@ -683,7 +683,7 @@ functions = [
     { name = "func_80034ED4", vram = 0x80034ed4, size = 0x8c }, # c
     { name = "func_80034F60", vram = 0x80034f60, size = 0x78 }, # c
     { name = "func_80034FD8", vram = 0x80034fd8, size = 0x8c }, # c
-    { name = "func_80035064", vram = 0x80035064, size = 0xf8 }, # asm
+    { name = "resource_selection_update", vram = 0x80035064, size = 0xf8 }, # c
     { name = "memory_block_finalize", vram = 0x8003515c, size = 0x17c }, # asm
     { name = "resource_request_dispatch", vram = 0x800352d8, size = 0xa8 }, # c
     { name = "func_80035380", vram = 0x80035380, size = 0x30 }, # c

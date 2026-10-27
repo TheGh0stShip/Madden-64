@@ -24,7 +24,7 @@ func_800C52E0:
     bnel        $v0, $zero, .L800C537C
     addu        $a1, $s1, $zero
     lw          $a0, 0x24($s0)
-    jal         func_80035064
+    jal         resource_selection_update
     addu        $a2, $zero, $zero
     addu        $a0, $v0, $zero
     andi        $v1, $a0, 0xFFFF

@@ -4,7 +4,7 @@ extern u16 D_8007A45C[];
 extern u16 func_8003515C(u32 type, u16 *table);
 extern u16 func_80031A1C(u32 value);
 extern void func_80034388(void *resource);
-extern u32 func_80035064(void *resource, u16 value, u16 extra);
+extern u32 resource_selection_update(void *resource, u32 value, u16 extra);
 
 u16 resource_request_dispatch(void *resource, u32 type, u32 extra)
 {
@@ -30,7 +30,7 @@ u16 resource_request_dispatch(void *resource, u32 type, u32 extra)
         func_80034388(saved_resource);
         result = 2;
     } else {
-        result = func_80035064(saved_resource, value, (u16)saved_extra);
+        result = resource_selection_update(saved_resource, value, (u16)saved_extra);
     }
     return (u16)result;
 }
