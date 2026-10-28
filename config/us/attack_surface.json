@@ -201,8 +201,8 @@
       "overlay_5": {
         "functions": 408,
         "bytes": 123516,
-        "matched_functions": 45,
-        "matched_bytes": 1332
+        "matched_functions": 60,
+        "matched_bytes": 2156
       },
       "resident": {
         "functions": 1366,
@@ -315,14 +315,14 @@
       "000-0064": {
         "functions": 485,
         "bytes": 24136,
-        "matched_functions": 263,
-        "matched_bytes": 12952
+        "matched_functions": 277,
+        "matched_bytes": 13708
       },
       "000-0128": {
         "functions": 717,
         "bytes": 67652,
-        "matched_functions": 338,
-        "matched_bytes": 31688
+        "matched_functions": 339,
+        "matched_bytes": 31756
       },
       "000-0256": {
         "functions": 797,
