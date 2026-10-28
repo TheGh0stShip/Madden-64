@@ -39,13 +39,11 @@ extern u32 func_80033298(void *context);
 
 void grid_record_initialize(GridContext *context, GridDefinition *definition)
 {
-    register GridContext *saved_context __asm__("$16") = context;
-    register GridDefinition *saved_definition __asm__("$17") = definition;
-    register GridOwnedRecord *record __asm__("$18");
-    register void *record_definition __asm__("$2");
+    GridContext *saved_context = context;
+    GridDefinition *saved_definition = definition;
+    GridOwnedRecord *record;
+    void *record_definition;
 
-    __asm__("" : "=r"(saved_context), "=r"(saved_definition)
-            : "0"(saved_context), "1"(saved_definition));
     record = saved_context->record;
 
     saved_context->value1C = saved_definition->value0C;
@@ -54,7 +52,6 @@ void grid_record_initialize(GridContext *context, GridDefinition *definition)
     saved_context->record = record;
     func_8002E58C(record, 0, 0x58);
     record_definition = saved_definition->definition;
-    __asm__("" : "=r"(record_definition) : "0"(record_definition));
     record->definition = record_definition;
     record->definition_value = *(u32 *)((u8 *)record_definition + 0xC);
     record->value12 = saved_definition->value08;

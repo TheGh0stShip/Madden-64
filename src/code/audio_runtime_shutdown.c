@@ -16,10 +16,10 @@ extern void func_80032F3C(s32 pool, void *allocation);
 
 void audio_runtime_shutdown(void)
 {
-    register s32 counter __asm__("$17");
-    register void **slot __asm__("$16");
-    register u8 *entry __asm__("$18");
-    register s32 more __asm__("$19");
+    s32 counter;
+    void **slot;
+    u8 *entry;
+    s32 more;
     s32 offset;
 
     if (D_80085028 == 1) {
@@ -48,6 +48,5 @@ void audio_runtime_shutdown(void)
         counter--;
     } while (more != 0);
 
-    __asm__("" : "=r"(more) : "0"(more));
     func_80032F3C(0, D_8008B348);
 }

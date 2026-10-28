@@ -28,10 +28,9 @@ extern void func_8005CE00(void);
 
 void func_8005CAC8(void *object, u32 mode)
 {
-    register DecodeState *state __asm__("$16") =
+    DecodeState *state =
         *(DecodeState **)((u8 *)object + 0x1AC);
 
-    __asm__("" : "=r"(state) : "0"(state));
     switch (mode) {
     case 0:
         if (*(u32 *)((u8 *)object + 0x54) != 0) {

@@ -16,17 +16,15 @@ extern void func_80036100(u32 value, u32 index);
 
 u32 func_80036160(u32 value, u32 index)
 {
-    register u32 saved_index __asm__("$17") = index;
-    register u32 saved_value __asm__("$19") = (u16)value;
-    register u32 table_offset __asm__("$16");
-    register u32 entry_value __asm__("$20");
-    register u32 result_offset __asm__("$18");
+    u32 saved_index = index;
+    u32 saved_value = (u16)value;
+    u32 table_offset;
+    u32 entry_value;
+    u32 result_offset;
     u8 *flags;
     u32 *results;
     u32 rebuilt;
 
-    __asm__("" : "=r"(saved_index), "=r"(saved_value)
-            : "0"(saved_index), "1"(saved_value));
     func_800369A0(saved_value, saved_index);
     table_offset = saved_value * 24;
     flags = *(u8 **)(D_8008B080 + table_offset) + saved_index;

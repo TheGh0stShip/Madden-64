@@ -37,19 +37,17 @@ extern void resource_command_dispatch(void *stream, u16 command, u16 first,
 
 s32 resource_display_finalize(DisplayContext *context)
 {
-    register DisplayContext *saved_context __asm__("$16");
-    register u16 index __asm__("$19");
-    register DisplayStream *descriptor __asm__("$18");
-    register s32 result __asm__("$20");
-    register void *stream __asm__("$17");
-    register u32 flags __asm__("$2");
+    DisplayContext *saved_context;
+    u16 index;
+    DisplayStream *descriptor;
+    s32 result;
+    void *stream;
+    u32 flags;
     DisplayLocals locals;
     s32 type;
 
     saved_context = context;
-    __asm__("" : "=r"(saved_context) : "0"(saved_context));
     index = 0;
-    __asm__("" : "=r"(index) : "0"(index));
     flags = saved_context->flags;
     descriptor = saved_context->descriptor;
     result = 0;

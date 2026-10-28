@@ -27,6 +27,11 @@ ASSEMBLY_SOURCE_ESCAPE = re.compile(
     re.MULTILINE,
 )
 ANY_C_ASM = re.compile(r'\b(?:__asm__|asm)\b')
+GENERIC_ASSEMBLER_NORMALIZERS = {
+    "--normalizer-enable-KMC-FP-PAIR-WORDS",
+    "--normalizer-enable-KMC-LID-ALIGN4",
+    "--normalizer-enable-KMC-LID-PAIR",
+}
 
 
 def measures(total_code: int, matched_code: int, total_functions: int,
@@ -63,6 +68,15 @@ def contains_instruction_asm(source: str) -> bool:
                 or ASSEMBLY_SOURCE_ESCAPE.search(text))
 
 
+def uses_function_specific_normalizer(flags: str) -> bool:
+    """Reject post-compiler instruction rewriting from genuine-C credit."""
+    return any(
+        flag.startswith("--normalizer-enable-")
+        and flag not in GENERIC_ASSEMBLER_NORMALIZERS
+        for flag in flags.split()
+    )
+
+
 def manifest_ranges(paths: list[Path], suffix: str | None = None,
                     reject_instruction_asm: bool = False) -> list[tuple[int, int, str]]:
     ranges = []
@@ -76,7 +90,11 @@ def manifest_ranges(paths: list[Path], suffix: str | None = None,
             start, size = int(fields[0], 0), int(fields[1], 0)
             if suffix is not None and not fields[2].endswith(suffix):
                 continue
-            if reject_instruction_asm and contains_instruction_asm(fields[2]):
+            flags = fields[3] if len(fields) >= 4 else ""
+            if reject_instruction_asm and (
+                contains_instruction_asm(fields[2])
+                or uses_function_specific_normalizer(flags)
+            ):
                 continue
             if size <= 0:
                 raise ValueError(f"{path}:{number}: size must be positive")
@@ -86,6 +104,12 @@ def manifest_ranges(paths: list[Path], suffix: str | None = None,
         if right[0] < left[1]:
             raise ValueError(f"matching ranges overlap at 0x{right[0]:X}")
     return ranges
+
+
+def assisted_c_ranges(paths: list[Path]) -> list[tuple[int, int, str]]:
+    """Return C rows that rely on instruction-level assembly assistance."""
+    eligible = manifest_ranges(paths, ".c", reject_instruction_asm=True)
+    return [item for item in manifest_ranges(paths, ".c") if item not in eligible]
 
 
 def loader_functions() -> list[dict[str, object]]:
@@ -166,9 +190,7 @@ def build_report() -> dict[str, object]:
     progress = config["progress"]
     manifests = [ROOT / path for path in progress["manifests"]]
     ranges = manifest_ranges(manifests, ".c", reject_instruction_asm=True)
-    assembly_assisted_ranges = [
-        item for item in manifest_ranges(manifests, ".c") if item not in ranges
-    ]
+    assembly_assisted_ranges = assisted_c_ranges(manifests)
     assembly_ranges = manifest_ranges(manifests, ".s")
     overlay_configs = progress.get("overlay_manifests", [])
     loader_paths = progress.get("loader_manifests")
@@ -177,10 +199,7 @@ def build_report() -> dict[str, object]:
     loader_manifest_paths = [ROOT / path for path in loader_paths]
     loader_ranges = manifest_ranges(loader_manifest_paths, ".c",
                                     reject_instruction_asm=True)
-    loader_assisted_ranges = [
-        item for item in manifest_ranges(loader_manifest_paths, ".c")
-        if item not in loader_ranges
-    ]
+    loader_assisted_ranges = assisted_c_ranges(loader_manifest_paths)
     loader_assembly_ranges = manifest_ranges(loader_manifest_paths, ".s")
     vram_base, rom_base = image["vram"], image["rom"]
     units = []
@@ -224,11 +243,10 @@ def build_report() -> dict[str, object]:
     assembly_assisted_code = (
         sum(end - start for start, end, _source in assembly_assisted_ranges) +
         sum(end - start for overlay in overlay_configs
-            for start, end, _source in manifest_ranges(
+            for start, end, _source in assisted_c_ranges(
                 [ROOT / overlay["path"]] +
                 ([ROOT / overlay["asm_path"]]
-                 if overlay.get("asm_path") else []), ".c")
-            if contains_instruction_asm(_source)) +
+                 if overlay.get("asm_path") else []))) +
         sum(end - start for start, end, _source in loader_assisted_ranges)
     )
     total_functions = len(units)

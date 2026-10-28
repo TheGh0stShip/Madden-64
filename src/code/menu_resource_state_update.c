@@ -24,10 +24,10 @@ extern void func_80043B20(MenuResourceState *state, u32 equal);
 
 void func_80043D7C(MenuResourceState *state, void *source)
 {
-    register MenuResourceState *saved_state __asm__("$16") = state;
+    MenuResourceState *saved_state = state;
     u32 current = D_8008AFD4;
-    register u32 selected __asm__("$3");
-    register u32 present __asm__("$2");
+    u32 selected;
+    u32 present;
 
     if (D_8007A564 != current) {
         func_80008F30(source, D_80042A04, saved_state, 200);
@@ -46,7 +46,6 @@ void func_80043D7C(MenuResourceState *state, void *source)
         if (selected == 0) {
             selected = D_8008A054;
             present = selected != 0;
-            __asm__("" : "=r"(present) : "0"(present));
             present = -present;
             selected &= present;
         }
