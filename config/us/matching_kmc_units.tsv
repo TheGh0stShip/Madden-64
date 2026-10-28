@@ -1,4 +1,5 @@
 # KMC GCC 2.7.2; ROM_START SIZE SOURCE FLAGS SHA256
+0x14984	0x1EF8	src/code/render_world_pipeline.c	--assembler=asn64 --section-base=.rodata:0x80000924 --normalizer-enable-KMC-LID-PAIR --normalizer-enable-KMC-FP-PAIR-WORDS --normalizer-enable-KMC-LID-ALIGN4 -Iinclude -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul	7bf2d56d5063a1f08984cf08a5780871b3e01e53e91896caf8e7ef111772dc92
 0x5934	0x3F60	src/code/func_80004D34.c	--assembler=asn64 --section-base=.rodata:0x80000488 --symbol=D_80064A04:0x80064A04 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul	7d8da48ce5c4bab9002fd037e622df283308b9093430bc213d9a8872a351c834
 0xE698	0x88	src/code/node_resource_destroy.c	--assembler=asn64 --symbol=D_800782FC:0x800782FC --symbol=D_800782F8:0x800782F8 --symbol=D_800782F4:0x800782F4 --symbol=func_8000BE80:0x8000BE80 --symbol=func_800332C8:0x800332C8 -O2 -G0 -mips3 -mgp32 -mfp32	0a5fd9ee274cc5fa129aea6ed1beab8427a64d25152d7fc670bfcf4f4993132f
 0x216E8	0x90	src/code/menu_option_dispatch.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32	048e18353238654443e7f9f5e62e26449155b0342fdecc3939ef9e8e1a74a179

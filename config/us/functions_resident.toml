@@ -221,7 +221,7 @@ functions = [
     { name = "func_80013B54", vram = 0x80013b54, size = 0x8 }, # stub
     { name = "func_80013B5C", vram = 0x80013b5c, size = 0x30 }, # c
     { name = "render_pipeline_update", vram = 0x80013b8c, size = 0x1f8 }, # asm
-    { name = "render_world_pipeline", vram = 0x80013d84, size = 0x1ef8 }, # asm
+    { name = "render_world_pipeline", vram = 0x80013d84, size = 0x1ef8 }, # c
     { name = "func_80015C80", vram = 0x80015c80, size = 0x7c }, # c
     { name = "func_80015CFC", vram = 0x80015cfc, size = 0x30 }, # c
     { name = "render_state_consume", vram = 0x80015d2c, size = 0x2a4 }, # asm
