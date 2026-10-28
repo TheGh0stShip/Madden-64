@@ -83,3 +83,9 @@
 0x110C8	0x50	src/overlays/overlay5/runtime_register.c	--symbol=FIRST_SYSTEM:0x80087AA8 --symbol=SECOND_SYSTEM:0x8008931C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	211f858195a8e9b334326102e4ce8c74faa51bd035da2128e836afd09b815d6b
 0x10DE0	0x78	src/overlays/overlay5/resource_bundle_release.c	--symbol=FIRST_SYSTEM:0x80087AA8 --symbol=SECOND_SYSTEM:0x8008931C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a34ce73993fee5af10b0f59c667d02e07083674eebb94e241d1cdefe6b138595
 0x10E58	0x6C	src/overlays/overlay5/runtime_event_stop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4f35175bf2986e50902eec0c0bd905223575add2ce097348a2cbcbdf2fec5e5c
+0xE174	0x64	src/overlays/overlay5/previous_active_slot.c	--symbol=SLOTS:0x800881A0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	324fa067e72dd86051d45056c1b81ca309a9015c5a092a76dfa593152dbbce0e
+0x113DC	0x4C	src/overlays/overlay5/registration_create.c	--symbol=SYSTEM:0x80087AA8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4cfcb47ad4a957daab4c0a1427439e09fee5cdabac3f0ef0117221b5072f767e
+0x13BC8	0x64	src/overlays/overlay5/indexed_text_dispatch.c	--symbol=SOURCE:0x80002234 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a4ce8571190125b5aa4129d83e5bc8c5d5307d64678fdd8785c6e6eb662bf91c
+0xB68C	0x38	src/overlays/overlay5/object_initialize_chain.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c492e2e5a7d98e91a9815ccb13f23a76e943c40166a187bb417a413fe0097e71
+0x13AA0	0x78	src/overlays/overlay5/runtime_object_initialize.c	--symbol=FIRST_SYSTEM:0x80087AA8 --symbol=SECOND_SYSTEM:0x8008931C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c32ef83bb8c0a8cf6918c9e8ce87949969556f015bd8992aca46a021e4ac7902
+0x13B50	0x78	src/overlays/overlay5/indexed_label_dispatch.c	--symbol=SOURCE:0x80002234 --symbol=SUFFIX:0x8000223C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d94f356433bee73166fac55f36b1f4cc4cb083aef1b8485b4df291719407111b
