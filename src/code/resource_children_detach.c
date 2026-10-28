@@ -17,7 +17,7 @@ void resource_children_detach(ResourceHandle *handle)
     ChildOwner *owner = data->owner;
     void *child;
     u32 index;
-    register u32 check __asm__("$2");
+    u32 check;
 
     data->count = 0;
     while (owner->head != 0) {
@@ -29,7 +29,6 @@ void resource_children_detach(ResourceHandle *handle)
     if (data->primary_flags != 0) {
         index = (u32)data->primary_items[0];
         check = index;
-        __asm__ volatile("" : : "r"(check));
         index--;
         if (check != 0) {
             do {
@@ -44,7 +43,6 @@ void resource_children_detach(ResourceHandle *handle)
     if (data->secondary_flags != 0) {
         index = (u32)data->secondary_items[0];
         check = index;
-        __asm__ volatile("" : : "r"(check));
         index--;
         if (check != 0) {
             do {

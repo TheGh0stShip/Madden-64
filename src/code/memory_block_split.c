@@ -22,9 +22,8 @@ void memory_block_split(s16 pool, u32 address, u32 size)
         goto found;
     }
     {
-        register MemoryBlock *sentinel __asm__("$3") = (MemoryBlock *)-1;
+        MemoryBlock *sentinel = (MemoryBlock *)-1;
 
-        __asm__("" : "=r"(sentinel) : "0"(sentinel));
 find:
         if (block->address >= address) {
             goto found;

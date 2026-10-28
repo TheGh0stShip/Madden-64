@@ -7,8 +7,8 @@ extern void func_800259E4(u32 player, s32 flag, s32 value);
 
 void play_flags_finalize(void)
 {
-    register u32 raw_state __asm__("$5");
-    register u32 state __asm__("$4");
+    u32 raw_state;
+    u32 state;
 
     if (D_80088AF2 != 1) {
         return;
@@ -16,10 +16,9 @@ void play_flags_finalize(void)
     func_800259E4(D_80088AF3, 15, 1);
     func_800259E4(D_80088AF3 ^ 1, 18, 1);
     raw_state = D_80088AF6;
-    __asm__("" : "=r"(raw_state) : "0"(raw_state));
     state = raw_state & 0xFF;
     if (state != 0 && state != 8) {
-        register u32 range __asm__("$2") = raw_state - 5;
+        u32 range = raw_state - 5;
         if (range >= 2) {
           if (state == 7) {
             func_800259E4(D_80088AF3, 17, 1);

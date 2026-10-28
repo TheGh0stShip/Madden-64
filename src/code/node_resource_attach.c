@@ -30,17 +30,15 @@ extern void func_800332C8(void *, void *);
 void node_resource_attach(ResourceOwner *owner, ResourceNode *node)
 {
     ResourceNode *link;
-    register u32 type __asm__("$4");
-    register ResourceTypeOps *ops __asm__("$3");
+    u32 type;
+    ResourceTypeOps *ops;
 
     if (owner != D_8008931C) {
         func_8000BE80(owner);
     }
     type = node->type;
     ops = D_800782FC;
-    __asm__ volatile("" : : "r"(type), "r"(ops));
     ops += type;
-    __asm__ volatile("" : : "r"(ops));
     ops->release(node);
     func_800332C8(D_800782F8[node->type], node->payload);
     node->payload = 0;

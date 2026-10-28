@@ -16,11 +16,11 @@ extern void func_8004F31C(ResourcePoolEntry *entries);
 
 void resource_pool_reset_wait(void)
 {
-    register ResourcePoolEntry *entries __asm__("$16") = D_8008B3B0;
-    register s32 counter __asm__("$5");
-    register u8 *entry __asm__("$4");
-    register s32 offset __asm__("$3");
-    register s32 previous __asm__("$6");
+    ResourcePoolEntry *entries = D_8008B3B0;
+    s32 counter;
+    u8 *entry;
+    s32 offset;
+    s32 previous;
 
     for (;;) {
         D_80072320 = 0;

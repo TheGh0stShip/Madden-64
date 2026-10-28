@@ -5,11 +5,11 @@ extern u16 func_80028A58(u16 team);
 
 u32 *team_record_pointer_find(u32 team, u32 stat)
 {
-    register s32 offset __asm__("$6") = 0;
-    register s32 count __asm__("$17") = 2;
-    register u8 *base_pointer __asm__("$3");
-    register s32 base_offset __asm__("$2");
-    register u32 *record __asm__("$16");
+    s32 offset = 0;
+    s32 count = 2;
+    u8 *base_pointer;
+    s32 base_offset;
+    u32 *record;
     s16 index;
     u32 value;
 

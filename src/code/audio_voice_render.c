@@ -27,12 +27,12 @@ extern void func_8003D2D4(s32 index, s32 value);
 
 void audio_voice_render(void)
 {
-    register s32 index __asm__("$4");
-    register VoiceRecord *record __asm__("$5");
-    register s32 sentinel __asm__("$6");
-    register VoiceRecord *base __asm__("$2");
-    register s32 previous __asm__("$2");
-    register s32 minus_one __asm__("$4");
+    s32 index;
+    VoiceRecord *record;
+    s32 sentinel;
+    VoiceRecord *base;
+    s32 previous;
+    s32 minus_one;
     s32 state;
     s32 lock;
 
@@ -43,7 +43,6 @@ void audio_voice_render(void)
             sentinel = -1;
             record = &base[7];
 loop:
-                __asm__("" : "=r"(index) : "0"(index));
                 if ((record->flags & 5) == 0) {
                     if (D_80087B08[index] != sentinel) {
                         D_80087B10[D_80087B08[index]] = sentinel;
