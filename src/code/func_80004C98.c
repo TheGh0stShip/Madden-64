@@ -17,52 +17,61 @@ extern CounterOwner *D_80064A00;
 
 void func_80004C98(void)
 {
-    register CounterOwner *owner __asm__("$5");
-    register CounterOwner *global_owner __asm__("$2") = D_80064A00;
-    register s32 outer __asm__("$8");
-    register s32 saved_outer __asm__("$2");
+    CounterOwner *owner;
+    CounterOwner *global_owner = D_80064A00;
+    s32 outer;
+    s32 saved_outer;
 
     if (global_owner != 0) {
         owner = global_owner;
         outer = 15;
         do {
-            register u32 state __asm__("$3") = owner->state;
-            register s32 index __asm__("$6");
-            register s32 saved_index __asm__("$7");
+            u32 state = owner->state;
+            s32 index;
+            s32 saved_index;
             do {
             } while (owner->state == state);
             index = 7;
-            do {
-                register u32 byte_offset __asm__("$4");
-                register CounterPair *check_pair __asm__("$2");
-                register CounterPair *update_pair __asm__("$3");
-                register s32 field __asm__("$2");
+inner_loop:
+            {
+                u32 byte_offset;
+                CounterPair *check_pair;
+                CounterPair *update_pair;
+                s32 field;
+                u32 pair_address;
                 saved_index = index;
                 byte_offset = saved_index << 5;
                 check_pair = owner->pairs;
-                check_pair = (CounterPair *)(byte_offset + (u32)check_pair);
-                __asm__ volatile("" : "=r"(check_pair) : "0"(check_pair));
+                pair_address = byte_offset;
+                pair_address += (u32)check_pair;
+                check_pair = (CounterPair *)pair_address;
                 if (check_pair->first != 0) {
                     update_pair = owner->pairs;
-                    update_pair = (CounterPair *)(byte_offset + (u32)update_pair);
-                    __asm__ volatile("" : "=r"(update_pair) : "0"(update_pair));
+                    pair_address = byte_offset;
+                    pair_address += (u32)update_pair;
+                    update_pair = (CounterPair *)pair_address;
                     field = update_pair->first;
                     field--;
                     update_pair->first = field;
                 }
                 check_pair = owner->pairs;
-                check_pair = (CounterPair *)(byte_offset + (u32)check_pair);
-                __asm__ volatile("" : "=r"(check_pair) : "0"(check_pair));
+                pair_address = byte_offset;
+                pair_address += (u32)check_pair;
+                check_pair = (CounterPair *)pair_address;
                 if (check_pair->second != 0) {
                     update_pair = owner->pairs;
-                    update_pair = (CounterPair *)(byte_offset + (u32)update_pair);
-                    __asm__ volatile("" : "=r"(update_pair) : "0"(update_pair));
+                    pair_address = byte_offset;
+                    pair_address += (u32)update_pair;
+                    update_pair = (CounterPair *)pair_address;
                     field = update_pair->second;
                     field--;
                     update_pair->second = field;
                 }
                 index--;
-            } while (saved_index != 0);
+            }
+            if (saved_index != 0) {
+                goto inner_loop;
+            }
             saved_outer = outer;
             outer--;
         } while (saved_outer != 0);
