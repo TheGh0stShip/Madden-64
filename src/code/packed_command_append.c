@@ -13,7 +13,7 @@ typedef struct CommandBuffer {
 } CommandBuffer;
 
 void func_800401D0(void* source) {
-    register CommandBuffer* buffer __asm__("$2") =
+    CommandBuffer* buffer =
         (CommandBuffer*)D_800740C4;
 
     func_8003FF14(source, &buffer->commands[buffer->count]);

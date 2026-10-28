@@ -8,9 +8,9 @@ extern s16 D_8007A534;
 extern s32 func_800356C4(void* address, s32 size);
 
 void func_8003C780(void) {
-    register s32 index asm("$4");
-    register u8* value asm("$3");
-    register u32 fill asm("$5");
+    s32 index;
+    u8* value;
+    u32 fill;
 
     D_800734EC = 0;
     D_8007A534 = func_800356C4(D_80000400, 0x48);

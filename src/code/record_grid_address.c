@@ -14,6 +14,5 @@ extern GridRow D_80080D6A[];
 GridCell* func_80022A3C(u16 row, u16 column) {
     GridRow* selected = &D_80080D6A[row];
 
-    __asm__ volatile ("" : : "r"(selected));
     return &selected->cells[column];
 }

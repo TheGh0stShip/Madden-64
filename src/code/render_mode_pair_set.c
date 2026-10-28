@@ -4,8 +4,8 @@ extern u32* D_80084F5C;
 extern u32 D_800887CC;
 
 void func_8000A63C(u32 first, u32 second) {
-    register u32 saved_first asm("$6") = first;
-    register u32* state asm("$7") = &D_800887CC;
+    u32 saved_first = first;
+    u32* state = &D_800887CC;
 
     if (state[0] != saved_first || state[1] != second) {
         u32* command = D_80084F5C;

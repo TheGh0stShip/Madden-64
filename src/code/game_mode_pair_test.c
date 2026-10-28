@@ -4,8 +4,8 @@ extern u16 D_8006B9D8;
 extern u16 D_8006B9DA;
 
 s32 func_8002B5EC(void) {
-    register s32 mode __asm__("$2");
-    register s32 expected __asm__("$3");
+    s32 mode;
+    s32 expected;
 
     mode = D_8006B9D8;
     expected = 2;

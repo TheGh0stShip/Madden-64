@@ -15,9 +15,9 @@ typedef struct CallbackNode {
 extern CallbackEntry* D_800782FC;
 
 void func_8000DC2C(CallbackNode* node, void* value) {
-    register u16 index __asm__("$6") = node->callback_index;
+    u16 index = node->callback_index;
     CallbackEntry* entries = D_800782FC;
-    register CallbackEntry* entry __asm__("$3");
+    CallbackEntry* entry;
 
     node->value = value;
     entry = entries + index + 1;
