@@ -4,25 +4,28 @@ extern void **D_8006929C;
 extern void func_80017000(void *object, s32 y, s32 x);
 extern void func_80018540(void *object);
 
-void packed_position_apply(u32 packed)
-{
-    register u32 x __asm__("$6") = packed;
-    register void *object __asm__("$16");
-    register void **objects __asm__("$3");
-    register u32 index __asm__("$2");
-    register void *call_object __asm__("$4");
-    u32 x_negative;
-    register s32 y __asm__("$5");
+typedef struct PackedPosition {
+    u32 value;
+} PackedPosition;
 
-    x = packed;
+void packed_position_apply(PackedPosition packed_arg)
+{
+    u32 packed = packed_arg.value;
+    u32 x = packed;
+    void *object;
+    void **objects;
+    u32 index;
+    void *call_object;
+    s32 y;
+
     index = x >> 24;
     objects = D_8006929C;
     index <<= 2;
     index += (u32)objects;
     object = *(void **)index;
-    x_negative = packed & 0x800;
+    call_object = object;
     x &= 0xFFF;
-    if (x_negative) {
+    if (packed & 0x800) {
         x |= -0x1000;
     }
     y = (s32)packed >> 12;
@@ -30,11 +33,6 @@ void packed_position_apply(u32 packed)
     if (y & 0x800) {
         y |= -0x1000;
     }
-    call_object = object;
-    y <<= 16;
-    x <<= 16;
-    y >>= 16;
-    x = (s32)x >> 16;
-    func_80017000(call_object, y, x);
+    func_80017000(call_object, (s16)y, (s16)x);
     func_80018540(object);
 }
