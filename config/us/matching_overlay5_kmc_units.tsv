@@ -17,3 +17,21 @@
 0x1B228	0x18	src/overlays/overlay5/deep_pointer_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	61ab8a8f2be5be876e549627eef7f75cd7e3a7809c91284d521414e6ada8e624
 0x1B9E0	0x1C	src/overlays/overlay5/flag_byte_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0f2ba01b7e6ff44dcb8a683d2278d1dfac0e1f621855474384638f07e85c633a
 0x1BAB0	0x14	src/overlays/overlay5/global_nested_pointer_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bd5cec35a54c8655c8a62cc5b86691fb7db707ab5b23a1ccd26dedbdcf2a1c3d
+0x3BDC	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800E6DBC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d90f4d6ef56d348e4ffc404adda031eabf3bd9daed821b517117af7e4d76709c
+0x3CB0	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800E7188 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ba7bf5174c41ef646900e15323f8f893b4366e030c870fb7228ea94e5ad91cbe
+0x3CD8	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800E6F80 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	985f6ee0cf176059c6f7732a724507ea26bed414ebf67ad539c073ffb2959494
+0x3E3C	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800E7628 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f3ffa53ed0ad2410dfefb2608fd0ed11b0bc223e06e7673f14e81bb9a4a6137c
+0x5BCC	0x20	src/overlays/overlay5/runtime_refresh.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3ca8ceaa42a9eb355af4d199058801d13e4eaa6718346e8a975ce51063af356
+0x5BEC	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800E6EB8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0eb2d95f8a17f8b492b759559f7faad98b8a112e964ed267833c9f4539ee5f3f
+0x7608	0x20	src/overlays/overlay5/runtime_refresh.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3ca8ceaa42a9eb355af4d199058801d13e4eaa6718346e8a975ce51063af356
+0x7628	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800E7238 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c4e5019d7962970989dcc2d58a20f62e239d813e0a3368b6a8f549e41959641b
+0x7650	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800E73E0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8a2b69ece40b89d61180d3b0dd2c9554665e3f256a4d4dc9f8a177c4ab338695
+0x7A44	0x20	src/overlays/overlay5/runtime_refresh.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3ca8ceaa42a9eb355af4d199058801d13e4eaa6718346e8a975ce51063af356
+0x7BF8	0x20	src/overlays/overlay5/runtime_refresh.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3ca8ceaa42a9eb355af4d199058801d13e4eaa6718346e8a975ce51063af356
+0xB52C	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800E768C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8ae412a3486afeec7f78b22912ed19e0c838ac9d57d3d149df6f221410e83c09
+0xD8C8	0x20	src/overlays/overlay5/runtime_refresh.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3ca8ceaa42a9eb355af4d199058801d13e4eaa6718346e8a975ce51063af356
+0xE1E0	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800E5F98 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9d5bc2c506ac0496c4bd31eb5b0be18c13407baa0f58f4d4e3784a10896e085e
+0x11A30	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800721D8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1aff323a8b94d264d71bcb99b6f8fb0daf415c5c2c8d937410413d790e21e4a0
+0x11A58	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800721FC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d3dfc2fe7bbad9ce698634431bb1aabf1ca034af2f6146696203f34ac57adc62
+0x11A80	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x8007225C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	284506407f56af7b145870bc8e8709631b5b019b358e5867df9220436667a9a5
+0x11AA8	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x8007229C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c7155748f4d4a26c35b9049aa544f69be58dacf6b559a07b7e8a2c63b1598179

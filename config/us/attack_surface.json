@@ -201,8 +201,8 @@
       "overlay_5": {
         "functions": 408,
         "bytes": 123516,
-        "matched_functions": 18,
-        "matched_bytes": 328
+        "matched_functions": 36,
+        "matched_bytes": 1008
       },
       "resident": {
         "functions": 1366,
@@ -309,14 +309,14 @@
       "000-0032": {
         "functions": 245,
         "bytes": 6428,
-        "matched_functions": 116,
-        "matched_bytes": 3040
+        "matched_functions": 121,
+        "matched_bytes": 3200
       },
       "000-0064": {
         "functions": 485,
         "bytes": 24136,
-        "matched_functions": 246,
-        "matched_bytes": 12268
+        "matched_functions": 259,
+        "matched_bytes": 12788
       },
       "000-0128": {
         "functions": 717,
@@ -352,6 +352,69 @@
     "exact_duplicate_families": 44,
     "exact_duplicate_members": 206,
     "transferable_families": [
+      {
+        "size": 32,
+        "sha256": "a3ca8ceaa42a9eb355af4d199058801d13e4eaa6718346e8a975ce51063af356",
+        "members": [
+          {
+            "module": "overlay_2",
+            "name": "func_8009F5EC",
+            "vram": 2148136428,
+            "size": 32,
+            "matched": false
+          },
+          {
+            "module": "overlay_2",
+            "name": "func_800A842C",
+            "vram": 2148172844,
+            "size": 32,
+            "matched": false
+          },
+          {
+            "module": "overlay_2",
+            "name": "func_800A87A0",
+            "vram": 2148173728,
+            "size": 32,
+            "matched": false
+          },
+          {
+            "module": "overlay_5",
+            "name": "func_800CAB14",
+            "vram": 2148313876,
+            "size": 32,
+            "matched": true
+          },
+          {
+            "module": "overlay_5",
+            "name": "func_800CC550",
+            "vram": 2148320592,
+            "size": 32,
+            "matched": true
+          },
+          {
+            "module": "overlay_5",
+            "name": "func_800CC98C",
+            "vram": 2148321676,
+            "size": 32,
+            "matched": true
+          },
+          {
+            "module": "overlay_5",
+            "name": "func_800CCB40",
+            "vram": 2148322112,
+            "size": 32,
+            "matched": true
+          },
+          {
+            "module": "overlay_5",
+            "name": "func_800D2810",
+            "vram": 2148345872,
+            "size": 32,
+            "matched": true
+          }
+        ],
+        "matched": 5
+      },
       {
         "size": 8,
         "sha256": "6319e0118090063356ee2f609a9734dcfaa88c89d50c295c982f4f54af366862",
