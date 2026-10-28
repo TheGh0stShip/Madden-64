@@ -22,7 +22,7 @@ functions = [
     { name = "func_80004B40", vram = 0x80004b40, size = 0x14 }, # leaf
     { name = "func_80004B54", vram = 0x80004b54, size = 0x144 }, # asm
     { name = "func_80004C98", vram = 0x80004c98, size = 0x9c }, # c
-    { name = "func_80004D34", vram = 0x80004d34, size = 0x3f60 }, # asm
+    { name = "func_80004D34", vram = 0x80004d34, size = 0x3f60 }, # c
     { name = "func_80008C94", vram = 0x80008c94, size = 0x28 }, # leaf
     { name = "func_80008CBC", vram = 0x80008cbc, size = 0x138 }, # asm
     { name = "func_80008DF8", vram = 0x80008df8, size = 0x8 }, # c falls_through
