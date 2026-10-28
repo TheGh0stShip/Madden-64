@@ -77,8 +77,12 @@ def function_analysis() -> dict:
          ROOT / "build/us/survey/main_segment.bin", 0),
         ("overlay_1", ROOT / "config/us/functions_overlay1.toml",
          ROOT / "build/us/audit/overlay_1.z64", 0x1000),
+        ("overlay_2", ROOT / "config/us/functions_overlay2.toml",
+         ROOT / "build/us/audit/overlay_2.z64", 0x1000),
         ("overlay_4", ROOT / "config/us/functions_overlay4.toml",
          ROOT / "build/us/audit/overlay_4.z64", 0x1000),
+        ("overlay_5", ROOT / "config/us/functions_overlay5.toml",
+         ROOT / "build/us/audit/overlay_5.z64", 0x1000),
     )
     families = defaultdict(list)
     for module, catalogue_path, image_path, image_base in definitions:
@@ -132,7 +136,7 @@ def function_analysis() -> dict:
         "in_text_data_bytes": 0x38C8,
         "findings": dict(sorted(resident_counts.items())),
     }
-    for module in ("overlay_1", "overlay_4"):
+    for module in ("overlay_1", "overlay_2", "overlay_4", "overlay_5"):
         path = ROOT / "build/us/audit" / f"{module}_functions/summary.json"
         summary = json.loads(path.read_text())
         boundary_audits[module] = {

@@ -130,11 +130,11 @@ and subtracting identified in-text data gives:
 | Boot loader | 644 | 76 | 5 |
 | Resident image | 393,288 | 94,840 | 1,366 |
 | Overlay record 1 | 226,792 | 12,416 | 960 |
-| Overlay record 2 | 204,776 | 33,930 | not yet catalogued |
+| Overlay record 2 | 204,776 | 33,930 | 606 provisional |
 | Overlay record 4 | 132,728 | 0 | 420 |
-| Overlay record 5 | 124,268 | 14,178 | not yet catalogued |
+| Overlay record 5 | 124,268 | 14,178 | 408 provisional |
 | Program metadata record | 0 | 32 | 0 |
-| **Total** | **1,082,496** | **155,472** | **2,751 catalogued** |
+| **Total** | **1,082,496** | **155,472** | **3,765 catalogued** |
 
 Records 2 and 5 were formerly classified wholesale as overlay data. Instruction
 decoding and control-flow evidence show that 329,044 of their bytes are MIPS

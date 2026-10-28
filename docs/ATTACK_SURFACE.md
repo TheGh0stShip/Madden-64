@@ -45,29 +45,31 @@ heuristic boundary catalogues and are not equivalent measures.
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 0 | 632 | 0 |
 | overlay_1 | 960 | 384 | 192,324 | 60,504 |
+| overlay_2 | 606 | 8 | 198,816 | 64 |
 | overlay_4 | 420 | 65 | 115,116 | 6,260 |
+| overlay_5 | 408 | 4 | 123,516 | 32 |
 | resident | 1,366 | 849 | 378,068 | 143,792 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 301 | 113 | 3,636 | 1,472 |
-| 000-0032 | 205 | 101 | 5,348 | 2,572 |
-| 000-0064 | 359 | 113 | 17,872 | 5,604 |
-| 000-0128 | 533 | 195 | 50,020 | 18,332 |
-| 000-0256 | 553 | 303 | 102,712 | 57,040 |
-| 000-0512 | 487 | 361 | 175,420 | 130,744 |
-| 000-1024 | 212 | 182 | 147,476 | 127,392 |
-| 1025+ | 101 | 85 | 183,656 | 132,428 |
+| 000-0016 | 386 | 186 | 4,376 | 2,116 |
+| 000-0032 | 245 | 141 | 6,428 | 3,652 |
+| 000-0064 | 485 | 239 | 24,136 | 11,868 |
+| 000-0128 | 717 | 379 | 67,652 | 35,964 |
+| 000-0256 | 797 | 547 | 147,948 | 102,276 |
+| 000-0512 | 666 | 540 | 241,336 | 196,660 |
+| 000-1024 | 312 | 282 | 219,520 | 199,436 |
+| 1025+ | 157 | 141 | 297,076 | 245,848 |
 
-- Exact duplicate body families: 14
-- Functions participating in those families: 107
-- Matched-to-unmatched transferable families retained: 0
+- Exact duplicate body families: 44
+- Functions participating in those families: 206
+- Matched-to-unmatched transferable families retained: 1
 - Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 1,082,496
-- Bytes assigned to provisional candidate bodies: 686,140
-- Code bytes outside provisional candidate bodies: 396,356
+- Bytes assigned to provisional candidate bodies: 1,008,472
+- Code bytes outside provisional candidate bodies: 74,024
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally
@@ -80,7 +82,9 @@ register dependency, and no contradictory boundary finding.
 |---|---:|---:|---:|---:|---:|
 | resident | 1,366 | 1,366 | 1 | 14,536 | 5 |
 | overlay_1 | 1,071 | 960 | 231 | 43,696 | 987 |
+| overlay_2 | 606 | 606 | 0 | 0 | 129 |
 | overlay_4 | 420 | 420 | 87 | 17,500 | 348 |
+| overlay_5 | 408 | 408 | 1 | 16 | 75 |
 
 These findings are an audit queue, not additional progress. They include
 late starts, branches across candidate boundaries, shared epilogues,

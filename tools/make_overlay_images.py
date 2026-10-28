@@ -9,14 +9,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def build_image(overlay: int, record: int) -> None:
+def build_image(overlay: int, record: int, *, suffix: str = "overlay",
+                link_vram: int | None = None) -> None:
     payload = (
         ROOT
-        / f"build/us/extracted_records/archive_00/record_{record:04d}.overlay.bin"
+        / f"build/us/extracted_records/archive_00/record_{record:04d}.{suffix}.bin"
     ).read_bytes()
-    catalogue_vram = tomllib.loads(
-        (ROOT / f"config/us/functions_overlay{overlay}.toml").read_text()
-    )["section"][0]["vram"]
+    catalogue = ROOT / f"config/us/functions_overlay{overlay}.toml"
+    catalogue_vram = (
+        tomllib.loads(catalogue.read_text())["section"][0]["vram"]
+        if catalogue.exists()
+        else link_vram
+    )
+    if catalogue_vram is None:
+        raise ValueError(f"overlay {overlay} needs a catalogue or link_vram")
     image = bytearray(max(0x101000, 0x1000 + len(payload)))
     struct.pack_into(">IIII", image, 0, 0x80371240, 0, catalogue_vram, 0)
     image[0x20:0x34] = b"MADDEN OVERLAY      "
@@ -24,17 +30,19 @@ def build_image(overlay: int, record: int) -> None:
     image[0x1000 : 0x1000 + len(payload)] = payload
     (ROOT / f"build/us/audit/overlay_{overlay}.z64").write_bytes(image)
 
-    if overlay == 1:
+    if link_vram is not None and link_vram != catalogue_vram:
         # Overlay 1 is linked immediately after resident BSS. Its catalogue
         # symbols retain the historical +0x4724 names, so matching needs a
         # separate image whose entry point records the real link address.
-        struct.pack_into(">I", image, 8, 0x8008B8E0)
-        (ROOT / "build/us/audit/overlay_1_link.z64").write_bytes(image)
+        struct.pack_into(">I", image, 8, link_vram)
+        (ROOT / f"build/us/audit/overlay_{overlay}_link.z64").write_bytes(image)
 
 
 def main() -> None:
-    build_image(1, 1)
+    build_image(1, 1, link_vram=0x8008B8E0)
+    build_image(2, 2, suffix="overlay-data", link_vram=0x8008B8E0)
     build_image(4, 4)
+    build_image(5, 5, suffix="overlay-data", link_vram=0x800C5F48)
 
 
 if __name__ == "__main__":

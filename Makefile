@@ -15,6 +15,7 @@ survey: verify
 audit: verify
 	$(PYTHON) tools/audit_rom_layout.py "$(ROM)" build/us/survey/main_segment.bin
 	$(PYTHON) tools/make_overlay_images.py
+	PYTHONPATH=$(N64DK_ROOT) $(N64DK_PYTHON) tools/discover_variant_overlays.py
 
 attack: audit
 	$(PYTHON) tools/analyze_attack_surface.py
@@ -46,10 +47,20 @@ match-c: audit
 		--symbols build/us/audit/overlay_1_functions/symbol_addrs.txt \
 		config/us/matching_overlay1_kmc_units.tsv=kmc+builtin
 	$(N64DK) match-batch --project . \
+		--rom build/us/audit/overlay_2.z64 \
+		--symbols build/us/survey/symbol_addrs.txt \
+		--symbols build/us/audit/overlay_2_functions/symbol_addrs.txt \
+		config/us/matching_overlay2_kmc_units.tsv=kmc+builtin
+	$(N64DK) match-batch --project . \
 		--rom build/us/audit/overlay_4.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		--symbols build/us/audit/overlay_4_functions/symbol_addrs.txt \
 		config/us/matching_overlay4_kmc_units.tsv=kmc+builtin
+	$(N64DK) match-batch --project . \
+		--rom build/us/audit/overlay_5.z64 \
+		--symbols build/us/survey/symbol_addrs.txt \
+		--symbols build/us/audit/overlay_5_functions/symbol_addrs.txt \
+		config/us/matching_overlay5_kmc_units.tsv=kmc+builtin
 
 match-asm: audit
 	$(PYTHON) tools/filter_manifest_sources.py \

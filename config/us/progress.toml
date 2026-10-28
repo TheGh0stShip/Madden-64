@@ -7,11 +7,11 @@ rom = 0x1000
 code_size = 1082496
 data_size = 155472
 libultra_vram = 0x80045928
-total_functions = 2751
+total_functions = 3765
 
 [progress]
 matched_data = 90777
-matched_functions = 1298
+matched_functions = 1310
 loader_manifests = [
   "config/us/matching_loader_kmc_units.tsv",
   "config/us/matching_loader_asm_units.tsv",
@@ -26,7 +26,9 @@ manifests = [
 
 overlay_manifests = [
   { id = "overlay_1", path = "config/us/matching_overlay1_kmc_units.tsv", asm_path = "config/us/matching_overlay1_asm_units.tsv", functions = "config/us/functions_overlay1.toml", vram = 0x80090004, rom = 0x1000 },
+  { id = "overlay_2", path = "config/us/matching_overlay2_kmc_units.tsv", functions = "config/us/functions_overlay2.toml", vram = 0x8008B8E0, rom = 0x1000 },
   { id = "overlay_4", path = "config/us/matching_overlay4_kmc_units.tsv", asm_path = "config/us/matching_overlay4_asm_units.tsv", functions = "config/us/functions_overlay4.toml", vram = 0x800C77E8, rom = 0x1000 },
+  { id = "overlay_5", path = "config/us/matching_overlay5_kmc_units.tsv", functions = "config/us/functions_overlay5.toml", vram = 0x800C5F48, rom = 0x1000 },
 ]
 
 [inventory]

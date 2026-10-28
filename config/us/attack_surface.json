@@ -186,11 +186,23 @@
         "matched_functions": 384,
         "matched_bytes": 60504
       },
+      "overlay_2": {
+        "functions": 606,
+        "bytes": 198816,
+        "matched_functions": 8,
+        "matched_bytes": 64
+      },
       "overlay_4": {
         "functions": 420,
         "bytes": 115116,
         "matched_functions": 65,
         "matched_bytes": 6260
+      },
+      "overlay_5": {
+        "functions": 408,
+        "bytes": 123516,
+        "matched_functions": 4,
+        "matched_bytes": 32
       },
       "resident": {
         "functions": 1366,
@@ -202,9 +214,9 @@
     "catalogue_status": {
       "provisional": true,
       "program_code_bytes": 1082496,
-      "catalogue_body_bytes": 686140,
-      "code_bytes_outside_catalogue_bodies": 396356,
-      "catalogue_candidates": 2751,
+      "catalogue_body_bytes": 1008472,
+      "code_bytes_outside_catalogue_bodies": 74024,
+      "catalogue_candidates": 3765,
       "boundary_audits": {
         "resident": {
           "text_bytes": 411132,
@@ -239,6 +251,18 @@
             "junk_start": 7
           }
         },
+        "overlay_2": {
+          "text_bytes": 204776,
+          "sweep_candidates": 606,
+          "catalogue_candidates": 606,
+          "in_text_data_ranges": 0,
+          "in_text_data_bytes": 0,
+          "findings": {
+            "stray_words": 46,
+            "falls_through": 31,
+            "late_start": 52
+          }
+        },
         "overlay_4": {
           "text_bytes": 132728,
           "sweep_candidates": 420,
@@ -259,62 +283,104 @@
             "start_in_delay_slot": 3,
             "interior_alias": 7
           }
+        },
+        "overlay_5": {
+          "text_bytes": 124268,
+          "sweep_candidates": 408,
+          "catalogue_candidates": 408,
+          "in_text_data_ranges": 1,
+          "in_text_data_bytes": 16,
+          "findings": {
+            "stray_words": 26,
+            "in_text_data": 1,
+            "falls_through": 15,
+            "late_start": 33
+          }
         }
       }
     },
     "size_buckets": {
       "000-0016": {
-        "functions": 301,
-        "bytes": 3636,
-        "matched_functions": 188,
-        "matched_bytes": 2164
+        "functions": 386,
+        "bytes": 4376,
+        "matched_functions": 200,
+        "matched_bytes": 2260
       },
       "000-0032": {
-        "functions": 205,
-        "bytes": 5348,
+        "functions": 245,
+        "bytes": 6428,
         "matched_functions": 104,
         "matched_bytes": 2776
       },
       "000-0064": {
-        "functions": 359,
-        "bytes": 17872,
+        "functions": 485,
+        "bytes": 24136,
         "matched_functions": 246,
         "matched_bytes": 12268
       },
       "000-0128": {
-        "functions": 533,
-        "bytes": 50020,
+        "functions": 717,
+        "bytes": 67652,
         "matched_functions": 338,
         "matched_bytes": 31688
       },
       "000-0256": {
-        "functions": 553,
-        "bytes": 102712,
+        "functions": 797,
+        "bytes": 147948,
         "matched_functions": 250,
         "matched_bytes": 45672
       },
       "000-0512": {
-        "functions": 487,
-        "bytes": 175420,
+        "functions": 666,
+        "bytes": 241336,
         "matched_functions": 126,
         "matched_bytes": 44676
       },
       "000-1024": {
-        "functions": 212,
-        "bytes": 147476,
+        "functions": 312,
+        "bytes": 219520,
         "matched_functions": 30,
         "matched_bytes": 20084
       },
       "1025+": {
-        "functions": 101,
-        "bytes": 183656,
+        "functions": 157,
+        "bytes": 297076,
         "matched_functions": 16,
         "matched_bytes": 51228
       }
     },
-    "exact_duplicate_families": 14,
-    "exact_duplicate_members": 107,
-    "transferable_families": [],
+    "exact_duplicate_families": 44,
+    "exact_duplicate_members": 206,
+    "transferable_families": [
+      {
+        "size": 8,
+        "sha256": "6319e0118090063356ee2f609a9734dcfaa88c89d50c295c982f4f54af366862",
+        "members": [
+          {
+            "module": "overlay_1",
+            "name": "func_800BD2F8",
+            "vram": 2148258552,
+            "size": 8,
+            "matched": true
+          },
+          {
+            "module": "overlay_1",
+            "name": "func_800BD300",
+            "vram": 2148258560,
+            "size": 8,
+            "matched": true
+          },
+          {
+            "module": "overlay_5",
+            "name": "func_800D1CA0",
+            "vram": 2148342944,
+            "size": 8,
+            "matched": false
+          }
+        ],
+        "matched": 2
+      }
+    ],
     "conservative_queue": []
   },
   "assets": {
