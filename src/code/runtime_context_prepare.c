@@ -8,8 +8,8 @@ extern void* func_8003489C(void* context);
 extern void func_800348D0(void* context);
 
 void* func_80033AA8(void* context, void* secondary) {
-    register void* context_saved __asm__("$16");
-    register void* secondary_saved __asm__("$17");
+    void* context_saved;
+    void* secondary_saved;
     void* result;
 
     secondary_saved = secondary;

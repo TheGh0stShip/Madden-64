@@ -9,8 +9,8 @@ void audio_slots_release(void)
     s16 index = 0;
     s32 missing = 0xFFFF;
     s32 marker = 0xE0;
-    register u8 *primary __asm__("$19") = (u8 *)&D_80082D84;
-    register u8 *secondary __asm__("$20") = primary + 0x214C;
+    u8 *primary = (u8 *)&D_80082D84;
+    u8 *secondary = primary + 0x214C;
 
     do {
         s32 offset = index * 4;

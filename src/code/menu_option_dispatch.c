@@ -8,8 +8,8 @@ extern void func_8009CBB8(s32 command, s32 value);
 
 void menu_option_dispatch(s32 option)
 {
-    register s32 saved_option __asm__("$16") = option;
-    register s32 saved_value __asm__("$17");
+    s32 saved_option = option;
+    s32 saved_value;
     u32 value;
 
     saved_value = func_8001FA38(7);

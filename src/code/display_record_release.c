@@ -24,8 +24,8 @@ extern void func_80032F3C(s32 pool, void *allocation);
 
 void display_record_release(DisplayOwner *owner)
 {
-    register DisplayOwner *saved_owner __asm__("$16") = owner;
-    register DisplayRecord *record __asm__("$17") = owner->record;
+    DisplayOwner *saved_owner = owner;
+    DisplayRecord *record = owner->record;
     s32 last = D_800692AC - 1;
     DisplayOwner *moved;
 

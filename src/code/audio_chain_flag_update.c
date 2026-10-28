@@ -30,10 +30,10 @@ typedef struct AudioChainContext {
 void audio_chain_flag_update(AudioChainContext *context, s8 enabled)
 {
     AudioChainPair *pair = context->pair;
-    register AudioChainRoot *root __asm__("$4") = pair->root;
+    AudioChainRoot *root = pair->root;
     s32 count = pair->counts->first_count + pair->counts->second_count;
-    register AudioChainNode *node __asm__("$3") = root->node;
-    register u32 mask __asm__("$4");
+    AudioChainNode *node = root->node;
+    u32 mask;
 
     if (enabled) {
         mask = 1;

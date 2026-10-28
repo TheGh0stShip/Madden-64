@@ -10,9 +10,9 @@ extern void func_8000CCC8(void *surface);
 
 void *display_surface_create(u32 identifier, u32 shift)
 {
-    register u32 saved_identifier __asm__("$16") = identifier;
-    register u32 saved_shift __asm__("$17") = shift;
-    register u8 *surface __asm__("$18");
+    u32 saved_identifier = identifier;
+    u32 saved_shift = shift;
+    u8 *surface;
     u32 count;
 
     surface = func_80033298(D_80064BA0);

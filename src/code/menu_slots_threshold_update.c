@@ -23,9 +23,9 @@ extern void func_8001FA68(u32 count, MenuSlot *slot, s32 threshold,
 
 void menu_slots_threshold_update(void)
 {
-    register u16 index __asm__("$16") = 0;
-    register MenuSlotRow *rows __asm__("$18") = D_80085040;
-    register s32 offset __asm__("$17") = 0xA0000;
+    u16 index = 0;
+    MenuSlotRow *rows = D_80085040;
+    s32 offset = 0xA0000;
 
     do {
         MenuSlot *slot = rows[D_800886E0].slots[index];

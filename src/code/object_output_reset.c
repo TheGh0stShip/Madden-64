@@ -4,10 +4,10 @@ typedef s32 (*ObjectCallback)(u8 *object);
 
 s32 object_output_reset(u8 *object)
 {
-    register u8 *saved_object __asm__("$16") = object;
-    register u8 *state __asm__("$17") = *(u8 **)(saved_object + 0x1B8);
+    u8 *saved_object = object;
+    u8 *state = *(u8 **)(saved_object + 0x1B8);
     s32 delta = *(s32 *)(state + 0xC);
-    register u8 *owner __asm__("$4") = *(u8 **)(saved_object + 0x1B4);
+    u8 *owner = *(u8 **)(saved_object + 0x1B4);
     s32 index;
     u32 final_value;
     s32 result;

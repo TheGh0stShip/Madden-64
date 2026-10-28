@@ -6,8 +6,8 @@ extern void func_80063318(void *owner);
 
 s32 object_action_update(u8 *owner, s32 dispatch)
 {
-    register s32 result __asm__("$17");
-    register s32 saved_dispatch __asm__("$18") = dispatch;
+    s32 result;
+    s32 saved_dispatch = dispatch;
     s32 return_value;
     u32 type = *(u32 *)(owner + 0x10);
 

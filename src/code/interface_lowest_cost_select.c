@@ -7,10 +7,10 @@ extern void func_80024E9C(void);
 
 u32 interface_lowest_cost_select(void)
 {
-    register u32 best_cost __asm__("$18") = 0;
-    register u32 best __asm__("$17");
-    register u32 current __asm__("$16");
-    register u32 sentinel __asm__("$19");
+    u32 best_cost = 0;
+    u32 best;
+    u32 current;
+    u32 sentinel;
 
     func_80024694();
     best = (u16)func_80024D28(0xFFFF);
