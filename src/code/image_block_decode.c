@@ -58,6 +58,7 @@ void image_block_decode(ImageDecodeContext *context)
 {
     ImageDecodeBlock *block = context->allocator->allocate(context, 1, 0x18);
     s32 row;
+    u32 active_count;
 
     context->block = block;
     block->entry = func_8005FCFC;
@@ -99,17 +100,20 @@ void image_block_decode(ImageDecodeContext *context)
             IMAGE_DECODE_ERROR(context, 0x19);
         }
         break;
-    case 2:
+    case 2: {
+        u32 format = *(volatile u32 *)&context->format;
+
         context->decoded_count = 3;
-        if (context->format == 3) {
+        if (format == 3) {
             block->handler = func_8005F998;
             func_8005F868(context);
-        } else if (context->format == 2) {
+        } else if (format == 2) {
             block->handler = func_8005FAD4;
         } else {
             IMAGE_DECODE_ERROR(context, 0x19);
         }
         break;
+    }
     case 4:
         context->decoded_count = 4;
         if (context->format == 5) {
@@ -131,5 +135,10 @@ void image_block_decode(ImageDecodeContext *context)
         break;
     }
 
-    context->active_count = context->field54 != 0 ? 1 : context->decoded_count;
+    if (context->field54 != 0) {
+        active_count = 1;
+    } else {
+        active_count = context->decoded_count;
+    }
+    context->active_count = active_count;
 }
