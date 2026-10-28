@@ -1,5 +1,19 @@
 # ROM_START	SIZE	SOURCE	FLAGS	SHA256
+0x125C	0x14	src/overlays/overlay5/object_state_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ee965ef777686b20d4b4078afc1d10fa4a8a03751b7de6b65d4124b1f099d62d
 0x1BFC	0x8	src/overlays/overlay5/return_zero.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	648cbc77d024f6d08bc8ff4e3bdf1cebf2a933937ee1cebef4690d015808bd9c
+0x2AAC	0x18	src/overlays/overlay5/object_mode_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0716359c4e09bd9464b917c6d11981d08138c838ae7aad78a40962cfbdde5783
 0x42D8	0x8	src/overlays/overlay5/noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x430C	0x8	src/overlays/overlay5/noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0xE1D8	0x8	src/overlays/overlay5/noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x15FD8	0x10	src/overlays/overlay5/global_pointer_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8290699eb929178114fd350802d8396866fbb59cf48f7761848bb77582bd0d70
+0x186C4	0x14	src/overlays/overlay5/runtime_field_0c_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	66ab42e17ef4d70a8504d2872913e9127df01333e2a852e670f0ef2f516c23f7
+0x186D8	0x14	src/overlays/overlay5/runtime_field_70_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d6eda0e85bb0ac7728252dc3015c7353638227d69e6095fbdd4e4f69ec0df7ef
+0x186EC	0x14	src/overlays/overlay5/runtime_field_64_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	142d461019fef91d0348c73caeb02b77ae0f46685aa583c9a9f87aac5a7b8f9a
+0x18700	0x10	src/overlays/overlay5/runtime_byte_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2bc7093554de100388622840be2289aefa2ec45ef99c5d541a685b297b149b51
+0x19428	0x18	src/overlays/overlay5/runtime_ready_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1a066b5de9eed1b2c578e6f3b3f74f08b4106e219ade83cd6c1d2a88d7a7ec00
+0x1A824	0x14	src/overlays/overlay5/nested_byte_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	57265695203568cf2e289177f9b9e6eb0e73bfba89a0be0f410a7e166deeb273
+0x1B1DC	0x14	src/overlays/overlay5/nested_pointer_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	07bc00d0518f1dd5a4772dd358faf6059ed0f5cb7a34f6a7d0390b9c9bda2963
+0x1B210	0x18	src/overlays/overlay5/indexed_entry_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e0d9693b7c4f25518cedf03f13f06db74f3e0337d56583b8e316f1421c735cf9
+0x1B228	0x18	src/overlays/overlay5/deep_pointer_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	61ab8a8f2be5be876e549627eef7f75cd7e3a7809c91284d521414e6ada8e624
+0x1B9E0	0x1C	src/overlays/overlay5/flag_byte_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0f2ba01b7e6ff44dcb8a683d2278d1dfac0e1f621855474384638f07e85c633a
+0x1BAB0	0x14	src/overlays/overlay5/global_nested_pointer_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bd5cec35a54c8655c8a62cc5b86691fb7db707ab5b23a1ccd26dedbdcf2a1c3d
