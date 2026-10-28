@@ -23,7 +23,7 @@ extern void func_80025944(u8 row, s32 command, s32 value);
 void FUNCTION(u8* entry, s32 value) {
     func_80025794(entry[0x1E], entry[0x1F], FIRST_COMMAND, 1);
     {
-        register s16 signed_value __asm__("$17") = value;
+        s16 signed_value = value;
         func_80025794(entry[0x1E], entry[0x1F], SECOND_COMMAND, signed_value);
         func_8002586C(entry[0x1E], entry[0x1F], THIRD_COMMAND, signed_value);
         func_80025944(entry[0x1E], 10, signed_value);

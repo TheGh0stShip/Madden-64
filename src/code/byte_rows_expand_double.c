@@ -9,8 +9,8 @@ typedef struct ExpansionContext {
 
 void func_8005F15C(ExpansionContext* context, s32 unused,
                    u8** sources, u8*** destination_rows) {
-    register u8** source_rows __asm__("$6") = sources;
-    register u8** destinations __asm__("$7") = *destination_rows;
+    u8** source_rows = sources;
+    u8** destinations = *destination_rows;
     s32 row;
 
     for (row = 0; row < context->row_count; row++) {

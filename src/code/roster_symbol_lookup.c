@@ -13,9 +13,7 @@ u16 roster_symbol_lookup(u16 team, u16 player, u16 symbol)
     u8 *values;
     u16 result;
 
-    __asm__("" : "=r"(team_base) : "0"(team_base));
     record = team_base + player * 40;
-    __asm__("" : "=r"(record) : "0"(record));
     values = record + 15;
 
     if (symbol >= 21) {

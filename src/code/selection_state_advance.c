@@ -15,7 +15,6 @@ void func_80029494(void) {
     if (D_80089320 != 0) {
         register s32 value;
         value = *(s16*)&D_80084F34;
-        __asm__("" : "=r"(value) : "0"(value));
         D_80088AEC = value;
     }
     D_80088AE8++;

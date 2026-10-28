@@ -18,7 +18,7 @@ void ui_slots_release_all(s32 owner)
 {
     s32 index;
     UiSlot **slot;
-    register s32 count __asm__("$2") = D_800692AC;
+    s32 count = D_800692AC;
 
     if (count != 0) {
         UiSlot **base = D_8007947C;
