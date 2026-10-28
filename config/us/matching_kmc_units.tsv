@@ -847,7 +847,7 @@
 0x41804	0x108	src/code/script_opcode_advance.c	--assembler=asn64 --normalizer-enable-KMC-SCRIPT-OPCODE-LOAD -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	29f5b03cb56600e622416425454304721ca5eb91575678ad5ef709b33540e691
 0x555E8	0x104	src/code/stream_chunk_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ee9afc6d484e30a4d756eaa16f1f5ffbeef9f2ea0ba0db93e1a1b29cb6128c7e
 0x58F84	0x108	src/code/stream_word_dispatch.c	--assembler=asn64 --normalizer-enable-KMC-STREAM-BYTE-READ-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a6d80f8130f8f67d08a8240bdcbff5954626fff7c7e86716a30503f668e0b6de
-0x59224	0x108	src/code/stream_marker_process.c	--assembler=asn64 --normalizer-enable-KMC-STREAM-BYTE-READ-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d7378e89797b0a60ddc80c36d9ef9227f43de84d29604e70c14d491b13c6fc0e
+0x59224	0x108	src/code/stream_marker_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d7378e89797b0a60ddc80c36d9ef9227f43de84d29604e70c14d491b13c6fc0e
 0x60468	0x130	src/code/image_decode_tables_initialize.c	--assembler=asn64 --normalizer-enable-KMC-IMAGE-TABLE-INIT -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	46e793f52ad67bf315800ceaafdfdd2f62e90fbfe5c358eb90d66aeb073068cb
 0x60904	0x240	src/code/image_block_decode.c	--assembler=asn64 --section-base=.rodata:0x80003400 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	615ed1bceef623a601cf1cca499a40b071cf3c4412785d54456838074fe3cc30
 0x6116C	0x114	src/code/image_scale_table_build.c	--assembler=asn64 --symbol=D_80003418:0x80003418 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	794b07fe9a17461660b6e1688b764e0d81c01d1f0eae27767ecdee906c48603e
