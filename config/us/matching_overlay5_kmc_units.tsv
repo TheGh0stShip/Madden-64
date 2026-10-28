@@ -59,3 +59,13 @@
 0xE0B0	0x38	src/overlays/overlay5/nonempty_slot_count.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	680eb7ac2693d2f8cdff92118a37c8fbf116f9bdf43c048bf7e304eb184c040e
 0x11870	0x34	src/overlays/overlay5/record_slots_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	01dce25a70cd5b053335fb56df8557b9cad55c8c6772b09c8a5307717f140a5c
 0x197A0	0x34	src/overlays/overlay5/record_links_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c2b8350c1e411ddfc5cb0a657306d9bde6e1c279e8ce66a8b21d078ec2fae68c
+0xCD58	0x8	src/overlays/overlay5/constant_return.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude -DRETURN_VALUE=-1	6319e0118090063356ee2f609a9734dcfaa88c89d50c295c982f4f54af366862
+0x182BC	0x8	src/overlays/overlay5/argument_return.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	33b8a3ecc253e501e8d6cc02eef147b269f0076c36976aed96857a56b68cec73
+0x1A79C	0x8	src/overlays/overlay5/u16_argument_return.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cac5d674a4764e23570d06fe946088ebc03446878dcbb6c24d5273883480dc66
+0x1BAA8	0x8	src/overlays/overlay5/field_10_store.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8090edef6bfc280c2c49239a0db5c9d4a83e2f946383114992f26187a9744ff3
+0x1D3FC	0x8	src/overlays/overlay5/constant_return.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude -DRETURN_VALUE=256	62fb3ac07ecda9fdefae6856933d9514777a2f3d256ea8a771eeb23b43603a1a
+0x1D404	0x8	src/overlays/overlay5/constant_return.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude -DRETURN_VALUE=123	74fb5bcfbc930809abadef9b788d38f54c060b77eb11c137b39570196ccd8b33
+0x308C	0x24	src/overlays/overlay5/object_flags_toggle.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	64da18e3545b46f96cc254af1644a152e21ab860fa9e6ae5f92ee07af990d139
+0xD708	0x14	src/overlays/overlay5/byte_at_u16_offset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f84f1f36e6f509f5f13909655c62a86c5a63c36770e6a8fc7a1cc8fbe73a61c8
+0x16504	0x2C	src/overlays/overlay5/record_extents_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b424f795ce1987965af3a692d98909bfdf407427ca1ee6e774c33ba0bf7251ac
+0xD120	0x34	src/overlays/overlay5/base_plus_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aa815398c6a88d9539e9b9c1b7ad5e11b9c940402f86850ee350e1a288316986

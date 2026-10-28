@@ -201,8 +201,8 @@
       "overlay_5": {
         "functions": 408,
         "bytes": 123516,
-        "matched_functions": 60,
-        "matched_bytes": 2156
+        "matched_functions": 70,
+        "matched_bytes": 2356
       },
       "resident": {
         "functions": 1366,
@@ -303,20 +303,20 @@
       "000-0016": {
         "functions": 386,
         "bytes": 4376,
-        "matched_functions": 202,
-        "matched_bytes": 2292
+        "matched_functions": 208,
+        "matched_bytes": 2340
       },
       "000-0032": {
         "functions": 245,
         "bytes": 6428,
-        "matched_functions": 126,
-        "matched_bytes": 3360
+        "matched_functions": 127,
+        "matched_bytes": 3380
       },
       "000-0064": {
         "functions": 485,
         "bytes": 24136,
-        "matched_functions": 277,
-        "matched_bytes": 13708
+        "matched_functions": 280,
+        "matched_bytes": 13840
       },
       "000-0128": {
         "functions": 717,
@@ -414,34 +414,6 @@
           }
         ],
         "matched": 5
-      },
-      {
-        "size": 8,
-        "sha256": "6319e0118090063356ee2f609a9734dcfaa88c89d50c295c982f4f54af366862",
-        "members": [
-          {
-            "module": "overlay_1",
-            "name": "func_800BD2F8",
-            "vram": 2148258552,
-            "size": 8,
-            "matched": true
-          },
-          {
-            "module": "overlay_1",
-            "name": "func_800BD300",
-            "vram": 2148258560,
-            "size": 8,
-            "matched": true
-          },
-          {
-            "module": "overlay_5",
-            "name": "func_800D1CA0",
-            "vram": 2148342944,
-            "size": 8,
-            "matched": false
-          }
-        ],
-        "matched": 2
       }
     ],
     "conservative_queue": []

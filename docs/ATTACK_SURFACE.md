@@ -47,16 +47,16 @@ heuristic boundary catalogues and are not equivalent measures.
 | overlay_1 | 960 | 384 | 192,324 | 60,504 |
 | overlay_2 | 606 | 8 | 198,816 | 64 |
 | overlay_4 | 420 | 65 | 115,116 | 6,260 |
-| overlay_5 | 408 | 60 | 123,516 | 2,156 |
+| overlay_5 | 408 | 70 | 123,516 | 2,356 |
 | resident | 1,366 | 849 | 378,068 | 143,792 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 386 | 184 | 4,376 | 2,084 |
-| 000-0032 | 245 | 119 | 6,428 | 3,068 |
-| 000-0064 | 485 | 208 | 24,136 | 10,428 |
+| 000-0016 | 386 | 178 | 4,376 | 2,036 |
+| 000-0032 | 245 | 118 | 6,428 | 3,048 |
+| 000-0064 | 485 | 205 | 24,136 | 10,296 |
 | 000-0128 | 717 | 378 | 67,652 | 35,896 |
 | 000-0256 | 797 | 547 | 147,948 | 102,276 |
 | 000-0512 | 666 | 540 | 241,336 | 196,660 |
@@ -65,7 +65,7 @@ heuristic boundary catalogues and are not equivalent measures.
 
 - Exact duplicate body families: 44
 - Functions participating in those families: 206
-- Matched-to-unmatched transferable families retained: 2
+- Matched-to-unmatched transferable families retained: 1
 - Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 1,082,496
 - Bytes assigned to provisional candidate bodies: 1,008,472
