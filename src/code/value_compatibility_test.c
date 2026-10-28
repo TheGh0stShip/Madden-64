@@ -3,8 +3,7 @@
 extern u8* D_8006AA58[];
 
 s32 func_8003BEE4(u8 primary, u8 value) {
-    register u8* accepted __asm__("$5");
-    register u32 table_offset __asm__("$2");
+    u8* accepted;
 
     if ((u8)(value - 23) < 2) {
         return 1;
@@ -13,8 +12,7 @@ s32 func_8003BEE4(u8 primary, u8 value) {
     if (primary == (value & 0x3F)) {
         return 1;
     }
-    table_offset = primary * 4;
-    accepted = *(u8**)((u8*)D_8006AA58 + table_offset);
+    accepted = D_8006AA58[primary];
     while (*accepted != 0xFF) {
         if (value == *accepted) {
             return 1;

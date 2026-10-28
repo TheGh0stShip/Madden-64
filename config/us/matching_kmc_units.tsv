@@ -515,7 +515,7 @@
 0x2C1EC	0x38	src/code/game_mode_pair_test.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f70d1179c6231af8d08ac969944d33ac49088913344dbe50a06074b08f29331
 0x353B4	0x50	src/code/record_offsets_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d00bba358605c94024e6c504fa381e9588942e436b73cabe1c937d8ea7f5a04b
 0x37D08	0x6C	src/code/runtime_entry_payload_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2c525c14fb820056d9f2c4c1c77430fc69587027736c40157b19431bab355c16
-0x3CAE4	0x70	src/code/value_compatibility_test.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ee372341286ee6170cf87311852dbac6cfbd9b366e1448d9539b24c3185e705b
+0x3CAE4	0x70	src/code/value_compatibility_test.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ee372341286ee6170cf87311852dbac6cfbd9b366e1448d9539b24c3185e705b
 0x2F330	0x70	src/code/worker_thread_start.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c7b1e3f8e38d167a0af7042600d50904bee446c64b507649e134edde2b5498e4
 0xF924	0x74	src/code/vector_fixed_scale.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	20931c5469cfad2af2005002b8c16cd0f13b1baab434c2409c50cd26f3802f05
 0x177B0	0x68	src/code/multiline_metric.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6536012511b539e5162e98cbe12aeb4ff6020e1168bb93064cf77faee194d855
