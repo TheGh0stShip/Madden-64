@@ -1,4 +1,9 @@
 # KMC GCC 2.7.2; OVERLAY_ROM_START SIZE SOURCE FLAGS SHA256
+0x10700	0x104	src/overlays/overlay1/func_8009F704.c	--assembler=asn64 --section-base=.rodata:0x80000B70 --normalizer-enable-KMC-LID-PAIR --normalizer-enable-KMC-FP-PAIR-WORDS --normalizer-enable-KMC-LID-ALIGN4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4960dd91c9b318ae8820ba24fff7e563342097a79bf7194536a2ff266f8d65ce
+0x1A718	0x224	src/overlays/overlay1/func_800A971C.c	--section-base=.rodata:0x80000DC8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	350e5644d9ce53f981bee17587abe9d9e87f5980765746d48957e6d9aaa260ec
+0x1C64C	0xA0	src/overlays/overlay1/func_800AB650.c	--section-base=.rodata:0x80000E48 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	48b0270b2146bc41a0bb895e285e0f26de918d85b91f5e55434611d7dc05c87c
+0x2D3A0	0x118	src/overlays/overlay1/func_800BC3A4.c	--assembler=asn64 --section-base=.rodata:0x800025A0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f3466660fb07df251108910166a6f9585e561c493551b169fd3d9d16c44ee7cc
+0x384C0	0x128	src/overlays/overlay1/func_800C74C4.c	--section-base=.rodata:0x80002F80 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0bedf0870729ae79db57b22d1c21edcfe0e0fb5692576b366c426ccb7c9535f2
 0x18510	0xC	src/overlays/overlay1/high_half_shift.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3b5a07564b75095ee2adbbb6b1b3400be01368409059d84529163e762e5dccf5
 0x17EFC	0x24	src/overlays/overlay1/nested_flag_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	127f6c7c9c0405b4931034d6e9d22483c9c4912122dca04423629896396a3cce
 0x14A70	0x2C	src/overlays/overlay1/indexed_counter_add.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	14ebfa90a75f5fde113e8f7c1691f35c3053dd7f312d4a519e4d20db061d70bb
