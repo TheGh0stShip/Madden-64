@@ -9,7 +9,7 @@ extern void func_8001A224(void *resource);
 void resource_node_process(u32 first, u32 second, u8 *resource)
 {
     u8 *node;
-    register u8 *first_alloc __asm__("$4");
+    u8 *first_alloc;
     u8 *allocated;
     u16 temporary;
     u32 size;

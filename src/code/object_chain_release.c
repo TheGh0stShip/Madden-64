@@ -14,7 +14,7 @@ extern void func_800332C8(void *pool, void *value);
 
 void object_chain_release(ObjectChainNode *node)
 {
-    register ObjectChainNode *saved_node __asm__("$16") = node;
+    ObjectChainNode *saved_node = node;
     ObjectChainNode *next;
 
     while (saved_node->child != 0) {

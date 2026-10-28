@@ -45,7 +45,7 @@ void func_80017504(BuiltResource *output, s32 second, s32 third, s32 fourth,
     output->size = size;
     output->field04 = result;
     {
-        register s32 signed_index __asm__("$2") = (s16)table_index;
+        s32 signed_index = (s16)table_index;
         output->field08 = *(void **)&D_80088C48[signed_index];
     }
     output->field3C = 0;

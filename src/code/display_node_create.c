@@ -35,7 +35,7 @@ DisplayNode *display_node_create(DisplayListOwner *owner, u16 type, void *argume
 {
     DisplayNode *node = func_80033298(D_800782F4);
     u32 index;
-    register DisplayTypeDescriptor *descriptor __asm__("$3");
+    DisplayTypeDescriptor *descriptor;
 
     if (owner->head != 0) {
         node->next = 0;

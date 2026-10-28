@@ -57,7 +57,6 @@ s32 func_80054AEC(u8 *object, s32 value, u32 amount)
     }
 
     if ((*(ObjectDriver **)(object + 0x1A8))->step(object, value) == 0) {
-        __asm__("" ::: "memory");
         return 0;
     }
     *(s32 *)(object + 0x8C) += step;

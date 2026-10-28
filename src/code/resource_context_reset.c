@@ -11,7 +11,7 @@ extern void *audio_entry_resource_mark(u16 id, void *resource);
 
 void resource_context_reset(u16 id, void *resource)
 {
-    register u16 *active __asm__("$18") = &D_8006928C;
+    u16 *active = &D_8006928C;
 
     if (*active != 0) {
         func_80035F88(D_8006928E, D_80069290);

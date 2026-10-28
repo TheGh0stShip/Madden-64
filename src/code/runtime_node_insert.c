@@ -19,7 +19,7 @@ RuntimeNode *runtime_node_insert(void *value, u16 priority, u16 type)
 {
     RuntimeNode *cursor = D_8008773C;
     RuntimeNode *node;
-    register u32 key __asm__("$3");
+    u32 key;
 
     if (cursor->next == 0) {
         goto insert;

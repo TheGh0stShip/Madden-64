@@ -40,6 +40,5 @@ void ui_slot_resource_bind_secondary(UiSecondaryContext *context, s32 source_slo
     }
 
     owner->slot_bindings[destination_slot] = owner->slot_bindings[source_slot];
-    __asm__ volatile("" : : : "memory");
     owner->slot_bindings[source_slot] = 0;
 }

@@ -34,7 +34,6 @@ s32 func_80054768(u8 *object)
 
     if (*(s32 *)(object + 0x10) == 0xCA) {
         func_8005619C();
-        __asm__("" ::: "memory");
         if (*(s32 *)(object + 0x40) != 0) {
             *(s32 *)(object + 0x10) = 0xCF;
             return 1;

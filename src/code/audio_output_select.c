@@ -28,7 +28,7 @@ void audio_output_select(s32 index, s32 selection)
     {
         s32 value = func_80035598(D_8007A534, saved_selection);
         {
-            register void ***base __asm__("$3") = D_800734F0;
+            void ***base = D_800734F0;
             void ***slot = base + saved_index;
             func_8004F158(**slot, value);
             func_80046DA8(**slot, value);

@@ -25,7 +25,7 @@ extern void func_800B7DD8(u32 type, u32 duration, u32 first, u32 second,
 
 u32 func_8003FD94(ResourceObject *object)
 {
-    register u32 resource __asm__("$16");
+    u32 resource;
     s32 group = D_80087AFC;
     s32 slot = D_800876F4;
     s32 selector = D_80082D86[(group * 2131 + slot) * 4];

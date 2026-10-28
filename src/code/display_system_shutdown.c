@@ -17,7 +17,7 @@ extern void func_80008E48(void *);
 
 void display_system_shutdown(void)
 {
-    register void **first_slot __asm__("$16") = &D_8008B350;
+    void **first_slot = &D_8008B350;
 
     func_8000C914(D_8008B3D0);
     func_8000BE80();

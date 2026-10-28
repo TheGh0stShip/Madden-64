@@ -6,7 +6,7 @@ extern void func_800468A8(void *matrix, f32 left, f32 right, f32 bottom,
 void projection_scale_configure(void *object)
 {
     u8 *base = object;
-    register f32 width __asm__("$f10") = *(u16 *)(base + 4);
+    f32 width = *(u16 *)(base + 4);
     f64 width_d = width;
     f32 far = width_d * 100.0;
     s32 scale = 4;

@@ -13,7 +13,7 @@ extern void func_80032F3C(s32 unused, void *pointer);
 
 void menu_resources_release(void)
 {
-    register s32 count __asm__("$5") = 6;
+    s32 count = 6;
     u32 outer = 0;
     u16 *entry = D_800748FC;
 
