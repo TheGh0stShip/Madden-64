@@ -96,3 +96,6 @@
 0xE0E8	0x8C	src/overlays/overlay5/next_active_slot.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4759d8da4098bf9d1cde874892e6aad15ed01c3a36b172d429aec56261658fc3
 0x41D8	0x38	src/overlays/overlay5/indexed_pointer_dispatch.c	--assembler=asn64 --symbol=TABLE:0x800E6000 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude -DSCALE=2 -DELEMENT=1	9343147b8fe1aa0df88a56c31d4351d71896f2c92dbd47de1cc9efcb197ecaac
 0x13B18	0x38	src/overlays/overlay5/indexed_pointer_dispatch.c	--assembler=asn64 --symbol=TABLE:0x8006E9FC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude -DSCALE=1 -DELEMENT=0	b183e7b97b5c3990eaa8d7811c48406d8bb2e0f9d636b055664355e4247c1ba5
+0xE208	0xC4	src/overlays/overlay5/time_text_format.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	198eda3776eb58e9bffafa7407f355d94118f2189759d2e49990e3b009a2f0a0
+0xD7F4	0xD4	src/overlays/overlay5/object_event_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3a18022886b444e299046a3045b88aafead339e23f7df0296c7c911fd17331ec
+0x10348	0xAC	src/overlays/overlay5/indexed_assignment_update.c	--assembler=asn64 --symbol=COUNT:0x800E7A74 --symbol=POINTERS:0x800E7A78 --symbol=VALUES:0x800E7A98 --symbol=ASSIGNED:0x800E7A94 --symbol=PENDING:0x800E7B88 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	79fc2b2f78420212424cd19b863f644a2dc39155b9974a7d670fc614fedb61ca
