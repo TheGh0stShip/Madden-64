@@ -26,6 +26,7 @@ ASSEMBLY_SOURCE_ESCAPE = re.compile(
     r'\.incbin\b|__attribute__\s*\(\(\s*naked\s*\)\)',
     re.MULTILINE,
 )
+ANY_C_ASM = re.compile(r'\b(?:__asm__|asm)\b')
 
 
 def measures(total_code: int, matched_code: int, total_functions: int,
@@ -55,9 +56,10 @@ def measures(total_code: int, matched_code: int, total_functions: int,
 
 
 def contains_instruction_asm(source: str) -> bool:
-    """Return whether a C unit can bypass compiler-generated instructions."""
+    """Return whether a C unit violates genuine compiler-generated provenance."""
     text = (ROOT / source).read_text()
-    return bool(INSTRUCTION_ASM.search(text) or AMBIGUOUS_ASM.search(text)
+    return bool(ANY_C_ASM.search(text)
+                or INSTRUCTION_ASM.search(text) or AMBIGUOUS_ASM.search(text)
                 or ASSEMBLY_SOURCE_ESCAPE.search(text))
 
 
