@@ -5,7 +5,7 @@ typedef struct MenuResourceState {
     u32 state;
 } MenuResourceState;
 
-extern u16 D_8008AFD4;
+extern volatile u16 D_8008AFD4;
 extern u32 D_8007A564;
 extern u8 D_80042A04[];
 extern u32 D_8007A558[];
