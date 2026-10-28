@@ -11,7 +11,9 @@ u16 func_8003A378(AudioFrameRecord *input)
     u32 index = 0;
 
     do {
-        AudioFrameRecord *record = &D_8007343C[(u16)index];
+        u32 address = (u16)index * sizeof(AudioFrameRecord) +
+                      (u32)D_8007343C;
+        AudioFrameRecord *record = (AudioFrameRecord *)address;
 
         if (record->bytes[13] == 0xFF) {
             __builtin_memcpy(record, input, sizeof(*record));
