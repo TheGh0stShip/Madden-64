@@ -38,7 +38,7 @@ functions = [
     { name = "func_800C8A00", vram = 0x800c8a00, size = 0x34 }, # c
     { name = "func_800C8A34", vram = 0x800c8a34, size = 0x30 }, # c
     { name = "func_800C8A64", vram = 0x800c8a64, size = 0x34 }, # c
-    { name = "func_800C8AA0", vram = 0x800c8aa0, size = 0x84 }, # c
+    { name = "func_800C8A98", vram = 0x800c8a98, size = 0x8c }, # c
     { name = "func_800C8B24", vram = 0x800c8b24, size = 0x28 }, # c
     { name = "func_800C8B4C", vram = 0x800c8b4c, size = 0x44 }, # c
     { name = "func_800C8B90", vram = 0x800c8b90, size = 0x20 }, # c
