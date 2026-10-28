@@ -17,10 +17,10 @@ extern void func_800332C8(void* allocation);
 
 void func_8002FF70(RecordNode* node) {
     RecordNode* current = D_8008773C->first;
-    register RecordNode* target __asm__("$5") = node;
+    RecordNode* target = node;
 
-    if (current == target) {
-        D_8008773C->first = target->next;
+    if (((u32)current ^ (u32)target) == 0) {
+        D_8008773C->first = node->next;
         func_800332C8(D_8008AFBC);
     } else {
         while ((current->next != target) && (current->next != 0)) {
