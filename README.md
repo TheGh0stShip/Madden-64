@@ -30,16 +30,20 @@ function boundaries and identifies 147 libultra routines. Its compiler fingerpri
 predominantly KMC GCC, while detected library code is IDO-built.
 
 A complete physical ROM sweep identifies 1,353 file records in fourteen
-non-empty archives. It splits the loader, resident image, both executable
-overlays, separate overlay data, every archive table, each payload's logical
+non-empty archives. It splits the loader, resident image, all discovered executable
+overlay variants, their initialized-data tails, every archive table, each payload's logical
 length, and alignment padding. See [the ROM layout audit](docs/ROM_LAYOUT.md)
 for the gap-free map and per-archive counts and sizes.
 
-One thousand two hundred forty-eight reviewed C compilation units fully cover 1,365 catalogued function
-candidates and currently match 204,372 whole-program code bytes and 496 data bytes exactly, including the
-contiguous `memcpy`, `strlen`, and `strchr` implementation. Automated
+Authoritative current totals are generated from the reviewed manifests into
+[`decomphub.progress.json`](decomphub.progress.json); they are not duplicated as
+hand-maintained prose here. `matched_functions` counts byte-exact genuine-C
+units. `total_functions` counts provisional catalogue entries and can change as
+new overlay variants or corrected boundaries are discovered. Automated
 boundaries are research leads, not decompilation credit, until a source unit is
-compiled and compared byte-for-byte.
+compiled and compared byte-for-byte. Historical reductions in matched counts
+are provenance corrections that remove previously credited assembly or
+function-specific compiler-output rewrites, not lost decompilation work.
 
 ## Commands
 
