@@ -11,7 +11,7 @@ total_functions = 2816
 
 [progress]
 matched_data = 496
-matched_functions = 1118
+matched_functions = 1119
 loader_manifests = [
   "config/us/matching_loader_kmc_units.tsv",
   "config/us/matching_loader_asm_units.tsv",

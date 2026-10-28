@@ -6,7 +6,7 @@ extern u32 func_8003A584(u32 index);
 
 u32 frame_index_resolve(u32 index)
 {
-    register u32 result __asm__("$3") = index;
+    u16 result = index;
 
     if ((index & 0x8000) == 0) {
         result = index + 1;
