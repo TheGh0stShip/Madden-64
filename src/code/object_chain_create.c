@@ -10,13 +10,13 @@ extern void *func_80033298(void *pool);
 
 u8 *object_chain_create(s32 type, void *argument)
 {
-    register s32 saved_type __asm__("$17") = type;
-    register void *saved_argument __asm__("$18") = argument;
-    register u8 *node __asm__("$16");
+    s32 saved_type = type;
+    void *saved_argument = argument;
+    u8 *node;
     u32 index;
     u32 *sizes;
     void *child;
-    register u8 *descriptors __asm__("$3");
+    u8 *descriptors;
     ObjectChainInitialize initialize;
 
     node = func_80033298(D_800782F4);

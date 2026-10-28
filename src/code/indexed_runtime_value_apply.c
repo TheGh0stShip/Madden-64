@@ -19,10 +19,10 @@ extern void func_80036100(u32 value, u32 index);
 
 void func_80036268(u32 value, u32 index, u32 new_value)
 {
-    register u32 saved_index __asm__("$18") = index;
-    register u32 saved_value __asm__("$17");
-    register u32 saved_new_value __asm__("$19") = new_value;
-    register u32 table_offset __asm__("$16");
+    u32 saved_index = index;
+    u32 saved_value;
+    u32 saved_new_value = new_value;
+    u32 table_offset;
     u32 entry_value;
 
     if (D_800712F8 != 0 && D_8007A500 == 0) {

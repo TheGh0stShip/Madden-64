@@ -9,9 +9,9 @@ extern u32 *D_80084F5C;
 void display_tile_size_set(s32 tile, s32 upper_s, s32 upper_t,
                            s32 lower_s, s32 lower_t)
 {
-    register s32 saved_tile __asm__("$8") = tile;
-    register s32 saved_upper_s __asm__("$9") = upper_s;
-    register s32 saved_lower_t __asm__("$10") = lower_t;
+    s32 saved_tile = tile;
+    s32 saved_upper_s = upper_s;
+    s32 saved_lower_t = lower_t;
 
     if (D_8008882C[saved_tile * 19] != saved_upper_s ||
         D_80088830[saved_tile * 19] != upper_t ||

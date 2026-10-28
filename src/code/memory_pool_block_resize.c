@@ -16,9 +16,9 @@ extern void func_8003368C(MemoryBlock *block, s16 pool);
 
 void memory_pool_block_resize(u32 pool, u32 address)
 {
-    register MemoryBlock *block __asm__("$17") = D_8007A414[(s16)pool];
-    register MemoryBlock *neighbor __asm__("$18");
-    register u32 saved_pool __asm__("$19") = pool;
+    MemoryBlock *block = D_8007A414[(s16)pool];
+    MemoryBlock *neighbor;
+    u32 saved_pool = pool;
     s32 pool_index;
 
     while (block != (MemoryBlock *)-1 && block->address < address) {

@@ -7,8 +7,8 @@ extern void func_80030B9C(s16 index, s32 *flags);
 
 void controller_axes_resolve(s32 index, s8 *horizontal, s8 *vertical)
 {
-    register s8 *saved_horizontal __asm__("$16") = horizontal;
-    register s8 *saved_vertical __asm__("$17") = vertical;
+    s8 *saved_horizontal = horizontal;
+    s8 *saved_vertical = vertical;
     s32 flags;
     u32 bits;
     s32 x;
