@@ -47,7 +47,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | overlay_1 | 960 | 384 | 192,324 | 60,504 |
 | overlay_2 | 606 | 8 | 198,816 | 64 |
 | overlay_4 | 420 | 65 | 115,116 | 6,260 |
-| overlay_5 | 408 | 36 | 123,516 | 1,008 |
+| overlay_5 | 408 | 45 | 123,516 | 1,332 |
 | resident | 1,366 | 849 | 378,068 | 143,792 |
 
 ### Size distribution
@@ -55,8 +55,8 @@ heuristic boundary catalogues and are not equivalent measures.
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
 | 000-0016 | 386 | 184 | 4,376 | 2,084 |
-| 000-0032 | 245 | 124 | 6,428 | 3,228 |
-| 000-0064 | 485 | 226 | 24,136 | 11,348 |
+| 000-0032 | 245 | 119 | 6,428 | 3,068 |
+| 000-0064 | 485 | 222 | 24,136 | 11,184 |
 | 000-0128 | 717 | 379 | 67,652 | 35,964 |
 | 000-0256 | 797 | 547 | 147,948 | 102,276 |
 | 000-0512 | 666 | 540 | 241,336 | 196,660 |

@@ -35,3 +35,12 @@
 0x11A58	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x800721FC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d3dfc2fe7bbad9ce698634431bb1aabf1ca034af2f6146696203f34ac57adc62
 0x11A80	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x8007225C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	284506407f56af7b145870bc8e8709631b5b019b358e5867df9220436667a9a5
 0x11AA8	0x28	src/overlays/overlay5/resource_dispatch.c	--symbol=RESOURCE:0x8007229C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c7155748f4d4a26c35b9049aa544f69be58dacf6b559a07b7e8a2c63b1598179
+0x3C48	0x20	src/overlays/overlay5/null_resource_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	617f32cd115dae9583e7030a59ed5c92938c82255638dabfdc7ac5fcdeba1d9c
+0x3ED4	0x20	src/overlays/overlay5/null_resource_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	617f32cd115dae9583e7030a59ed5c92938c82255638dabfdc7ac5fcdeba1d9c
+0x162B0	0x28	src/overlays/overlay5/object_value_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ec3310436874bd26a8bef328c6163b6bf960b1f1a745fdc6e450318b8d5aae56
+0x186A0	0x24	src/overlays/overlay5/indexed_color_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c3b349bb7ac6dc9190eaf695ef0eba88c2b77c586e139fd44a4b146bb93c45e9
+0x1AC30	0x20	src/overlays/overlay5/indexed_word_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b60fae358049473c2e00a4c0fa9b52529a0c7d4835d3665faaaf0a969221ee96
+0x1BDC8	0x20	src/overlays/overlay5/runtime_active_mark.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a817928ac66dc42119815724c56016bfe4aa1c9606477a15cd1c676fa4711aef
+0x1BF10	0x2C	src/overlays/overlay5/runtime_active_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fb50f862cf895f21c0857e256978216d02156e9e81b9354bd50e5c464fe615dd
+0x1CF00	0x2C	src/overlays/overlay5/runtime_value_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b15ad8e3dfe86b8e4d1cc554a2ffa4f50345ed25b5f5ad8fad13b2a028222ac9
+0x1D538	0x20	src/overlays/overlay5/runtime_finalize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5d506f8836d46843973ab48296cf95e50502301f15a28a4b80f654a77449f9bc
