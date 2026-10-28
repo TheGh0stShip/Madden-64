@@ -52,13 +52,11 @@ void func_80054DB0(u8 *object, s32 kind, s32 size)
     } while (index >= 0);
     index = 0;
     forward = (s32 *)object;
-    __asm__("" : "=r"(forward) : "0"(forward));
     do {
         forward[0x2D] = 0;
         forward[0x31] = 0;
-        __asm__("" ::: "memory");
-        index++;
         forward++;
+        index++;
     } while (index < 4);
     func_80058CB0(object);
     func_80056A08(object);
