@@ -14,8 +14,8 @@ extern void func_800E2190(void *, void *, s32);
 
 void audio_frame_storage_mode(u16 mode, s32 count)
 {
-    register s32 saved_count __asm__("$16") = count;
-    register s32 saved_value __asm__("$3") = saved_count;
+    s32 saved_count = count;
+    s16 saved_value = saved_count;
 
     D_8008AF9C = mode;
     if (mode == 1) {
