@@ -14,6 +14,7 @@ survey: verify
 
 audit: verify
 	$(PYTHON) tools/audit_rom_layout.py "$(ROM)" build/us/survey/main_segment.bin
+	$(PYTHON) tools/make_overlay_images.py
 
 attack: audit
 	$(PYTHON) tools/analyze_attack_surface.py
@@ -40,7 +41,7 @@ match-c: audit
 		build/us/matching_ido_c_sources.tsv=ido5.3 \
 		config/us/matching_kmc_units.tsv=kmc+builtin
 	$(N64DK) match-batch --project . \
-		--rom build/us/audit/overlay_1.z64 \
+		--rom build/us/audit/overlay_1_link.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		--symbols build/us/audit/overlay_1_functions/symbol_addrs.txt \
 		config/us/matching_overlay1_kmc_units.tsv=kmc+builtin
@@ -63,7 +64,7 @@ match-asm: audit
 		build/us/matching_ido_asm_units.tsv=ido5.3 \
 		config/us/matching_asm_units.tsv=as
 	$(N64DK) match-batch --project . \
-		--rom build/us/audit/overlay_1.z64 \
+		--rom build/us/audit/overlay_1_link.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		--symbols build/us/audit/overlay_1_functions/symbol_addrs.txt \
 		config/us/matching_overlay1_asm_units.tsv=as

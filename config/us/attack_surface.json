@@ -181,10 +181,10 @@
         "matched_bytes": 0
       },
       "overlay_1": {
-        "functions": 1025,
-        "bytes": 183528,
-        "matched_functions": 207,
-        "matched_bytes": 11764
+        "functions": 960,
+        "bytes": 192324,
+        "matched_functions": 384,
+        "matched_bytes": 60504
       },
       "overlay_4": {
         "functions": 420,
@@ -202,9 +202,9 @@
     "catalogue_status": {
       "provisional": true,
       "program_code_bytes": 753428,
-      "catalogue_body_bytes": 677344,
-      "code_bytes_outside_catalogue_bodies": 76084,
-      "catalogue_candidates": 2816,
+      "catalogue_body_bytes": 686140,
+      "code_bytes_outside_catalogue_bodies": 67288,
+      "catalogue_candidates": 2751,
       "boundary_audits": {
         "resident": {
           "text_bytes": 411132,
@@ -221,7 +221,7 @@
         "overlay_1": {
           "text_bytes": 1048576,
           "sweep_candidates": 1071,
-          "catalogue_candidates": 1025,
+          "catalogue_candidates": 960,
           "in_text_data_ranges": 231,
           "in_text_data_bytes": 43696,
           "findings": {
@@ -264,66 +264,58 @@
     },
     "size_buckets": {
       "000-0016": {
-        "functions": 320,
-        "bytes": 3880,
-        "matched_functions": 189,
-        "matched_bytes": 2172
+        "functions": 301,
+        "bytes": 3636,
+        "matched_functions": 188,
+        "matched_bytes": 2164
       },
       "000-0032": {
-        "functions": 224,
-        "bytes": 5824,
-        "matched_functions": 102,
-        "matched_bytes": 2732
+        "functions": 205,
+        "bytes": 5348,
+        "matched_functions": 104,
+        "matched_bytes": 2776
       },
       "000-0064": {
-        "functions": 387,
-        "bytes": 19208,
-        "matched_functions": 240,
-        "matched_bytes": 11932
+        "functions": 359,
+        "bytes": 17872,
+        "matched_functions": 246,
+        "matched_bytes": 12268
       },
       "000-0128": {
-        "functions": 553,
-        "bytes": 51828,
-        "matched_functions": 313,
-        "matched_bytes": 29032
+        "functions": 533,
+        "bytes": 50020,
+        "matched_functions": 338,
+        "matched_bytes": 31688
       },
       "000-0256": {
         "functions": 553,
-        "bytes": 102432,
-        "matched_functions": 182,
-        "matched_bytes": 33060
+        "bytes": 102712,
+        "matched_functions": 250,
+        "matched_bytes": 45672
       },
       "000-0512": {
-        "functions": 477,
-        "bytes": 171344,
-        "matched_functions": 64,
-        "matched_bytes": 22440
+        "functions": 487,
+        "bytes": 175420,
+        "matched_functions": 126,
+        "matched_bytes": 44676
       },
       "000-1024": {
-        "functions": 203,
-        "bytes": 141616,
-        "matched_functions": 17,
-        "matched_bytes": 11664
+        "functions": 212,
+        "bytes": 147476,
+        "matched_functions": 30,
+        "matched_bytes": 20084
       },
       "1025+": {
-        "functions": 99,
-        "bytes": 181212,
-        "matched_functions": 14,
-        "matched_bytes": 48784
+        "functions": 101,
+        "bytes": 183656,
+        "matched_functions": 16,
+        "matched_bytes": 51228
       }
     },
-    "exact_duplicate_families": 16,
-    "exact_duplicate_members": 112,
+    "exact_duplicate_families": 14,
+    "exact_duplicate_members": 107,
     "transferable_families": [],
-    "conservative_queue": [
-      {
-        "module": "overlay1",
-        "vram": 2148088632,
-        "rom": 19252,
-        "size": 240,
-        "name": "weighted_group_object_count"
-      }
-    ]
+    "conservative_queue": []
   },
   "assets": {
     "by_kind": {

@@ -44,7 +44,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | Module | Functions | Matched | Candidate bytes | Matched bytes |
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 0 | 632 | 0 |
-| overlay_1 | 1,025 | 207 | 183,528 | 11,764 |
+| overlay_1 | 960 | 384 | 192,324 | 60,504 |
 | overlay_4 | 420 | 65 | 115,116 | 6,260 |
 | resident | 1,366 | 849 | 378,068 | 143,792 |
 
@@ -52,22 +52,22 @@ heuristic boundary catalogues and are not equivalent measures.
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 320 | 131 | 3,880 | 1,708 |
-| 000-0032 | 224 | 122 | 5,824 | 3,092 |
-| 000-0064 | 387 | 147 | 19,208 | 7,276 |
-| 000-0128 | 553 | 240 | 51,828 | 22,796 |
-| 000-0256 | 553 | 371 | 102,432 | 69,372 |
-| 000-0512 | 477 | 413 | 171,344 | 148,904 |
-| 000-1024 | 203 | 186 | 141,616 | 129,952 |
-| 1025+ | 99 | 85 | 181,212 | 132,428 |
+| 000-0016 | 301 | 113 | 3,636 | 1,472 |
+| 000-0032 | 205 | 101 | 5,348 | 2,572 |
+| 000-0064 | 359 | 113 | 17,872 | 5,604 |
+| 000-0128 | 533 | 195 | 50,020 | 18,332 |
+| 000-0256 | 553 | 303 | 102,712 | 57,040 |
+| 000-0512 | 487 | 361 | 175,420 | 130,744 |
+| 000-1024 | 212 | 182 | 147,476 | 127,392 |
+| 1025+ | 101 | 85 | 183,656 | 132,428 |
 
-- Exact duplicate body families: 16
-- Functions participating in those families: 112
+- Exact duplicate body families: 14
+- Functions participating in those families: 107
 - Matched-to-unmatched transferable families retained: 0
-- Conservative unmatched queue entries retained: 1
+- Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 753,428
-- Bytes assigned to provisional candidate bodies: 677,344
-- Code bytes outside provisional candidate bodies: 76,084
+- Bytes assigned to provisional candidate bodies: 686,140
+- Code bytes outside provisional candidate bodies: 67,288
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally
@@ -79,7 +79,7 @@ register dependency, and no contradictory boundary finding.
 | Module | Sweep candidates | Published candidates | Gap ranges | Gap bytes | Contradictory findings |
 |---|---:|---:|---:|---:|---:|
 | resident | 1,366 | 1,366 | 1 | 14,536 | 5 |
-| overlay_1 | 1,071 | 1,025 | 231 | 43,696 | 987 |
+| overlay_1 | 1,071 | 960 | 231 | 43,696 | 987 |
 | overlay_4 | 420 | 420 | 87 | 17,500 | 348 |
 
 These findings are an audit queue, not additional progress. They include
