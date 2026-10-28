@@ -13,11 +13,12 @@ extern void func_80032F3C(s32 unused, void *pointer);
 
 void menu_resources_release(void)
 {
-    s32 count = 6;
-    u32 outer = 0;
-    u16 *entry = D_800748FC;
+    u32 outer;
+    u16 *entry;
 
-    func_80035F88(D_8007A9A4, count);
+    func_80035F88(D_8007A9A4, 6);
+    outer = 0;
+    entry = D_800748FC;
     do {
         u32 inner = 0;
         do {

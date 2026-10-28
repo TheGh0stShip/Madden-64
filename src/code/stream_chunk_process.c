@@ -38,7 +38,7 @@ struct ChunkContext {
 
 u32 func_800549E8(ChunkContext *context, void *source, void *argument)
 {
-    u32 consumed = 0;
+    u32 consumed;
 
     if (context->state != 0xCD) {
         context->event->type = 0x12;
@@ -58,6 +58,7 @@ u32 func_800549E8(ChunkContext *context, void *source, void *argument)
         context->link->dispatch(context);
     }
 
+    consumed = 0;
     context->ops->process(context, source, &consumed, argument);
     context->position += consumed;
     return consumed;
