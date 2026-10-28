@@ -34,8 +34,9 @@ range_23_26:
         return;
     }
 update:
-    team_offset = (u16)team_arg * 0x214C;
-    __asm__ volatile("" ::: "memory");
+    do {
+        team_offset = (u16)team_arg * 0x214C;
+    } while (0);
     team_arg = (u32)D_80082D50;
     ((volatile u16 *)((u8 *)team_arg + team_offset))[stat] += amount;
 }
