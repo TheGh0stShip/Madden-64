@@ -69,3 +69,11 @@
 0xD708	0x14	src/overlays/overlay5/byte_at_u16_offset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f84f1f36e6f509f5f13909655c62a86c5a63c36770e6a8fc7a1cc8fbe73a61c8
 0x16504	0x2C	src/overlays/overlay5/record_extents_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b424f795ce1987965af3a692d98909bfdf407427ca1ee6e774c33ba0bf7251ac
 0xD120	0x34	src/overlays/overlay5/base_plus_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	aa815398c6a88d9539e9b9c1b7ad5e11b9c940402f86850ee350e1a288316986
+0xD71C	0x38	src/overlays/overlay5/resource_range_initialize.c	--symbol=CURRENT:0x800E5EB4 --symbol=END:0x800E5F08 --symbol=RESOURCE:0x800E5EB8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9331c187ea1f9519a27148eab62344d9896e3b7ee7dff0e10d814d243659209d
+0xD754	0x38	src/overlays/overlay5/resource_range_initialize.c	--symbol=CURRENT:0x800E5EB4 --symbol=END:0x800E5F80 --symbol=RESOURCE:0x800E5F60 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c38469fc34f5eebea60c1b58d07782fcc3e113728edfbd3da79b7a11205bdff5
+0x148A8	0x34	src/overlays/overlay5/word_flagged_resource_dispatch.c	--symbol=FLAG:0x800E6C30 --symbol=RESOURCE:0x8007227C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ac124fcc7ad70b9e79f96032c58c51d8a93c6e1916b91b77a176b082592b84d6
+0x42E0	0x2C	src/overlays/overlay5/flagged_null_dispatch.c	--symbol=FLAG:0x80087AA0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e58085928d7a1b4218a2fe9a1f2443c16741e870fb5f1c225c192d4ce348c95f
+0x3C70	0x40	src/overlays/overlay5/conditional_null_dispatch.c	--symbol=FLAG:0x8008B282 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7b9ec32230744004bffe660507efdc9dbe063eaf44c60183929431b5ca09664a
+0x5684	0x38	src/overlays/overlay5/resource_flag_clear.c	--symbol=FLAGS:0x80086D6C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	16826a0785e9f8846797889b14532a19251ea7db38e0f1fcfab0f7eff73f1c7f
+0x114DC	0x30	src/overlays/overlay5/packed_event_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8d53f1dcf2923e5424bd77e20985a0cb8bc540ceaf5d4782bce7cc2ac18a419c
+0x7C18	0x34	src/overlays/overlay5/object_timing_set.c	--symbol=FAST_MODE:0x8007A310 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fce8927afdc187fe6822de7c56ac66c52c907545f9c80af52d29e32a922e966c
