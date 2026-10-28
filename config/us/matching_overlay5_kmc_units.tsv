@@ -77,3 +77,9 @@
 0x5684	0x38	src/overlays/overlay5/resource_flag_clear.c	--symbol=FLAGS:0x80086D6C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	16826a0785e9f8846797889b14532a19251ea7db38e0f1fcfab0f7eff73f1c7f
 0x114DC	0x30	src/overlays/overlay5/packed_event_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8d53f1dcf2923e5424bd77e20985a0cb8bc540ceaf5d4782bce7cc2ac18a419c
 0x7C18	0x34	src/overlays/overlay5/object_timing_set.c	--symbol=FAST_MODE:0x8007A310 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fce8927afdc187fe6822de7c56ac66c52c907545f9c80af52d29e32a922e966c
+0xE048	0x68	src/overlays/overlay5/resource_group_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3064bec2683b00edab19aa49951fa354dd2b7f939506ac442ed1669556308b0c
+0xDC44	0x54	src/overlays/overlay5/runtime_state_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6a5fad6b785cdb18a6857592a6bc41f073dd9345f88ee86abcb2a3ae50f94fc2
+0x11428	0x44	src/overlays/overlay5/dual_system_register.c	--symbol=FIRST_SYSTEM:0x80087AA8 --symbol=SECOND_SYSTEM:0x8008931C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d60527e78b52acc36094727944783d0c33f16ed68aa938728043af7055642e31
+0x110C8	0x50	src/overlays/overlay5/runtime_register.c	--symbol=FIRST_SYSTEM:0x80087AA8 --symbol=SECOND_SYSTEM:0x8008931C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	211f858195a8e9b334326102e4ce8c74faa51bd035da2128e836afd09b815d6b
+0x10DE0	0x78	src/overlays/overlay5/resource_bundle_release.c	--symbol=FIRST_SYSTEM:0x80087AA8 --symbol=SECOND_SYSTEM:0x8008931C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a34ce73993fee5af10b0f59c667d02e07083674eebb94e241d1cdefe6b138595
+0x10E58	0x6C	src/overlays/overlay5/runtime_event_stop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4f35175bf2986e50902eec0c0bd905223575add2ce097348a2cbcbdf2fec5e5c
