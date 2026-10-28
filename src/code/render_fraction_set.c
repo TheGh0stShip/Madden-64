@@ -9,10 +9,10 @@ void func_8000ADC0(u32 value) {
 
     if (*state != value) {
         u32* command = D_80084F5C;
-        register u32 opcode_0 asm("$4") = 0xBC000404;
-        register u32 opcode_1 asm("$5") = 0xBC000C04;
-        register u32 opcode_2 asm("$6") = 0xBC001404;
-        register u32 opcode_3 asm("$7") = 0xBC001C04;
+        u32 opcode_0 = 0xBC000404;
+        u32 opcode_1 = 0xBC000C04;
+        u32 opcode_2 = 0xBC001404;
+        u32 opcode_3 = 0xBC001C04;
 
         D_80084F5C = command + 2;
         D_80084F5C = command + 4;
