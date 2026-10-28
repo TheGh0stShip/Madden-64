@@ -89,3 +89,7 @@
 0xB68C	0x38	src/overlays/overlay5/object_initialize_chain.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c492e2e5a7d98e91a9815ccb13f23a76e943c40166a187bb417a413fe0097e71
 0x13AA0	0x78	src/overlays/overlay5/runtime_object_initialize.c	--symbol=FIRST_SYSTEM:0x80087AA8 --symbol=SECOND_SYSTEM:0x8008931C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c32ef83bb8c0a8cf6918c9e8ce87949969556f015bd8992aca46a021e4ac7902
 0x13B50	0x78	src/overlays/overlay5/indexed_label_dispatch.c	--symbol=SOURCE:0x80002234 --symbol=SUFFIX:0x8000223C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d94f356433bee73166fac55f36b1f4cc4cb083aef1b8485b4df291719407111b
+0xB4B8	0x74	src/overlays/overlay5/object_runtime_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	abe3d06fbbef33fda4ec13a280b8cdd91eeb006b732fd9866654bbd818c7ec78
+0xAA14	0x78	src/overlays/overlay5/resource_state_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ac40e5d90266ecd6d220b3504dcde8a5efeddd99afc6d14531d6ef4b845f6d4a
+0x185CC	0xA4	src/overlays/overlay5/resource_enqueue.c	--symbol=RUNTIME:0x80072380 --symbol=MODE:0x80086DD8 --symbol=SPECIAL_RESOURCE:0x800BF634 --symbol=EXPECTED_MODE:0x800908B8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	89ce4cf83a3e2114ffea7f12c4fa07306c405dc082d51436f81320d1fe581fa3
+0x11030	0x98	src/overlays/overlay5/registration_configure.c	--symbol=SYSTEM:0x80087AA8 --symbol=CALLBACK:0x800D5E0C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	09d2724f7669268112fdaef26fe712070c950074b9d34c31d785016d89335f1e
