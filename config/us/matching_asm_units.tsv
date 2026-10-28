@@ -52,9 +52,6 @@
 0x25294	0x4FC	src/code/gameplay_state_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	a624bbdd2b9e90de55e0d3460e299092b62265b16176a50e5c06f1cdb74cecd4
 0x26ED0	0x1608	src/code/gameplay_event_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	a2a455d3b3234fb80631784fc5e62c865f63ef9b041f523955c2e723ecc85fda
 0x19140	0x1258	src/code/ui_scene_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	cc5d2902d9874ce4437a85cbbafcfe11bd5496c90a6c6ee7d38d169c4407375c
-0x3950C	0xAD4	src/code/audio_sequence_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	b31b376b8db6aaf8bb3ed3a2fa8f7cc05937a2fc2d2a37c546d86fd1f420e0f3
-0x23A74	0x9B4	src/code/gameplay_roster_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	46e67d1db04e13c1550c720c34411557e6abf88eb47577f9f330a8de6c88e254
-0x5CBE0	0x950	src/code/object_decode_pipeline.s	-O2 -G0 -mips3 -mgp32 -mfp32	f6fb316e4b2a25e267af047985236e4dd370221e92333b29a081fb72990e1e0a
 0x1C804	0x840	src/code/ui_resource_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	cfc5b16f09ff577675ac008c9c4af607ee40091cdd278cbd332c483b016d8642
 0x5EA58	0x790	src/code/object_plane_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	d170234a5a9681968867611b708519c01ffb30f6f852dbe0a38e9e2b2bc42221
 0x25D4C	0x648	src/code/gameplay_state_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	e9e6777188aca2e86528894aa879f9131b80405f12b43a8b7787aec5d417216c
@@ -78,7 +75,6 @@
 0x2FC38	0x414	src/code/gameplay_command_execute.s	-O2 -G0 -mips3 -mgp32 -mfp32	5517f7338e5695ba082bc22eadbbeaffb74b295ef974c9cadf630440229dcf6f
 0x10534	0x1070	src/code/display_object_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	2b8d50ecd697654af8797b353ff0ab83018aff665d1debd7177e159846ef7892
 0x12764	0xC50	src/code/render_command_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	c4344c589a0abeb25c7558f71c7e842a767e4d05ad194d2d79ee5576bc17e9e5
-0x133C0	0x1228	src/code/render_object_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	55b0814c3aed6bc3467136a5d20e3777f1300d715ae96199f7a1c4c5695a4884
 0x1C3C0	0x444	src/code/ui_resource_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e4381c7dde74552ea94c0f1a7c2e74b2f27f083e8deefd27db11764e44acaa7
 0x57750	0x43C	src/code/object_animation_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	afc42c6ab5c98e2d4a78b78327b3dd4e70cd7e1a77dbbced01bd3db3bc014ad8
 0x586B0	0x440	src/code/object_animation_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	61247d19a75e6357fcdd8ad4ee49e17037e52361b844a803500e90805930a179
@@ -241,7 +237,6 @@
 0x98BC	0x138	src/code/func_80008CBC.s	-O2 -G0 -mips3 -mgp32 -mfp32	6c8ab828ebd53f1b622e1a9a685ba02b11d1c2ee5ef0446c32be2bca19e1c104
 0xF3F4	0x160	src/code/func_8000E7F4.s	-O2 -G0 -mips3 -mgp32 -mfp32	33112b8e6a25fabd311bf227b3b0b9df338b6db641220de41ed0e5f5019cc87d
 0xF554	0x160	src/code/func_8000E954.s	-O2 -G0 -mips3 -mgp32 -mfp32	4b9544481cde0606a27a297980e42c118786e586d66e78da1484e8f4a1d51369
-0x133B8	0x8	src/code/func_800127B8.s	-O2 -G0 -mips3 -mgp32 -mfp32	0a2d0a31504c31ea0193b96c552fb3a395c1caf105bb31d5d06c926ed4fddfdc
 0x17624	0x14C	src/code/func_80016A24.s	-O2 -G0 -mips3 -mgp32 -mfp32	72c46b37c70d50ea12cf83acb948e5405186e2851b2d07255b1df1848d08c5dd
 0x1A5E4	0x12C	src/code/func_800199E4.s	-O2 -G0 -mips3 -mgp32 -mfp32	a3d3a6dbe22229017da1adafaa3e4dc1b4e0aff05a41eb46221a54d85f70336c
 0x1DC88	0x158	src/code/func_8001D088.s	-O2 -G0 -mips3 -mgp32 -mfp32	56a38176743c2cd0f3841f12afe1e19db05e2baa9ee72e7a66190052263b5854

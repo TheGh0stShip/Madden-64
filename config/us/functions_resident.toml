@@ -215,8 +215,7 @@ functions = [
     { name = "func_80011B4C", vram = 0x80011b4c, size = 0x10 }, # stub
     { name = "func_80011B5C", vram = 0x80011b5c, size = 0x8 }, # stub
     { name = "render_command_dispatch", vram = 0x80011b64, size = 0xc50 }, # asm
-    { name = "func_800127B8", vram = 0x800127b8, size = 0x8 }, # asm
-    { name = "render_object_dispatch", vram = 0x800127c0, size = 0x1228 }, # asm
+    { name = "render_object_dispatch", vram = 0x800127b8, size = 0x1230 }, # c
     { name = "render_pipeline_finalize", vram = 0x800139e8, size = 0x16c }, # asm
     { name = "func_80013B54", vram = 0x80013b54, size = 0x8 }, # stub
     { name = "func_80013B5C", vram = 0x80013b5c, size = 0x30 }, # c
@@ -413,7 +412,7 @@ functions = [
     { name = "player_mode_apply", vram = 0x80022bc0, size = 0x84 }, # asm
     { name = "func_80022C44", vram = 0x80022c44, size = 0x14 }, # leaf
     { name = "gameplay_state_process", vram = 0x80022c58, size = 0x21c }, # asm
-    { name = "gameplay_roster_update", vram = 0x80022e74, size = 0x9b4 }, # asm
+    { name = "gameplay_roster_update", vram = 0x80022e74, size = 0x9b4 }, # c
     { name = "gameplay_record_process", vram = 0x80023828, size = 0x438 }, # asm
     { name = "team_stat_value_get", vram = 0x80023c60, size = 0xe4 }, # c
     { name = "func_80023D44", vram = 0x80023d44, size = 0x114 }, # asm
@@ -761,7 +760,7 @@ functions = [
     { name = "func_800380D4", vram = 0x800380d4, size = 0x7c }, # c
     { name = "audio_mixer_update", vram = 0x80038150, size = 0x5d8 }, # asm
     { name = "audio_voice_process", vram = 0x80038728, size = 0x1e4 }, # asm
-    { name = "audio_sequence_process", vram = 0x8003890c, size = 0xad4 }, # asm
+    { name = "audio_sequence_process", vram = 0x8003890c, size = 0xad4 }, # c
     { name = "func_800393E0", vram = 0x800393e0, size = 0x48 }, # c
     { name = "roster_record_update", vram = 0x80039428, size = 0x184 }, # asm
     { name = "resource_groups_release", vram = 0x800395ac, size = 0xc8 }, # c
@@ -1271,7 +1270,7 @@ functions = [
     { name = "object_geometry_process", vram = 0x8005b9f0, size = 0x230 }, # asm
     { name = "object_geometry_update", vram = 0x8005bc20, size = 0x26c }, # asm
     { name = "func_8005BE8C", vram = 0x8005be8c, size = 0x154 }, # asm
-    { name = "object_decode_pipeline", vram = 0x8005bfe0, size = 0x950 }, # asm
+    { name = "object_decode_pipeline", vram = 0x8005bfe0, size = 0x950 }, # c
     { name = "object_decode_process", vram = 0x8005c930, size = 0x194 }, # asm
     { name = "func_8005CAC8", vram = 0x8005cac8, size = 0x13c }, # c
     { name = "object_stream_process", vram = 0x8005cc04, size = 0xc8 }, # c

@@ -279,7 +279,7 @@ def build_audit(rom: bytes, main: bytes) -> dict:
                 "code_bytes": 753428,
                 "initialized_data_bytes": 484540,
                 "bss_bytes": 82464,
-                "function_candidates": 2817,
+                "function_candidates": 2816,
                 "loader": {key: loader[key] for key in (
                     "code_bytes", "initialized_data_bytes", "function_candidates"
                 )},

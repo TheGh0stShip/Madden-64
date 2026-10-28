@@ -866,3 +866,7 @@
 0x5747C	0x124	src/code/object_stream_status_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4df9142c2ab53e6ebc7d644cb2e26f77952c61adbb01c2f3109983f4602ee195
 0x5D8CC	0x134	src/code/object_decode_stream_produce.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a9cc607a5a8cc24b5e9d321023f8d584dfb25ce9eb92f008105e15d460a6eefd
 0x5DA00	0x124	src/code/object_decode_stream_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2a52653687a5a938c74be666fdf7b28c267765fcd8ff7bb645fa0c2b34460016
+0x3950C	0xAD4	src/code/audio_sequence_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b31b376b8db6aaf8bb3ed3a2fa8f7cc05937a2fc2d2a37c546d86fd1f420e0f3
+0x23A74	0x9B4	src/code/gameplay_roster_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	46e67d1db04e13c1550c720c34411557e6abf88eb47577f9f330a8de6c88e254
+0x5CBE0	0x950	src/code/object_decode_pipeline.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f6fb316e4b2a25e267af047985236e4dd370221e92333b29a081fb72990e1e0a
+0x133B8	0x1230	src/code/render_object_dispatch.c	--assembler=asn64 --section-base=.rodata:0x800008E0 --normalizer-enable-KMC-LID-PAIR --normalizer-enable-KMC-FP-PAIR-WORDS --normalizer-enable-KMC-LID-ALIGN4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	274e8acf0d72347b152acd84af3c31599afcc248321283d66a4239b2668809da

@@ -128,11 +128,11 @@ and subtracting identified in-text data gives:
 | Module | Code bytes | Initialized data/metadata | Function candidates |
 |---|---:|---:|---:|
 | Boot loader | 644 | 76 | 5 |
-| Resident image | 393,288 | 94,840 | 1,367 |
+| Resident image | 393,288 | 94,840 | 1,366 |
 | Overlay record 1 | 226,792 | 12,416 | 1,025 |
 | Overlay record 4 | 132,704 | 24 | 420 |
 | Separate overlay data records | 0 | 377,184 | 0 |
-| **Total** | **753,428** | **484,540** | **2,817** |
+| **Total** | **753,428** | **484,540** | **2,816** |
 
 The boot-loader total is partitioned byte-for-byte in
 [`config/us/loader_map.tsv`](../config/us/loader_map.tsv). Its five instruction
