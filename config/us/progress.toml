@@ -4,13 +4,13 @@ id = "N8ME"
 [image]
 vram = 0x80000400
 rom = 0x1000
-code_size = 753428
-data_size = 484540
+code_size = 1082496
+data_size = 155472
 libultra_vram = 0x80045928
 total_functions = 2751
 
 [progress]
-matched_data = 496
+matched_data = 90777
 matched_functions = 1298
 loader_manifests = [
   "config/us/matching_loader_kmc_units.tsv",

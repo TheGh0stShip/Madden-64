@@ -129,10 +129,18 @@ and subtracting identified in-text data gives:
 |---|---:|---:|---:|
 | Boot loader | 644 | 76 | 5 |
 | Resident image | 393,288 | 94,840 | 1,366 |
-| Overlay record 1 | 226,792 | 12,416 | 1,025 |
-| Overlay record 4 | 132,704 | 24 | 420 |
-| Separate overlay data records | 0 | 377,184 | 0 |
-| **Total** | **753,428** | **484,540** | **2,816** |
+| Overlay record 1 | 226,792 | 12,416 | 960 |
+| Overlay record 2 | 204,776 | 33,930 | not yet catalogued |
+| Overlay record 4 | 132,728 | 0 | 420 |
+| Overlay record 5 | 124,268 | 14,178 | not yet catalogued |
+| Program metadata record | 0 | 32 | 0 |
+| **Total** | **1,082,496** | **155,472** | **2,751 catalogued** |
+
+Records 2 and 5 were formerly classified wholesale as overlay data. Instruction
+decoding and control-flow evidence show that 329,044 of their bytes are MIPS
+code; the final 24 bytes formerly assigned to Overlay 4 data are also an
+executable epilogue. The initialized-data ledger preserves the complete old
+484,540-byte scope and marks all 329,068 reclassified bytes explicitly.
 
 The boot-loader total is partitioned byte-for-byte in
 [`config/us/loader_map.tsv`](../config/us/loader_map.tsv). Its five instruction

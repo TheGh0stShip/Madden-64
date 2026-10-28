@@ -102,18 +102,19 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching decompiled C code | 162,056 bytes | 753,428 bytes | 21.51% |
-| Assembly-assisted C reference coverage | 58,312 bytes | 753,428 bytes | 7.74% |
-| Matching assembly reference coverage | 347,840 bytes | 753,428 bytes | 46.17% |
-| Whole-program initialized data | 496 bytes | 484,540 bytes | 0.10% |
-| C-decompiled function candidates | 1,121 | 2,816 | 39.81% |
+| Matching decompiled C code | 210,796 bytes | 1,082,496 bytes | 19.47% |
+| Assembly-assisted C reference coverage | 58,312 bytes | 1,082,496 bytes | 5.39% |
+| Matching assembly reference coverage | 307,896 bytes | 1,082,496 bytes | 28.44% |
+| Evidence-typed initialized data | 90,777 bytes | 155,472 bytes | 58.39% |
+| C-decompiled catalogued function candidates | 1,298 | 2,751 | 47.18% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |
 | Lossless expanded payload extraction | 14,918,923 bytes | 14,918,923 bytes | 100% |
 
-The program denominator covers the loader, resident executable, both overlays,
-and their initialized data records. Matching `.s` units are retained as useful
+The program denominator covers the loader, resident executable, four executable
+overlay records, and their initialized data. The two newly identified overlays
+are not yet function-catalogued. Matching `.s` units are retained as useful
 reference coverage but never count as C decompilation. C units containing
 instruction-emitting inline assembly are likewise tracked separately and receive
 no C-decompilation credit. A donor repository, familiar SDK symbol, matching

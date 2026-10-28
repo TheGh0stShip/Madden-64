@@ -201,9 +201,9 @@
     },
     "catalogue_status": {
       "provisional": true,
-      "program_code_bytes": 753428,
+      "program_code_bytes": 1082496,
       "catalogue_body_bytes": 686140,
-      "code_bytes_outside_catalogue_bodies": 67288,
+      "code_bytes_outside_catalogue_bodies": 396356,
       "catalogue_candidates": 2751,
       "boundary_audits": {
         "resident": {

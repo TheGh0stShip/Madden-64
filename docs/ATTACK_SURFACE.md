@@ -65,9 +65,9 @@ heuristic boundary catalogues and are not equivalent measures.
 - Functions participating in those families: 107
 - Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 0
-- Program-region code bytes: 753,428
+- Program-region code bytes: 1,082,496
 - Bytes assigned to provisional candidate bodies: 686,140
-- Code bytes outside provisional candidate bodies: 67,288
+- Code bytes outside provisional candidate bodies: 396,356
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally

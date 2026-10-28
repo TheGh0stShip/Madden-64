@@ -40,9 +40,9 @@ class AttackSurfaceTests(unittest.TestCase):
     def test_provisional_catalogue_is_not_presented_as_complete_coverage(self):
         status = self.analysis["functions"]["catalogue_status"]
         self.assertTrue(status["provisional"])
-        self.assertEqual(status["program_code_bytes"], 753428)
+        self.assertEqual(status["program_code_bytes"], 1082496)
         self.assertEqual(status["catalogue_body_bytes"], 686140)
-        self.assertEqual(status["code_bytes_outside_catalogue_bodies"], 67288)
+        self.assertEqual(status["code_bytes_outside_catalogue_bodies"], 396356)
         self.assertEqual(status["boundary_audits"]["resident"]["in_text_data_bytes"],
                          0x38C8)
         self.assertGreater(

@@ -9,7 +9,7 @@
       "measurement": {
         "kind": "ratio",
         "completed": 210796,
-        "total": 753428,
+        "total": 1082496,
         "unit": "bytes"
       }
     },
@@ -20,7 +20,7 @@
       "measurement": {
         "kind": "ratio",
         "completed": 307896,
-        "total": 753428,
+        "total": 1082496,
         "unit": "bytes"
       }
     },
@@ -31,7 +31,7 @@
       "measurement": {
         "kind": "ratio",
         "completed": 58312,
-        "total": 753428,
+        "total": 1082496,
         "unit": "bytes"
       }
     },
@@ -41,8 +41,8 @@
       "scope": "USA Rev 0 initialized data across the loader, resident image, overlays, and overlay data records; only byte-identical reconstructed data counts.",
       "measurement": {
         "kind": "ratio",
-        "completed": 496,
-        "total": 484540,
+        "completed": 90777,
+        "total": 155472,
         "unit": "bytes"
       }
     },

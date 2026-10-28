@@ -53,8 +53,8 @@ class RomLayoutTests(unittest.TestCase):
 
     def test_whole_program_accounting(self):
         program = self.audit["summary"]["program"]
-        self.assertEqual(program["code_bytes"], 753428)
-        self.assertEqual(program["initialized_data_bytes"], 484540)
+        self.assertEqual(program["code_bytes"], 1082496)
+        self.assertEqual(program["initialized_data_bytes"], 155472)
         self.assertEqual(program["function_candidates"], 2751)
         self.assertEqual(program["code_bytes"] + program["initialized_data_bytes"],
                          1237968)
