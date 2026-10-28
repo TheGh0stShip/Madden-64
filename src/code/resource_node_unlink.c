@@ -16,8 +16,8 @@ void resource_node_unlink(ResourceLink *node, s16 list)
 {
     ResourceLink *previous = node->previous;
     ResourceLink *next = node->next;
-    register u16 *output __asm__("$2");
-    register ResourceLink *call_node __asm__("$4");
+    u16 *output;
+    ResourceLink *call_node;
     u32 index;
 
     if (previous != (ResourceLink *)-1) {
@@ -32,7 +32,6 @@ void resource_node_unlink(ResourceLink *node, s16 list)
     output = D_8007A408[list];
     call_node = node;
     output++;
-    __asm__ volatile("" : "=r"(output) : "0"(output), "r"(call_node));
     *output = index;
     D_8007A408[list] = output;
     func_80033534(call_node);

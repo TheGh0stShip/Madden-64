@@ -18,12 +18,10 @@ extern u8 func_800297FC(PlayEventContext *context);
 
 void play_event_state_build(PlayEventContext *context, u32 value)
 {
-    register PlayEventContext *saved_context __asm__("$17") = context;
-    register u32 saved_value __asm__("$18") = value;
-    register s32 signed_value __asm__("$16");
+    PlayEventContext *saved_context = context;
+    u32 saved_value = value;
+    s32 signed_value;
 
-    __asm__("" : "=r"(saved_context), "=r"(saved_value)
-            : "0"(saved_context), "1"(saved_value));
     team_event_append(saved_context->team, saved_context->player, 9, 1);
     signed_value = (s16)saved_value;
     team_event_append(saved_context->team, saved_context->player, 10,

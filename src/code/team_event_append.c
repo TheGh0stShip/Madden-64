@@ -6,9 +6,9 @@ extern s16 D_80082CA8;
 void team_event_append(u32 team, u32 first, u32 second, u32 value)
 {
     u32 team_index;
-    register u32 offset __asm__("$3");
-    register s32 kind __asm__("$3");
-    register s32 test __asm__("$2");
+    u32 offset;
+    s32 kind;
+    s32 test;
     s32 count;
     u32 event_offset;
 
@@ -17,12 +17,10 @@ void team_event_append(u32 team, u32 first, u32 second, u32 value)
     }
     kind = (u16)second;
     test = kind < 29;
-    __asm__("" : "=r"(test) : "0"(test));
     if (test == 0) {
         return;
     }
     test = kind < 26;
-    __asm__("" : "=r"(test) : "0"(test));
     if (test != 0) {
         return;
     }

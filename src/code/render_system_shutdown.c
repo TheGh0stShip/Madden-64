@@ -27,8 +27,8 @@ extern void func_80032F3C(s32, void *);
 void render_system_shutdown(void)
 {
     s16 index = 0;
-    register s32 one __asm__("$3");
-    register u16 counter __asm__("$2");
+    s32 one;
+    u16 counter;
 
     func_8000B7E4(D_80065528);
     D_80065528 = 0;
@@ -47,13 +47,11 @@ void render_system_shutdown(void)
     func_80032F3C(0, D_800876D8);
     func_80032F3C(0, D_8006551C);
     {
-        register void **last_allocation __asm__("$16") = &D_8008B8A0;
+        void **last_allocation = &D_8008B8A0;
 
-        __asm__ volatile("" : : "r"(last_allocation));
         func_80032F3C(0, *last_allocation);
         counter = D_80065520;
         one = 1;
-        __asm__ volatile("" : : "r"(counter), "r"(one));
         D_8008B32C = 0;
         D_800876D8 = 0;
         D_8006551C = 0;
@@ -66,7 +64,6 @@ void render_system_shutdown(void)
     D_80065512 = 0;
     D_80065514 = 0;
     D_80065518 = 0;
-    __asm__ volatile("" : : : "memory");
     counter++;
     D_80065520 = counter;
     if ((s16)counter >= 5) {

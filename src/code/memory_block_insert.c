@@ -13,10 +13,10 @@ extern MemoryListBlock *D_8007A410[];
 
 void memory_block_insert(MemoryListBlock *block, s16 pool)
 {
-    register MemoryListBlock *saved_block __asm__("$4") = block;
-    register u32 key __asm__("$6");
-    register MemoryListBlock *current __asm__("$3") = D_8007A40C[pool];
-    register MemoryListBlock *previous __asm__("$2");
+    MemoryListBlock *saved_block = block;
+    u32 key;
+    MemoryListBlock *current = D_8007A40C[pool];
+    MemoryListBlock *previous;
 
     if (current != (MemoryListBlock *)-1) goto search_setup;
     D_8007A410[pool] = saved_block;
@@ -30,7 +30,6 @@ search_setup:
         MemoryListBlock *sentinel;
         sentinel = (MemoryListBlock *)-1;
         key = saved_block->key;
-        __asm__("" : "=r"(key) : "0"(key));
 search:
         if (current->key >= key) {
             key = (u32)-1;

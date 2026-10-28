@@ -8,9 +8,9 @@ extern void func_800400F4(void *slot);
 void audio_slots_release_all(void)
 {
     s16 index;
-    register s32 missing __asm__("$18");
-    register u8 *primary __asm__("$19");
-    register u8 *secondary __asm__("$20");
+    s32 missing;
+    u8 *primary;
+    u8 *secondary;
 
     func_8003F28C();
     index = 0;
@@ -18,8 +18,8 @@ void audio_slots_release_all(void)
     primary = (u8 *)&D_80082D84;
     secondary = primary + 0x214C;
     do {
-        register s32 shifted __asm__("$2") = index << 16;
-        register s32 offset __asm__("$16") = shifted >> 14;
+        s32 shifted = index << 16;
+        s32 offset = shifted >> 14;
 
         if (*(u16 *)((u32)&D_80082D84 + offset) != missing) {
             func_800400F4((void *)(offset + (u32)primary));
