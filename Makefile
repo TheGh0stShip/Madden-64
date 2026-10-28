@@ -42,25 +42,25 @@ match-c: audit
 		build/us/matching_ido_c_sources.tsv=ido5.3 \
 		config/us/matching_kmc_units.tsv=kmc+builtin
 	$(N64DK) match-batch --project . \
-		--rom build/us/audit/overlay_1_link.z64 \
+		--rom build/us/audit/overlay_1_composite.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		--symbols build/us/audit/overlay_1_functions/symbol_addrs.txt \
-		config/us/matching_overlay1_kmc_units.tsv=kmc+builtin
+		build/us/matching_overlay1_kmc_composite.tsv=kmc+builtin
 	$(N64DK) match-batch --project . \
-		--rom build/us/audit/overlay_2.z64 \
+		--rom build/us/audit/overlay_2_composite.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		--symbols build/us/audit/overlay_2_functions/symbol_addrs.txt \
-		config/us/matching_overlay2_kmc_units.tsv=kmc+builtin
+		build/us/matching_overlay2_kmc_composite.tsv=kmc+builtin
 	$(N64DK) match-batch --project . \
-		--rom build/us/audit/overlay_4.z64 \
+		--rom build/us/audit/overlay_4_composite.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		--symbols build/us/audit/overlay_4_functions/symbol_addrs.txt \
-		config/us/matching_overlay4_kmc_units.tsv=kmc+builtin
+		build/us/matching_overlay4_kmc_composite.tsv=kmc+builtin
 	$(N64DK) match-batch --project . \
-		--rom build/us/audit/overlay_5.z64 \
+		--rom build/us/audit/overlay_5_composite.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		--symbols build/us/audit/overlay_5_functions/symbol_addrs.txt \
-		config/us/matching_overlay5_kmc_units.tsv=kmc+builtin
+		build/us/matching_overlay5_kmc_composite.tsv=kmc+builtin
 
 match-asm: audit
 	$(PYTHON) tools/filter_manifest_sources.py \
@@ -75,15 +75,15 @@ match-asm: audit
 		build/us/matching_ido_asm_units.tsv=ido5.3 \
 		config/us/matching_asm_units.tsv=as
 	$(N64DK) match-batch --project . \
-		--rom build/us/audit/overlay_1_link.z64 \
+		--rom build/us/audit/overlay_1_composite.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		--symbols build/us/audit/overlay_1_functions/symbol_addrs.txt \
-		config/us/matching_overlay1_asm_units.tsv=as
+		build/us/matching_overlay1_asm_composite.tsv=as
 	$(N64DK) match-batch --project . \
-		--rom build/us/audit/overlay_4.z64 \
+		--rom build/us/audit/overlay_4_composite.z64 \
 		--symbols build/us/survey/symbol_addrs.txt \
 		--symbols build/us/audit/overlay_4_functions/symbol_addrs.txt \
-		config/us/matching_overlay4_asm_units.tsv=as
+		build/us/matching_overlay4_asm_composite.tsv=as
 
 check: verify
 	$(PYTHON) -m unittest discover -s tests -v

@@ -1,4 +1,6 @@
 import importlib.util
+import struct
+import subprocess
 import sys
 import tomllib
 import unittest
@@ -118,6 +120,33 @@ class RomLayoutTests(unittest.TestCase):
         main = MAIN.read_bytes()
         self.assertEqual(decoded[0x40:], main[0x40:])
         self.assertEqual(decoded[:0x40], bytes(0x40))
+
+    def test_overlay_composite_preserves_resident_and_overlay_addresses(self):
+        subprocess.run(
+            [sys.executable, str(ROOT / "tools/make_overlay_images.py")],
+            cwd=ROOT,
+            check=True,
+        )
+        image = (ROOT / "build/us/audit/overlay_5_composite.z64").read_bytes()
+        payload = (
+            ROOT
+            / "build/us/extracted_records/archive_00/record_0005.overlay-data.bin"
+        ).read_bytes()
+        overlay_offset = 0x1000 + 0x800C5F48 - 0x80000400
+        self.assertEqual(struct.unpack_from(">I", image, 8)[0], 0x80000400)
+        self.assertEqual(image[0x1000:0x1040], MAIN.read_bytes()[:0x40])
+        self.assertEqual(
+            image[overlay_offset:overlay_offset + len(payload)], payload
+        )
+        canonical = (ROOT / "config/us/matching_overlay5_kmc_units.tsv")
+        generated = (ROOT / "build/us/matching_overlay5_kmc_composite.tsv")
+        canonical_row = canonical.read_text().splitlines()[1].split("\t")
+        generated_row = generated.read_text().splitlines()[1].split("\t")
+        self.assertEqual(
+            int(generated_row[0], 0),
+            int(canonical_row[0], 0) + 0x800C5F48 - 0x80000400,
+        )
+        self.assertEqual(generated_row[1:], canonical_row[1:])
 
     def test_overlay1_boundary_findings_are_well_formed(self):
         lines = OVERLAY1_FINDINGS.read_text().splitlines()

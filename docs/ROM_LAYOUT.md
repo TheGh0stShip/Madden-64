@@ -1,5 +1,13 @@
 # ROM layout audit
 
+Overlay matching uses generated `overlay_*_composite.z64` analysis images.
+Each image retains the resident segment at its linked address and inserts one
+overlay at its own linked address. This is required because overlay functions
+can own jump tables and literal pools in resident `.rodata`; payload-only
+images cannot verify both sections through one ROM-to-VRAM mapping. Generated
+composite manifests rebase only the physical ROM offsets used by the matcher.
+The canonical manifests and progress accounting remain payload-relative.
+
 The retail cartridge is 12,582,912 bytes. A complete physical sweep identifies
 the following gap-free top-level layout:
 

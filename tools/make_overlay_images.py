@@ -7,6 +7,50 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+RESIDENT_VRAM = 0x80000400
+
+
+def build_composite_image(overlay: int, payload: bytes, link_vram: int) -> None:
+    """Build one linear image containing resident code/data and an overlay.
+
+    Overlay functions can own jump tables and literal pools in resident
+    ``.rodata``.  A payload-only image cannot verify those sections because its
+    ROM-to-VRAM mapping starts at the overlay.  The composite keeps the
+    resident image at 0x80000400 and inserts the overlay at its linked address,
+    giving the matcher one linear mapping for both sections.
+    """
+    resident = (ROOT / "build/us/survey/main_segment.bin").read_bytes()
+    overlay_offset = 0x1000 + link_vram - RESIDENT_VRAM
+    image = bytearray(max(
+        0x101000,
+        0x1000 + len(resident),
+        overlay_offset + len(payload),
+    ))
+    struct.pack_into(">IIII", image, 0, 0x80371240, 0, RESIDENT_VRAM, 0)
+    image[0x20:0x34] = b"MADDEN COMPOSITE    "
+    image[0x3B:0x3F] = b"N8ME"
+    image[0x1000:0x1000 + len(resident)] = resident
+    image[overlay_offset:overlay_offset + len(payload)] = payload
+    (ROOT / f"build/us/audit/overlay_{overlay}_composite.z64").write_bytes(image)
+
+    # Canonical overlay manifests use payload-relative ROM offsets beginning at
+    # 0x1000. Rebase only generated verifier copies to the overlay's location
+    # in this image; progress accounting keeps using the canonical manifests.
+    delta = overlay_offset - 0x1000
+    for kind in ("kmc", "asm"):
+        source = ROOT / f"config/us/matching_overlay{overlay}_{kind}_units.tsv"
+        if not source.exists():
+            continue
+        lines = []
+        for line in source.read_text().splitlines():
+            if not line or line.startswith("#"):
+                lines.append(line)
+                continue
+            fields = line.split("\t")
+            fields[0] = f"0x{int(fields[0], 0) + delta:X}"
+            lines.append("\t".join(fields))
+        output = ROOT / f"build/us/matching_overlay{overlay}_{kind}_composite.tsv"
+        output.write_text("\n".join(lines) + "\n")
 
 
 def build_image(overlay: int, record: int, *, suffix: str = "overlay",
@@ -36,6 +80,8 @@ def build_image(overlay: int, record: int, *, suffix: str = "overlay",
         # separate image whose entry point records the real link address.
         struct.pack_into(">I", image, 8, link_vram)
         (ROOT / f"build/us/audit/overlay_{overlay}_link.z64").write_bytes(image)
+
+    build_composite_image(overlay, payload, link_vram or catalogue_vram)
 
 
 def main() -> None:
