@@ -2,23 +2,19 @@
 
 void *func_8002E58C(void *destination, u32 value, u32 size)
 {
-    register u8 *cursor __asm__("$7");
-    register u32 byte __asm__("$8");
-    register u32 word __asm__("$3");
+    u8 *cursor;
+    u32 byte;
+    u32 word;
     u32 initial = (((u32)destination & 3) != 0) && (size != 0);
 
     cursor = destination;
     if (initial) {
-        __asm__("" : "=r"(cursor) : "0"(cursor));
         byte = value;
-        *cursor = byte;
-        cursor++;
-        size--;
-        while ((((u32)cursor & 3) != 0) && (size != 0)) {
+        do {
             *cursor = byte;
             cursor++;
             size--;
-        }
+        } while ((((u32)cursor & 3) != 0) && (size != 0));
     }
     if (size >= 5) {
         word = value & 0xFF;
