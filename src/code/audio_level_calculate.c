@@ -5,8 +5,9 @@ extern u8 D_80087B78[];
 
 s32 audio_level_calculate(u32 index, s32 level, s32 primary)
 {
-    register s32 bounded __asm__("$3");
-    register s32 nonnegative __asm__("$2");
+    s32 bounded;
+    s32 nonnegative;
+    s32 final_nonnegative;
     s32 scale;
 
     level++;
@@ -28,6 +29,6 @@ s32 audio_level_calculate(u32 index, s32 level, s32 primary)
     if (level >= 16) {
         level = 15;
     }
-    nonnegative = ~level >> 31;
-    return level & nonnegative;
+    final_nonnegative = ~level >> 31;
+    return level & final_nonnegative;
 }
