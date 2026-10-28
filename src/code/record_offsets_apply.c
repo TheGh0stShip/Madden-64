@@ -12,19 +12,19 @@ typedef struct OffsetRecordOwner {
 } OffsetRecordOwner;
 
 void func_800347B4(OffsetRecordOwner* owner) {
-    register u32 i __asm__("$5");
-    register u32 offset __asm__("$6");
-    register u32* first __asm__("$2");
-    register u32 count __asm__("$3");
+    u32 i;
+    u32 offset;
+    u32* first;
+    u32 count;
     volatile u64 unused;
 
-    first = (u32*)owner->records;
     i = 0;
     count = owner->records->count;
+    first = (u32*)owner->records;
     offset = owner->offset;
     first++;
     if (count != 0) {
-        register u32* value __asm__("$3");
+        u32* value;
 
         value = first;
         do {
