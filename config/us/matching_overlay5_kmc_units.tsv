@@ -195,3 +195,6 @@
 0x1522C	0x8C	src/overlays/overlay5/resource_pair_attach.c	-DBASE_VALUE=93 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b4f37c20672123559d646bc6d30a18fbbc58f76dae5224ca85cdf2ea20988252
 0x160C4	0xA0	src/overlays/overlay5/row_pointer_table_build.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c77fad1bfaac5ed62ce5d36d718265a7b0dc48425be652b16b23e68f465af447
 0x1D1DC	0x6C	src/overlays/overlay5/runtime_named_entry_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a6290daa9008ccf113054a1759fa51a3958bac1efb10c741ae09c9bc0dd95696
+0x15C20	0xEC	src/overlays/overlay5/indexed_resource_label_apply.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f192d60372dcf2373bd469094b3c2906f63ae3ad4fff6c169fbb26282c3d7a71
+0x16164	0xE4	src/overlays/overlay5/runtime_window_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c38ac136afffebc6c6f34379bc057a3047144475609e418ea10c8a39c0b93764
+0x16530	0xE4	src/overlays/overlay5/runtime_window_rebuild.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ab52400f1df65cf98b29a83a789967e34db9964c564322d1f896d7a57b4b1744
