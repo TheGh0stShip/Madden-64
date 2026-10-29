@@ -186,3 +186,7 @@
 0x1A838	0x34	src/overlays/overlay5/object_sample_byte_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8470b5a8b19296c638419da28466bae4cc606b9c752e93d2c362326e7dcb3406
 0x1B918	0x44	src/overlays/overlay5/runtime_entry_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d0e8f4fbe34286776a2e5984890abc486934c1da7cc0dd64b8652d61e18d0296
 0x1BBD8	0x44	src/overlays/overlay5/runtime_entry_query.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	51879ec7192014151798474bb48705a20022ef7f1f1cdea5ef8be49890139ecc
+0x3E64	0x70	src/overlays/overlay5/runtime_start_or_configure.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0daf9b44aa7f2eebdafde1a27685f0cc10f4997b47d928e775053d57e4240fe1
+0x4178	0x60	src/overlays/overlay5/runtime_object_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	05ea113f779c632681b14916bb757cdabfee285bae2dc91a91090d056161e4e4
+0x77A0	0x78	src/overlays/overlay5/runtime_menu_configure.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	487b8370090e46991f347701b7f0e35bf484d31de51ae677f933eff2be9372f3
+0x1C588	0x7C	src/overlays/overlay5/runtime_index_value_read.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	05ca95021d413c058b892a97b5aa074f8210d4fa900fc33338ee10ec42117c24
