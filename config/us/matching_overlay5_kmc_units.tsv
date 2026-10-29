@@ -141,6 +141,12 @@
 0x1D120	0xBC	src/overlays/overlay5/data_record_copy_verified.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8a6e71b08c02ee7dbbb176d0fe5742ba23b79855058b63327f401698c6a5069a
 0x1D248	0x90	src/overlays/overlay5/data_record_payload_store.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d5601818b69db8deab486ef0f954185d39907a2af02fb3f8f89987fa293e454d
 0x1D40C	0xE4	src/overlays/overlay5/runtime_selected_record_process.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fee6f3bb902dc544c1944886f6f0fa1dfe2a15830a11480f9faeb9a6ccebcdd3
+0x1D5A4	0x98	src/overlays/overlay5/data_record_find.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3bd9b630dab0c9c5a840e041c671cc14b4278c58bf01e8de3068cdc83d468be1
+0x1D688	0xAC	src/overlays/overlay5/runtime_result_translate.c	--section-base=.rodata:0x80002EF8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	286a6d3f0ba2c6d9be914ebcc3b0c97958ba6d7f69cdc5bba1a9b935fa123e22
+0x1D734	0xB4	src/overlays/overlay5/packed_text_encode.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ad4223679323be6892fe9e99a3a079d6210a1df93b5467399a609cac5e44a3fa
+0x1D7E8	0xB8	src/overlays/overlay5/packed_text_decode.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7fcf7bc60f7ce3ad257f23cf6b44f1e4d57d958338c8e31c80b613b154198c67
+0x1D954	0xCC	src/overlays/overlay5/string_pair_record_exists.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a17a3db209948f2562f92b4608b407569f4231afcc35c0357592589996387fda
+0x1DA7C	0x98	src/overlays/overlay5/packed_bits_read.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d19a8276ebb0875186552d2d55b79105f46afbd427615479ca1308d55049beb4
 0x1DA20	0x5C	src/overlays/overlay5/packed_bit_get.c	--section-base=.rodata:0x80002F24 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a96a9cd6c3e375b9157737cb1236a30fb5caa8881f915f589f29cd2b3ca65ad3
 0x1CFC8	0x18	src/overlays/overlay5/data_record_magic_check.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4bd51c33805496da0535a68f81515dd160cdd07d5a29b969ec3c4764e492c8bd
 0x1CFE0	0x5C	src/overlays/overlay5/runtime_selected_record_load.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	faee0798f3f6ba5f2fb2bee73c7f6ac67dec3309ba3267042490038a63d44f22
