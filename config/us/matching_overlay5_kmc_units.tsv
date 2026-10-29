@@ -228,3 +228,4 @@
 0x5C14	0x94	src/overlays/overlay5/func_800CAB5C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1e9f6c80ffb7fb1087737dac545a70f2a46cacdb40756c757ecf471f053b4d95
 0x738C	0xB4	src/overlays/overlay5/func_800CC2D4.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d159966c1c4e9e932cdd72cd783d4045d26c62c1fe665e0c4d299d6093311111
 0x1AC50	0xBC	src/overlays/overlay5/func_800DFB98.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d2e1ce1a02869f03f3b4558870ee70549c8bac0e7db4ef5094d187c57cd51fe6
+0x1AE1C	0x108	src/overlays/overlay5/func_800DFD64.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4532be0efae009a24863e134118b8aacc20ea07c4d60ef4cab7d15d00312743e
