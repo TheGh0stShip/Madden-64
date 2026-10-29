@@ -57,7 +57,7 @@ class RomLayoutTests(unittest.TestCase):
         program = self.audit["summary"]["program"]
         self.assertEqual(program["code_bytes"], 1082496)
         self.assertEqual(program["initialized_data_bytes"], 155472)
-        self.assertEqual(program["function_candidates"], 3757)
+        self.assertEqual(program["function_candidates"], 3756)
         self.assertEqual(program["code_bytes"] + program["initialized_data_bytes"],
                          1237968)
 

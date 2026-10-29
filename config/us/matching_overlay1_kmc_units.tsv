@@ -1,4 +1,5 @@
 # KMC GCC 2.7.2; OVERLAY_ROM_START SIZE SOURCE FLAGS SHA256
+0x1CC34	0x1D4	src/overlays/overlay1/func_800ABC38.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	71e0f9e4fc78d416e89f2de78309494de44313966bfd595f3f0d9ae50768dc88
 0x10700	0x104	src/overlays/overlay1/func_8009F704.c	--assembler=asn64 --section-base=.rodata:0x80000B70 --normalizer-enable-KMC-LID-PAIR --normalizer-enable-KMC-FP-PAIR-WORDS --normalizer-enable-KMC-LID-ALIGN4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4960dd91c9b318ae8820ba24fff7e563342097a79bf7194536a2ff266f8d65ce
 0x1A718	0x224	src/overlays/overlay1/func_800A971C.c	--section-base=.rodata:0x80000DC8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	350e5644d9ce53f981bee17587abe9d9e87f5980765746d48957e6d9aaa260ec
 0x1C64C	0xA0	src/overlays/overlay1/func_800AB650.c	--section-base=.rodata:0x80000E48 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	48b0270b2146bc41a0bb895e285e0f26de918d85b91f5e55434611d7dc05c87c
