@@ -225,3 +225,4 @@
 0x1B9FC	0xAC	src/overlays/overlay5/func_800E0944.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6cca0b04d6d1d7cb88a9e30b4205c2d721355773d9a09c0f4a930fa39ade9a83
 0x1460	0xAC	src/overlays/overlay5/func_800C63A8.c	--section-base=.rodata:0x80001810 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3602bc7150f3face65450a2aea1c68eb65e464a374566edd8ab5ab722c132ea
 0xECC4	0x18	src/overlays/overlay5/func_800D3C0C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c5455bcef1375e363f9b6526c614ac8b436761b0c3da4c34c68abee9fb9b2b03
+0x5C14	0x94	src/overlays/overlay5/func_800CAB5C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1e9f6c80ffb7fb1087737dac545a70f2a46cacdb40756c757ecf471f053b4d95
