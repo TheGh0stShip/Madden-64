@@ -206,3 +206,6 @@
 0x90A8	0x44	src/overlays/overlay5/func_800CDFF0.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8288c8839a6bc5a6e4d3f0fabf1ace0567460a090d21e59dfe3c5161098f5554
 0x1B28C	0x24	src/overlays/overlay5/func_800E01D4.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1da23e53ac961f7d0e137d075fedf9ca884d067fc51f77e8dee743dda7398433
 0x1146C	0x70	src/overlays/overlay5/func_800D63B4.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e757e963abcc3e68ee5fa66477b293158e6f8c3b761bb0ba563a45dc48e12d2e
+0x1C264	0x74	src/overlays/overlay5/func_800E11AC.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	03c11716b2e33518040c7aac9cf4cf02362d1e84353cda2037ec4aba14ac4d22
+0x1DB7C	0x80	src/overlays/overlay5/func_800E2AC4.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2c0a58a78c4aa702b72982d0e0f7e353534a8cd8380898183f9bb1394a2501d6
+0xEC00	0x90	src/overlays/overlay5/func_800D3B48.c	--section-base=.rodata:0x80002088 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2eb7098f3becd9538cdb30b31396457f228e3b1d7b4bfbc3188773e9fe4f5b91
