@@ -117,3 +117,5 @@
 0x13D0	0x90	src/overlays/overlay5/random_event_select.c	--section-base=.rodata:0x800017D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4694bf15a9b6f5980fd23847b21b2711ed57875c83c173b3b2ccf12aa643778f
 0x7AA4	0x154	src/overlays/overlay5/object_option_state_dispatch.c	--section-base=.rodata:0x80001CF8 --symbol=OPTION_ACTIVE:0x800892B0 --symbol=CURRENT_OPTION:0x8008B358 --symbol=OPTION_RESOURCE:0x80072198 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d0458cdcf040c8c564d18c8f35d02e76af58c83f8ff04a9f8c5c45818faf3828
 0x1A6C8	0xD4	src/overlays/overlay5/resource_array_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	75df518ee23b105f7842e2527c56c92793d9e2fb3e0b17a70e55e2f1fb707089
+0x15FE8	0xDC	src/overlays/overlay5/resource_descriptor_build.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4a30b8d4123f0cf48482ac31997595e12e59a9a75d244e567d7c6553513faba7
+0x19CEC	0xCC	src/overlays/overlay5/resource_range_finalize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bae2e1bc86c0b2075d302bc6e77308d78598a5ba2a6ef9c7301b3de85e4afa6e
