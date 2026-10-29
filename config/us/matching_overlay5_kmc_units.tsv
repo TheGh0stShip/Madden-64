@@ -139,3 +139,13 @@
 0x1D63C	0x4C	src/overlays/overlay5/data_record_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e1f8b9bd40283be5bb1ec34eab1ad61c368464653d9056523e9a20431994cdd6
 0x1D2E4	0x4C	src/overlays/overlay5/data_record_checksum_refresh.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	abe98b44438ef996f35fa97f9be1c08e32437c62c8e5c2d916da079eaf68d599
 0x1DA20	0x5C	src/overlays/overlay5/packed_bit_get.c	--section-base=.rodata:0x80002F24 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a96a9cd6c3e375b9157737cb1236a30fb5caa8881f915f589f29cd2b3ca65ad3
+0x1CFC8	0x18	src/overlays/overlay5/data_record_magic_check.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4bd51c33805496da0535a68f81515dd160cdd07d5a29b969ec3c4764e492c8bd
+0x1CFE0	0x5C	src/overlays/overlay5/runtime_selected_record_load.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	faee0798f3f6ba5f2fb2bee73c7f6ac67dec3309ba3267042490038a63d44f22
+0x1C604	0x3C	src/overlays/overlay5/runtime_operation_run.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4fe329207b65a56fdac0b5cd657b56e7ffebeb8534722f01a434d520fc99ce1e
+0x1D8A0	0x38	src/overlays/overlay5/string_trailing_spaces_trim.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1e6fe988fd745c0001478f54472b6908b36cae9e98bfcc86b147f9dc1c5e15bd
+0x1DB14	0x68	src/overlays/overlay5/packed_bit_set.c	--section-base=.rodata:0x80002F24 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	402800837197ce101716293344d37e885df0bd4fc21dc53eda69fadfd5a0d8b1
+0x1B240	0x4C	src/overlays/overlay5/runtime_object_system_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a99b14d9640212b6b5894b6e1dcf1dd64f5ed84bfbaf6df5755c63d5d9d575e3
+0x1BAC4	0x54	src/overlays/overlay5/runtime_range_configure.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	75c2dee2df63031d3c5c985e2c49bbc1eeba888c57e8692357926bdacc51e893
+0x197D4	0x48	src/overlays/overlay5/resource_request_create.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	23fef89a01c5ec9458e9a08292c624fb6f044c50848b94f535fb915a1bed4106
+0x1981C	0x54	src/overlays/overlay5/resource_request_destroy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	725a37ea4e9dfe6ae181efe0778dc87a57ffc89b52324aab9bf370da291506ac
+0x18840	0x60	src/overlays/overlay5/indexed_resource_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	96ea603a897725402700f6f7a665ad84ca6d2187e72722233f4b2ff1a17c83f7

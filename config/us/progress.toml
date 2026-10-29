@@ -7,11 +7,11 @@ rom = 0x1000
 code_size = 1082496
 data_size = 155472
 libultra_vram = 0x80045928
-total_functions = 3752
+total_functions = 3751
 
 [progress]
 matched_data = 90777
-matched_functions = 1452
+matched_functions = 1462
 loader_manifests = [
   "config/us/matching_loader_kmc_units.tsv",
   "config/us/matching_loader_asm_units.tsv",
