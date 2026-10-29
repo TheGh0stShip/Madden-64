@@ -149,3 +149,13 @@
 0x197D4	0x48	src/overlays/overlay5/resource_request_create.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	23fef89a01c5ec9458e9a08292c624fb6f044c50848b94f535fb915a1bed4106
 0x1981C	0x54	src/overlays/overlay5/resource_request_destroy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	725a37ea4e9dfe6ae181efe0778dc87a57ffc89b52324aab9bf370da291506ac
 0x18840	0x60	src/overlays/overlay5/indexed_resource_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	96ea603a897725402700f6f7a665ad84ca6d2187e72722233f4b2ff1a17c83f7
+0xEC90	0x34	src/overlays/overlay5/packed_value_write.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	33eab77d0baa0cfee3bc7eff50fa4ed40a1ecabef3e3ab97d7e30f13abe3ebe4
+0x17C7C	0x50	src/overlays/overlay5/runtime_until_ready.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	411b4ac0170884622744335fe02e3866d6506dfb917cf78472b5bc3474f1682f
+0x19DB8	0x64	src/overlays/overlay5/resource_record_process.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	326d8387310ceede42b901e54d98f0205d62e373bc7a3d7bba9483dc738ce801
+0x1A668	0x60	src/overlays/overlay5/linked_resource_status_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6b5b1409fbc2adcb99a991cb4b83a829a683d511bfa2c88ed3f8e0296d72d29f
+0x19B44	0x78	src/overlays/overlay5/resource_operation_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	785cc2a98f982082a085c84f486147838879da024f9577c1f777e5f58b9512e6
+0x1C358	0x70	src/overlays/overlay5/runtime_global_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	94f71fd87edd92c304d1f9af197db345efa012592beaf9a7b230ae2a9641bbd0
+0x1D8D8	0x7C	src/overlays/overlay5/string_identifier_advance.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a16b7304a77394916650678c3f2c6676d21efeaf7fbf356cf238ecd012a17962
+0x1B6F4	0x88	src/overlays/overlay5/runtime_object_system_destroy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	49fee8f6c0e227c9896bd4f9ba1a36045d659553975d93d90fd67a3727511037
+0x1B1F0	0x20	src/overlays/overlay5/linked_index_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d42649e55a594712caf89b1c5c8168ce5687713077371810e346da52076e5d9b
+0x1C140	0x4C	src/overlays/overlay5/runtime_list_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ffc35863fb0b41b6015738d9fbe1f099a2c1f0b9f97591ef7d1e7a2fbba85b91
