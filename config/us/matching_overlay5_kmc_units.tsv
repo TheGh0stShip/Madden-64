@@ -116,3 +116,4 @@
 0x54B8	0x108	src/overlays/overlay5/object_state_and_extent_update.c	--symbol=CURRENT_EXTENT:0x80087964 --symbol=EXTENT_RESOURCE:0x80086CE8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	060278939755c5bd9a077d12bc209fddef1fbd08d6abbb35f41cd302e9ccab52
 0x13D0	0x90	src/overlays/overlay5/random_event_select.c	--section-base=.rodata:0x800017D0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4694bf15a9b6f5980fd23847b21b2711ed57875c83c173b3b2ccf12aa643778f
 0x7AA4	0x154	src/overlays/overlay5/object_option_state_dispatch.c	--section-base=.rodata:0x80001CF8 --symbol=OPTION_ACTIVE:0x800892B0 --symbol=CURRENT_OPTION:0x8008B358 --symbol=OPTION_RESOURCE:0x80072198 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d0458cdcf040c8c564d18c8f35d02e76af58c83f8ff04a9f8c5c45818faf3828
+0x1A6C8	0xD4	src/overlays/overlay5/resource_array_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	75df518ee23b105f7842e2527c56c92793d9e2fb3e0b17a70e55e2f1fb707089
