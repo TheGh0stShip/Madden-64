@@ -202,3 +202,7 @@
 0x16D58	0xE8	src/overlays/overlay5/runtime_vertical_previous.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a7d411d4c65fc7267126938907cd5089265aba1a6ff9bd85afb34b222ce22f05
 0x16E40	0xF8	src/overlays/overlay5/runtime_vertical_next.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	19a5465477aac092bb29a5cde61715887b7c086c8e7abc278ba75c472143c32c
 0x169EC	0x13C	src/overlays/overlay5/runtime_window_render.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f154f383ce373d1722bc275b03e386bb076c69aff0e629aeb55234b8f85c9b27
+0x17674	0x13C	src/overlays/overlay5/runtime_navigation_controls_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	61244c3352b0344c328fe04735cfc129f917fba0241713a04ab30457581aa810
+0x90A8	0x44	src/overlays/overlay5/func_800CDFF0.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8288c8839a6bc5a6e4d3f0fabf1ace0567460a090d21e59dfe3c5161098f5554
+0x1B28C	0x24	src/overlays/overlay5/func_800E01D4.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1da23e53ac961f7d0e137d075fedf9ca884d067fc51f77e8dee743dda7398433
+0x1146C	0x70	src/overlays/overlay5/func_800D63B4.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e757e963abcc3e68ee5fa66477b293158e6f8c3b761bb0ba563a45dc48e12d2e
