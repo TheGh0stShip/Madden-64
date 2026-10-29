@@ -190,3 +190,8 @@
 0x4178	0x60	src/overlays/overlay5/runtime_object_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	05ea113f779c632681b14916bb757cdabfee285bae2dc91a91090d056161e4e4
 0x77A0	0x78	src/overlays/overlay5/runtime_menu_configure.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	487b8370090e46991f347701b7f0e35bf484d31de51ae677f933eff2be9372f3
 0x1C588	0x7C	src/overlays/overlay5/runtime_index_value_read.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	05ca95021d413c058b892a97b5aa074f8210d4fa900fc33338ee10ec42117c24
+0x13C2C	0x8C	src/overlays/overlay5/indexed_label_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	802f4f41dd1b34805afc0354e837f6f5abb8389a1dd89d3a03db7470fbdd544b
+0x1481C	0x8C	src/overlays/overlay5/resource_pair_attach.c	-DBASE_VALUE=49 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	04541aa8fb474c3887f0ad940bca7a8b82ab2affd96326b6ba293db07287dc9d
+0x1522C	0x8C	src/overlays/overlay5/resource_pair_attach.c	-DBASE_VALUE=93 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b4f37c20672123559d646bc6d30a18fbbc58f76dae5224ca85cdf2ea20988252
+0x160C4	0xA0	src/overlays/overlay5/row_pointer_table_build.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c77fad1bfaac5ed62ce5d36d718265a7b0dc48425be652b16b23e68f465af447
+0x1D1DC	0x6C	src/overlays/overlay5/runtime_named_entry_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a6290daa9008ccf113054a1759fa51a3958bac1efb10c741ae09c9bc0dd95696
