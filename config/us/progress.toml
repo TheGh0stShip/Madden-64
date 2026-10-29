@@ -7,7 +7,7 @@ rom = 0x1000
 code_size = 1082496
 data_size = 155472
 libultra_vram = 0x80045928
-total_functions = 3765
+total_functions = 3757
 
 [progress]
 matched_data = 90777

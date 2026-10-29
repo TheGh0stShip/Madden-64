@@ -26,7 +26,7 @@
 0x1082C	0x8	src/overlays/overlay1/noop_f830.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x16AD8	0x8	src/overlays/overlay1/return_zero.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	648cbc77d024f6d08bc8ff4e3bdf1cebf2a933937ee1cebef4690d015808bd9c
 0x1B178	0x8	src/overlays/overlay1/noop_aa17c.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
-0x22E94	0x8	src/overlays/overlay1/noop_b1e98.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0x22CF0	0x1AC	src/overlays/overlay1/func_800B1CF4.c	--section-base=.rodata:0x80000FB8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	df76273751a805402b404548945607f26c13a6ad99de0f69c43473a010ba22af
 0x2B1A4	0x8	src/overlays/overlay1/noop_ba1a8.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x2C434	0x8	src/overlays/overlay1/noop_bb438.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x2D168	0x18	src/overlays/overlay1/noop_bc16c.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2dd9d4251f16baabaaefa264df6fc76be9cf5380c59f9fe6a4ff6580c3678b03

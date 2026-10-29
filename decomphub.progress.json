@@ -8,7 +8,7 @@
       "scope": "USA Rev 0 (N8ME) loader, resident executable, and both executable overlays; only byte-identical code compiled from .c sources counts.",
       "measurement": {
         "kind": "ratio",
-        "completed": 221208,
+        "completed": 221628,
         "total": 1082496,
         "unit": "bytes"
       }
@@ -53,7 +53,7 @@
       "measurement": {
         "kind": "ratio",
         "completed": 1428,
-        "total": 3765,
+        "total": 3757,
         "unit": "functions"
       }
     },

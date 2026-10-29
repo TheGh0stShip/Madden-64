@@ -33,7 +33,7 @@ class AttackSurfaceTests(unittest.TestCase):
 
     def test_public_function_totals_are_preserved(self):
         modules = self.analysis["functions"]["modules"]
-        self.assertEqual(sum(item["functions"] for item in modules.values()), 3765)
+        self.assertEqual(sum(item["functions"] for item in modules.values()), 3757)
         self.assertEqual(sum(item["matched_functions"] for item in modules.values()),
                          1428)
 
@@ -41,8 +41,8 @@ class AttackSurfaceTests(unittest.TestCase):
         status = self.analysis["functions"]["catalogue_status"]
         self.assertTrue(status["provisional"])
         self.assertEqual(status["program_code_bytes"], 1082496)
-        self.assertEqual(status["catalogue_body_bytes"], 1008480)
-        self.assertEqual(status["code_bytes_outside_catalogue_bodies"], 74016)
+        self.assertEqual(status["catalogue_body_bytes"], 1008724)
+        self.assertEqual(status["code_bytes_outside_catalogue_bodies"], 73772)
         self.assertEqual(status["boundary_audits"]["resident"]["in_text_data_bytes"],
                          0x38C8)
         self.assertGreater(

@@ -579,15 +579,7 @@ functions = [
     { name = "func_800B1C1C", vram = 0x800b1c1c, size = 0x54 }, # asm
     { name = "func_800B1C70", vram = 0x800b1c70, size = 0x3c }, # asm
     { name = "func_800B1CAC", vram = 0x800b1cac, size = 0x48 }, # asm
-    { name = "func_800B1D28", vram = 0x800b1d28, size = 0x1c }, # asm
-    { name = "func_800B1D58", vram = 0x800b1d58, size = 0xc }, # asm
-    { name = "func_800B1D88", vram = 0x800b1d88, size = 0x14 }, # asm
-    { name = "func_800B1D9C", vram = 0x800b1d9c, size = 0x3c }, # asm
-    { name = "func_800B1E04", vram = 0x800b1e04, size = 0xc }, # asm
-    { name = "func_800B1E18", vram = 0x800b1e18, size = 0xc }, # asm
-    { name = "func_800B1E34", vram = 0x800b1e34, size = 0xc }, # asm
-    { name = "func_800B1E4C", vram = 0x800b1e4c, size = 0x14 }, # asm
-    { name = "func_800B1E98", vram = 0x800b1e98, size = 0x8 }, # stub
+    { name = "func_800B1CF4", vram = 0x800b1cf4, size = 0x1ac }, # c
     { name = "func_800B1EA0", vram = 0x800b1ea0, size = 0x10 }, # stub
     { name = "func_800B1F30", vram = 0x800b1f30, size = 0x54 }, # asm
     { name = "func_800B1F84", vram = 0x800b1f84, size = 0x13c }, # asm

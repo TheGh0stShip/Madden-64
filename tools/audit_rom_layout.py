@@ -279,14 +279,14 @@ def build_audit(rom: bytes, main: bytes) -> dict:
                 "code_bytes": 1082496,
                 "initialized_data_bytes": 155472,
                 "bss_bytes": 82464,
-                "function_candidates": 3765,
+                "function_candidates": 3757,
                 "loader": {key: loader[key] for key in (
                     "code_bytes", "initialized_data_bytes", "function_candidates"
                 )},
                 "resident": {"code_bytes": 393288, "initialized_data_bytes": 94840,
                              "bss_bytes": 82464, "function_candidates": 1366},
                 "overlay_1": {"code_bytes": 226792, "initialized_data_bytes": 12416,
-                              "function_candidates": 960},
+                              "function_candidates": 952},
                 "overlay_4": {"code_bytes": 132728, "initialized_data_bytes": 0,
                               "function_candidates": 420},
                 "overlay_2": {"code_bytes": 204776, "initialized_data_bytes": 33930,
