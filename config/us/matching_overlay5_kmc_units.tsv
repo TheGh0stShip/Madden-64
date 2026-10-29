@@ -222,3 +222,4 @@
 0x19C54	0x98	src/overlays/overlay5/func_800DEB9C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b92ad07425f1a1eba9d9739dd772dbae5e7e455340682069792a1030c6aafbc9
 0x11344	0x98	src/overlays/overlay5/func_800D628C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e4635e6ae2f663619129180f993a3273415c17082e397199ebbbd438c8f976c6
 0x162D8	0x84	src/overlays/overlay5/func_800DB220.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	64080d798a4750d2301abaca269f66231bd55f6d7771df5acefab23062757a2a
+0x1B9FC	0xAC	src/overlays/overlay5/func_800E0944.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6cca0b04d6d1d7cb88a9e30b4205c2d721355773d9a09c0f4a930fa39ade9a83
