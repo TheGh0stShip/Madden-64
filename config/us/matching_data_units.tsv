@@ -1,13 +1,13 @@
 # Initialized-data compilation units. MODULE SOURCE SECTION VRAM SIZE SHA256 CREDITED_BYTES
 # Verified by tools/verify_data.py; CREDITED_BYTES counts only objects typed by evidence (see config/us/data_ledger.tsv).
-loader	src/data/loader/alignment_words.c	.data	0x80200654	0xC	15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b	0
-loader	src/data/loader/archive_boundary_table.c	.data	0x80200690	0x40	1b563206ca34a5e666626fc00a9d17ea4b8105d91013954d258a21297fbe4d6c	0
-overlay_1	src/data/overlay_1/tail_data.c	.data	0x800C2EC8	0x3080	c31435563b3529dc35bd031d23b4eb2104003a1a2f10be751afb343c8713390a	3141
-overlay_2	src/data/overlay_2/tail_data.c	.data	0x800BD8C8	0x848A	59467c248f2df5aba8f05c1f64f7bc1bc902b99994785872d423a589a941f4b9	19507
-overlay_5	src/data/overlay_5/tail_data.c	.data	0x800E44B4	0x3762	5e813126b248e6d350462a8b4191e181d1562bb15cb5a347060f8c59b044e402	9018
+loader	src/data/loader/alignment_words.c	.data	0x80200654	0xC	15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b	12
+loader	src/data/loader/archive_boundary_table.c	.data	0x80200690	0x40	1b563206ca34a5e666626fc00a9d17ea4b8105d91013954d258a21297fbe4d6c	64
+overlay_1	src/data/overlay_1/tail_data.c	.data	0x800C2EC8	0x3080	c31435563b3529dc35bd031d23b4eb2104003a1a2f10be751afb343c8713390a	950
+overlay_2	src/data/overlay_2/tail_data.c	.data	0x800BD8C8	0x848A	59467c248f2df5aba8f05c1f64f7bc1bc902b99994785872d423a589a941f4b9	18064
+overlay_5	src/data/overlay_5/tail_data.c	.data	0x800E44B4	0x3762	5e813126b248e6d350462a8b4191e181d1562bb15cb5a347060f8c59b044e402	9234
 metadata	src/data/metadata/program_metadata_record.c	.data	0x00000000	0x20	8a317cd5f736a2f503ffbbc8ef650cab5c3220ebc054ee624e4350eaec5d44ab	0
-resident	src/data/resident/low_header.c	.data	0x80000400	0x40	1b563206ca34a5e666626fc00a9d17ea4b8105d91013954d258a21297fbe4d6c	0
-resident	src/data/resident/low_rodata.c	.rodata	0x8000047C	0x2F9C	4e08c7b5c779de70f7d166da1f3c0b6cfae7e0b092d4a6481aab1ed600ef0341	6060
-resident	src/data/resident/low_data.c	.data	0x80003418	0x15D8	12cf5d10e0140da491f4d0dcb7a7f970471cf92b6bbb76b18cbf414549637cdd	4992
-resident	src/data/resident/data.c	.data	0x800649FC	0x11304	19d77647b10ca3e88d5b362e09ea9b003dd4b6b28ad230d033e2767e85ab75d3	47699
-resident	src/data/resident/rodata.c	.rodata	0x80075D00	0x19C0	f4f8bff0ed7d333c94dc9bad77846d8208cf3a5f2908afdd56da1f677ec34575	360
+resident	src/data/resident/low_header.c	.data	0x80000400	0x40	1b563206ca34a5e666626fc00a9d17ea4b8105d91013954d258a21297fbe4d6c	64
+resident	src/data/resident/low_rodata.c	.rodata	0x8000047C	0x2F9C	4e08c7b5c779de70f7d166da1f3c0b6cfae7e0b092d4a6481aab1ed600ef0341	10224
+resident	src/data/resident/low_data.c	.data	0x80003418	0x15D8	12cf5d10e0140da491f4d0dcb7a7f970471cf92b6bbb76b18cbf414549637cdd	4988
+resident	src/data/resident/data.c	.data	0x800649FC	0x11304	19d77647b10ca3e88d5b362e09ea9b003dd4b6b28ad230d033e2767e85ab75d3	25528
+resident	src/data/resident/rodata.c	.rodata	0x80075D00	0x19C0	f4f8bff0ed7d333c94dc9bad77846d8208cf3a5f2908afdd56da1f677ec34575	6360
