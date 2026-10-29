@@ -198,3 +198,6 @@
 0x15C20	0xEC	src/overlays/overlay5/indexed_resource_label_apply.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f192d60372dcf2373bd469094b3c2906f63ae3ad4fff6c169fbb26282c3d7a71
 0x16164	0xE4	src/overlays/overlay5/runtime_window_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c38ac136afffebc6c6f34379bc057a3047144475609e418ea10c8a39c0b93764
 0x16530	0xE4	src/overlays/overlay5/runtime_window_rebuild.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ab52400f1df65cf98b29a83a789967e34db9964c564322d1f896d7a57b4b1744
+0x16B28	0xFC	src/overlays/overlay5/runtime_horizontal_previous.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a98f7da92661c5bffa491b76bd3ee084f9842927800eada445a3b21c708e27ba
+0x16D58	0xE8	src/overlays/overlay5/runtime_vertical_previous.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a7d411d4c65fc7267126938907cd5089265aba1a6ff9bd85afb34b222ce22f05
+0x16E40	0xF8	src/overlays/overlay5/runtime_vertical_next.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	19a5465477aac092bb29a5cde61715887b7c086c8e7abc278ba75c472143c32c
