@@ -45,31 +45,31 @@ heuristic boundary catalogues and are not equivalent measures.
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 0 | 632 | 0 |
 | overlay_1 | 951 | 390 | 192,672 | 62,936 |
-| overlay_2 | 606 | 8 | 198,816 | 64 |
+| overlay_2 | 589 | 381 | 199,068 | 65,060 |
 | overlay_4 | 420 | 65 | 115,116 | 6,260 |
-| overlay_5 | 392 | 202 | 123,624 | 18,672 |
+| overlay_5 | 392 | 203 | 123,624 | 18,988 |
 | resident | 1,366 | 849 | 378,068 | 143,792 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 365 | 158 | 4,184 | 1,852 |
-| 000-0032 | 242 | 113 | 6,360 | 2,924 |
-| 000-0064 | 479 | 174 | 23,828 | 8,600 |
-| 000-0128 | 720 | 327 | 67,804 | 31,036 |
-| 000-0256 | 797 | 500 | 147,916 | 93,712 |
-| 000-0512 | 668 | 532 | 242,240 | 194,344 |
-| 000-1024 | 312 | 281 | 219,520 | 198,888 |
-| 1025+ | 157 | 141 | 297,076 | 245,848 |
+| 000-0016 | 349 | 141 | 4,044 | 1,696 |
+| 000-0032 | 239 | 100 | 6,264 | 2,560 |
+| 000-0064 | 480 | 116 | 23,868 | 5,736 |
+| 000-0128 | 719 | 210 | 67,824 | 19,912 |
+| 000-0256 | 798 | 380 | 148,044 | 71,692 |
+| 000-0512 | 669 | 477 | 242,540 | 175,464 |
+| 000-1024 | 312 | 271 | 219,520 | 192,512 |
+| 1025+ | 157 | 140 | 297,076 | 242,572 |
 
-- Exact duplicate body families: 39
-- Functions participating in those families: 189
-- Matched-to-unmatched transferable families retained: 4
+- Exact duplicate body families: 36
+- Functions participating in those families: 181
+- Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 1,082,496
-- Bytes assigned to provisional candidate bodies: 1,008,928
-- Code bytes outside provisional candidate bodies: 73,568
+- Bytes assigned to provisional candidate bodies: 1,009,180
+- Code bytes outside provisional candidate bodies: 73,316
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally
@@ -82,7 +82,7 @@ register dependency, and no contradictory boundary finding.
 |---|---:|---:|---:|---:|---:|
 | resident | 1,366 | 1,366 | 1 | 14,536 | 5 |
 | overlay_1 | 1,071 | 951 | 231 | 43,696 | 987 |
-| overlay_2 | 606 | 606 | 0 | 0 | 129 |
+| overlay_2 | 606 | 589 | 0 | 0 | 129 |
 | overlay_4 | 420 | 420 | 87 | 17,500 | 348 |
 | overlay_5 | 408 | 392 | 1 | 16 | 75 |
 
