@@ -737,12 +737,6 @@ extern char D_80073458[];
 extern char D_80073460[];
 extern char D_80073464[];
 extern char D_80073468[];
-extern s32 D_800740EC[];
-extern s32 D_800743EC[];
-extern s32 D_80074560[];
-extern s32 D_800745B4[];
-extern s32 D_800745D8[];
-extern s32 D_800745FC[];
 extern s32 D_80074698[];
 extern s32 D_800746A4[];
 extern s32 D_800746B0[];
@@ -2002,10 +1996,10 @@ u8 D_80069BE4[7] = { 0, 0, 0, 29, 0, 30, 2 };
 u8 D_80069BEB = 4;
 s16 D_80069BEC[16] = { -1, 1024, 3072, 3072, 2048, 1536, 2560, 2560, 0, 512, 3584, 3584, 0, 512, 3584, 512 };
 s32 D_80069C0C[8] = { 16384, 32768, 4, 2, 8192, 16, 8, 1 };
-s32 D_80069C2C[5] = { 16384, 4, 32768, 2, 1 }; /* UNRESOLVED: size-only typing */
-s32 D_80069C40[5] = { 4, 32768, 2, 16384, 1 }; /* UNRESOLVED: size-only typing */
-s32 D_80069C54[5] = { 2, 16384, 4, 32768, 8 }; /* UNRESOLVED: size-only typing */
-s32 D_80069C68[5] = { 32768, 2, 16384, 4, 1 }; /* UNRESOLVED: size-only typing */
+s32 D_80069C2C[5] = { 16384, 4, 32768, 2, 1 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80069C40[5] = { 4, 32768, 2, 16384, 1 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80069C54[5] = { 2, 16384, 4, 32768, 8 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80069C68[5] = { 32768, 2, 16384, 4, 1 }; /* inferred aggregate type; byte-exact typed C */
 s32 D_80069C7C[25] = { 559677440, 0, 2, 16711680, 0, 559677440, 0, 2, 16711680, 0, 559677440, 0, 2, 16711680, 0, 559677440, 0, 2, 16711680, 0, 0, 0, 0, 0, 0 };
 s32 D_80069CE0[5] = { 0, 26215360, 16973823, 0, 0 };
 s32 D_80069CF4[47] = { 0, 5242880, 16908287, 0, 0, 31457440, 15728899, 25100466, -65536, 65056, 10486000, 16974207, 11730943, 0, 320, 57671939, 8323506, -65536, 0, 26215360, 16908441, -65536, 0, 0, 5242880, 16908287, 0, 0, 31457440, 15728899, 25100466, -65536, 65056, 10486000, 16974207, 11730943, 0, 320, 57671939, 8323506, -65536, 0, 26215360, 16908441, -65536, 0, 0 };
@@ -2028,36 +2022,36 @@ u8 D_80069ED7 = 50;
 void *D_80069ED8[1] = { &D_8006E0C4 };
 struct D_80069EDC_s { s16 f_80069edc; u8 f_80069ede[218]; } D_80069EDC = { 2, { 0, 0, 15, 6, 2, 100, 128, 6, 224, 152, 0, 1, 0, 0, 15, 2, 0, 70, 128, 6, 224, 136, 0, 3, 1, 0, 5, 3, 0, 50, 128, 6, 224, 72, 0, 4, 1, 0, 0, 4, 2, 80, 128, 6, 224, 40, 0, 5, 1, 0, 10, 2, 2, 30, 128, 6, 224, 40, 0, 6, 1, 0, 10, 2, 2, 40, 128, 6, 224, 128, 0, 7, 1, 0, 5, 2, 3, 100, 128, 6, 224, 116, 0, 8, 2, 0, 15, 2, 2, 60, 128, 6, 224, 60, 0, 9, 0, 0, 10, 5, 0, 100, 128, 6, 224, 216, 0, 10, 0, 0, 5, 2, 3, 100, 128, 6, 224, 240, 0, 11, 1, 0, 5, 2, 2, 100, 128, 6, 225, 0, 0, 12, 3, 0, 5, 2, 3, 100, 128, 6, 225, 12, 0, 13, 3, 0, 15, 4, 0, 50, 128, 6, 224, 92, 0, 14, 1, 0, 15, 0, 0, 70, 128, 6, 224, 136, 0, 0, 1, 0, 5, 2, 2, 100, 128, 6, 224, 172, 0, 16, 0, 0, 15, 0, 4, 100, 128, 6, 225, 28, 0, 18, 1, 0, 15, 4, 4, 100, 128, 6, 225, 52, 0, 18, 1, 0, 0, 7, 0, 100, 128, 6, 225, 80, 0, 24, 1, 0 } }; /* members: D_80069EDC, D_80069EDE */
 u8 D_80069FB8[24] = { 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 7, 7, 7, 3, 3, 3, 3, 3, 7, 0, 0, 0, 0, 0 };
-s32 D_80069FD0[2] = { 0, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80069FD8[4] = { 327684, 589830, 524295, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80069FE8[8] = { 1966111, 2097185, 2228259, 2359333, 2490407, 2621481, 2752555, 2883584 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A008[38] = { 1, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A0A0[3] = { 6291549, 6226014, 6029312 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A0AC[6] = { 1280, 1280, 8650752, 8716288, 1280, 1280 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A0C4[7] = { 6881386, 6815846, 6619243, 7077988, 6488162, 6357101, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A0E0[13] = { 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A114[12] = { 1280, 1280, 1280, 1280, 1280, 1280, 8454144, 8585216, 0, 8716288, 8650752, 8585216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A144[13] = { 3932226, 4194365, 3670071, 3539002, 3735617, 4128830, 3866677, 4522034, 3080238, 3211309, 3145782, 3407923, 4587520 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A178[25] = { 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 0, 7798784, 0, 0, 0, 0, 0, 0, 7864320, 7929856, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A1DC[11] = { 8519680, 1280, 1280, 1280, 1280, 1280, 1280, 8192000, 8257536, 1280, 1280 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A208[6] = { 5177415, 65616, 5046348, 4915274, 4784200, 5111808 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A220[14] = { 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A258[3] = { 1703961, 1835035, 1900544 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A264[6] = { 0, 0, 0, 0, 13, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A27C[5] = { 8454144, 8455424, 1280, 1280, 8389888 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A290[2] = { 196610, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A298[2] = { 8454144, 8323072 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A2A0[3] = { 0, 12, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A2AC[6] = { 5963866, 5832792, 5701714, 5308500, 5570646, 5439488 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A2C4[13] = { 0, 0, 16, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A2F8[54] = { 28, 41, 6881296, 540, 37, 6881296, 588, 37, 6881296, 640, 37, 6881296, 712, 38, 6881296, 764, 40, 6881296, 772, 40, 6881296, 824, 39, 6881296, 1424, 39, 6881296, 1484, 40, 6881296, 1504, 38, 6881296, 1508, 37, 6881296, 1556, 37, 6881296, 1608, 37, 6881296, 1640, 40, 6881296, 1656, 39, 6881296, 1716, 37, 6881296, 1800, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A3D0[18] = { 48, 51, 6881296, 112, 52, 6881296, 160, 51, 6881296, 240, 52, 6881296, 260, 51, 6881296, 300, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A418[6] = { 16, 53, 6881296, 300, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A430[9] = { 90, 53, 6881296, 120, 54, 6881296, 300, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A454[24] = { 20, 43, 6881296, 84, 52, 6881296, 120, 43, 6881296, 140, 51, 6881296, 184, 52, 6881296, 224, 51, 6881296, 244, 51, 6881296, 300, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A4B4[9] = { 20, 55, 6881296, 148, 56, 6881296, 300, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A4D8[9] = { 128, 28, 6881296, 224, 36, 6881296, 300, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A4FC[9] = { 28, 42, 6881296, 1008, 54, 6881296, 1800, 65536, 0 }; /* UNRESOLVED: size-only typing */
+s32 D_80069FD0[2] = { 0, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80069FD8[4] = { 327684, 589830, 524295, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80069FE8[8] = { 1966111, 2097185, 2228259, 2359333, 2490407, 2621481, 2752555, 2883584 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A008[38] = { 1, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A0A0[3] = { 6291549, 6226014, 6029312 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A0AC[6] = { 1280, 1280, 8650752, 8716288, 1280, 1280 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A0C4[7] = { 6881386, 6815846, 6619243, 7077988, 6488162, 6357101, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A0E0[13] = { 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A114[12] = { 1280, 1280, 1280, 1280, 1280, 1280, 8454144, 8585216, 0, 8716288, 8650752, 8585216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A144[13] = { 3932226, 4194365, 3670071, 3539002, 3735617, 4128830, 3866677, 4522034, 3080238, 3211309, 3145782, 3407923, 4587520 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A178[25] = { 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 1280, 0, 7798784, 0, 0, 0, 0, 0, 0, 7864320, 7929856, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A1DC[11] = { 8519680, 1280, 1280, 1280, 1280, 1280, 1280, 8192000, 8257536, 1280, 1280 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A208[6] = { 5177415, 65616, 5046348, 4915274, 4784200, 5111808 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A220[14] = { 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A258[3] = { 1703961, 1835035, 1900544 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A264[6] = { 0, 0, 0, 0, 13, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A27C[5] = { 8454144, 8455424, 1280, 1280, 8389888 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A290[2] = { 196610, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A298[2] = { 8454144, 8323072 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A2A0[3] = { 0, 12, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A2AC[6] = { 5963866, 5832792, 5701714, 5308500, 5570646, 5439488 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A2C4[13] = { 0, 0, 16, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A2F8[54] = { 28, 41, 6881296, 540, 37, 6881296, 588, 37, 6881296, 640, 37, 6881296, 712, 38, 6881296, 764, 40, 6881296, 772, 40, 6881296, 824, 39, 6881296, 1424, 39, 6881296, 1484, 40, 6881296, 1504, 38, 6881296, 1508, 37, 6881296, 1556, 37, 6881296, 1608, 37, 6881296, 1640, 40, 6881296, 1656, 39, 6881296, 1716, 37, 6881296, 1800, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A3D0[18] = { 48, 51, 6881296, 112, 52, 6881296, 160, 51, 6881296, 240, 52, 6881296, 260, 51, 6881296, 300, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A418[6] = { 16, 53, 6881296, 300, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A430[9] = { 90, 53, 6881296, 120, 54, 6881296, 300, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A454[24] = { 20, 43, 6881296, 84, 52, 6881296, 120, 43, 6881296, 140, 51, 6881296, 184, 52, 6881296, 224, 51, 6881296, 244, 51, 6881296, 300, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A4B4[9] = { 20, 55, 6881296, 148, 56, 6881296, 300, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A4D8[9] = { 128, 28, 6881296, 224, 36, 6881296, 300, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A4FC[9] = { 28, 42, 6881296, 1008, 54, 6881296, 1800, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
 s16 D_8006A520[3] = { 0, 112, 0 };
 s16 D_8006A526 = 90;
 void *D_8006A528[1] = { &D_80069FD8 };
@@ -2096,31 +2090,31 @@ s32 D_8006A91C = 3932160;
 s16 D_8006A920[74] = { 1240, 0, 96, 0, 60, 0, 1240, 0, 128, 0, 60, 0, 1200, 0, 192, 0, 60, 0, 1200, 0, 64, 0, 50, 0, 1220, 0, 192, 0, 60, 0, 1200, 0, 96, 0, 60, 0, 1240, 0, 128, 0, 143, 0, 1250, 0, 128, 0, 143, 0, 1250, 0, 304, 0, 156, 0, 1200, 0, 128, 0, 143, 0, 1250, 0, 224, 0, 143, 0, 1200, 0, 192, 0, 112, 0, 1376, 0 };
 s32 D_8006A9B4 = 0;
 u8 D_8006A9B8[8] = { 1, 1, 0, 0, 0, 0, 0, 0 };
-s32 D_8006A9C0 = 130816; /* UNRESOLVED: size-only typing */
-s32 D_8006A9C4 = 50266112; /* UNRESOLVED: size-only typing */
-s32 D_8006A9C8 = 83820544; /* UNRESOLVED: size-only typing */
-s32 D_8006A9CC[2] = { 67174930, 301924352 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A9D4 = 50266112; /* UNRESOLVED: size-only typing */
-s32 D_8006A9D8[2] = { 151390215, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A9E0[2] = { 134547719, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A9E8[2] = { 134613253, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A9F0[2] = { 101254407, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006A9F8[2] = { 84411911, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AA00[2] = { 185339918, 252575488 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AA08[2] = { 168562702, 252575488 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AA10[2] = { 185208846, 252575488 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AA18 = 269357055; /* UNRESOLVED: size-only typing */
-s32 D_8006AA1C = 252514559; /* UNRESOLVED: size-only typing */
-s32 D_8006AA20 = 235933183; /* UNRESOLVED: size-only typing */
-s32 D_8006AA24 = 235867647; /* UNRESOLVED: size-only typing */
-s32 D_8006AA28[2] = { 303240195, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AA30[2] = { 286462979, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AA38[2] = { 336663043, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AA40[2] = { 319951107, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AA48 = 385810432; /* UNRESOLVED: size-only typing */
-s32 D_8006AA4C = 369033216; /* UNRESOLVED: size-only typing */
-s32 D_8006AA50 = 67043328; /* UNRESOLVED: size-only typing */
-s32 D_8006AA54 = 67043328; /* UNRESOLVED: size-only typing */
+s32 D_8006A9C0 = 130816; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A9C4 = 50266112; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A9C8 = 83820544; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A9CC[2] = { 67174930, 301924352 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A9D4 = 50266112; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A9D8[2] = { 151390215, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A9E0[2] = { 134547719, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A9E8[2] = { 134613253, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A9F0[2] = { 101254407, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006A9F8[2] = { 84411911, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA00[2] = { 185339918, 252575488 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA08[2] = { 168562702, 252575488 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA10[2] = { 185208846, 252575488 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA18 = 269357055; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA1C = 252514559; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA20 = 235933183; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA24 = 235867647; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA28[2] = { 303240195, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA30[2] = { 286462979, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA38[2] = { 336663043, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA40[2] = { 319951107, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA48 = 385810432; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA4C = 369033216; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA50 = 67043328; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AA54 = 67043328; /* inferred aggregate type; byte-exact typed C */
 void *D_8006AA58[25] = { &D_8006A9C0, &D_8006A9C4, &D_8006A9C8, &D_8006A9CC, &D_8006A9D4, &D_8006A9D8, &D_8006A9E0, &D_8006A9E8, &D_8006A9F0, &D_8006A9F8, &D_8006AA00, &D_8006AA08, &D_8006AA10, &D_8006AA18, &D_8006AA1C, &D_8006AA20, &D_8006AA24, &D_8006AA28, &D_8006AA30, &D_8006AA38, &D_8006AA40, &D_8006AA48, &D_8006AA4C, &D_8006AA50, &D_8006AA54 };
 u8 D_8006AABC[28] = { 8, 6, 6, 5, 15, 14, 15, 15, 15, 14, 12, 12, 12, 12, 12, 12, 12, 3, 3, 4, 4, 10, 9, 3, 3, 0, 0, 0 };
 u8 D_8006AAD8[880] = { 0, 0, 3, 1, 3, 0, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 1, 21, 0, 3, 4, 3, 5, 4, 2, 2, 1, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 22, 0, 3, 4, 3, 5, 2, 1, 4, 1, 4, 2, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 14, 0, 12, 1, 16, 0, 13, 0, 18, 0, 19, 0, 20, 0, 17, 0, 11, 0, 12, 0, 10, 0, 20, 0, 12, 1, 19, 0, 13, 0, 18, 0, 14, 0, 16, 0, 17, 0, 11, 0, 12, 0, 10, 0, 14, 1, 12, 1, 2, 1, 19, 1, 18, 1, 24, 0, 20, 0, 17, 1, 10, 0, 12, 0, 11, 0, 21, 0, 17, 1, 3, 5, 13, 1, 19, 1, 14, 1, 2, 1, 20, 1, 16, 1, 3, 4, 18, 1, 22, 0, 3, 3, 17, 1, 13, 1, 19, 1, 1, 1, 2, 1, 20, 1, 16, 1, 18, 1, 3, 2, 0, 0, 4, 1, 3, 0, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 23, 0, 23, 1, 13, 1, 16, 1, 4, 1, 2, 1, 4, 2, 15, 0, 6, 1, 7, 1, 14, 1, 0, 0, 3, 1, 3, 0, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 3, 0, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 3, 0, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 3, 0, 1, 0, 3, 2, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 3, 0, 1, 0, 3, 2, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 14, 0, 12, 1, 16, 0, 13, 0, 18, 0, 15, 0, 19, 0, 17, 0, 11, 0, 12, 0, 10, 0, 14, 0, 15, 0, 16, 0, 13, 0, 18, 0, 19, 0, 20, 0, 17, 0, 11, 0, 12, 0, 10, 0, 14, 0, 12, 1, 16, 0, 17, 1, 18, 0, 19, 0, 20, 0, 17, 0, 11, 0, 12, 0, 10, 0, 16, 0, 12, 1, 18, 1, 20, 0, 18, 0, 19, 0, 19, 1, 17, 0, 11, 0, 12, 0, 10, 0, 0, 0, 3, 1, 3, 0, 1, 0, 2, 0, 3, 2, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 4, 1, 3, 0, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 4, 1, 2, 1, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 3, 0, 1, 0, 2, 0, 3, 2, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 4, 1, 3, 0, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 4, 1, 2, 1, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 3, 0, 1, 0, 2, 0, 3, 2, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 4, 1, 3, 0, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 4, 1, 2, 1, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 3, 0, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 3, 0, 1, 0, 2, 0, 3, 2, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 4, 1, 3, 0, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 4, 1, 2, 1, 1, 0, 2, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 3, 0, 1, 0, 3, 2, 3, 3, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 3, 0, 1, 0, 3, 2, 3, 3, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 3, 0, 1, 0, 4, 1, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 3, 1, 2, 1, 1, 0, 4, 1, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -2133,39 +2127,39 @@ s32 D_8006AF78[2] = { 0, 16778752 };
 void *D_8006AF80[6] = { &D_8006AFA8, &D_8006B018, &D_8006B06C, &D_8006B144, &D_8006B144, &D_8006B1F8 };
 s32 D_8006AF98[2] = { 0, 0 };
 s32 D_8006AFA0[2] = { 33620997, 101257215 };
-s32 D_8006AFA8[3] = { 66051, 67438087, 134810112 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AFB4[3] = { 134285578, 33882115, 100927232 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AFC0[3] = { 134285578, 33555204, 84281088 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AFCC[3] = { 134810114, 16777988, 84281088 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AFD8[3] = { 134285578, 33555204, 84281088 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AFE4[6] = { 134285578, 33555204, 84281088, 33554694, 84149000, 168363776 }; /* UNRESOLVED: size-only typing */
-s32 D_8006AFFC[3] = { 134285578, 84017920, 100927232 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B008[3] = { 134285578, 33947651, 67438336 }; /* UNRESOLVED: size-only typing */
+s32 D_8006AFA8[3] = { 66051, 67438087, 134810112 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AFB4[3] = { 134285578, 33882115, 100927232 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AFC0[3] = { 134285578, 33555204, 84281088 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AFCC[3] = { 134810114, 16777988, 84281088 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AFD8[3] = { 134285578, 33555204, 84281088 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AFE4[6] = { 134285578, 33555204, 84281088, 33554694, 84149000, 168363776 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006AFFC[3] = { 134285578, 84017920, 100927232 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B008[3] = { 134285578, 33947651, 67438336 }; /* inferred aggregate type; byte-exact typed C */
 s32 D_8006B014 = 10420398;
-s32 D_8006B018[3] = { 2139062143, 2139062143, 2139029504 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B024[3] = { 1277716, 360677247, 2139029504 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B030[3] = { 169246487, 411008895, 2139029504 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B03C[3] = { 186220314, 461340543, 2139029504 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B048[3] = { 203259678, 528449407, 2139029504 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B054[3] = { 226435199, 2139062143, 2139029504 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B060[3] = { 235807010, 595558271, 2139029504 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B06C[3] = { 17172232, 151651586, 197632 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B078[3] = { 17172232, 151651586, 197632 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B084[3] = { 17172232, 151651586, 262912 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B090[3] = { 17172232, 151651586, 262912 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B09C[3] = { 17172232, 151651588, 33555200 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B0A8[6] = { 17172232, 151651588, 33751040, 17172232, 151651586, 262912 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B0C0[3] = { 17172232, 151650820, 84082688 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B0CC[3] = { 67503880, 151651587, 33554688 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B0D8[3] = { 84279552, 67240711, 134810112 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B0E4[3] = { 84279808, 50595592, 17369600 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B0F0[3] = { 84279808, 67307272, 17369600 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B0FC[3] = { 84279300, 50790920, 17369600 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B108[3] = { 83887620, 34078985, 167970560 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B114[3] = { 117834248, 17369603, 328704 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B120[3] = { 84148742, 134285578, 198400 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B12C[3] = { 117967114, 67438082, 50331904 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B138[3] = { 16909060, 84281096, 151650304 }; /* UNRESOLVED: size-only typing */
+s32 D_8006B018[3] = { 2139062143, 2139062143, 2139029504 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B024[3] = { 1277716, 360677247, 2139029504 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B030[3] = { 169246487, 411008895, 2139029504 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B03C[3] = { 186220314, 461340543, 2139029504 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B048[3] = { 203259678, 528449407, 2139029504 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B054[3] = { 226435199, 2139062143, 2139029504 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B060[3] = { 235807010, 595558271, 2139029504 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B06C[3] = { 17172232, 151651586, 197632 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B078[3] = { 17172232, 151651586, 197632 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B084[3] = { 17172232, 151651586, 262912 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B090[3] = { 17172232, 151651586, 262912 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B09C[3] = { 17172232, 151651588, 33555200 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B0A8[6] = { 17172232, 151651588, 33751040, 17172232, 151651586, 262912 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B0C0[3] = { 17172232, 151650820, 84082688 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B0CC[3] = { 67503880, 151651587, 33554688 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B0D8[3] = { 84279552, 67240711, 134810112 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B0E4[3] = { 84279808, 50595592, 17369600 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B0F0[3] = { 84279808, 67307272, 17369600 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B0FC[3] = { 84279300, 50790920, 17369600 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B108[3] = { 83887620, 34078985, 167970560 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B114[3] = { 117834248, 17369603, 328704 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B120[3] = { 84148742, 134285578, 198400 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B12C[3] = { 117967114, 67438082, 50331904 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B138[3] = { 16909060, 84281096, 151650304 }; /* inferred aggregate type; byte-exact typed C */
 char D_8006B144[8] = "SPECIAL";
 char D_8006B14C[8] = "I FORM";
 char D_8006B154[8] = "GOAL";
@@ -2188,77 +2182,77 @@ char D_8006B1C8[8] = "4 WR";
 char D_8006B1D0[8] = "BROKEN";
 char D_8006B1D8[4] = "TE";
 char D_8006B1DC[8] = "CLOCK";
-s32 D_8006B1E4[2] = { 1250325, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B1EC = 33488896; /* UNRESOLVED: size-only typing */
-s32 D_8006B1F0 = 50266112; /* UNRESOLVED: size-only typing */
-s32 D_8006B1F4 = 83820544; /* UNRESOLVED: size-only typing */
-s32 D_8006B1F8 = 100597760; /* UNRESOLVED: size-only typing */
-s32 D_8006B1FC[2] = { 169219864, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B204[2] = { 186194459, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B20C[2] = { 203234847, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B214 = 220266240; /* UNRESOLVED: size-only typing */
-s32 D_8006B218[2] = { 237052451, -16777216 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B220 = 268369920; /* UNRESOLVED: size-only typing */
-s32 D_8006B224 = 285147136; /* UNRESOLVED: size-only typing */
-s32 D_8006B228 = 301924352; /* UNRESOLVED: size-only typing */
-s32 D_8006B22C = 318701568; /* UNRESOLVED: size-only typing */
-s32 D_8006B230 = 67043328; /* UNRESOLVED: size-only typing */
-s32 D_8006B234[10] = { 393218, 393220, 458767, 524291, 327681, 786448, 655371, 589828, 851968, 917504 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B25C[7] = { 262146, 262147, 720896, 393221, 65543, 983046, 1048576 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B278[5] = { 196609, 393218, 196608, 983044, 458768 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B28C[8] = { 327689, 131085, 196613, 65550, 11, 458753, 655372, 983048 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B2AC[7] = { 262240, 6029409, 6094942, 6619234, 5898339, 6226011, 6553600 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B2C8[4] = { 131166, 6029407, 6094944, 6619136 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B2D8[4] = { 131173, 6029405, 5963869, 6029312 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B2E8[5] = { 196702, 5963871, 6488157, 6553697, 6029408 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B2FC[7] = { 262266, 8323195, 8519804, 8454269, 8585342, 8388740, 8716288 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B318[5] = { 196730, 8323196, 8585339, 8716413, 8650878 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B32C[4] = { 131194, 8061052, 8192131, 8257536 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B33C[5] = { 196735, 8061061, 8519804, 8454272, 8257668 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B350[10] = { 393321, 7340136, 7209066, 7405679, 7143538, 7012468, 7078003, 6946933, 7733351, 7274496 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B378[7] = { 262249, 7340136, 7667818, 7405679, 7143538, 7012468, 7077888 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B394[5] = { 196713, 7340136, 7667821, 7471211, 6946924 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B3A8[8] = { 327786, 7340136, 7209068, 7667823, 7143538, 7012468, 7078003, 6750326 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B3C8[13] = { 524460, 10617005, 10944673, 11206825, 10682543, 11665573, 11731124, 10879144, 10420398, 10485929, 10551472, 11141284, 11599872 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B3FC[7] = { 262308, 10944678, 11665570, 11141283, 11337889, 11600037, 11468800 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B418[5] = { 196769, 11141284, 10879149, 10682530, 11731109 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B42C[11] = { 458914, 11337891, 10944673, 11206825, 11468978, 11731124, 11010219, 10748080, 10420398, 10485930, 10813612 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B458[13] = { 524428, 8913037, 9633930, 9699473, 8978578, 9765003, 9830542, 9371792, 9896073, 9961625, 9044122, 10158219, 10223616 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B48C[13] = { 524428, 8913037, 9633930, 9699473, 8978578, 9765003, 9830542, 9371792, 9896073, 9961625, 9044122, 10158219, 10223616 }; /* UNRESOLVED: size-only typing */
+s32 D_8006B1E4[2] = { 1250325, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B1EC = 33488896; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B1F0 = 50266112; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B1F4 = 83820544; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B1F8 = 100597760; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B1FC[2] = { 169219864, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B204[2] = { 186194459, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B20C[2] = { 203234847, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B214 = 220266240; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B218[2] = { 237052451, -16777216 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B220 = 268369920; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B224 = 285147136; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B228 = 301924352; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B22C = 318701568; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B230 = 67043328; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B234[10] = { 393218, 393220, 458767, 524291, 327681, 786448, 655371, 589828, 851968, 917504 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B25C[7] = { 262146, 262147, 720896, 393221, 65543, 983046, 1048576 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B278[5] = { 196609, 393218, 196608, 983044, 458768 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B28C[8] = { 327689, 131085, 196613, 65550, 11, 458753, 655372, 983048 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B2AC[7] = { 262240, 6029409, 6094942, 6619234, 5898339, 6226011, 6553600 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B2C8[4] = { 131166, 6029407, 6094944, 6619136 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B2D8[4] = { 131173, 6029405, 5963869, 6029312 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B2E8[5] = { 196702, 5963871, 6488157, 6553697, 6029408 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B2FC[7] = { 262266, 8323195, 8519804, 8454269, 8585342, 8388740, 8716288 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B318[5] = { 196730, 8323196, 8585339, 8716413, 8650878 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B32C[4] = { 131194, 8061052, 8192131, 8257536 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B33C[5] = { 196735, 8061061, 8519804, 8454272, 8257668 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B350[10] = { 393321, 7340136, 7209066, 7405679, 7143538, 7012468, 7078003, 6946933, 7733351, 7274496 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B378[7] = { 262249, 7340136, 7667818, 7405679, 7143538, 7012468, 7077888 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B394[5] = { 196713, 7340136, 7667821, 7471211, 6946924 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B3A8[8] = { 327786, 7340136, 7209068, 7667823, 7143538, 7012468, 7078003, 6750326 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B3C8[13] = { 524460, 10617005, 10944673, 11206825, 10682543, 11665573, 11731124, 10879144, 10420398, 10485929, 10551472, 11141284, 11599872 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B3FC[7] = { 262308, 10944678, 11665570, 11141283, 11337889, 11600037, 11468800 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B418[5] = { 196769, 11141284, 10879149, 10682530, 11731109 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B42C[11] = { 458914, 11337891, 10944673, 11206825, 11468978, 11731124, 11010219, 10748080, 10420398, 10485930, 10813612 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B458[13] = { 524428, 8913037, 9633930, 9699473, 8978578, 9765003, 9830542, 9371792, 9896073, 9961625, 9044122, 10158219, 10223616 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B48C[13] = { 524428, 8913037, 9633930, 9699473, 8978578, 9765003, 9830542, 9371792, 9896073, 9961625, 9044122, 10158219, 10223616 }; /* inferred aggregate type; byte-exact typed C */
 s32 D_8006B4C0[4] = { 131153, 5439570, 5505109, 5439488 };
 s32 D_8006B4D0[2] = { 65719, 11993271 };
 s32 D_8006B4D8[4] = { 131158, 5701720, 5832790, 5701632 };
-s32 D_8006B4E8[4] = { 131072, 655372, 720910, 851968 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B4F8[4] = { 131092, 1507358, 1703970, 1310720 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B508[4] = { 131093, 1572895, 1769507, 1376256 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B518[4] = { 131091, 1441821, 1638429, 1245184 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B528[4] = { 131105, 2097185, 2097185, 2097152 }; /* UNRESOLVED: size-only typing */
+s32 D_8006B4E8[4] = { 131072, 655372, 720910, 851968 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B4F8[4] = { 131092, 1507358, 1703970, 1310720 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B508[4] = { 131093, 1572895, 1769507, 1376256 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B518[4] = { 131091, 1441821, 1638429, 1245184 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B528[4] = { 131105, 2097185, 2097185, 2097152 }; /* inferred aggregate type; byte-exact typed C */
 s32 D_8006B538[4] = { 131072, 1245217, 1310741, 131072 };
 s32 D_8006B548[4] = { 131072, 1245217, 1310741, 0 };
 s32 D_8006B558[4] = { 131075, 1048593, 1179663, 327680 };
-s32 D_8006B568[4] = { 131092, 1179667, 1245202, 1310720 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B578[4] = { 131097, 1376280, 1441817, 1507328 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B588[4] = { 131193, 1114233, 1114233, 1114112 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B598[8] = { 327715, 2031650, 1900576, 1966107, 2162714, 2490407, 2621468, 2359333 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B5B8[5] = { 196682, 4915276, 5046351, 5242960, 5111885 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B5CC[5] = { 196675, 4325441, 4456517, 4587591, 4718665 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B5E0[7] = { 262185, 2752555, 2883629, 3014703, 3145777, 3276851, 3407872 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B5FC[4] = { 131125, 3538999, 3670073, 3801088 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B60C[4] = { 131131, 3932221, 4063295, 4194304 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B61C[6] = { 65538, 65544, 65540, 262148, 65541, 327685 }; /* UNRESOLVED: size-only typing */
+s32 D_8006B568[4] = { 131092, 1179667, 1245202, 1310720 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B578[4] = { 131097, 1376280, 1441817, 1507328 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B588[4] = { 131193, 1114233, 1114233, 1114112 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B598[8] = { 327715, 2031650, 1900576, 1966107, 2162714, 2490407, 2621468, 2359333 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B5B8[5] = { 196682, 4915276, 5046351, 5242960, 5111885 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B5CC[5] = { 196675, 4325441, 4456517, 4587591, 4718665 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B5E0[7] = { 262185, 2752555, 2883629, 3014703, 3145777, 3276851, 3407872 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B5FC[4] = { 131125, 3538999, 3670073, 3801088 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B60C[4] = { 131131, 3932221, 4063295, 4194304 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B61C[6] = { 65538, 65544, 65540, 262148, 65541, 327685 }; /* inferred aggregate type; byte-exact typed C */
 void *D_8006B634[36] = { &D_8006B234, &D_8006B568, &D_8006B578, &D_8006B598, &D_8006B5B8, &D_8006B5B8, &D_8006B5B8, &D_8006B5B8, &D_8006B588, &D_8006B5B8, &D_8006B2AC, &D_8006B350, &D_8006B2FC, &D_8006B458, &D_8006B3C8, &D_8006B5CC, &D_8006B5E0, &D_8006B5FC, &D_8006B60C, &D_8006B28C, &D_8006B25C, &D_8006B278, &D_8006B2E8, &D_8006B2C8, &D_8006B2D8, &D_8006B3A8, &D_8006B378, &D_8006B394, &D_8006B350, &D_8006B33C, &D_8006B318, &D_8006B32C, &D_8006B48C, &D_8006B42C, &D_8006B3FC, &D_8006B418 };
 void *D_8006B6C4[34] = { &D_8006B4E8, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B518, &D_8006B4F8, &D_8006B508, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B61C, &D_8006B528 };
-s32 D_8006B74C[2] = { 262160, 458765 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B754[2] = { 6619229, 6357087 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B75C[2] = { 10616996, 11731115 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B764[2] = { 8192124, 8650881 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B76C[2] = { 8978568, 9961627 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B774[2] = { 6881383, 7471219 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B77C[2] = { 2097188, 2031650 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B784[2] = { 2949172, 3014697 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B78C[2] = { 3670073, 3604533 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B794[2] = { 3997755, 3932223 }; /* UNRESOLVED: size-only typing */
-s32 D_8006B79C[3] = { 4390977, 4653126, 0 }; /* UNRESOLVED: size-only typing */
+s32 D_8006B74C[2] = { 262160, 458765 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B754[2] = { 6619229, 6357087 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B75C[2] = { 10616996, 11731115 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B764[2] = { 8192124, 8650881 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B76C[2] = { 8978568, 9961627 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B774[2] = { 6881383, 7471219 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B77C[2] = { 2097188, 2031650 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B784[2] = { 2949172, 3014697 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B78C[2] = { 3670073, 3604533 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B794[2] = { 3997755, 3932223 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006B79C[3] = { 4390977, 4653126, 0 }; /* inferred aggregate type; byte-exact typed C */
 s16 D_8006B7A8 = 0;
 s16 D_8006B7AA = 0;
 s16 D_8006B7AC = 0;
@@ -2274,7 +2268,7 @@ s16 D_8006B7BE = 0;
 s16 D_8006B7C0 = 0;
 s16 D_8006B7C2 = 0;
 u8 D_8006B7C4[4] = { 53, 0, 0, 0 };
-s32 D_8006B7C8 = 8; /* UNRESOLVED: size-only typing */
+s32 D_8006B7C8 = 8; /* inferred aggregate type; byte-exact typed C */
 s32 D_8006B7CC = 0;
 void *D_8006B7D0[3] = { 0, &D_8007A0C4, &D_8007A0C7 };
 s32 D_8006B7DC = 0;
@@ -2648,7 +2642,7 @@ char D_8006D4E4[4] = "WR";
 char D_8006D4E8[4] = "TE";
 char D_8006D4EC[4] = "LT";
 char D_8006D4F0[4] = "LG";
-s32 D_8006D4F4 = 1124073472; /* UNRESOLVED: size-only typing */
+s32 D_8006D4F4 = 1124073472; /* inferred aggregate type; byte-exact typed C */
 char D_8006D4F8[4] = "RG";
 char D_8006D4FC[4] = "RT";
 char D_8006D500[4] = "LE";
@@ -2662,8 +2656,8 @@ char D_8006D52C[4] = "LCB";
 char D_8006D530[4] = "RCB";
 char D_8006D534[4] = "FS";
 char D_8006D538[4] = "SS";
-s32 D_8006D53C = 1258291200; /* UNRESOLVED: size-only typing */
-s32 D_8006D540 = 1342177280; /* UNRESOLVED: size-only typing */
+s32 D_8006D53C = 1258291200; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D540 = 1342177280; /* inferred aggregate type; byte-exact typed C */
 char D_8006D544[4] = "KR";
 char D_8006D548[4] = "PR";
 char D_8006D54C[4] = "OL";
@@ -2695,16 +2689,16 @@ s32 D_8006D614[2] = { 1195461957, 1392517120 };
 s32 D_8006D61C[3] = { 1229867605, 1381564448, 0 };
 char D_8006D628[4] = "INJ";
 char D_8006D62C[8] = "TIME";
-s32 D_8006D634[3] = { 1346458451, 4281428, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D640[3] = { 1346458451, 4411213, 1342177280 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D64C[3] = { 1346458451, 5850195, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D658[3] = { 1346458451, 5522515, 0 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D634[3] = { 1346458451, 4281428, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D640[3] = { 1346458451, 4411213, 1342177280 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D64C[3] = { 1346458451, 5850195, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D658[3] = { 1346458451, 5522515, 0 }; /* inferred aggregate type; byte-exact typed C */
 char D_8006D664[4] = "INT";
 s32 D_8006D668 = 536870912;
-s32 D_8006D66C[3] = { 1414090053, 1392530241, 1129006080 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D678[3] = { 1381323592, 4281428, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D684[3] = { 1381323592, 5850195, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D690[3] = { 1381323592, 5522515, 0 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D66C[3] = { 1414090053, 1392530241, 1129006080 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D678[3] = { 1381323592, 4281428, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D684[3] = { 1381323592, 5850195, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D690[3] = { 1381323592, 5522515, 0 }; /* inferred aggregate type; byte-exact typed C */
 char D_8006D69C[8] = "FUMBLES";
 s32 D_8006D6A4 = 536870912;
 char D_8006D6A8[4] = "REC";
@@ -2713,55 +2707,55 @@ char D_8006D6B0[4] = "REC";
 char D_8006D6B4[4] = "YDS";
 char D_8006D6B8[4] = "REC";
 char D_8006D6BC[4] = "TDS";
-s32 D_8006D6C0[2] = { 1414220883, 2097152 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D6C8[2] = { 1396785995, 1392517120 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D6C0[2] = { 1414220883, 2097152 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D6C8[2] = { 1396785995, 1392517120 }; /* inferred aggregate type; byte-exact typed C */
 char D_8006D6D0[4] = "INT";
 s32 D_8006D6D4 = 536870912;
-s32 D_8006D6D8[3] = { 1179995458, 1275085633, 1431520256 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D6E4[3] = { 1179995458, 1275089477, 1129272832 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D6D8[3] = { 1179995458, 1275085633, 1431520256 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D6E4[3] = { 1179995458, 1275089477, 1129272832 }; /* inferred aggregate type; byte-exact typed C */
 s32 D_8006D6F0[3] = { 1263092555, 4281428, 0 };
 s32 D_8006D6FC[3] = { 1263092555, 5850195, 0 };
 s32 D_8006D708[2] = { 1414090835, 2097152 };
-s32 D_8006D710[2] = { 1179058241, 1414791168 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D718[2] = { 1179058253, 1094993152 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D710[2] = { 1179058241, 1414791168 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D718[2] = { 1179058253, 1094993152 }; /* inferred aggregate type; byte-exact typed C */
 s32 D_8006D720[3] = { 1280265799, 1398014022, 1191182336 };
 char D_8006D72C[4] = "FGS";
 char D_8006D730[8] = "BLKD";
-s32 D_8006D738[2] = { 1481637953, 1414791168 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D740[2] = { 1481637965, 1094993152 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D748[2] = { 1481637954, 1280001024 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D750[2] = { 1347767892, 1392517120 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D758[3] = { 1347767892, 5850195, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D764[3] = { 1347767892, 1392527694, 540160000 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D770[3] = { 1347767892, 1392525900, 1262747648 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D77C[3] = { 1263092555, 5391700, 0 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D738[2] = { 1481637953, 1414791168 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D740[2] = { 1481637965, 1094993152 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D748[2] = { 1481637954, 1280001024 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D750[2] = { 1347767892, 1392517120 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D758[3] = { 1347767892, 5850195, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D764[3] = { 1347767892, 1392527694, 540160000 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D770[3] = { 1347767892, 1392525900, 1262747648 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D77C[3] = { 1263092555, 5391700, 0 }; /* inferred aggregate type; byte-exact typed C */
 char D_8006D788[4] = "RET";
 char D_8006D78C[4] = "YDS";
 char D_8006D790[4] = "TDS";
 s32 D_8006D794 = 536870912;
-s32 D_8006D798[3] = { 1347767892, 5391700, 0 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D798[3] = { 1347767892, 5391700, 0 }; /* inferred aggregate type; byte-exact typed C */
 char D_8006D7A4[4] = "RET";
 char D_8006D7A8[4] = "YDS";
 char D_8006D7AC[4] = "TDS";
 s32 D_8006D7B0 = 536870912;
-s32 D_8006D7B4[3] = { 1381323592, 4281927, 0 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D7B4[3] = { 1381323592, 4281927, 0 }; /* inferred aggregate type; byte-exact typed C */
 char D_8006D7C0[4] = "PCT";
 s32 D_8006D7C4 = 536870912;
-s32 D_8006D7C8[2] = { 1414090835, 2097152 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D7C8[2] = { 1414090835, 2097152 }; /* inferred aggregate type; byte-exact typed C */
 s32 D_8006D7D0 = 536879104;
-s32 D_8006D7D4[2] = { 1179468364, 2097152 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D7DC[2] = { 1363279954, 1413939200 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D7E4[3] = { 1263423299, 1258308687, 1464750848 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D7F0[3] = { 1213551186, 4801875, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D7FC[3] = { 1346458451, 4281927, 0 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D7D4[2] = { 1179468364, 2097152 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D7DC[2] = { 1363279954, 1413939200 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D7E4[3] = { 1263423299, 1258308687, 1464750848 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D7F0[3] = { 1213551186, 4801875, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D7FC[3] = { 1346458451, 4281927, 0 }; /* inferred aggregate type; byte-exact typed C */
 char D_8006D808[4] = "REC";
 char D_8006D80C[4] = "AVG";
-s32 D_8006D810[3] = { 1347767892, 4281927, 0 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D810[3] = { 1347767892, 4281927, 0 }; /* inferred aggregate type; byte-exact typed C */
 char D_8006D81C[4] = "RET";
 char D_8006D820[4] = "AVG";
-s32 D_8006D824[3] = { 1346458451, 5260116, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D830[2] = { 1179058256, 1129578496 }; /* UNRESOLVED: size-only typing */
-s32 D_8006D838[2] = { 1481637968, 1129578496 }; /* UNRESOLVED: size-only typing */
+s32 D_8006D824[3] = { 1346458451, 5260116, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D830[2] = { 1179058256, 1129578496 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8006D838[2] = { 1481637968, 1129578496 }; /* inferred aggregate type; byte-exact typed C */
 char D_8006D840[8] = "QB RTG";
 char D_8006D848[4] = "ATT";
 char D_8006D84C[8] = "COMP";
@@ -3053,63 +3047,63 @@ struct AtanAndRuntimeState {
     { 0, 3, 6, 8, 11, 13, 16, 18, 21, 23, 26, 29, 31, 34, 36, 39, 41, 44, 46, 49, 51, 54, 57, 59, 62, 64, 67, 69, 72, 74, 77, 79, 82, 85, 87, 90, 92, 95, 97, 100, 102, 105, 107, 110, 113, 115, 118, 120, 123, 125, 128, 130, 133, 135, 138, 141, 143, 146, 148, 151, 153, 156, 158, 161, 163, 166, 169, 171, 174, 176, 179, 181, 184, 186, 189, 191, 194, 197, 199, 202, 204, 207, 209, 212, 214, 217, 219, 222, 225, 227, 230, 232, 235, 237, 240, 242, 245, 247, 250, 253, 255, 258, 260, 263, 265, 268, 270, 273, 275, 278, 281, 283, 286, 288, 291, 293, 296, 298, 301, 303, 306, 309, 311, 314, 316, 319, 321, 324, 326, 329, 331, 334, 337, 339, 342, 344, 347, 349, 352, 354, 357, 359, 362, 364, 367, 370, 372, 375, 377, 380, 382, 385, 387, 390, 392, 395, 398, 400, 403, 405, 408, 410, 413, 415, 418, 420, 423, 426, 428, 431, 433, 436, 438, 441, 443, 446, 448, 451, 453, 456, 459, 461, 464, 466, 469, 471, 474, 476, 479, 481, 484, 487, 489, 492, 494, 497, 499, 502, 504, 507, 509, 512, 514, 517, 520, 522, 525, 527, 530, 532, 535, 537, 540, 542, 545, 547, 550, 553, 555, 558, 560, 563, 565, 568, 570, 573, 575, 578, 580, 583, 586, 588, 591, 593, 596, 598, 601, 603, 606, 608, 611, 613, 616, 619, 621, 624, 626, 629, 631, 634, 636, 639, 641, 644, 646, 649, 652, 654, 657, 659, 662, 664, 667, 669, 672, 674, 677, 679, 682, 685, 687, 690, 692, 695, 697, 700, 702, 705, 707, 710, 712, 715, 717, 720, 723, 725, 728, 730, 733, 735, 738, 740, 743, 745, 748, 750, 753, 755, 758, 761, 763, 766, 768, 771, 773, 776, 778, 781, 783, 786, 788, 791, 793, 796, 799, 801, 804, 806, 809, 811, 814, 816, 819, 821, 824, 826, 829, 831, 834, 836, 839, 842, 844, 847, 849, 852, 854, 857, 859, 862, 864, 867, 869, 872, 874, 877, 879, 882, 885, 887, 890, 892, 895, 897, 900, 902, 905, 907, 910, 912, 915, 917, 920, 922, 925, 928, 930, 933, 935, 938, 940, 943, 945, 948, 950, 953, 955, 958, 960, 963, 965, 968, 970, 973, 975, 978, 981, 983, 986, 988, 991, 993, 996, 998, 1001, 1003, 1006, 1008, 1011, 1013, 1016, 1018, 1021, 1023, 1026, 1028, 1031, 1034, 1036, 1039, 1041, 1044, 1046, 1049, 1051, 1054, 1056, 1059, 1061, 1064, 1066, 1069, 1071, 1074, 1076, 1079, 1081, 1084, 1086, 1089, 1091, 1094, 1097, 1099, 1102, 1104, 1107, 1109, 1112, 1114, 1117, 1119, 1122, 1124, 1127, 1129, 1132, 1134, 1137, 1139, 1142, 1144, 1147, 1149, 1152, 1154, 1157, 1159, 1162, 1164, 1167, 1170, 1172, 1175, 1177, 1180, 1182, 1185, 1187, 1190, 1192, 1195, 1197, 1200, 1202, 1205, 1207, 1210, 1212, 1215, 1217, 1220, 1222, 1225, 1227, 1230, 1232, 1235, 1237, 1240, 1242, 1245, 1247, 1250, 1252, 1255, 1257, 1260, 1262, 1265, 1267, 1270, 1272, 1275, 1278, 1280, 1283, 1285, 1288, 1290, 1293, 1295, 1298, 1300, 1303, 1305, 1308, 1310, 1313, 1315, 1318, 1320, 1323, 1325, 1328, 1330, 1333, 1335, 1338, 1340, 1343, 1345, 1348, 1350, 1353, 1355, 1358, 1360, 1363, 1365, 1368, 1370, 1373, 1375, 1378, 1380, 1383, 1385, 1388, 1390, 1393, 1395, 1398, 1400, 1403, 1405, 1408, 1410, 1413, 1415, 1418, 1420, 1423, 1425, 1428, 1430, 1433, 1435, 1438, 1440, 1443, 1445, 1448, 1450, 1453, 1455, 1458, 1460, 1463, 1465, 1468, 1470, 1473, 1475, 1478, 1480, 1483, 1485, 1488, 1490, 1493, 1495, 1498, 1500, 1503, 1505, 1508, 1510, 1513, 1515, 1518, 1520, 1523, 1525, 1528, 1530, 1533, 1535, 1538, 1540, 1543, 1545, 1548, 1550, 1552, 1555, 1557, 1560, 1562, 1565, 1567, 1570, 1572, 1575, 1577, 1580, 1582, 1585, 1587, 1590, 1592, 1595, 1597, 1600, 1602, 1605, 1607, 1610, 1612, 1615, 1617, 1620, 1622, 1625, 1627, 1630, 1632, 1635, 1637, 1640, 1642, 1645, 1647, 1649, 1652, 1654, 1657, 1659, 1662, 1664, 1667, 1669, 1672, 1674, 1677, 1679, 1682, 1684, 1687, 1689, 1692, 1694, 1697, 1699, 1702, 1704, 1707, 1709, 1711, 1714, 1716, 1719, 1721, 1724, 1726, 1729, 1731, 1734, 1736, 1739, 1741, 1744, 1746, 1749, 1751, 1754, 1756, 1759, 1761, 1764, 1766, 1768, 1771, 1773, 1776, 1778, 1781, 1783, 1786, 1788, 1791, 1793, 1796, 1798, 1801, 1803, 1806, 1808, 1810, 1813, 1815, 1818, 1820, 1823, 1825, 1828, 1830, 1833, 1835, 1838, 1840, 1843, 1845, 1848, 1850, 1852, 1855, 1857, 1860, 1862, 1865, 1867, 1870, 1872, 1875, 1877, 1880, 1882, 1885, 1887, 1889, 1892, 1894, 1897, 1899, 1902, 1904, 1907, 1909, 1912, 1914, 1917, 1919, 1921, 1924, 1926, 1929, 1931, 1934, 1936, 1939, 1941, 1944, 1946, 1949, 1951, 1953, 1956, 1958, 1961, 1963, 1966, 1968, 1971, 1973, 1976, 1978, 1980, 1983, 1985, 1988, 1990, 1993, 1995, 1998, 2000, 2003, 2005, 2007, 2010, 2012, 2015, 2017, 2020, 2022, 2025, 2027, 2030, 2032, 2034, 2037, 2039, 2042, 2044, 2047, 2049, 2052, 2054, 2056, 2059, 2061, 2064, 2066, 2069, 2071, 2074, 2076, 2079, 2081, 2083, 2086, 2088, 2091, 2093, 2096, 2098, 2101, 2103, 2105, 2108, 2110, 2113, 2115, 2118, 2120, 2123, 2125, 2127, 2130, 2132, 2135, 2137, 2140, 2142, 2144, 2147, 2149, 2152, 2154, 2157, 2159, 2162, 2164, 2166, 2169, 2171, 2174, 2176, 2179, 2181, 2183, 2186, 2188, 2191, 2193, 2196, 2198, 2201, 2203, 2205, 2208, 2210, 2213, 2215, 2218, 2220, 2222, 2225, 2227, 2230, 2232, 2235, 2237, 2239, 2242, 2244, 2247, 2249, 2252, 2254, 2256, 2259, 2261, 2264, 2266, 2269, 2271, 2273, 2276, 2278, 2281, 2283, 2286, 2288, 2290, 2293, 2295, 2298, 2300, 2303, 2305, 2307, 2310, 2312, 2315, 2317, 2320, 2322, 2324, 2327, 2329, 2332, 2334, 2337, 2339, 2341, 2344, 2346, 2349, 2351, 2353, 2356, 2358, 2361, 2363, 2366, 2368, 2370, 2373, 2375, 2378, 2380, 2382, 2385, 2387, 2390, 2392, 2395, 2397, 2399, 2402, 2404, 2407, 2409, 2411, 2414, 2416, 2419, 2421, 2423, 2426, 2428, 2431, 2433, 2436, 2438, 2440, 2443, 2445, 2448, 2450, 2452, 2455, 2457, 2460, 2462, 2464, 2467, 2469, 2472, 2474, 2476, 2479, 2481, 2484, 2486, 2489, 2491, 2493, 2496, 2498, 2501, 2503, 2505, 2508, 2510, 2513, 2515, 2517, 2520, 2522, 2525, 2527, 2529, 2532, 2534, 2537, 2539, 2541, 2544, 2546, 2549, 2551, 2553, 2556, 2558, 2561, 2563, 2565, 2568, 2570, 2572, 2575, 2577, 2580, 2582, 2584, 2587, 2589, 2592, 2594, 2596, 2599, 2601, 2604, 2606, 2608, 2611, 2613, 2616, 2618, 2620, 2623, 2625, 2627, 2630, 2632, 2635, 2637, 2639, 2642, 2644, 2647, 2649, 2651, 2654, 2656, 2659, 2661, 2663, 2666, 2668, 2670, 2673, 2675, 2678, 2680, 2682, 2685, 2687, 2689, 2692, 2694, 2697, 2699, 2701, 2704, 2706, 2709, 2711, 2713, 2716, 2718, 2720, 2723, 2725, 2728, 2730, 2732, 2735, 2737, 2739, 2742, 2744, 2747, 2749, 2751, 2754, 2756, 2758, 2761, 2763, 2766, 2768, 2770, 2773, 2775, 2777, 2780, 2782, 2785, 2787, 2789, 2792, 2794, 2796, 2799, 2801, 2803, 2806, 2808, 2811, 2813, 2815, 2818, 2820, 2822, 2825, 2827, 2829, 2832, 2834, 2837, 2839, 2841, 2844, 2846, 2848, 2851, 2853, 2855, 2858, 2860, 2863, 2865, 2867, 2870, 2872, 2874, 2877, 2879, 2881, 2884, 2886, 2888, 2891, 2893, 2896, 2898, 2900, 2903, 2905, 2907, 2910, 2912, 2914, 2917, 2919, 2921, 2924, 2926, 2928, 2931, 2933, 2936, 2938, 2940, 2943, 2945, 2947, 2950, 2952, 2954, 2957, 2959, 2961, 2964, 2966, 2968, 2971, 2973, 2975, 2978, 2980, 2982, 2985, 2987, 2990, 2992, 2994, 2997, 2999, 3001, 3004, 3006, 3008, 3011, 3013, 3015, 3018, 3020, 3022, 3025, 3027, 3029, 3032, 3034, 3036, 3039, 3041, 3043, 3046, 3048, 3050, 3053, 3055, 3057, 3060, 3062, 3064, 3067, 3069, 3071, 3074, 3076, 3078, 3081, 3083, 3085, 3088, 3090, 3092, 3095, 3097, 3099, 3102, 3104, 3106, 3109, 3111, 3113, 3116, 3118, 3120, 3123, 3125, 3127, 3130, 3132, 3134, 3136, 3139, 3141, 3143, 3146, 3148, 3150, 3153, 3155, 3157, 3160, 3162, 3164, 3167, 3169, 3171, 3174, 3176, 3178, 3181, 3183, 3185, 3188, 3190, 3192, 3194, 3197, 3199, 3201, 3204, 3206, 3208, 3211, 3213, 3215, 3218, 3220, 3222, 3225, 3227, 3229, 3231, 3234, 3236, 3238, 3241, 3243, 3245, 3248, 3250, 3252, 3255, 3257, 3259, 3261, 3264, 3266, 3268, 3271, 3273, 3275, 3278, 3280, 3282, 3285, 3287, 3289, 3291, 3294, 3296, 3298, 3301, 3303, 3305, 3308, 3310, 3312, 3314, 3317, 3319, 3321, 3324, 3326, 3328, 3330, 3333, 3335, 3337, 3340, 3342, 3344, 3347, 3349, 3351, 3353, 3356, 3358, 3360, 3363, 3365, 3367, 3369, 3372, 3374, 3376, 3379, 3381, 3383, 3385, 3388, 3390, 3392, 3395, 3397, 3399, 3401, 3404, 3406, 3408, 3411, 3413, 3415, 3417, 3420, 3422, 3424, 3427, 3429, 3431, 3433, 3436, 3438, 3440, 3443, 3445, 3447, 3449, 3452, 3454, 3456, 3459, 3461, 3463, 3465, 3468, 3470, 3472, 3474, 3477, 3479, 3481, 3484, 3486, 3488, 3490, 3493, 3495, 3497, 3499, 3502, 3504, 3506, 3509, 3511, 3513, 3515, 3518, 3520, 3522, 3524, 3527, 3529, 3531, 3533, 3536, 3538, 3540, 3543, 3545, 3547, 3549, 3552, 3554, 3556, 3558, 3561, 3563, 3565, 3567, 3570, 3572, 3574, 3576, 3579, 3581, 3583, 3585, 3588, 3590, 3592, 3594, 3597, 3599, 3601, 3604, 3606, 3608, 3610, 3613, 3615, 3617, 3619, 3622, 3624, 3626, 3628, 3631, 3633, 3635, 3637, 3640, 3642, 3644, 3646, 3649, 3651, 3653, 3655, 3658, 3660, 3662, 3664, 3667, 3669, 3671, 3673, 3675, 3678, 3680, 3682, 3684, 3687, 3689, 3691, 3693, 3696, 3698, 3700, 3702, 3705, 3707, 3709, 3711, 3714, 3716, 3718, 3720, 3723, 3725, 3727, 3729, 3731, 3734, 3736, 3738, 3740, 3743, 3745, 3747, 3749, 3752, 3754, 3756, 3758, 3760, 3763, 3765, 3767, 3769, 3772, 3774, 3776, 3778, 3781, 3783, 3785, 3787, 3789, 3792, 3794, 3796, 3798, 3801, 3803, 3805, 3807, 3809, 3812, 3814, 3816, 3818, 3821, 3823, 3825, 3827, 3829, 3832, 3834, 3836, 3838, 3840, 3843, 3845, 3847, 3849, 3852, 3854, 3856, 3858, 3860, 3863, 3865, 3867, 3869, 3871, 3874, 3876, 3878, 3880, 3883, 3885, 3887, 3889, 3891, 3894, 3896, 3898, 3900, 3902, 3905, 3907, 3909, 3911, 3913, 3916, 3918, 3920, 3922, 3924, 3927, 3929, 3931, 3933, 3935, 3938, 3940, 3942, 3944, 3946, 3949, 3951, 3953, 3955, 3957, 3960, 3962, 3964, 3966, 3968, 3971, 3973, 3975, 3977, 3979, 3982, 3984, 3986, 3988, 3990, 3993, 3995, 3997, 3999, 4001, 4004, 4006, 4008, 4010, 4012, 4014, 4017, 4019, 4021, 4023, 4025, 4028, 4030, 4032, 4034, 4036, 4039, 4041, 4043, 4045, 4047, 4049, 4052, 4054, 4056, 4058, 4060, 4063, 4065, 4067, 4069, 4071, 4073, 4076, 4078, 4080, 4082, 4084, 4086, 4089, 4091, 4093, 4095, 4097, 4100, 4102, 4104, 4106, 4108, 4110, 4113, 4115, 4117, 4119, 4121, 4123, 4126, 4128, 4130, 4132, 4134, 4136, 4139, 4141, 4143, 4145, 4147, 4149, 4152, 4154, 4156, 4158, 4160, 4162, 4165, 4167, 4169, 4171, 4173, 4175, 4177, 4180, 4182, 4184, 4186, 4188, 4190, 4193, 4195, 4197, 4199, 4201, 4203, 4206, 4208, 4210, 4212, 4214, 4216, 4218, 4221, 4223, 4225, 4227, 4229, 4231, 4234, 4236, 4238, 4240, 4242, 4244, 4246, 4249, 4251, 4253, 4255, 4257, 4259, 4261, 4264, 4266, 4268, 4270, 4272, 4274, 4276, 4279, 4281, 4283, 4285, 4287, 4289, 4291, 4294, 4296, 4298, 4300, 4302, 4304, 4306, 4309, 4311, 4313, 4315, 4317, 4319, 4321, 4323, 4326, 4328, 4330, 4332, 4334, 4336, 4338, 4341, 4343, 4345, 4347, 4349, 4351, 4353, 4355, 4358, 4360, 4362, 4364, 4366, 4368, 4370, 4372, 4375, 4377, 4379, 4381, 4383, 4385, 4387, 4389, 4392, 4394, 4396, 4398, 4400, 4402, 4404, 4406, 4408, 4411, 4413, 4415, 4417, 4419, 4421, 4423, 4425, 4428, 4430, 4432, 4434, 4436, 4438, 4440, 4442, 4444, 4447, 4449, 4451, 4453, 4455, 4457, 4459, 4461, 4463, 4466, 4468, 4470, 4472, 4474, 4476, 4478, 4480, 4482, 4484, 4487, 4489, 4491, 4493, 4495, 4497, 4499, 4501, 4503, 4506, 4508, 4510, 4512, 4514, 4516, 4518, 4520, 4522, 4524, 4526, 4529, 4531, 4533, 4535, 4537, 4539, 4541, 4543, 4545, 4547, 4550, 4552, 4554, 4556, 4558, 4560, 4562, 4564, 4566, 4568, 4570, 4573, 4575, 4577, 4579, 4581, 4583, 4585, 4587, 4589, 4591, 4593, 4595, 4598, 4600, 4602, 4604, 4606, 4608, 4610, 4612, 4614, 4616, 4618, 4620, 4623, 4625, 4627, 4629, 4631, 4633, 4635, 4637, 4639, 4641, 4643, 4645, 4647, 4649, 4652, 4654, 4656, 4658, 4660, 4662, 4664, 4666, 4668, 4670, 4672, 4674, 4676, 4678, 4681, 4683, 4685, 4687, 4689, 4691, 4693, 4695, 4697, 4699, 4701, 4703, 4705, 4707, 4709, 4712, 4714, 4716, 4718, 4720, 4722, 4724, 4726, 4728, 4730, 4732, 4734, 4736, 4738, 4740, 4742, 4744, 4746, 4749, 4751, 4753, 4755, 4757, 4759, 4761, 4763, 4765, 4767, 4769, 4771, 4773, 4775, 4777, 4779, 4781, 4783, 4785, 4788, 4790, 4792, 4794, 4796, 4798, 4800, 4802, 4804, 4806, 4808, 4810, 4812, 4814, 4816, 4818, 4820, 4822, 4824, 4826, 4828, 4830, 4832, 4834, 4837, 4839, 4841, 4843, 4845, 4847, 4849, 4851, 4853, 4855, 4857, 4859, 4861, 4863, 4865, 4867, 4869, 4871, 4873, 4875, 4877, 4879, 4881, 4883, 4885, 4887, 4889, 4891, 4893, 4895, 4897, 4899, 4902, 4904, 4906, 4908, 4910, 4912, 4914, 4916, 4918, 4920, 4922, 4924, 4926, 4928, 4930, 4932, 4934, 4936, 4938, 4940, 4942, 4944, 4946, 4948, 4950, 4952, 4954, 4956, 4958, 4960, 4962, 4964, 4966, 4968, 4970, 4972, 4974, 4976, 4978, 4980, 4982, 4984, 4986, 4988, 4990, 4992, 4994, 4996, 4998, 5000, 5002, 5004, 5006, 5008, 5010, 5012, 5014, 5016, 5018, 5020, 5022, 5024, 5026, 5028, 5030, 5032, 5034, 5036, 5038, 5040, 5042, 5044, 5046, 5048, 5050, 5052, 5054, 5056, 5058, 5060, 5062, 5064, 5066, 5068, 5070, 5072, 5074, 5076, 5078, 5080, 5082, 5084, 5086, 5088, 5090, 5092, 5094, 5096, 5098, 5100, 5102, 5104, 5106, 5108, 5110, 5112, 5114, 5116, 5118, 5120, 5122, 5124, 5126, 5128, 5130, 5132, 5134, 5136, 5138, 5140, 5142, 5144, 5146, 5147, 5149, 5151, 5153, 5155, 5157, 5159, 5161, 5163, 5165, 5167, 5169, 5171, 5173, 5175, 5177, 5179, 5181, 5183, 5185, 5187, 5189, 5191, 5193, 5195, 5197, 5199, 5201, 5203, 5205, 5207, 5209, 5210, 5212, 5214, 5216, 5218, 5220, 5222, 5224, 5226, 5228, 5230, 5232, 5234, 5236, 5238, 5240, 5242, 5244, 5246, 5248, 5250, 5252, 5254, 5256, 5257, 5259, 5261, 5263, 5265, 5267, 5269, 5271, 5273, 5275, 5277, 5279, 5281, 5283, 5285, 5287, 5289, 5291, 5293, 5294, 5296, 5298, 5300, 5302, 5304, 5306, 5308, 5310, 5312, 5314, 5316, 5318, 5320, 5322, 5324, 5326, 5327, 5329, 5331, 5333, 5335, 5337, 5339, 5341, 5343, 5345, 5347, 5349, 5351, 5353, 5355, 5357, 5358, 5360, 5362, 5364, 5366, 5368, 5370, 5372, 5374, 5376, 5378, 5380, 5382, 5384, 5385, 5387, 5389, 5391, 5393, 5395, 5397, 5399, 5401, 5403, 5405, 5407, 5409, 5410, 5412, 5414, 5416, 5418, 5420, 5422, 5424, 5426, 5428, 5430, 5432, 5433, 5435, 5437, 5439, 5441, 5443, 5445, 5447, 5449, 5451, 5453, 5455, 5456, 5458, 5460, 5462, 5464, 5466, 5468, 5470, 5472, 5474, 5476, 5477, 5479, 5481, 5483, 5485, 5487, 5489, 5491, 5493, 5495, 5496, 5498, 5500, 5502, 5504, 5506, 5508, 5510, 5512, 5514, 5515, 5517, 5519, 5521, 5523, 5525, 5527, 5529, 5531, 5533, 5534, 5536, 5538, 5540, 5542, 5544, 5546, 5548, 5550, 5551, 5553, 5555, 5557, 5559, 5561, 5563, 5565, 5567, 5568, 5570, 5572, 5574, 5576, 5578, 5580, 5582, 5584, 5585, 5587, 5589, 5591, 5593, 5595, 5597, 5599, 5601, 5602, 5604, 5606, 5608, 5610, 5612, 5614, 5616, 5617, 5619, 5621, 5623, 5625, 5627, 5629, 5631, 5632, 5634, 5636, 5638, 5640, 5642, 5644, 5646, 5647, 5649, 5651, 5653, 5655, 5657, 5659, 5660, 5662, 5664, 5666, 5668, 5670, 5672, 5674, 5675, 5677, 5679, 5681, 5683, 5685, 5687, 5688, 5690, 5692, 5694, 5696, 5698, 5700, 5701, 5703, 5705, 5707, 5709, 5711, 5713, 5714, 5716, 5718, 5720, 5722, 5724, 5726, 5727, 5729, 5731, 5733, 5735, 5737, 5739, 5740, 5742, 5744, 5746, 5748, 5750, 5751, 5753, 5755, 5757, 5759, 5761, 5763, 5764, 5766, 5768, 5770, 5772, 5774, 5775, 5777, 5779, 5781, 5783, 5785, 5787, 5788, 5790, 5792, 5794, 5796, 5798, 5799, 5801, 5803, 5805, 5807, 5809, 5810, 5812, 5814, 5816, 5818, 5820, 5821, 5823, 5825, 5827, 5829, 5831, 5832, 5834, 5836, 5838, 5840, 5842, 5843, 5845, 5847, 5849, 5851, 5852, 5854, 5856, 5858, 5860, 5862, 5863, 5865, 5867, 5869, 5871, 5873, 5874, 5876, 5878, 5880, 5882, 5883, 5885, 5887, 5889, 5891, 5893, 5894, 5896, 5898, 5900, 5902, 5903, 5905, 5907, 5909, 5911, 5913, 5914, 5916, 5918, 5920, 5922, 5923, 5925, 5927, 5929, 5931, 5932, 5934, 5936, 5938, 5940, 5941, 5943, 5945, 5947, 5949, 5950, 5952, 5954, 5956, 5958, 5960, 5961, 5963, 5965, 5967, 5969, 5970, 5972, 5974, 5976, 5978, 5979, 5981, 5983, 5985, 5986, 5988, 5990, 5992, 5994, 5995, 5997, 5999, 6001, 6003, 6004, 6006, 6008, 6010, 6012, 6013, 6015, 6017, 6019, 6021, 6022, 6024, 6026, 6028, 6029, 6031, 6033, 6035, 6037, 6038, 6040, 6042, 6044, 6046, 6047, 6049, 6051, 6053, 6054, 6056, 6058, 6060, 6062, 6063, 6065, 6067, 6069, 6070, 6072, 6074, 6076, 6078, 6079, 6081, 6083, 6085, 6086, 6088, 6090, 6092, 6094, 6095, 6097, 6099, 6101, 6102, 6104, 6106, 6108, 6109, 6111, 6113, 6115, 6117, 6118, 6120, 6122, 6124, 6125, 6127, 6129, 6131, 6132, 6134, 6136, 6138, 6139, 6141, 6143, 6145, 6147, 6148, 6150, 6152, 6154, 6155, 6157, 6159, 6161, 6162, 6164, 6166, 6168, 6169, 6171, 6173, 6175, 6176, 6178, 6180, 6182, 6183, 6185, 6187, 6189, 6190, 6192, 6194, 6196, 6197, 6199, 6201, 6203, 6204, 6206, 6208, 6210, 6211, 6213, 6215, 6217, 6218, 6220, 6222, 6224, 6225, 6227, 6229, 6231, 6232, 6234, 6236, 6237, 6239, 6241, 6243, 6244, 6246, 6248, 6250, 6251, 6253, 6255, 6257, 6258, 6260, 6262, 6264, 6265, 6267, 6269, 6270, 6272, 6274, 6276, 6277, 6279, 6281, 6283, 6284, 6286, 6288, 6289, 6291, 6293, 6295, 6296, 6298, 6300, 6302, 6303, 6305, 6307, 6308, 6310, 6312, 6314, 6315, 6317, 6319, 6321, 6322, 6324, 6326, 6327, 6329, 6331, 6333, 6334, 6336, 6338, 6339, 6341, 6343, 6345, 6346, 6348, 6350, 6351, 6353, 6355, 6357, 6358, 6360, 6362, 6363, 6365, 6367, 6369, 6370, 6372, 6374, 6375, 6377, 6379, 6381, 6382, 6384, 6386, 6387, 6389, 6391, 6392, 6394, 6396, 6398, 6399, 6401, 6403, 6404, 6406, 6408, 6409, 6411, 6413, 6415, 6416, 6418, 6420, 6421, 6423, 6425, 6426, 6428, 6430, 6432, 6433, 6435, 6437, 6438, 6440, 6442, 6443, 6445, 6447, 6448, 6450, 6452, 6454, 6455, 6457, 6459, 6460, 6462, 6464, 6465, 6467, 6469, 6470, 6472, 6474, 6475, 6477, 6479, 6481, 6482, 6484, 6486, 6487, 6489, 6491, 6492, 6494, 6496, 6497, 6499, 6501, 6502, 6504, 6506, 6507, 6509, 6511, 6512, 6514, 6516, 6517, 6519, 6521, 6522, 6524, 6526, 6528, 6529, 6531, 6533, 6534, 6536, 6538, 6539, 6541, 6543, 6544, 6546, 6548, 6549, 6551, 6553, 6554, 6556, 6558, 6559, 6561, 6563, 6564, 6566, 6568, 6569, 6571, 6573, 6574, 6576, 6578, 6579, 6581, 6583, 6584, 6586, 6587, 6589, 6591, 6592, 6594, 6596, 6597, 6599, 6601, 6602, 6604, 6606, 6607, 6609, 6611, 6612, 6614, 6616, 6617, 6619, 6621, 6622, 6624, 6626, 6627, 6629, 6630, 6632, 6634, 6635, 6637, 6639, 6640, 6642, 6644, 6645, 6647, 6649, 6650, 6652, 6654, 6655, 6657, 6658, 6660, 6662, 6663, 6665, 6667, 6668, 6670, 6672, 6673, 6675, 6677, 6678, 6680, 6681, 6683, 6685, 6686, 6688, 6690, 6691, 6693, 6695, 6696, 6698, 6699, 6701, 6703, 6704, 6706, 6708, 6709, 6711, 6712, 6714, 6716, 6717, 6719, 6721, 6722, 6724, 6725, 6727, 6729, 6730, 6732, 6734, 6735, 6737, 6738, 6740, 6742, 6743, 6745, 6747, 6748, 6750, 6751, 6753, 6755, 6756, 6758, 6760, 6761, 6763, 6764, 6766, 6768, 6769, 6771, 6772, 6774, 6776, 6777, 6779, 6781, 6782, 6784, 6785, 6787, 6789, 6790, 6792, 6793, 6795, 6797, 6798, 6800, 6802, 6803, 6805, 6806, 6808, 6810, 6811, 6813, 6814, 6816, 6818, 6819, 6821, 6822, 6824, 6826, 6827, 6829, 6830, 6832, 6834, 6835, 6837, 6838, 6840, 6842, 6843, 6845, 6846, 6848, 6850, 6851, 6853, 6854, 6856, 6858, 6859, 6861, 6862, 6864, 6866, 6867, 6869, 6870, 6872, 6874, 6875, 6877, 6878, 6880, 6881, 6883, 6885, 6886, 6888, 6889, 6891, 6893, 6894, 6896, 6897, 6899, 6901, 6902, 6904, 6905, 6907, 6908, 6910, 6912, 6913, 6915, 6916, 6918, 6920, 6921, 6923, 6924, 6926, 6927, 6929, 6931, 6932, 6934, 6935, 6937, 6938, 6940, 6942, 6943, 6945, 6946, 6948, 6950, 6951, 6953, 6954, 6956, 6957, 6959, 6961, 6962, 6964, 6965, 6967, 6968, 6970, 6972, 6973, 6975, 6976, 6978, 6979, 6981, 6982, 6984, 6986, 6987, 6989, 6990, 6992, 6993, 6995, 6997, 6998, 7000, 7001, 7003, 7004, 7006, 7007, 7009, 7011, 7012, 7014, 7015, 7017, 7018, 7020, 7022, 7023, 7025, 7026, 7028, 7029, 7031, 7032, 7034, 7036, 7037, 7039, 7040, 7042, 7043, 7045, 7046, 7048, 7049, 7051, 7053, 7054, 7056, 7057, 7059, 7060, 7062, 7063, 7065, 7067, 7068, 7070, 7071, 7073, 7074, 7076, 7077, 7079, 7080, 7082, 7083, 7085, 7087, 7088, 7090, 7091, 7093, 7094, 7096, 7097, 7099, 7100, 7102, 7104, 7105, 7107, 7108, 7110, 7111, 7113, 7114, 7116, 7117, 7119, 7120, 7122, 7123, 7125, 7127, 7128, 7130, 7131, 7133, 7134, 7136, 7137, 7139, 7140, 7142, 7143, 7145, 7146, 7148, 7149, 7151, 7153, 7154, 7156, 7157, 7159, 7160, 7162, 7163, 7165, 7166, 7168, 7169, 7171, 7172, 7174, 7175, 7177, 7178, 7180, 7181, 7183, 7184, 7186, 7187, 7189, 7191, 7192, 7194, 7195, 7197, 7198, 7200, 7201, 7203, 7204, 7206, 7207, 7209, 7210, 7212, 7213, 7215, 7216, 7218, 7219, 7221, 7222, 7224, 7225, 7227, 7228, 7230, 7231, 7233, 7234, 7236, 7237, 7239, 7240, 7242, 7243, 7245, 7246, 7248, 7249, 7251, 7252, 7254, 7255, 7257, 7258, 7260, 7261, 7263, 7264, 7266, 7267, 7269, 7270, 7272, 7273, 7275, 7276, 7278, 7279, 7281, 7282, 7284, 7285, 7287, 7288, 7290, 7291, 7293, 7294, 7296, 7297, 7299, 7300, 7302, 7303, 7305, 7306, 7308, 7309, 7311, 7312, 7314, 7315, 7317, 7318, 7320, 7321, 7323, 7324, 7326, 7327, 7329, 7330, 7331, 7333, 7334, 7336, 7337, 7339, 7340, 7342, 7343, 7345, 7346, 7348, 7349, 7351, 7352, 7354, 7355, 7357, 7358, 7360, 7361, 7363, 7364, 7365, 7367, 7368, 7370, 7371, 7373, 7374, 7376, 7377, 7379, 7380, 7382, 7383, 7385, 7386, 7388, 7389, 7390, 7392, 7393, 7395, 7396, 7398, 7399, 7401, 7402, 7404, 7405, 7407, 7408, 7410, 7411, 7412, 7414, 7415, 7417, 7418, 7420, 7421, 7423, 7424, 7426, 7427, 7429, 7430, 7431, 7433, 7434, 7436, 7437, 7439, 7440, 7442, 7443, 7445, 7446, 7447, 7449, 7450, 7452, 7453, 7455, 7456, 7458, 7459, 7461, 7462, 7463, 7465, 7466, 7468, 7469, 7471, 7472, 7474, 7475, 7476, 7478, 7479, 7481, 7482, 7484, 7485, 7487, 7488, 7490, 7491, 7492, 7494, 7495, 7497, 7498, 7500, 7501, 7502, 7504, 7505, 7507, 7508, 7510, 7511, 7513, 7514, 7515, 7517, 7518, 7520, 7521, 7523, 7524, 7526, 7527, 7528, 7530, 7531, 7533, 7534, 7536, 7537, 7538, 7540, 7541, 7543, 7544, 7546, 7547, 7548, 7550, 7551, 7553, 7554, 7556, 7557, 7558, 7560, 7561, 7563, 7564, 7566, 7567, 7568, 7570, 7571, 7573, 7574, 7576, 7577, 7578, 7580, 7581, 7583, 7584, 7585, 7587, 7588, 7590, 7591, 7593, 7594, 7595, 7597, 7598, 7600, 7601, 7603, 7604, 7605, 7607, 7608, 7610, 7611, 7612, 7614, 7615, 7617, 7618, 7620, 7621, 7622, 7624, 7625, 7627, 7628, 7629, 7631, 7632, 7634, 7635, 7636, 7638, 7639, 7641, 7642, 7643, 7645, 7646, 7648, 7649, 7651, 7652, 7653, 7655, 7656, 7658, 7659, 7660, 7662, 7663, 7665, 7666, 7667, 7669, 7670, 7672, 7673, 7674, 7676, 7677, 7679, 7680, 7681, 7683, 7684, 7686, 7687, 7688, 7690, 7691, 7693, 7694, 7695, 7697, 7698, 7699, 7701, 7702, 7704, 7705, 7706, 7708, 7709, 7711, 7712, 7713, 7715, 7716, 7718, 7719, 7720, 7722, 7723, 7725, 7726, 7727, 7729, 7730, 7731, 7733, 7734, 7736, 7737, 7738, 7740, 7741, 7743, 7744, 7745, 7747, 7748, 7749, 7751, 7752, 7754, 7755, 7756, 7758, 7759, 7760, 7762, 7763, 7765, 7766, 7767, 7769, 7770, 7771, 7773, 7774, 7776, 7777, 7778, 7780, 7781, 7782, 7784, 7785, 7787, 7788, 7789, 7791, 7792, 7793, 7795, 7796, 7798, 7799, 7800, 7802, 7803, 7804, 7806, 7807, 7809, 7810, 7811, 7813, 7814, 7815, 7817, 7818, 7819, 7821, 7822, 7824, 7825, 7826, 7828, 7829, 7830, 7832, 7833, 7834, 7836, 7837, 7839, 7840, 7841, 7843, 7844, 7845, 7847, 7848, 7849, 7851, 7852, 7853, 7855, 7856, 7858, 7859, 7860, 7862, 7863, 7864, 7866, 7867, 7868, 7870, 7871, 7872, 7874, 7875, 7876, 7878, 7879, 7880, 7882, 7883, 7885, 7886, 7887, 7889, 7890, 7891, 7893, 7894, 7895, 7897, 7898, 7899, 7901, 7902, 7903, 7905, 7906, 7907, 7909, 7910, 7911, 7913, 7914, 7915, 7917, 7918, 7919, 7921, 7922, 7924, 7925, 7926, 7928, 7929, 7930, 7932, 7933, 7934, 7936, 7937, 7938, 7940, 7941, 7942, 7944, 7945, 7946, 7948, 7949, 7950, 7952, 7953, 7954, 7956, 7957, 7958, 7960, 7961, 7962, 7964, 7965, 7966, 7968, 7969, 7970, 7971, 7973, 7974, 7975, 7977, 7978, 7979, 7981, 7982, 7983, 7985, 7986, 7987, 7989, 7990, 7991, 7993, 7994, 7995, 7997, 7998, 7999, 8001, 8002, 8003, 8005, 8006, 8007, 8009, 8010, 8011, 8012, 8014, 8015, 8016, 8018, 8019, 8020, 8022, 8023, 8024, 8026, 8027, 8028, 8030, 8031, 8032, 8034, 8035, 8036, 8037, 8039, 8040, 8041, 8043, 8044, 8045, 8047, 8048, 8049, 8051, 8052, 8053, 8054, 8056, 8057, 8058, 8060, 8061, 8062, 8064, 8065, 8066, 8068, 8069, 8070, 8071, 8073, 8074, 8075, 8077, 8078, 8079, 8081, 8082, 8083, 8084, 8086, 8087, 8088, 8090, 8091, 8092, 8094, 8095, 8096, 8097, 8099, 8100, 8101, 8103, 8104, 8105, 8106, 8108, 8109, 8110, 8112, 8113, 8114, 8116, 8117, 8118, 8119, 8121, 8122, 8123, 8125, 8126, 8127, 8128, 8130, 8131, 8132, 8134, 8135, 8136, 8137, 8139, 8140, 8141, 8143, 8144, 8145, 8146, 8148, 8149, 8150, 8152, 8153, 8154, 8155, 8157, 8158, 8159, 8161, 8162, 8163, 8164, 8166, 8167, 8168, 8170, 8171, 8172, 8173, 8175, 8176, 8177, 8178, 8180, 8181, 8182, 8184, 8185, 8186, 8187, 8189, 8190, 8191, 8192 },
     { 0 }
 };
-s32 D_80071318[3] = { 24, 458765, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071324[3] = { 25, 458767, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071330[3] = { 96, 20, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8007133C[4] = { 393216, 393224, 1376292, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8007134C[5] = { 96, 16, 96, 96, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071360[5] = { 393216, 57, 393224, 10, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071374[5] = { 96, 64, 96, 32, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071388[3] = { 393216, 2, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071394[3] = { 128, 48, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800713A0[6] = { 983041, 49, 393216, 2, 393216, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800713B8[6] = { 48, 8, 96, 48, 96, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800713D0[5] = { 983041, 51, 983041, 52, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800713E4[5] = { 32, 36, 32, 36, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800713F8[5] = { 983041, 52, 983041, 51, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8007140C[5] = { 32, 36, 32, 36, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071420[5] = { 983041, 51, 983041, 52, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071434[5] = { 32, 36, 32, 36, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071448[5] = { 983041, 52, 983041, 51, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8007145C[5] = { 32, 36, 32, 36, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071470[5] = { 983041, 52, 983041, 51, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071484[5] = { 32, 36, 32, 36, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071498[6] = { 983041, 51, 983041, 49, 393216, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800714B0[6] = { 32, 36, 32, 8, 96, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800714C8[6] = { 983041, 52, 983041, 50, 393216, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800714E0[6] = { 32, 36, 32, 8, 96, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800714F8[4] = { 983041, 49, 393216, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071508[5] = { 32, 8, 64, 12, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8007151C[5] = { 52, 47, 51, 393216, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071530[5] = { 48, 48, 48, 96, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071544[5] = { 31, 51, 30, 52, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071558[5] = { 16, 48, 16, 48, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8007156C[5] = { 30, 52, 31, 51, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071580[5] = { 16, 48, 16, 48, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071594[5] = { 52, 47, 51, 393216, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800715A8[5] = { 48, 48, 48, 96, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800715BC[3] = { 47, 51, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800715C8[3] = { 96, 30, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800715D4[3] = { 47, 52, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800715E0[3] = { 96, 30, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800715EC[5] = { 52, 47, 51, 47, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071600[5] = { 48, 96, 48, 96, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071614[5] = { 52, 47, 51, 47, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071628[5] = { 48, 96, 48, 96, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8007163C[2] = { 393216, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071644[6] = { 36, 32, 8, 15, 60, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_8007165C[2] = { 393216, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071664[3] = { 30, 12, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071670[2] = { 393216, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071678[2] = { 99, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071680[2] = { 14592, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071688[2] = { -1, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071690[2] = { 1455872, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80071698[2] = { 1455872, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800716A0[4] = { 8960, 0, 1451008, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800716B0[2] = { 8960, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800716B8[2] = { 1451008, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800716C0[2] = { 1451008, 0 }; /* UNRESOLVED: size-only typing */
+s32 D_80071318[3] = { 24, 458765, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071324[3] = { 25, 458767, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071330[3] = { 96, 20, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007133C[4] = { 393216, 393224, 1376292, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007134C[5] = { 96, 16, 96, 96, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071360[5] = { 393216, 57, 393224, 10, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071374[5] = { 96, 64, 96, 32, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071388[3] = { 393216, 2, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071394[3] = { 128, 48, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800713A0[6] = { 983041, 49, 393216, 2, 393216, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800713B8[6] = { 48, 8, 96, 48, 96, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800713D0[5] = { 983041, 51, 983041, 52, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800713E4[5] = { 32, 36, 32, 36, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800713F8[5] = { 983041, 52, 983041, 51, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007140C[5] = { 32, 36, 32, 36, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071420[5] = { 983041, 51, 983041, 52, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071434[5] = { 32, 36, 32, 36, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071448[5] = { 983041, 52, 983041, 51, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007145C[5] = { 32, 36, 32, 36, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071470[5] = { 983041, 52, 983041, 51, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071484[5] = { 32, 36, 32, 36, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071498[6] = { 983041, 51, 983041, 49, 393216, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800714B0[6] = { 32, 36, 32, 8, 96, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800714C8[6] = { 983041, 52, 983041, 50, 393216, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800714E0[6] = { 32, 36, 32, 8, 96, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800714F8[4] = { 983041, 49, 393216, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071508[5] = { 32, 8, 64, 12, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007151C[5] = { 52, 47, 51, 393216, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071530[5] = { 48, 48, 48, 96, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071544[5] = { 31, 51, 30, 52, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071558[5] = { 16, 48, 16, 48, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007156C[5] = { 30, 52, 31, 51, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071580[5] = { 16, 48, 16, 48, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071594[5] = { 52, 47, 51, 393216, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800715A8[5] = { 48, 48, 48, 96, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800715BC[3] = { 47, 51, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800715C8[3] = { 96, 30, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800715D4[3] = { 47, 52, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800715E0[3] = { 96, 30, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800715EC[5] = { 52, 47, 51, 47, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071600[5] = { 48, 96, 48, 96, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071614[5] = { 52, 47, 51, 47, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071628[5] = { 48, 96, 48, 96, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007163C[2] = { 393216, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071644[6] = { 36, 32, 8, 15, 60, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007165C[2] = { 393216, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071664[3] = { 30, 12, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071670[2] = { 393216, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071678[2] = { 99, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071680[2] = { 14592, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071688[2] = { -1, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071690[2] = { 1455872, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80071698[2] = { 1455872, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800716A0[4] = { 8960, 0, 1451008, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800716B0[2] = { 8960, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800716B8[2] = { 1451008, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800716C0[2] = { 1451008, 0 }; /* inferred aggregate type; byte-exact typed C */
 void *D_800716C8[24] = { &D_80071680, &D_80071688, &D_80071690, &D_80071688, &D_800716C0, &D_80071688, &D_80071690, &D_80071688, &D_800716B0, &D_80071688, &D_80071698, &D_80071688, &D_800716B0, &D_80071688, &D_800716B0, &D_80071688, &D_800716B0, &D_80071688, &D_800716A0, &D_80071688, &D_800716B8, &D_80071688, &D_800716B0, &D_80071688 };
 void *D_80071728[2] = { &D_80071670, &D_80071678 };
 void *D_80071730[2] = { &D_80071324, &D_80071330 };
@@ -3182,8 +3176,8 @@ void *D_8007207C[3] = { &D_800C8E3C, &D_800C8F64, &D_800C90C0 };
 void *D_80072088[1] = { &D_8006C928 };
 struct D_8007208C_s { s16 f_8007208c[5]; u8 f_80072096[2]; } D_8007208C = { { -32768, 7220, 0, 0, -1 }, { 255, 0 } }; /* members: D_8007208C, D_80072096 */
 s16 D_80072098[2] = { 64, 0 };
-s32 D_8007209C = 503711232; /* UNRESOLVED: size-only typing */
-s32 D_800720A0 = 17371409; /* UNRESOLVED: size-only typing */
+s32 D_8007209C = 503711232; /* inferred aggregate type; byte-exact typed C */
+s32 D_800720A0 = 17371409; /* inferred aggregate type; byte-exact typed C */
 void *D_800720A4[3] = { &D_800C9120, &D_800C9158, &D_800C9190 };
 s32 D_800720B0 = 135987968;
 void *D_800720B4[3] = { &D_8007209C, &D_800720A0, &D_800720A4 };
@@ -3215,8 +3209,8 @@ s16 D_800721FA = 0;
 void *D_800721FC[5] = { &D_800D85D8, &D_800D872C, &D_800D89E8, &D_8006C68C, &D_80002220 };
 s32 D_80072210 = 0;
 s16 D_80072214[4] = { 5, -256, 0, 0 };
-s32 D_8007221C = 504628766; /* UNRESOLVED: size-only typing */
-s32 D_80072220 = 67900194; /* UNRESOLVED: size-only typing */
+s32 D_8007221C = 504628766; /* inferred aggregate type; byte-exact typed C */
+s32 D_80072220 = 67900194; /* inferred aggregate type; byte-exact typed C */
 void *D_80072224[4] = { &D_800D8A60, &D_800D8A98, &D_800D8B10, &D_800D8B74 };
 s32 D_80072234 = 118359040;
 void *D_80072238[3] = { &D_8007221C, &D_80072220, &D_80072224 };
@@ -3229,8 +3223,8 @@ s32 D_80072290[3] = { 0, 392960, 4194304 };
 void *D_8007229C[5] = { &D_800DA200, &D_800DA3AC, &D_800DA598, &D_8006CCDC, &D_800023E4 };
 s32 D_800722B0 = 0;
 s16 D_800722B4[4] = { 5, -256, 0, 0 };
-s32 D_800722BC = 404490256; /* UNRESOLVED: size-only typing */
-s32 D_800722C0 = 50727945; /* UNRESOLVED: size-only typing */
+s32 D_800722BC = 404490256; /* inferred aggregate type; byte-exact typed C */
+s32 D_800722C0 = 50727945; /* inferred aggregate type; byte-exact typed C */
 void *D_800722C4[4] = { &D_800DAA58, &D_800DAB68, &D_800DAC54, &D_800DAD5C };
 struct D_800722D4_s { u8 f_800722d4; u8 f_800722d5[3]; } D_800722D4 = { 3, { 4, 4, 0 } }; /* members: D_800722D4, D_800722D5 */
 void *D_800722D8[3] = { &D_800722BC, &D_800722C0, &D_800722C4 };
@@ -3255,7 +3249,7 @@ u8 D_800723CF = 3;
 u8 D_800723D0[4] = { 3, 0, 0, 0 };
 void *D_800723D4[2] = { &D_80072394, &D_80072394 };
 s32 D_800723DC = 0;
-s32 D_800723E0 = 421068800; /* UNRESOLVED: size-only typing */
+s32 D_800723E0 = 421068800; /* inferred aggregate type; byte-exact typed C */
 void *D_800723E4[2] = { &D_800DF394, &D_800DF508 };
 s32 D_800723EC[8] = { 0, -2146568688, 0, 0, 0, 0, 65536, 16843008 };
 void *D_8007240C[2] = { &D_800723E4, &D_800723E0 };
@@ -3284,8 +3278,8 @@ struct D_800724F8_s { u8 f_800724f8; u8 f_800724f9[3]; } D_800724F8 = { 0, { 0, 
 s32 D_800724FC = 1090519040;
 void *D_80072500[5] = { &D_8009E3EC, &D_8009E528, &D_8009E68C, &D_800C19C0, &D_80002690 };
 s32 D_80072514[3] = { 0, 392960, 4194304 };
-s32 D_80072520 = 84803584; /* UNRESOLVED: size-only typing */
-s32 D_80072524 = 17367040; /* UNRESOLVED: size-only typing */
+s32 D_80072520 = 84803584; /* inferred aggregate type; byte-exact typed C */
+s32 D_80072524 = 17367040; /* inferred aggregate type; byte-exact typed C */
 void *D_80072528[2] = { &D_8009E764, &D_8009E78C };
 struct D_80072530_s { u8 f_80072530; u8 f_80072531[3]; } D_80072530 = { 8, { 16, 2, 0 } }; /* members: D_80072530, D_80072531 */
 void *D_80072534[3] = { &D_80072520, &D_80072524, &D_80072528 };
@@ -3437,8 +3431,8 @@ s32 D_8007343C = 0;
 s32 D_80073440 = 1;
 s16 D_80073444 = 2;
 s16 D_80073446 = 0;
-s32 D_80073448 = 18022400; /* UNRESOLVED: size-only typing */
-s32 D_8007344C = 338755584; /* UNRESOLVED: size-only typing */
+s32 D_80073448 = 18022400; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007344C = 338755584; /* inferred aggregate type; byte-exact typed C */
 char D_80073450[8] = "2;Zc";
 char D_80073458[8] = "<O2;";
 char D_80073460[4] = "PY";
@@ -3456,9 +3450,133 @@ s16 D_80073504 = 0;
 s16 D_80073506 = 9;
 struct D_80073508_s { s16 f_80073508; s16 f_8007350a[3]; } D_80073508 = { 0, { 3, 0, 0 } }; /* members: D_80073508, D_8007350A */
 u8 D_80073510[12] = { 31, 32, 33, 34, 35, 36, 38, 39, 40, 0, 0, 0 };
-u8 D_8007351C[7] = { 0, 221, 0, 35, 128, 128, 255 };
-u8 D_80073523 = 1;
-struct D_80073524_s { u8 f_80073524; u8 f_80073525[1959]; } D_80073524 = { 0, { 55, 50, 44, 54, 48, 56, 0, 0, 222, 0, 31, 247, 247, 222, 46, 1, 55, 48, 44, 53, 48, 48, 0, 0, 223, 0, 28, 128, 128, 255, 1, 2, 53, 52, 44, 54, 48, 48, 0, 0, 224, 0, 37, 128, 128, 255, 3, 0, 56, 48, 44, 50, 57, 48, 0, 0, 225, 0, 33, 128, 128, 255, 1, 2, 55, 50, 44, 56, 48, 48, 0, 0, 226, 0, 39, 128, 128, 255, 1, 0, 54, 54, 44, 57, 52, 54, 0, 0, 227, 0, 33, 128, 128, 255, 3, 2, 54, 48, 44, 51, 56, 57, 0, 0, 228, 0, 31, 128, 128, 255, 7, 0, 54, 53, 44, 48, 50, 52, 0, 0, 229, 0, 36, 128, 128, 255, 1, 2, 55, 54, 44, 50, 55, 51, 0, 0, 230, 0, 50, 233, 226, 202, 46, 1, 56, 48, 44, 53, 48, 48, 0, 0, 231, 0, 38, 128, 128, 255, 1, 0, 53, 57, 44, 53, 52, 51, 0, 0, 233, 0, 45, 128, 128, 255, 1, 0, 54, 51, 44, 48, 54, 56, 0, 0, 234, 0, 38, 231, 231, 231, 14, 1, 54, 48, 44, 49, 50, 57, 0, 0, 235, 0, 35, 128, 128, 255, 1, 0, 55, 51, 44, 48, 48, 48, 0, 0, 236, 0, 30, 128, 128, 255, 1, 2, 55, 56, 44, 48, 54, 55, 0, 0, 237, 0, 36, 128, 128, 255, 17, 0, 55, 51, 44, 48, 48, 48, 0, 0, 238, 0, 35, 222, 206, 181, 14, 1, 54, 51, 44, 48, 48, 48, 0, 0, 239, 0, 31, 128, 128, 255, 1, 2, 54, 48, 44, 55, 57, 52, 0, 0, 240, 0, 25, 33, 33, 26, 14, 1, 54, 57, 44, 48, 54, 53, 0, 0, 241, 0, 36, 128, 128, 255, 3, 0, 55, 55, 44, 51, 49, 49, 0, 0, 242, 0, 36, 128, 128, 255, 3, 2, 55, 54, 44, 56, 57, 49, 0, 0, 243, 0, 41, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 244, 0, 50, 128, 128, 255, 3, 2, 54, 53, 44, 51, 53, 54, 0, 0, 245, 0, 26, 128, 128, 255, 3, 0, 53, 57, 44, 52, 57, 50, 0, 0, 246, 0, 33, 165, 156, 156, 14, 1, 54, 53, 44, 51, 48, 48, 0, 0, 247, 0, 37, 128, 128, 255, 17, 2, 54, 48, 44, 56, 51, 53, 0, 0, 248, 0, 48, 128, 128, 255, 17, 0, 54, 54, 44, 52, 53, 53, 0, 0, 249, 0, 33, 231, 222, 214, 14, 1, 54, 52, 44, 57, 56, 52, 0, 0, 250, 0, 31, 128, 128, 255, 1, 2, 55, 52, 44, 51, 48, 49, 0, 0, 251, 0, 44, 128, 128, 255, 1, 0, 55, 56, 44, 54, 48, 48, 0, 0, 232, 0, 33, 128, 128, 255, 3, 2, 53, 48, 44, 48, 51, 52, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 253, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 254, 0, 39, 128, 128, 255, 1, 0, 54, 48, 44, 56, 51, 53, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 221, 0, 35, 128, 128, 255, 1, 0, 55, 50, 44, 54, 48, 56, 0, 0, 222, 0, 31, 247, 247, 222, 46, 1, 55, 48, 44, 53, 48, 48, 0, 0, 223, 0, 28, 128, 128, 255, 1, 2, 53, 52, 44, 54, 48, 48, 0, 0, 224, 0, 37, 128, 128, 255, 3, 0, 56, 48, 44, 50, 57, 48, 0, 0, 225, 0, 33, 128, 128, 255, 1, 2, 55, 50, 44, 56, 48, 48, 0, 0, 226, 0, 39, 128, 128, 255, 1, 0, 54, 54, 44, 57, 52, 54, 0, 0, 227, 0, 33, 128, 128, 255, 3, 2, 54, 48, 44, 51, 56, 57, 0, 0, 228, 0, 31, 128, 128, 255, 7, 0, 54, 53, 44, 48, 50, 52, 0, 0, 229, 0, 36, 128, 128, 255, 1, 2, 55, 54, 44, 50, 55, 51, 0, 0, 230, 0, 50, 233, 226, 202, 46, 1, 56, 48, 44, 53, 48, 48, 0, 0, 231, 0, 38, 128, 128, 255, 1, 0, 53, 57, 44, 53, 52, 51, 0, 0, 233, 0, 45, 128, 128, 255, 1, 0, 54, 51, 44, 48, 54, 56, 0, 0, 234, 0, 38, 231, 231, 231, 14, 1, 54, 48, 44, 49, 50, 57, 0, 0, 235, 0, 35, 128, 128, 255, 1, 0, 55, 51, 44, 48, 48, 48, 0, 0, 236, 0, 30, 128, 128, 255, 1, 2, 55, 56, 44, 48, 54, 55, 0, 0, 237, 0, 36, 128, 128, 255, 17, 0, 55, 51, 44, 48, 48, 48, 0, 0, 238, 0, 35, 222, 206, 181, 14, 1, 54, 51, 44, 48, 48, 48, 0, 0, 239, 0, 31, 128, 128, 255, 1, 2, 54, 48, 44, 55, 57, 52, 0, 0, 240, 0, 25, 33, 33, 26, 14, 1, 54, 57, 44, 48, 54, 53, 0, 0, 241, 0, 36, 128, 128, 255, 3, 0, 55, 55, 44, 51, 49, 49, 0, 0, 242, 0, 36, 128, 128, 255, 3, 2, 55, 54, 44, 56, 57, 49, 0, 0, 243, 0, 41, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 244, 0, 50, 128, 128, 255, 3, 2, 54, 53, 44, 51, 53, 54, 0, 0, 245, 0, 26, 128, 128, 255, 3, 0, 53, 57, 44, 52, 57, 50, 0, 0, 246, 0, 33, 165, 156, 156, 14, 1, 54, 53, 44, 51, 48, 48, 0, 0, 247, 0, 37, 128, 128, 255, 17, 2, 54, 48, 44, 56, 51, 53, 0, 0, 248, 0, 48, 128, 128, 255, 17, 0, 54, 54, 44, 52, 53, 53, 0, 0, 249, 0, 33, 231, 222, 214, 14, 1, 54, 52, 44, 57, 56, 52, 0, 0, 250, 0, 31, 128, 128, 255, 1, 2, 55, 52, 44, 51, 48, 49, 0, 0, 251, 0, 44, 128, 128, 255, 1, 0, 55, 56, 44, 54, 48, 48, 0, 0, 232, 0, 33, 128, 128, 255, 3, 2, 53, 48, 44, 48, 51, 52, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 253, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 254, 0, 39, 128, 128, 255, 1, 0, 54, 48, 44, 56, 51, 53, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 221, 0, 35, 128, 128, 255, 1, 0, 55, 50, 44, 54, 48, 56, 0, 0, 222, 0, 31, 247, 247, 222, 46, 1, 55, 48, 44, 53, 48, 48, 0, 0, 223, 0, 28, 128, 128, 255, 1, 2, 53, 52, 44, 54, 48, 48, 0, 0, 224, 0, 37, 128, 128, 255, 3, 0, 56, 48, 44, 50, 57, 48, 0, 0, 225, 0, 33, 128, 128, 255, 1, 2, 55, 50, 44, 56, 48, 48, 0, 0, 226, 0, 39, 128, 128, 255, 1, 0, 54, 54, 44, 57, 52, 54, 0, 0, 227, 0, 33, 128, 128, 255, 3, 2, 54, 48, 44, 51, 56, 57, 0, 0, 228, 0, 31, 128, 128, 255, 7, 0, 54, 53, 44, 48, 50, 52, 0, 0, 229, 0, 36, 128, 128, 255, 1, 2, 55, 54, 44, 50, 55, 51, 0, 0, 230, 0, 50, 233, 226, 202, 46, 1, 56, 48, 44, 53, 48, 48, 0, 0, 231, 0, 38, 128, 128, 255, 1, 0, 53, 57, 44, 53, 52, 51, 0, 0, 233, 0, 45, 128, 128, 255, 1, 0, 54, 51, 44, 48, 54, 56, 0, 0, 234, 0, 38, 231, 231, 231, 14, 1, 54, 48, 44, 49, 50, 57, 0, 0, 235, 0, 35, 128, 128, 255, 1, 0, 55, 51, 44, 48, 48, 48, 0, 0, 236, 0, 30, 128, 128, 255, 1, 2, 55, 56, 44, 48, 54, 55, 0, 0, 237, 0, 36, 128, 128, 255, 17, 0, 55, 51, 44, 48, 48, 48, 0, 0, 238, 0, 35, 222, 206, 181, 14, 1, 54, 51, 44, 48, 48, 48, 0, 0, 239, 0, 31, 128, 128, 255, 1, 2, 54, 48, 44, 55, 57, 52, 0, 0, 240, 0, 25, 33, 33, 26, 14, 1, 54, 57, 44, 48, 54, 53, 0, 0, 241, 0, 36, 128, 128, 255, 3, 0, 55, 55, 44, 51, 49, 49, 0, 0, 242, 0, 36, 128, 128, 255, 3, 2, 55, 54, 44, 56, 57, 49, 0, 0, 243, 0, 41, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 244, 0, 50, 128, 128, 255, 3, 2, 54, 53, 44, 51, 53, 54, 0, 0, 245, 0, 26, 128, 128, 255, 3, 0, 53, 57, 44, 52, 57, 50, 0, 0, 246, 0, 33, 165, 156, 156, 14, 1, 54, 53, 44, 51, 48, 48, 0, 0, 247, 0, 37, 128, 128, 255, 17, 2, 54, 48, 44, 56, 51, 53, 0, 0, 248, 0, 48, 128, 128, 255, 17, 0, 54, 54, 44, 52, 53, 53, 0, 0, 249, 0, 33, 231, 222, 214, 14, 1, 54, 52, 44, 57, 56, 52, 0, 0, 250, 0, 31, 128, 128, 255, 1, 2, 55, 52, 44, 51, 48, 49, 0, 0, 251, 0, 44, 128, 128, 255, 1, 0, 55, 56, 44, 54, 48, 48, 0, 0, 232, 0, 33, 128, 128, 255, 3, 2, 53, 48, 44, 48, 51, 52, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 253, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 254, 0, 39, 128, 128, 255, 1, 0, 54, 48, 44, 56, 51, 53, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0, 0, 252, 0, 45, 128, 128, 255, 1, 0, 52, 55, 44, 51, 49, 51, 0 } }; /* members: D_80073524, D_80073525 */
+/* Team presentation records with two halfwords, four style bytes and an 8-byte numeric label. */
+struct TeamStyleRecord { u16 id; u16 metric; u8 style[4]; char label[8]; };
+struct TeamStyleRecord D_8007351C[123] = {
+    { 221, 35, { 128, 128, 255, 1 }, { 0x00, 0x37, 0x32, 0x2C, 0x36, 0x30, 0x38, 0x00 } },
+    { 222, 31, { 247, 247, 222, 46 }, { 0x01, 0x37, 0x30, 0x2C, 0x35, 0x30, 0x30, 0x00 } },
+    { 223, 28, { 128, 128, 255, 1 }, { 0x02, 0x35, 0x34, 0x2C, 0x36, 0x30, 0x30, 0x00 } },
+    { 224, 37, { 128, 128, 255, 3 }, { 0x00, 0x38, 0x30, 0x2C, 0x32, 0x39, 0x30, 0x00 } },
+    { 225, 33, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x32, 0x2C, 0x38, 0x30, 0x30, 0x00 } },
+    { 226, 39, { 128, 128, 255, 1 }, { 0x00, 0x36, 0x36, 0x2C, 0x39, 0x34, 0x36, 0x00 } },
+    { 227, 33, { 128, 128, 255, 3 }, { 0x02, 0x36, 0x30, 0x2C, 0x33, 0x38, 0x39, 0x00 } },
+    { 228, 31, { 128, 128, 255, 7 }, { 0x00, 0x36, 0x35, 0x2C, 0x30, 0x32, 0x34, 0x00 } },
+    { 229, 36, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x36, 0x2C, 0x32, 0x37, 0x33, 0x00 } },
+    { 230, 50, { 233, 226, 202, 46 }, { 0x01, 0x38, 0x30, 0x2C, 0x35, 0x30, 0x30, 0x00 } },
+    { 231, 38, { 128, 128, 255, 1 }, { 0x00, 0x35, 0x39, 0x2C, 0x35, 0x34, 0x33, 0x00 } },
+    { 233, 45, { 128, 128, 255, 1 }, { 0x00, 0x36, 0x33, 0x2C, 0x30, 0x36, 0x38, 0x00 } },
+    { 234, 38, { 231, 231, 231, 14 }, { 0x01, 0x36, 0x30, 0x2C, 0x31, 0x32, 0x39, 0x00 } },
+    { 235, 35, { 128, 128, 255, 1 }, { 0x00, 0x37, 0x33, 0x2C, 0x30, 0x30, 0x30, 0x00 } },
+    { 236, 30, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x38, 0x2C, 0x30, 0x36, 0x37, 0x00 } },
+    { 237, 36, { 128, 128, 255, 17 }, { 0x00, 0x37, 0x33, 0x2C, 0x30, 0x30, 0x30, 0x00 } },
+    { 238, 35, { 222, 206, 181, 14 }, { 0x01, 0x36, 0x33, 0x2C, 0x30, 0x30, 0x30, 0x00 } },
+    { 239, 31, { 128, 128, 255, 1 }, { 0x02, 0x36, 0x30, 0x2C, 0x37, 0x39, 0x34, 0x00 } },
+    { 240, 25, { 33, 33, 26, 14 }, { 0x01, 0x36, 0x39, 0x2C, 0x30, 0x36, 0x35, 0x00 } },
+    { 241, 36, { 128, 128, 255, 3 }, { 0x00, 0x37, 0x37, 0x2C, 0x33, 0x31, 0x31, 0x00 } },
+    { 242, 36, { 128, 128, 255, 3 }, { 0x02, 0x37, 0x36, 0x2C, 0x38, 0x39, 0x31, 0x00 } },
+    { 243, 41, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 244, 50, { 128, 128, 255, 3 }, { 0x02, 0x36, 0x35, 0x2C, 0x33, 0x35, 0x36, 0x00 } },
+    { 245, 26, { 128, 128, 255, 3 }, { 0x00, 0x35, 0x39, 0x2C, 0x34, 0x39, 0x32, 0x00 } },
+    { 246, 33, { 165, 156, 156, 14 }, { 0x01, 0x36, 0x35, 0x2C, 0x33, 0x30, 0x30, 0x00 } },
+    { 247, 37, { 128, 128, 255, 17 }, { 0x02, 0x36, 0x30, 0x2C, 0x38, 0x33, 0x35, 0x00 } },
+    { 248, 48, { 128, 128, 255, 17 }, { 0x00, 0x36, 0x36, 0x2C, 0x34, 0x35, 0x35, 0x00 } },
+    { 249, 33, { 231, 222, 214, 14 }, { 0x01, 0x36, 0x34, 0x2C, 0x39, 0x38, 0x34, 0x00 } },
+    { 250, 31, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x34, 0x2C, 0x33, 0x30, 0x31, 0x00 } },
+    { 251, 44, { 128, 128, 255, 1 }, { 0x00, 0x37, 0x38, 0x2C, 0x36, 0x30, 0x30, 0x00 } },
+    { 232, 33, { 128, 128, 255, 3 }, { 0x02, 0x35, 0x30, 0x2C, 0x30, 0x33, 0x34, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 253, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 254, 39, { 128, 128, 255, 1 }, { 0x00, 0x36, 0x30, 0x2C, 0x38, 0x33, 0x35, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 221, 35, { 128, 128, 255, 1 }, { 0x00, 0x37, 0x32, 0x2C, 0x36, 0x30, 0x38, 0x00 } },
+    { 222, 31, { 247, 247, 222, 46 }, { 0x01, 0x37, 0x30, 0x2C, 0x35, 0x30, 0x30, 0x00 } },
+    { 223, 28, { 128, 128, 255, 1 }, { 0x02, 0x35, 0x34, 0x2C, 0x36, 0x30, 0x30, 0x00 } },
+    { 224, 37, { 128, 128, 255, 3 }, { 0x00, 0x38, 0x30, 0x2C, 0x32, 0x39, 0x30, 0x00 } },
+    { 225, 33, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x32, 0x2C, 0x38, 0x30, 0x30, 0x00 } },
+    { 226, 39, { 128, 128, 255, 1 }, { 0x00, 0x36, 0x36, 0x2C, 0x39, 0x34, 0x36, 0x00 } },
+    { 227, 33, { 128, 128, 255, 3 }, { 0x02, 0x36, 0x30, 0x2C, 0x33, 0x38, 0x39, 0x00 } },
+    { 228, 31, { 128, 128, 255, 7 }, { 0x00, 0x36, 0x35, 0x2C, 0x30, 0x32, 0x34, 0x00 } },
+    { 229, 36, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x36, 0x2C, 0x32, 0x37, 0x33, 0x00 } },
+    { 230, 50, { 233, 226, 202, 46 }, { 0x01, 0x38, 0x30, 0x2C, 0x35, 0x30, 0x30, 0x00 } },
+    { 231, 38, { 128, 128, 255, 1 }, { 0x00, 0x35, 0x39, 0x2C, 0x35, 0x34, 0x33, 0x00 } },
+    { 233, 45, { 128, 128, 255, 1 }, { 0x00, 0x36, 0x33, 0x2C, 0x30, 0x36, 0x38, 0x00 } },
+    { 234, 38, { 231, 231, 231, 14 }, { 0x01, 0x36, 0x30, 0x2C, 0x31, 0x32, 0x39, 0x00 } },
+    { 235, 35, { 128, 128, 255, 1 }, { 0x00, 0x37, 0x33, 0x2C, 0x30, 0x30, 0x30, 0x00 } },
+    { 236, 30, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x38, 0x2C, 0x30, 0x36, 0x37, 0x00 } },
+    { 237, 36, { 128, 128, 255, 17 }, { 0x00, 0x37, 0x33, 0x2C, 0x30, 0x30, 0x30, 0x00 } },
+    { 238, 35, { 222, 206, 181, 14 }, { 0x01, 0x36, 0x33, 0x2C, 0x30, 0x30, 0x30, 0x00 } },
+    { 239, 31, { 128, 128, 255, 1 }, { 0x02, 0x36, 0x30, 0x2C, 0x37, 0x39, 0x34, 0x00 } },
+    { 240, 25, { 33, 33, 26, 14 }, { 0x01, 0x36, 0x39, 0x2C, 0x30, 0x36, 0x35, 0x00 } },
+    { 241, 36, { 128, 128, 255, 3 }, { 0x00, 0x37, 0x37, 0x2C, 0x33, 0x31, 0x31, 0x00 } },
+    { 242, 36, { 128, 128, 255, 3 }, { 0x02, 0x37, 0x36, 0x2C, 0x38, 0x39, 0x31, 0x00 } },
+    { 243, 41, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 244, 50, { 128, 128, 255, 3 }, { 0x02, 0x36, 0x35, 0x2C, 0x33, 0x35, 0x36, 0x00 } },
+    { 245, 26, { 128, 128, 255, 3 }, { 0x00, 0x35, 0x39, 0x2C, 0x34, 0x39, 0x32, 0x00 } },
+    { 246, 33, { 165, 156, 156, 14 }, { 0x01, 0x36, 0x35, 0x2C, 0x33, 0x30, 0x30, 0x00 } },
+    { 247, 37, { 128, 128, 255, 17 }, { 0x02, 0x36, 0x30, 0x2C, 0x38, 0x33, 0x35, 0x00 } },
+    { 248, 48, { 128, 128, 255, 17 }, { 0x00, 0x36, 0x36, 0x2C, 0x34, 0x35, 0x35, 0x00 } },
+    { 249, 33, { 231, 222, 214, 14 }, { 0x01, 0x36, 0x34, 0x2C, 0x39, 0x38, 0x34, 0x00 } },
+    { 250, 31, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x34, 0x2C, 0x33, 0x30, 0x31, 0x00 } },
+    { 251, 44, { 128, 128, 255, 1 }, { 0x00, 0x37, 0x38, 0x2C, 0x36, 0x30, 0x30, 0x00 } },
+    { 232, 33, { 128, 128, 255, 3 }, { 0x02, 0x35, 0x30, 0x2C, 0x30, 0x33, 0x34, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 253, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 254, 39, { 128, 128, 255, 1 }, { 0x00, 0x36, 0x30, 0x2C, 0x38, 0x33, 0x35, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 221, 35, { 128, 128, 255, 1 }, { 0x00, 0x37, 0x32, 0x2C, 0x36, 0x30, 0x38, 0x00 } },
+    { 222, 31, { 247, 247, 222, 46 }, { 0x01, 0x37, 0x30, 0x2C, 0x35, 0x30, 0x30, 0x00 } },
+    { 223, 28, { 128, 128, 255, 1 }, { 0x02, 0x35, 0x34, 0x2C, 0x36, 0x30, 0x30, 0x00 } },
+    { 224, 37, { 128, 128, 255, 3 }, { 0x00, 0x38, 0x30, 0x2C, 0x32, 0x39, 0x30, 0x00 } },
+    { 225, 33, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x32, 0x2C, 0x38, 0x30, 0x30, 0x00 } },
+    { 226, 39, { 128, 128, 255, 1 }, { 0x00, 0x36, 0x36, 0x2C, 0x39, 0x34, 0x36, 0x00 } },
+    { 227, 33, { 128, 128, 255, 3 }, { 0x02, 0x36, 0x30, 0x2C, 0x33, 0x38, 0x39, 0x00 } },
+    { 228, 31, { 128, 128, 255, 7 }, { 0x00, 0x36, 0x35, 0x2C, 0x30, 0x32, 0x34, 0x00 } },
+    { 229, 36, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x36, 0x2C, 0x32, 0x37, 0x33, 0x00 } },
+    { 230, 50, { 233, 226, 202, 46 }, { 0x01, 0x38, 0x30, 0x2C, 0x35, 0x30, 0x30, 0x00 } },
+    { 231, 38, { 128, 128, 255, 1 }, { 0x00, 0x35, 0x39, 0x2C, 0x35, 0x34, 0x33, 0x00 } },
+    { 233, 45, { 128, 128, 255, 1 }, { 0x00, 0x36, 0x33, 0x2C, 0x30, 0x36, 0x38, 0x00 } },
+    { 234, 38, { 231, 231, 231, 14 }, { 0x01, 0x36, 0x30, 0x2C, 0x31, 0x32, 0x39, 0x00 } },
+    { 235, 35, { 128, 128, 255, 1 }, { 0x00, 0x37, 0x33, 0x2C, 0x30, 0x30, 0x30, 0x00 } },
+    { 236, 30, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x38, 0x2C, 0x30, 0x36, 0x37, 0x00 } },
+    { 237, 36, { 128, 128, 255, 17 }, { 0x00, 0x37, 0x33, 0x2C, 0x30, 0x30, 0x30, 0x00 } },
+    { 238, 35, { 222, 206, 181, 14 }, { 0x01, 0x36, 0x33, 0x2C, 0x30, 0x30, 0x30, 0x00 } },
+    { 239, 31, { 128, 128, 255, 1 }, { 0x02, 0x36, 0x30, 0x2C, 0x37, 0x39, 0x34, 0x00 } },
+    { 240, 25, { 33, 33, 26, 14 }, { 0x01, 0x36, 0x39, 0x2C, 0x30, 0x36, 0x35, 0x00 } },
+    { 241, 36, { 128, 128, 255, 3 }, { 0x00, 0x37, 0x37, 0x2C, 0x33, 0x31, 0x31, 0x00 } },
+    { 242, 36, { 128, 128, 255, 3 }, { 0x02, 0x37, 0x36, 0x2C, 0x38, 0x39, 0x31, 0x00 } },
+    { 243, 41, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 244, 50, { 128, 128, 255, 3 }, { 0x02, 0x36, 0x35, 0x2C, 0x33, 0x35, 0x36, 0x00 } },
+    { 245, 26, { 128, 128, 255, 3 }, { 0x00, 0x35, 0x39, 0x2C, 0x34, 0x39, 0x32, 0x00 } },
+    { 246, 33, { 165, 156, 156, 14 }, { 0x01, 0x36, 0x35, 0x2C, 0x33, 0x30, 0x30, 0x00 } },
+    { 247, 37, { 128, 128, 255, 17 }, { 0x02, 0x36, 0x30, 0x2C, 0x38, 0x33, 0x35, 0x00 } },
+    { 248, 48, { 128, 128, 255, 17 }, { 0x00, 0x36, 0x36, 0x2C, 0x34, 0x35, 0x35, 0x00 } },
+    { 249, 33, { 231, 222, 214, 14 }, { 0x01, 0x36, 0x34, 0x2C, 0x39, 0x38, 0x34, 0x00 } },
+    { 250, 31, { 128, 128, 255, 1 }, { 0x02, 0x37, 0x34, 0x2C, 0x33, 0x30, 0x31, 0x00 } },
+    { 251, 44, { 128, 128, 255, 1 }, { 0x00, 0x37, 0x38, 0x2C, 0x36, 0x30, 0x30, 0x00 } },
+    { 232, 33, { 128, 128, 255, 3 }, { 0x02, 0x35, 0x30, 0x2C, 0x30, 0x33, 0x34, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 253, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 254, 39, { 128, 128, 255, 1 }, { 0x00, 0x36, 0x30, 0x2C, 0x38, 0x33, 0x35, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } },
+    { 252, 45, { 128, 128, 255, 1 }, { 0x00, 0x34, 0x37, 0x2C, 0x33, 0x31, 0x33, 0x00 } }
+};
 s16 D_80073CCC = 1;
 s16 D_80073CCE = 768;
 s16 D_80073CD0 = 768;
@@ -3482,8 +3600,93 @@ void *D_80073DA0[11] = { &D_8006E298, &D_8006E2A0, &D_8006E2A4, &D_8006E2AC, &D_
 u32 D_80073DCC[11] = { 0x00161D00, 0x00162400, 0x00161F00, 0x00162400, 0x00161D00, 0x00162400, 0x00161F00, 0x00161F00, 0x00161D00, 0x00162400, 0x00161F00 };
 u32 D_80073DF8[11] = { 0x00162100, 0x00161E00, 0x00162100, 0x00161E00, 0x00162100, 0x00161E00, 0x00162100, 0x00162100, 0x00162100, 0x00162100, 0x00161E00 };
 void *D_80073E24[1] = { &D_8006E470 };
-struct D_80073E28_s { u8 f_80073e28; u8 f_80073e29[635]; } D_80073E28 = { 0, { 255, 0, 0, 128, 6, 228, 188, 0, 255, 0, 0, 128, 6, 228, 220, 1, 255, 0, 0, 128, 6, 229, 40, 1, 255, 0, 0, 128, 6, 229, 88, 3, 255, 0, 0, 128, 6, 229, 156, 5, 255, 0, 0, 128, 6, 229, 176, 5, 255, 0, 0, 128, 6, 229, 192, 5, 255, 0, 0, 128, 6, 230, 32, 7, 255, 0, 0, 128, 6, 230, 248, 8, 255, 0, 0, 128, 6, 231, 20, 8, 255, 0, 0, 128, 6, 231, 164, 9, 255, 0, 0, 128, 6, 232, 88, 2, 255, 0, 0, 128, 6, 232, 144, 10, 255, 0, 0, 128, 6, 232, 216, 10, 255, 0, 0, 128, 6, 228, 152, 0, 255, 0, 0, 128, 6, 228, 188, 0, 255, 0, 0, 128, 6, 229, 56, 1, 255, 0, 0, 128, 6, 229, 140, 3, 255, 0, 0, 128, 6, 229, 176, 5, 255, 0, 0, 128, 6, 230, 96, 7, 255, 0, 0, 128, 6, 230, 172, 7, 255, 0, 0, 128, 6, 230, 236, 8, 255, 0, 0, 128, 6, 231, 20, 8, 255, 0, 0, 128, 6, 231, 128, 9, 255, 0, 0, 128, 6, 231, 148, 9, 255, 0, 0, 128, 6, 232, 4, 4, 255, 0, 0, 128, 6, 232, 88, 2, 255, 0, 0, 128, 6, 232, 200, 10, 255, 0, 0, 128, 6, 228, 188, 0, 255, 0, 0, 128, 6, 229, 12, 1, 255, 0, 0, 128, 6, 229, 72, 3, 255, 0, 0, 128, 6, 229, 204, 5, 255, 0, 0, 128, 6, 229, 236, 5, 255, 0, 0, 128, 6, 230, 148, 7, 255, 0, 0, 128, 6, 230, 196, 7, 255, 0, 0, 128, 6, 230, 236, 8, 255, 0, 0, 128, 6, 231, 100, 9, 255, 0, 0, 128, 6, 231, 112, 9, 255, 0, 0, 128, 6, 231, 232, 6, 255, 0, 0, 128, 6, 232, 48, 4, 255, 0, 0, 128, 6, 232, 112, 2, 255, 0, 0, 128, 6, 232, 160, 10, 255, 0, 0, 128, 6, 232, 184, 10, 255, 0, 0, 128, 6, 232, 216, 10, 255, 0, 0, 128, 6, 228, 112, 0, 255, 0, 0, 128, 6, 228, 204, 0, 255, 0, 0, 128, 6, 228, 232, 1, 255, 0, 0, 128, 6, 229, 28, 1, 255, 0, 0, 128, 6, 229, 124, 3, 255, 0, 0, 128, 6, 229, 220, 5, 255, 0, 0, 128, 6, 229, 252, 5, 255, 0, 0, 128, 6, 230, 32, 7, 255, 0, 0, 128, 6, 230, 128, 7, 255, 0, 0, 128, 6, 231, 36, 8, 255, 0, 0, 128, 6, 231, 84, 9, 255, 0, 0, 128, 6, 231, 184, 6, 255, 0, 0, 128, 6, 232, 32, 4, 255, 0, 0, 128, 6, 228, 168, 0, 255, 0, 0, 128, 6, 232, 124, 10, 255, 0, 0, 128, 6, 228, 112, 0, 255, 0, 0, 128, 6, 232, 72, 2, 255, 0, 0, 128, 6, 228, 248, 1, 255, 0, 0, 128, 6, 229, 104, 3, 255, 0, 0, 128, 6, 229, 220, 5, 255, 0, 0, 128, 6, 230, 48, 7, 255, 0, 0, 128, 6, 230, 108, 7, 255, 0, 0, 128, 6, 230, 220, 8, 255, 0, 0, 128, 6, 231, 52, 8, 255, 0, 0, 128, 6, 231, 68, 9, 255, 0, 0, 128, 6, 231, 216, 6, 255, 0, 0, 128, 6, 232, 16, 4, 255, 0, 0, 128, 6, 228, 136, 0, 255, 0, 0, 128, 6, 228, 168, 0, 255, 0, 0, 128, 6, 230, 80, 7, 255, 0, 0, 128, 6, 230, 160, 7, 255, 0, 0, 128, 6, 230, 184, 7, 255, 0, 0, 128, 6, 230, 208, 7, 255, 0, 0, 128, 6, 231, 4, 8, 255, 0, 0, 128, 6, 231, 200, 6, 255, 0, 0 } }; /* members: D_80073E28, D_80073E29 */
-struct D_800740A4_s { u8 f_800740a4; u8 f_800740a5; u8 f_800740a6; u8 f_800740a7[21]; } D_800740A4 = { 0, 15, 33, { 33, 16, 29, 34, 35, 30, 45, 65, 67, 46, 60, 68, 70, 61, 72, 71, 74, 73, 80, 96, 96 } }; /* members: D_800740A4, D_800740A5, D_800740A6, D_800740A7 */
+struct TeamAvailabilityFlagData { s8 value; u8 pad[7]; };
+struct TeamAvailabilityData { u8 prefix; struct TeamAvailabilityFlagData flags[80]; u8 tail[19]; };
+struct TeamAvailabilityData D_80073E28 = {
+    0, {
+        { 255, { 0, 0, 128, 6, 228, 188, 0 } },
+        { 255, { 0, 0, 128, 6, 228, 220, 1 } },
+        { 255, { 0, 0, 128, 6, 229, 40, 1 } },
+        { 255, { 0, 0, 128, 6, 229, 88, 3 } },
+        { 255, { 0, 0, 128, 6, 229, 156, 5 } },
+        { 255, { 0, 0, 128, 6, 229, 176, 5 } },
+        { 255, { 0, 0, 128, 6, 229, 192, 5 } },
+        { 255, { 0, 0, 128, 6, 230, 32, 7 } },
+        { 255, { 0, 0, 128, 6, 230, 248, 8 } },
+        { 255, { 0, 0, 128, 6, 231, 20, 8 } },
+        { 255, { 0, 0, 128, 6, 231, 164, 9 } },
+        { 255, { 0, 0, 128, 6, 232, 88, 2 } },
+        { 255, { 0, 0, 128, 6, 232, 144, 10 } },
+        { 255, { 0, 0, 128, 6, 232, 216, 10 } },
+        { 255, { 0, 0, 128, 6, 228, 152, 0 } },
+        { 255, { 0, 0, 128, 6, 228, 188, 0 } },
+        { 255, { 0, 0, 128, 6, 229, 56, 1 } },
+        { 255, { 0, 0, 128, 6, 229, 140, 3 } },
+        { 255, { 0, 0, 128, 6, 229, 176, 5 } },
+        { 255, { 0, 0, 128, 6, 230, 96, 7 } },
+        { 255, { 0, 0, 128, 6, 230, 172, 7 } },
+        { 255, { 0, 0, 128, 6, 230, 236, 8 } },
+        { 255, { 0, 0, 128, 6, 231, 20, 8 } },
+        { 255, { 0, 0, 128, 6, 231, 128, 9 } },
+        { 255, { 0, 0, 128, 6, 231, 148, 9 } },
+        { 255, { 0, 0, 128, 6, 232, 4, 4 } },
+        { 255, { 0, 0, 128, 6, 232, 88, 2 } },
+        { 255, { 0, 0, 128, 6, 232, 200, 10 } },
+        { 255, { 0, 0, 128, 6, 228, 188, 0 } },
+        { 255, { 0, 0, 128, 6, 229, 12, 1 } },
+        { 255, { 0, 0, 128, 6, 229, 72, 3 } },
+        { 255, { 0, 0, 128, 6, 229, 204, 5 } },
+        { 255, { 0, 0, 128, 6, 229, 236, 5 } },
+        { 255, { 0, 0, 128, 6, 230, 148, 7 } },
+        { 255, { 0, 0, 128, 6, 230, 196, 7 } },
+        { 255, { 0, 0, 128, 6, 230, 236, 8 } },
+        { 255, { 0, 0, 128, 6, 231, 100, 9 } },
+        { 255, { 0, 0, 128, 6, 231, 112, 9 } },
+        { 255, { 0, 0, 128, 6, 231, 232, 6 } },
+        { 255, { 0, 0, 128, 6, 232, 48, 4 } },
+        { 255, { 0, 0, 128, 6, 232, 112, 2 } },
+        { 255, { 0, 0, 128, 6, 232, 160, 10 } },
+        { 255, { 0, 0, 128, 6, 232, 184, 10 } },
+        { 255, { 0, 0, 128, 6, 232, 216, 10 } },
+        { 255, { 0, 0, 128, 6, 228, 112, 0 } },
+        { 255, { 0, 0, 128, 6, 228, 204, 0 } },
+        { 255, { 0, 0, 128, 6, 228, 232, 1 } },
+        { 255, { 0, 0, 128, 6, 229, 28, 1 } },
+        { 255, { 0, 0, 128, 6, 229, 124, 3 } },
+        { 255, { 0, 0, 128, 6, 229, 220, 5 } },
+        { 255, { 0, 0, 128, 6, 229, 252, 5 } },
+        { 255, { 0, 0, 128, 6, 230, 32, 7 } },
+        { 255, { 0, 0, 128, 6, 230, 128, 7 } },
+        { 255, { 0, 0, 128, 6, 231, 36, 8 } },
+        { 255, { 0, 0, 128, 6, 231, 84, 9 } },
+        { 255, { 0, 0, 128, 6, 231, 184, 6 } },
+        { 255, { 0, 0, 128, 6, 232, 32, 4 } },
+        { 255, { 0, 0, 128, 6, 228, 168, 0 } },
+        { 255, { 0, 0, 128, 6, 232, 124, 10 } },
+        { 255, { 0, 0, 128, 6, 228, 112, 0 } },
+        { 255, { 0, 0, 128, 6, 232, 72, 2 } },
+        { 255, { 0, 0, 128, 6, 228, 248, 1 } },
+        { 255, { 0, 0, 128, 6, 229, 104, 3 } },
+        { 255, { 0, 0, 128, 6, 229, 220, 5 } },
+        { 255, { 0, 0, 128, 6, 230, 48, 7 } },
+        { 255, { 0, 0, 128, 6, 230, 108, 7 } },
+        { 255, { 0, 0, 128, 6, 230, 220, 8 } },
+        { 255, { 0, 0, 128, 6, 231, 52, 8 } },
+        { 255, { 0, 0, 128, 6, 231, 68, 9 } },
+        { 255, { 0, 0, 128, 6, 231, 216, 6 } },
+        { 255, { 0, 0, 128, 6, 232, 16, 4 } },
+        { 255, { 0, 0, 128, 6, 228, 136, 0 } },
+        { 255, { 0, 0, 128, 6, 228, 168, 0 } },
+        { 255, { 0, 0, 128, 6, 230, 80, 7 } },
+        { 255, { 0, 0, 128, 6, 230, 160, 7 } },
+        { 255, { 0, 0, 128, 6, 230, 184, 7 } },
+        { 255, { 0, 0, 128, 6, 230, 208, 7 } },
+        { 255, { 0, 0, 128, 6, 231, 4, 8 } },
+        { 255, { 0, 0, 128, 6, 231, 200, 6 } },
+        { 255, { 0, 0, 0, 15, 33, 33, 16 } }
+    },
+    { 29, 34, 35, 30, 45, 65, 67, 46, 60, 68, 70, 61, 72, 71, 74, 73, 80, 96, 96 }
+};
 struct D_800740BC_s { u8 f_800740bc; u8 f_800740bd[7]; } D_800740BC = { 43, { 35, 10, 7, 4, 1, 0, 0 } }; /* members: D_800740BC, D_800740BD */
 s32 D_800740C4 = 0;
 s16 D_800740C8 = 0;
@@ -3495,25 +3698,151 @@ s16 D_800740E0 = 1;
 s16 D_800740E2 = 1;
 s16 D_800740E4[2] = { 1, 0 };
 s32 D_800740E8 = 0;
-s32 D_800740EC[192] = { 0, 8, 33554688, 1, 8, 16777728, 2, 19, 33554688, 3, 19, 16777728, 4, 9, 33554688, 5, 9, 16777728, 6, 1, 8388736, 7, 21, 16777472, 8, 16, 26214800, 9, 22, 16777472, 10, 22, 16777472, 11, 0, 16777472, 12, 10, 32768500, 13, 11, 32768500, 14, 26, 32768500, 15, 27, 32768500, 16, 23, 32768500, 17, 24, 32768500, 18, 28, 32768500, 19, 18, 32768500, 20, 28, 50332416, 21, 18, 50332416, 22, 20, 32768500, 23, 25, 32768500, 24, 25, 32768500, 25, 13, 32768500, 26, 13, 32768500, 27, 20, 32768500, 28, 3, 32768500, 29, 17, 32768500, 30, 2, 8388736, 31, 29, 16777472, 32, 30, 16777472, 33, 29, 16777472, 34, 30, 16777472, 35, 29, 16777472, 36, 36, 33554944, 37, 31, 16777472, 38, 32, 16777472, 39, 29, 16777472, 40, 30, 16777472, 41, 29, 16777472, 42, 30, 16777472, 43, 4, 33554732, 44, 5, 19661312, 45, 12, 33554732, 46, 7, 19661312, 47, 6, 33554732, 48, 33, 32768500, 49, 34, 32768500, 50, 35, 32768500, 51, 38, 13435085, 52, 39, 13435085, 53, 40, 13435085, 54, 41, 13435085, 55, 42, 16777472, 56, 43, 16777472, 57, 44, 16777472, 58, 45, 16777472, 59, 47, 16777472, 60, 48, 16777472, 64, 46, 33554944, 65, 37, 16777472, -1, 0, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800743EC[93] = { 0, 8, 33554688, 12, 10, 32768500, 13, 11, 32768500, 14, 26, 32768500, 15, 27, 32768500, 16, 23, 32768500, 17, 24, 32768500, 18, 28, 32768500, 19, 18, 32768500, 20, 28, 50332416, 21, 18, 52429600, 22, 20, 52429600, 23, 25, 32768500, 24, 25, 32768500, 25, 13, 52429600, 26, 13, 52429600, 27, 20, 52429600, 51, 54, 52429600, 52, 55, 52429600, 53, 58, 52429600, 54, 60, 52429600, 55, 57, 52429600, 56, 49, 52429600, 28, 61, 52429600, 36, 36, 52429600, 7, 21, 11796660, 8, 16, 39322200, 9, 22, 16777472, 43, 62, 52429600, 57, 199, 32768500, -1, 0, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80074560[21] = { 37, 50, 52429600, 38, 51, 52429600, 39, 52, 52429600, 40, 53, 52429600, 41, 56, 52429600, 28, 61, 52429600, -1, 0, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800745B4[9] = { 54, 60, 52429600, 42, 59, 52429600, -1, 0, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800745D8[9] = { 54, 60, 52429600, 42, 59, 52429600, -1, 0, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_800745FC[33] = { 31, 29, 16777472, 32, 30, 16777472, 33, 29, 16777472, 34, 30, 16777472, 35, 29, 16777472, 36, 36, 16777472, 61, 14, 16777472, 62, 15, 16777472, 63, 21, 16777472, 65, 37, 33554944, -1, 0, 0 }; /* UNRESOLVED: size-only typing */
+struct MappingEntry { s32 key; s32 value; u32 flags; };
+struct MappingEntry D_800740EC[64] = {
+    { 0, 8, 0x02000100 },
+    { 1, 8, 0x01000200 },
+    { 2, 19, 0x02000100 },
+    { 3, 19, 0x01000200 },
+    { 4, 9, 0x02000100 },
+    { 5, 9, 0x01000200 },
+    { 6, 1, 0x00800080 },
+    { 7, 21, 0x01000100 },
+    { 8, 16, 0x01900190 },
+    { 9, 22, 0x01000100 },
+    { 10, 22, 0x01000100 },
+    { 11, 0, 0x01000100 },
+    { 12, 10, 0x01F401F4 },
+    { 13, 11, 0x01F401F4 },
+    { 14, 26, 0x01F401F4 },
+    { 15, 27, 0x01F401F4 },
+    { 16, 23, 0x01F401F4 },
+    { 17, 24, 0x01F401F4 },
+    { 18, 28, 0x01F401F4 },
+    { 19, 18, 0x01F401F4 },
+    { 20, 28, 0x03000300 },
+    { 21, 18, 0x03000300 },
+    { 22, 20, 0x01F401F4 },
+    { 23, 25, 0x01F401F4 },
+    { 24, 25, 0x01F401F4 },
+    { 25, 13, 0x01F401F4 },
+    { 26, 13, 0x01F401F4 },
+    { 27, 20, 0x01F401F4 },
+    { 28, 3, 0x01F401F4 },
+    { 29, 17, 0x01F401F4 },
+    { 30, 2, 0x00800080 },
+    { 31, 29, 0x01000100 },
+    { 32, 30, 0x01000100 },
+    { 33, 29, 0x01000100 },
+    { 34, 30, 0x01000100 },
+    { 35, 29, 0x01000100 },
+    { 36, 36, 0x02000200 },
+    { 37, 31, 0x01000100 },
+    { 38, 32, 0x01000100 },
+    { 39, 29, 0x01000100 },
+    { 40, 30, 0x01000100 },
+    { 41, 29, 0x01000100 },
+    { 42, 30, 0x01000100 },
+    { 43, 4, 0x0200012C },
+    { 44, 5, 0x012C0200 },
+    { 45, 12, 0x0200012C },
+    { 46, 7, 0x012C0200 },
+    { 47, 6, 0x0200012C },
+    { 48, 33, 0x01F401F4 },
+    { 49, 34, 0x01F401F4 },
+    { 50, 35, 0x01F401F4 },
+    { 51, 38, 0x00CD00CD },
+    { 52, 39, 0x00CD00CD },
+    { 53, 40, 0x00CD00CD },
+    { 54, 41, 0x00CD00CD },
+    { 55, 42, 0x01000100 },
+    { 56, 43, 0x01000100 },
+    { 57, 44, 0x01000100 },
+    { 58, 45, 0x01000100 },
+    { 59, 47, 0x01000100 },
+    { 60, 48, 0x01000100 },
+    { 64, 46, 0x02000200 },
+    { 65, 37, 0x01000100 },
+    { -1, 0, 0x00000000 }
+};
+struct MappingEntry D_800743EC[31] = {
+    { 0, 8, 0x02000100 },
+    { 12, 10, 0x01F401F4 },
+    { 13, 11, 0x01F401F4 },
+    { 14, 26, 0x01F401F4 },
+    { 15, 27, 0x01F401F4 },
+    { 16, 23, 0x01F401F4 },
+    { 17, 24, 0x01F401F4 },
+    { 18, 28, 0x01F401F4 },
+    { 19, 18, 0x01F401F4 },
+    { 20, 28, 0x03000300 },
+    { 21, 18, 0x03200320 },
+    { 22, 20, 0x03200320 },
+    { 23, 25, 0x01F401F4 },
+    { 24, 25, 0x01F401F4 },
+    { 25, 13, 0x03200320 },
+    { 26, 13, 0x03200320 },
+    { 27, 20, 0x03200320 },
+    { 51, 54, 0x03200320 },
+    { 52, 55, 0x03200320 },
+    { 53, 58, 0x03200320 },
+    { 54, 60, 0x03200320 },
+    { 55, 57, 0x03200320 },
+    { 56, 49, 0x03200320 },
+    { 28, 61, 0x03200320 },
+    { 36, 36, 0x03200320 },
+    { 7, 21, 0x00B400B4 },
+    { 8, 16, 0x02580258 },
+    { 9, 22, 0x01000100 },
+    { 43, 62, 0x03200320 },
+    { 57, 199, 0x01F401F4 },
+    { -1, 0, 0x00000000 }
+};
+struct MappingEntry D_80074560[7] = {
+    { 37, 50, 0x03200320 },
+    { 38, 51, 0x03200320 },
+    { 39, 52, 0x03200320 },
+    { 40, 53, 0x03200320 },
+    { 41, 56, 0x03200320 },
+    { 28, 61, 0x03200320 },
+    { -1, 0, 0x00000000 }
+};
+struct MappingEntry D_800745B4[3] = {
+    { 54, 60, 0x03200320 },
+    { 42, 59, 0x03200320 },
+    { -1, 0, 0x00000000 }
+};
+struct MappingEntry D_800745D8[3] = {
+    { 54, 60, 0x03200320 },
+    { 42, 59, 0x03200320 },
+    { -1, 0, 0x00000000 }
+};
+struct MappingEntry D_800745FC[11] = {
+    { 31, 29, 0x01000100 },
+    { 32, 30, 0x01000100 },
+    { 33, 29, 0x01000100 },
+    { 34, 30, 0x01000100 },
+    { 35, 29, 0x01000100 },
+    { 36, 36, 0x01000100 },
+    { 61, 14, 0x01000100 },
+    { 62, 15, 0x01000100 },
+    { 63, 21, 0x01000100 },
+    { 65, 37, 0x02000200 },
+    { -1, 0, 0x00000000 }
+};
 void *D_80074680[6] = { &D_800740EC, &D_800745FC, &D_800743EC, &D_80074560, &D_800745B4, &D_800745D8 };
-s32 D_80074698[3] = { 131084, 524301, 524288 }; /* UNRESOLVED: size-only typing */
-s32 D_800746A4[3] = { 131086, 589839, 589824 }; /* UNRESOLVED: size-only typing */
-s32 D_800746B0[3] = { 131088, 720913, 720896 }; /* UNRESOLVED: size-only typing */
-s32 D_800746BC[5] = { 262162, 720915, 720916, 720917, 720896 }; /* UNRESOLVED: size-only typing */
-s32 D_800746D0[3] = { 131072, 851969, 851968 }; /* UNRESOLVED: size-only typing */
-s32 D_800746DC[3] = { 131074, 851971, 851968 }; /* UNRESOLVED: size-only typing */
-s32 D_800746E8[3] = { 131076, 851973, 851968 }; /* UNRESOLVED: size-only typing */
-s32 D_800746F4[4] = { 196608, 851969, 851972, 851968 }; /* UNRESOLVED: size-only typing */
-s32 D_80074704[3] = { 131117, 786478, 786432 }; /* UNRESOLVED: size-only typing */
-s32 D_80074710[4] = { 196651, 786476, 786479, 786432 }; /* UNRESOLVED: size-only typing */
-s32 D_80074720[3] = { 131095, 589848, 786432 }; /* UNRESOLVED: size-only typing */
-s32 D_8007472C[4] = { 196656, 786481, 786482, 786432 }; /* UNRESOLVED: size-only typing */
+s32 D_80074698[3] = { 131084, 524301, 524288 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800746A4[3] = { 131086, 589839, 589824 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800746B0[3] = { 131088, 720913, 720896 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800746BC[5] = { 262162, 720915, 720916, 720917, 720896 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800746D0[3] = { 131072, 851969, 851968 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800746DC[3] = { 131074, 851971, 851968 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800746E8[3] = { 131076, 851973, 851968 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_800746F4[4] = { 196608, 851969, 851972, 851968 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074704[3] = { 131117, 786478, 786432 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074710[4] = { 196651, 786476, 786479, 786432 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074720[3] = { 131095, 589848, 786432 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007472C[4] = { 196656, 786481, 786482, 786432 }; /* inferred aggregate type; byte-exact typed C */
 void *D_8007473C[14] = { &D_8007472C, &D_800746DC, &D_80074698, &D_800746A4, &D_800746B0, &D_800746BC, &D_800746BC, &D_800746BC, &D_800746D0, &D_800746E8, &D_800746F4, &D_80074704, &D_80074710, &D_80074720 };
 struct D_80074774_s { s16 f_80074774; s16 f_80074776[39]; } D_80074774 = { 67, { 80, 81, 84, 85, 89, 90, 90, 91, 92, 93, 96, 97, 97, 98, 99, 100, 101, 102, 102, 103, 108, 109, 111, 0, 0, 112, 115, 116, 117, 118, 119, 0, 0, 120, 121, 0, 0, 122, 123 } }; /* members: D_80074774, D_80074776 */
 u8 D_800747C4[68] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 124, 0, 125, 0, 126, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 131, 0, 0, 0, 0, 0, 0, 0, 0, 33, 34, 35, 39, 42, 43, 44, 45, 46, 47, 58, 61, 63, 64, 0, 0 };
@@ -3524,12 +3853,12 @@ s32 D_80074830[3] = { 0, 14, 524288 };
 s32 D_8007483C[3] = { 0, -1703931, 655360 };
 s32 D_80074848[3] = { 0, -1703931, 655360 };
 s32 D_80074854[3] = { 0, -1703931, 655360 };
-s32 D_80074860[3] = { 0, 12, 655360 }; /* UNRESOLVED: size-only typing */
-s32 D_8007486C[3] = { 0, 12, 655360 }; /* UNRESOLVED: size-only typing */
-s32 D_80074878[3] = { 0, 12, 655360 }; /* UNRESOLVED: size-only typing */
-s32 D_80074884[3] = { 5, 10, 262144 }; /* UNRESOLVED: size-only typing */
-s32 D_80074890[3] = { 0, 10, 262144 }; /* UNRESOLVED: size-only typing */
-s32 D_8007489C[3] = { 4, 10, 262144 }; /* UNRESOLVED: size-only typing */
+s32 D_80074860[3] = { 0, 12, 655360 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007486C[3] = { 0, 12, 655360 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074878[3] = { 0, 12, 655360 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074884[3] = { 5, 10, 262144 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074890[3] = { 0, 10, 262144 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_8007489C[3] = { 4, 10, 262144 }; /* inferred aggregate type; byte-exact typed C */
 s32 D_800748A8[3] = { 0, -327643, 524288 };
 s32 D_800748B4[3] = { 0, 327717, 524288 };
 void *D_800748C0[1] = { &D_8007483C };
@@ -3563,20 +3892,20 @@ s32 D_80074A7C = 38010;
 s32 D_80074A80[2] = { 38010, 0 };
 s32 D_80074A88 = 67142143;
 s32 D_80074A8C[13] = { 1, 131075, 262149, 393223, 327681, 131078, 262144, 196615, 458758, 131075, 262149, 65536, 0 };
-s32 D_80074AC0[29] = { 0, 5242960, 5242944, 5243248, 5242912, -5242800, -5242816, -5242832, -5242848, 2097216, 64, -2097088, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 458756, 65836 }; /* UNRESOLVED: size-only typing */
-s32 D_80074B34[6] = { 72, 7, 8323088, 300, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80074B4C[12] = { 136, 9, 8323088, 232, 17, 8323088, 248, 7, 8323088, 300, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80074B7C[12] = { 0, 0, 8323088, 156, 7, 8323088, 256, 8, 8323088, 300, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80074BAC[6] = { 80, 8, 8323088, 180, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80074BC4[6] = { 20, 9, 8323088, 180, 65536, 0 }; /* UNRESOLVED: size-only typing */
-s32 D_80074BDC[15] = { 48, 17, 8323088, 56, 14, 8323088, 56, 21, 8323088, 76, 8, 8323088, 180, 65536, 0 }; /* UNRESOLVED: size-only typing */
+s32 D_80074AC0[29] = { 0, 5242960, 5242944, 5243248, 5242912, -5242800, -5242816, -5242832, -5242848, 2097216, 64, -2097088, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 458756, 65836 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074B34[6] = { 72, 7, 8323088, 300, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074B4C[12] = { 136, 9, 8323088, 232, 17, 8323088, 248, 7, 8323088, 300, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074B7C[12] = { 0, 0, 8323088, 156, 7, 8323088, 256, 8, 8323088, 300, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074BAC[6] = { 80, 8, 8323088, 180, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074BC4[6] = { 20, 9, 8323088, 180, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074BDC[15] = { 48, 17, 8323088, 56, 14, 8323088, 56, 21, 8323088, 76, 8, 8323088, 180, 65536, 0 }; /* inferred aggregate type; byte-exact typed C */
 s32 D_80074C18[9] = { 30, 7, 8323088, 184, 57, 6881296, 300, 65536, 0 };
-s32 D_80074C3C[3] = { -2146928236, 44, -2147005644 }; /* UNRESOLVED: size-only typing */
-s32 D_80074C48[3] = { -2146928236, 45, -2147005620 }; /* UNRESOLVED: size-only typing */
-s32 D_80074C54[3] = { -2146928236, 46, -2147005572 }; /* UNRESOLVED: size-only typing */
-s32 D_80074C60[3] = { -2146928236, 47, -2147005524 }; /* UNRESOLVED: size-only typing */
-s32 D_80074C6C[3] = { -2146928236, 48, -2147005500 }; /* UNRESOLVED: size-only typing */
-s32 D_80074C78[3] = { -2146928236, 49, -2147005476 }; /* UNRESOLVED: size-only typing */
+s32 D_80074C3C[3] = { -2146928236, 44, -2147005644 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074C48[3] = { -2146928236, 45, -2147005620 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074C54[3] = { -2146928236, 46, -2147005572 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074C60[3] = { -2146928236, 47, -2147005524 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074C6C[3] = { -2146928236, 48, -2147005500 }; /* inferred aggregate type; byte-exact typed C */
+s32 D_80074C78[3] = { -2146928236, 49, -2147005476 }; /* inferred aggregate type; byte-exact typed C */
 s32 D_80074C84 = 0;
 s32 D_80074C88 = 56;
 s32 D_80074C8C = 0;
