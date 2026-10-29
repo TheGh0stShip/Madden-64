@@ -87,7 +87,7 @@ def build_image(overlay: int, record: int, *, suffix: str = "overlay",
 def main() -> None:
     build_image(1, 1, link_vram=0x8008B8E0)
     build_image(2, 2, suffix="overlay-data", link_vram=0x8008B8E0)
-    build_image(4, 4)
+    build_image(4, 4, link_vram=0x800C5F48)
     build_image(5, 5, suffix="overlay-data", link_vram=0x800C5F48)
 
 

@@ -11,14 +11,14 @@ functions = [
     { name = "func_800C77F0", vram = 0x800c77f0, size = 0x20 }, # c
     { name = "func_800C7810", vram = 0x800c7810, size = 0x10 }, # stub
     { name = "func_800C7820", vram = 0x800c7820, size = 0x80 }, # leaf
-    { name = "func_800C78A4", vram = 0x800c78a4, size = 0xc }, # stub
+    { name = "func_800C78A4", vram = 0x800c78a0, size = 0x10 }, # c boundary-corrected
     { name = "func_800C78B0", vram = 0x800c78b0, size = 0x18 }, # leaf
     { name = "func_800C78C8", vram = 0x800c78c8, size = 0x108 }, # c
     { name = "func_800C79D0", vram = 0x800c79d0, size = 0x64 }, # c
     { name = "func_800C7A34", vram = 0x800c7a34, size = 0x54 }, # c
-    { name = "func_800C7AD0", vram = 0x800c7ad0, size = 0x78 }, # c
+    { name = "func_800C7A88", vram = 0x800c7a88, size = 0xc0 }, # c boundary-corrected
     { name = "func_800C7B48", vram = 0x800c7b48, size = 0x88 }, # c
-    { name = "func_800C7C04", vram = 0x800c7c04, size = 0x80 }, # c
+    { name = "func_800C7BD0", vram = 0x800c7bd0, size = 0xb4 }, # c boundary-corrected
     { name = "func_800C7C84", vram = 0x800c7c84, size = 0x378 }, # c
     { name = "func_800C8010", vram = 0x800c8010, size = 0x40 }, # leaf
     { name = "func_800C8058", vram = 0x800c8058, size = 0x14 }, # leaf
@@ -34,7 +34,7 @@ functions = [
     { name = "func_800C8AEC", vram = 0x800c8aec, size = 0x54 }, # leaf
     { name = "func_800C8B40", vram = 0x800c8b40, size = 0x2c }, # leaf
     { name = "func_800C8B6C", vram = 0x800c8b6c, size = 0x9c }, # c
-    { name = "func_800C8C88", vram = 0x800c8c88, size = 0x94 }, # c
+    { name = "func_800C8C08", vram = 0x800c8c08, size = 0x114 }, # c boundary-corrected
     { name = "func_800C8D1C", vram = 0x800c8d1c, size = 0x114 }, # c
     { name = "func_800C8EA0", vram = 0x800c8ea0, size = 0xc4 }, # c falls_through
     { name = "func_800C8F64", vram = 0x800c8f64, size = 0x12c }, # c
@@ -64,7 +64,7 @@ functions = [
     { name = "func_800CA518", vram = 0x800ca518, size = 0x10 }, # stub
     { name = "func_800CA528", vram = 0x800ca528, size = 0x218 }, # c
     { name = "func_800CA7A8", vram = 0x800ca7a8, size = 0x5c }, # c
-    { name = "func_800CA804", vram = 0x800ca804, size = 0x12c }, # c
+    { name = "func_800CA804", vram = 0x800ca804, size = 0x128 }, # c
     { name = "func_800CA930", vram = 0x800ca930, size = 0x348 }, # c
     { name = "func_800CAC78", vram = 0x800cac78, size = 0x40 }, # c
     { name = "func_800CACB8", vram = 0x800cacb8, size = 0x44 }, # c
@@ -95,7 +95,7 @@ functions = [
     { name = "func_800CCA7C", vram = 0x800cca7c, size = 0x7c }, # leaf
     { name = "func_800CCAF8", vram = 0x800ccaf8, size = 0x23c }, # c
     { name = "func_800CCD34", vram = 0x800ccd34, size = 0xcf8 }, # c
-    { name = "func_800CDA80", vram = 0x800cda80, size = 0x58 }, # leaf
+    { name = "func_800CDA2C", vram = 0x800cda2c, size = 0xac }, # c boundary-corrected
     { name = "func_800CDAD8", vram = 0x800cdad8, size = 0x268 }, # c
     { name = "func_800CDD40", vram = 0x800cdd40, size = 0x124 }, # c
     { name = "func_800CDE64", vram = 0x800cde64, size = 0x58 }, # c
@@ -105,7 +105,7 @@ functions = [
     { name = "func_800CDF48", vram = 0x800cdf48, size = 0x11c }, # c
     { name = "func_800CE064", vram = 0x800ce064, size = 0x150 }, # c
     { name = "func_800CE1B4", vram = 0x800ce1b4, size = 0x64 }, # leaf
-    { name = "func_800CE218", vram = 0x800ce218, size = 0x104 }, # leaf
+    { name = "func_800CE218", vram = 0x800ce218, size = 0x104 }, # c
     { name = "func_800CE508", vram = 0x800ce508, size = 0x1b4 }, # c falls_through
     { name = "func_800CE6BC", vram = 0x800ce6bc, size = 0x320 }, # leaf
     { name = "func_800CE9DC", vram = 0x800ce9dc, size = 0x944 }, # c
@@ -131,8 +131,7 @@ functions = [
     { name = "func_800D19F8", vram = 0x800d19f8, size = 0x30 }, # c
     { name = "func_800D1A28", vram = 0x800d1a28, size = 0x58 }, # c
     { name = "func_800D1A80", vram = 0x800d1a80, size = 0x38 }, # leaf
-    { name = "func_800D1AB8", vram = 0x800d1ab8, size = 0x40 }, # c
-    { name = "func_800D1AF8", vram = 0x800d1af8, size = 0x184 }, # c
+    { name = "func_800D1AB8", vram = 0x800d1ab8, size = 0x1c4 }, # c
     { name = "func_800D1D90", vram = 0x800d1d90, size = 0x10 }, # stub
     { name = "func_800D1DAC", vram = 0x800d1dac, size = 0x30 }, # leaf
     { name = "func_800D1DE8", vram = 0x800d1de8, size = 0x50 }, # leaf
@@ -168,9 +167,7 @@ functions = [
     { name = "func_800D4A80", vram = 0x800d4a80, size = 0x13c }, # c
     { name = "func_800D4BBC", vram = 0x800d4bbc, size = 0x58 }, # c
     { name = "func_800D4C14", vram = 0x800d4c14, size = 0x80 }, # leaf
-    { name = "func_800D4CC0", vram = 0x800d4cc0, size = 0xc }, # stub
-    { name = "func_800D4CD0", vram = 0x800d4cd0, size = 0xc }, # stub
-    { name = "func_800D4D1C", vram = 0x800d4d1c, size = 0x90 }, # c
+    { name = "func_800D4C94", vram = 0x800d4c94, size = 0x118 }, # c boundary-corrected
     { name = "func_800D4DAC", vram = 0x800d4dac, size = 0x10c }, # c
     { name = "func_800D4F84", vram = 0x800d4f84, size = 0xa0 }, # c
     { name = "func_800D5024", vram = 0x800d5024, size = 0x94 }, # c
@@ -188,7 +185,7 @@ functions = [
     { name = "func_800D6228", vram = 0x800d6228, size = 0xec }, # leaf
     { name = "func_800D6314", vram = 0x800d6314, size = 0x2a8 }, # c
     { name = "func_800D65BC", vram = 0x800d65bc, size = 0x268 }, # c
-    { name = "func_800D6824", vram = 0x800d6824, size = 0x22c }, # c
+    { name = "func_800D6824", vram = 0x800d6824, size = 0x228 }, # c
     { name = "func_800D6A50", vram = 0x800d6a50, size = 0x6c }, # leaf
     { name = "func_800D6ABC", vram = 0x800d6abc, size = 0xb8 }, # c
     { name = "func_800D6B74", vram = 0x800d6b74, size = 0x76c }, # c
@@ -204,7 +201,7 @@ functions = [
     { name = "func_800D7C0C", vram = 0x800d7c0c, size = 0xf40 }, # c
     { name = "func_800D8B4C", vram = 0x800d8b4c, size = 0x90 }, # c
     { name = "func_800D8BDC", vram = 0x800d8bdc, size = 0x460 }, # c
-    { name = "func_800D903C", vram = 0x800d903c, size = 0x48 }, # leaf
+    { name = "func_800D903C", vram = 0x800d903c, size = 0x48 }, # c
     { name = "func_800D9084", vram = 0x800d9084, size = 0x90 }, # leaf
     { name = "func_800D9114", vram = 0x800d9114, size = 0x1d4 }, # c
     { name = "func_800D92E8", vram = 0x800d92e8, size = 0x6b0 }, # c
@@ -216,13 +213,12 @@ functions = [
     { name = "func_800D9D1C", vram = 0x800d9d1c, size = 0x8 }, # stub
     { name = "func_800D9D24", vram = 0x800d9d24, size = 0xb4 }, # c
     { name = "func_800D9DD8", vram = 0x800d9dd8, size = 0x34 }, # leaf
-    { name = "func_800D9E0C", vram = 0x800d9e0c, size = 0x568 }, # c
-    { name = "func_800DA374", vram = 0x800da374, size = 0x44 }, # c
+    { name = "func_800D9E0C", vram = 0x800d9e0c, size = 0x5ac }, # c
     { name = "func_800DA3B8", vram = 0x800da3b8, size = 0x50 }, # c
     { name = "func_800DA408", vram = 0x800da408, size = 0x2b4 }, # c
     { name = "func_800DA6BC", vram = 0x800da6bc, size = 0x74 }, # c
     { name = "func_800DA730", vram = 0x800da730, size = 0xd4 }, # c
-    { name = "func_800DA804", vram = 0x800da804, size = 0xc8 }, # leaf
+    { name = "func_800DA804", vram = 0x800da804, size = 0xc8 }, # c
     { name = "func_800DA8CC", vram = 0x800da8cc, size = 0x668 }, # c
     { name = "func_800DAF34", vram = 0x800daf34, size = 0x50 }, # leaf
     { name = "func_800DAFAC", vram = 0x800dafac, size = 0x14 }, # c
@@ -251,9 +247,9 @@ functions = [
     { name = "func_800DBFB8", vram = 0x800dbfb8, size = 0x1a8 }, # c
     { name = "func_800DC160", vram = 0x800dc160, size = 0x8 }, # stub
     { name = "func_800DC21C", vram = 0x800dc21c, size = 0x24 }, # leaf
-    { name = "func_800DC24C", vram = 0x800dc24c, size = 0xcc }, # leaf
+    { name = "func_800DC24C", vram = 0x800dc240, size = 0xd8 }, # c boundary-corrected
     { name = "func_800DC318", vram = 0x800dc318, size = 0x100 }, # c
-    { name = "func_800DC418", vram = 0x800dc418, size = 0xd8 }, # leaf
+    { name = "func_800DC418", vram = 0x800dc418, size = 0xd8 }, # c
     { name = "func_800DC4F0", vram = 0x800dc4f0, size = 0x20 }, # leaf
     { name = "func_800DC540", vram = 0x800dc540, size = 0x14 }, # c
     { name = "func_800DC578", vram = 0x800dc578, size = 0x8 }, # stub
@@ -265,8 +261,8 @@ functions = [
     { name = "func_800DC86C", vram = 0x800dc86c, size = 0x84 }, # c
     { name = "func_800DC8F0", vram = 0x800dc8f0, size = 0x8 }, # stub
     { name = "func_800DC8F8", vram = 0x800dc8f8, size = 0x8 }, # stub
-    { name = "func_800DC900", vram = 0x800dc900, size = 0x5c }, # leaf
-    { name = "func_800DC95C", vram = 0x800dc95c, size = 0x5c }, # leaf
+    { name = "func_800DC900", vram = 0x800dc900, size = 0x5c }, # c
+    { name = "func_800DC95C", vram = 0x800dc95c, size = 0x5c }, # c
     { name = "func_800DC9F4", vram = 0x800dc9f4, size = 0x50 }, # leaf
     { name = "func_800DCDA4", vram = 0x800dcda4, size = 0x50 }, # c
     { name = "func_800DCDF4", vram = 0x800dcdf4, size = 0x17c }, # c
@@ -283,12 +279,11 @@ functions = [
     { name = "func_800DDC20", vram = 0x800ddc20, size = 0xf0 }, # leaf falls_through
     { name = "func_800DDD10", vram = 0x800ddd10, size = 0x9c }, # c
     { name = "func_800DDDAC", vram = 0x800dddac, size = 0x54 }, # leaf
-    { name = "func_800DDE00", vram = 0x800dde00, size = 0x60 }, # leaf
+    { name = "func_800DDE00", vram = 0x800dde00, size = 0x60 }, # c
     { name = "func_800DDE60", vram = 0x800dde60, size = 0x44 }, # leaf
     { name = "func_800DDEA4", vram = 0x800ddea4, size = 0x50 }, # leaf
     { name = "func_800DDF10", vram = 0x800ddf10, size = 0x8 }, # stub
-    { name = "func_800DDF18", vram = 0x800ddf18, size = 0x44 }, # leaf
-    { name = "func_800DDF5C", vram = 0x800ddf5c, size = 0x70 }, # leaf
+    { name = "func_800DDF18", vram = 0x800ddf18, size = 0xb4 }, # c
     { name = "func_800DDFCC", vram = 0x800ddfcc, size = 0x230 }, # c
     { name = "func_800DE1FC", vram = 0x800de1fc, size = 0x98 }, # leaf
     { name = "func_800DE410", vram = 0x800de410, size = 0x38 }, # c
@@ -297,17 +292,10 @@ functions = [
     { name = "func_800DE8D8", vram = 0x800de8d8, size = 0xec }, # c
     { name = "func_800DE9C4", vram = 0x800de9c4, size = 0x8c }, # leaf
     { name = "func_800DEA50", vram = 0x800dea50, size = 0xdc }, # c
-    { name = "func_800DEB2C", vram = 0x800deb2c, size = 0x60 }, # c
-    { name = "func_800DEBA0", vram = 0x800deba0, size = 0xc }, # stub
-    { name = "func_800DEBAC", vram = 0x800debac, size = 0x10 }, # c
-    { name = "func_800DEBBC", vram = 0x800debbc, size = 0x10 }, # stub
-    { name = "func_800DEBE8", vram = 0x800debe8, size = 0x50 }, # leaf
-    { name = "func_800DEC38", vram = 0x800dec38, size = 0x44 }, # c
-    { name = "func_800DEC88", vram = 0x800dec88, size = 0x13c }, # c
-    { name = "func_800DEDC4", vram = 0x800dedc4, size = 0x1c8 }, # c
-    { name = "func_800DEF8C", vram = 0x800def8c, size = 0x138 }, # leaf
+    { name = "func_800DEB2C", vram = 0x800deb2c, size = 0x298 }, # c
+    { name = "func_800DEDC4", vram = 0x800dedc4, size = 0x300 }, # c
     { name = "func_800DF0C4", vram = 0x800df0c4, size = 0x3fc }, # c
-    { name = "func_800DF4C0", vram = 0x800df4c0, size = 0x68 }, # leaf
+    { name = "func_800DF4C0", vram = 0x800df4c0, size = 0x68 }, # c
     { name = "func_800DF528", vram = 0x800df528, size = 0x10 }, # stub
     { name = "func_800DF538", vram = 0x800df538, size = 0x18 }, # leaf
     { name = "func_800DF550", vram = 0x800df550, size = 0x18 }, # leaf
@@ -315,8 +303,7 @@ functions = [
     { name = "func_800DF584", vram = 0x800df584, size = 0x1c }, # leaf
     { name = "func_800DF5A0", vram = 0x800df5a0, size = 0x10 }, # stub
     { name = "func_800DF5B0", vram = 0x800df5b0, size = 0x200 }, # leaf
-    { name = "func_800DF7B0", vram = 0x800df7b0, size = 0x11c }, # c
-    { name = "func_800DF8CC", vram = 0x800df8cc, size = 0x3e4 }, # c
+    { name = "func_800DF7B0", vram = 0x800df7b0, size = 0x500 }, # c
     { name = "func_800DFCB0", vram = 0x800dfcb0, size = 0x11c }, # c
     { name = "func_800E009C", vram = 0x800e009c, size = 0xdc }, # leaf
     { name = "func_800E01A8", vram = 0x800e01a8, size = 0x10 }, # stub
@@ -348,7 +335,7 @@ functions = [
     { name = "func_800E1C98", vram = 0x800e1c98, size = 0x108 }, # c
     { name = "func_800E1DA0", vram = 0x800e1da0, size = 0x21c }, # c
     { name = "func_800E1FBC", vram = 0x800e1fbc, size = 0x28 }, # c
-    { name = "func_800E1FE4", vram = 0x800e1fe4, size = 0x17c }, # c
+    { name = "func_800E1FE4", vram = 0x800e1fe4, size = 0x178 }, # c
     { name = "func_800E2178", vram = 0x800e2178, size = 0xd0 }, # c falls_through
     { name = "func_800E2248", vram = 0x800e2248, size = 0xc0 }, # c
     { name = "func_800E2308", vram = 0x800e2308, size = 0xf0 }, # c
@@ -376,7 +363,7 @@ functions = [
     { name = "func_800E346C", vram = 0x800e346c, size = 0xcc }, # c
     { name = "func_800E3538", vram = 0x800e3538, size = 0x5c }, # c
     { name = "func_800E3594", vram = 0x800e3594, size = 0xc4 }, # c
-    { name = "func_800E3658", vram = 0x800e3658, size = 0x140 }, # leaf
+    { name = "func_800E3658", vram = 0x800e3658, size = 0x140 }, # c
     { name = "func_800E3798", vram = 0x800e3798, size = 0x1c8 }, # c
     { name = "func_800E3960", vram = 0x800e3960, size = 0xb8 }, # c
     { name = "func_800E3A18", vram = 0x800e3a18, size = 0x48 }, # leaf
@@ -386,7 +373,7 @@ functions = [
     { name = "func_800E3D14", vram = 0x800e3d14, size = 0x8 }, # stub
     { name = "func_800E3D1C", vram = 0x800e3d1c, size = 0x8 }, # stub
     { name = "func_800E3D24", vram = 0x800e3d24, size = 0x40 }, # leaf
-    { name = "func_800E3D64", vram = 0x800e3d64, size = 0x38 }, # leaf
+    { name = "func_800E3D64", vram = 0x800e3d64, size = 0x38 }, # c
     { name = "func_800E3D9C", vram = 0x800e3d9c, size = 0xf0 }, # c
     { name = "func_800E3E8C", vram = 0x800e3e8c, size = 0x148 }, # c
     { name = "func_800E3FD4", vram = 0x800e3fd4, size = 0xf0 }, # c
@@ -409,16 +396,13 @@ functions = [
     { name = "func_800E50E0", vram = 0x800e50e0, size = 0xc }, # stub
     { name = "func_800E50EC", vram = 0x800e50ec, size = 0x170 }, # c
     { name = "func_800E525C", vram = 0x800e525c, size = 0x474 }, # c
-    { name = "func_800E573C", vram = 0x800e573c, size = 0x14 }, # leaf
-    { name = "func_800E5750", vram = 0x800e5750, size = 0x14 }, # leaf
-    { name = "func_800E5764", vram = 0x800e5764, size = 0x14 }, # leaf
-    { name = "func_800E5778", vram = 0x800e5778, size = 0x40 }, # c
+    { name = "func_800E56D0", vram = 0x800e56d0, size = 0xe8 }, # c boundary-corrected
     { name = "func_800E57C8", vram = 0x800e57c8, size = 0x394 }, # c
     { name = "func_800E5B5C", vram = 0x800e5b5c, size = 0x508 }, # c
     { name = "func_800E6064", vram = 0x800e6064, size = 0xbc }, # c
     { name = "func_800E6120", vram = 0x800e6120, size = 0x24 }, # leaf
     { name = "func_800E6144", vram = 0x800e6144, size = 0x60 }, # leaf
-    { name = "func_800E61A4", vram = 0x800e61a4, size = 0xec }, # c
+    { name = "func_800E61A4", vram = 0x800e61a4, size = 0xe8 }, # c
     { name = "func_800E6290", vram = 0x800e6290, size = 0xd4c }, # c
     { name = "func_800E6FDC", vram = 0x800e6fdc, size = 0x8c }, # c
     { name = "func_800E7068", vram = 0x800e7068, size = 0x1ac }, # c
