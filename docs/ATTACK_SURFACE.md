@@ -47,24 +47,24 @@ heuristic boundary catalogues and are not equivalent measures.
 | overlay_1 | 951 | 390 | 192,672 | 62,936 |
 | overlay_2 | 589 | 381 | 199,068 | 65,060 |
 | overlay_4 | 420 | 65 | 115,116 | 6,260 |
-| overlay_5 | 392 | 210 | 123,624 | 19,908 |
+| overlay_5 | 391 | 212 | 123,624 | 20,236 |
 | resident | 1,366 | 849 | 378,068 | 143,792 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 349 | 141 | 4,044 | 1,696 |
+| 000-0016 | 348 | 140 | 4,036 | 1,688 |
 | 000-0032 | 239 | 100 | 6,264 | 2,560 |
 | 000-0064 | 480 | 115 | 23,868 | 5,700 |
 | 000-0128 | 719 | 206 | 67,824 | 19,488 |
-| 000-0256 | 798 | 379 | 148,044 | 71,548 |
+| 000-0256 | 798 | 377 | 148,052 | 71,228 |
 | 000-0512 | 669 | 476 | 242,540 | 175,148 |
 | 000-1024 | 312 | 271 | 219,520 | 192,512 |
 | 1025+ | 157 | 140 | 297,076 | 242,572 |
 
 - Exact duplicate body families: 36
-- Functions participating in those families: 181
+- Functions participating in those families: 180
 - Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 1,082,496
@@ -84,7 +84,7 @@ register dependency, and no contradictory boundary finding.
 | overlay_1 | 1,071 | 951 | 231 | 43,696 | 987 |
 | overlay_2 | 606 | 589 | 0 | 0 | 129 |
 | overlay_4 | 420 | 420 | 87 | 17,500 | 348 |
-| overlay_5 | 408 | 392 | 1 | 16 | 75 |
+| overlay_5 | 408 | 391 | 1 | 16 | 75 |
 
 These findings are an audit queue, not additional progress. They include
 late starts, branches across candidate boundaries, shared epilogues,
