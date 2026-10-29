@@ -47,29 +47,29 @@ heuristic boundary catalogues and are not equivalent measures.
 | overlay_1 | 951 | 390 | 192,672 | 62,936 |
 | overlay_2 | 606 | 8 | 198,816 | 64 |
 | overlay_4 | 420 | 65 | 115,116 | 6,260 |
-| overlay_5 | 408 | 120 | 123,524 | 9,440 |
+| overlay_5 | 406 | 130 | 123,540 | 10,164 |
 | resident | 1,366 | 849 | 378,068 | 143,792 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 381 | 174 | 4,320 | 1,988 |
+| 000-0016 | 379 | 172 | 4,304 | 1,972 |
 | 000-0032 | 242 | 115 | 6,360 | 2,980 |
-| 000-0064 | 484 | 193 | 24,076 | 9,640 |
-| 000-0128 | 717 | 364 | 67,652 | 34,468 |
+| 000-0064 | 484 | 188 | 24,108 | 9,396 |
+| 000-0128 | 717 | 359 | 67,652 | 34,020 |
 | 000-0256 | 795 | 523 | 147,592 | 97,856 |
 | 000-0512 | 668 | 533 | 242,232 | 194,668 |
 | 000-1024 | 312 | 281 | 219,520 | 198,888 |
 | 1025+ | 157 | 141 | 297,076 | 245,848 |
 
 - Exact duplicate body families: 44
-- Functions participating in those families: 205
+- Functions participating in those families: 203
 - Matched-to-unmatched transferable families retained: 1
 - Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 1,082,496
-- Bytes assigned to provisional candidate bodies: 1,008,828
-- Code bytes outside provisional candidate bodies: 73,668
+- Bytes assigned to provisional candidate bodies: 1,008,844
+- Code bytes outside provisional candidate bodies: 73,652
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally
@@ -84,7 +84,7 @@ register dependency, and no contradictory boundary finding.
 | overlay_1 | 1,071 | 951 | 231 | 43,696 | 987 |
 | overlay_2 | 606 | 606 | 0 | 0 | 129 |
 | overlay_4 | 420 | 420 | 87 | 17,500 | 348 |
-| overlay_5 | 408 | 408 | 1 | 16 | 75 |
+| overlay_5 | 408 | 406 | 1 | 16 | 75 |
 
 These findings are an audit queue, not additional progress. They include
 late starts, branches across candidate boundaries, shared epilogues,

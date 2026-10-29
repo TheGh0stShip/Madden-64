@@ -119,3 +119,13 @@
 0x1A6C8	0xD4	src/overlays/overlay5/resource_array_activate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	75df518ee23b105f7842e2527c56c92793d9e2fb3e0b17a70e55e2f1fb707089
 0x15FE8	0xDC	src/overlays/overlay5/resource_descriptor_build.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4a30b8d4123f0cf48482ac31997595e12e59a9a75d244e567d7c6553513faba7
 0x19CEC	0xCC	src/overlays/overlay5/resource_range_finalize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bae2e1bc86c0b2075d302bc6e77308d78598a5ba2a6ef9c7301b3de85e4afa6e
+0x15F7C	0x58	src/overlays/overlay5/resource_coordinate_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fb4a828abb9229a34f7e67cf2b138fd3270c969d9e3de886b4610ec1f1870287
+0x16248	0x68	src/overlays/overlay5/resource_record_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	87203f2fcf83dcc01e88dc24f5a799c64fa80fa4e3246741f79b5235d0a06e88
+0x1A208	0x4C	src/overlays/overlay5/resource_callback_configure.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a469242029168286714586044d9450e4dc04f46aee8b429497fd1f0e2d4e09a4
+0x1A8CC	0x54	src/overlays/overlay5/resource_linked_entry_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	269fa966074e90c824f99b6e45780e190f5e982633b5b2689a85a208018904e0
+0x1A86C	0x60	src/overlays/overlay5/resource_coordinate_lookup.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	dadec87b33b6061025c3a69f1345188f6e8f38ce44d03c4880311abe0cf60172
+0x1A7A4	0x40	src/overlays/overlay5/resource_mode_notify.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2c390a83c54764b7fac6342d4c7e1a3d892bd95089ab0c5c9b322511719aacd3
+0x1A7E4	0x40	src/overlays/overlay5/resource_mode_notify.c	-DEVENT_EQUAL=0x22 -DEVENT_OTHER=0x28 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ea213582adb3a5bf25b87d0edb2a1ad9e3d80df8f9fe4265a149dc4e7202f57d
+0x19870	0x2C	src/overlays/overlay5/resource_slot_append.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	067ea85b6f5e8d6e1ab015cb86dd74f673b84391d1c7c9a4da0a7db1dd2124a6
+0x1989C	0x34	src/overlays/overlay5/resource_optional_release.c	-DRESOURCE_OFFSET=0x7C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5a364352df0203f2715586cb7362151ee3c56027faf111cc860e2ec51743c968
+0x198D0	0x34	src/overlays/overlay5/resource_optional_release.c	-DRESOURCE_OFFSET=0x78 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f04d46c926e0f52048219e57e57148e281dee69f9b9de87fcd8c424b02652f78

@@ -199,10 +199,10 @@
         "matched_bytes": 6260
       },
       "overlay_5": {
-        "functions": 408,
-        "bytes": 123524,
-        "matched_functions": 120,
-        "matched_bytes": 9440
+        "functions": 406,
+        "bytes": 123540,
+        "matched_functions": 130,
+        "matched_bytes": 10164
       },
       "resident": {
         "functions": 1366,
@@ -214,9 +214,9 @@
     "catalogue_status": {
       "provisional": true,
       "program_code_bytes": 1082496,
-      "catalogue_body_bytes": 1008828,
-      "code_bytes_outside_catalogue_bodies": 73668,
-      "catalogue_candidates": 3756,
+      "catalogue_body_bytes": 1008844,
+      "code_bytes_outside_catalogue_bodies": 73652,
+      "catalogue_candidates": 3754,
       "boundary_audits": {
         "resident": {
           "text_bytes": 411132,
@@ -287,7 +287,7 @@
         "overlay_5": {
           "text_bytes": 124268,
           "sweep_candidates": 408,
-          "catalogue_candidates": 408,
+          "catalogue_candidates": 406,
           "in_text_data_ranges": 1,
           "in_text_data_bytes": 16,
           "findings": {
@@ -301,8 +301,8 @@
     },
     "size_buckets": {
       "000-0016": {
-        "functions": 381,
-        "bytes": 4320,
+        "functions": 379,
+        "bytes": 4304,
         "matched_functions": 207,
         "matched_bytes": 2332
       },
@@ -314,15 +314,15 @@
       },
       "000-0064": {
         "functions": 484,
-        "bytes": 24076,
-        "matched_functions": 291,
-        "matched_bytes": 14436
+        "bytes": 24108,
+        "matched_functions": 296,
+        "matched_bytes": 14712
       },
       "000-0128": {
         "functions": 717,
         "bytes": 67652,
-        "matched_functions": 353,
-        "matched_bytes": 33184
+        "matched_functions": 358,
+        "matched_bytes": 33632
       },
       "000-0256": {
         "functions": 795,
@@ -350,7 +350,7 @@
       }
     },
     "exact_duplicate_families": 44,
-    "exact_duplicate_members": 205,
+    "exact_duplicate_members": 203,
     "transferable_families": [
       {
         "size": 32,
