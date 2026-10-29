@@ -9,14 +9,12 @@ typedef struct Overlay5DataRecord {
 
 Overlay5DataRecord *func_800E24EC(void *collection, void *identifier);
 s32 func_800E24A0(u8 *data, s32 size);
+extern void *D_80084F28;
 
-s32 overlay5_data_record_checksum_refresh(
-    void *collection,
-    void *identifier
-) {
+s32 overlay5_data_record_checksum_refresh(void *identifier) {
     Overlay5DataRecord *record;
 
-    record = func_800E24EC(collection, identifier);
+    record = func_800E24EC(D_80084F28, identifier);
     if (record != 0) {
         record->checksum = func_800E24A0(record->data, record->size - 0xC);
         return -1;

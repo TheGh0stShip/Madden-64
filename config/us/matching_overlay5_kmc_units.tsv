@@ -137,7 +137,10 @@
 0x1D03C	0x48	src/overlays/overlay5/runtime_storage_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afd69c6ae7d82cfd7167f3efefc79f5b30a3f09b3947ec464864eaeed11c1331
 0x1D4F0	0x48	src/overlays/overlay5/runtime_system_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f074b72a335e45c339fa532e0149ee5f11f97330b23134ecfd304d776da32488
 0x1D63C	0x4C	src/overlays/overlay5/data_record_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e1f8b9bd40283be5bb1ec34eab1ad61c368464653d9056523e9a20431994cdd6
-0x1D2E4	0x4C	src/overlays/overlay5/data_record_checksum_refresh.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	abe98b44438ef996f35fa97f9be1c08e32437c62c8e5c2d916da079eaf68d599
+0x1D2D8	0x58	src/overlays/overlay5/data_record_checksum_refresh.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9ba03a027cd8e36847c9b547e0b90f21d8f67f7a22424197912f577d694d9c27
+0x1D120	0xBC	src/overlays/overlay5/data_record_copy_verified.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8a6e71b08c02ee7dbbb176d0fe5742ba23b79855058b63327f401698c6a5069a
+0x1D248	0x90	src/overlays/overlay5/data_record_payload_store.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d5601818b69db8deab486ef0f954185d39907a2af02fb3f8f89987fa293e454d
+0x1D40C	0xE4	src/overlays/overlay5/runtime_selected_record_process.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fee6f3bb902dc544c1944886f6f0fa1dfe2a15830a11480f9faeb9a6ccebcdd3
 0x1DA20	0x5C	src/overlays/overlay5/packed_bit_get.c	--section-base=.rodata:0x80002F24 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a96a9cd6c3e375b9157737cb1236a30fb5caa8881f915f589f29cd2b3ca65ad3
 0x1CFC8	0x18	src/overlays/overlay5/data_record_magic_check.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4bd51c33805496da0535a68f81515dd160cdd07d5a29b969ec3c4764e492c8bd
 0x1CFE0	0x5C	src/overlays/overlay5/runtime_selected_record_load.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	faee0798f3f6ba5f2fb2bee73c7f6ac67dec3309ba3267042490038a63d44f22

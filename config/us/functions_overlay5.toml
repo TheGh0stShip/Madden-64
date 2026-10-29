@@ -382,17 +382,14 @@ functions = [
     { name = "func_800E1F28", vram = 0x800e1f28, size = 0x5c }, # c
     { name = "func_800E1F84", vram = 0x800e1f84, size = 0x48 }, # c
     { name = "func_800E1FCC", vram = 0x800e1fcc, size = 0x9c }, # c
-    { name = "func_800E2068", vram = 0x800e2068, size = 0xc }, # stub falls_through
-    { name = "func_800E2074", vram = 0x800e2074, size = 0xb0 }, # c
+    { name = "func_800E2068", vram = 0x800e2068, size = 0xbc }, # c
     { name = "func_800E2124", vram = 0x800e2124, size = 0x6c }, # c
-    { name = "func_800E219C", vram = 0x800e219c, size = 0x84 }, # c
-    { name = "func_800E2220", vram = 0x800e2220, size = 0xc }, # stub falls_through
-    { name = "func_800E222C", vram = 0x800e222c, size = 0x4c }, # c
+    { name = "func_800E2190", vram = 0x800e2190, size = 0x90 }, # c
+    { name = "func_800E2220", vram = 0x800e2220, size = 0x58 }, # c
     { name = "func_800E2278", vram = 0x800e2278, size = 0xcc }, # c
     { name = "func_800E2344", vram = 0x800e2344, size = 0x8 }, # stub
     { name = "func_800E234C", vram = 0x800e234c, size = 0x8 }, # stub
-    { name = "func_800E2354", vram = 0x800e2354, size = 0x8 }, # stub falls_through
-    { name = "func_800E235C", vram = 0x800e235c, size = 0xdc }, # c
+    { name = "func_800E2354", vram = 0x800e2354, size = 0xe4 }, # c
     { name = "func_800E2438", vram = 0x800e2438, size = 0x48 }, # c
     { name = "func_800E2480", vram = 0x800e2480, size = 0x20 }, # c
     { name = "func_800E24A0", vram = 0x800e24a0, size = 0x4c }, # c
