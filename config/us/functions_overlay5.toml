@@ -263,8 +263,7 @@ functions = [
     { name = "func_800DCC1C", vram = 0x800dcc1c, size = 0x5e8 }, # c
     { name = "func_800DD204", vram = 0x800dd204, size = 0x8 }, # stub
     { name = "func_800DD20C", vram = 0x800dd20c, size = 0x2ac }, # c
-    { name = "func_800DD4B8", vram = 0x800dd4b8, size = 0x8 }, # stub falls_through
-    { name = "func_800DD4C0", vram = 0x800dd4c0, size = 0x54 }, # c
+    { name = "func_800DD4B8", vram = 0x800dd4b8, size = 0x5c }, # c
     { name = "func_800DD514", vram = 0x800dd514, size = 0xa4 }, # c
     { name = "func_800DD5B8", vram = 0x800dd5b8, size = 0x30 }, # c
     { name = "func_800DD5E8", vram = 0x800dd5e8, size = 0x24 }, # c
@@ -275,8 +274,7 @@ functions = [
     { name = "func_800DD660", vram = 0x800dd660, size = 0x34 }, # c
     { name = "func_800DD694", vram = 0x800dd694, size = 0xf4 }, # c
     { name = "func_800DD788", vram = 0x800dd788, size = 0x60 }, # c
-    { name = "func_800DD7E8", vram = 0x800dd7e8, size = 0x8 }, # stub falls_through
-    { name = "func_800DD7F0", vram = 0x800dd7f0, size = 0x3c }, # c
+    { name = "func_800DD7E8", vram = 0x800dd7e8, size = 0x44 }, # c
     { name = "func_800DD82C", vram = 0x800dd82c, size = 0x8 }, # stub falls_through
     { name = "func_800DD834", vram = 0x800dd834, size = 0x90 }, # c
     { name = "func_800DD8C4", vram = 0x800dd8c4, size = 0x8 }, # stub falls_through
@@ -375,8 +373,7 @@ functions = [
     { name = "func_800E17A8", vram = 0x800e17a8, size = 0x364 }, # c
     { name = "func_800E1B0C", vram = 0x800e1b0c, size = 0x2f8 }, # c
     { name = "func_800E1E04", vram = 0x800e1e04, size = 0x3c }, # leaf
-    { name = "func_800E1E40", vram = 0x800e1e40, size = 0x8 }, # stub falls_through
-    { name = "func_800E1E48", vram = 0x800e1e48, size = 0x2c }, # c
+    { name = "func_800E1E40", vram = 0x800e1e40, size = 0x34 }, # c
     { name = "func_800E1E74", vram = 0x800e1e74, size = 0x9c }, # c
     { name = "func_800E1F10", vram = 0x800e1f10, size = 0x18 }, # leaf
     { name = "func_800E1F28", vram = 0x800e1f28, size = 0x5c }, # c

@@ -42,7 +42,6 @@
 0x1AC30	0x20	src/overlays/overlay5/indexed_word_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b60fae358049473c2e00a4c0fa9b52529a0c7d4835d3665faaaf0a969221ee96
 0x1BDC8	0x20	src/overlays/overlay5/runtime_active_mark.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a817928ac66dc42119815724c56016bfe4aa1c9606477a15cd1c676fa4711aef
 0x1BF10	0x2C	src/overlays/overlay5/runtime_active_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fb50f862cf895f21c0857e256978216d02156e9e81b9354bd50e5c464fe615dd
-0x1CF00	0x2C	src/overlays/overlay5/runtime_value_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b15ad8e3dfe86b8e4d1cc554a2ffa4f50345ed25b5f5ad8fad13b2a028222ac9
 0x1D538	0x20	src/overlays/overlay5/runtime_finalize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5d506f8836d46843973ab48296cf95e50502301f15a28a4b80f654a77449f9bc
 0x3A88	0x30	src/overlays/overlay5/flagged_resource_dispatch.c	--symbol=FLAG:0x800892B0 --symbol=RESOURCE:0x80072198 -DFLAG_VALUE=0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b7c01323be1a0ba3f00f909e1b2f5cd25ecda975a9d02a3344947248f19af6ab
 0x3AB8	0x34	src/overlays/overlay5/flagged_resource_dispatch.c	--symbol=FLAG:0x800892B0 --symbol=RESOURCE:0x80072198 -DFLAG_VALUE=1 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9013142dee0eb1a936880de9e86ffc10fb5407077add9e830b921d1fb0c1359d
@@ -147,6 +146,16 @@
 0x1D7E8	0xB8	src/overlays/overlay5/packed_text_decode.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7fcf7bc60f7ce3ad257f23cf6b44f1e4d57d958338c8e31c80b613b154198c67
 0x1D954	0xCC	src/overlays/overlay5/string_pair_record_exists.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a17a3db209948f2562f92b4608b407569f4231afcc35c0357592589996387fda
 0x1DA7C	0x98	src/overlays/overlay5/packed_bits_read.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d19a8276ebb0875186552d2d55b79105f46afbd427615479ca1308d55049beb4
+0x7818	0x40	src/overlays/overlay5/runtime_descriptor_540_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ae4c69118fb0fe3445bc73893c3f62ff4c78df2754ce543cca9c774464c2c4b2
+0x7A64	0x40	src/overlays/overlay5/runtime_descriptor_550_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b39dd3d1484a93fa5498e6b69927d23f4c488f1ec563b4295084ce5c05c25c7a
+0x1228	0x34	src/overlays/overlay5/runtime_sequence_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1442d365819e045d28e1f50c107e2f1924c2baedd553eaca61fbc5a714bd9f76
+0x18570	0x5C	src/overlays/overlay5/runtime_stack_advance.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	52630726f1789f7bdba2f72a127e6dd65c8af1a7c08d73f5f3d986152ebd2fc9
+0x188A0	0x44	src/overlays/overlay5/runtime_optional_resource_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f5ffb97605282e4bc24bb3907c9d7339b821708db32405377bff776a9943d437
+0x1CEF8	0x34	src/overlays/overlay5/runtime_record_table_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	10ff69f7c67d9f816c10f9224ea0ef842d35d9ec952c440b3f55b22c0433b135
+0x4280	0x58	src/overlays/overlay5/runtime_event_dispatch.c	-DEVENT_OFFSET=1 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5b8d01466080a6f2b5ee4d9ff7de9fb0760517f826a3e4d1b106f125a38ff477
+0x5380	0x58	src/overlays/overlay5/runtime_event_dispatch.c	-DEVENT_OFFSET=18 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ca6b9bedeb61e1e42d83aac87785115f2a0d83d3a42dbac907fe56bd5b326e24
+0xB554	0x58	src/overlays/overlay5/runtime_event_dispatch.c	-DEVENT_OFFSET=4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	980dfa7682831dd75578c5536486f959b60a257b164f3c129a020d77b465521f
+0x13CB8	0x58	src/overlays/overlay5/runtime_event_dispatch.c	-DEVENT_OFFSET=4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	980dfa7682831dd75578c5536486f959b60a257b164f3c129a020d77b465521f
 0x1DA20	0x5C	src/overlays/overlay5/packed_bit_get.c	--section-base=.rodata:0x80002F24 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a96a9cd6c3e375b9157737cb1236a30fb5caa8881f915f589f29cd2b3ca65ad3
 0x1CFC8	0x18	src/overlays/overlay5/data_record_magic_check.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4bd51c33805496da0535a68f81515dd160cdd07d5a29b969ec3c4764e492c8bd
 0x1CFE0	0x5C	src/overlays/overlay5/runtime_selected_record_load.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	faee0798f3f6ba5f2fb2bee73c7f6ac67dec3309ba3267042490038a63d44f22
