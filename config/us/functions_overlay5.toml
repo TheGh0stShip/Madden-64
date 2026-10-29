@@ -89,10 +89,8 @@ functions = [
     { name = "func_800CC550", vram = 0x800cc550, size = 0x20 }, # c
     { name = "func_800CC570", vram = 0x800cc570, size = 0x28 }, # c
     { name = "func_800CC598", vram = 0x800cc598, size = 0x28 }, # c
-    { name = "func_800CC5C0", vram = 0x800cc5c0, size = 0x8 }, # stub falls_through
-    { name = "func_800CC5C8", vram = 0x800cc5c8, size = 0x8c }, # c
-    { name = "func_800CC654", vram = 0x800cc654, size = 0x8 }, # stub falls_through
-    { name = "func_800CC65C", vram = 0x800cc65c, size = 0x8c }, # c
+    { name = "func_800CC5C0", vram = 0x800cc5c0, size = 0x94 }, # c
+    { name = "func_800CC654", vram = 0x800cc654, size = 0x94 }, # c
     { name = "func_800CC6E8", vram = 0x800cc6e8, size = 0x78 }, # c
     { name = "func_800CC760", vram = 0x800cc760, size = 0x40 }, # c
     { name = "func_800CC7A0", vram = 0x800cc7a0, size = 0x1ec }, # c
@@ -181,8 +179,7 @@ functions = [
     { name = "func_800D533C", vram = 0x800d533c, size = 0x1a8 }, # c
     { name = "func_800D54E4", vram = 0x800d54e4, size = 0x170 }, # c
     { name = "func_800D565C", vram = 0x800d565c, size = 0x170 }, # c
-    { name = "func_800D57CC", vram = 0x800d57cc, size = 0x8 }, # stub falls_through
-    { name = "func_800D57D4", vram = 0x800d57d4, size = 0x144 }, # c
+    { name = "func_800D57CC", vram = 0x800d57cc, size = 0x14c }, # c
     { name = "func_800D5918", vram = 0x800d5918, size = 0x304 }, # c
     { name = "func_800D5C1C", vram = 0x800d5c1c, size = 0x10c }, # c
     { name = "func_800D5D28", vram = 0x800d5d28, size = 0x78 }, # c
@@ -275,8 +272,7 @@ functions = [
     { name = "func_800DD694", vram = 0x800dd694, size = 0xf4 }, # c
     { name = "func_800DD788", vram = 0x800dd788, size = 0x60 }, # c
     { name = "func_800DD7E8", vram = 0x800dd7e8, size = 0x44 }, # c
-    { name = "func_800DD82C", vram = 0x800dd82c, size = 0x8 }, # stub falls_through
-    { name = "func_800DD834", vram = 0x800dd834, size = 0x90 }, # c
+    { name = "func_800DD82C", vram = 0x800dd82c, size = 0x98 }, # c
     { name = "func_800DD8C4", vram = 0x800dd8c4, size = 0x8 }, # stub falls_through
     { name = "func_800DD8CC", vram = 0x800dd8cc, size = 0x4f8 }, # c
     { name = "func_800DDDC4", vram = 0x800dddc4, size = 0x8 }, # stub falls_through

@@ -156,6 +156,11 @@
 0x5380	0x58	src/overlays/overlay5/runtime_event_dispatch.c	-DEVENT_OFFSET=18 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ca6b9bedeb61e1e42d83aac87785115f2a0d83d3a42dbac907fe56bd5b326e24
 0xB554	0x58	src/overlays/overlay5/runtime_event_dispatch.c	-DEVENT_OFFSET=4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	980dfa7682831dd75578c5536486f959b60a257b164f3c129a020d77b465521f
 0x13CB8	0x58	src/overlays/overlay5/runtime_event_dispatch.c	-DEVENT_OFFSET=4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	980dfa7682831dd75578c5536486f959b60a257b164f3c129a020d77b465521f
+0x7678	0x94	src/overlays/overlay5/runtime_option_group_apply.c	-DOPTION_MODE=0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7ee6dd75f2edfc6e7dccd2d88ac2e08a722cc35f2688db4abbecfd842f58ef48
+0x770C	0x94	src/overlays/overlay5/runtime_option_group_apply.c	-DOPTION_MODE=1 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1a7cb0bc9f77f2ae6769394249e5b6b9223656f77742c37d0ba4ac9e1358239b
+0x10884	0x14C	src/overlays/overlay5/runtime_resource_arrays_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4048eaa7bc44a76b987f45ddb758ce440a07a76c82ba12d3c56e80b2ee7d53ef
+0x16F38	0x90	src/overlays/overlay5/runtime_index_ranges_swap.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	48a936df190a06b028b101a7725c446b80fbd42887e7e9759c69f1e9b7b79ff4
+0x188E4	0x98	src/overlays/overlay5/runtime_resource_rebuild.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c29af8ecbf9bd3cc65412e9f79d343d9fa3eaccf7ee4d6455807eaf6f412d112
 0x1DA20	0x5C	src/overlays/overlay5/packed_bit_get.c	--section-base=.rodata:0x80002F24 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a96a9cd6c3e375b9157737cb1236a30fb5caa8881f915f589f29cd2b3ca65ad3
 0x1CFC8	0x18	src/overlays/overlay5/data_record_magic_check.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4bd51c33805496da0535a68f81515dd160cdd07d5a29b969ec3c4764e492c8bd
 0x1CFE0	0x5C	src/overlays/overlay5/runtime_selected_record_load.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	faee0798f3f6ba5f2fb2bee73c7f6ac67dec3309ba3267042490038a63d44f22
