@@ -129,3 +129,13 @@
 0x19870	0x2C	src/overlays/overlay5/resource_slot_append.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	067ea85b6f5e8d6e1ab015cb86dd74f673b84391d1c7c9a4da0a7db1dd2124a6
 0x1989C	0x34	src/overlays/overlay5/resource_optional_release.c	-DRESOURCE_OFFSET=0x7C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5a364352df0203f2715586cb7362151ee3c56027faf111cc860e2ec51743c968
 0x198D0	0x34	src/overlays/overlay5/resource_optional_release.c	-DRESOURCE_OFFSET=0x78 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f04d46c926e0f52048219e57e57148e281dee69f9b9de87fcd8c424b02652f78
+0x18670	0x30	src/overlays/overlay5/resource_current_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f0e939ed1dde5cd0e8711faa774c8378df5ad5adac16c994255d2b6006e8e126
+0x1B95C	0x84	src/overlays/overlay5/runtime_object_replace.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e205b7316644b2c2eb59baaafb11ac615898f8fa1492522506bda1ef0b9515e1
+0x1BC20	0x4C	src/overlays/overlay5/runtime_list_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	592a2324f5ef5d49c95d8332a52102a047301842d4ac1b2c61f0e7ded5b298f1
+0x1BECC	0x44	src/overlays/overlay5/runtime_list_destroy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	38891ec5fbf4bfd166a503ed684d4204e4278e1895f0f94f26a5894f335c6487
+0x1C3C8	0x44	src/overlays/overlay5/runtime_slots_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	061542398d27c0b94855268aad1e523938af4f3c0ac7ebecac73c750516f7158
+0x1D03C	0x48	src/overlays/overlay5/runtime_storage_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	afd69c6ae7d82cfd7167f3efefc79f5b30a3f09b3947ec464864eaeed11c1331
+0x1D4F0	0x48	src/overlays/overlay5/runtime_system_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f074b72a335e45c339fa532e0149ee5f11f97330b23134ecfd304d776da32488
+0x1D63C	0x4C	src/overlays/overlay5/data_record_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e1f8b9bd40283be5bb1ec34eab1ad61c368464653d9056523e9a20431994cdd6
+0x1D2E4	0x4C	src/overlays/overlay5/data_record_checksum_refresh.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	abe98b44438ef996f35fa97f9be1c08e32437c62c8e5c2d916da079eaf68d599
+0x1DA20	0x5C	src/overlays/overlay5/packed_bit_get.c	--section-base=.rodata:0x80002F24 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a96a9cd6c3e375b9157737cb1236a30fb5caa8881f915f589f29cd2b3ca65ad3
