@@ -230,3 +230,4 @@
 0x1AC50	0xBC	src/overlays/overlay5/func_800DFB98.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d2e1ce1a02869f03f3b4558870ee70549c8bac0e7db4ef5094d187c57cd51fe6
 0x1AE1C	0x108	src/overlays/overlay5/func_800DFD64.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4532be0efae009a24863e134118b8aacc20ea07c4d60ef4cab7d15d00312743e
 0x1B004	0xD8	src/overlays/overlay5/func_800DFF4C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	23ee799feb7a2497e757ba0bdeb4f37f211d0557265708f08efdce013531e1a1
+0x1B0DC	0x100	src/overlays/overlay5/func_800E0024.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	50a87980720d0e0c0918c7aa58458a6a871441bda632a1d6aad9ac960612e185
