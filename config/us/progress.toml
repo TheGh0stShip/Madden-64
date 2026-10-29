@@ -10,7 +10,7 @@ libultra_vram = 0x80045928
 total_functions = 3717
 
 [progress]
-matched_data = 75488
+matched_data = 105340
 matched_functions = 1927
 loader_manifests = [
   "config/us/matching_loader_kmc_units.tsv",
