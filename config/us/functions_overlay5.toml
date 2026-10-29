@@ -329,8 +329,7 @@ functions = [
     { name = "func_800E0200", vram = 0x800e0200, size = 0x43c }, # c
     { name = "func_800E063C", vram = 0x800e063c, size = 0x88 }, # c
     { name = "func_800E06C4", vram = 0x800e06c4, size = 0xc8 }, # c
-    { name = "func_800E078C", vram = 0x800e078c, size = 0x8 }, # stub falls_through
-    { name = "func_800E0794", vram = 0x800e0794, size = 0xcc }, # c
+    { name = "func_800E078C", vram = 0x800e078c, size = 0xd4 }, # c merged scheduled entry
     { name = "func_800E0860", vram = 0x800e0860, size = 0x44 }, # c
     { name = "func_800E08A4", vram = 0x800e08a4, size = 0x84 }, # c
     { name = "func_800E0928", vram = 0x800e0928, size = 0x1c }, # leaf
@@ -350,11 +349,9 @@ functions = [
     { name = "func_800E0E84", vram = 0x800e0e84, size = 0xac }, # c merged scheduled entry
     { name = "func_800E0F30", vram = 0x800e0f30, size = 0x158 }, # c
     { name = "func_800E1088", vram = 0x800e1088, size = 0x4c }, # c
-    { name = "func_800E10D8", vram = 0x800e10d8, size = 0x8 }, # stub falls_through
-    { name = "func_800E10E0", vram = 0x800e10e0, size = 0xcc }, # c
+    { name = "func_800E10D8", vram = 0x800e10d8, size = 0xd4 }, # c merged scheduled entry
     { name = "func_800E11AC", vram = 0x800e11ac, size = 0x74 }, # c
-    { name = "func_800E1220", vram = 0x800e1220, size = 0x8 }, # stub falls_through
-    { name = "func_800E1228", vram = 0x800e1228, size = 0x74 }, # c
+    { name = "func_800E1220", vram = 0x800e1220, size = 0x7c }, # c merged scheduled entry
     { name = "func_800E12A0", vram = 0x800e12a0, size = 0x70 }, # c
     { name = "func_800E1310", vram = 0x800e1310, size = 0x44 }, # c
     { name = "func_800E1354", vram = 0x800e1354, size = 0xc4 }, # c
