@@ -945,7 +945,7 @@ functions = [
     { name = "func_8004211C", vram = 0x8004211c, size = 0x54 }, # c
     { name = "func_80042170", vram = 0x80042170, size = 0xd8 }, # c
     { name = "display_state_update", vram = 0x80042248, size = 0x1d8 }, # asm
-    { name = "func_80042420", vram = 0x80042420, size = 0x14c }, # asm
+    { name = "func_80042420", vram = 0x80042420, size = 0x14c }, # c
     { name = "func_8004256C", vram = 0x8004256c, size = 0x4c }, # c
     { name = "display_command_update", vram = 0x800425b8, size = 0x210 }, # asm
     { name = "display_list_copy_or_branch", vram = 0x800427c8, size = 0x80 }, # c
