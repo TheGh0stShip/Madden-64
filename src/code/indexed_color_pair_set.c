@@ -4,11 +4,12 @@ extern u8 D_80078300[];
 extern u8 D_80078310[];
 
 void func_8000E05C(u8 index, u8* color) {
-    register u32 offset __asm__("$2") = index * 40;
-    register u8* entry __asm__("$3");
+    u32 offset;
+    u8* entry;
 
-    __asm__ volatile("" : "=r"(offset) : "0"(offset));
-
+    do {
+        offset = index * 40;
+    } while (0);
     index = color[0];
     entry = &D_80078300[offset];
     entry[0x14] = index;
