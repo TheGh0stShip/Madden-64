@@ -894,7 +894,7 @@ functions = [
     { name = "func_800C2310", vram = 0x800c2310, size = 0x58 }, # asm
     { name = "func_800C2368", vram = 0x800c2368, size = 0x12c }, # asm
     { name = "func_800C2494", vram = 0x800c2494, size = 0x1f8 }, # asm
-    { name = "func_800C268C", vram = 0x800c268c, size = 0x1c0 }, # asm
+    { name = "func_800C268C", vram = 0x800c268c, size = 0x1c0 }, # c
     { name = "func_800C284C", vram = 0x800c284c, size = 0x88 }, # asm
     { name = "func_800C28D4", vram = 0x800c28d4, size = 0x150 }, # asm
     { name = "func_800C2A24", vram = 0x800c2a24, size = 0x344 }, # asm
