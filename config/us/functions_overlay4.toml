@@ -166,7 +166,7 @@ functions = [
     { name = "func_800D4C14", vram = 0x800d4c14, size = 0x80 }, # leaf
     { name = "func_800D4C94", vram = 0x800d4c94, size = 0x118 }, # c boundary-corrected
     { name = "func_800D4DAC", vram = 0x800d4dac, size = 0x10c }, # c
-    { name = "func_800D4F84", vram = 0x800d4f84, size = 0xa0 }, # c
+    { name = "func_800D4EB8", vram = 0x800d4eb8, size = 0x16c }, # c boundary-corrected
     { name = "func_800D5024", vram = 0x800d5024, size = 0x94 }, # c
     { name = "func_800D51B0", vram = 0x800d51b0, size = 0x6c }, # leaf falls_through
     { name = "func_800D521C", vram = 0x800d521c, size = 0xb8 }, # leaf falls_through
