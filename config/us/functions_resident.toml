@@ -611,7 +611,7 @@ functions = [
     { name = "func_80031A68", vram = 0x80031a68, size = 0x10 }, # stub
     { name = "func_80031A78", vram = 0x80031a78, size = 0x20 }, # c
     { name = "func_80031A98", vram = 0x80031a98, size = 0x20 }, # c
-    { name = "packed_command_measure", vram = 0x80031ab8, size = 0x168 }, # asm
+    { name = "packed_command_measure", vram = 0x80031ab8, size = 0x168 }, # c
     { name = "func_80031C20", vram = 0x80031c20, size = 0x34 }, # leaf
     { name = "runtime_flags_update", vram = 0x80031c54, size = 0x434 }, # asm
     { name = "runtime_input_process", vram = 0x80032088, size = 0x410 }, # asm
