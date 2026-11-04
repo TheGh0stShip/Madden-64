@@ -398,3 +398,5 @@
 0x338D0	0x150	src/overlays/overlay1/func_800C28D4.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	17253fb260f2861127c07351b643a2f61d1cd2d7b006c2d6336eb0c30c591aa2
 0x30B58	0x1D8	src/overlays/overlay1/func_800BFB5C.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	107ce74775d40ff50e93fe116f4ac11e88439daeba1a91f67ad36e8990c24efe
 0x33208	0x40	src/overlays/overlay1/func_800C220C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5387823d76d74f36be98d2ca756692079f85f9c05e9c2fbc4461cae6bc7c732a
+0xF1DC	0x118	src/overlays/overlay1/func_8009E1E0.c	--assembler=asn64 --section-base=.rodata:0x800009B0 --normalizer-enable-KMC-LID-PAIR --normalizer-enable-KMC-FP-PAIR-WORDS -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	87b93a7af4099a322fb1a3c37f3c26517b1d1994173c5554725dc145eb91e849
+0x2E4F8	0xD8	src/overlays/overlay1/func_800BD4FC.c	--assembler=asn64 --normalizer-enable-KMC-ABS-SYM-PAIR -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9326a419a292c632dba453d0a9220577c4b011766f9f9a7413dd5cdf3bcc563b
