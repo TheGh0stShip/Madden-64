@@ -933,3 +933,4 @@
 0x5AD8C	0x2D0	src/code/object_state_update_secondary.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	85233b323bf2fcbb431b624ae04368e8163c9b0491b91edac60e455dc7b4db49
 0x145E8	0x16C	src/code/render_pipeline_finalize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ce39c9f69d342063912ea002cdf2d1b547261ae939fb9e460cc8f5a2069afb9a
 0x3723C	0x128	src/code/func_8003663C.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	72d598ebf7f86debab713ceb4ff0aac20b34b50082eff45ce2c87db90719c68d
+0x3882C	0x108	src/code/func_80037C2C.c	--section-base=.rodata:0x80002B18 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	31a974a454641d494f165970c7d2c6ef67d30404b27204bcc29ce47bf0cebdd8
