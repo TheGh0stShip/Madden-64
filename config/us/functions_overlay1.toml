@@ -814,7 +814,7 @@ functions = [
     { name = "func_800BD998", vram = 0x800bd998, size = 0x88 }, # asm
     { name = "func_800BDA20", vram = 0x800bda20, size = 0x30 }, # c
     { name = "func_800BDA50", vram = 0x800bda50, size = 0xa4 }, # c boundary-corrected
-    { name = "func_800BDB28", vram = 0x800bdb28, size = 0x34 }, # asm
+    { name = "func_800BDAF4", vram = 0x800bdaf4, size = 0x68 }, # c boundary-corrected
     { name = "func_800BDB5C", vram = 0x800bdb5c, size = 0x11c }, # asm
     { name = "func_800BDC78", vram = 0x800bdc78, size = 0x20 }, # leaf
     { name = "func_800BDC98", vram = 0x800bdc98, size = 0x34 }, # asm
