@@ -44,7 +44,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | Module | Functions | Matched | Candidate bytes | Matched bytes |
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 0 | 632 | 0 |
-| overlay_1 | 951 | 407 | 192,724 | 65,852 |
+| overlay_1 | 951 | 408 | 192,724 | 66,152 |
 | overlay_2 | 589 | 388 | 199,092 | 67,052 |
 | overlay_4 | 400 | 201 | 116,056 | 42,968 |
 | overlay_5 | 386 | 259 | 123,624 | 33,276 |
@@ -59,7 +59,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | 000-0064 | 476 | 108 | 23,624 | 5,272 |
 | 000-0128 | 709 | 150 | 66,968 | 14,316 |
 | 000-0256 | 798 | 292 | 148,220 | 55,452 |
-| 000-0512 | 670 | 367 | 242,880 | 138,036 |
+| 000-0512 | 670 | 366 | 242,880 | 137,736 |
 | 000-1024 | 313 | 243 | 219,952 | 174,344 |
 | 1025+ | 158 | 135 | 298,424 | 236,576 |
 
