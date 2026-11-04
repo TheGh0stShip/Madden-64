@@ -196,3 +196,4 @@
 0x20C34	0x1B8	src/overlays/overlay4/func_800E741C.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	95d11553a7062c44548d4f6ba46e8c5961ad3bc69e9926cd9e2a36bce8c1ee5e
 0x20DEC	0x298	src/overlays/overlay4/func_800E75D4.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6fcd8975bce00264d66e96790f473969ff4e52e4a165301acdd8675a718e9cbf
 0x2B88	0x134	src/overlays/overlay4/func_800C9370.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fb46b591feca904f14a06a3b14802cf45daef45009c2d1088a57890dddcbe359
+0x3298	0x110	src/overlays/overlay4/func_800C9A80.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d20cf81716d5ed5c2117489f3c95dab519b87a59bd44dacf2fe137401497ac4d
