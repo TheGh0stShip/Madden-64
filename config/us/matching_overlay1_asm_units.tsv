@@ -495,7 +495,6 @@
 0x301C4	0xB0	src/overlays/overlay1/func_800BF1C8.s	-O2 -G0 -mips3 -mgp32 -mfp32	cfe6940ffd489485d474dff9f4f91c2d5bbde04c46368667bcb8fe5a67979519
 0x30274	0x64	src/overlays/overlay1/func_800BF278.s	-O2 -G0 -mips3 -mgp32 -mfp32	01765959b08355386bec50d446cb3e27ab54018f613c3d531db5060c67eb3b92
 0x307D4	0xBC	src/overlays/overlay1/func_800BF7D8.s	-O2 -G0 -mips3 -mgp32 -mfp32	5a7ff6d51f4bfeea781864a3e4d01c320cf5ed11de043d53230601c30e656620
-0x30B58	0x1D8	src/overlays/overlay1/func_800BFB5C.s	-O2 -G0 -mips3 -mgp32 -mfp32	107ce74775d40ff50e93fe116f4ac11e88439daeba1a91f67ad36e8990c24efe
 0x30F5C	0x3C	src/overlays/overlay1/func_800BFF60.s	-O2 -G0 -mips3 -mgp32 -mfp32	ef4a24a7a5031aabbe733aa122e764577343aa1f29b0e7dec3618b1a4dfb5d4d
 0x30F98	0x7C	src/overlays/overlay1/func_800BFF9C.s	-O2 -G0 -mips3 -mgp32 -mfp32	0f7ecf57e97aac809fb60a58d39921217edd528ba8664538ab38879d80133b5b
 0x31014	0xFC	src/overlays/overlay1/func_800C0018.s	-O2 -G0 -mips3 -mgp32 -mfp32	e0041213283528e6a2309d17ea16deb776039747bac58f12cefc5e2249af8035

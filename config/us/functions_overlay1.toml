@@ -846,7 +846,7 @@ functions = [
     { name = "func_800BF5A0", vram = 0x800bf5a0, size = 0x238 }, # c boundary-corrected
     { name = "func_800BF7D8", vram = 0x800bf7d8, size = 0xbc }, # asm
     { name = "func_800BF894", vram = 0x800bf894, size = 0x2c8 }, # c boundary-corrected
-    { name = "func_800BFB5C", vram = 0x800bfb5c, size = 0x1d8 }, # asm
+    { name = "func_800BFB5C", vram = 0x800bfb5c, size = 0x1d8 }, # c
     { name = "flagged_status_query", vram = 0x800bfd34, size = 0x34 }, # C
     { name = "func_800BFD68", vram = 0x800bfd68, size = 0x40 }, # c
     { name = "func_800BFDA8", vram = 0x800bfda8, size = 0x68 }, # c
