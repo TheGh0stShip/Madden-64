@@ -6,17 +6,18 @@ struct ObjectNode {
     u8 pad00[0x20];
     s32 key;
     u8 pad24[0x28];
-    ObjectNode* previous;
-    ObjectNode* next;
+    ObjectNode *previous;
+    ObjectNode *next;
 };
 
-extern ObjectNode* D_80087940;
+extern ObjectNode *D_80087940;
 
-void func_800BDEB8(void) {
-    register s32 one asm("$7") = 1;
-    register ObjectNode* next asm("$4");
-    register ObjectNode* current asm("$5");
-    register s32 swapped asm("$6");
+void func_800BDEB8(void)
+{
+    s32 one = 1;
+    ObjectNode *next;
+    ObjectNode *current;
+    s32 swapped;
 
     do {
         swapped = 0;
@@ -30,9 +31,7 @@ void func_800BDEB8(void) {
                 } else {
                     current->previous->next = next;
                 }
-                if (next->next == 0) {
-                    __asm__ volatile("");
-                } else {
+                if (next->next != 0) {
                     next->next->previous = current;
                 }
                 next->previous = current->previous;
