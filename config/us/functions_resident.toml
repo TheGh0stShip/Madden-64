@@ -330,7 +330,7 @@ functions = [
     { name = "ui_layout_render", vram = 0x8001c6b8, size = 0x38c }, # asm
     { name = "func_8001CA44", vram = 0x8001ca44, size = 0x48 }, # leaf
     { name = "ui_text_block_render", vram = 0x8001ca8c, size = 0x5fc }, # asm
-    { name = "func_8001D088", vram = 0x8001d088, size = 0x158 }, # asm
+    { name = "func_8001D088", vram = 0x8001d088, size = 0x158 }, # c
     { name = "text_line_render", vram = 0x8001d1e0, size = 0x120 }, # asm
     { name = "ui_text_line_update", vram = 0x8001d300, size = 0x1d4 }, # asm
     { name = "ui_text_line_finalize", vram = 0x8001d4d4, size = 0x1d4 }, # asm
