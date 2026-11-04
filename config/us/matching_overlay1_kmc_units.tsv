@@ -392,3 +392,4 @@
 0x2F140	0x164	src/overlays/overlay1/func_800BE144.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	03964eb2d26c72f8d996e0b7799febd58b6fa955d43d304da2c70e9e0bc158fe
 0x373A4	0x1C8	src/overlays/overlay1/func_800C63A8.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d2b47a4ed7158f40e99ff1d639ee15a31fd88937e4987c290461d01bfccbbbdc
 0x36C9C	0x8C	src/overlays/overlay1/func_800C5CA0.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f11521e94dd4f81275651def90e845e18445a7bbaf28b3f2c64b37d5f450ee0f
+0x338D0	0x150	src/overlays/overlay1/func_800C28D4.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	17253fb260f2861127c07351b643a2f61d1cd2d7b006c2d6336eb0c30c591aa2
