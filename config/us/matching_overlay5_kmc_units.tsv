@@ -1,4 +1,5 @@
 # ROM_START	SIZE	SOURCE	FLAGS	SHA256
+0x17B8	0x274	src/overlays/overlay5/func_800C6700.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2e9229d7d4f990c779fbaac430458631efdd7c5feb83a625399385711ac2774b
 0x152B8	0x1AC	src/overlays/overlay5/func_800DA200.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	664cf745988297c32f677fadc2e7a1cbc2e1bfef318c73eda4a40cdb58ef3e6d
 0x125C	0x14	src/overlays/overlay5/object_state_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ee965ef777686b20d4b4078afc1d10fa4a8a03751b7de6b65d4124b1f099d62d
 0x1BFC	0x8	src/overlays/overlay5/return_zero.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	648cbc77d024f6d08bc8ff4e3bdf1cebf2a933937ee1cebef4690d015808bd9c
