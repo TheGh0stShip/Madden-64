@@ -92,7 +92,7 @@ functions = [
     { name = "func_80095294", vram = 0x80095294, size = 0xa4 }, # c
     { name = "func_80095338", vram = 0x80095338, size = 0xa4 }, # c
     { name = "func_800953DC", vram = 0x800953dc, size = 0x94 }, # c
-    { name = "func_80095478", vram = 0x80095478, size = 0xd0 }, # c
+    { name = "func_80095478", vram = 0x80095470, size = 0xd8 }, # c boundary-corrected
     { name = "func_80095550", vram = 0x80095548, size = 0xf8 }, # c boundary-corrected
     { name = "func_80095640", vram = 0x80095640, size = 0x98 }, # c
     { name = "func_800956D8", vram = 0x800956d8, size = 0x198 }, # c
