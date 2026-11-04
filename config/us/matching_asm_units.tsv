@@ -194,7 +194,6 @@
 0x3F5B0	0x17C	src/code/audio_bank_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	948999baf435c93e571ab77f27345dfbf42574168971cd399e17b81ec57c876b
 0x1C1C0	0x178	src/code/resource_buffers_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	e758b5858366bd13b02692361bb2e5423a12ee79da8f238dbf998f7c3e2d0f9e
 0x25928	0x174	src/code/roster_state_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	9732d35322f0eaf057ee5fbbe772ecbfe021da48a51390ce12c8e0b5c7ac1b7d
-0x42640	0x174	src/code/interface_state_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	5641767f6520323856530f5062ed62910d576b9b4da95d260f96d9454ef18e3c
 0x2F490	0x10C	src/code/func_8002E890.s	-O2 -G0 -mips3 -mgp32 -mfp32	6a8f09655ac2464c054d60097d69412750c4ac0332c7880641ac90c6e89998c2
 0x1000	0x4	src/code/func_80000400.s	-O2 -G0 -mips3 -mgp32 -mfp32	8a9b8d3cc86edc90dedddc627f836f3cb9380d35831278a8088f471fcb16bb8b
 0x1004	0x8	src/code/func_80000404.s	-O2 -G0 -mips3 -mgp32 -mfp32	bdfade966c3d5446e0e48dd263db5da64ceb145834968b45672401b97207c867

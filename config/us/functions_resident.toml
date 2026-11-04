@@ -927,7 +927,7 @@ functions = [
     { name = "menu_sound_play", vram = 0x8004192c, size = 0xcc }, # c
     { name = "func_800419F8", vram = 0x800419f8, size = 0x28 }, # c
     { name = "func_80041A20", vram = 0x80041a20, size = 0x20 }, # c
-    { name = "interface_state_process", vram = 0x80041a40, size = 0x174 }, # asm
+    { name = "interface_state_process", vram = 0x80041a40, size = 0x174 }, # c
     { name = "func_80041BB4", vram = 0x80041bb4, size = 0x28 }, # c
     { name = "func_80041BDC", vram = 0x80041bdc, size = 0x6c }, # c
     { name = "func_80041C48", vram = 0x80041c48, size = 0x84 }, # c
