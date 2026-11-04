@@ -333,8 +333,7 @@ functions = [
     { name = "func_800E1DA0", vram = 0x800e1da0, size = 0x21c }, # c
     { name = "func_800E1FBC", vram = 0x800e1fbc, size = 0x28 }, # c
     { name = "func_800E1FE4", vram = 0x800e1fe4, size = 0x178 }, # c
-    { name = "func_800E2178", vram = 0x800e2178, size = 0xd0 }, # c falls_through
-    { name = "func_800E2248", vram = 0x800e2248, size = 0xc0 }, # c
+    { name = "func_800E2160", vram = 0x800e2160, size = 0x1a8 }, # c boundary-corrected
     { name = "func_800E2308", vram = 0x800e2308, size = 0xf0 }, # c
     { name = "func_800E23F8", vram = 0x800e23f8, size = 0x64 }, # c
     { name = "func_800E245C", vram = 0x800e245c, size = 0x34 }, # c
