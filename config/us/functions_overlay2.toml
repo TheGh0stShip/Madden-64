@@ -552,8 +552,8 @@ functions = [
     { name = "func_800B9C78", vram = 0x800b9c70, size = 0x54 }, # c boundary-corrected
     { name = "func_800B9CCC", vram = 0x800b9cc4, size = 0xc4 }, # c boundary-corrected
     { name = "func_800B9D90", vram = 0x800b9d88, size = 0x58 }, # c boundary-corrected
-    { name = "func_800B9DE8", vram = 0x800b9de8, size = 0xa8 }, # c
-    { name = "func_800B9E98", vram = 0x800b9e98, size = 0xa8 }, # c
+    { name = "func_800B9DE8", vram = 0x800b9de0, size = 0xb0 }, # c boundary-corrected
+    { name = "func_800B9E98", vram = 0x800b9e90, size = 0xb0 }, # c boundary-corrected
     { name = "func_800B9F40", vram = 0x800b9f40, size = 0xb4 }, # c
     { name = "func_800B9FF4", vram = 0x800b9ff4, size = 0x8 }, # stub falls_through
     { name = "func_800B9FFC", vram = 0x800b9ffc, size = 0x118 }, # c
