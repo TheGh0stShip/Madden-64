@@ -12,18 +12,22 @@ typedef struct RangeTable {
 } RangeTable;
 
 void func_80034768(RangeTable* table, s32 first_arg, s32 count_arg, u32 amount) {
-    register u32 first __asm__("$5") = (u16)first_arg;
-    register u32 last __asm__("$6") = first + (u16)count_arg - 1;
-    register RangeEntry* entries __asm__("$2") = table->entries;
-    register u8* entry __asm__("$3") = (u8*)entries + 4;
+    u32 first = (u16)first_arg;
+    u32 last = first + (u16)count_arg - 1;
+    RangeEntry* entries = table->entries;
+    volatile RangeEntry* entry = (RangeEntry*)((u8*)entries + 4);
+    u32 entry_address;
+    u32 entry_offset;
 
-    __asm__ volatile("" : "=r"(first) : "0"(first));
     if (last >= first) {
-        entry = (u8*)(first * sizeof(RangeEntry) + (u32)entry);
+        entry_offset = first * sizeof(RangeEntry);
+        entry_address = entry_offset;
+        entry_address += (u32)entry;
+        entry = (volatile RangeEntry*)entry_address;
         do {
-            *(u32*)(entry + 8) += amount;
+            entry->value += amount;
             first++;
-            entry += sizeof(RangeEntry);
+            entry++;
         } while (first <= last);
     }
 }
