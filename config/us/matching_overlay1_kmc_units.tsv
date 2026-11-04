@@ -1,4 +1,5 @@
 # KMC GCC 2.7.2; OVERLAY_ROM_START SIZE SOURCE FLAGS SHA256
+0x20408	0xC0	src/overlays/overlay1/func_800AF40C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fa2349dabc7f9ae6fc1d0bf8d4f3bd01f824fab4b168b3de6fef99ebb82ac967
 0x20360	0x54	src/overlays/overlay1/func_800AF364.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ef524321f355513aff33086314eca84cf9fff07282aef88cb26f5b8798df689b
 0x203B4	0x54	src/overlays/overlay1/func_800AF3B8.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	71a36ec0ba9de9ca8db458e41828b1db69c1ab25153d90c1a271fe0151a99bd5
 0x1CC34	0x1D4	src/overlays/overlay1/func_800ABC38.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	71e0f9e4fc78d416e89f2de78309494de44313966bfd595f3f0d9ae50768dc88

@@ -519,7 +519,7 @@ functions = [
     { name = "func_800AF304", vram = 0x800af304, size = 0x60 }, # asm
     { name = "func_800AF364", vram = 0x800af364, size = 0x54 }, # c
     { name = "func_800AF3B8", vram = 0x800af3b8, size = 0x54 }, # c
-    { name = "func_800AF40C", vram = 0x800af40c, size = 0xc0 }, # asm
+    { name = "func_800AF40C", vram = 0x800af40c, size = 0xc0 }, # c
     { name = "func_800AF4CC", vram = 0x800af4cc, size = 0xb4 }, # asm
     { name = "func_800AF580", vram = 0x800af580, size = 0x2c }, # leaf
     { name = "func_800AF5AC", vram = 0x800af5ac, size = 0x30 }, # leaf
