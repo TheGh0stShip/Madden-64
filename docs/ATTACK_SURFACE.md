@@ -46,21 +46,21 @@ heuristic boundary catalogues and are not equivalent measures.
 | boot_loader | 5 | 0 | 632 | 0 |
 | overlay_1 | 951 | 390 | 192,672 | 62,936 |
 | overlay_2 | 589 | 381 | 199,068 | 65,060 |
-| overlay_4 | 404 | 188 | 115,732 | 39,700 |
-| overlay_5 | 386 | 242 | 123,624 | 25,800 |
-| resident | 1,366 | 910 | 378,068 | 169,968 |
+| overlay_4 | 401 | 189 | 115,828 | 40,008 |
+| overlay_5 | 386 | 255 | 123,624 | 31,488 |
+| resident | 1,366 | 911 | 378,068 | 170,264 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 338 | 129 | 3,932 | 1,568 |
+| 000-0016 | 337 | 128 | 3,924 | 1,560 |
 | 000-0032 | 236 | 96 | 6,204 | 2,476 |
-| 000-0064 | 478 | 112 | 23,740 | 5,516 |
-| 000-0128 | 710 | 169 | 67,004 | 16,024 |
+| 000-0064 | 477 | 111 | 23,676 | 5,452 |
+| 000-0128 | 708 | 167 | 66,864 | 15,884 |
 | 000-0256 | 801 | 306 | 148,756 | 57,904 |
-| 000-0512 | 667 | 393 | 241,784 | 147,900 |
-| 000-1024 | 313 | 250 | 219,952 | 178,368 |
+| 000-0512 | 668 | 381 | 242,092 | 143,040 |
+| 000-1024 | 313 | 248 | 219,952 | 177,244 |
 | 1025+ | 158 | 135 | 298,424 | 236,576 |
 
 - Exact duplicate body families: 34
@@ -68,8 +68,8 @@ heuristic boundary catalogues and are not equivalent measures.
 - Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 1,082,496
-- Bytes assigned to provisional candidate bodies: 1,009,796
-- Code bytes outside provisional candidate bodies: 72,700
+- Bytes assigned to provisional candidate bodies: 1,009,892
+- Code bytes outside provisional candidate bodies: 72,604
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally
@@ -83,7 +83,7 @@ register dependency, and no contradictory boundary finding.
 | resident | 1,366 | 1,366 | 1 | 14,536 | 5 |
 | overlay_1 | 1,071 | 951 | 231 | 43,696 | 987 |
 | overlay_2 | 606 | 589 | 0 | 0 | 129 |
-| overlay_4 | 420 | 404 | 87 | 17,500 | 348 |
+| overlay_4 | 420 | 401 | 87 | 17,500 | 348 |
 | overlay_5 | 408 | 386 | 1 | 16 | 75 |
 
 These findings are an audit queue, not additional progress. They include

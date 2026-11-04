@@ -40,10 +40,7 @@ functions = [
     { name = "func_800C8F64", vram = 0x800c8f64, size = 0x12c }, # c
     { name = "func_800C9090", vram = 0x800c9090, size = 0xb4 }, # c
     { name = "func_800C9144", vram = 0x800c9144, size = 0x22c }, # c
-    { name = "func_800C93AC", vram = 0x800c93ac, size = 0x8 }, # stub
-    { name = "func_800C93D8", vram = 0x800c93d8, size = 0x40 }, # c falls_through
-    { name = "func_800C9418", vram = 0x800c9418, size = 0x44 }, # leaf falls_through
-    { name = "func_800C945C", vram = 0x800c945c, size = 0x48 }, # leaf
+    { name = "func_800C9370", vram = 0x800c9370, size = 0x134 }, # c boundary-corrected
     { name = "func_800C94C8", vram = 0x800c94c8, size = 0x25c }, # c falls_through
     { name = "func_800C9724", vram = 0x800c9724, size = 0x2c }, # c falls_through
     { name = "func_800C9750", vram = 0x800c9750, size = 0x28 }, # leaf falls_through

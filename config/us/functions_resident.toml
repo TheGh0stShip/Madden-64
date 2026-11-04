@@ -721,7 +721,7 @@ functions = [
     { name = "func_800365B8", vram = 0x800365b8, size = 0x68 }, # c
     { name = "func_80036620", vram = 0x80036620, size = 0x8 }, # stub
     { name = "func_80036628", vram = 0x80036628, size = 0x14 }, # leaf
-    { name = "func_8003663C", vram = 0x8003663c, size = 0x128 }, # asm
+    { name = "func_8003663C", vram = 0x8003663c, size = 0x128 }, # c
     { name = "memory_pool_process", vram = 0x80036764, size = 0x23c }, # asm
     { name = "audio_channel_wait_release", vram = 0x800369a0, size = 0x84 }, # c
     { name = "memory_pool_finalize_secondary", vram = 0x80036a24, size = 0x170 }, # c

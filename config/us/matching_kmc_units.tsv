@@ -931,3 +931,4 @@
 0x5AABC	0x2D0	src/code/object_state_update_primary.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	124c154c75ec0cba782444837ec250589c2f0bfaabdd0030f50e6272d9e648f8
 0x5AD8C	0x2D0	src/code/object_state_update_secondary.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	85233b323bf2fcbb431b624ae04368e8163c9b0491b91edac60e455dc7b4db49
 0x145E8	0x16C	src/code/render_pipeline_finalize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ce39c9f69d342063912ea002cdf2d1b547261ae939fb9e460cc8f5a2069afb9a
+0x3723C	0x128	src/code/func_8003663C.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	72d598ebf7f86debab713ceb4ff0aac20b34b50082eff45ce2c87db90719c68d
