@@ -901,7 +901,7 @@ address	kind	function	detail
 0x800C2168	cross_branch	0x800C2150	branch to 0x800C21D4 inside 0x800C2190
 0x800C2190	late_start	0x800C2190	reads v1 set by the preceding bytes
 0x800C21E4	cross_branch	0x800C2190	branch to 0x800C2148 inside 0x800C20F0
-0x800C220C	stray_words		0x4 non-code bytes before 0x800C2210
+0x800C220C	late_start	0x800C220C	function begins 0x4 bytes before the former func_800C2210 catalogue boundary
 0x800C224C	in_text_data		0x44 bytes of non-code inside text
 0x800C2290	late_start	0x800C2290	reads v0,v1 set by the preceding bytes
 0x800C2310	late_start	0x800C2310	reads v0 set by the preceding bytes
