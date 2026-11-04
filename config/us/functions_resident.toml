@@ -398,7 +398,7 @@ functions = [
     { name = "func_80022234", vram = 0x80022234, size = 0x4c }, # c
     { name = "roster_attribute_lookup", vram = 0x80022280, size = 0x84 }, # c
     { name = "func_80022304", vram = 0x80022304, size = 0x50 }, # c
-    { name = "func_80022354", vram = 0x80022354, size = 0x164 }, # asm
+    { name = "func_80022354", vram = 0x80022354, size = 0x164 }, # c
     { name = "attribute_count_matches", vram = 0x800224b8, size = 0x80 }, # asm
     { name = "func_80022538", vram = 0x80022538, size = 0x100 }, # c
     { name = "func_80022638", vram = 0x80022638, size = 0x100 }, # c
