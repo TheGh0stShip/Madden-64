@@ -22,6 +22,7 @@
 0x9E28	0x24	src/overlays/overlay4/object_timer_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30236f36c128352e613a1f8e1a737f0818ffd02cd0cc45b9266934aa369d2bbc
 0xB298	0x38	src/overlays/overlay4/object_range_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ff7598aeff340f5dd0710dec79e6933859d189cdf76d4096de82111001f38b1a
 0xBB68	0x28	src/overlays/overlay4/object_range_reset_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4c49545762e122605d66e25ee444724f93a6894a1416f8e433caf48df1c70af3
+0xBB90	0x250	src/overlays/overlay4/func_800D2378.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6751af01f93b1b6c16543dd5ddc3dc80f53fe5760ed3dea31bc62e07d40d9d2d
 0x113E4	0x40	src/overlays/overlay4/object_position_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7698204adbe4267a48321ee449717660ed35aa29bf487407a6b5ad4f166ee7b9
 0x135F0	0x34	src/overlays/overlay4/object_mode_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	761cc5451667cd542e6f244e5d30ae7490e65be9863657e326631f0a73ccb64f
 0x14CA8	0x20	src/overlays/overlay4/object_display_init.c	--symbol=func_800C0BBC:0x800C0BBC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d2a4b57456a89e6033ed158b71b2fc82495810889e73743d15f4cb730cdc691c
