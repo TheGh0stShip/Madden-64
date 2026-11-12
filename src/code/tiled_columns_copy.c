@@ -3,18 +3,19 @@
 void tiled_columns_copy(u8 *object, u8 ***sources, s32 plane,
                         u8 **destinations, s32 plane_count)
 {
-    register s32 planes __asm__("$12") = plane_count - 1;
-    register s32 columns __asm__("$11") = *(s32 *)(object + 0x20);
-    register s32 rows __asm__("$14") = *(s32 *)(object + 0x70);
-    register s32 column __asm__("$9");
-    register u32 source_offset __asm__("$13");
-    register u8 ***source_pointer __asm__("$10");
-    register u8 *source __asm__("$8");
-    register s32 remaining __asm__("$4");
-    register u8 *destination __asm__("$3");
+    register s32 planes = plane_count;
+    register s32 columns = *(s32 *)(object + 0x20);
+    register s32 rows = *(s32 *)(object + 0x70);
+    register s32 column;
+    register u32 source_offset;
+    register u8 ***source_pointer;
+    register u8 *source;
+    register s32 remaining;
+    register u8 *destination;
     u8 value;
     volatile u64 unused;
 
+    planes--;
     if (planes < 0) {
         return;
     }
