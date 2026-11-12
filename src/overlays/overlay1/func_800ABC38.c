@@ -1,6 +1,6 @@
 #include "types.h"
 
-typedef struct {
+typedef struct MenuEntry {
     s32 sound;
     u8 pad04[0x24];
 } MenuEntry;
@@ -20,16 +20,15 @@ extern u16 D_8007A14C[];
 extern u16 D_8007A154[];
 extern u16 D_800857B2;
 
-void func_8001EC20(s32 a, s32 b);
-void func_800A84E0(u16 a, u16 idx);
-void func_800A9330(u16 idx, s32 mode);
+void func_8001EC20(s32, s32);
+void func_800A84E0(u16, u16);
+void func_800A9330(u16, s32);
 void func_800A9F70(void);
 
 void func_800ABC38(s32 arg0, u32 buttons) {
     u16 choice;
     s32 idx;
     u16 **table;
-    u16 **base;
     u16 *row;
     u16 *prev;
     u16 value;
@@ -49,21 +48,22 @@ void func_800ABC38(s32 arg0, u32 buttons) {
             }
             break;
     }
+
     if (choice == 0) {
         return;
     }
+
     idx = (u16)arg0;
-    base = D_8007A120;
-    table = base + idx;
-    cur = *table;
+    table = D_8007A120;
+    cur = table[idx];
     row = &D_8007A148[idx];
     prev = &D_8007A14C[idx];
     *prev = *row;
     *row = 0;
-    value = cur[*prev * 3 + choice];
+    value = cur[(*prev * 3) + choice];
     if (D_8006B7B4[idx] != 0) {
         next = D_8006B6C4[value];
-        *table = next;
+        table[idx] = next;
         D_8007A12C[idx] = next;
         D_8007A154[idx] = 1;
         D_8007A128[idx] = value;
@@ -74,7 +74,7 @@ void func_800ABC38(s32 arg0, u32 buttons) {
         }
     } else {
         D_8007A128[idx] = value;
-        *table = D_8006B634[value];
+        table[idx] = D_8006B634[value];
         D_8007A154[idx] = 2;
         func_800A9330(idx, 2);
     }
