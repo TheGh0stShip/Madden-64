@@ -8,15 +8,14 @@ extern void func_80045704(u32 value, u32 resource);
 
 void display_command_link(u8 *context, u32 value, u32 index)
 {
-    register u32 selected __asm__("$8");
+    u32 selected;
     u32 *command;
-    register u32 **slot __asm__("$3");
+    u32 **slot;
     u32 resource;
-    register u32 row __asm__("$3");
-    register u32 offset __asm__("$2");
-    register u32 slot_offset __asm__("$3");
-    register u8 *slot_base __asm__("$5");
-    register u32 *previous __asm__("$5");
+    u32 row;
+    u32 offset;
+    u32 slot_offset;
+    u32 *previous;
 
     if (context[0x50] == 0) {
         selected = D_80074924[(u8)index];
@@ -31,14 +30,13 @@ void display_command_link(u8 *context, u32 value, u32 index)
     D_8007A9A0 = command + 4;
 
     row = context[0x51];
-    slot_base = (u8 *)D_8007A9C0;
+    value = (u32)D_8007A9C0;
     offset = row << 2;
     offset += row;
     offset <<= 4;
-    slot_offset = selected << 2;
-    offset += (u32)slot_base;
+    do { slot_offset = selected << 2; } while (0);
+    offset += value;
     slot = (u32 **)(slot_offset + offset);
-    __asm__("" : "=r"(slot) : "0"(slot));
     previous = *slot;
     *slot = command;
     command[3] = previous;
