@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config/us/progress.toml"
 LOADER_MAP = ROOT / "config/us/loader_map.tsv"
+HANDWRITTEN_ASM_PROVENANCE = ROOT / "config/us/handwritten_asm_provenance.tsv"
 DECOMPHUB_REPORT = ROOT / "decomphub.progress.json"
 INSTRUCTION_ASM = re.compile(
     r'^\s*(?:__asm__|asm)\s*(?:volatile\s*)?\(\s*"([^"]+)',
@@ -112,6 +113,26 @@ def assisted_c_ranges(paths: list[Path]) -> list[tuple[int, int, str]]:
     """Return C rows that rely on instruction-level assembly assistance."""
     eligible = manifest_ranges(paths, ".c", reject_instruction_asm=True)
     return [item for item in manifest_ranges(paths, ".c") if item not in eligible]
+
+
+def handwritten_asm_bytes() -> int:
+    """Return bytes backed by pinned external handwritten-assembly evidence."""
+    total = 0
+    for number, line in enumerate(HANDWRITTEN_ASM_PROVENANCE.read_text().splitlines(), 1):
+        if not line or line.startswith("#"):
+            continue
+        fields = line.split("\t")
+        if len(fields) != 6:
+            raise ValueError(
+                f"{HANDWRITTEN_ASM_PROVENANCE}:{number}: malformed provenance row"
+            )
+        size = int(fields[1], 0)
+        if size <= 0 or not fields[2].endswith(".s") or not fields[4].startswith("https://"):
+            raise ValueError(
+                f"{HANDWRITTEN_ASM_PROVENANCE}:{number}: invalid provenance row"
+            )
+        total += size
+    return total
 
 
 def loader_functions() -> list[dict[str, object]]:
@@ -352,6 +373,21 @@ def build_decomphub_report(report: dict[str, object]) -> dict[str, object]:
                         for category in report["categories"]
                         if category["id"] == "assembly_assisted_reference"
                     )),
+                    "total": int(totals["total_code"]),
+                    "unit": "bytes",
+                },
+            },
+            {
+                "id": "proven-handwritten-assembly",
+                "label": "Proven handwritten assembly",
+                "scope": (
+                    "Byte-identical assembly whose identity and handwritten "
+                    "origin are established by pinned external .s sources; "
+                    "tracked separately and never credited as decompiled C."
+                ),
+                "measurement": {
+                    "kind": "ratio",
+                    "completed": handwritten_asm_bytes(),
                     "total": int(totals["total_code"]),
                     "unit": "bytes",
                 },

@@ -27,6 +27,31 @@ The 16-byte boot entry is not covered by this libultra evidence. It remains a
 separate provenance obligation rather than being inferred handwritten merely
 because it initializes the stack before calling C.
 
+## Resident libultra assembly
+
+The resident image also contains standard libultra units whose identities are
+established by their complete instruction sequences and by pinned upstream
+sources that are themselves `.s` files.  These are not credited as decompiled
+C.  They are credited separately as proven handwritten assembly:
+
+| Madden source | Identity | Upstream assembly evidence |
+| --- | --- | --- |
+| `src/libultra/exceptasm.s` | `__osException` | [`src/os/exceptasm.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/exceptasm.s) |
+| `src/libultra/bcopy.s` | `bcopy` | [`src/libc/bcopy.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/libc/bcopy.s) |
+| `src/libultra/bzero.s` | `bzero` | [`src/libc/bzero.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/libc/bzero.s) |
+| `src/libultra/os_interrupt.s` | `__osDisableInt`, `__osRestoreInt` | [`src/os/interrupt.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/interrupt.s) |
+| `src/libultra/os_get_int_mask.s`, `os_set_int_mask.s` | `osGetIntMask`, `osSetIntMask` | [`getintmask.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/getintmask.s), [`setintmask.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/setintmask.s) |
+| `src/libultra/os_inval_dcache.s`, `os_inval_icache.s` | `osInvalDCache`, `osInvalICache` | [`invaldcache.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/invaldcache.s), [`invalicache.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/invalicache.s) |
+| `src/libultra/os_writeback_dcache.s`, `os_writeback_dcache_all.s` | `osWritebackDCache`, `osWritebackDCacheAll` | [`writebackdcache.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/writebackdcache.s), [`writebackdcacheall.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/writebackdcacheall.s) |
+| `src/libultra/os_map_tlb_rdb.s`, `os_probe_tlb.s` | `osMapTLBRdb`, `__osProbeTLB` | [`maptlbrdb.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/maptlbrdb.s), [`probetlb.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/probetlb.s) |
+| `src/libultra/os_set_fpc_csr.s`, `os_set_sr.s` | `__osSetFpcCsr`, `__osSetSR` | [`setfpccsr.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/setfpccsr.s), [`setsr.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/setsr.s) |
+| `src/libultra/os_get_count.s`, `os_set_compare.s` | `osGetCount`, `__osSetCompare` | [`getcount.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/getcount.s), [`setcompare.s`](https://github.com/decompals/ultralib/blob/e24c836796df4bf520ff8b11a5c9d2cea3a66cbd/src/os/setcompare.s) |
+
+The row-level evidence, exact Madden ranges, and pinned links are maintained in
+`config/us/handwritten_asm_provenance.tsv`.  It currently covers 4,588 bytes.
+The assembly-reference track remains broader: an `.s` file is not promoted to
+this proven-handwritten set merely because its bytes match the ROM.
+
 ## Assembler compatibility is not handwritten code
 
 The genuine-C report permits only generic emulation of the original assembler's

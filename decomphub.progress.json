@@ -36,6 +36,17 @@
       }
     },
     {
+      "id": "proven-handwritten-assembly",
+      "label": "Proven handwritten assembly",
+      "scope": "Byte-identical assembly whose identity and handwritten origin are established by pinned external .s sources; tracked separately and never credited as decompiled C.",
+      "measurement": {
+        "kind": "ratio",
+        "completed": 4588,
+        "total": 1082496,
+        "unit": "bytes"
+      }
+    },
+    {
       "id": "initialized-data",
       "label": "Matching initialized program data",
       "scope": "USA Rev 0 initialized data across the loader, resident image, overlays, and overlay data records; only byte-identical reconstructed data counts.",
