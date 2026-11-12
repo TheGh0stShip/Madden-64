@@ -22,26 +22,22 @@ extern void func_8001B314(Entry *entry);
 
 void func_8001AD78(void *source)
 {
-    register s32 index __asm__("$19") = D_800692AC;
-    register void *saved_source __asm__("$22") = source;
-    register Entry **slot __asm__("$20");
-    register Entry *entry __asm__("$21");
-    register EntryData *data __asm__("$18");
-    register u32 size __asm__("$16");
-    register u32 original_size __asm__("$17");
-    register s32 loop_index __asm__("$23");
-    register s32 count __asm__("$2");
-    register s32 offset __asm__("$2");
-    register Entry **entries __asm__("$3");
-    register s32 pool __asm__("$4");
+    s32 index = D_800692AC;
+    void *saved_source = source;
+    Entry **slot;
+    Entry *entry;
+    EntryData *data;
+    u32 size;
+    u32 original_size;
+    s32 loop_index;
+    s32 count;
+    s32 offset;
+    Entry **entries;
+    s32 pool;
 
     D_80069298 = saved_source;
-    count = index;
-    __asm__("" : "=r"(count) : "0"(count));
-    if (count != 0) {
-        index--;
+    if (index-- != 0) {
         entries = D_8007947C;
-        __asm__("" : "=r"(entries) : "0"(entries));
         offset = index * sizeof(*entries);
         slot = (Entry **)(offset + (u32)entries);
         do {
@@ -61,7 +57,6 @@ void func_8001AD78(void *source)
                 data->buffer = func_80032E00(0, size);
                 func_80033308(0, data->buffer, size, 0);
                 pool = 0;
-                __asm__("" : "=r"(pool) : "0"(pool));
                 size *= 4;
                 data->word_buffer = func_80032E00(pool, size);
                 func_80033308(0, data->word_buffer, size, 0);
