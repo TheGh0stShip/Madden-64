@@ -294,6 +294,7 @@
 0x25E14	0xE0	src/overlays/overlay2/func_800B06F4.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9837e1827d0d158aff4f4dc0a284500cfc27cda1dd8bd6f8d07700341b647b4f
 0x25EF4	0x24	src/overlays/overlay2/func_800B07D4.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fd0166714ae8b23bac6920f074cd94fe4d8696d5dde3effd7fdc79b5d1b70973
 0x261DC	0xE4	src/overlays/overlay2/func_800B0ABC.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ba200ec272cc1ee7b94862e23c631f163fc6a3f48221b59cd2e9dd685a002eff
+0x262C0	0x1FC	src/overlays/overlay2/func_800B0BA0.c	--assembler=asn64 --section-base=.rodata:0x8008BF94 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	23f5758e71be677d6e0935e62c9799e5499ed4b3c3e18463db8174692736a91e
 0x264BC	0x58	src/overlays/overlay2/func_800B0D9C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5b8d01466080a6f2b5ee4d9ff7de9fb0760517f826a3e4d1b106f125a38ff477
 0x26B08	0x58	src/overlays/overlay2/func_800B13E8.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3fa2551925a5eae4b09525304b90a9607be6dae29ec68d3858bed6bc3c5d2e46
 0x26B60	0x74	src/overlays/overlay2/func_800B1440.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0b97475f6c0d53d3a79c487c57a373e0891c823dc44de70b5f558f669ab5474e
