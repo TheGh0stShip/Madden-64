@@ -32,7 +32,7 @@ extern void func_80055604(void);
 
 void driver_callbacks_initialize(DriverContext *context, void *owner)
 {
-    register DriverCallbacks *callbacks __asm__("$4");
+    DriverCallbacks *callbacks;
 
     if (context->callbacks == 0) {
         DriverCallbacks *allocated = context->allocator->allocate(context, 0, 0x24);
@@ -41,6 +41,11 @@ void driver_callbacks_initialize(DriverContext *context, void *owner)
         allocated->owner = owner;
     }
     callbacks = context->callbacks;
+    for (;;) {
+        if (callbacks == context->callbacks) {
+            break;
+        }
+    }
     callbacks->callback8 = func_80055558;
     callbacks->callbackC = func_80055568;
     callbacks->callback10 = func_80055588;
