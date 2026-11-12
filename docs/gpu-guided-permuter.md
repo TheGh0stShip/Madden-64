@@ -49,8 +49,12 @@ when the rolling unique yield falls below 10 percent, and retain at least a
 10-to-1 proposal-to-compile ratio. Small functions can exhaust their useful
 mutation space long before 250,000 distinct sources.
 Selection reserves exactly 10 percent of the compile budget (51 of 512 slots)
-for seeded uniform exploration over the entire proposal pool, then fills the
-remaining slots by global model priority. Every compiled row records its pool,
+for seeded uniform exploration over the entire proposal pool. It fills the
+remaining slots from an eight-times-budget model front using a GPU-resident
+greedy acquisition that combines normalized model quality with distance from
+the candidates already selected. This prevents a compile batch from collapsing
+into hundreds of nearly identical descendants of one source form. Set
+`--diversity 0` to recover pure global model priority. Every compiled row records its pool,
 model version, selection arm, seed and iteration so policy bias can be audited.
 Replay training rows are deduplicated by function and canonical source digest.
 
@@ -58,7 +62,8 @@ The initial model is deliberately small: stable hashed source-token n-grams,
 mutation identities, parent-score and source-size features feed a 48-wide
 `EmbeddingBag` and a two-layer MLP. Separate heads estimate normalized score
 improvement and exact-match probability. This fits comfortably on the RTX 2070
-and ranks thousands of candidates per transfer.
+and ranks thousands of candidates per transfer. The hidden representation is
+also the behavior embedding used by diversified batch selection.
 
 ## Rollout and rollback
 
@@ -90,8 +95,9 @@ override the byte matcher.
 Do not put AST mutation, preprocessing, KMC compilation, ELF relocation,
 instruction classification, exact byte comparison, filesystem logging, or Git
 operations on the GPU. Those jobs are branchy, process-heavy, or too small to
-amortize transfer overhead. GPU work is limited to large-batch training and
-candidate inference. CPU compiler workers remain the expensive oracle.
+amortize transfer overhead. GPU work is limited to large-batch training,
+candidate inference, embedding similarity and diversified acquisition. CPU
+compiler workers remain the expensive oracle.
 
 ## Madden pilot
 
@@ -130,4 +136,9 @@ stop instead of blindly chasing a fixed pool size.
 - [CompilerGym](https://arxiv.org/abs/2109.08267) treats compiler optimization as
   an environment with measured feedback. This pipeline uses the narrower and
   safer formulation of supervised ranking from exact compiler-oracle outcomes.
+- [DPP-BBO](https://proceedings.mlr.press/v151/nava22a.html) shows why expensive
+  parallel black-box evaluations should be selected for both quality and
+  diversity. The current greedy embedding-novelty rule is a bounded-memory
+  approximation suitable for the RTX 2070; a true DPP/Thompson sampler remains
+  a future experiment, not a matching claim.
 

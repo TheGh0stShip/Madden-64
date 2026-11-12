@@ -89,10 +89,13 @@ class RankerModel:
     def load_state_dict(self, state):
         self.module.load_state_dict(state)
 
-    def __call__(self, indices, offsets, numeric):
+    def encode(self, indices, offsets, numeric):
         torch = _torch()
         emb = self.module["embed"](indices, offsets)
-        hidden = self.module["body"](torch.cat((emb, numeric), dim=1))
+        return self.module["body"](torch.cat((emb, numeric), dim=1))
+
+    def __call__(self, indices, offsets, numeric):
+        hidden = self.encode(indices, offsets, numeric)
         return self.module["improve"](hidden).squeeze(1), self.module["exact"](hidden).squeeze(1)
 
 
@@ -236,16 +239,45 @@ def evaluate(model: RankerModel, rows: list[dict], device, use_exact: bool) -> d
 
 
 def select_rows(rows: list[dict], explore: float, seed: int,
-                select_count: int) -> tuple[list[dict], int]:
+                select_count: int, embeddings=None,
+                diversity: float = 0.0) -> tuple[list[dict], int]:
     """Put a fixed exploration/exploitation compile budget first."""
     rng = random.Random(seed)
     select_count = min(max(0, select_count), len(rows))
     explore_count = min(select_count, round(select_count * explore))
     exploration = rng.sample(rows, explore_count) if explore_count else []
     exploration_ids = {id(row) for row in exploration}
-    exploitation = sorted((row for row in rows if id(row) not in exploration_ids),
-                          key=lambda row: (row["model_priority"], row.get("id", "")),
-                          reverse=True)[:select_count - explore_count]
+    candidates = [row for row in rows if id(row) not in exploration_ids]
+    exploit_count = select_count - explore_count
+    if embeddings is None or diversity <= 0.0 or exploit_count <= 1:
+        exploitation = sorted(candidates,
+                              key=lambda row: (row["model_priority"], row.get("id", "")),
+                              reverse=True)[:exploit_count]
+    else:
+        torch = _torch()
+        row_indices = {id(row): index for index, row in enumerate(rows)}
+        candidate_indices = [row_indices[id(row)] for row in candidates]
+        # Diversity only needs to separate the plausible front of the model's
+        # ranking.  A bounded pool keeps the GPU similarity work predictable.
+        candidate_indices.sort(key=lambda i: rows[i]["model_priority"], reverse=True)
+        pool_indices = candidate_indices[:max(exploit_count, min(len(candidate_indices),
+                                                                 exploit_count * 8))]
+        pool = torch.nn.functional.normalize(embeddings[pool_indices], dim=1)
+        quality = torch.tensor([rows[i]["model_priority"] for i in pool_indices],
+                               dtype=torch.float32, device=pool.device)
+        quality = (quality - quality.min()) / (quality.max() - quality.min() + 1e-8)
+        selected_local = [int(torch.argmax(quality).item())]
+        max_similarity = pool @ pool[selected_local[0]]
+        available = torch.ones(len(pool_indices), dtype=torch.bool, device=pool.device)
+        available[selected_local[0]] = False
+        while len(selected_local) < min(exploit_count, len(pool_indices)):
+            acquisition = quality + diversity * (1.0 - max_similarity)
+            acquisition[~available] = -float("inf")
+            chosen = int(torch.argmax(acquisition).item())
+            selected_local.append(chosen)
+            available[chosen] = False
+            max_similarity = torch.maximum(max_similarity, pool @ pool[chosen])
+        exploitation = [rows[pool_indices[i]] for i in selected_local]
     for row in exploitation:
         row["selection_arm"] = "model"
     for row in exploration:
@@ -260,7 +292,7 @@ def select_rows(rows: list[dict], explore: float, seed: int,
 
 
 def rank(model_path: Path, candidates: Path, output: Path, explore: float, seed: int,
-         select_count: int) -> dict:
+         select_count: int, diversity: float = 0.25) -> dict:
     torch = _torch()
     saved = torch.load(model_path, map_location="cpu", weights_only=False)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -269,22 +301,27 @@ def rank(model_path: Path, candidates: Path, output: Path, explore: float, seed:
     rows = read_jsonl(candidates)
     model.module.eval()
     with torch.no_grad():
-        all_priority = []
+        all_priority, all_embeddings = [], []
         for start in range(0, len(rows), 8192):
             chunk = rows[start:start + 8192]
             indices, offsets, numeric = _batch(chunk, device, model.buckets)
             improve, exact = model(indices, offsets, numeric)
+            hidden = model.encode(indices, offsets, numeric)
             priority = improve
             if saved.get("exact_positives", 0):
                 priority = priority + 2.0 * torch.sigmoid(exact)
             all_priority.extend(priority.cpu().tolist())
+            all_embeddings.append(hidden)
     for row, priority in zip(rows, all_priority):
         row["model_priority"] = priority
         row["selection_arm"] = "unselected"
     selected_count = min(max(0, select_count), len(rows))
-    rows, explore_count = select_rows(rows, explore, seed, selected_count)
+    embeddings = torch.cat(all_embeddings, dim=0) if all_embeddings else None
+    rows, explore_count = select_rows(rows, explore, seed, selected_count,
+                                      embeddings=embeddings, diversity=diversity)
     output.write_text("".join(json.dumps(row, sort_keys=True) + "\n" for row in rows))
     return {"device": str(device), "candidates": len(rows), "explore": explore,
+            "diversity": diversity,
             "selected": selected_count, "exploration_selected": explore_count,
             "training_metrics": saved.get("metrics", {})}
 
@@ -329,13 +366,15 @@ def main(argv: list[str] | None = None) -> int:
     p_rank.add_argument("--seed", type=int, default=1)
     p_rank.add_argument("--select-count", type=int, default=512,
                         help="compile budget; exploration is this fraction of these slots")
+    p_rank.add_argument("--diversity", type=float, default=0.25,
+                        help="GPU embedding novelty weight for model-selected candidates")
     sub.add_parser("selftest")
     args = parser.parse_args(argv)
     if args.command == "train":
         result = train(args.data, args.model, args.epochs, args.seed)
     elif args.command == "rank":
         result = rank(args.model, args.candidates, args.output, args.explore, args.seed,
-                      args.select_count)
+                      args.select_count, args.diversity)
     else:
         result = selftest()
     print(json.dumps(result, indent=2, sort_keys=True))
