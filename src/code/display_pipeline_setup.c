@@ -7,11 +7,11 @@ extern void func_800427C8(void *argument, u32 value);
 
 void display_pipeline_setup(void *object, u32 segment_address, void *argument)
 {
-    register u32 word0 = 0x01060040;
-    register u32 *command = D_80084F5C;
-    register u32 word2 = 0xBC000406;
-    register u32 field_value;
-    register u32 call_value;
+    u32 word0 = 0x01060040;
+    u32 *command = D_80084F5C;
+    u32 word2 = 0xBC000406;
+    u32 field_value;
+    u32 call_value;
 
     command[0] = word0;
     command[1] = segment_address - 0x80000000;
@@ -21,14 +21,16 @@ void display_pipeline_setup(void *object, u32 segment_address, void *argument)
     call_value = FIELD(object, volatile u32, 0xC);
     D_80084F5C = command + 2;
     D_80084F5C = command + 4;
-    func_800427C8(argument, call_value);
+    do {
+        func_800427C8(argument, call_value);
+    } while (0);
 
     {
-        register u32 setup0 = 0xB900031D;
-        register u32 setup1 = 0x00552078;
-        register u32 setup2 = 0xFC60FEC1;
-        register u32 setup3 = 0x55FE793C;
-        register u32 *output = D_80084F5C;
+        u32 setup0 = 0xB900031D;
+        u32 setup1 = 0x00552078;
+        u32 setup2 = 0xFC60FEC1;
+        u32 setup3 = 0x55FE793C;
+        u32 *output = D_80084F5C;
 
         D_80084F5C = output + 2;
         output[0] = 0xBD000000;
