@@ -28,6 +28,7 @@ from pathlib import Path
 
 TOKEN = re.compile(r"[A-Za-z_]\w*|0[xX][0-9A-Fa-f]+|\d+|==|!=|<=|>=|<<|>>|&&|\|\||[-+*/%&|^~!<>=?:;,{}()[\]]")
 BUCKETS = 1 << 18
+MISMATCH_KINDS = ("instruction", "register", "immediate", "size", "ordering", "relocation")
 
 
 def _torch():
@@ -77,6 +78,9 @@ class RankerModel:
             "body": nn.Sequential(nn.Linear(dim + 2, 64), nn.SiLU(), nn.Linear(64, 32), nn.SiLU()),
             "improve": nn.Linear(32, 1),
             "exact": nn.Linear(32, 1),
+            # Predict the residual shape, not merely whether a mutation is
+            # non-regressing.  Exact matching is the all-zero residual.
+            "residual": nn.Linear(32, len(MISMATCH_KINDS)),
         })
         self.buckets = buckets
         self.dim = dim
@@ -101,7 +105,9 @@ class RankerModel:
 
     def __call__(self, indices, offsets, numeric):
         hidden = self.encode(indices, offsets, numeric)
-        return self.module["improve"](hidden).squeeze(1), self.module["exact"](hidden).squeeze(1)
+        return (self.module["improve"](hidden).squeeze(1),
+                self.module["exact"](hidden).squeeze(1),
+                self.module["residual"](hidden))
 
 
 def read_jsonl(path: Path) -> list[dict]:
@@ -127,13 +133,19 @@ def _batch(rows: list[dict], device, buckets: int = BUCKETS):
 
 def _labels(rows: list[dict], device):
     torch = _torch()
-    improvements, exact = [], []
+    improvements, exact, residuals, residual_mask = [], [], [], []
     for row in rows:
         parent, score = max(1, int(row["parent_score"])), int(row["score"])
         improvements.append(max(-1.0, min(1.0, (parent - score) / parent)))
         exact.append(1.0 if score == 0 or row.get("exact") else 0.0)
+        counts = row.get("mismatch_counts") or {}
+        residuals.append([math.log1p(max(0, int(counts.get(kind, 0))))
+                          for kind in MISMATCH_KINDS])
+        residual_mask.append(1.0 if "mismatch_counts" in row else 0.0)
     return (torch.tensor(improvements, dtype=torch.float32, device=device),
-            torch.tensor(exact, dtype=torch.float32, device=device))
+            torch.tensor(exact, dtype=torch.float32, device=device),
+            torch.tensor(residuals, dtype=torch.float32, device=device),
+            torch.tensor(residual_mask, dtype=torch.float32, device=device))
 
 
 def split_rows(rows: list[dict]) -> tuple[list[dict], list[dict]]:
@@ -192,9 +204,17 @@ def train(data: Path, model_path: Path, epochs: int, seed: int) -> dict:
         for start in range(0, len(train_rows), batch_size):
             chunk = train_rows[start:start + batch_size]
             indices, offsets, numeric = _batch(chunk, device)
-            y_improve, y_exact = _labels(chunk, device)
-            p_improve, p_exact = model(indices, offsets, numeric)
+            y_improve, y_exact, y_residual, residual_mask = _labels(chunk, device)
+            p_improve, p_exact, p_residual = model(indices, offsets, numeric)
             loss = torch.nn.functional.smooth_l1_loss(p_improve, y_improve)
+            # This auxiliary objective gives dense supervision about what is
+            # still wrong.  It remains useful when the corpus has no exact
+            # positive examples at all.
+            if residual_mask.sum().item():
+                per_row = torch.nn.functional.smooth_l1_loss(
+                    torch.nn.functional.softplus(p_residual), y_residual,
+                    reduction="none").mean(dim=1)
+                loss += 0.20 * (per_row * residual_mask).sum() / residual_mask.sum()
             # Exact matches are rare, so cap the positive weight for stability.
             if exact_positives:
                 positives = max(1, int(y_exact.sum().item()))
@@ -221,8 +241,9 @@ def evaluate(model: RankerModel, rows: list[dict], device, use_exact: bool) -> d
     model.module.eval()
     with torch.no_grad():
         indices, offsets, numeric = _batch(rows, device, model.buckets)
-        improve, exact = model(indices, offsets, numeric)
+        improve, exact, residual = model(indices, offsets, numeric)
         priority = improve
+        priority = priority - 0.05 * torch.nn.functional.softplus(residual).sum(dim=1)
         if use_exact:
             priority = priority + 2.0 * torch.sigmoid(exact)
         priority = priority.cpu().tolist()
@@ -310,9 +331,9 @@ def rank(model_path: Path, candidates: Path, output: Path, explore: float, seed:
         for start in range(0, len(rows), 8192):
             chunk = rows[start:start + 8192]
             indices, offsets, numeric = _batch(chunk, device, model.buckets)
-            improve, exact = model(indices, offsets, numeric)
+            improve, exact, residual = model(indices, offsets, numeric)
             hidden = model.encode(indices, offsets, numeric)
-            priority = improve
+            priority = improve - 0.05 * torch.nn.functional.softplus(residual).sum(dim=1)
             if saved.get("exact_positives", 0):
                 priority = priority + 2.0 * torch.sigmoid(exact)
             all_priority.extend(priority.cpu().tolist())

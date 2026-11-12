@@ -66,9 +66,15 @@ Replay training rows are deduplicated by function and canonical source digest.
 The initial model is deliberately small: stable hashed source-token n-grams,
 mutation identities, parent-score and source-size features feed a 48-wide
 `EmbeddingBag` and a two-layer MLP. Separate heads estimate normalized score
-improvement and exact-match probability. This fits comfortably on the RTX 2070
-and ranks thousands of candidates per transfer. The hidden representation is
-also the behavior embedding used by diversified batch selection.
+improvement, exact-match probability, and the log residual for instruction,
+register, immediate, size, ordering, and relocation mismatches. The residual
+loss is masked for older replay rows that predate mismatch-category logging;
+they remain valid score-improvement labels and are never mislabeled as a zero
+residual. Ranking penalizes predicted residual mass, so the CUDA model is now
+trained toward the all-zero exact-match state instead of merely preserving a
+parent's score. This fits comfortably on the RTX 2070 and ranks thousands of
+candidates per transfer. The hidden representation is also the behavior
+embedding used by diversified batch selection.
 
 ## Rollout and rollback
 
@@ -144,6 +150,14 @@ After adding both population campaigns, the lineage-held validation corpus has
 33.88-percent validation-wide baseline, and the 512-of-50,000 budget rate is
 100 percent. These metrics justify using the model as a rejection filter; they
 do not justify calling any uncompiled source a match.
+
+The first residual-head checkpoint was trained on 5,909 unique compiled rows;
+5,184 retained classified mismatch counts. On a lineage/temporal holdout of
+673 rows, its top-quartile non-regression rate was 19.64 percent versus a
+10.10-percent validation-wide baseline, and its production-budget slice was
+100 percent non-regressing. The checkpoint contained no exact-positive row, so
+the exact head remained disabled. This is a pipeline validation, not evidence
+of exact-match lift; a live matched-budget A/B campaign is required for that.
 
 ## Rationale
 
