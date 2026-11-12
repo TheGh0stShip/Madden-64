@@ -49,6 +49,7 @@ def features(row: dict, buckets: int = BUCKETS) -> list[int]:
         _hash("fn=" + row.get("function", "?"), buckets),
         _hash("score_bin=" + str(int(math.log2(max(1, int(row.get("parent_score", 1)))))), buckets),
         _hash("ntok_bin=" + str(min(len(toks) // 16, 255)), buckets),
+        _hash("depth_bin=" + str(min(int(row.get("generation_depth", 0)) // 4, 63)), buckets),
     ]
     mutations = row.get("mutations", [])
     if isinstance(mutations, str):
@@ -56,6 +57,10 @@ def features(row: dict, buckets: int = BUCKETS) -> list[int]:
     for pos, mutation in enumerate(mutations):
         out.append(_hash(f"mut={mutation}", buckets))
         out.append(_hash(f"mutpos={pos}:{mutation}", buckets))
+    if mutations:
+        out.append(_hash(f"last_mut={mutations[-1]}", buckets))
+    if len(mutations) >= 2:
+        out.append(_hash(f"mut_pair={mutations[-2]}>{mutations[-1]}", buckets))
     # Local token n-grams capture declaration/statement ordering without a large parser model.
     for n in (1, 2, 3):
         for i in range(max(0, len(toks) - n + 1)):
