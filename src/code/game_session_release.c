@@ -32,12 +32,9 @@ extern void func_800334B8(void);
 
 void game_session_release(GameSession *session)
 {
-    register GameSession *saved_session __asm__("$17") = session;
-    register u32 index __asm__("$16");
+    u32 index = session->index;
     SessionObject *object;
 
-    __asm__ volatile ("" : "=r" (saved_session) : "0" (saved_session));
-    index = saved_session->index;
     func_8000BE80();
     if (D_8006A534[index].timeline != 0) {
         func_800458F8();
@@ -48,12 +45,12 @@ void game_session_release(GameSession *session)
     if (D_8006A534[index].active != 0) {
         func_8003CA4C();
     }
-    object = saved_session->object;
+    object = session->object;
     func_8000D998(object->first, object->second);
-    object = saved_session->object;
+    object = session->object;
     func_80035A7C(object->identifier);
-    object = saved_session->object;
+    object = session->object;
     func_8000B7E4(object->root);
-    func_80032F3C(0, saved_session->object);
+    func_80032F3C(0, session->object);
     func_800334B8();
 }
