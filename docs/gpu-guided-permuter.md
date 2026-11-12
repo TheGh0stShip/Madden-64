@@ -26,6 +26,20 @@ only when the exact matcher reports zero differences.
   ranker.pt candidates.jsonl ranked.jsonl --explore 0.10 --select-count 512
    ```
 
+   Once several independently seeded checkpoints pass the same held-out gate,
+   rank with their mean prediction plus an uncertainty bonus:
+
+   ```sh
+   python3 tools/gpu_permuter_ranker.py rank-ensemble \
+     candidates.jsonl ranked.jsonl ranker-{1,2,3,4,5}.pt \
+     --uncertainty 0.50 --explore 0.10 --select-count 512
+   ```
+
+   Ensemble disagreement is epistemic uncertainty, not evidence that a source
+   is good. It earns a bounded acquisition bonus so the compiler labels novel
+   source regions; the seeded random arm remains an unbiased control. Disabled
+   checkpoints are rejected unless `--allow-disabled` is used for a shadow run.
+
 5. Retrain after 512 new compiler labels or five minutes, whichever is later.
    Keep the previous checkpoint and promote the new one only when its held-out
    held-out strict-improvement hit rates exceed the random baseline both in

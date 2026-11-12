@@ -23,18 +23,19 @@ void resource_buffers_replace(u8 *owner, u32 *descriptor)
         size++;
         {
             void *buffer = func_80032E00(0, size);
-            register s32 zero __asm__("$4") = 0;
+            s32 zero = 0;
 
             *(void **)(state + 0x20) = buffer;
             func_80033308(zero, buffer, size, 0);
         }
         {
-            register s32 zero __asm__("$4") = 0;
+            s32 zero = 0;
             void *buffer;
+            s32 shifted;
 
-            __asm__ volatile ("" : : "r" (zero));
-            size <<= 2;
-            buffer = func_80032E00(zero, size);
+            shifted = size << 2;
+            buffer = func_80032E00(zero, shifted);
+            size = shifted;
             zero = 0;
 
             *(void **)(state + 0x2C) = buffer;

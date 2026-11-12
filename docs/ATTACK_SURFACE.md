@@ -44,23 +44,23 @@ heuristic boundary catalogues and are not equivalent measures.
 | Module | Functions | Matched | Candidate bytes | Matched bytes |
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 0 | 632 | 0 |
-| overlay_1 | 951 | 414 | 192,728 | 67,324 |
-| overlay_2 | 589 | 388 | 199,092 | 67,052 |
-| overlay_4 | 400 | 205 | 116,056 | 43,640 |
-| overlay_5 | 386 | 260 | 123,624 | 33,636 |
-| resident | 1,366 | 929 | 378,068 | 174,820 |
+| overlay_1 | 951 | 416 | 192,728 | 67,504 |
+| overlay_2 | 589 | 400 | 199,100 | 69,612 |
+| overlay_4 | 400 | 213 | 116,056 | 45,932 |
+| overlay_5 | 386 | 276 | 123,640 | 37,620 |
+| resident | 1,366 | 991 | 378,068 | 187,032 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
 | 000-0016 | 337 | 128 | 3,924 | 1,560 |
-| 000-0032 | 236 | 95 | 6,204 | 2,456 |
-| 000-0064 | 476 | 107 | 23,628 | 5,212 |
-| 000-0128 | 709 | 148 | 66,968 | 14,092 |
-| 000-0256 | 798 | 288 | 148,220 | 54,732 |
-| 000-0512 | 670 | 357 | 242,880 | 134,756 |
-| 000-1024 | 313 | 243 | 219,952 | 174,344 |
+| 000-0032 | 236 | 94 | 6,204 | 2,424 |
+| 000-0064 | 476 | 103 | 23,628 | 4,992 |
+| 000-0128 | 709 | 132 | 66,968 | 12,544 |
+| 000-0256 | 798 | 238 | 148,244 | 45,308 |
+| 000-0512 | 670 | 329 | 242,880 | 125,320 |
+| 000-1024 | 313 | 242 | 219,952 | 173,800 |
 | 1025+ | 158 | 135 | 298,424 | 236,576 |
 
 - Exact duplicate body families: 34
@@ -68,8 +68,8 @@ heuristic boundary catalogues and are not equivalent measures.
 - Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 1,082,496
-- Bytes assigned to provisional candidate bodies: 1,010,200
-- Code bytes outside provisional candidate bodies: 72,296
+- Bytes assigned to provisional candidate bodies: 1,010,224
+- Code bytes outside provisional candidate bodies: 72,272
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally

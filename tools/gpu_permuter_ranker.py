@@ -462,6 +462,77 @@ def rank(model_path: Path, candidates: Path, output: Path, explore: float, seed:
             "training_metrics": saved.get("metrics", {})}
 
 
+def rank_ensemble(model_paths: list[Path], candidates: Path, output: Path,
+                  explore: float, seed: int, select_count: int,
+                  diversity: float = 0.25, uncertainty: float = 0.50,
+                  allow_disabled: bool = False) -> dict:
+    """Rank uncompiled candidates with epistemic uncertainty across checkpoints.
+
+    Independent seeds disagree most on source regions unlike the labeled trace.
+    The uncertainty bonus deliberately spends part of the compile budget there,
+    while ``explore`` retains a model-independent random control arm.  Candidate
+    features remain source-only; official compilation and matching are the
+    oracle after selection.
+    """
+    torch = _torch()
+    if len(model_paths) < 2:
+        raise SystemExit("rank-ensemble requires at least two checkpoints")
+    saved_models = [torch.load(path, map_location="cpu", weights_only=False)
+                    for path in model_paths]
+    for path, saved in zip(model_paths, saved_models):
+        if saved.get("schema") != MODEL_SCHEMA:
+            raise SystemExit(
+                f"{path}: checkpoint schema {saved.get('schema', 'legacy')} is "
+                f"incompatible with ranker schema {MODEL_SCHEMA}")
+        if not saved.get("metrics", {}).get("enabled", False) and not allow_disabled:
+            raise SystemExit(
+                f"{path}: checkpoint failed its held-out deployment gate; use "
+                "--allow-disabled only for a measured shadow experiment")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    rows = read_jsonl(candidates)
+    predictions, embedding_sums = [], None
+    for saved in saved_models:
+        model = RankerModel(saved["buckets"], saved["dim"]).to(device)
+        model.load_state_dict(saved["state"])
+        model.module.eval()
+        model_predictions, model_embeddings = [], []
+        with torch.no_grad():
+            for start in range(0, len(rows), 8192):
+                chunk = rows[start:start + 8192]
+                indices, offsets, numeric = _batch(chunk, device, model.buckets)
+                improve, strict, exact, residual = model(indices, offsets, numeric)
+                priority = (improve + 2.0 * torch.sigmoid(strict)
+                            - 0.05 * torch.nn.functional.softplus(residual).sum(dim=1))
+                if saved.get("exact_positives", 0):
+                    priority = priority + 2.0 * torch.sigmoid(exact)
+                model_predictions.append(priority)
+                model_embeddings.append(model.encode(indices, offsets, numeric))
+        prediction = torch.cat(model_predictions) if model_predictions else torch.empty(0, device=device)
+        embeddings = torch.cat(model_embeddings) if model_embeddings else torch.empty((0, model.dim), device=device)
+        predictions.append(prediction)
+        embedding_sums = embeddings if embedding_sums is None else embedding_sums + embeddings
+    stacked = torch.stack(predictions)
+    means = stacked.mean(dim=0)
+    stds = stacked.std(dim=0, unbiased=False)
+    acquisition = means + uncertainty * stds
+    for row, mean, std, score in zip(rows, means.cpu().tolist(), stds.cpu().tolist(),
+                                     acquisition.cpu().tolist()):
+        row["model_mean_priority"] = mean
+        row["model_uncertainty"] = std
+        row["model_priority"] = score
+        row["selection_arm"] = "unselected"
+    mean_embeddings = embedding_sums / len(saved_models) if embedding_sums is not None else None
+    selected_count = min(max(0, select_count), len(rows))
+    rows, explore_count = select_rows(rows, explore, seed, selected_count,
+                                      embeddings=mean_embeddings, diversity=diversity)
+    output.write_text("".join(json.dumps(row, sort_keys=True) + "\n" for row in rows))
+    return {"device": str(device), "candidates": len(rows),
+            "models": len(saved_models), "uncertainty_weight": uncertainty,
+            "explore": explore, "diversity": diversity,
+            "selected": selected_count, "exploration_selected": explore_count,
+            "training_metrics": [saved.get("metrics", {}) for saved in saved_models]}
+
+
 def selftest() -> dict:
     import tempfile
     rng = random.Random(7)
@@ -484,10 +555,17 @@ def selftest() -> dict:
         labeled.write_text("".join(json.dumps(r) + "\n" for r in records))
         candidates.write_text("".join(json.dumps({k: v for k, v in r.items() if k not in {"score", "compiled", "exact"}}) + "\n"
                                       for r in records[:128]))
+        model2 = root / "model2.pt"
+        ensemble_ranked = root / "ensemble-ranked.jsonl"
         metrics = train(labeled, model, epochs=8, seed=7)
+        train(labeled, model2, epochs=8, seed=11)
         ranked_metrics = rank(model, candidates, ranked, explore=0.1, seed=7, select_count=64)
+        ensemble_metrics = rank_ensemble([model, model2], candidates, ensemble_ranked,
+                                         explore=0.1, seed=7, select_count=64)
         assert len(read_jsonl(ranked)) == 128
-        return {"train": metrics, "rank": ranked_metrics}
+        assert len(read_jsonl(ensemble_ranked)) == 128
+        return {"train": metrics, "rank": ranked_metrics,
+                "rank_ensemble": ensemble_metrics}
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -510,6 +588,17 @@ def main(argv: list[str] | None = None) -> int:
                         help="GPU embedding novelty weight for model-selected candidates")
     p_rank.add_argument("--allow-disabled", action="store_true",
                         help="rank only for shadow evaluation when the held-out gate failed")
+    p_ensemble = sub.add_parser("rank-ensemble")
+    p_ensemble.add_argument("candidates", type=Path)
+    p_ensemble.add_argument("output", type=Path)
+    p_ensemble.add_argument("models", nargs="+", type=Path)
+    p_ensemble.add_argument("--explore", type=float, default=0.1)
+    p_ensemble.add_argument("--seed", type=int, default=1)
+    p_ensemble.add_argument("--select-count", type=int, default=512)
+    p_ensemble.add_argument("--diversity", type=float, default=0.25)
+    p_ensemble.add_argument("--uncertainty", type=float, default=0.50,
+                            help="ensemble standard-deviation acquisition bonus")
+    p_ensemble.add_argument("--allow-disabled", action="store_true")
     sub.add_parser("selftest")
     args = parser.parse_args(argv)
     if args.command == "train":
@@ -517,6 +606,11 @@ def main(argv: list[str] | None = None) -> int:
     elif args.command == "rank":
         result = rank(args.model, args.candidates, args.output, args.explore, args.seed,
                       args.select_count, args.diversity, args.allow_disabled)
+    elif args.command == "rank-ensemble":
+        result = rank_ensemble(args.models, args.candidates, args.output,
+                               args.explore, args.seed, args.select_count,
+                               args.diversity, args.uncertainty,
+                               args.allow_disabled)
     else:
         result = selftest()
     print(json.dumps(result, indent=2, sort_keys=True))
