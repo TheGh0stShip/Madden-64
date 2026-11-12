@@ -29,6 +29,7 @@ from pathlib import Path
 TOKEN = re.compile(r"[A-Za-z_]\w*|0[xX][0-9A-Fa-f]+|\d+|==|!=|<=|>=|<<|>>|&&|\|\||[-+*/%&|^~!<>=?:;,{}()[\]]")
 BUCKETS = 1 << 18
 MISMATCH_KINDS = ("instruction", "register", "immediate", "size", "ordering", "relocation")
+MODEL_SCHEMA = 2
 
 
 def _torch():
@@ -312,7 +313,8 @@ def train(data: Path, model_path: Path, epochs: int, seed: int) -> dict:
                         else "seed-lineage-or-temporal-tail")
     metrics["exact_positives"] = exact_positives
     metrics["strict_improvement_positives"] = strict_positives
-    torch.save({"state": model.state_dict(), "buckets": model.buckets, "dim": model.dim,
+    torch.save({"schema": MODEL_SCHEMA,
+                "state": model.state_dict(), "buckets": model.buckets, "dim": model.dim,
                 "metrics": metrics, "rows": len(rows), "seed": seed,
                 "exact_positives": exact_positives}, model_path)
     return {"device": str(device), "rows": len(rows), **metrics}
@@ -421,6 +423,10 @@ def rank(model_path: Path, candidates: Path, output: Path, explore: float, seed:
          allow_disabled: bool = False) -> dict:
     torch = _torch()
     saved = torch.load(model_path, map_location="cpu", weights_only=False)
+    if saved.get("schema") != MODEL_SCHEMA:
+        raise SystemExit(
+            f"checkpoint schema {saved.get('schema', 'legacy')} is incompatible with "
+            f"ranker schema {MODEL_SCHEMA}; retrain it with this version before ranking")
     if not saved.get("metrics", {}).get("enabled", False) and not allow_disabled:
         raise SystemExit("checkpoint failed its held-out deployment gate; "
                          "use seeded random ordering or --allow-disabled for shadow evaluation")
