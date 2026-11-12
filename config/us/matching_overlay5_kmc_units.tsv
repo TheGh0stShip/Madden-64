@@ -269,3 +269,4 @@
 0x7858	0x1EC	src/overlays/overlay5/func_800CC7A0.c	--section-base=.rodata:0x80001CD4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8fb9c100676bdc8f1b73b5705d1162b8ac3eb4da903fa9ba3e0f53f268b407a0
 0x1F58	0x1EC	src/overlays/overlay5/func_800C6EA0.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0d6badff8c7f74d4a5d2f88116776f1143aa5ed504da068c6e161c98e50d7b17
 0x17970	0xC0	src/overlays/overlay5/func_800DC8B8.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e84e52bd6b86989fc1de60b593c2f615c45c7b75d5eb15416d200ca8292a1206
+0x15D0C	0x108	src/overlays/overlay5/func_800DAC54.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8b7c0e62d0ae27350843dd0cad8475f769ac95de821471224780e8b3e1439278
