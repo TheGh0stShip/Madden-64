@@ -248,6 +248,7 @@
 0xD78C	0x68	src/overlays/overlay5/func_800D26D4.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30ecdb1f76323a5eb1d141bfa82b3162d9a57723facf063ecadd7fda568c315d
 0x7440	0xAC	src/overlays/overlay5/func_800CC388.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6a38e25f440a017ae396ea855e28cd86fff3d5ce279b52ea9ed9603173b150b6
 0x55C0	0xC4	src/overlays/overlay5/func_800CA508.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3d844c2922b950368ad3c8a832b16c086e3878a759ed3453f43217276944d49d
+0x150C	0xC8	src/overlays/overlay5/func_800C6454.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9b00b764bccec4d6f9edfc1b0ba0832f1f705e6c86bf078522c4915f7d856ed7
 0x15D4	0x1E4	src/overlays/overlay5/func_800C651C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c635e8fb8a3e2fe7d92520420c2badbd6bdb12dad4786f6152510a7a547a1c57
 0x1A2C	0x1D0	src/overlays/overlay5/func_800C6974.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f148cbbc2afbb3a175e2e0c233cf1b21bca564c7f76e546e680a994774e244ca
 0x8B9C	0x168	src/overlays/overlay5/func_800CDAE4.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	75bb953c8803d509e5439f7da918341d28e61f310b3faf71164e67cadd08a3cd
