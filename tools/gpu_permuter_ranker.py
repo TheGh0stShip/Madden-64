@@ -281,10 +281,11 @@ def rank(model_path: Path, candidates: Path, output: Path, explore: float, seed:
     for row, priority in zip(rows, all_priority):
         row["model_priority"] = priority
         row["selection_arm"] = "unselected"
-    rows, explore_count = select_rows(rows, explore, seed, select_count)
+    selected_count = min(max(0, select_count), len(rows))
+    rows, explore_count = select_rows(rows, explore, seed, selected_count)
     output.write_text("".join(json.dumps(row, sort_keys=True) + "\n" for row in rows))
     return {"device": str(device), "candidates": len(rows), "explore": explore,
-            "selected": select_count, "exploration_selected": explore_count,
+            "selected": selected_count, "exploration_selected": explore_count,
             "training_metrics": saved.get("metrics", {})}
 
 

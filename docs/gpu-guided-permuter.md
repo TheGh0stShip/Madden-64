@@ -44,6 +44,10 @@ the separate cross-function gate.
 
 The production loop generates 250,000 uncompiled proposals per round, streams
 them through CUDA in 8,192-candidate chunks, and compiles a 512-candidate batch.
+That is a ceiling for large functions, not a quota: stop proposal generation
+when the rolling unique yield falls below 10 percent, and retain at least a
+10-to-1 proposal-to-compile ratio. Small functions can exhaust their useful
+mutation space long before 250,000 distinct sources.
 Selection reserves exactly 10 percent of the compile budget (51 of 512 slots)
 for seeded uniform exploration over the entire proposal pool, then fills the
 remaining slots by global model priority. Every compiled row records its pool,
@@ -103,6 +107,12 @@ compiles (19.6 percent) and one score-3 candidate. This is evidence that the
 ranker saves compiler budget on this represented function; it is not evidence
 that the model can predict exact matches, because the training corpus still
 contains no exact-positive row.
+
+A second run on the score-2 `object_global_flag_test` exhausted that small
+function's mutation space at 95 unique proposals. The model arm retained 45
+non-regressions in 85 candidates; the random arm retained five in ten. Neither
+arm improved score 2. This is why production generation now uses a unique-yield
+stop instead of blindly chasing a fixed pool size.
 
 ## Rationale
 
