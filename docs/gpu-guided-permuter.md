@@ -159,6 +159,16 @@ The first residual-head checkpoint was trained on 5,909 unique compiled rows;
 the exact head remained disabled. This is a pipeline validation, not evidence
 of exact-match lift; a live matched-budget A/B campaign is required for that.
 
+The first live residual-head campaign targeted score-1
+`resource_groups_release`. Eight population lineages produced only 6,144
+unique sources from 100,000 requested mutations. All 2,048 compiled selections
+(1,741 model and 307 random) reproduced the same score-1 register mismatch;
+none matched. This is negative but actionable evidence: the available mutation
+grammar had exhausted this function's semantic-equivalent forms, so spending
+more GPU ranking or CPU compilation on the same grammar cannot close it. The
+next campaign must add an assignment/live-range transformation or move to a
+different function.
+
 ## Rationale
 
 - [decomp-permuter](https://github.com/simonlindholm/decomp-permuter) describes
