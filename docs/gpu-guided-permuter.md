@@ -35,17 +35,12 @@ A checkpoint also remains shadow-only unless held-out strict improvements span
 at least two functions and three independent function/seed lineages. A high
 hit rate from one function is memorization evidence, not a deployment result.
 
-Replay rows are deduplicated by function and source digest. Validation holds
-out an entire RNG seed for every function with multiple runs; a single-seed
-function temporarily uses the final temporal fifth. This prevents the model
-from appearing accurate merely because a candidate and its near-identical
-siblings were randomly scattered across train and validation sets.
-
-This split measures fresh mutation lineages for functions already represented
-in training. It does not establish generalization to a new function. Before a
-new function receives model-prioritized slots, collect an unbiased seed run for
-it and retain the 10-percent random arm; a leave-one-function-out evaluation is
-the separate cross-function gate.
+Replay rows are deduplicated by function and source digest. Once the corpus has
+four functions, validation holds out complete functions. Smaller cold-start
+corpora hold out an entire RNG seed when possible, then fall back to a temporal
+tail. The model does not receive exact function identity: it gets reusable
+source-family and parent-difference signatures. This prevents a productive run
+from masquerading as evidence that the policy transfers to unfinished code.
 
 The production loop generates 250,000 uncompiled proposals per round, streams
 them through CUDA in 8,192-candidate chunks, and compiles a 512-candidate batch.
@@ -110,14 +105,40 @@ drops by more than five percent, CUDA scoring times out, or any model/checkpoint
 error occurs. A matcher inconsistency is a hard stop; model output can never
 override the byte matcher.
 
+## Transfer retrieval and compile-budget allocation
+
+The next GPU stage is cross-function edit-effect retrieval, not a larger scalar
+ranker. Represent a parent's target diff as instruction/register/immediate/
+size/order/relocation counts plus normalized instruction-diff tokens. Associate
+each historical strict improvement with its ordered mutation sequence. CUDA
+embeds those records and performs batched nearest-neighbor lookup; the CPU then
+generates genuine-C candidates from the retrieved mutation families and KMC GCC
+remains the oracle. Similar compiler autotuning systems reuse transformations
+from related task graphs to reduce compilation work, while graph models have
+been used to select compiler transformations without executing every option.
+
+Do not deploy retrieval merely because pooled accuracy rises. A checkpoint must
+show at least 1.5x top-quartile strict-improvement lift and 1.25x lift at the
+production compile budget on complete held-out functions, with improvements in
+at least two functions and three independent seed lineages. Continue compiling
+a seeded random arm so rejected proposals receive unbiased audit labels.
+
+Bayesian optimization is reserved for the low-dimensional policy problem
+(operator weights, exploration fraction and per-function budget), not raw C
+text. Genetic programming and exhaustive CUDA source scoring remain research
+ideas: every exact fitness evaluation still requires KMC GCC, so a GPU surrogate
+cannot certify a match.
+
 ## Deliberate non-GPU work
 
 Do not put AST mutation, preprocessing, KMC compilation, ELF relocation,
-instruction classification, exact byte comparison, filesystem logging, or Git
-operations on the GPU. Those jobs are branchy, process-heavy, or too small to
-amortize transfer overhead. GPU work is limited to large-batch training,
-candidate inference, embedding similarity and diversified acquisition. CPU
-compiler workers remain the expensive oracle.
+filesystem logging, or Git operations on the GPU. Those jobs are branchy,
+process-heavy, or too small to amortize transfer overhead. GPU work is used for
+large-batch training, inference, embedding similarity, diversified acquisition,
+and byte-diff feature extraction only when a batch is large enough to beat the
+CPU including transfers. The measured crossover on Desktop is about 65,536
+candidates; smaller batches stay on CPU. A GPU equality result is rechecked by
+the canonical matcher and never substitutes for the project gate.
 
 ## Madden pilot
 
@@ -219,4 +240,15 @@ functions rather than add epochs to the same biased corpus.
   diversity. The current greedy embedding-novelty rule is a bounded-memory
   approximation suitable for the RTX 2070; a true DPP/Thompson sampler remains
   a future experiment, not a matching claim.
+- [Task Graph Caching](https://doi.org/10.1145/3810246) reports that seeding
+  compiler autotuning from transformations found on similar task graphs reduces
+  tuning time. Madden's edit-effect retrieval applies that idea to mutation
+  families, while still recompiling every selected C candidate.
+- [BaCO](https://arxiv.org/abs/2212.11142) supports Bayesian optimization for
+  mixed compiler-tuning parameters. Here it is suitable for the small scheduler
+  policy, not the discontinuous space of arbitrary C edits.
+- [GPU-accelerated program synthesis](https://arxiv.org/abs/2504.18943) argues
+  that GPU synthesis succeeds by batching semantics and avoiding divergent
+  syntax processing. Madden cannot batch KMC semantics on CUDA, so only the
+  dense retrieval and selection portions follow that design.
 

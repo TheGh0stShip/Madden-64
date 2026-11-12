@@ -31,6 +31,26 @@ class GpuPermuterRankerTests(unittest.TestCase):
         self.assertEqual([row["iteration"] for row in train], list(range(8)))
         self.assertEqual([row["iteration"] for row in valid], [8, 9])
 
+    def test_multi_function_validation_holds_out_complete_functions(self):
+        rows = [
+            {"function": f"demo_{function}", "seed": seed, "iteration": iteration}
+            for function in range(10) for seed in (10, 20) for iteration in range(4)
+        ]
+        train, valid = RANKER.split_rows(rows)
+        train_functions = {row["function"] for row in train}
+        valid_functions = {row["function"] for row in valid}
+        self.assertTrue(train_functions.isdisjoint(valid_functions))
+        self.assertEqual(len(valid_functions), 2)
+
+    def test_exact_function_identity_is_not_a_feature(self):
+        base = {"source": "for (;;) { call(); }", "mutations": ["commute"],
+                "parent_score": 7, "parent_mismatch_counts": {"register": 2}}
+        left = dict(base, function="first")
+        right = dict(base, function="second")
+        self.assertEqual(RANKER.features(left), RANKER.features(right))
+        self.assertEqual(RANKER.structural_family(left), "loop+calls")
+        self.assertEqual(RANKER.diff_signature(left), "register:2")
+
     def test_exploration_is_fraction_of_compile_budget(self):
         rows = [{"id": str(i), "model_priority": float(i)} for i in range(1000)]
         ordered, exploration = RANKER.select_rows(rows, 0.1, 7, 100)

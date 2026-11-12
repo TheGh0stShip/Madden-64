@@ -49,11 +49,50 @@ def source_digest(row: dict) -> str:
     return hashlib.sha256(source.encode()).hexdigest()
 
 
+def structural_family(row: dict) -> str:
+    """Coarse reusable source family, available before compilation."""
+    explicit = row.get("function_family")
+    if explicit:
+        return str(explicit)
+    source = row.get("source", "")
+    traits = []
+    if re.search(r"\b(for|while|do)\b", source):
+        traits.append("loop")
+    if re.search(r"\bswitch\s*\(", source):
+        traits.append("switch")
+    if re.search(r"\b(float|double)\b", source):
+        traits.append("fp")
+    if re.search(r"\b(struct|union)\b", source):
+        traits.append("aggregate")
+    if re.search(r"\w+\s*\([^;{}]*\)\s*;", source):
+        traits.append("calls")
+    return "+".join(traits) if traits else "scalar"
+
+
+def diff_signature(row: dict) -> str:
+    """Bucket the parent's residual into a cross-function signature."""
+    explicit = row.get("parent_diff_signature")
+    if explicit:
+        return str(explicit)
+    counts = row.get("parent_mismatch_counts") or {}
+    active = []
+    for kind in MISMATCH_KINDS:
+        count = max(0, int(counts.get(kind, 0)))
+        if count:
+            active.append(f"{kind}:{min(3, math.ceil(math.log2(count + 1)))}")
+    return "+".join(active) if active else "unknown"
+
+
 def features(row: dict, buckets: int = BUCKETS) -> list[int]:
     """Stable categorical features; no Python hash randomization."""
     toks = TOKEN.findall(row.get("source", ""))
     out = [
-        _hash("fn=" + row.get("function", "?"), buckets),
+        # Exact function identity is deliberately excluded.  It lets a model
+        # memorize one productive permuter run and then look impressive on a
+        # second seed of the same function without transferring to unfinished
+        # functions.  Family/signature fields are reusable across functions.
+        _hash("family=" + structural_family(row), buckets),
+        _hash("signature=" + diff_signature(row), buckets),
         _hash("score_bin=" + str(int(math.log2(max(1, int(row.get("parent_score", 1)))))), buckets),
         _hash("ntok_bin=" + str(min(len(toks) // 16, 255)), buckets),
         _hash("depth_bin=" + str(min(int(row.get("generation_depth", 0)) // 4, 63)), buckets),
@@ -166,17 +205,35 @@ def _labels(rows: list[dict], device):
 
 
 def split_rows(rows: list[dict]) -> tuple[list[dict], list[dict]]:
-    """Hold out complete seeds when possible, otherwise the tail of one run.
+    """Hold out complete functions, then seeds, then a temporal tail.
 
     A random row split badly overstates performance because adjacent permuter
-    candidates are near duplicates.  The replay logger records the RNG seed
-    and iteration, so multi-seed functions can be evaluated on an unseen
-    mutation lineage.  Single-seed functions use a temporal tail split until
-    another independent seed exists.
+    candidates are near duplicates.  With at least four functions, validation
+    uses functions the model never saw.  Small corpora fall back to a complete
+    seed lineage or, last, a temporal tail so self-tests and early pilots stay
+    usable without claiming cross-function generalization.
     """
     by_function: dict[str, list[dict]] = {}
     for row in rows:
         by_function.setdefault(row.get("function", "?"), []).append(row)
+    if len(by_function) >= 4:
+        # Stable content-independent partition: adding more rows to an
+        # existing run cannot silently move its function between sets.
+        ordered_functions = sorted(
+            by_function,
+            key=lambda name: hashlib.sha256(name.encode()).digest(),
+        )
+        # Deployment requires improvements in at least two unseen functions,
+        # so the validation partition must contain at least two functions.
+        valid_count = min(len(ordered_functions) - 2,
+                          max(2, math.ceil(len(ordered_functions) / 5)))
+        valid_functions = set(ordered_functions[:valid_count])
+        train_rows = [row for name, group in by_function.items()
+                      if name not in valid_functions for row in group]
+        valid_rows = [row for name, group in by_function.items()
+                      if name in valid_functions for row in group]
+        return train_rows, valid_rows
+
     train_rows, valid_rows = [], []
     for function_rows in by_function.values():
         seeds = sorted({str(row.get("seed", "missing")) for row in function_rows})
@@ -251,7 +308,8 @@ def train(data: Path, model_path: Path, epochs: int, seed: int) -> dict:
             optimizer.step()
     metrics = evaluate(model, valid_rows, device, use_exact=bool(exact_positives))
     metrics["training_rows"] = len(train_rows)
-    metrics["split"] = "seed-lineage-or-temporal-tail"
+    metrics["split"] = ("held-out-functions" if len({r.get('function', '?') for r in rows}) >= 4
+                        else "seed-lineage-or-temporal-tail")
     metrics["exact_positives"] = exact_positives
     metrics["strict_improvement_positives"] = strict_positives
     torch.save({"state": model.state_dict(), "buckets": model.buckets, "dim": model.dim,
@@ -290,11 +348,16 @@ def evaluate(model: RankerModel, rows: list[dict], device, use_exact: bool) -> d
     # A model cannot demonstrate generalization when every useful label comes
     # from one function or one mutation lineage.  Keep it in shadow mode until
     # held-out improvements span independent functions and seeds.
+    lift = hits / baseline if baseline else 0.0
+    pilot_lift = pilot_hits / baseline if baseline else 0.0
     enabled = (hits > baseline and pilot_hits > baseline
+               and lift >= 1.5 and pilot_lift >= 1.25
                and positive_functions >= 2 and positive_lineages >= 3)
     return {"validation_rows": len(rows), "top_quartile_hit_rate": hits,
             "top_pilot_budget_hit_rate": pilot_hits,
             "random_hit_rate": baseline,
+            "top_quartile_lift": lift,
+            "top_pilot_budget_lift": pilot_lift,
             "strict_positive_functions": positive_functions,
             "strict_positive_lineages": positive_lineages,
             "enabled": enabled}
@@ -405,7 +468,11 @@ def selftest() -> dict:
         records = []
         for i in range(512):
             good = i % 5 == 0
-            records.append({"id": i, "function": "demo", "source": f"int x{i}; x = a {'+' if good else '-'} b;",
+            records.append({"id": i, "function": f"demo_{i % 8}",
+                            "function_family": "arithmetic",
+                            "parent_diff_signature": "register-order",
+                            "seed": i % 16,
+                            "source": f"int x{i}; x = a {'+' if good else '-'} b;",
                             "mutations": ["commute" if good else "flip"], "parent_score": 20,
                             "score": 8 if good else 22, "compiled": True, "exact": False})
         labeled.write_text("".join(json.dumps(r) + "\n" for r in records))
