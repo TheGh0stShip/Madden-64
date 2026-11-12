@@ -28,9 +28,9 @@ extern void func_80034388(void *state, u32 value);
 
 void func_8001F5D4(void)
 {
-    register u8 *base __asm__("$16");
-    register void *result __asm__("$2");
-    register s32 initialized __asm__("$3");
+    register u8 *base;
+    register void *result;
+    register s32 initialized;
     s16 values[2];
     u16 handle;
 
@@ -48,7 +48,6 @@ void func_8001F5D4(void)
     D_80078D74 = 0;
     D_800785AC = 0;
     if (initialized == 0) {
-        __asm__("" : "=r"(initialized) : "0"(initialized));
         D_8007857C = func_80032E00(0, 0x800);
         D_80078D44 = func_80032E00(0, 0x800);
         D_80069288 = 1;

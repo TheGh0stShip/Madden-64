@@ -29,17 +29,17 @@ extern void func_8003CBD8(void);
 
 void func_8003C8E0(void *first, u32 second, u32 unused, s32 mode)
 {
-    register s32 fill __asm__("$4");
-    register s32 count __asm__("$3");
-    register u8 *cursor __asm__("$2");
-    register void **buffer_slot __asm__("$16");
+    register s32 fill;
+    register s32 count;
+    register u8 *cursor;
+    register void **buffer_slot;
     void *buffer;
     void *buffer_base;
     void *shared;
-    register s32 clear_a0 __asm__("$4");
-    register void *clear_a1 __asm__("$5");
-    register u32 clear_a2 __asm__("$6");
-    register s32 clear_a3 __asm__("$7");
+    register s32 clear_a0;
+    register void *clear_a1;
+    register u32 clear_a2;
+    register s32 clear_a3;
 
     D_80085028 = mode;
     D_80085D42 = func_800356C4(first, second);
@@ -68,9 +68,6 @@ void func_8003C8E0(void *first, u32 second, u32 unused, s32 mode)
     clear_a2 = 0x2000;
     clear_a3 = 0;
     buffer_slot = &D_8008B348;
-    __asm__("" : "=r"(buffer_slot) : "0"(buffer_slot));
-    __asm__("" : : "r"(clear_a0), "r"(clear_a1), "r"(clear_a2),
-            "r"(clear_a3));
     *buffer_slot = clear_a1;
     func_80033308(clear_a0, clear_a1, clear_a2, clear_a3);
     buffer_base = *buffer_slot;

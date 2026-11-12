@@ -16,13 +16,10 @@ typedef struct ObjectRoundState {
 
 void object_round_state_reset(void *object)
 {
-    register u8 *state __asm__("$16") = object;
-    register void *first_object __asm__("$4") = object;
+    register u8 *state = object;
+    register void *first_object = object;
     ObjectRoundState *round;
     s32 i;
-
-    __asm__("" : "=r"(state) : "0"(state));
-    __asm__("" : "=r"(first_object) : "0"(first_object));
     (*(ObjectCallbacks **)state)->mode = 101;
     (*(ObjectCallbacks **)state)->set_enabled(first_object, 1);
 
@@ -32,7 +29,7 @@ void object_round_state_reset(void *object)
     }
 
     for (i = 0; i < 16; i++) {
-        register u8 *entry __asm__("$2") = state + i;
+        register u8 *entry = state + i;
 
         entry[0xE4] = 0;
         entry[0xF4] = 1;

@@ -7,15 +7,13 @@ extern void func_80063250(void **sources, s32 source_index,
 void image_rows_expand_horizontal(u8 *state, void *unused, u8 **sources,
                                   u8 ***destination_tables)
 {
-    register u8 *saved_state __asm__("$17") = state;
-    register u8 **source __asm__("$18");
-    register u8 **destinations __asm__("$20") = *destination_tables;
-    register u8 **destination __asm__("$19");
-    register s32 index __asm__("$16");
-    register s32 one __asm__("$21");
+    register u8 *saved_state = state;
+    register u8 **source;
+    register u8 **destinations = *destination_tables;
+    register u8 **destination;
+    register s32 index;
+    register s32 one;
     volatile u64 padding;
-
-    __asm__("" : : "r"(saved_state));
     (void)unused;
     if (*(s32 *)(saved_state + 0x134) > 0) {
       index = 0;
