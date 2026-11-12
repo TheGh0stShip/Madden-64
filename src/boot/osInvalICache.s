@@ -2,9 +2,9 @@
 .set noat
 .text
 
-.globl boot_cache_writeback_invalidate
-.ent boot_cache_writeback_invalidate
-boot_cache_writeback_invalidate:
+.globl osInvalICache
+.ent osInvalICache
+osInvalICache:
     blez    $a1, 2f
      nop
     addiu   $t3, $zero, 0x4000
@@ -18,7 +18,7 @@ boot_cache_writeback_invalidate:
      nop
     andi    $t2, $t0, 0x1F
     addiu   $t1, $t1, -0x20
-    subu    $t0, $t0, $t2
+    subu   $t0, $t0, $t2
 1:
     cache   0x10, 0($t0)
     sltu    $at, $t0, $t1
@@ -38,4 +38,4 @@ boot_cache_writeback_invalidate:
      addiu  $t0, $t0, 0x20
     jr      $ra
      nop
-.end boot_cache_writeback_invalidate
+.end osInvalICache

@@ -2,9 +2,9 @@
 .set noat
 .text
 
-.globl boot_cache_invalidate
-.ent boot_cache_invalidate
-boot_cache_invalidate:
+.globl osWritebackDCacheAll
+.ent osWritebackDCacheAll
+osWritebackDCacheAll:
     lui     $t0, 0x8000
     addiu   $t2, $zero, 0x2000
     addu    $t1, $t0, $t2
@@ -16,4 +16,4 @@ boot_cache_invalidate:
      addiu  $t0, $t0, 0x10
     jr      $ra
      nop
-.end boot_cache_invalidate
+.end osWritebackDCacheAll

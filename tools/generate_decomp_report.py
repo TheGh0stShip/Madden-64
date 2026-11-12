@@ -28,6 +28,7 @@ ASSEMBLY_SOURCE_ESCAPE = re.compile(
 )
 ANY_C_ASM = re.compile(r'\b(?:__asm__|asm)\b')
 GENERIC_ASSEMBLER_NORMALIZERS = {
+    "--normalizer-enable-KMC-ABS-SYM-PAIR",
     "--normalizer-enable-KMC-FP-PAIR-WORDS",
     "--normalizer-enable-KMC-LID-ALIGN4",
     "--normalizer-enable-KMC-LID-PAIR",

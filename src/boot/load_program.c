@@ -1,8 +1,8 @@
 #include "types.h"
 
 extern s32 decode_lz_type_1(u8 *src, u8 *dst);
-extern void boot_cache_invalidate(void);
-extern void boot_cache_writeback_invalidate(void *address, s32 size);
+extern void osWritebackDCacheAll(void);
+extern void osInvalICache(void *address, s32 size);
 extern s32 boot_copy_source[];
 extern u32 packed_program[];
 
@@ -44,7 +44,7 @@ void boot_load_program(void)
 
     entry += 0x47;
     entry &= ~7;
-    boot_cache_invalidate();
-    boot_cache_writeback_invalidate((void *)0x80000400, 0x100000);
+    osWritebackDCacheAll();
+    osInvalICache((void *)0x80000400, 0x100000);
     ((void (*)(void))entry)();
 }

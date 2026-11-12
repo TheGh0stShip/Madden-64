@@ -42,6 +42,17 @@ MODULES = (
         ),
     },
     {
+        "id": "overlay_2",
+        "functions": "config/us/functions_overlay2.toml",
+        "image": "build/us/audit/overlay_2.z64",
+        "vram": 0x8008B8E0,
+        "rom": 0x1000,
+        "minimum_vram": None,
+        "manifests": (
+            "config/us/matching_overlay2_kmc_units.tsv",
+        ),
+    },
+    {
         "id": "overlay_4",
         "functions": "config/us/functions_overlay4.toml",
         "image": "build/us/audit/overlay_4.z64",
@@ -51,6 +62,17 @@ MODULES = (
         "manifests": (
             "config/us/matching_overlay4_kmc_units.tsv",
             "config/us/matching_overlay4_asm_units.tsv",
+        ),
+    },
+    {
+        "id": "overlay_5",
+        "functions": "config/us/functions_overlay5.toml",
+        "image": "build/us/audit/overlay_5.z64",
+        "vram": 0x800C5F48,
+        "rom": 0x1000,
+        "minimum_vram": None,
+        "manifests": (
+            "config/us/matching_overlay5_kmc_units.tsv",
         ),
     },
 )
