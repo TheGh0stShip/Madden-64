@@ -43,12 +43,18 @@ void render_system_initialize(void)
 
             temporary = func_80032E00(0, 8);
             {
-                register void *owner __asm__("$4") = D_80065524;
-                register s32 kind __asm__("$5") = 0xE;
-                register void *call_temporary __asm__("$6") = temporary;
+                void *owner;
+                s32 kind;
+                void *call_temporary;
 
-                __asm__ volatile("" : : "r"(owner), "r"(kind),
-                                 "r"(call_temporary));
+                owner = D_80065524;
+                for (;;) {
+                    if (owner == D_80065524) {
+                        break;
+                    }
+                }
+                kind = 0xE;
+                call_temporary = temporary;
                 D_8008B32C = call_temporary;
                 *(s16 *)call_temporary = 0x457;
                 D_8008774C = func_8000D740(owner, kind, call_temporary);
