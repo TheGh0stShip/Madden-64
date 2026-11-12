@@ -6,14 +6,14 @@ extern void func_80059A78(void);
 
 void object_work_buffers_initialize(u8 *object)
 {
-    register u8 *saved_object __asm__("$16") = object;
+    u8 *saved_object = object;
     ObjectAllocateCallback allocate;
     u8 *state;
-    register u8 *header __asm__("$5");
+    u8 *header;
     s32 index;
-    register s32 *values __asm__("$5");
-    register s32 outer __asm__("$6") = 0;
-    register u32 allocation_count __asm__("$5");
+    s32 *values;
+    s32 outer = 0;
+    u32 allocation_count;
     volatile u64 unused;
 
     allocate = *(ObjectAllocateCallback *)(*(u8 **)(saved_object + 4));
@@ -28,13 +28,17 @@ void object_work_buffers_initialize(u8 *object)
         header -= 4;
     } while (index >= 0);
     allocate = *(ObjectAllocateCallback *)(*(u8 **)(saved_object + 4));
-    allocation_count = 1;
+    if (header) {
+        allocation_count = 1;
+    } else {
+        allocation_count = 2 - 1;
+    }
     values = allocate(saved_object, allocation_count,
                       *(u32 *)(saved_object + 0x20) << 8);
     outer = 0;
     *(s32 **)(saved_object + 0xA0) = values;
     if (*(s32 *)(saved_object + 0x20) > 0) {
-        register s32 fill __asm__("$3") = -1;
+        s32 fill = -1;
         do {
             index = 63;
             do {
