@@ -3,36 +3,22 @@
 extern s32 D_8008B35C;
 extern s32 D_80085E68[][12];
 
-#define COPY_CELL(offset) do { \
-    current = *(s32 *)((u8 *)D_80085E68 + source_offset + (offset)); \
-    *(s32 *)((u8 *)D_80085E68 + destination_offset + (offset)) = current; \
-} while (0)
-
 void matrix_stack_duplicate(void)
 {
-    register s32 current __asm__("$4");
-    register s32 next __asm__("$5");
-    register s32 source_offset __asm__("$2");
-    register s32 destination_offset __asm__("$3");
+    s32 current = D_8008B35C;
+    s32 next = current + 1;
 
-    current = D_8008B35C;
-    next = current + 1;
-    destination_offset = next << 1;
-    source_offset = current * 48;
-    current = *(s32 *)((u8 *)D_80085E68 + source_offset);
-    destination_offset = (destination_offset + next) << 4;
-    *(s32 *)((u8 *)D_80085E68 + destination_offset) = current;
-    COPY_CELL(0x04);
-    COPY_CELL(0x08);
-    COPY_CELL(0x0C);
-    COPY_CELL(0x10);
-    COPY_CELL(0x14);
-    COPY_CELL(0x18);
-    COPY_CELL(0x1C);
-    COPY_CELL(0x20);
-    COPY_CELL(0x24);
-    COPY_CELL(0x28);
-    source_offset = *(s32 *)((u8 *)D_80085E68 + source_offset + 0x2C);
+    D_80085E68[next][0] = D_80085E68[current][0];
+    D_80085E68[next][1] = D_80085E68[current][1];
+    D_80085E68[next][2] = D_80085E68[current][2];
+    D_80085E68[next][3] = D_80085E68[current][3];
+    D_80085E68[next][4] = D_80085E68[current][4];
+    D_80085E68[next][5] = D_80085E68[current][5];
+    D_80085E68[next][6] = D_80085E68[current][6];
+    D_80085E68[next][7] = D_80085E68[current][7];
+    D_80085E68[next][8] = D_80085E68[current][8];
+    D_80085E68[next][9] = D_80085E68[current][9];
+    D_80085E68[next][10] = D_80085E68[current][10];
     D_8008B35C = next;
-    *(s32 *)((u8 *)D_80085E68 + destination_offset + 0x2C) = source_offset;
+    D_80085E68[next][11] = D_80085E68[current][11];
 }
