@@ -390,3 +390,4 @@
 0x18F74	0x220	src/overlays/overlay2/func_800A3854.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	25c64ed3590efb3b97d1aecbcfb749125ac6feda98354c0d240b0f63ac336e42
 0x194A4	0xF8	src/overlays/overlay2/func_800A3D84.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	696a868b8749c4714d0621c986c69f5fc8bddd3c47a6db0e7a87de0fcc2dbcdb
 0x196F4	0x1C4	src/overlays/overlay2/func_800A3FD4.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e64e26a89b0734511af51f968305fe08e0e10691c23c65446e8daff45fd2398f
+0x1DD10	0xA4	src/overlays/overlay2/func_800A85F8.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a553d1060c8b1e788d1ac51e078f3d3f9819b9ecdf18972f31df1bc6cfe53617

@@ -310,7 +310,7 @@ functions = [
     { name = "func_800A8578", vram = 0x800a8578, size = 0x28 }, # c
     { name = "func_800A85A0", vram = 0x800a85a0, size = 0x28 }, # c
     { name = "func_800A85C8", vram = 0x800a85c8, size = 0x28 }, # c
-    { name = "func_800A85F8", vram = 0x800a85f8, size = 0x9c }, # c
+    { name = "func_800A85F8", vram = 0x800a85f0, size = 0xa4 }, # c boundary-corrected
     { name = "func_800A8694", vram = 0x800a8694, size = 0x10c }, # c
     { name = "func_800A87A0", vram = 0x800a87a0, size = 0x20 }, # c
     { name = "func_800A87C8", vram = 0x800a87c0, size = 0xa8 }, # c boundary-corrected
