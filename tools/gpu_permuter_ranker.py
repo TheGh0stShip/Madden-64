@@ -62,6 +62,13 @@ def features(row: dict, buckets: int = BUCKETS) -> list[int]:
         out.append(_hash(f"last_mut={mutations[-1]}", buckets))
     if len(mutations) >= 2:
         out.append(_hash(f"mut_pair={mutations[-2]}>{mutations[-1]}", buckets))
+    parent_counts = row.get("parent_mismatch_counts") or {}
+    for kind in MISMATCH_KINDS:
+        count = max(0, int(parent_counts.get(kind, 0)))
+        out.append(_hash(f"parent_{kind}={min(count, 15)}", buckets))
+        if count:
+            for mutation in mutations[-2:]:
+                out.append(_hash(f"parent_{kind}>mut={mutation}", buckets))
     # Local token n-grams capture declaration/statement ordering without a large parser model.
     for n in (1, 2, 3):
         for i in range(max(0, len(toks) - n + 1)):
@@ -77,6 +84,7 @@ class RankerModel:
             "embed": nn.EmbeddingBag(buckets, dim, mode="mean"),
             "body": nn.Sequential(nn.Linear(dim + 2, 64), nn.SiLU(), nn.Linear(64, 32), nn.SiLU()),
             "improve": nn.Linear(32, 1),
+            "strict": nn.Linear(32, 1),
             "exact": nn.Linear(32, 1),
             # Predict the residual shape, not merely whether a mutation is
             # non-regressing.  Exact matching is the all-zero residual.
@@ -106,6 +114,7 @@ class RankerModel:
     def __call__(self, indices, offsets, numeric):
         hidden = self.encode(indices, offsets, numeric)
         return (self.module["improve"](hidden).squeeze(1),
+                self.module["strict"](hidden).squeeze(1),
                 self.module["exact"](hidden).squeeze(1),
                 self.module["residual"](hidden))
 
@@ -133,16 +142,18 @@ def _batch(rows: list[dict], device, buckets: int = BUCKETS):
 
 def _labels(rows: list[dict], device):
     torch = _torch()
-    improvements, exact, residuals, residual_mask = [], [], [], []
+    improvements, strict, exact, residuals, residual_mask = [], [], [], [], []
     for row in rows:
         parent, score = max(1, int(row["parent_score"])), int(row["score"])
         improvements.append(max(-1.0, min(1.0, (parent - score) / parent)))
+        strict.append(1.0 if score < parent else 0.0)
         exact.append(1.0 if score == 0 or row.get("exact") else 0.0)
         counts = row.get("mismatch_counts") or {}
         residuals.append([math.log1p(max(0, int(counts.get(kind, 0))))
                           for kind in MISMATCH_KINDS])
         residual_mask.append(1.0 if "mismatch_counts" in row else 0.0)
     return (torch.tensor(improvements, dtype=torch.float32, device=device),
+            torch.tensor(strict, dtype=torch.float32, device=device),
             torch.tensor(exact, dtype=torch.float32, device=device),
             torch.tensor(residuals, dtype=torch.float32, device=device),
             torch.tensor(residual_mask, dtype=torch.float32, device=device))
@@ -198,15 +209,23 @@ def train(data: Path, model_path: Path, epochs: int, seed: int) -> dict:
     batch_size = 512
     exact_positives = sum(1 for row in train_rows
                           if row.get("exact") or int(row["score"]) == 0)
+    strict_positives = sum(1 for row in train_rows
+                           if int(row["score"]) < int(row["parent_score"]))
     model.module.train()
     for _ in range(epochs):
         random.shuffle(train_rows)
         for start in range(0, len(train_rows), batch_size):
             chunk = train_rows[start:start + batch_size]
             indices, offsets, numeric = _batch(chunk, device)
-            y_improve, y_exact, y_residual, residual_mask = _labels(chunk, device)
-            p_improve, p_exact, p_residual = model(indices, offsets, numeric)
+            y_improve, y_strict, y_exact, y_residual, residual_mask = _labels(chunk, device)
+            p_improve, p_strict, p_exact, p_residual = model(indices, offsets, numeric)
             loss = torch.nn.functional.smooth_l1_loss(p_improve, y_improve)
+            if strict_positives:
+                positives = max(1, int(y_strict.sum().item()))
+                strict_weight = torch.tensor(
+                    min(128.0, (len(chunk) - positives) / positives), device=device)
+                loss += 0.75 * torch.nn.functional.binary_cross_entropy_with_logits(
+                    p_strict, y_strict, pos_weight=strict_weight)
             # This auxiliary objective gives dense supervision about what is
             # still wrong.  It remains useful when the corpus has no exact
             # positive examples at all.
@@ -228,6 +247,7 @@ def train(data: Path, model_path: Path, epochs: int, seed: int) -> dict:
     metrics["training_rows"] = len(train_rows)
     metrics["split"] = "seed-lineage-or-temporal-tail"
     metrics["exact_positives"] = exact_positives
+    metrics["strict_improvement_positives"] = strict_positives
     torch.save({"state": model.state_dict(), "buckets": model.buckets, "dim": model.dim,
                 "metrics": metrics, "rows": len(rows), "seed": seed,
                 "exact_positives": exact_positives}, model_path)
@@ -241,8 +261,8 @@ def evaluate(model: RankerModel, rows: list[dict], device, use_exact: bool) -> d
     model.module.eval()
     with torch.no_grad():
         indices, offsets, numeric = _batch(rows, device, model.buckets)
-        improve, exact, residual = model(indices, offsets, numeric)
-        priority = improve
+        improve, strict, exact, residual = model(indices, offsets, numeric)
+        priority = improve + 2.0 * torch.sigmoid(strict)
         priority = priority - 0.05 * torch.nn.functional.softplus(residual).sum(dim=1)
         if use_exact:
             priority = priority + 2.0 * torch.sigmoid(exact)
@@ -250,7 +270,7 @@ def evaluate(model: RankerModel, rows: list[dict], device, use_exact: bool) -> d
     # Strict improvements are often absent in an honest held-out mutation
     # lineage.  Avoiding regressions is still useful: it rejects candidates
     # that cannot improve the current parent before spending a compile slot.
-    actual = [int(r["score"]) <= int(r["parent_score"]) for r in rows]
+    actual = [int(r["score"]) < int(r["parent_score"]) for r in rows]
     ordered = sorted(range(len(rows)), key=lambda i: priority[i], reverse=True)
     k = max(1, len(rows) // 4)
     selected = ordered[:k]
@@ -318,9 +338,13 @@ def select_rows(rows: list[dict], explore: float, seed: int,
 
 
 def rank(model_path: Path, candidates: Path, output: Path, explore: float, seed: int,
-         select_count: int, diversity: float = 0.25) -> dict:
+         select_count: int, diversity: float = 0.25,
+         allow_disabled: bool = False) -> dict:
     torch = _torch()
     saved = torch.load(model_path, map_location="cpu", weights_only=False)
+    if not saved.get("metrics", {}).get("enabled", False) and not allow_disabled:
+        raise SystemExit("checkpoint failed its held-out deployment gate; "
+                         "use seeded random ordering or --allow-disabled for shadow evaluation")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = RankerModel(saved["buckets"], saved["dim"]).to(device)
     model.load_state_dict(saved["state"])
@@ -331,9 +355,10 @@ def rank(model_path: Path, candidates: Path, output: Path, explore: float, seed:
         for start in range(0, len(rows), 8192):
             chunk = rows[start:start + 8192]
             indices, offsets, numeric = _batch(chunk, device, model.buckets)
-            improve, exact, residual = model(indices, offsets, numeric)
+            improve, strict, exact, residual = model(indices, offsets, numeric)
             hidden = model.encode(indices, offsets, numeric)
-            priority = improve - 0.05 * torch.nn.functional.softplus(residual).sum(dim=1)
+            priority = (improve + 2.0 * torch.sigmoid(strict)
+                        - 0.05 * torch.nn.functional.softplus(residual).sum(dim=1))
             if saved.get("exact_positives", 0):
                 priority = priority + 2.0 * torch.sigmoid(exact)
             all_priority.extend(priority.cpu().tolist())
@@ -394,13 +419,15 @@ def main(argv: list[str] | None = None) -> int:
                         help="compile budget; exploration is this fraction of these slots")
     p_rank.add_argument("--diversity", type=float, default=0.25,
                         help="GPU embedding novelty weight for model-selected candidates")
+    p_rank.add_argument("--allow-disabled", action="store_true",
+                        help="rank only for shadow evaluation when the held-out gate failed")
     sub.add_parser("selftest")
     args = parser.parse_args(argv)
     if args.command == "train":
         result = train(args.data, args.model, args.epochs, args.seed)
     elif args.command == "rank":
         result = rank(args.model, args.candidates, args.output, args.explore, args.seed,
-                      args.select_count, args.diversity)
+                      args.select_count, args.diversity, args.allow_disabled)
     else:
         result = selftest()
     print(json.dumps(result, indent=2, sort_keys=True))

@@ -39,6 +39,13 @@ class GpuPermuterRankerTests(unittest.TestCase):
         self.assertEqual(sum(row["selection_arm"] == "random" for row in selected), 10)
         self.assertEqual(sum(row["selection_arm"] == "model" for row in selected), 90)
 
+    def test_parent_residual_changes_features(self):
+        base = {"function": "demo", "source": "int x = a + b;",
+                "mutations": ["swap-stmt"], "parent_score": 2}
+        register = dict(base, parent_mismatch_counts={"register": 1})
+        ordering = dict(base, parent_mismatch_counts={"ordering": 1})
+        self.assertNotEqual(RANKER.features(register), RANKER.features(ordering))
+
 
 if __name__ == "__main__":
     unittest.main()

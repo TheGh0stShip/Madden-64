@@ -28,7 +28,8 @@ only when the exact matcher reports zero differences.
 
 5. Retrain after 512 new compiler labels or five minutes, whichever is later.
    Keep the previous checkpoint and promote the new one only when its held-out
-   top-quartile improvement hit rate exceeds the random baseline.
+   held-out strict-improvement hit rates exceed the random baseline both in
+   the top quartile and at the production compile budget.
 
 Replay rows are deduplicated by function and source digest. Validation holds
 out an entire RNG seed for every function with multiple runs; a single-seed
@@ -88,10 +89,14 @@ budgets:
 
 When the replay corpus contains no exact positives, the exact-match head is
 disabled rather than allowing random untrained weights to influence ranking.
-The deployment gate then measures held-out non-regression rate both in the top
+The deployment gate measures held-out strict-improvement rate both in the top
 quartile and at the production 512-of-50,000 compile budget, compared with
 the validation-wide random baseline. Once exact examples exist, the exact head
 and its calibrated probability are added to priority.
+
+Checkpoints that fail either held-out gate cannot rank a production batch.
+`--allow-disabled` exists only for shadow evaluation and leaves the compiler
+oracle in charge of all labels.
 
 The primary metrics are exact matches per 10,000 compiles and compilations to
 first exact match. Secondary metrics are best score improvement per 1,000
@@ -168,6 +173,26 @@ grammar had exhausted this function's semantic-equivalent forms, so spending
 more GPU ranking or CPU compilation on the same grammar cannot close it. The
 next campaign must add an assignment/live-range transformation or move to a
 different function.
+
+The combined replay corpus exposed a sharper objective problem: 12,466 unique
+compiler labels contained only 28 strict improvements, while 7,403 candidates
+merely reproduced their parent's score. A non-regression objective therefore
+learns to select large families that are safe but incapable of closing a
+function. The ranker now gives a class-weighted strict-improvement head primary
+acquisition weight. New replay rows can also supply
+`parent_mismatch_counts`; those residual features are crossed with recent
+mutations so a live-range edit can be learned separately for register and
+instruction-order residuals. CPU compilation and exact byte equality remain
+the only acceptance oracle.
+
+The first strict-head Desktop training run used all 12,466 unique labels. Its
+held-out split contained 3,503 candidates: the production-sized slice found
+strict improvements at 2.78 percent versus a 0.74-percent random baseline, but
+the top quartile reached only 0.46 percent. Because that is below random, the
+checkpoint was correctly disabled and cannot schedule production compiles.
+The corpus has strict improvements in only two seed lineages of one function,
+so the next useful collection must broaden strict-improvement examples across
+functions rather than add epochs to the same biased corpus.
 
 ## Rationale
 
