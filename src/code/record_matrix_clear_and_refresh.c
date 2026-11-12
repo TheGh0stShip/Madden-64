@@ -6,16 +6,16 @@ extern void func_8003B9C0(u16 value, u16 index, u16 copy);
 
 void func_800373B4(u32 value)
 {
-    register u32 saved_value __asm__("$17") = value;
-    register u32 row __asm__("$16") = 0;
-    register u32 column __asm__("$4");
-    register u32 row_offset __asm__("$5");
+    u32 saved_value = value;
+    u32 row = 0;
+    u32 column;
+    u32 row_offset;
 
     do {
         column = 0;
         row_offset = (u16)row * 8524;
         do {
-            u32 offset = row_offset + (u16)column * 3;
+            u32 offset = (u16)column * 3 + row_offset;
 
             D_80081602[offset + 0] = 0;
             D_80081602[offset + 1] = 0;
