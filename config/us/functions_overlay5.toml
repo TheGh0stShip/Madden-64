@@ -69,7 +69,7 @@ functions = [
     { name = "func_800CA2C8", vram = 0x800ca2c8, size = 0x58 }, # c
     { name = "func_800CA320", vram = 0x800ca320, size = 0xe0 }, # c
     { name = "func_800CA400", vram = 0x800ca400, size = 0x108 }, # c
-    { name = "func_800CA518", vram = 0x800ca518, size = 0xb4 }, # c
+    { name = "func_800CA508", vram = 0x800ca508, size = 0xc4 }, # c corrected late start
     { name = "func_800CA5CC", vram = 0x800ca5cc, size = 0x38 }, # c
     { name = "func_800CA604", vram = 0x800ca604, size = 0x270 }, # c
     { name = "func_800CA874", vram = 0x800ca874, size = 0x2a0 }, # c
