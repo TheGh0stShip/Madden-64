@@ -38,7 +38,6 @@ void ui_slot_resource_bind_primary(UiBindContext *context, s32 source_slot, s32 
         owner->resources[destination_slot] = moved_resource;
     }
 
-    D_80069298[destination_slot] = D_80069298[source_slot];
-    __asm__ volatile("" : : : "memory");
-    D_80069298[source_slot] = 0;
+    *(void * volatile *)&D_80069298[destination_slot] = D_80069298[source_slot];
+    *(void * volatile *)&D_80069298[source_slot] = 0;
 }
