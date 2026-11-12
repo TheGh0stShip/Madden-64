@@ -54,22 +54,22 @@ class DecompReportTests(unittest.TestCase):
         totals = report["measures"]
         self.assertEqual(report["version"], 2)
         self.assertEqual(totals["total_code"], "1082496")
-        self.assertEqual(totals["matched_code"], "405132")
+        self.assertEqual(totals["matched_code"], "405348")
         self.assertEqual(totals["total_data"], "155472")
         self.assertEqual(totals["matched_data"], "155472")
         self.assertEqual(totals["total_functions"], 3697)
-        self.assertEqual(totals["matched_functions"], 2282)
+        self.assertEqual(totals["matched_functions"], 2283)
         categories = {item["id"]: item["measures"] for item in report["categories"]}
         self.assertEqual(set(categories), {
             "code", "assembly_reference", "assembly_assisted_reference",
             "program_data",
         })
         self.assertEqual(categories["code"]["total_code"], "1082496")
-        self.assertEqual(categories["code"]["matched_code"], "405132")
+        self.assertEqual(categories["code"]["matched_code"], "405348")
         self.assertEqual(categories["code"]["total_functions"], 3697)
-        self.assertEqual(categories["code"]["matched_functions"], 2282)
+        self.assertEqual(categories["code"]["matched_functions"], 2283)
         self.assertEqual(categories["assembly_reference"]["matched_code"], "273128")
-        self.assertEqual(categories["assembly_assisted_reference"]["matched_code"], "45680")
+        self.assertEqual(categories["assembly_assisted_reference"]["matched_code"], "45464")
         self.assertEqual(categories["program_data"]["total_code"], "0")
         self.assertEqual(categories["program_data"]["matched_code"], "0")
         self.assertEqual(categories["program_data"]["total_data"], "155472")
@@ -80,7 +80,7 @@ class DecompReportTests(unittest.TestCase):
                                  for unit in report["units"]), 3697)
         self.assertEqual(len(report["units"]), 3697)
         self.assertEqual(sum(unit["metadata"]["complete"]
-                             for unit in report["units"]), 2282)
+                             for unit in report["units"]), 2283)
         partial_units = {
             unit["name"]: (
                 int(unit["measures"]["matched_code"]),
@@ -120,7 +120,7 @@ class DecompReportTests(unittest.TestCase):
         tracks = {track["id"]: track for track in report["tracks"]}
         self.assertEqual(report["format"], "decomphub.progress/v1")
         self.assertEqual(tracks["matching-code"]["measurement"], {
-            "kind": "ratio", "completed": 405132, "total": 1082496,
+            "kind": "ratio", "completed": 405348, "total": 1082496,
             "unit": "bytes",
         })
         self.assertEqual(tracks["initialized-data"]["measurement"], {
@@ -128,7 +128,7 @@ class DecompReportTests(unittest.TestCase):
             "unit": "bytes",
         })
         self.assertEqual(tracks["matching-functions"]["measurement"], {
-            "kind": "ratio", "completed": 2282, "total": 3697,
+            "kind": "ratio", "completed": 2283, "total": 3697,
             "unit": "functions",
         })
         self.assertEqual(tracks["assembly-reference"]["measurement"], {
@@ -136,7 +136,7 @@ class DecompReportTests(unittest.TestCase):
             "unit": "bytes",
         })
         self.assertEqual(tracks["assembly-assisted-reference"]["measurement"], {
-            "kind": "ratio", "completed": 45680, "total": 1082496,
+            "kind": "ratio", "completed": 45464, "total": 1082496,
             "unit": "bytes",
         })
         self.assertEqual(tracks["proven-handwritten-assembly"]["measurement"], {
