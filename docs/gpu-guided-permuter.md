@@ -31,6 +31,10 @@ only when the exact matcher reports zero differences.
    held-out strict-improvement hit rates exceed the random baseline both in
    the top quartile and at the production compile budget.
 
+A checkpoint also remains shadow-only unless held-out strict improvements span
+at least two functions and three independent function/seed lineages. A high
+hit rate from one function is memorization evidence, not a deployment result.
+
 Replay rows are deduplicated by function and source digest. Validation holds
 out an entire RNG seed for every function with multiple runs; a single-seed
 function temporarily uses the final temporal fifth. This prevents the model

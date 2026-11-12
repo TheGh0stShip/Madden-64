@@ -46,6 +46,11 @@ class GpuPermuterRankerTests(unittest.TestCase):
         ordering = dict(base, parent_mismatch_counts={"ordering": 1})
         self.assertNotEqual(RANKER.features(register), RANKER.features(ordering))
 
+    def test_source_digest_ignores_line_endings_and_trailing_blank_lines(self):
+        unix = {"source": "int f(void) {\n    return 1;\n}\n"}
+        windows = {"source": "int f(void) {\r\n    return 1;\r\n}\r\n\r\n"}
+        self.assertEqual(RANKER.source_digest(unix), RANKER.source_digest(windows))
+
 
 if __name__ == "__main__":
     unittest.main()

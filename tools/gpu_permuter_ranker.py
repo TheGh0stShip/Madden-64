@@ -43,6 +43,12 @@ def _hash(text: str, buckets: int = BUCKETS) -> int:
     return int.from_bytes(hashlib.blake2s(text.encode(), digest_size=8).digest(), "little") % buckets
 
 
+def source_digest(row: dict) -> str:
+    """Content identity used to avoid recompiling duplicate C candidates."""
+    source = row.get("source", "").replace("\r\n", "\n").rstrip() + "\n"
+    return hashlib.sha256(source.encode()).hexdigest()
+
+
 def features(row: dict, buckets: int = BUCKETS) -> list[int]:
     """Stable categorical features; no Python hash randomization."""
     toks = TOKEN.findall(row.get("source", ""))
@@ -194,7 +200,7 @@ def train(data: Path, model_path: Path, epochs: int, seed: int) -> dict:
     unique = {}
     for row in read_jsonl(data):
         if row.get("compiled") and "score" in row:
-            unique[(row.get("function"), row.get("id"))] = row
+            unique[(row.get("function"), source_digest(row))] = row
     rows = list(unique.values())
     if len(rows) < 32:
         raise SystemExit("need at least 32 labeled candidates before training")
@@ -271,6 +277,9 @@ def evaluate(model: RankerModel, rows: list[dict], device, use_exact: bool) -> d
     # lineage.  Avoiding regressions is still useful: it rejects candidates
     # that cannot improve the current parent before spending a compile slot.
     actual = [int(r["score"]) < int(r["parent_score"]) for r in rows]
+    positive_functions = len({r.get("function", "?") for r, hit in zip(rows, actual) if hit})
+    positive_lineages = len({(r.get("function", "?"), str(r.get("seed", "missing")))
+                             for r, hit in zip(rows, actual) if hit})
     ordered = sorted(range(len(rows)), key=lambda i: priority[i], reverse=True)
     k = max(1, len(rows) // 4)
     selected = ordered[:k]
@@ -278,10 +287,17 @@ def evaluate(model: RankerModel, rows: list[dict], device, use_exact: bool) -> d
     pilot_k = max(1, round(len(rows) * 512 / 50000))
     pilot_hits = sum(actual[i] for i in ordered[:pilot_k]) / pilot_k
     baseline = sum(actual) / len(actual)
+    # A model cannot demonstrate generalization when every useful label comes
+    # from one function or one mutation lineage.  Keep it in shadow mode until
+    # held-out improvements span independent functions and seeds.
+    enabled = (hits > baseline and pilot_hits > baseline
+               and positive_functions >= 2 and positive_lineages >= 3)
     return {"validation_rows": len(rows), "top_quartile_hit_rate": hits,
             "top_pilot_budget_hit_rate": pilot_hits,
             "random_hit_rate": baseline,
-            "enabled": hits > baseline and pilot_hits > baseline}
+            "strict_positive_functions": positive_functions,
+            "strict_positive_lineages": positive_lineages,
+            "enabled": enabled}
 
 
 def select_rows(rows: list[dict], explore: float, seed: int,
