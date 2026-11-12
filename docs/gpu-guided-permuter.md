@@ -48,6 +48,11 @@ That is a ceiling for large functions, not a quota: stop proposal generation
 when the rolling unique yield falls below 10 percent, and retain at least a
 10-to-1 proposal-to-compile ratio. Small functions can exhaust their useful
 mutation space long before 250,000 distinct sources.
+Generate large pools as several independent seeded population lineages rather
+than one serial lineage. Eight 6,250-proposal shards produced 49,803 unique
+sources in the first population pilot; the earlier serial run left most
+Desktop cores idle. Merge shards by canonical source digest before ranking so
+duplicated forms never consume compiler slots.
 Selection reserves exactly 10 percent of the compile budget (51 of 512 slots)
 for seeded uniform exploration over the entire proposal pool. It fills the
 remaining slots from an eight-times-budget model front using a GPU-resident
@@ -119,6 +124,17 @@ function's mutation space at 95 unique proposals. The model arm retained 45
 non-regressions in 85 candidates; the random arm retained five in ten. Neither
 arm improved score 2. This is why production generation now uses a unique-yield
 stop instead of blindly chasing a fixed pool size.
+
+The first sharded population pilot targeted score-4
+`resource_offsets_relocate`: 49,803 unique proposals, CUDA-diversified selection
+and 1,024 compiler evaluations completed in 133 seconds. No exact result was
+found. The model arm retained 168 non-regressions in 870 compiles; seeded random
+exploration retained five in 154. This confirms substantial compiler-budget
+savings while also showing that non-regression prediction alone is insufficient
+for the last few register/scheduling differences. New replay rows therefore
+record population parent, generation depth, mismatch categories and register
+swap, which are inputs for an edit-effect model rather than another scalar
+ranker.
 
 ## Rationale
 
