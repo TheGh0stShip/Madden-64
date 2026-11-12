@@ -15,8 +15,8 @@ void func_80055A80(u8 *object)
     u8 *cursor;
     u8 *end;
 
-    work = (*(ObjectAllocator **)(object + 4))->allocate(object, 1, 0x580) + 0x100;
-    __asm__("" : "=r"(work) : "0"(work));
+    work = (*(ObjectAllocator **)(object + 4))->allocate(object, 1, 0x580);
+    work += 0x100;
     *(u8 **)(object + 0x140) = work;
     func_8002E58C(work - 0x100, 0, 0x100);
 
@@ -30,7 +30,7 @@ void func_80055A80(u8 *object)
 
     work += 0x80;
     {
-        register s32 fill __asm__("$5") = 0xFF;
+        s32 fill = 0xFF;
 
         cursor = work + 0x80;
         end = work + 0x200;
