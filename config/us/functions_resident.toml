@@ -555,7 +555,7 @@ functions = [
     { name = "fixed_ratio_scale", vram = 0x8002e7a0, size = 0x88 }, # c
     { name = "func_8002E828", vram = 0x8002e828, size = 0x20 }, # c
     { name = "func_8002E848", vram = 0x8002e848, size = 0x48 }, # c
-    { name = "func_8002E890", vram = 0x8002e890, size = 0x10c }, # asm
+    { name = "func_8002E890", vram = 0x8002e890, size = 0x10c }, # c
     { name = "func_8002E99C", vram = 0x8002e99c, size = 0x4c }, # leaf
     { name = "func_8002E9E8", vram = 0x8002e9e8, size = 0x3c }, # c
     { name = "func_8002EA24", vram = 0x8002ea24, size = 0x38 }, # c

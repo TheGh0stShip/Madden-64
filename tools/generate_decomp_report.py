@@ -32,6 +32,7 @@ GENERIC_ASSEMBLER_NORMALIZERS = {
     "--normalizer-enable-KMC-FP-PAIR-WORDS",
     "--normalizer-enable-KMC-LID-ALIGN4",
     "--normalizer-enable-KMC-LID-PAIR",
+    "--normalizer-enable-KMC-LID-PAD4",
 }
 
 
