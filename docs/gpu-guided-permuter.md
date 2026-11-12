@@ -136,6 +136,15 @@ record population parent, generation depth, mismatch categories and register
 swap, which are inputs for an edit-effect model rather than another scalar
 ranker.
 
+A subsequent score-3 `indexed_flag_byte_get` campaign generated 96,716 unique
+forms and compiled 2,048. It also found no exact source, but the model selected
+165 score-3 forms in 1,741 slots while random exploration selected four in 307.
+After adding both population campaigns, the lineage-held validation corpus has
+15,479 rows: the top-quartile non-regression rate is 99.53 percent versus a
+33.88-percent validation-wide baseline, and the 512-of-50,000 budget rate is
+100 percent. These metrics justify using the model as a rejection filter; they
+do not justify calling any uncompiled source a match.
+
 ## Rationale
 
 - [decomp-permuter](https://github.com/simonlindholm/decomp-permuter) describes
