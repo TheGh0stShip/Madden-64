@@ -14,7 +14,7 @@ only when the exact matcher reports zero differences.
 3. Train on Desktop with:
 
    ```sh
-   codex-gpu python tools/gpu_permuter_ranker.py train run.jsonl ranker.pt
+   python3 tools/gpu_permuter_ranker.py train run.jsonl ranker.pt
    ```
 
 4. Generate a substantially larger uncompiled pool than the CPU compile width,
@@ -22,7 +22,7 @@ only when the exact matcher reports zero differences.
    10-percent random exploration sample:
 
    ```sh
-   codex-gpu python tools/gpu_permuter_ranker.py rank \
+   python3 tools/gpu_permuter_ranker.py rank \
   ranker.pt candidates.jsonl ranked.jsonl --explore 0.10 --select-count 512
    ```
 

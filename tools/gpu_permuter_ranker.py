@@ -35,7 +35,7 @@ def _torch():
         import torch
         return torch
     except ImportError as exc:
-        raise SystemExit("PyTorch is required; run this on Desktop via codex-gpu") from exc
+        raise SystemExit("PyTorch is required; run this with the Desktop GPU Python") from exc
 
 
 def _hash(text: str, buckets: int = BUCKETS) -> int:
