@@ -259,3 +259,4 @@
 0x1A44C	0x174	src/overlays/overlay5/func_800DF394.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ca8279bcfb1b1f5f0d63fcdfa31b8557c6f72ac64eda13671b54a970fe3879a6
 0x1A920	0x190	src/overlays/overlay5/func_800DF868.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bf63632981c8b27697fb518c3d2a6c3f8fe6205a74d610d4de0532c3ef0fbe2b
 0xE94C	0x168	src/overlays/overlay5/func_800D3894.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	680fc2e5cf6943712c44f10a7367992ccbe89e300048729e5ed9c4625cd64f2e
+0x7858	0x1EC	src/overlays/overlay5/func_800CC7A0.c	--section-base=.rodata:0x80001CD4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8fb9c100676bdc8f1b73b5705d1162b8ac3eb4da903fa9ba3e0f53f268b407a0
