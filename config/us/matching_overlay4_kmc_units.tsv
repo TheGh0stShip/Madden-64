@@ -180,6 +180,7 @@
 0x1CC84	0xCC	src/overlays/overlay4/func_800E346C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8a850f37700ec42cdde50e71380e65c208f6cca2121bd441dfa52dbb59208511
 0x1CD50	0x5C	src/overlays/overlay4/func_800E3538.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a58e82e5cfe3d9d2fcd15111a12b78a964b58b75b2bebe280ebe685422404a40
 0x1CE70	0x140	src/overlays/overlay4/func_800E3658.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e9fe72d3bf78f9bd7a1927458929de56c9e7a24eea4ff7554910e7958a61ec17
+0x1CFB0	0x1C8	src/overlays/overlay4/func_800E3798.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6a30243d7b8110c821f92c009f2bf2514d17f3d303bf2f46ebfac3f117567525
 0x1D178	0xB8	src/overlays/overlay4/func_800E3960.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	de8591a7fa02ddac07763eb4e0d05d57bd3c05b3ef4d62cdb3d06243719ca3e7
 0x1D278	0x88	src/overlays/overlay4/func_800E3A60.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b98ff1f164495d266f0d585f632affc0c62d46a08b5b3453f37fa8c40d1cb752
 0x1D300	0xC0	src/overlays/overlay4/func_800E3AE8.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	31072c7ff59f3cff1c9f0bdfca4329499a26bdd450deb76232329805132ba4ff
