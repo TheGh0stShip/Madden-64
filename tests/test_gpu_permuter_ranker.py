@@ -129,6 +129,56 @@ class GpuPermuterRankerTests(unittest.TestCase):
         score = RANKER.structural_scores(target, [shifted], device="cpu")[0]
         self.assertLess(score["best_local_shift_mismatches"], score["word_mismatches"])
 
+    @unittest.skipUnless(importlib.util.find_spec("torch"), "PyTorch runs on Desktop")
+    def test_replay_reports_compile_budget_lift(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            labeled = root / "labeled.jsonl"
+            model = root / "model.pt"
+            rows = []
+            for function in range(10):
+                for iteration in range(40):
+                    good = iteration % 5 == 0
+                    rows.append({"id": f"{function}-{iteration}",
+                                 "function": f"demo_{function}", "seed": 1,
+                                 "iteration": iteration,
+                                 "source": f"int f(void){{return x {'+' if good else '-'} {iteration};}}",
+                                 "mutations": ["good" if good else "bad"],
+                                 "parent_score": 20, "score": 8 if good else 22,
+                                 "compiled": True, "exact": False})
+            labeled.write_text("".join(json.dumps(row) + "\n" for row in rows))
+            RANKER.train(labeled, model, epochs=8, seed=7)
+            report = RANKER.replay(model, labeled, budget=8,
+                                   random_trials=20, seed=7)
+            self.assertEqual(report["held_out_functions"], 2)
+            self.assertEqual(report["budget_per_function"], 8)
+            self.assertIn("strict_improvement_lift", report)
+            self.assertEqual(report["positive_pool_functions"], 2)
+
+    @unittest.skipUnless(importlib.util.find_spec("torch"), "PyTorch runs on Desktop")
+    def test_replay_rejects_single_positive_held_out_function(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            labeled = root / "labeled.jsonl"
+            model = root / "model.pt"
+            rows = []
+            for function in range(10):
+                for iteration in range(40):
+                    good = function == 0 and iteration % 5 == 0
+                    rows.append({"id": f"{function}-{iteration}",
+                                 "function": f"demo_{function}", "seed": 1,
+                                 "iteration": iteration,
+                                 "source": f"int f(void){{return x {'+' if good else '-'} {iteration};}}",
+                                 "mutations": ["good" if good else "bad"],
+                                 "parent_score": 20, "score": 8 if good else 22,
+                                 "compiled": True, "exact": False})
+            labeled.write_text("".join(json.dumps(row) + "\n" for row in rows))
+            RANKER.train(labeled, model, epochs=4, seed=7)
+            report = RANKER.replay(model, labeled, budget=8,
+                                   random_trials=10, seed=7)
+            self.assertLessEqual(report["positive_pool_functions"], 1)
+            self.assertFalse(report["enabled"])
+
 
 if __name__ == "__main__":
     unittest.main()

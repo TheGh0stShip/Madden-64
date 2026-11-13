@@ -14,6 +14,7 @@ Labeled records additionally use:
 Commands:
   train DATA.jsonl MODEL.pt
   rank MODEL.pt CANDIDATES.jsonl RANKED.jsonl
+  replay MODEL.pt LABELED.jsonl
   retrieve LABELED.jsonl QUERIES.jsonl SUGGESTIONS.jsonl
   structural-score TARGET.bin CANDIDATES.jsonl SCORED.jsonl
   selftest
@@ -751,6 +752,102 @@ def rank_ensemble(model_paths: list[Path], candidates: Path, output: Path,
             "training_metrics": [saved.get("metrics", {}) for saved in saved_models]}
 
 
+def replay(model_path: Path, labeled_path: Path, budget: int = 128,
+           random_trials: int = 200, seed: int = 1) -> dict:
+    """Measure compile-slot value on the checkpoint's held-out functions.
+
+    This is an offline acquisition test, not an exactness test.  It compares
+    the model's first ``budget`` choices with seeded random choices from the
+    same held-out pools.  Deployment still requires the compiler and byte
+    matcher for every selected candidate.
+    """
+    torch = _torch()
+    saved = torch.load(model_path, map_location="cpu", weights_only=False)
+    if saved.get("schema") != MODEL_SCHEMA:
+        raise SystemExit("checkpoint schema is incompatible with replay")
+    unique = {}
+    for row in read_jsonl(labeled_path):
+        if row.get("compiled") and "score" in row:
+            unique[(row.get("function"), source_digest(row))] = row
+    rows = list(unique.values())
+    _, held_out = split_rows(rows)
+    if not held_out:
+        raise SystemExit("replay corpus has no held-out rows")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = RankerModel(saved["buckets"], saved["dim"]).to(device)
+    model.load_state_dict(saved["state"])
+    model.module.eval()
+    priorities = []
+    with torch.no_grad():
+        for start in range(0, len(held_out), 8192):
+            chunk = held_out[start:start + 8192]
+            indices, offsets, numeric = _batch(chunk, device, model.buckets)
+            improve, strict, exact, residual = model(indices, offsets, numeric)
+            priority = (improve + 2.0 * torch.sigmoid(strict)
+                        - 0.05 * torch.nn.functional.softplus(residual).sum(dim=1))
+            if saved.get("exact_positives", 0):
+                priority += 2.0 * torch.sigmoid(exact)
+            priorities.extend(priority.cpu().tolist())
+    by_function = {}
+    for row, priority in zip(held_out, priorities):
+        by_function.setdefault(row.get("function", "?"), []).append((row, priority))
+    rng = random.Random(seed)
+    reports = []
+    model_hits = random_hits = model_exact = random_exact = 0.0
+    wins = 0
+    positive_pool_functions = 0
+    for function, group in sorted(by_function.items()):
+        count = min(max(1, budget), len(group))
+        ranked = sorted(group, key=lambda item: item[1], reverse=True)[:count]
+        ranked_rows = [row for row, _ in ranked]
+        hits = sum(int(row["score"]) < int(row["parent_score"])
+                   for row in ranked_rows)
+        exacts = sum(int(row["score"]) == 0 or row.get("exact")
+                     for row in ranked_rows)
+        trial_hits, trial_exacts, trial_best = [], [], []
+        population = [row for row, _ in group]
+        if any(int(row["score"]) < int(row["parent_score"])
+               for row in population):
+            positive_pool_functions += 1
+        for _ in range(max(1, random_trials)):
+            sample = rng.sample(population, count)
+            trial_hits.append(sum(int(row["score"]) < int(row["parent_score"])
+                                  for row in sample))
+            trial_exacts.append(sum(int(row["score"]) == 0 or row.get("exact")
+                                    for row in sample))
+            trial_best.append(min(int(row["score"]) for row in sample))
+        expected_hits = sum(trial_hits) / len(trial_hits)
+        expected_exacts = sum(trial_exacts) / len(trial_exacts)
+        best = min(int(row["score"]) for row in ranked_rows)
+        expected_best = sum(trial_best) / len(trial_best)
+        wins += hits > expected_hits or best < expected_best
+        model_hits += hits
+        random_hits += expected_hits
+        model_exact += exacts
+        random_exact += expected_exacts
+        reports.append({"function": function, "pool": len(group), "budget": count,
+                        "model_strict_improvements": hits,
+                        "random_expected_strict_improvements": expected_hits,
+                        "model_exact": exacts,
+                        "random_expected_exact": expected_exacts,
+                        "model_best_score": best,
+                        "random_expected_best_score": expected_best})
+    lift = model_hits / random_hits if random_hits else 0.0
+    enabled = (int(saved.get("metrics", {}).get(
+                   "strict_improvement_positives", 0)) > 0
+               and positive_pool_functions >= 2
+               and len(reports) >= 2 and wins * 2 >= len(reports)
+               and lift >= 1.25 and model_hits > random_hits)
+    return {"device": str(device), "held_out_rows": len(held_out),
+            "held_out_functions": len(reports), "budget_per_function": budget,
+            "model_strict_improvements": model_hits,
+            "random_expected_strict_improvements": random_hits,
+            "strict_improvement_lift": lift, "function_wins": wins,
+            "positive_pool_functions": positive_pool_functions,
+            "model_exact": model_exact, "random_expected_exact": random_exact,
+            "enabled": enabled, "functions": reports}
+
+
 def selftest() -> dict:
     import tempfile
     rng = random.Random(7)
@@ -817,6 +914,12 @@ def main(argv: list[str] | None = None) -> int:
     p_ensemble.add_argument("--uncertainty", type=float, default=0.50,
                             help="ensemble standard-deviation acquisition bonus")
     p_ensemble.add_argument("--allow-disabled", action="store_true")
+    p_replay = sub.add_parser("replay")
+    p_replay.add_argument("model", type=Path)
+    p_replay.add_argument("labeled", type=Path)
+    p_replay.add_argument("--budget", type=int, default=128)
+    p_replay.add_argument("--random-trials", type=int, default=200)
+    p_replay.add_argument("--seed", type=int, default=1)
     p_struct = sub.add_parser("structural-score")
     p_struct.add_argument("target", type=Path)
     p_struct.add_argument("candidates", type=Path)
@@ -845,6 +948,9 @@ def main(argv: list[str] | None = None) -> int:
     elif args.command == "retrieve":
         result = retrieve_effects(args.labeled, args.queries, args.output,
                                   args.neighbors)
+    elif args.command == "replay":
+        result = replay(args.model, args.labeled, args.budget,
+                        args.random_trials, args.seed)
     else:
         result = selftest()
     print(json.dumps(result, indent=2, sort_keys=True))
