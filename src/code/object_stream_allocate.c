@@ -1,25 +1,35 @@
 #include "types.h"
 
+typedef struct JpegError {
+    void (*error_exit)(void *);
+    u8 pad04[0x10];
+    s32 msg_code;
+    s32 msg_parm_i[8];
+} JpegError;
+
+typedef struct JpegCommon {
+    JpegError *err;
+    u8 *mem;
+} JpegCommon;
+
 extern void func_800635A0(void *object, s32 code);
 extern u8 *func_80064970(void *object, s32 size);
 
 u8 *func_800637A4(u8 *object_arg, s32 mode_arg, u32 size_arg)
 {
-    register u8 *object __asm__("$16");
-    register u8 *container __asm__("$19");
-    register u8 *block __asm__("$17");
-    register u32 size __asm__("$18");
-    register s32 mode __asm__("$20");
-    register u32 limit __asm__("$2");
-    register u32 remainder __asm__("$3");
-    register u32 rounded __asm__("$2");
-    register u8 *slot __asm__("$3");
-    register u8 *old __asm__("$4");
+    u8 *object;
+    u8 *container;
+    u8 *block;
+    u32 size;
+    s32 mode;
+    u32 limit;
+    u32 remainder;
+    u32 rounded;
+    u8 *slot;
+    u8 *old;
 
     object = object_arg;
-    __asm__("" : "=r"(object) : "0"(object));
     size = size_arg;
-    __asm__("" : "=r"(size) : "0"(size));
     container = *(u8 **)(object + 4);
     limit = 0x3B9AC9F0U;
     mode = mode_arg;
@@ -34,18 +44,13 @@ u8 *func_800637A4(u8 *object_arg, s32 mode_arg, u32 size_arg)
     }
 
     if ((u32)mode >= 2U) {
-        register u8 *inner_v1 __asm__("$3");
-        register u8 *inner_v0 __asm__("$2");
-        inner_v1 = *(u8 **)object;
-        *(s32 *)(inner_v1 + 0x14) = 0xC;
-        inner_v0 = *(u8 **)object;
-        *(s32 *)(inner_v0 + 0x18) = mode;
-        inner_v0 = *(u8 **)object;
-        (*(void (**)(void *))inner_v0)(object);
+        JpegCommon *cinfo = (JpegCommon *)object;
+        cinfo->err->msg_code = 0xC;
+        cinfo->err->msg_parm_i[0] = mode;
+        (*cinfo->err->error_exit)(object);
     }
 
     block = func_80064970(object, size + 0x10);
-    __asm__("" : "=r"(block) : "0"(block));
     if (block == 0) {
         func_800635A0(object, 4);
     }
