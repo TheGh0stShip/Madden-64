@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cross-project N64 compiler-attribution sample",
+  "type": "object",
+  "required": ["project", "function", "compiler_family", "compiler_version", "flags", "text_sha256", "text_path"],
+  "properties": {
+    "project": {"type": "string"},
+    "function": {"type": "string"},
+    "compiler_family": {"enum": ["kmc-gcc", "gcc", "ido", "sn-gcc", "other"]},
+    "compiler_version": {"type": "string"},
+    "assembler": {"type": "string"},
+    "flags": {"type": "array", "items": {"type": "string"}},
+    "source_path": {"type": ["string", "null"]},
+    "text_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "text_path": {"type": "string"},
+    "provenance": {"enum": ["exact-c", "handwritten-asm", "unknown"]}
+  },
+  "additionalProperties": false
+}

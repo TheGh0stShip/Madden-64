@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Madden64 Desktop compute campaign",
+  "type": "object",
+  "required": ["version", "campaign", "timeout_seconds", "lanes"],
+  "properties": {
+    "version": {"const": 1},
+    "campaign": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$"},
+    "timeout_seconds": {"type": "integer", "minimum": 60, "maximum": 86400},
+    "lanes": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "resource", "command", "inputs", "outputs"],
+        "properties": {
+          "name": {"type": "string"},
+          "resource": {"enum": ["cpu", "gpu", "mixed"]},
+          "cpus": {"type": "integer", "minimum": 0, "maximum": 32},
+          "gpu": {"type": "number", "minimum": 0, "maximum": 1},
+          "command": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "inputs": {"type": "array", "items": {"type": "string"}},
+          "outputs": {"type": "array", "items": {"type": "string"}},
+          "depends_on": {"type": "array", "items": {"type": "string"}},
+          "compiler_family": {"enum": ["kmc", "gcc", "ido", "sn", "any"]},
+          "seeds": {"type": "array", "items": {"type": "integer"}}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
