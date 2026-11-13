@@ -85,6 +85,13 @@ class GpuPermuterRankerTests(unittest.TestCase):
         self.assertFalse(scores[2]["exact"])
         self.assertEqual(scores[2]["size_delta"], 4)
 
+    @unittest.skipUnless(importlib.util.find_spec("torch"), "PyTorch runs on Desktop")
+    def test_structural_scores_detect_a_small_instruction_shift(self):
+        target = bytes.fromhex("240200012403000203e00008")
+        shifted = bytes.fromhex("000000002402000124030002")
+        score = RANKER.structural_scores(target, [shifted], device="cpu")[0]
+        self.assertLess(score["best_local_shift_mismatches"], score["word_mismatches"])
+
 
 if __name__ == "__main__":
     unittest.main()

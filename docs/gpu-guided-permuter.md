@@ -15,7 +15,8 @@ python3 tools/gpu_permuter_ranker.py structural-score \
 Each candidate row supplies `binary_hex`. The output separately records exact
 byte equality, size delta, full-word mismatches, opcode/funct mismatches,
 register-field mismatches, immediate mismatches, and adjacent-pair ordering
-mismatches. Use these as a Pareto frontier: reserve compile/mutation descendants
+mismatches. A bounded ±4-instruction alignment score also separates local
+scheduling/insert-delete shifts from pervasive opcode differences. Use these as a Pareto frontier: reserve compile/mutation descendants
 from each residual class instead of collapsing everything into byte Hamming
 distance. The relaxed fields never accept a candidate and never remove it from
 the exhaustive fallback queue. Exact equality is rechecked by the canonical

@@ -247,11 +247,21 @@ def structural_scores(target: bytes, candidates: list[bytes], device=None,
                               (words[:, 1:] != target_words[1:])).sum(dim=1))
         else:
             pair_mismatch = word_mismatch
+        # One inserted/deleted instruction makes fixed-position Hamming noisy.
+        # A bounded shift score cheaply identifies that residual class without
+        # pretending to be the canonical diff or an exact-match decision.
+        shift_mismatch = word_mismatch.clone()
+        for shift in range(1, min(4, target_words.numel() - 1) + 1):
+            candidate_late = (words[:, shift:] != target_words[:-shift]).sum(dim=1) + shift
+            candidate_early = (words[:, :-shift] != target_words[shift:]).sum(dim=1) + shift
+            shift_mismatch = torch.minimum(shift_mismatch,
+                                           torch.minimum(candidate_late, candidate_early))
         cpu = zip(word_mismatch.cpu().tolist(), field_mismatch.cpu().tolist(),
                   opcode_mismatch.cpu().tolist(), register_mismatch.cpu().tolist(),
-                  immediate_mismatch.cpu().tolist(), pair_mismatch.cpu().tolist())
+                  immediate_mismatch.cpu().tolist(), pair_mismatch.cpu().tolist(),
+                  shift_mismatch.cpu().tolist())
         for blob, length_ok, values in zip(chunk, same_length, cpu):
-            word, field, opcode, register, immediate, pair = values
+            word, field, opcode, register, immediate, pair, shifted = values
             results.append({"exact": length_ok and blob == target,
                             "size_delta": len(blob) - len(target),
                             "word_mismatches": word,
@@ -259,7 +269,8 @@ def structural_scores(target: bytes, candidates: list[bytes], device=None,
                             "opcode_funct_mismatches": opcode,
                             "register_mismatches": register,
                             "immediate_mismatches": immediate,
-                            "order_pair_mismatches": pair})
+                            "order_pair_mismatches": pair,
+                            "best_local_shift_mismatches": shifted})
     return results
 
 
