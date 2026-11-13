@@ -65,10 +65,15 @@ def main() -> int:
             present[i, :len(blob)] = True
         padded_target = torch.zeros(width, dtype=torch.uint8, device="cuda")
         padded_target[:len(target)] = t
+        target_present = torch.zeros(width, dtype=torch.bool, device="cuda")
+        target_present[:len(target)] = True
         xor = torch.bitwise_xor(matrix, padded_target)
-        byte_diff = ((xor != 0) | ~present).sum(dim=1)
-        bit_diff = pop[xor.long()].sum(dim=1) + (~present).sum(dim=1) * 8
-        word_diff = ((xor.reshape(len(blobs), -1, 4) != 0).any(dim=2).sum(dim=1)
+        both = present & target_present
+        length_diff = present ^ target_present
+        mismatch = ((xor != 0) & both) | length_diff
+        byte_diff = mismatch.sum(dim=1)
+        bit_diff = (pop[xor.long()] * both).sum(dim=1) + length_diff.sum(dim=1) * 8
+        word_diff = (mismatch.reshape(len(blobs), -1, 4).any(dim=2).sum(dim=1)
                      if width % 4 == 0 else byte_diff)
         for r, blob, bd, bits, wd in zip(chunk, blobs, byte_diff.cpu().tolist(),
                                          bit_diff.cpu().tolist(), word_diff.cpu().tolist()):
