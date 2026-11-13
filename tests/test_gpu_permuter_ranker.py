@@ -1,4 +1,6 @@
 import importlib.util
+import json
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -70,6 +72,41 @@ class GpuPermuterRankerTests(unittest.TestCase):
         unix = {"source": "int f(void) {\n    return 1;\n}\n"}
         windows = {"source": "int f(void) {\r\n    return 1;\r\n}\r\n\r\n"}
         self.assertEqual(RANKER.source_digest(unix), RANKER.source_digest(windows))
+
+    def test_retrieval_features_ignore_mutation_and_symbol_addresses(self):
+        base = {"source": "int x = D_80001234 + func_80005678();",
+                "parent_score": 3,
+                "parent_mismatch_counts": {"register": 1}}
+        other = {"source": "int x = D_80112233 + func_80445566();",
+                 "parent_score": 3, "mutations": ["swap-stmt"],
+                 "parent_mismatch_counts": {"register": 1}}
+        self.assertEqual(RANKER.retrieval_features(base),
+                         RANKER.retrieval_features(other))
+
+    @unittest.skipUnless(importlib.util.find_spec("torch"), "PyTorch runs on Desktop")
+    def test_effect_retrieval_returns_only_strict_improvements(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            labeled = root / "labeled.jsonl"
+            queries = root / "queries.jsonl"
+            output = root / "output.jsonl"
+            rows = [
+                {"id": "good", "function": "old", "source": "int f(){int x=a+b;return x;}",
+                 "mutations": ["introduce-temp"], "parent_score": 5, "score": 2,
+                 "compiled": True, "parent_mismatch_counts": {"register": 1}},
+                {"id": "flat", "function": "old", "source": "int f(){int x=a-b;return x;}",
+                 "mutations": ["commute"], "parent_score": 5, "score": 5,
+                 "compiled": True, "parent_mismatch_counts": {"register": 1}},
+            ]
+            labeled.write_text("".join(json.dumps(row) + "\n" for row in rows))
+            queries.write_text(json.dumps({
+                "id": "query", "source": "int f(){int x=a+b;return x;}",
+                "parent_score": 4, "parent_mismatch_counts": {"register": 1}}) + "\n")
+            metrics = RANKER.retrieve_effects(labeled, queries, output, neighbors=4)
+            result = json.loads(output.read_text())
+            self.assertEqual(metrics["donors"], 1)
+            self.assertEqual(result["retrieved_effects"][0]["mutations"],
+                             ["introduce-temp"])
 
     @unittest.skipUnless(importlib.util.find_spec("torch"), "PyTorch runs on Desktop")
     def test_structural_scores_keep_exact_separate_from_relaxed_scores(self):

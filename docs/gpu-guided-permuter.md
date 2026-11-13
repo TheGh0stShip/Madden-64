@@ -161,6 +161,25 @@ text. Genetic programming and exhaustive CUDA source scoring remain research
 ideas: every exact fitness evaluation still requires KMC GCC, so a GPU surrogate
 cannot certify a match.
 
+The implemented retrieval command consumes only strict-improvement donors and
+returns mutation sequences from structurally similar parents:
+
+```sh
+python3 tools/gpu_permuter_ranker.py retrieve \
+  replay-all.jsonl query-parents.jsonl retrieved-effects.jsonl \
+  --neighbors 8
+```
+
+Similarity uses source/control-flow shingles, source-family traits, parent
+score buckets and the parent's instruction/register/immediate/size/order/
+relocation residual. Function and data symbol addresses are normalized, and
+the mutation sequence itself is excluded from the query vector. This prevents
+the lookup from simply returning an edit because its name appeared in both
+records. Only rows whose authoritative compiled score strictly improved on
+their parent may act as donors. The output is a proposal list, never evidence
+of a match; the CPU still materializes genuine-C edits and the exact matcher
+accepts or rejects them.
+
 ## Deliberate non-GPU work
 
 Do not put AST mutation, preprocessing, KMC compilation, ELF relocation,

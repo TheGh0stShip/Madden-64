@@ -14,6 +14,7 @@ Labeled records additionally use:
 Commands:
   train DATA.jsonl MODEL.pt
   rank MODEL.pt CANDIDATES.jsonl RANKED.jsonl
+  retrieve LABELED.jsonl QUERIES.jsonl SUGGESTIONS.jsonl
   structural-score TARGET.bin CANDIDATES.jsonl SCORED.jsonl
   selftest
 """
@@ -31,6 +32,7 @@ TOKEN = re.compile(r"[A-Za-z_]\w*|0[xX][0-9A-Fa-f]+|\d+|==|!=|<=|>=|<<|>>|&&|\|\
 BUCKETS = 1 << 18
 MISMATCH_KINDS = ("instruction", "register", "immediate", "size", "ordering", "relocation")
 MODEL_SCHEMA = 2
+RETRIEVAL_BUCKETS = 1 << 13
 
 
 def _torch():
@@ -121,6 +123,104 @@ def features(row: dict, buckets: int = BUCKETS) -> list[int]:
         for i in range(max(0, len(toks) - n + 1)):
             out.append(_hash(f"t{n}=" + " ".join(toks[i:i + n]), buckets))
     return sorted(set(out))
+
+
+def retrieval_features(row: dict, buckets: int = RETRIEVAL_BUCKETS) -> list[int]:
+    """Cross-function context features available before the next mutation.
+
+    Mutation names are deliberately excluded: retrieval asks which historical
+    edit helped a structurally similar parent. Source identifiers are
+    normalized so address-specific Madden symbols do not dominate similarity.
+    """
+    source = row.get("parent_source") or row.get("source", "")
+    normalized = re.sub(r"\b(?:func|D)_[0-9A-Fa-f]{8}\b", "SYMBOL", source)
+    toks = TOKEN.findall(normalized)
+    out = {
+        _hash("family=" + structural_family(dict(row, source=source)), buckets),
+        _hash("signature=" + diff_signature(row), buckets),
+        _hash("score_bin=" + str(int(math.log2(max(1, int(row.get("parent_score", 1)))))), buckets),
+    }
+    counts = row.get("parent_mismatch_counts") or {}
+    for kind in MISMATCH_KINDS:
+        out.add(_hash(f"parent_{kind}={min(max(0, int(counts.get(kind, 0))), 15)}", buckets))
+    # Short token shingles preserve control-flow and declaration shape without
+    # requiring a modern parser to accept the old compiler's C dialect.
+    for n in (1, 2):
+        for i in range(max(0, len(toks) - n + 1)):
+            out.add(_hash(f"r{n}=" + " ".join(toks[i:i + n]), buckets))
+    return sorted(out)
+
+
+def retrieve_effects(labeled_path: Path, queries_path: Path, output_path: Path,
+                     neighbors: int = 8) -> dict:
+    """Retrieve mutation sequences that strictly improved similar parents.
+
+    This is proposal guidance only. Every suggested edit must still produce
+    genuine C, compile with KMC GCC, and pass the exact byte matcher.
+    """
+    torch = _torch()
+    donors = []
+    seen = set()
+    for row in read_jsonl(labeled_path):
+        if not row.get("compiled") or "score" not in row:
+            continue
+        if int(row["score"]) >= int(row.get("parent_score", row["score"])):
+            continue
+        mutations = row.get("mutations", [])
+        if isinstance(mutations, str):
+            mutations = [mutations]
+        if not mutations:
+            continue
+        key = (row.get("function"), source_digest(row), tuple(mutations))
+        if key not in seen:
+            seen.add(key)
+            donors.append(row)
+    if not donors:
+        raise SystemExit("retrieval corpus contains no strict-improvement donors")
+    queries = read_jsonl(queries_path)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    def matrix(rows):
+        result = torch.zeros((len(rows), RETRIEVAL_BUCKETS), dtype=torch.float32,
+                             device=device)
+        for index, row in enumerate(rows):
+            cols = retrieval_features(row)
+            result[index, cols] = 1.0 / math.sqrt(max(1, len(cols)))
+        return result
+
+    donor_matrix = matrix(donors)
+    query_matrix = matrix(queries)
+    similarities = query_matrix @ donor_matrix.T
+    k = min(max(1, neighbors), len(donors))
+    values, indices = torch.topk(similarities, k=k, dim=1)
+    output_rows = []
+    for query, scores, donor_indices in zip(queries, values.cpu().tolist(),
+                                             indices.cpu().tolist()):
+        suggestions = []
+        used_mutations = set()
+        for similarity, donor_index in zip(scores, donor_indices):
+            donor = donors[donor_index]
+            mutations = donor.get("mutations", [])
+            if isinstance(mutations, str):
+                mutations = [mutations]
+            mutation_key = tuple(mutations)
+            if mutation_key in used_mutations:
+                continue
+            used_mutations.add(mutation_key)
+            suggestions.append({
+                "mutations": mutations,
+                "similarity": similarity,
+                "donor_function": donor.get("function"),
+                "donor_parent_score": int(donor.get("parent_score", 0)),
+                "donor_score": int(donor["score"]),
+            })
+        result = dict(query)
+        result["retrieved_effects"] = suggestions
+        output_rows.append(result)
+    output_path.write_text("".join(json.dumps(row, sort_keys=True) + "\n"
+                                   for row in output_rows))
+    return {"device": str(device), "donors": len(donors),
+            "queries": len(queries), "neighbors": k}
 
 
 class RankerModel:
@@ -722,6 +822,11 @@ def main(argv: list[str] | None = None) -> int:
     p_struct.add_argument("candidates", type=Path)
     p_struct.add_argument("output", type=Path)
     p_struct.add_argument("--binary-field", default="binary_hex")
+    p_retrieve = sub.add_parser("retrieve")
+    p_retrieve.add_argument("labeled", type=Path)
+    p_retrieve.add_argument("queries", type=Path)
+    p_retrieve.add_argument("output", type=Path)
+    p_retrieve.add_argument("--neighbors", type=int, default=8)
     sub.add_parser("selftest")
     args = parser.parse_args(argv)
     if args.command == "train":
@@ -737,6 +842,9 @@ def main(argv: list[str] | None = None) -> int:
     elif args.command == "structural-score":
         result = structural_score_file(args.target, args.candidates, args.output,
                                        args.binary_field)
+    elif args.command == "retrieve":
+        result = retrieve_effects(args.labeled, args.queries, args.output,
+                                  args.neighbors)
     else:
         result = selftest()
     print(json.dumps(result, indent=2, sort_keys=True))
