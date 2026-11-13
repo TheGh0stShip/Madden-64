@@ -139,6 +139,7 @@
 0x14798	0x10C	src/overlays/overlay2/func_8009F078.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7c6c82a77296698e2b8f98476ac84dbc47bd2dd0d6e6c54913613873896a7bcc
 0x148A4	0xB4	src/overlays/overlay2/func_8009F184.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	79bd756a43ee118aeb3393590e9a4a60f2dd43e1d0a6d34c5b00968c5fa1b78f
 0x14958	0x38	src/overlays/overlay2/func_8009F238.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3b83d24e79608ad33da58acfa0ea63d61bbb9e5ea72d3b8423c2f23c12892ec0
+0x14990	0x98	src/overlays/overlay2/func_8009F270.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d62f2bc5e78d1ada1aeedff17e2821de9f7631d817cec18f9fd855727ef1b68c
 0x14A28	0x58	src/overlays/overlay2/func_8009F308.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	842646175173b31582f3ff8ed55fce6ed6b484f0a660644acb36eebac86e53d0
 0x14A80	0x28	src/overlays/overlay2/func_8009F360.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9b214f0c462a057731e6c7084e12fece47c16bb8f20cf5cc44ba04f3a22e5c37
 0x14AA8	0x40	src/overlays/overlay2/func_8009F388.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	babb97a01fbec76c4294dca3adb5d9164819ad1c2fa261dac617198d47a88f7c
@@ -357,6 +358,7 @@
 0x2AF78	0xC8	src/overlays/overlay2/func_800B5858.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d724984fd65ba47cbb03d5e437ba91523acdbd717002385325737bc26b1c49a7
 0x2B3F0	0xEC	src/overlays/overlay2/func_800B5CD0.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	419c1af1480b2971e67bc0782bebbaf296f10fd5312343263cd09baa4e56aa2c
 0x2B4DC	0x1E0	src/overlays/overlay2/func_800B5DBC.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	049c2696aa994172f29e520e172b0ff29fe786ac363226ac70cb898f57e5a799
+0x2BAB8	0xE4	src/overlays/overlay2/func_800B6398.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	390fb89c09fe5e42bf0781e865b28c98c6d4b56eea38c72b4ee8086b1acbc51f
 0x2C51C	0x38	src/overlays/overlay2/func_800B6DFC.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c31c850d518a865e8fe4e949951be4f762e6780f58afa8ae10bd23f622827ec4
 0x2C8C0	0x58	src/overlays/overlay2/func_800B71A0.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5b8d01466080a6f2b5ee4d9ff7de9fb0760517f826a3e4d1b106f125a38ff477
 0x2C918	0x88	src/overlays/overlay2/func_800B71F8.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6df5cabb04ff234a83f95804efb1321cd95c665c0d777c3db12bc1597e8d4892
