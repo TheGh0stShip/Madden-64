@@ -266,6 +266,15 @@ held-out split contained 3,503 candidates: the production-sized slice found
 strict improvements at 2.78 percent versus a 0.74-percent random baseline, but
 the top quartile reached only 0.46 percent. Because that is below random, the
 checkpoint was correctly disabled and cannot schedule production compiles.
+
+A later full-corpus checkpoint deduplicated 291,482 replay records to 172,205
+unique compiler labels across 21 functions. It still contained no exact
+positive and only two strict improvements, both outside the held-out-function
+partition. Validation therefore had a zero strict-improvement rate, and the
+deployment gate again disabled the checkpoint. Training additional random
+seeds cannot repair missing positive labels; work shifted to strict-effect
+retrieval and broader exact-match campaigns instead of treating GPU activity as
+progress by itself.
 The corpus has strict improvements in only two seed lineages of one function,
 so the next useful collection must broaden strict-improvement examples across
 functions rather than add epochs to the same biased corpus.
