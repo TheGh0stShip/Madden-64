@@ -71,6 +71,20 @@ class GpuPermuterRankerTests(unittest.TestCase):
         windows = {"source": "int f(void) {\r\n    return 1;\r\n}\r\n\r\n"}
         self.assertEqual(RANKER.source_digest(unix), RANKER.source_digest(windows))
 
+    @unittest.skipUnless(importlib.util.find_spec("torch"), "PyTorch runs on Desktop")
+    def test_structural_scores_keep_exact_separate_from_relaxed_scores(self):
+        target = bytes.fromhex("0085102103e00008")
+        register_near_miss = bytes.fromhex("0086102103e00008")
+        scores = RANKER.structural_scores(
+            target, [target, register_near_miss, target + b"\0\0\0\0"], device="cpu")
+        self.assertTrue(scores[0]["exact"])
+        self.assertEqual(scores[0]["word_mismatches"], 0)
+        self.assertFalse(scores[1]["exact"])
+        self.assertEqual(scores[1]["opcode_funct_mismatches"], 0)
+        self.assertGreater(scores[1]["register_mismatches"], 0)
+        self.assertFalse(scores[2]["exact"])
+        self.assertEqual(scores[2]["size_delta"], 4)
+
 
 if __name__ == "__main__":
     unittest.main()

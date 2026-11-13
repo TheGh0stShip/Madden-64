@@ -14,6 +14,7 @@ Labeled records additionally use:
 Commands:
   train DATA.jsonl MODEL.pt
   rank MODEL.pt CANDIDATES.jsonl RANKED.jsonl
+  structural-score TARGET.bin CANDIDATES.jsonl SCORED.jsonl
   selftest
 """
 from __future__ import annotations
@@ -167,6 +168,112 @@ class RankerModel:
 
 def read_jsonl(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
+
+
+def mips_fields(words):
+    """Split raw MIPS words into fields used only for relaxed ranking.
+
+    Exact matching always compares the original bytes.  Field scores help
+    distinguish register-allocation near misses from opcode/immediate misses;
+    they can order work but can never certify or reject a candidate.
+    """
+    torch = _torch()
+    words = words.to(torch.int64)
+    return torch.stack(((words >> 26) & 0x3F, (words >> 21) & 0x1F,
+                        (words >> 16) & 0x1F, (words >> 11) & 0x1F,
+                        (words >> 6) & 0x1F, words & 0x3F,
+                        words & 0xFFFF), dim=-1)
+
+
+def mips_operation_keys(words):
+    """Return primary opcode plus the sub-opcode that actually selects an op."""
+    torch = _torch()
+    words = words.to(torch.int64)
+    opcode = (words >> 26) & 0x3F
+    funct = words & 0x3F
+    rt = (words >> 16) & 0x1F
+    key = opcode << 6
+    key = torch.where(opcode == 0, key | funct, key)
+    return torch.where(opcode == 1, key | rt, key)
+
+
+def structural_scores(target: bytes, candidates: list[bytes], device=None,
+                      chunk_size: int = 65536) -> list[dict]:
+    """Score compiled candidates in large GPU batches without pruning any.
+
+    MIPS instructions are fixed-width.  Candidates of a different size retain
+    a size penalty; their common prefix is still characterized so the caller
+    can choose the next mutation family.  A CPU byte comparison is deliberately
+    used for the authoritative ``exact`` flag even when tensors live on CUDA.
+    """
+    torch = _torch()
+    device = device or torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if len(target) % 4:
+        raise ValueError("target text length is not a multiple of four")
+    target_words = torch.tensor(
+        [int.from_bytes(target[i:i + 4], "big") for i in range(0, len(target), 4)],
+        dtype=torch.int64, device=device)
+    target_fields = mips_fields(target_words)
+    target_operations = mips_operation_keys(target_words)
+    results = []
+    for start in range(0, len(candidates), chunk_size):
+        chunk = candidates[start:start + chunk_size]
+        same_length = [len(blob) == len(target) for blob in chunk]
+        padded = []
+        for blob in chunk:
+            common = blob[:len(target)].ljust(len(target), b"\0")
+            padded.append([int.from_bytes(common[i:i + 4], "big")
+                           for i in range(0, len(target), 4)])
+        if not padded:
+            continue
+        words = torch.tensor(padded, dtype=torch.int64, device=device)
+        fields = mips_fields(words)
+        word_mismatch = (words != target_words).sum(dim=1)
+        field_mismatch = (fields != target_fields).sum(dim=1)
+        opcode_mismatch = (mips_operation_keys(words) != target_operations).sum(dim=1)
+        register_mismatch = (fields[:, :, 1:4] != target_fields[:, 1:4]).sum(dim=(1, 2))
+        candidate_opcode = fields[:, :, 0]
+        target_opcode = target_fields[:, 0]
+        immediate_instruction = ((candidate_opcode != 0) & (candidate_opcode != 2) &
+                                 (candidate_opcode != 3))
+        target_immediate_instruction = ((target_opcode != 0) & (target_opcode != 2) &
+                                        (target_opcode != 3))
+        immediate_mismatch = ((fields[:, :, 6] != target_fields[:, 6]) &
+                              (immediate_instruction | target_immediate_instruction)).sum(dim=1)
+        # Adjacent word-pair equality is a cheap order-sensitive shingle.  It
+        # spots scheduling changes that an opcode histogram would hide.
+        if target_words.numel() > 1:
+            pair_mismatch = (((words[:, :-1] != target_words[:-1]) |
+                              (words[:, 1:] != target_words[1:])).sum(dim=1))
+        else:
+            pair_mismatch = word_mismatch
+        cpu = zip(word_mismatch.cpu().tolist(), field_mismatch.cpu().tolist(),
+                  opcode_mismatch.cpu().tolist(), register_mismatch.cpu().tolist(),
+                  immediate_mismatch.cpu().tolist(), pair_mismatch.cpu().tolist())
+        for blob, length_ok, values in zip(chunk, same_length, cpu):
+            word, field, opcode, register, immediate, pair = values
+            results.append({"exact": length_ok and blob == target,
+                            "size_delta": len(blob) - len(target),
+                            "word_mismatches": word,
+                            "field_mismatches": field,
+                            "opcode_funct_mismatches": opcode,
+                            "register_mismatches": register,
+                            "immediate_mismatches": immediate,
+                            "order_pair_mismatches": pair})
+    return results
+
+
+def structural_score_file(target_path: Path, candidates_path: Path,
+                          output_path: Path, binary_field: str = "binary_hex") -> dict:
+    rows = read_jsonl(candidates_path)
+    blobs = [bytes.fromhex(row[binary_field]) for row in rows]
+    scores = structural_scores(target_path.read_bytes(), blobs)
+    for row, score in zip(rows, scores):
+        row["structural_score"] = score
+    output_path.write_text("".join(json.dumps(row, sort_keys=True) + "\n" for row in rows))
+    torch = _torch()
+    return {"device": "cuda" if torch.cuda.is_available() else "cpu",
+            "candidates": len(rows), "exact": sum(s["exact"] for s in scores)}
 
 
 def _batch(rows: list[dict], device, buckets: int = BUCKETS):
@@ -599,6 +706,11 @@ def main(argv: list[str] | None = None) -> int:
     p_ensemble.add_argument("--uncertainty", type=float, default=0.50,
                             help="ensemble standard-deviation acquisition bonus")
     p_ensemble.add_argument("--allow-disabled", action="store_true")
+    p_struct = sub.add_parser("structural-score")
+    p_struct.add_argument("target", type=Path)
+    p_struct.add_argument("candidates", type=Path)
+    p_struct.add_argument("output", type=Path)
+    p_struct.add_argument("--binary-field", default="binary_hex")
     sub.add_parser("selftest")
     args = parser.parse_args(argv)
     if args.command == "train":
@@ -611,6 +723,9 @@ def main(argv: list[str] | None = None) -> int:
                                args.explore, args.seed, args.select_count,
                                args.diversity, args.uncertainty,
                                args.allow_disabled)
+    elif args.command == "structural-score":
+        result = structural_score_file(args.target, args.candidates, args.output,
+                                       args.binary_field)
     else:
         result = selftest()
     print(json.dumps(result, indent=2, sort_keys=True))

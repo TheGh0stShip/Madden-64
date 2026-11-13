@@ -4,6 +4,23 @@ The GPU is a scheduler, not a compiler or verifier. KMC GCC 2.7.2 compilation
 and the relocated byte matcher remain CPU-side, and a candidate is accepted
 only when the exact matcher reports zero differences.
 
+For compiled pools above the measured CUDA crossover, add deterministic MIPS
+field scoring before learned acquisition:
+
+```sh
+python3 tools/gpu_permuter_ranker.py structural-score \
+  target.bin compiled-candidates.jsonl structurally-scored.jsonl
+```
+
+Each candidate row supplies `binary_hex`. The output separately records exact
+byte equality, size delta, full-word mismatches, opcode/funct mismatches,
+register-field mismatches, immediate mismatches, and adjacent-pair ordering
+mismatches. Use these as a Pareto frontier: reserve compile/mutation descendants
+from each residual class instead of collapsing everything into byte Hamming
+distance. The relaxed fields never accept a candidate and never remove it from
+the exhaustive fallback queue. Exact equality is rechecked by the canonical
+matcher before integration.
+
 ## Data flow
 
 1. Run `n64dk match-permute` with `--replay-log run.jsonl`. The replay log
