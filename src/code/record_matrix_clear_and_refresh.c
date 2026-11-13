@@ -15,7 +15,7 @@ void func_800373B4(u32 value)
         column = 0;
         row_offset = (u16)row * 8524;
         do {
-            u32 offset = (u16)column * 3 + row_offset;
+            u32 offset = (u16)column * 3 + (u32)row_offset;
 
             D_80081602[offset + 0] = 0;
             D_80081602[offset + 1] = 0;
