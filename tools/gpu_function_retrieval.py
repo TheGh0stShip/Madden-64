@@ -13,11 +13,24 @@ import argparse
 import hashlib
 import json
 import math
+import re
 import struct
 from pathlib import Path
 
 
 BUCKETS = 1 << 14
+GENERIC_ASSEMBLER_NORMALIZERS = {
+    "--normalizer-enable-KMC-ABS-SYM-PAIR",
+    "--normalizer-enable-KMC-FP-PAIR-WORDS",
+    "--normalizer-enable-KMC-LID-ALIGN4",
+    "--normalizer-enable-KMC-LID-PAIR",
+    "--normalizer-enable-KMC-LID-PAD4",
+}
+ASM_ESCAPE = re.compile(
+    r"\b(?:__asm__|asm)\b|\.incbin\b|"
+    r"^\s*#\s*include\s*[<\"][^>\"]+\.(?:s|S|asm|inc)[>\"]",
+    re.MULTILINE,
+)
 
 
 def stable_hash(value: str, buckets: int = BUCKETS) -> int:
@@ -81,6 +94,28 @@ def load_blobs(root: Path, catalog: dict) -> list[tuple[dict, bytes]]:
     return result
 
 
+def genuine_sources(root: Path) -> set[str]:
+    """Conservatively admit only sources eligible for genuine-C credit."""
+    flags_by_source: dict[str, list[str]] = {}
+    for manifest in (root / "config/us").glob("matching*_units.tsv"):
+        for line in manifest.read_text().splitlines():
+            fields = line.split("\t")
+            if len(fields) >= 4 and fields[0].startswith("0x") and fields[2].endswith(".c"):
+                flags_by_source.setdefault(fields[2], []).append(fields[3])
+    result = set()
+    for source, rows in flags_by_source.items():
+        path = root / source
+        if not path.exists() or ASM_ESCAPE.search(path.read_text()):
+            continue
+        if any(any(flag.startswith("--normalizer-enable-")
+                       and flag not in GENERIC_ASSEMBLER_NORMALIZERS
+                       for flag in flags.split())
+               for flags in rows):
+            continue
+        result.add(source)
+    return result
+
+
 def retrieve(root: Path, catalog_path: Path, output: Path,
              neighbors: int = 20) -> dict:
     try:
@@ -89,7 +124,9 @@ def retrieve(root: Path, catalog_path: Path, output: Path,
         raise SystemExit("PyTorch is required; run on the Desktop GPU") from exc
     catalog = json.loads(catalog_path.read_text())
     rows = load_blobs(root, catalog)
-    donors = [(entry, blob) for entry, blob in rows if entry["matched"]]
+    eligible = genuine_sources(root)
+    donors = [(entry, blob) for entry, blob in rows
+              if entry["matched"] and entry.get("matching_source") in eligible]
     queries = [(entry, blob) for entry, blob in rows if not entry["matched"]]
     if not donors or not queries:
         raise SystemExit("catalog needs both exact-C donors and unfinished queries")
