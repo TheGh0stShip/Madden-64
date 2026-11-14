@@ -278,3 +278,4 @@
 0x15650	0x11C	src/overlays/overlay5/func_800DA598.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a055cb4480e327763d76673eef4408fe9c9576031d6ca04584550d53d7d7e815
 0xFA4C	0xFC	src/overlays/overlay5/func_800D4994.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6f93ac3adbcac88299671aa1c52ae2c6027a02d7742da2883d8b7bfb6342dafd
 0x13690	0x154	src/overlays/overlay5/func_800D85D8.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1436b7d30da249c62c1f8e688561eb833cf1bc568816932c3e2fc2ba88662d7e
+0xAA8C	0xB0	src/overlays/overlay5/func_800CF9D4.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	05d0a1dad341b3254a2d9bc239a34c1950969994e019c1a54136d0b0263575c4
