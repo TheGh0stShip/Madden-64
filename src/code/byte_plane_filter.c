@@ -1,80 +1,43 @@
+/* IJG libjpeg 6a jdsample.c: h2v1_fancy_upsample(). */
 #include "types.h"
 
-#define M2C_FIELD(x, type, offset) (*(type)((u8 *)(x) + (offset)))
+typedef u8 JSAMPLE;
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+typedef u32 JDIMENSION;
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
+typedef struct jpeg_component_info {
+    u8 pad000[0x28];
+    JDIMENSION downsampled_width;
+} jpeg_component_info;
+struct jpeg_decompress_struct {
+    u8 pad000[0x134];
+    s32 max_v_samp_factor;
+};
 
-void byte_plane_filter(void *arg0, void *arg1, void **arg2, void ***arg3)
+void byte_plane_filter(j_decompress_ptr cinfo, jpeg_component_info *compptr,
+                       JSAMPARRAY input_data, JSAMPARRAY *output_data_ptr)
 {
-    volatile u64 stack_pad;
-    register void *saved_t4 __asm__("$12") = arg0;
-    s32 var_t2;
-    register s32 var_t3 __asm__("$11");
-    register u8 *var_t1 __asm__("$9");
-    register s32 temp_v0 __asm__("$2");
-    register s32 temp_v1 __asm__("$3");
-    register s32 temp_a0 __asm__("$4");
-    u8 temp_a0_2;
-    u8 temp_a0_4;
-    register u8 *var_t0 __asm__("$8");
+    JSAMPARRAY output_data = *output_data_ptr;
+    register JSAMPROW inptr;
+    register JSAMPROW outptr;
+    register s32 invalue;
+    register JDIMENSION colctr;
+    s32 inrow;
 
-    arg3 = *arg3;
-    var_t3 = 0;
-    if (M2C_FIELD(saved_t4, s32 *, 0x134) <= 0) {
-        goto block_4;
+    for (inrow = 0; inrow < cinfo->max_v_samp_factor; inrow++) {
+        inptr = input_data[inrow];
+        outptr = output_data[inrow];
+        invalue = *inptr++;
+        *outptr++ = (JSAMPLE)invalue;
+        *outptr++ = (JSAMPLE)((invalue * 3 + *inptr + 2) >> 2);
+        for (colctr = compptr->downsampled_width - 2; colctr > 0; colctr--) {
+            invalue = *inptr++ * 3;
+            *outptr++ = (JSAMPLE)((invalue + inptr[-2] + 1) >> 2);
+            *outptr++ = (JSAMPLE)((invalue + *inptr + 2) >> 2);
+        }
+        invalue = *inptr;
+        *outptr++ = (JSAMPLE)((invalue * 3 + inptr[-1] + 1) >> 2);
+        *outptr++ = (JSAMPLE)invalue;
     }
-
-loop_1:
-    var_t1 = *arg2;
-    var_t0 = *arg3;
-    temp_a0 = *var_t1++;
-    *var_t0++ = temp_a0;
-    temp_v0 = *var_t1;
-    temp_v1 = temp_a0 << 1;
-    temp_v1 += temp_a0;
-    temp_v1 += temp_v0;
-    temp_v1 += 2;
-    temp_v1 = (u32)temp_v1 >> 2;
-    *var_t0 = temp_v1;
-    var_t2 = M2C_FIELD(arg1, s32 *, 0x28) - 2;
-    var_t0++;
-    if (var_t2 == 0) {
-        goto block_3;
-    }
-
-loop_2:
-    temp_a0 = *var_t1++;
-    temp_v0 = var_t1[-2];
-    temp_v1 = temp_a0 << 1;
-    temp_a0 = temp_v1 + temp_a0;
-    temp_v0 = temp_a0 + temp_v0 + 1;
-    temp_v0 = (u32)temp_v0 >> 2;
-    *var_t0 = temp_v0;
-    temp_v0 = *var_t1;
-    var_t2--;
-    var_t0++;
-    temp_v0 = temp_a0 + temp_v0 + 2;
-    temp_v0 = (u32)temp_v0 >> 2;
-    *var_t0++ = temp_v0;
-    if (var_t2 != 0) {
-        goto loop_2;
-    }
-
-block_3:
-    temp_a0 = *var_t1;
-    arg3++;
-    temp_v0 = var_t1[-1];
-    temp_v1 = temp_a0 << 1;
-    temp_v1 += temp_a0;
-    temp_v1 += temp_v0;
-    temp_v1 += 1;
-    temp_v1 = (u32)temp_v1 >> 2;
-    *var_t0 = temp_v1;
-    var_t0[1] = temp_a0;
-    var_t3++;
-    arg2++;
-    if (var_t3 < M2C_FIELD(saved_t4, s32 *, 0x134)) {
-        goto loop_1;
-    }
-
-block_4:
-    return;
 }

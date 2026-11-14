@@ -4,3 +4,10 @@ address	kind	function	detail
 0x80050F78	rsp_text	gspF3DEX_fifoTextStart	0x1430-byte graphics microcode ending at 0x800523A8; byte-identical to the contemporary BattleTanx image
 0x80050ED8	rejected_start		word inside RSP microcode, formerly miscatalogued as a CPU function
 0x80050EF0	rejected_start		word inside RSP microcode, formerly miscatalogued as a CPU function
+0x80030258	false_split	runtime_callback_dispatch	8-byte stack/s2 prologue belongs to function body catalogued at 0x80030260; Alienware genuine-C structural corpus matched the prologue shape exactly
+0x80040348	false_split	func_80040350	8-byte global-address setup belongs to function body catalogued at 0x80040350; fallthrough has no return or independent entry prologue
+0x800404C8	false_split	interface_runtime_update	8-byte stack/s5 prologue belongs to function body catalogued at 0x800404D0; Alienware genuine-C structural corpus matched the prologue shape exactly
+0x80059A78	false_split	object_state_transition	8-byte stack/s1 prologue belongs to function body catalogued at 0x80059A80; Alienware genuine-C structural corpus matched the prologue shape exactly
+0x8005D018	false_split	object_decode_transform	8-byte stack/s0 prologue belongs to function body catalogued at 0x8005D020; Alienware genuine-C structural corpus matched the prologue shape exactly
+0x800420A0	in_text_data		Two 8-byte overlay load records, each typed as { u32 load_address; u32 checksum }; D_800734F0 points to records at 0x800420A0 and 0x800420A8, and focused KMC compilation matches all 16 retail bytes
+0x800420A8	rejected_start		Former 8-byte CPU function is the second overlay load record { 0x800C5F48, 0xDD357C60 }; decoded words are not executable MIPS and typed C matches byte-for-byte

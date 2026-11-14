@@ -13,9 +13,6 @@ typedef struct {
     s32 unk78;
 } Global;
 
-/* Final entry of func_800A7DBC's adjacent compiler-generated switch table. */
-static const u32 D_8008BC18 = 0x800A7EA4;
-
 extern char D_800BF2CC[];
 extern s8 D_800C509C;
 extern s8 D_800C509D;

@@ -1,105 +1,83 @@
+/* IJG libjpeg 6a jquant1.c: create_colorindex(). */
 #include "types.h"
 
-typedef struct ImageTableDecodeContext ImageTableDecodeContext;
-
-typedef struct ImageTableAllocator {
-    void *(*allocate_simple)(void);
-    void *(*allocate_other)(void);
-    void *(*allocate)(ImageTableDecodeContext *context, u32 count,
-        u32 size, u32 dimensions);
-} ImageTableAllocator;
-
-typedef struct ImageTableDecodeState {
-    u8 pad00[0x14];
-    s32 total;
-    u8 **tables;
-    s32 extended;
-    s32 sizes[1];
-} ImageTableDecodeState;
-
-struct ImageTableDecodeContext {
-    void *event;
-    ImageTableAllocator *allocator;
+typedef u8 JSAMPLE;
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+typedef u32 JDIMENSION;
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
+typedef struct jpeg_common_struct *j_common_ptr;
+typedef struct jpeg_memory_mgr {
+    void *alloc_small;
+    void *alloc_large;
+    JSAMPARRAY (*alloc_sarray)(j_common_ptr, s32, JDIMENSION, JDIMENSION);
+} jpeg_memory_mgr;
+typedef struct {
+    void *pub[4];
+    JSAMPARRAY sv_colormap;
+    s32 sv_actual;
+    JSAMPARRAY colorindex;
+    s32 is_padded;
+    s32 Ncolors[4];
+    s32 row_index;
+    void *odither[4];
+    void *fserrors[4];
+    s32 on_odd_row;
+} my_cquantizer;
+struct jpeg_decompress_struct {
+    void *err;
+    jpeg_memory_mgr *mem;
     u8 pad008[0x50];
-    s32 mode;
+    u32 dither_mode;
     u8 pad05C[0x1C];
-    s32 dimensions;
+    s32 out_color_components;
     u8 pad07C[0x14C];
-    ImageTableDecodeState *state;
+    my_cquantizer *cquantize;
 };
+struct jpeg_common_struct { void *err; jpeg_memory_mgr *mem; };
 
-extern s32 func_8006012C(ImageTableDecodeContext *context, s32 dimension,
-    s32 coordinate, s32 maximum);
+extern s32 func_8006012C(j_decompress_ptr, s32, s32, s32);
 
-void image_table_decode(ImageTableDecodeContext *context)
+void image_table_decode(j_decompress_ptr cinfo)
 {
-    register ImageTableDecodeContext *saved_context __asm__("$23") = context;
-    ImageTableDecodeState *volatile state = context->state;
-    ImageTableDecodeState *volatile state_cursor;
-    volatile s32 extension;
-    register s32 remaining;
-    register s32 dimension __asm__("$21");
-    u64 stack_padding;
-    u64 stack_padding2;
+    my_cquantizer *cquantize = cinfo->cquantize;
+    JSAMPROW indexptr;
+    s32 i;
+    s32 j;
+    s32 k;
+    s32 nci;
+    s32 blksize;
+    s32 val;
+    s32 pad;
 
-    __asm__("" : : "m"(stack_padding), "m"(stack_padding2));
-    if (saved_context->mode == 1) {
-        extension = 0x1FE;
-        state->extended = 1;
+    if (cinfo->dither_mode == 1) {
+        pad = 510;
+        cquantize->is_padded = 1;
     } else {
-        extension = 0;
-        state->extended = 0;
+        pad = 0;
+        cquantize->is_padded = 0;
     }
-
-    state->tables = saved_context->allocator->allocate(saved_context, 1,
-        extension + 0x100, saved_context->dimensions);
-    remaining = state->total;
-    dimension = 0;
-    if (saved_context->dimensions > 0) {
-        state_cursor = state;
-        do {
-            register s32 size __asm__("$22") = state_cursor->sizes[0];
-            register u8 *table __asm__("$20");
-            register s32 coordinate __asm__("$19") = 0;
-            register s32 value __asm__("$16") = 0;
-            register s32 output __asm__("$18") = 0;
-            register u8 *out __asm__("$17");
-            s32 threshold;
-
-            remaining /= size;
-            if (extension != 0) {
-                state->tables[dimension] += 0xFF;
+    cquantize->colorindex = (*cinfo->mem->alloc_sarray)(
+        (j_common_ptr)cinfo, 1, (JDIMENSION)(256 + pad),
+        (JDIMENSION)cinfo->out_color_components);
+    blksize = cquantize->sv_actual;
+    for (i = 0; i < cinfo->out_color_components; i++) {
+        nci = cquantize->Ncolors[i];
+        blksize = blksize / nci;
+        if (pad)
+            cquantize->colorindex[i] += 255;
+        indexptr = cquantize->colorindex[i];
+        val = 0;
+        k = func_8006012C(cinfo, i, 0, nci - 1);
+        for (j = 0; j <= 255; j++) {
+            while (j > k)
+                k = func_8006012C(cinfo, i, ++val, nci - 1);
+            indexptr[j] = (JSAMPLE)(val * blksize);
+        }
+        if (pad)
+            for (j = 1; j <= 255; j++) {
+                indexptr[-j] = indexptr[0];
+                indexptr[255 + j] = indexptr[255];
             }
-
-            table = state->tables[dimension];
-            out = table;
-            threshold = func_8006012C(saved_context, dimension, 0, size - 1);
-            do {
-                while (threshold < value) {
-                    output += remaining;
-                    coordinate++;
-                    threshold = func_8006012C(saved_context, dimension,
-                        coordinate, size - 1);
-                }
-                *out = output;
-                value++;
-                out++;
-            } while (value < 0x100);
-
-            if (extension != 0) {
-                register u8 *left __asm__("$4") = table - 1;
-
-                value = 1;
-                do {
-                    *left = table[0];
-                    table[0xFF + value] = table[0xFF];
-                    value++;
-                    left--;
-                } while (value < 0x100);
-            }
-
-            state_cursor = (ImageTableDecodeState *)((u8 *)state_cursor + 4);
-            dimension++;
-        } while (dimension < saved_context->dimensions);
     }
 }

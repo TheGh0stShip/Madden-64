@@ -1,111 +1,109 @@
+/* IJG libjpeg 6a jquant1.c: start_pass_1_quant(). */
 #include "types.h"
 
-typedef struct ImageTableUpdateContext ImageTableUpdateContext;
+typedef u32 size_t;
+typedef u32 JDIMENSION;
+typedef u8 JSAMPLE;
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+typedef s16 FSERROR;
+typedef FSERROR *FSERRPTR;
+typedef s32 boolean;
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
 
-typedef struct ImageTableUpdateEvent {
-    void (*dispatch)(ImageTableUpdateContext *context);
-    u8 pad04[0x10];
-    u32 type;
-} ImageTableUpdateEvent;
+typedef struct {
+    void *start_pass;
+    void (*color_quantize)(j_decompress_ptr, JSAMPARRAY, JSAMPARRAY, s32);
+    void *finish_pass;
+    void *new_color_map;
+} jpeg_color_quantizer;
 
-typedef struct ImageTableUpdateState {
-    u8 pad00[4];
-    void (*handler)(void);
-    u8 pad08[8];
-    void *tables;
-    u32 total;
-    u8 pad18[4];
-    void *field1C;
-    u8 pad20[0x10];
-    u32 phase;
-    void *field34;
-    u8 pad38[0x0C];
-    void *buffers[1];
-    u8 pad48[0x0C];
-    u32 field54;
-} ImageTableUpdateState;
+typedef struct {
+    jpeg_color_quantizer pub;
+    JSAMPARRAY sv_colormap;
+    s32 sv_actual;
+    JSAMPARRAY colorindex;
+    boolean is_padded;
+    s32 Ncolors[4];
+    s32 row_index;
+    void *odither[4];
+    FSERRPTR fserrors[4];
+    boolean on_odd_row;
+} my_cquantizer;
 
-struct ImageTableUpdateContext {
-    ImageTableUpdateEvent *event;
+typedef struct jpeg_error_mgr {
+    void (*error_exit)(j_decompress_ptr cinfo);
+    void *other[4];
+    s32 msg_code;
+} jpeg_error_mgr;
+
+typedef struct jpeg_decompress_struct {
+    jpeg_error_mgr *err;
     u8 pad004[0x54];
-    u32 mode;
+    u32 dither_mode;
     u8 pad05C[0x14];
-    s32 width;
+    JDIMENSION output_width;
     u8 pad074[4];
-    s32 dimensions;
+    s32 out_color_components;
     u8 pad07C[8];
-    u32 total;
-    void *tables;
+    s32 actual_number_of_colors;
+    JSAMPARRAY colormap;
     u8 pad08C[0x13C];
-    ImageTableUpdateState *state;
-};
+    my_cquantizer *cquantize;
+} jpeg_decompress_struct;
 
-extern void index_planes_accumulate(void);
-extern void indexed_rgb_accumulate(void);
-extern void func_80060870(void);
-extern void func_8006099C(void);
-extern void object_table_process(void);
-extern void image_table_decode(ImageTableUpdateContext *context);
-extern void object_shared_buffers_assign(ImageTableUpdateContext *context);
-extern void object_children_allocate(ImageTableUpdateContext *context);
-extern void func_800632F4(void *output, s32 size);
+extern void index_planes_accumulate(j_decompress_ptr, JSAMPARRAY,
+                                    JSAMPARRAY, s32);
+extern void indexed_rgb_accumulate(j_decompress_ptr, JSAMPARRAY,
+                                   JSAMPARRAY, s32);
+extern void func_80060870(j_decompress_ptr, JSAMPARRAY, JSAMPARRAY, s32);
+extern void func_8006099C(j_decompress_ptr, JSAMPARRAY, JSAMPARRAY, s32);
+extern void object_table_process(j_decompress_ptr, JSAMPARRAY, JSAMPARRAY,
+                                 s32);
+extern void image_table_decode(j_decompress_ptr cinfo);
+extern void object_shared_buffers_assign(j_decompress_ptr cinfo);
+extern void object_children_allocate(j_decompress_ptr cinfo);
+extern void func_800632F4(void *output, size_t count);
 
-void image_table_update(ImageTableUpdateContext *context)
+void image_table_update(j_decompress_ptr cinfo, boolean is_pre_scan)
 {
-    register ImageTableUpdateContext *saved_context __asm__("$18") = context;
-    register ImageTableUpdateState *state __asm__("$17") = context->state;
-    register s32 index __asm__("$16");
-    register s32 size __asm__("$19");
-    register s32 raw_size __asm__("$2");
-    u32 stack_padding;
+    my_cquantizer *cquantize = cinfo->cquantize;
+    size_t arraysize;
+    s32 i;
 
-    __asm__("" : : "m"(stack_padding));
+    cinfo->colormap = cquantize->sv_colormap;
+    cinfo->actual_number_of_colors = cquantize->sv_actual;
 
-    saved_context->tables = state->tables;
-    saved_context->total = state->total;
-
-    switch (saved_context->mode) {
+    switch (cinfo->dither_mode) {
     case 0:
-        if (saved_context->dimensions == 3) {
-            state->handler = indexed_rgb_accumulate;
-        } else {
-            state->handler = index_planes_accumulate;
-        }
+        if (cinfo->out_color_components == 3)
+            cquantize->pub.color_quantize = indexed_rgb_accumulate;
+        else
+            cquantize->pub.color_quantize = index_planes_accumulate;
         break;
     case 1:
-        if (saved_context->dimensions == 3) {
-            state->handler = func_8006099C;
-        } else {
-            state->handler = func_80060870;
-        }
-        state->phase = 0;
-        if (state->field1C == 0) {
-            image_table_decode(saved_context);
-        }
-        if (state->field34 == 0) {
-            object_shared_buffers_assign(saved_context);
-        }
+        if (cinfo->out_color_components == 3)
+            cquantize->pub.color_quantize = func_8006099C;
+        else
+            cquantize->pub.color_quantize = func_80060870;
+        cquantize->row_index = 0;
+        if (!cquantize->is_padded)
+            image_table_decode(cinfo);
+        if (cquantize->odither[0] == 0)
+            object_shared_buffers_assign(cinfo);
         break;
     case 2:
-        state->handler = object_table_process;
-        state->field54 = 0;
-        if (state->buffers[0] == 0) {
-            object_children_allocate(saved_context);
-        }
-        index = 0;
-        raw_size = saved_context->width + 2;
-        if (saved_context->dimensions > 0) {
-            size = raw_size * 2;
-            do {
-                func_800632F4(state->buffers[0], size);
-                index++;
-                state = (ImageTableUpdateState *)((u8 *)state + 4);
-            } while (index < saved_context->dimensions);
-        }
+        cquantize->pub.color_quantize = object_table_process;
+        cquantize->on_odd_row = 0;
+        if (cquantize->fserrors[0] == 0)
+            object_children_allocate(cinfo);
+        arraysize = (size_t)((cinfo->output_width + 2) * sizeof(FSERROR));
+        for (i = 0; i < cinfo->out_color_components; i++)
+            func_800632F4(cquantize->fserrors[i], arraysize);
         break;
     default:
-        saved_context->event->type = 0x2F;
-        saved_context->event->dispatch(saved_context);
+        cinfo->err->msg_code = 0x2F;
+        (*cinfo->err->error_exit)(cinfo);
         break;
     }
 }

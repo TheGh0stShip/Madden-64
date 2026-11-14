@@ -1,57 +1,47 @@
+/* IJG libjpeg 6a jquant1.c: color_quantize(). */
 #include "types.h"
 
-typedef struct IndexLookupOwner {
+typedef u32 JDIMENSION;
+typedef u8 JSAMPLE;
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+
+typedef struct {
     u8 pad00[0x18];
-    u8 **lookup;
-} IndexLookupOwner;
+    JSAMPARRAY colorindex;
+} my_cquantizer;
 
-typedef struct IndexPlaneContext {
+typedef struct {
     u8 pad000[0x70];
-    s32 width;
+    JDIMENSION output_width;
     u8 pad074[4];
-    s32 height;
+    s32 out_color_components;
     u8 pad07C[0x14C];
-    IndexLookupOwner *owner;
-} IndexPlaneContext;
+    my_cquantizer *cquantize;
+} jpeg_decompress_struct;
+typedef jpeg_decompress_struct *j_decompress_ptr;
 
-void index_planes_accumulate(IndexPlaneContext *context, u8 **index_planes,
-                             u8 **output_planes, s32 plane_count)
+void index_planes_accumulate(j_decompress_ptr cinfo, JSAMPARRAY input_buf,
+                             JSAMPARRAY output_buf, s32 num_rows)
 {
-    u64 stack_padding;
-    register s32 width __asm__("$24") = context->width;
-    register s32 height __asm__("$13") = context->height;
-    register u8 **lookup __asm__("$15") = context->owner->lookup;
-    register s32 plane __asm__("$14");
+    my_cquantizer *cquantize = cinfo->cquantize;
+    JSAMPARRAY colorindex = cquantize->colorindex;
+    register s32 pixcode, ci;
+    register JSAMPROW ptrin, ptrout;
+    s32 row;
+    JDIMENSION col;
+    JDIMENSION width = cinfo->output_width;
+    register s32 nc = cinfo->out_color_components;
 
-    __asm__("" : : "m"(stack_padding));
-
-    for (plane = 0; plane < plane_count; plane++) {
-        register u8 *indices __asm__("$11") = *index_planes;
-        register u8 *output __asm__("$12") = *output_planes;
-        register s32 remaining __asm__("$10") = width;
-
-        if (remaining != 0) {
-            do {
-                register s32 row __asm__("$9");
-                register s32 total __asm__("$4");
-                register u8 **lookup_row __asm__("$8");
-
-                row = 0;
-                __asm__("" : "=r"(row) : "0"(row));
-                total = 0;
-                if (height > 0) {
-                    lookup_row = lookup;
-                    do {
-                        total += (*lookup_row)[*indices++];
-                        row++;
-                        lookup_row++;
-                    } while (row < height);
-                }
-                *output++ = total;
-                remaining--;
-            } while (remaining != 0);
+    for (row = 0; row < num_rows; row++) {
+        ptrin = input_buf[row];
+        ptrout = output_buf[row];
+        for (col = width; col > 0; col--) {
+            pixcode = 0;
+            for (ci = 0; ci < nc; ci++) {
+                pixcode += colorindex[ci][*ptrin++];
+            }
+            *ptrout++ = (JSAMPLE)pixcode;
         }
-        output_planes++;
-        index_planes++;
     }
 }

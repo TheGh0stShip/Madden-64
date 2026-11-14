@@ -18,13 +18,13 @@ extern void func_8004CDA8(void *entry, s32 value, s32 count);
 
 void func_8003D78C(void)
 {
-    register s32 sentinel __asm__("$18");
-    register s32 value __asm__("$16");
-    register s32 prior __asm__("$17");
-    register s32 counter __asm__("$17");
-    register s32 more __asm__("$19");
-    register s32 *slot __asm__("$16");
-    register u8 *entry __asm__("$18");
+    s32 sentinel;
+    s32 value;
+    s32 prior;
+    s32 counter;
+    s32 more;
+    s32 *slot;
+    u8 *entry;
     AudioChannelState *state;
     s32 current;
 
@@ -35,7 +35,8 @@ void func_8003D78C(void)
 update:
     state = D_80087B6C;
     if ((state->flags18 & 5) == 0) goto disable;
-    value = state->field00 - 3;
+    value = state->field00;
+    value -= 3;
     if (value < 0) {
         value = 0;
     }
@@ -57,7 +58,9 @@ check:
     if (D_800734F8 != sentinel) goto update;
 
 cleanup:
-    counter = 1;
+    do {
+        counter = 1;
+    } while (0);
     slot = &D_80084F60[1];
     entry = D_800885F0 + 0x18;
     do {
@@ -70,6 +73,5 @@ cleanup:
         entry -= 0x18;
         counter--;
     } while (more != 0);
-    __asm__("" : "=r"(more) : "0"(more));
     D_800712C8 = 0;
 }

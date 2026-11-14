@@ -24,6 +24,13 @@ class GpuFunctionRetrievalTests(unittest.TestCase):
         self.assertEqual(MODULE.feature_indices(left), MODULE.feature_indices(left))
         self.assertNotEqual(MODULE.feature_indices(left), MODULE.feature_indices(right))
 
+    def test_context_features_include_boundary_and_cfg(self):
+        entry = {"vram": "0x80001000", "module": "resident", "size": 12,
+                 "boundary_confidence": "verified"}
+        blob = bytes.fromhex("1000ffff0000000003e00008")
+        self.assertNotEqual(MODULE.feature_indices(blob),
+                            MODULE.contextual_features(entry, blob, {}))
+
     def test_genuine_sources_rejects_register_asm_and_specific_normalizer(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

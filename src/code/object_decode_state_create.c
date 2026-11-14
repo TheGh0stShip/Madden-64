@@ -1,59 +1,83 @@
 #include "types.h"
 
-typedef struct ObjectDecodeOwner ObjectDecodeOwner;
-typedef struct ObjectDecodeOps {
-    void *(*allocate)(ObjectDecodeOwner *, s32, s32);
+/* IJG libjpeg 6a jdpostct.c: jinit_d_post_controller(). */
+
+typedef unsigned int JDIMENSION;
+typedef int boolean;
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
+typedef struct jpeg_common_struct *j_common_ptr;
+typedef void *jvirt_sarray_ptr;
+typedef void **JSAMPARRAY;
+
+struct jpeg_memory_mgr {
+    void *(*alloc_small)(j_common_ptr, int, u32);
     u8 pad04[4];
-    void *(*alternate)(ObjectDecodeOwner *, s32, s32);
+    JSAMPARRAY (*alloc_sarray)(j_common_ptr, int, JDIMENSION, JDIMENSION);
     u8 pad0C[4];
-    void *(*primary)(ObjectDecodeOwner *, s32, s32, s32, void *, s32);
-} ObjectDecodeOps;
+    jvirt_sarray_ptr (*request_virt_sarray)(j_common_ptr, int, boolean,
+                                            JDIMENSION, JDIMENSION, JDIMENSION);
+};
 
-typedef struct ObjectDecodeState {
-    void *callback;
+struct jpeg_d_post_controller {
+    void (*start_pass)(void);
+};
+
+typedef struct {
+    struct jpeg_d_post_controller pub;
     u8 pad04[4];
-    void *primary;
-    void *alternate;
-    s32 count;
-} ObjectDecodeState;
+    jvirt_sarray_ptr whole_image;
+    JSAMPARRAY buffer;
+    JDIMENSION strip_height;
+    JDIMENSION starting_row;
+    JDIMENSION next_row;
+} my_post_controller;
 
-struct ObjectDecodeOwner {
+typedef my_post_controller *my_post_ptr;
+
+struct jpeg_decompress_struct {
     u8 pad00[4];
-    ObjectDecodeOps *ops;
+    struct jpeg_memory_mgr *mem;
     u8 pad08[0x4C];
-    s32 enabled;
+    boolean quantize_colors;
     u8 pad58[0x18];
-    s32 rows;
-    void *source;
-    s32 columns;
+    JDIMENSION output_width;
+    JDIMENSION output_height;
+    int out_color_components;
     u8 pad7C[0xB8];
-    s32 count;
+    int max_v_samp_factor;
     u8 pad138[0x74];
-    ObjectDecodeState *state;
+    struct jpeg_d_post_controller *post;
 };
 
 extern void func_8005CAC8(void);
-extern void *func_80063214(void *, s32);
+extern long func_80063214(long, long);
 
-void object_decode_state_create(ObjectDecodeOwner *owner, s32 primary)
+void object_decode_state_create(j_decompress_ptr cinfo,
+                                boolean need_full_buffer)
 {
-    ObjectDecodeState *state = owner->ops->allocate(owner, 1, 0x1C);
+    my_post_ptr post;
 
-    owner->state = state;
-    state->callback = func_8005CAC8;
-    state->primary = 0;
-    state->alternate = 0;
-    if (owner->enabled != 0) {
-        register s32 count __asm__("$7") = owner->count;
+    post = (my_post_ptr)(*cinfo->mem->alloc_small)
+        ((j_common_ptr)cinfo, 1, sizeof(my_post_controller));
+    cinfo->post = (struct jpeg_d_post_controller *)post;
+    post->pub.start_pass = func_8005CAC8;
+    post->whole_image = 0;
+    post->buffer = 0;
 
-        state->count = count;
-        if (primary != 0) {
-            void *source = func_80063214(owner->source, count);
-            state->primary = owner->ops->primary(
-                owner, 1, 0, owner->rows * owner->columns, source, state->count);
+    if (cinfo->quantize_colors) {
+        post->strip_height = (JDIMENSION)cinfo->max_v_samp_factor;
+        if (need_full_buffer) {
+            post->whole_image = (*cinfo->mem->request_virt_sarray)
+                ((j_common_ptr)cinfo, 1, 0,
+                 cinfo->output_width * cinfo->out_color_components,
+                 (JDIMENSION)func_80063214((long)cinfo->output_height,
+                                           (long)post->strip_height),
+                 post->strip_height);
         } else {
-            state->alternate = owner->ops->alternate(
-                owner, 1, owner->rows * owner->columns);
+            post->buffer = (*cinfo->mem->alloc_sarray)
+                ((j_common_ptr)cinfo, 1,
+                 cinfo->output_width * cinfo->out_color_components,
+                 post->strip_height);
         }
     }
 }

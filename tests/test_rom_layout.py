@@ -151,9 +151,9 @@ class RomLayoutTests(unittest.TestCase):
     def test_overlay1_boundary_findings_are_well_formed(self):
         lines = OVERLAY1_FINDINGS.read_text().splitlines()
         self.assertEqual(lines[0], "address\tkind\tfunction\tdetail")
-        self.assertEqual(len(lines) - 1, 953)
+        self.assertEqual(len(lines) - 1, 952)
         allowed_kinds = {
-            "branch_outside", "branch_to_entry", "cross_branch",
+            "branch_outside", "branch_to_entry", "confirmed_start", "cross_branch",
             "falls_through", "in_text_data", "interior_alias", "junk_start",
             "late_start", "rejected_start", "shared_epilogue", "stray_words",
             "start_in_delay_slot",
@@ -168,7 +168,7 @@ class RomLayoutTests(unittest.TestCase):
     def test_resident_rsp_region_is_not_catalogued_as_cpu_functions(self):
         lines = RESIDENT_FINDINGS.read_text().splitlines()
         self.assertEqual(lines[0], "address\tkind\tfunction\tdetail")
-        self.assertEqual(len(lines) - 1, 5)
+        self.assertEqual(len(lines) - 1, 12)
         self.assertIn("0x38C8-byte resident RSP microcode/data region", lines[1])
         fields = [line.split("\t", 3) for line in lines[1:]]
         self.assertEqual(fields[1][:3],

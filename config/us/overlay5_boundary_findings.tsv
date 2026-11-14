@@ -1,0 +1,7 @@
+address	kind	function	detail
+0x800D1094	false_split	func_800D1094	8-byte global-address setup belongs to the body formerly catalogued at 0x800D109C; the only direct call targets 0x800D1094 and none target 0x800D109C
+0x800DCC14	false_split	func_800DCC14	8-byte global-address setup belongs to the body formerly catalogued at 0x800DCC1C; both direct calls target 0x800DCC14 and none target 0x800DCC1C
+0x800DD8C4	false_split	func_800DD8C4	8-byte global-address setup belongs to the body formerly catalogued at 0x800DD8CC; the only direct call targets 0x800DD8C4 and none target 0x800DD8CC
+0x800DDDC4	false_split	func_800DDDC4	8-byte global-address setup belongs to the body formerly catalogued at 0x800DDDCC; the only direct call targets 0x800DDDC4 and none target 0x800DDDCC
+0x800DE074	false_split	func_800DE074	8-byte global-address setup belongs to the body formerly catalogued at 0x800DE07C; all three direct calls target 0x800DE074 and none target 0x800DE07C
+0x800E01F8	false_split	func_800E01F8	8-byte global-address setup belongs to the body formerly catalogued at 0x800E0200; both direct calls target 0x800E01F8 and none target 0x800E0200

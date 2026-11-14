@@ -5,9 +5,9 @@
 [![Matching functions](https://bytematch.dev/TheGh0stShip/Madden-64.svg?label=Matching%20functions&measure=matched_functions)](https://bytematch.dev/TheGh0stShip/Madden-64)
 
 Matching decompilation of **Madden Football 64** for Nintendo 64, USA Rev 0.
-The project is in its initial recovery phase. It verifies the retail ROM,
-emulates the game's packed-program loader, catalogues provisional function and
-data boundaries, and byte-verifies reconstructed translation units.
+The project verifies the retail ROM, emulates the game's packed-program loader,
+catalogues function and data boundaries, and byte-verifies reconstructed
+translation units across the resident program and four executable overlays.
 
 No ROM or extracted game data should be distributed with this project.
 
@@ -106,19 +106,19 @@ project percentage. Current audited measures are:
 
 | Measure | Verified or identified | Scope | Progress |
 |---|---:|---:|---:|
-| Matching decompiled C code | 212,192 bytes | 1,082,496 bytes | 19.60% |
-| Assembly-assisted C reference coverage | 58,312 bytes | 1,082,496 bytes | 5.39% |
-| Matching assembly reference coverage | 307,896 bytes | 1,082,496 bytes | 28.44% |
-| Evidence-typed initialized data | 90,777 bytes | 155,472 bytes | 58.39% |
-| C-decompiled catalogued function candidates | 1,351 | 3,765 | 35.88% |
+| Matching decompiled C code | 458,360 bytes | 1,082,496 bytes | 42.34% |
+| Assembly-assisted C reference coverage | 23,928 bytes | 1,082,496 bytes | 2.21% |
+| Matching assembly reference coverage | 247,028 bytes | 1,082,496 bytes | 22.82% |
+| Evidence-typed initialized data | 155,472 bytes | 155,472 bytes | 100% |
+| C-decompiled catalogued function candidates | 2,434 | 3,663 | 66.45% |
 | Physical ROM mapping | 12,582,912 bytes | 12,582,912 bytes | 100% |
 | Archive record inventory | 1,353 records | 1,353 records | 100% |
 | Physical content classification | 1,353 records | 1,353 records | 100% |
 | Lossless expanded payload extraction | 14,918,923 bytes | 14,918,923 bytes | 100% |
 
 The program denominator covers the loader, resident executable, four executable
-overlay records, and their initialized data. The two newly identified overlays
-have provisional CFG-derived catalogues pending boundary refinement. Matching `.s` units are retained as useful
+overlay records, and their initialized data. Function boundaries remain subject
+to refinement as control-flow and caller evidence improves. Matching `.s` units are retained as useful
 reference coverage but never count as C decompilation. C units containing
 instruction-emitting inline assembly are likewise tracked separately and receive
 no C-decompilation credit. A donor repository, familiar SDK symbol, matching

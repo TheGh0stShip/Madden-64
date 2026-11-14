@@ -1,57 +1,66 @@
+/* IJG libjpeg 6a jdsample.c: int_upsample(). */
 #include "types.h"
 
-extern void func_80063250(void **sources, s32 source_index,
-                          void **destinations, s32 destination_index,
-                          s32 count, u32 size);
+typedef u8 JSAMPLE;
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+typedef u32 JDIMENSION;
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
+typedef struct jpeg_component_info { s32 component_id; s32 component_index; } jpeg_component_info;
+typedef struct {
+    void *pub[3];
+    JSAMPARRAY color_buf[10];
+    void *methods[10];
+    s32 next_row_out;
+    JDIMENSION rows_to_go;
+    s32 rowgroup_height[10];
+    u8 h_expand[10];
+    u8 v_expand[10];
+} my_upsampler;
+struct jpeg_decompress_struct {
+    u8 pad000[0x70];
+    JDIMENSION output_width;
+    u8 pad074[0xC0];
+    s32 max_v_samp_factor;
+    u8 pad138[0x88];
+    my_upsampler *upsample;
+};
 
-void image_rows_expand_repeated(u8 *state, u8 *descriptor, u8 **sources,
-                                u8 ***destination_tables)
+extern void func_80063250(JSAMPARRAY, s32, JSAMPARRAY, s32, s32, JDIMENSION);
+
+void image_rows_expand_repeated(j_decompress_ptr cinfo,
+                                jpeg_component_info *compptr,
+                                JSAMPARRAY input_data,
+                                JSAMPARRAY *output_data_ptr)
 {
-    register u8 *saved_state __asm__("$17") = state;
-    register u8 **source __asm__("$18");
-    register u8 **destination __asm__("$19");
-    register s32 group_size __asm__("$20");
-    register u8 **destinations __asm__("$21");
-    register s32 repeat_count __asm__("$22");
-    register s32 copy_count __asm__("$23");
-    register s32 index __asm__("$16");
-    s32 single_group;
-    u8 *info;
-    volatile u64 padding;
+    my_upsampler *upsample = cinfo->upsample;
+    JSAMPARRAY output_data = *output_data_ptr;
+    register JSAMPROW inptr;
+    register JSAMPROW outptr;
+    register JSAMPLE invalue;
+    register s32 h;
+    JSAMPROW outend;
+    s32 h_expand;
+    s32 v_expand;
+    s32 inrow;
+    s32 outrow;
 
-    __asm__("" : : "r"(saved_state));
-    info = *(u8 **)(saved_state + 0x1C0) + *(s32 *)(descriptor + 4);
-    destinations = *destination_tables;
-    repeat_count = info[0x8C];
-    group_size = info[0x96];
-    if (*(s32 *)(saved_state + 0x134) > 0) {
-        index = 0;
-        single_group = group_size < 2;
-        __asm__("" : "=r"(single_group) : "0"(single_group));
-        copy_count = group_size - 1;
-        destination = destinations;
-        source = sources;
-        do {
-            u8 *output = *destination;
-            u8 *end = output + *(s32 *)(saved_state + 0x70);
-            u8 *input = *source;
-
-            while (output < end) {
-                s32 remaining = repeat_count;
-                u8 value = *input++;
-                while (remaining > 0) {
-                    *output++ = value;
-                    remaining--;
-                }
-            }
-            if (!single_group) {
-                func_80063250((void **)destinations, index,
-                              (void **)destinations, index + 1,
-                              copy_count, *(u32 *)(saved_state + 0x70));
-            }
-            source++;
-            index += group_size;
-            destination += group_size;
-        } while (index < *(s32 *)(saved_state + 0x134));
+    h_expand = upsample->h_expand[compptr->component_index];
+    v_expand = upsample->v_expand[compptr->component_index];
+    inrow = outrow = 0;
+    while (outrow < cinfo->max_v_samp_factor) {
+        inptr = input_data[inrow];
+        outptr = output_data[outrow];
+        outend = outptr + cinfo->output_width;
+        while (outptr < outend) {
+            invalue = *inptr++;
+            for (h = h_expand; h > 0; h--)
+                *outptr++ = invalue;
+        }
+        if (v_expand > 1)
+            func_80063250(output_data, outrow, output_data, outrow + 1,
+                          v_expand - 1, cinfo->output_width);
+        inrow++;
+        outrow += v_expand;
     }
 }

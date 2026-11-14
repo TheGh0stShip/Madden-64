@@ -1,4 +1,7 @@
 # KMC GCC 2.7.2; OVERLAY_ROM_START SIZE SOURCE FLAGS SHA256
+0x307D4	0xBC	src/overlays/overlay1/func_800BF7D8.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5a7ff6d51f4bfeea781864a3e4d01c320cf5ed11de043d53230601c30e656620
+0x37184	0xF8	src/overlays/overlay1/func_800C6188.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	eee09b742805ac4e875291bbb1041e7ec6f95422e38f504ce8c560a4951e867b
+0x10864	0x138	src/overlays/overlay1/func_8009F868.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	886802bc671896750bff6322c6ebaf6211c0abd2acfb4cc0ba5900f7db5d6de0
 0x28828	0x11C	src/overlays/overlay1/func_800B782C.c	--assembler=asn64 --symbol=D_80086178:0x80086178 --symbol=D_80088090:0x80088090 --symbol=D_800A3164:0x800A3164 --symbol=D_8008A5E0:0x8008A5E0 --symbol=D_8008B340:0x8008B340 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3011a8e69a3cca7023d6bc6b03a94d50b72559877f8fe5434cd99f928b5fa478
 0x340A0	0x60	src/overlays/overlay1/func_800C30A4.c	--assembler=asn64 --symbol=D_80080C10:0x80080C10 --symbol=D_80080C20:0x80080C20 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a19c778ac6ee9d7c164d75ae540d5a626717419cf0717bb498662ca5bccc39e2
 0x2B25C	0xE8	src/overlays/overlay1/func_800BA260.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9c11be17a8de7962148616e77b00d1f06791a93b78166cc9d67328a5e12af7bf
@@ -13,7 +16,7 @@
 0x1C64C	0xA0	src/overlays/overlay1/func_800AB650.c	--section-base=.rodata:0x80000E48 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	48b0270b2146bc41a0bb895e285e0f26de918d85b91f5e55434611d7dc05c87c
 0x2D3A0	0x118	src/overlays/overlay1/func_800BC3A4.c	--assembler=asn64 --section-base=.rodata:0x800025A0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f3466660fb07df251108910166a6f9585e561c493551b169fd3d9d16c44ee7cc
 0x384C0	0x128	src/overlays/overlay1/func_800C74C4.c	--section-base=.rodata:0x80002F80 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0bedf0870729ae79db57b22d1c21edcfe0e0fb5692576b366c426ccb7c9535f2
-0x18510	0xC	src/overlays/overlay1/high_half_shift.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3b5a07564b75095ee2adbbb6b1b3400be01368409059d84529163e762e5dccf5
+0x18510	0xC	src/overlays/overlay1/high_half_shift.c	-O2 -fno-delayed-branch -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3b5a07564b75095ee2adbbb6b1b3400be01368409059d84529163e762e5dccf5
 0x17EFC	0x24	src/overlays/overlay1/nested_flag_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	127f6c7c9c0405b4931034d6e9d22483c9c4912122dca04423629896396a3cce
 0x14A70	0x2C	src/overlays/overlay1/indexed_counter_add.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	14ebfa90a75f5fde113e8f7c1691f35c3053dd7f312d4a519e4d20db061d70bb
 0x1E6FC	0x28	src/overlays/overlay1/word_table_copy.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	678b26b921861425a531dd5d40a33e125992ff428efe4d723b92deb5c8deacdf
@@ -358,6 +361,7 @@
 0x3032C	0x240	src/overlays/overlay1/func_800BF330.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	36dec6064e9ab84936371090393b6bb0a54ee747a6cb2829c54da5eb968e8d95
 0xBEEC	0xAC	src/overlays/overlay1/func_8009AEF0.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3e9506250e0b9c2dfa13301ac48c1445dfdecda99b3916fec03601f0629f0af5
 0x24970	0xB4	src/overlays/overlay1/func_800B3974.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0c559f47b7a2e8f92893294e28a44e5ebbea12c70cc0cd4cd6da6cab129fd9c6
+0x4A38	0xFC	src/overlays/overlay1/func_80093A3C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d32c572b8c210a2ff67e48fa2383afae7e60d3c6846a60e82b90e7165ae74a24
 0x4B34	0xF0	src/overlays/overlay1/weighted_group_object_count.c	--symbol=D_80085040:0x80085040 --symbol=D_80088AE4:0x80088AE4 --symbol=D_8008B672:0x8008B672 --symbol=func_8008F4E0:0x8008F4E0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	06f14d198446e01b72df34c4dd1177d7c429c972b7736c43f570e6217573c517
 0x30E0C	0x3C	src/overlays/overlay1/func_800BFE10.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	466efdbb94d073b3d7d2fc130daaf7f289c0b75eeaa65ccb5f43b81c1fb8ae2d
 0x27AB4	0x520	src/overlays/overlay1/func_800B6AB8.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	62423b16afe94674d992e2b74aa4e96813bb6a9b0124bcd198ccac4c120dd866
@@ -400,3 +404,5 @@
 0xF1DC	0x118	src/overlays/overlay1/func_8009E1E0.c	--assembler=asn64 --section-base=.rodata:0x800009B0 --normalizer-enable-KMC-LID-PAIR --normalizer-enable-KMC-FP-PAIR-WORDS -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	87b93a7af4099a322fb1a3c37f3c26517b1d1994173c5554725dc145eb91e849
 0x2E4F8	0xD8	src/overlays/overlay1/func_800BD4FC.c	--assembler=asn64 --normalizer-enable-KMC-ABS-SYM-PAIR -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9326a419a292c632dba453d0a9220577c4b011766f9f9a7413dd5cdf3bcc563b
 0x1CC34	0x1D4	src/overlays/overlay1/func_800ABC38.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	71e0f9e4fc78d416e89f2de78309494de44313966bfd595f3f0d9ae50768dc88
+0x2CB40	0xB8	src/overlays/overlay1/func_800BBB44.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f98610847d3c69da33e51b6e5cac50184c1942519ce604be2a733b5a45d438de
+0x1C438	0x1E8	src/overlays/overlay1/func_800AB43C.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	520894749b8d4edbc816e6132921d3a9672a1abe15735beee70d6cf826538048

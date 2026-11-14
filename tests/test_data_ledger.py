@@ -1,6 +1,7 @@
 """Initialized-data ledger, manifest and source checks (config/us/data_ledger.tsv,
 config/us/matching_data_units.tsv, src/data/)."""
 import re
+import os
 import subprocess
 import sys
 import unittest
@@ -71,7 +72,9 @@ class DataLedgerTest(unittest.TestCase):
                          and (ROOT / "build/us/extracted_records/archive_00").exists(),
                          "needs build/us/survey and build/us/extracted_records (make survey extract-assets)")
     def test_units_compile_to_retail_bytes(self):
-        result = subprocess.run([sys.executable, str(ROOT / "tools/verify_data.py")], capture_output=True, text=True)
+        sibling = ROOT.parent / "n64-decomp-kit/.venv/bin/python"
+        interpreter = os.environ.get("N64DK_PYTHON", str(sibling) if sibling.exists() else sys.executable)
+        result = subprocess.run([interpreter, str(ROOT / "tools/verify_data.py")], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout[-2000:] + result.stderr[-2000:])
 
 

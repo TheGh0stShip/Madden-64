@@ -1,84 +1,76 @@
+/* IJG libjpeg 6a jdsample.c: sep_upsample(). */
 #include "types.h"
 
-typedef void (*PlaneSetupFn)(void *object, void *entry, u32 source,
-                             void *parameter);
-typedef void (*PlaneCopyFn)(void *object, void *planes, u32 offset,
-                            void *source, u32 count);
+typedef u8 JSAMPLE;
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+typedef JSAMPARRAY *JSAMPIMAGE;
+typedef u32 JDIMENSION;
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
+typedef struct jpeg_component_info { u8 bytes[0x54]; } jpeg_component_info;
+typedef void (*upsample1_ptr)(j_decompress_ptr, jpeg_component_info *,
+                             JSAMPARRAY, JSAMPARRAY *);
+typedef struct {
+    void *pub[3];
+    JSAMPARRAY color_buf[10];
+    upsample1_ptr methods[10];
+    s32 next_row_out;
+    JDIMENSION rows_to_go;
+    s32 rowgroup_height[10];
+    u8 h_expand[10];
+    u8 v_expand[10];
+} my_upsampler;
+typedef struct {
+    void *start_pass;
+    void (*color_convert)(j_decompress_ptr, JSAMPIMAGE, JDIMENSION,
+                          JSAMPARRAY, s32);
+} jpeg_color_deconverter;
+struct jpeg_decompress_struct {
+    u8 pad000[0x20];
+    s32 num_components;
+    u8 pad024[0xB4];
+    jpeg_component_info *comp_info;
+    u8 pad0DC[0x58];
+    s32 max_v_samp_factor;
+    u8 pad138[0x88];
+    my_upsampler *upsample;
+    jpeg_color_deconverter *cconvert;
+};
 
-void image_plane_decode(u8 *object_arg, u32 *sources_arg, u32 *plane_arg,
-                        u32 unused, u8 *input, u32 *input_index,
-                        u32 available_arg)
+void image_plane_decode(j_decompress_ptr cinfo, JSAMPIMAGE input_buf,
+                        JDIMENSION *in_row_group_ctr,
+                        JDIMENSION in_row_groups_avail,
+                        JSAMPARRAY output_buf, JDIMENSION *out_row_ctr,
+                        JDIMENSION out_rows_avail)
 {
-    register u8 *object __asm__("$21") = object_arg;
-    u32 *plane_index = plane_arg;
-    register u8 *state __asm__("$19");
-    register u8 *entry __asm__("$16");
-    register u8 *output __asm__("$22");
-    register u32 *sources __asm__("$18");
-    register u32 available __asm__("$23") = available_arg;
-    u32 count;
-    u32 remaining;
-    register s32 i __asm__("$17");
-    register u32 parameter_offset __asm__("$20");
-    u32 source;
-    register u8 *call_object __asm__("$4");
-    register u8 *call_output __asm__("$5");
-    register u8 *call_parameter __asm__("$7");
-    PlaneSetupFn setup;
-    u64 stack_pad;
-    u8 *copy_table;
-    register u8 *copy_object __asm__("$4");
-    register u8 *copy_planes __asm__("$5");
+    my_upsampler *upsample = cinfo->upsample;
+    s32 ci;
+    jpeg_component_info *compptr;
+    JDIMENSION num_rows;
 
-    state = *(u8 **)(object + 0x1C0);
-    if (*(s32 *)(state + 0x5C) >= *(s32 *)(object + 0x134)) {
-        output = *(u8 **)(object + 0xD8);
-        i = 0;
-        if (*(s32 *)(object + 0x20) > 0) {
-            parameter_offset = 0xC;
-            sources = sources_arg;
-            entry = state;
-            do {
-                source = *plane_index * *(u32 *)(entry + 0x64);
-                call_object = object;
-                call_output = output;
-                call_parameter = state + parameter_offset;
-                __asm__ volatile("" : : "r"(call_object), "r"(call_output),
-                                 "r"(call_parameter));
-                parameter_offset += 4;
-                setup = *(PlaneSetupFn *)(entry + 0x34);
-                source = *sources + source * 4;
-                sources++;
-                entry += 4;
-                setup(call_object, call_output, source, call_parameter);
-                i++;
-                output += 0x54;
-            } while (i < *(s32 *)(object + 0x20));
+    if (upsample->next_row_out >= cinfo->max_v_samp_factor) {
+        for (ci = 0, compptr = cinfo->comp_info;
+             ci < cinfo->num_components; ci++, compptr++) {
+            (*upsample->methods[ci])(
+                cinfo, compptr,
+                input_buf[ci] +
+                    (*in_row_group_ctr * upsample->rowgroup_height[ci]),
+                upsample->color_buf + ci);
         }
-        *(u32 *)(state + 0x5C) = 0;
+        upsample->next_row_out = 0;
     }
-    remaining = *(u32 *)(object + 0x134) - *(u32 *)(state + 0x5C);
-    if (*(u32 *)(state + 0x60) < remaining) {
-        remaining = *(u32 *)(state + 0x60);
-    }
-    count = *input_index;
-    available -= count;
-    if (available < remaining) {
-        remaining = available;
-    }
-    copy_table = *(u8 **)(object + 0x1C4);
-    __asm__ volatile("" : "=r"(copy_table) : "0"(copy_table));
-    copy_object = object;
-    copy_planes = state + 0xC;
-    __asm__ volatile("" : : "r"(copy_object), "r"(copy_planes));
-    __asm__ volatile("" : "=m"(stack_pad));
-    (*(PlaneCopyFn *)(copy_table + 4))(
-        copy_object, copy_planes, *(u32 *)(state + 0x5C),
-        input + count * 4, remaining);
-    *input_index += remaining;
-    *(u32 *)(state + 0x60) -= remaining;
-    *(u32 *)(state + 0x5C) += remaining;
-    if (*(s32 *)(state + 0x5C) >= *(s32 *)(object + 0x134)) {
-        (*plane_index)++;
-    }
+    num_rows = cinfo->max_v_samp_factor - upsample->next_row_out;
+    if (num_rows > upsample->rows_to_go)
+        num_rows = upsample->rows_to_go;
+    out_rows_avail -= *out_row_ctr;
+    if (num_rows > out_rows_avail)
+        num_rows = out_rows_avail;
+    (*cinfo->cconvert->color_convert)(
+        cinfo, upsample->color_buf, upsample->next_row_out,
+        output_buf + *out_row_ctr, num_rows);
+    *out_row_ctr += num_rows;
+    upsample->rows_to_go -= num_rows;
+    upsample->next_row_out += num_rows;
+    if (upsample->next_row_out >= cinfo->max_v_samp_factor)
+        (*in_row_group_ctr)++;
 }

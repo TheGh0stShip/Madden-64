@@ -13,15 +13,14 @@ typedef struct UiData {
 
 extern UiData D_8007947C;
 extern u32 D_800692AC;
-extern u32 D_80069298;
-extern u32 D_8006929C;
+extern volatile u32 D_80069298;
+extern volatile u32 D_8006929C;
 extern void *func_80032E00(s32 pool, u32 size);
 
 UiContext *ui_context_clone(void)
 {
     volatile UiContext *context;
     UiData *data;
-    register volatile UiContext *result __asm__("$2");
     u32 third;
 
     context = func_80032E00(0, sizeof(UiContext));
@@ -29,13 +28,9 @@ UiContext *ui_context_clone(void)
     context->data = data;
     *data = D_8007947C;
     context->first = D_800692AC;
-    __asm__ volatile("" ::: "memory");
     context->second = D_80069298;
-    __asm__ volatile("" ::: "memory");
     third = D_8006929C;
     D_800692AC = 0;
-    __asm__ volatile("" ::: "memory");
-    result = context;
-    result->third = third;
-    return (UiContext *)result;
+    context->third = third;
+    return (UiContext *)context;
 }

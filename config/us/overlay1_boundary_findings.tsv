@@ -928,9 +928,8 @@ address	kind	function	detail
 0x800C6110	cross_branch	0x800C6028	branch to 0x800C6134 inside 0x800C6130
 0x800C6130	start_in_delay_slot	0x800C6130	entry begins in the delay slot of a jump
 0x800C6164	cross_branch	0x800C6130	branch to 0x800C60FC inside 0x800C6028
-0x800C6188	in_text_data		0x60 bytes of non-code inside text
-0x800C6188	rejected_start		sweep seed: falls into the next function
-0x800C61E8	late_start	0x800C61E8	reads v1 set by the preceding bytes
+0x800C6188	confirmed_start	0x800C6188	exact 0xF8-byte KMC C unit; prologue and complete epilogue
+0x800C61E8	interior_alias	0x800C6188	jal target enters with ambient v1/a1 and returns through the parent frame epilogue
 0x800C6280	in_text_data		0x28 bytes of non-code inside text
 0x800C6280	rejected_start		sweep seed: falls into the next function
 0x800C62A8	late_start	0x800C62A8	reads v0 set by the preceding bytes

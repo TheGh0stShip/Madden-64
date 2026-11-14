@@ -1,3 +1,4 @@
+/* IJG libjpeg 6a jmemmgr.c: alloc_sarray() and alloc_barray(). */
 #include "types.h"
 
 #ifndef FUNCTION
@@ -7,84 +8,113 @@
 #define SIZE_SHIFT 0
 #endif
 
-extern void **func_800635DC(void *object, s32 mode, s32 size);
-extern u8 *func_800637A4(void *object, s32 mode, s32 size);
+typedef u32 size_t;
+typedef u32 JDIMENSION;
+typedef u8 JSAMPLE;
+typedef s16 JCOEF;
+typedef JCOEF JBLOCK[64];
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+typedef JBLOCK *JBLOCKROW;
+typedef JBLOCKROW *JBLOCKARRAY;
+typedef struct jpeg_common_struct *j_common_ptr;
 
-void **FUNCTION(u8 *object_arg, s32 mode_arg, u32 size_arg, s32 count_arg)
+struct jpeg_error_mgr {
+    void (*error_exit)(j_common_ptr cinfo);
+    void *emit_message;
+    void *output_message;
+    void *format_message;
+    void *reset_error_mgr;
+    s32 msg_code;
+    union { s32 i[8]; char s[80]; } msg_parm;
+};
+struct jpeg_memory_mgr { void *methods[11]; long max_memory_to_use; };
+struct jpeg_common_struct {
+    struct jpeg_error_mgr *err;
+    struct jpeg_memory_mgr *mem;
+};
+typedef struct my_memory_mgr {
+    struct jpeg_memory_mgr pub;
+    void *small_list[2];
+    void *large_list[2];
+    void *virt_sarray_list;
+    void *virt_barray_list;
+    long total_space_allocated;
+    JDIMENSION last_rowsperchunk;
+} my_memory_mgr;
+typedef my_memory_mgr *my_mem_ptr;
+
+extern void *object_stream_initialize(j_common_ptr cinfo, s32 pool_id,
+                                      size_t sizeofobject);
+extern void *func_800637A4(j_common_ptr cinfo, s32 pool_id,
+                           size_t sizeofobject);
+
+#if SIZE_SHIFT
+JBLOCKARRAY FUNCTION(j_common_ptr cinfo, s32 pool_id,
+                     JDIMENSION blocksperrow, JDIMENSION numrows)
+#else
+JSAMPARRAY FUNCTION(j_common_ptr cinfo, s32 pool_id,
+                    JDIMENSION samplesperrow, JDIMENSION numrows)
+#endif
 {
-    register u8 *object __asm__("$19");
-    register s32 mode __asm__("$22");
-    register s32 count __asm__("$18");
-    register u32 stride __asm__("$20");
-    register s32 index __asm__("$16");
-    register s32 chunk __asm__("$17");
-    register void **array __asm__("$21");
-    register void **result __asm__("$2");
-    register u8 *container __asm__("$21");
-    register u32 numerator __asm__("$2");
-    u64 stack_pad;
+    my_mem_ptr mem = (my_mem_ptr)cinfo->mem;
 #if SIZE_SHIFT
-    register u32 raw_size __asm__("$23");
-    raw_size = size_arg;
-    __asm__("" : "=r"(raw_size) : "0"(raw_size));
-    stride = raw_size << SIZE_SHIFT;
+    JBLOCKARRAY result;
+    JBLOCKROW workspace;
 #else
-    stride = size_arg;
-    __asm__("" : "=r"(stride) : "0"(stride));
+    JSAMPARRAY result;
+    JSAMPROW workspace;
 #endif
-    numerator = 0x3B9AC9F0U;
-    index = numerator / stride;
-    count = count_arg;
-    object = object_arg;
-    __asm__("" : "=r"(object) : "0"(object));
-    mode = mode_arg;
-    __asm__("" : "=r"(mode) : "0"(mode));
-    container = *(u8 **)(object + 4);
-    if (index <= 0) {
-        register u8 *inner_v1 __asm__("$3");
-        register u8 *inner_v0 __asm__("$2");
-        inner_v1 = *(u8 **)object;
-        *(s32 *)(inner_v1 + 0x14) = 0x45;
-        inner_v0 = *(u8 **)object;
-        (*(void (**)(void))inner_v0)();
-    }
-    if (index < count) {
-        chunk = index;
-    } else {
-        chunk = count;
-    }
-    *(s32 *)(container + 0x4C) = chunk;
-    result = func_800635DC(object, mode, count << 2);
-    index = 0;
-    __asm__ volatile("" : "=r"(index) : "0"(index));
-    array = result;
-    if (count != 0) {
-        do {
-            register s32 remaining __asm__("$3");
-            register s32 copies __asm__("$3");
-            register u8 *source __asm__("$4");
-            register void **output __asm__("$2");
-            remaining = count - index;
-            if ((u32)remaining < (u32)chunk) {
-                chunk = remaining;
-            }
+    JDIMENSION rowsperchunk, currow, i;
+    long ltemp;
+
 #if SIZE_SHIFT
-            source = func_800637A4(object, mode, (chunk * raw_size) << SIZE_SHIFT);
+    ltemp = (1000000000L - 16) /
+            ((long)blocksperrow * sizeof(JBLOCK));
 #else
-            source = func_800637A4(object, mode, chunk * stride);
+    ltemp = (1000000000L - 16) /
+            ((long)samplesperrow * sizeof(JSAMPLE));
 #endif
-            copies = chunk;
-            if (copies != 0) {
-                output = (void **)(((u32)index << 2) + (u32)array);
-                do {
-                    *output++ = source;
-                    index++;
-                    copies--;
-                    source += stride;
-                } while (copies != 0);
-            }
-        } while ((u32)index < (u32)count);
+    if (ltemp <= 0) {
+        cinfo->err->msg_code = 0x45;
+        (*cinfo->err->error_exit)(cinfo);
     }
-    __asm__ volatile("" : "=m"(stack_pad));
-    return array;
+    if (ltemp < (long)numrows)
+        rowsperchunk = (JDIMENSION)ltemp;
+    else
+        rowsperchunk = numrows;
+    mem->last_rowsperchunk = rowsperchunk;
+
+#if SIZE_SHIFT
+    result = (JBLOCKARRAY)object_stream_initialize(cinfo, pool_id,
+                                  (size_t)(numrows * sizeof(JBLOCKROW)));
+#else
+    result = (JSAMPARRAY)object_stream_initialize(cinfo, pool_id,
+                                  (size_t)(numrows * sizeof(JSAMPROW)));
+#endif
+
+    currow = 0;
+    while (currow < numrows) {
+        rowsperchunk = rowsperchunk < numrows - currow ?
+                       rowsperchunk : numrows - currow;
+#if SIZE_SHIFT
+        workspace = (JBLOCKROW)func_800637A4(cinfo, pool_id,
+                    (size_t)((size_t)rowsperchunk * (size_t)blocksperrow *
+                             sizeof(JBLOCK)));
+        for (i = rowsperchunk; i > 0; i--) {
+            result[currow++] = workspace;
+            workspace += blocksperrow;
+        }
+#else
+        workspace = (JSAMPROW)func_800637A4(cinfo, pool_id,
+                    (size_t)((size_t)rowsperchunk * (size_t)samplesperrow *
+                             sizeof(JSAMPLE)));
+        for (i = rowsperchunk; i > 0; i--) {
+            result[currow++] = workspace;
+            workspace += samplesperrow;
+        }
+#endif
+    }
+
+    return result;
 }

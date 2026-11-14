@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Residual mutation routing example",
+  "type": "object",
+  "required": ["target", "candidate", "mutation_family"],
+  "properties": {
+    "target": {"type": "string"},
+    "candidate": {"type": "string"},
+    "mutation_family": {"type": "string"},
+    "source_project": {"type": "string"},
+    "source_function": {"type": "string"},
+    "synthetic": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}

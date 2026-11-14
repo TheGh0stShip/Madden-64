@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Madden Football 64",
+    "url": "https://github.com/TheGh0stShip/Madden-64",
+    "desc": "Matching decompilation of Madden Football 64 (USA Rev 0)",
+    "lang": "C"
+  },
+  {
+    "name": "Rugrats: Scavenger Hunt",
+    "url": "https://github.com/TheGh0stShip/Rugrats-Scavenger-Hunt",
+    "desc": "Complete matching decompilation of Rugrats: Scavenger Hunt",
+    "lang": "C"
+  },
+  {
+    "name": "Nagano Winter Olympics '98",
+    "url": "https://github.com/TheGh0stShip/Nagano-Winter-Olympics-98-N64",
+    "desc": "Complete matching decompilation of Nagano Winter Olympics '98",
+    "lang": "C"
+  },
+  {
+    "name": "Sydney 2000 N64 Prototype",
+    "url": "https://github.com/TheGh0stShip/Sydney-2000-N64-Prototype",
+    "desc": "Matching decompilation of the cancelled Sydney 2000 N64 prototype",
+    "lang": "C"
+  },
+  {
+    "name": "South Park Europe",
+    "url": "https://github.com/RetroReversing/south-park-decomp",
+    "desc": "Saved byte-verified matching decompilation project for South Park Europe",
+    "lang": "C"
+  },
+  {
+    "name": "V-Rally Edition 99 Europe",
+    "url": "https://github.com/RetroReversing/v-rally-decomp",
+    "desc": "Matching decompilation of V-Rally Edition 99 Europe",
+    "lang": "C"
+  },
+  {
+    "name": "Turok: Dinosaur Hunter Europe",
+    "url": "https://github.com/RetroReversing/turok-decomp",
+    "desc": "Partial matching decompilation of Turok: Dinosaur Hunter Europe",
+    "lang": "C"
+  },
+  {
+    "name": "Penny Racers",
+    "url": "https://github.com/RetroReversing/penny-racers-decomp",
+    "desc": "Saved byte-verified matching decompilation project for Penny Racers",
+    "lang": "C"
+  }
+]

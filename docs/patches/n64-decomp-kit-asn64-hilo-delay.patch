@@ -1,0 +1,15 @@
+diff --git a/n64dk/match/asn64.py b/n64dk/match/asn64.py
+--- a/n64dk/match/asn64.py
++++ b/n64dk/match/asn64.py
+@@ -2550,6 +2550,10 @@ def convert(source: str, disabled: set[str] | None = None,
+                 fill_move = ("REORDER-BRANCH-NOP-MOVE" in disabled
+                              and next_tokens and next_tokens[0] == "move")
+                 if is_reorder and not fill_move:
+                     line += "\tnop\n"
++                    # The inserted delay-slot instruction consumes a real
++                    # HI/LO hazard slot.  Count both emitted instructions so
++                    # a following div/mult is not padded once too many.
++                    emitted_instruction_count += 1
+             elif identifier in ("li.s", "li.d"):
+                 ops = [s.strip() for s in tokens[1].split(",")]
+                 if ops[0][1] == "f":

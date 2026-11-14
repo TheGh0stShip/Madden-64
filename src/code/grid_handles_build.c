@@ -14,17 +14,15 @@ void grid_handles_build(u16 first, u16 second, u16 row, u16 column)
 {
     GridHandleRequest request;
     u16 index = 0;
-    register u32 column_sevens __asm__("$3");
-    register u32 row_sevens __asm__("$2");
-    register u32 *base __asm__("$6");
-    register u32 column_bytes __asm__("$7");
+    u32 column_sevens;
+    u32 row_sevens;
+    u32 *base;
+    u32 column_bytes;
     u32 *output;
 
     column_sevens = (u16)column * 7;
-    __asm__("" : "=r"(column_sevens) : "0"(column_sevens));
     row_sevens = (u16)row * 7;
     row_sevens <<= 5;
-    __asm__("" : "=r"(row_sevens) : "0"(row_sevens));
     base = &D_8007A568[0][0][0];
     column_bytes = column_sevens << 3;
     output = (u32 *)(column_bytes + (u32)((u8 *)base + row_sevens));

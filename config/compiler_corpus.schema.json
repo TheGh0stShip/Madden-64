@@ -13,7 +13,9 @@
     "source_path": {"type": ["string", "null"]},
     "text_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "text_path": {"type": "string"},
-    "provenance": {"enum": ["exact-c", "handwritten-asm", "unknown"]}
+    "provenance": {"enum": ["exact-c", "upstream-byte-verified-c-recompiled", "handwritten-asm", "unknown"]}
+    ,"balance_weight": {"type": "number", "exclusiveMinimum": 0}
+    ,"split": {"enum": ["train", "test"]}
   },
   "additionalProperties": false
 }

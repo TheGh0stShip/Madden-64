@@ -1,126 +1,167 @@
 #include "types.h"
 
-extern s32 func_800649B0(void *object, s32 total_size, s32 total_count, s32 allocated);
-extern void func_800649B8(void *object, void *destination, s32 size);
-extern void **func_8006389C(void *object, s32 mode, u32 size, s32 count);
-extern void **func_800639CC(void *object, s32 mode, u32 size, s32 count);
+/* IJG libjpeg 6a jmemmgr.c: realize_virt_arrays(). */
 
-void object_stream_update(u8 *object_arg)
+typedef u32 JDIMENSION;
+typedef u8 JSAMPLE;
+typedef s16 JCOEF;
+typedef JCOEF JBLOCK[64];
+typedef JSAMPLE **JSAMPARRAY;
+typedef JBLOCK **JBLOCKARRAY;
+
+typedef struct jpeg_common_struct *j_common_ptr;
+typedef struct jvirt_sarray_control *jvirt_sarray_ptr;
+typedef struct jvirt_barray_control *jvirt_barray_ptr;
+
+struct backing_store_struct {
+    u8 opaque[0x100];
+};
+
+struct jvirt_sarray_control {
+    JSAMPARRAY mem_buffer;
+    JDIMENSION rows_in_array;
+    JDIMENSION samplesperrow;
+    JDIMENSION maxaccess;
+    JDIMENSION rows_in_mem;
+    JDIMENSION rowsperchunk;
+    JDIMENSION cur_start_row;
+    JDIMENSION first_undef_row;
+    s32 pre_zero;
+    s32 dirty;
+    s32 b_s_open;
+    struct jvirt_sarray_control *next;
+    struct backing_store_struct b_s_info;
+};
+
+struct jvirt_barray_control {
+    JBLOCKARRAY mem_buffer;
+    JDIMENSION rows_in_array;
+    JDIMENSION blocksperrow;
+    JDIMENSION maxaccess;
+    JDIMENSION rows_in_mem;
+    JDIMENSION rowsperchunk;
+    JDIMENSION cur_start_row;
+    JDIMENSION first_undef_row;
+    s32 pre_zero;
+    s32 dirty;
+    s32 b_s_open;
+    struct jvirt_barray_control *next;
+    struct backing_store_struct b_s_info;
+};
+
+struct jpeg_memory_mgr_private {
+    u8 public_methods[0x40];
+    jvirt_sarray_ptr virt_sarray_list;
+    jvirt_barray_ptr virt_barray_list;
+    long total_space_allocated;
+    JDIMENSION last_rowsperchunk;
+};
+
+struct jpeg_common_struct {
+    void *err;
+    struct jpeg_memory_mgr_private *mem;
+};
+
+extern long func_800649B0(j_common_ptr cinfo, long min_bytes_needed,
+                          long max_bytes_needed, long already_allocated);
+extern void func_800649B8(j_common_ptr cinfo,
+                          struct backing_store_struct *info,
+                          long total_bytes_needed);
+extern JSAMPARRAY func_8006389C(j_common_ptr cinfo, s32 pool_id,
+                                JDIMENSION samplesperrow,
+                                JDIMENSION numrows);
+extern JBLOCKARRAY func_800639CC(j_common_ptr cinfo, s32 pool_id,
+                                 JDIMENSION blocksperrow,
+                                 JDIMENSION numrows);
+
+void object_stream_update(j_common_ptr cinfo)
 {
-    register u8 *object __asm__("$19") = object_arg;
-    register u8 *container __asm__("$20");
-    register u8 *node __asm__("$16");
-    register s32 amount __asm__("$17");
-    register s32 secondary __asm__("$18");
-    register s32 available __asm__("$3");
-    register s32 quotient __asm__("$2");
-    register u32 product __asm__("$3");
-    register u32 product2 __asm__("$2");
+    struct jpeg_memory_mgr_private *mem = cinfo->mem;
+    long space_per_minheight, maximum_space, avail_mem;
+    long minheights, max_minheights;
+    jvirt_sarray_ptr sptr;
+    jvirt_barray_ptr bptr;
 
-    container = *(u8 **)(object + 4);
-    node = *(u8 **)(container + 0x40);
-    amount = 0;
-    secondary = 0;
-    while (node != 0) {
-        if (*(void **)node == 0) {
-            product = *(u32 *)(node + 0xC) * *(u32 *)(node + 8);
-            product2 = *(u32 *)(node + 4) * *(u32 *)(node + 8);
-            amount += product;
-            secondary += product2;
+    space_per_minheight = 0;
+    maximum_space = 0;
+    for (sptr = mem->virt_sarray_list; sptr != 0; sptr = sptr->next) {
+        if (sptr->mem_buffer == 0) {
+            space_per_minheight += (long) sptr->maxaccess *
+                                   (long) sptr->samplesperrow * sizeof(JSAMPLE);
+            maximum_space += (long) sptr->rows_in_array *
+                             (long) sptr->samplesperrow * sizeof(JSAMPLE);
         }
-        node = *(u8 **)(node + 0x2C);
+    }
+    for (bptr = mem->virt_barray_list; bptr != 0; bptr = bptr->next) {
+        if (bptr->mem_buffer == 0) {
+            space_per_minheight += (long) bptr->maxaccess *
+                                   (long) bptr->blocksperrow * sizeof(JBLOCK);
+            maximum_space += (long) bptr->rows_in_array *
+                             (long) bptr->blocksperrow * sizeof(JBLOCK);
+        }
     }
 
-    node = *(u8 **)(container + 0x44);
-    while (node != 0) {
-        if (*(void **)node == 0) {
-            product = (*(u32 *)(node + 0xC) * *(u32 *)(node + 8)) << 7;
-            amount += product;
-            product2 = (*(u32 *)(node + 4) * *(u32 *)(node + 8)) << 7;
-            secondary += product2;
-        }
-        node = *(u8 **)(node + 0x2C);
+    if (space_per_minheight <= 0)
+        return;
+
+    avail_mem = func_800649B0(cinfo, space_per_minheight, maximum_space,
+                              mem->total_space_allocated);
+
+    if (avail_mem >= maximum_space)
+        max_minheights = 1000000000L;
+    else {
+        max_minheights = avail_mem / space_per_minheight;
+        if (max_minheights <= 0)
+            max_minheights = 1;
     }
 
-    if (amount > 0) {
-        available = func_800649B0(object, amount, secondary,
-                                  *(s32 *)(container + 0x48));
-        quotient = available < secondary;
-        if (quotient != 0) {
-            goto calculate_amount;
-        }
-        amount = 0x3B9ACA00;
-        goto amount_ready;
-calculate_amount:
-        amount = available / amount;
-        if (amount <= 0) {
-            amount = 1;
-        }
-amount_ready:
-
-        node = *(u8 **)(container + 0x40);
-        if (node != 0) {
-            __asm__ volatile("");
-            secondary = 1;
-            do {
-                if (*(void **)node == 0) {
-                    register u32 count __asm__("$5");
-                    register u32 chunk __asm__("$4");
-                    register s32 needed __asm__("$2");
-                    count = *(u32 *)(node + 4);
-                    chunk = *(u32 *)(node + 0xC);
-                    needed = ((count - 1) / chunk) + 1;
-                    if (amount >= needed) {
-                        *(u32 *)(node + 0x10) = count;
-                    } else {
-                        register u32 scaled __asm__("$3");
-                        register u32 allocation __asm__("$6");
-                        scaled = amount * chunk;
-                        *(u32 *)(node + 0x10) = scaled;
-                        allocation = *(u32 *)(node + 4) * *(u32 *)(node + 8);
-                        func_800649B8(object, node + 0x30, allocation);
-                        *(s32 *)(node + 0x28) = secondary;
-                    }
-                    *(void **)(node + 0) = func_8006389C(
-                        object, 1, *(u32 *)(node + 8), *(s32 *)(node + 0x10));
-                    *(u32 *)(node + 0x14) = *(u32 *)(container + 0x4C);
-                    *(u32 *)(node + 0x18) = 0;
-                    *(u32 *)(node + 0x1C) = 0;
-                    *(u32 *)(node + 0x24) = 0;
-                }
-                node = *(u8 **)(node + 0x2C);
-            } while (node != 0);
-        }
-
-        node = *(u8 **)(container + 0x44);
-        secondary = 1;
-        while (node != 0) {
-            if (*(void **)node == 0) {
-                register u32 count __asm__("$5");
-                register u32 chunk __asm__("$4");
-                register s32 needed __asm__("$2");
-                count = *(u32 *)(node + 4);
-                chunk = *(u32 *)(node + 0xC);
-                needed = ((count - 1) / chunk) + 1;
-                if (amount >= needed) {
-                    *(u32 *)(node + 0x10) = count;
-                } else {
-                    register u32 scaled __asm__("$3");
-                    register u32 allocation __asm__("$6");
-                    scaled = amount * chunk;
-                    *(u32 *)(node + 0x10) = scaled;
-                    allocation = (*(u32 *)(node + 4) * *(u32 *)(node + 8)) << 7;
-                    func_800649B8(object, node + 0x30, allocation);
-                    *(s32 *)(node + 0x28) = secondary;
-                }
-                *(void **)(node + 0) = func_800639CC(
-                    object, 1, *(u32 *)(node + 8), *(s32 *)(node + 0x10));
-                *(u32 *)(node + 0x14) = *(u32 *)(container + 0x4C);
-                *(u32 *)(node + 0x18) = 0;
-                *(u32 *)(node + 0x1C) = 0;
-                *(u32 *)(node + 0x24) = 0;
+    for (sptr = mem->virt_sarray_list; sptr != 0; sptr = sptr->next) {
+        if (sptr->mem_buffer == 0) {
+            minheights = ((long) sptr->rows_in_array - 1L) /
+                         sptr->maxaccess + 1L;
+            if (minheights <= max_minheights) {
+                sptr->rows_in_mem = sptr->rows_in_array;
+            } else {
+                sptr->rows_in_mem = (JDIMENSION)
+                    (max_minheights * sptr->maxaccess);
+                func_800649B8(cinfo, &sptr->b_s_info,
+                              (long) sptr->rows_in_array *
+                              (long) sptr->samplesperrow *
+                              (long) sizeof(JSAMPLE));
+                sptr->b_s_open = 1;
             }
-            node = *(u8 **)(node + 0x2C);
+            sptr->mem_buffer = func_8006389C(cinfo, 1,
+                                              sptr->samplesperrow,
+                                              sptr->rows_in_mem);
+            sptr->rowsperchunk = mem->last_rowsperchunk;
+            sptr->cur_start_row = 0;
+            sptr->first_undef_row = 0;
+            sptr->dirty = 0;
+        }
+    }
+
+    for (bptr = mem->virt_barray_list; bptr != 0; bptr = bptr->next) {
+        if (bptr->mem_buffer == 0) {
+            minheights = ((long) bptr->rows_in_array - 1L) /
+                         bptr->maxaccess + 1L;
+            if (minheights <= max_minheights) {
+                bptr->rows_in_mem = bptr->rows_in_array;
+            } else {
+                bptr->rows_in_mem = (JDIMENSION)
+                    (max_minheights * bptr->maxaccess);
+                func_800649B8(cinfo, &bptr->b_s_info,
+                              (long) bptr->rows_in_array *
+                              (long) bptr->blocksperrow *
+                              (long) sizeof(JBLOCK));
+                bptr->b_s_open = 1;
+            }
+            bptr->mem_buffer = func_800639CC(cinfo, 1,
+                                              bptr->blocksperrow,
+                                              bptr->rows_in_mem);
+            bptr->rowsperchunk = mem->last_rowsperchunk;
+            bptr->cur_start_row = 0;
+            bptr->first_undef_row = 0;
+            bptr->dirty = 0;
         }
     }
 }

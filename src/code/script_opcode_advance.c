@@ -10,23 +10,22 @@ typedef struct ScriptState {
 
 void func_80040C04(s16 *script, u32 *position, ScriptState *state)
 {
+    s16 loaded;
     s32 opcode;
-    u64 stack_padding;
-
-    __asm__("" : : "m"(stack_padding));
 
     if (state->delay != 0) {
         state->delay--;
         return;
     }
 
-    opcode = script[*position];
+    loaded = script[*position];
+    opcode = loaded;
     switch (opcode & 0xF000) {
     case 0x0000:
-        state->value = opcode & 0xFFF;
+        state->value = loaded & 0xFFF;
         break;
     case 0x1000:
-        state->delay = opcode & 0xFFF;
+        state->delay = loaded & 0xFFF;
         break;
     case 0x2000:
         goto restart;

@@ -71,7 +71,7 @@ def discover(number: int, n64dk_root: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--n64dk", default="/home/steve/projects/n64-decomp-kit",
+        "--n64dk", default=ROOT.parent / "n64-decomp-kit",
         type=Path,
     )
     args = parser.parse_args()

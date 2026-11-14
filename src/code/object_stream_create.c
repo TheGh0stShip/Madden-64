@@ -1,8 +1,59 @@
 #include "types.h"
 
-extern void *func_800649EC(void *object);
-extern void func_800649F4(void *object);
-extern u8 *func_80064930(void *object, s32 size);
+/* IJG libjpeg 6a jmemmgr.c: jinit_memory_mgr(). */
+
+typedef struct jpeg_common_struct *j_common_ptr;
+
+struct jpeg_error_mgr {
+    void (*error_exit)(j_common_ptr cinfo);
+    void *emit_message;
+    void *output_message;
+    void *format_message;
+    void *reset_error_mgr;
+    s32 msg_code;
+    union {
+        s32 i[8];
+        char s[80];
+    } msg_parm;
+};
+
+struct jpeg_memory_mgr {
+    void *alloc_small;
+    void *alloc_large;
+    void *alloc_sarray;
+    void *alloc_barray;
+    void *request_virt_sarray;
+    void *request_virt_barray;
+    void *realize_virt_arrays;
+    void *access_virt_sarray;
+    void *access_virt_barray;
+    void *free_pool;
+    void *self_destruct;
+    long max_memory_to_use;
+};
+
+struct jpeg_common_struct {
+    struct jpeg_error_mgr *err;
+    struct jpeg_memory_mgr *mem;
+};
+
+typedef struct small_pool_struct *small_pool_ptr;
+typedef struct large_pool_struct *large_pool_ptr;
+
+typedef struct my_memory_mgr {
+    struct jpeg_memory_mgr pub;
+    small_pool_ptr small_list[2];
+    large_pool_ptr large_list[2];
+    void *virt_sarray_list;
+    void *virt_barray_list;
+    long total_space_allocated;
+    u32 last_rowsperchunk;
+} my_memory_mgr;
+typedef my_memory_mgr *my_mem_ptr;
+
+extern long func_800649EC(j_common_ptr cinfo);
+extern void func_800649F4(j_common_ptr cinfo);
+extern void *func_80064930(j_common_ptr cinfo, u32 size);
 extern void object_stream_initialize(void);
 extern void func_800637A4(void);
 extern void func_8006389C(void);
@@ -15,60 +66,43 @@ extern void object_stream_commit(void);
 extern void object_stream_complete(void);
 extern void func_80064790(void);
 
-void func_800647F0(u8 *object_arg)
+void func_800647F0(j_common_ptr cinfo)
 {
-    register u8 *object __asm__("$17");
-    register u8 *state __asm__("$16");
-    register void *saved __asm__("$18");
-    register u8 *cursor __asm__("$3");
-    register s32 index __asm__("$4");
+    my_mem_ptr mem;
+    long max_to_use;
+    s32 pool;
 
-    object = object_arg;
-    __asm__("" : "=r"(object) : "0"(object));
-    *(u32 *)(object + 4) = 0;
-    saved = func_800649EC(object_arg);
-    state = func_80064930(object, 0x50);
-    __asm__("" : "=r"(state) : "0"(state));
-    if (state == 0) {
-        __asm__("" : "=r"(state) : "0"(state));
-        func_800649F4(object);
-        {
-            register u8 *inner_v1 __asm__("$3");
-            register u8 *inner_v0 __asm__("$2");
-            inner_v1 = *(u8 **)object;
-            *(s32 *)(inner_v1 + 0x14) = 0x35;
-            inner_v0 = *(u8 **)object;
-            *(s32 *)(inner_v0 + 0x18) = 0;
-            inner_v0 = *(u8 **)object;
-            (*(void (**)(void *))inner_v0)(object);
-        }
+    cinfo->mem = 0;
+    max_to_use = func_800649EC(cinfo);
+    mem = (my_mem_ptr)func_80064930(cinfo, sizeof(my_memory_mgr));
+
+    if (mem == 0) {
+        func_800649F4(cinfo);
+        cinfo->err->msg_code = 0x35;
+        cinfo->err->msg_parm.i[0] = 0;
+        (*cinfo->err->error_exit)(cinfo);
     }
 
-    *(void (**)(void))(state + 0x00) = object_stream_initialize;
-    *(void (**)(void))(state + 0x04) = func_800637A4;
-    *(void (**)(void))(state + 0x08) = func_8006389C;
-    *(void (**)(void))(state + 0x0C) = func_800639CC;
-    *(void (**)(void))(state + 0x10) = func_80063B0C;
-    *(void (**)(void))(state + 0x14) = func_80063BD8;
-    *(void (**)(void))(state + 0x18) = object_stream_update;
-    *(void (**)(void))(state + 0x1C) = object_stream_finalize;
-    *(void (**)(void))(state + 0x20) = object_stream_commit;
-    *(void (**)(void))(state + 0x24) = object_stream_complete;
-    *(void (**)(void))(state + 0x28) = func_80064790;
-    *(void **)(state + 0x2C) = saved;
+    mem->pub.alloc_small = object_stream_initialize;
+    mem->pub.alloc_large = func_800637A4;
+    mem->pub.alloc_sarray = func_8006389C;
+    mem->pub.alloc_barray = func_800639CC;
+    mem->pub.request_virt_sarray = func_80063B0C;
+    mem->pub.request_virt_barray = func_80063BD8;
+    mem->pub.realize_virt_arrays = object_stream_update;
+    mem->pub.access_virt_sarray = object_stream_finalize;
+    mem->pub.access_virt_barray = object_stream_commit;
+    mem->pub.free_pool = object_stream_complete;
+    mem->pub.self_destruct = func_80064790;
 
-    index = 1;
-    cursor = state + 4;
-    do {
-        *(u32 *)(cursor + 0x30) = 0;
-        *(u32 *)(cursor + 0x38) = 0;
-        __asm__ volatile("" : : : "memory");
-        index--;
-        cursor -= 4;
-    } while (index >= 0);
+    mem->pub.max_memory_to_use = max_to_use;
 
-    *(u32 *)(state + 0x40) = 0;
-    *(u32 *)(state + 0x44) = 0;
-    *(u32 *)(state + 0x48) = 0x50;
-    *(u8 **)(object + 4) = state;
+    for (pool = 1; pool >= 0; pool--) {
+        mem->small_list[pool] = 0;
+        mem->large_list[pool] = 0;
+    }
+    mem->virt_sarray_list = 0;
+    mem->virt_barray_list = 0;
+    mem->total_space_allocated = sizeof(my_memory_mgr);
+    cinfo->mem = &mem->pub;
 }

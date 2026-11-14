@@ -1,64 +1,41 @@
+/* IJG libjpeg 6a jquant1.c: color_quantize3(). */
 #include "types.h"
 
-typedef struct RgbLookupOwner {
-    u8 pad00[0x18];
-    u8 **channels;
-} RgbLookupOwner;
+typedef u32 JDIMENSION;
+typedef u8 JSAMPLE;
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
 
-typedef struct RgbIndexContext {
+typedef struct { u8 pad00[0x18]; JSAMPARRAY colorindex; } my_cquantizer;
+typedef struct {
     u8 pad000[0x70];
-    s32 width;
+    JDIMENSION output_width;
     u8 pad074[0x154];
-    RgbLookupOwner *owner;
-} RgbIndexContext;
+    my_cquantizer *cquantize;
+} jpeg_decompress_struct;
+typedef jpeg_decompress_struct *j_decompress_ptr;
 
-void indexed_rgb_accumulate(RgbIndexContext *context, u8 **source_planes,
-                            u8 **output_planes, s32 plane_count)
+void indexed_rgb_accumulate(j_decompress_ptr cinfo, JSAMPARRAY input_buf,
+                            JSAMPARRAY output_buf, s32 num_rows)
 {
-    u32 stack_padding;
-    register s32 width __asm__("$24") = context->width;
-    u8 **channels = context->owner->channels;
-    register u8 *red __asm__("$15") = channels[0];
-    register u8 *green __asm__("$14") = channels[1];
-    register u8 *blue __asm__("$13") = channels[2];
-    register s32 plane __asm__("$11");
-    register u8 **sources __asm__("$12");
+    my_cquantizer *cquantize = cinfo->cquantize;
+    register s32 pixcode;
+    register JSAMPROW ptrin, ptrout;
+    JSAMPROW colorindex0 = cquantize->colorindex[0];
+    JSAMPROW colorindex1 = cquantize->colorindex[1];
+    JSAMPROW colorindex2 = cquantize->colorindex[2];
+    s32 row;
+    JDIMENSION col;
+    JDIMENSION width = cinfo->output_width;
 
-    __asm__("" : : "m"(stack_padding));
-    plane = 0;
-    if (plane_count <= 0) {
-        return;
-    }
-    sources = source_planes;
-    do {
-        register u8 *source __asm__("$8") = *sources;
-        register u8 *output __asm__("$10") = *output_planes;
-        register s32 remaining __asm__("$9") = width;
-
-        if (remaining != 0) {
-            do {
-                register u32 red_index __asm__("$2") = *source++;
-                register u32 green_index __asm__("$3") = *source++;
-                register u32 blue_index __asm__("$4") = *source++;
-                register u32 red_value __asm__("$2") = red[red_index];
-                register u8 *green_address __asm__("$3") = green + green_index;
-                register u32 green_value __asm__("$5");
-                register u32 blue_value __asm__("$3");
-                u32 total;
-                __asm__("" : "=r"(green_address) : "0"(green_address));
-                green_value = *green_address;
-                blue_value = blue[blue_index];
-                total = red_value + green_value;
-                __asm__("" : "=r"(total) : "0"(total));
-                total += blue_value;
-                *output++ = total;
-                __asm__("" : "=r"(remaining)
-                        : "0"(remaining), "r"(blue_value));
-                remaining--;
-            } while (remaining != 0);
+    for (row = 0; row < num_rows; row++) {
+        ptrin = input_buf[row];
+        ptrout = output_buf[row];
+        for (col = width; col > 0; col--) {
+            pixcode = colorindex0[*ptrin++];
+            pixcode += colorindex1[*ptrin++];
+            pixcode += colorindex2[*ptrin++];
+            *ptrout++ = (JSAMPLE)pixcode;
         }
-        output_planes++;
-        sources++;
-        plane++;
-    } while (plane < plane_count);
+    }
 }

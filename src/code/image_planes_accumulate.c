@@ -1,93 +1,72 @@
+/* IJG libjpeg 6a jquant1.c: quantize_ord_dither(). */
 #include "types.h"
 
-typedef struct ImagePlaneState {
-    u8 pad00[0x18];
-    u8 **clamp_tables;
-    u8 pad1C[0x14];
-    u32 phase;
-    s32 *offset_tables[1];
-} ImagePlaneState;
+typedef u32 size_t;
+typedef u32 JDIMENSION;
+typedef u8 JSAMPLE;
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+typedef s32 ODITHER_MATRIX[16][16];
+typedef s32 (*ODITHER_MATRIX_PTR)[16];
 
-typedef struct ImagePlaneContext {
+typedef struct {
+    void *pub[4];
+    JSAMPARRAY sv_colormap;
+    s32 sv_actual;
+    JSAMPARRAY colorindex;
+    s32 is_padded;
+    s32 Ncolors[4];
+    s32 row_index;
+    ODITHER_MATRIX_PTR odither[4];
+    s16 *fserrors[4];
+    s32 on_odd_row;
+} my_cquantizer;
+
+typedef struct {
     u8 pad000[0x70];
-    s32 width;
+    JDIMENSION output_width;
     u8 pad074[4];
-    s32 plane_count;
+    s32 out_color_components;
     u8 pad07C[0x14C];
-    ImagePlaneState *state;
-} ImagePlaneContext;
+    my_cquantizer *cquantize;
+} jpeg_decompress_struct;
+typedef jpeg_decompress_struct *j_decompress_ptr;
 
-extern void func_800632F4(u8 *output, s32 width);
+extern void func_800632F4(void *output, size_t count);
 
-void func_80060870(
-    ImagePlaneContext *context,
-    u8 **input_planes,
-    u8 **output_planes,
-    s32 count)
+void func_80060870(j_decompress_ptr cinfo, JSAMPARRAY input_buf,
+                   JSAMPARRAY output_buf, s32 num_rows)
 {
-    register ImagePlaneState *state __asm__("$18");
-    register s32 plane_count __asm__("$17");
-    register s32 width __asm__("$20");
-    register u8 **outputs __asm__("$16");
-    register u8 **inputs __asm__("$19");
-    register u8 **outputs_end __asm__("$21");
-    u64 stack_padding;
+    my_cquantizer *cquantize = cinfo->cquantize;
+    register JSAMPROW input_ptr;
+    register JSAMPROW output_ptr;
+    JSAMPROW colorindex_ci;
+    s32 *dither;
+    s32 row_index, col_index;
+    s32 nc = cinfo->out_color_components;
+    s32 ci;
+    s32 row;
+    JDIMENSION col;
+    JDIMENSION width = cinfo->output_width;
 
-    __asm__("" : : "m"(stack_padding));
-    state = context->state;
-    plane_count = context->plane_count;
-    width = context->width;
-    if (count > 0) {
-      outputs = output_planes;
-      inputs = input_planes;
-      {
-        register u32 output_bytes __asm__("$2") = count * 4;
-        outputs_end = (u8 **)(output_bytes + (u32)output_planes);
-      }
-      do {
-        register u32 phase __asm__("$13");
-        register s32 plane __asm__("$7");
-        ImagePlaneState *plane_state;
+    for (row = 0; row < num_rows; row++) {
+        func_800632F4(output_buf[row], (size_t)(width * sizeof(JSAMPLE)));
+        row_index = cquantize->row_index;
+        for (ci = 0; ci < nc; ci++) {
+            input_ptr = input_buf[row] + ci;
+            output_ptr = output_buf[row];
+            colorindex_ci = cquantize->colorindex[ci];
+            dither = cquantize->odither[ci][row_index];
+            col_index = 0;
 
-        func_800632F4(*outputs, width);
-        phase = state->phase;
-        plane = 0;
-        if (plane_count > 0) {
-          register u8 **input_cursor __asm__("$24") = inputs;
-          register u8 **output_cursor __asm__("$15") = outputs;
-          register u32 phase_offset __asm__("$14") = phase << 6;
-
-          plane_state = state;
-          do {
-            u8 *output = *output_cursor;
-            u8 *input = *input_cursor + plane;
-            u8 *clamp = state->clamp_tables[plane];
-            s32 *offsets = (s32 *)((u8 *)plane_state->offset_tables[0] +
-                phase_offset);
-            u32 position = 0;
-            s32 remaining = width;
-
-            while (remaining != 0) {
-                u32 value = *input;
-
-                input += plane_count;
-                *output = *output + clamp[value + offsets[position]];
-                output++;
-                position = (position + 1) & 15;
-                remaining--;
+            for (col = width; col > 0; col--) {
+                *output_ptr += colorindex_ci[*input_ptr + dither[col_index]];
+                input_ptr += nc;
+                output_ptr++;
+                col_index = (col_index + 1) & 15;
             }
-            plane++;
-            plane_state = (ImagePlaneState *)((u8 *)plane_state + 4);
-          } while (plane < plane_count);
         }
-        __asm__("" : "=r"(phase) : "0"(phase));
-        {
-          register u32 next_phase __asm__("$2") = phase + 1;
-          phase = next_phase & 15;
-        }
-        state->phase = phase;
-        outputs++;
-        inputs++;
-      } while ((s32)outputs < (s32)outputs_end);
+        row_index = (row_index + 1) & 15;
+        cquantize->row_index = row_index;
     }
 }

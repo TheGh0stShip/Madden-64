@@ -18,11 +18,5 @@ s32 object_state_pattern_test(u8 *object)
     if (*(s32 *)(state + 0x0C) >= 3) return 0;
     if (*(s32 *)(state + 0x60) != *(s32 *)(state + 0xB0)) return 0;
     if (*(s32 *)(state + 0xB4) != *(s32 *)(state + 0x60)) return 0;
-    if (*(s32 *)(state + 0x24) != *(s32 *)(object + 0x138)) return 0;
-    if (*(s32 *)(state + 0x78) != *(s32 *)(state + 0x24)) return 0;
-    if (*(s32 *)(state + 0xCC) != *(s32 *)(state + 0x78)) goto no_match;
-    __asm__ volatile("");
-    return 1;
-no_match:
-    return 0;
+    if (*(s32 *)(state + 0x24) != *(s32 *)(object + 0x138) || *(s32 *)(state + 0x78) != *(s32 *)(state + 0x24) || *(s32 *)(state + 0xCC) != *(s32 *)(state + 0x78)) return 0; return 1;
 }

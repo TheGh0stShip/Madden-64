@@ -27,7 +27,9 @@ class RankOverlayCandidatesTests(unittest.TestCase):
             self.assertTrue(all(row["vram"] not in rejected for row in rows))
             self.assertEqual(rows, sorted(rows,
                              key=lambda row: (row["size"], row["vram"])))
-        self.assertGreater(total_rows, 0)
+        # Reaching zero is a valid terminal state once every conservative
+        # quick-win candidate has either matched or received boundary evidence.
+        self.assertEqual(total_rows, len(RANK.ranked_candidates()))
 
     def test_known_false_starts_are_excluded(self):
         rows = RANK.ranked_candidates(0x1000)

@@ -1,112 +1,95 @@
+/* IJG libjpeg 6a jmemmgr.c: do_sarray_io() and do_barray_io(). */
 #include "types.h"
 
 #ifndef FUNCTION
 #define FUNCTION func_80063F60
 #endif
-#ifndef SCALE_SHIFT
-#define SCALE_SHIFT 0
+#ifndef SIZE_SHIFT
+#define SIZE_SHIFT 0
 #endif
 
-typedef void (*ChunkCallback)(void *output, void *context, void *entry,
-                              s32 destination_offset, s32 byte_count);
+typedef u32 JDIMENSION;
+typedef u8 JSAMPLE;
+typedef s16 JCOEF;
+typedef JCOEF JBLOCK[64];
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+typedef JBLOCK *JBLOCKROW;
+typedef JBLOCKROW *JBLOCKARRAY;
+typedef struct jpeg_common_struct *j_common_ptr;
 
-typedef struct StreamDescriptor {
-    void **entries;
-    s32 total;
-    s32 scale;
-    u8 pad0C[4];
-    s32 count;
-    s32 step;
-    s32 base;
-    s32 end;
-    u8 pad20[0x10];
-    ChunkCallback primary;
-    ChunkCallback secondary;
-} StreamDescriptor;
+typedef void (*backing_store_io)(j_common_ptr cinfo, void *info,
+                                 void *buffer_address, long file_offset,
+                                 long byte_count);
+struct backing_store_struct {
+    backing_store_io read_backing_store;
+    backing_store_io write_backing_store;
+    void *close_backing_store;
+};
 
-void FUNCTION(void *output_arg, StreamDescriptor *descriptor_arg, s32 alternate_arg)
-{
-    register void *output __asm__("$20") = output_arg;
-    register StreamDescriptor *descriptor __asm__("$16") = descriptor_arg;
-    register s32 alternate __asm__("$22") = alternate_arg;
-    register s32 scale __asm__("$21");
-    register s32 destination_offset __asm__("$19");
-    register s32 byte_count __asm__("$18");
-    register s32 offset __asm__("$17");
-    register s32 chunk __asm__("$4");
-    register s32 position __asm__("$5");
-    register s32 temporary __asm__("$2");
-    register s32 limit __asm__("$3");
-    u64 stack_pad;
-
-#if SCALE_SHIFT
-    register s32 count __asm__("$4");
-    register s32 raw_scale __asm__("$2");
-    register s32 base __asm__("$3");
-    register s32 step_value __asm__("$3");
-
-    __asm__ volatile("" : "=r"(output) : "0"(output));
-    __asm__ volatile("" : "=r"(descriptor) : "0"(descriptor));
-    __asm__ volatile("" : "=r"(alternate) : "0"(alternate));
-    count = descriptor->count;
-    __asm__ volatile("" : "=r"(count) : "0"(count));
-    raw_scale = descriptor->scale;
-    base = descriptor->base;
-    scale = raw_scale << SCALE_SHIFT;
-    destination_offset = base * scale;
+#if SIZE_SHIFT
+typedef struct jvirt_barray_control {
+    JBLOCKARRAY mem_buffer;
+    JDIMENSION rows_in_array;
+    JDIMENSION blocksperrow;
+    JDIMENSION maxaccess;
+    JDIMENSION rows_in_mem;
+    JDIMENSION rowsperchunk;
+    JDIMENSION cur_start_row;
+    JDIMENSION first_undef_row;
+    s32 pre_zero;
+    s32 dirty;
+    s32 b_s_open;
+    struct jvirt_barray_control *next;
+    struct backing_store_struct b_s_info;
+} *virtual_array_ptr;
 #else
-    register s32 count __asm__("$3");
-    register s32 base __asm__("$2");
-    register s32 step_value __asm__("$5");
-
-    __asm__ volatile("" : "=r"(output) : "0"(output));
-    __asm__ volatile("" : "=r"(descriptor) : "0"(descriptor));
-    __asm__ volatile("" : "=r"(alternate) : "0"(alternate));
-    scale = descriptor->scale;
-    __asm__ volatile("" : "=r"(scale) : "0"(scale));
-    base = descriptor->base;
-    count = descriptor->count;
-    destination_offset = base * scale;
+typedef struct jvirt_sarray_control {
+    JSAMPARRAY mem_buffer;
+    JDIMENSION rows_in_array;
+    JDIMENSION samplesperrow;
+    JDIMENSION maxaccess;
+    JDIMENSION rows_in_mem;
+    JDIMENSION rowsperchunk;
+    JDIMENSION cur_start_row;
+    JDIMENSION first_undef_row;
+    s32 pre_zero;
+    s32 dirty;
+    s32 b_s_open;
+    struct jvirt_sarray_control *next;
+    struct backing_store_struct b_s_info;
+} *virtual_array_ptr;
 #endif
-    if (count > 0) {
-        offset = 0;
-        do {
-            step_value = descriptor->step;
-            temporary = count - offset;
-            __asm__ volatile("" : "=r"(temporary) : "0"(temporary));
-            chunk = temporary;
-            if (step_value < chunk) {
-                chunk = step_value;
-            }
-            temporary = descriptor->base;
-            limit = descriptor->end;
-            position = temporary + offset;
-            limit -= position;
-            if (limit < chunk) {
-                chunk = limit;
-            }
-            temporary = descriptor->total;
-            limit = temporary - position;
-            if (limit < chunk) {
-                chunk = limit;
-            }
-            if (chunk <= 0) {
-                break;
-            }
-            byte_count = chunk * scale;
-            if (alternate != 0) {
-                descriptor->secondary(output, &descriptor->primary,
-                                      descriptor->entries[offset],
-                                      destination_offset, byte_count);
-            } else {
-                descriptor->primary(output, &descriptor->primary,
-                                    descriptor->entries[offset],
-                                    destination_offset, byte_count);
-            }
-            offset += descriptor->step;
-            destination_offset += byte_count;
-            count = descriptor->count;
-        } while (offset < count);
+
+void FUNCTION(j_common_ptr cinfo, virtual_array_ptr ptr, s32 writing)
+{
+    long bytesperrow, file_offset, byte_count, rows, thisrow, i;
+
+#if SIZE_SHIFT
+    bytesperrow = (long)ptr->blocksperrow * sizeof(JBLOCK);
+#else
+    bytesperrow = (long)ptr->samplesperrow * sizeof(JSAMPLE);
+#endif
+    file_offset = ptr->cur_start_row * bytesperrow;
+    for (i = 0; i < (long)ptr->rows_in_mem; i += ptr->rowsperchunk) {
+        rows = (long)ptr->rowsperchunk < (long)ptr->rows_in_mem - i ?
+               (long)ptr->rowsperchunk : (long)ptr->rows_in_mem - i;
+        thisrow = (long)ptr->cur_start_row + i;
+        rows = rows < (long)ptr->first_undef_row - thisrow ?
+               rows : (long)ptr->first_undef_row - thisrow;
+        rows = rows < (long)ptr->rows_in_array - thisrow ?
+               rows : (long)ptr->rows_in_array - thisrow;
+        if (rows <= 0)
+            break;
+        byte_count = rows * bytesperrow;
+        if (writing)
+            (*ptr->b_s_info.write_backing_store)(cinfo, &ptr->b_s_info,
+                                                  ptr->mem_buffer[i],
+                                                  file_offset, byte_count);
+        else
+            (*ptr->b_s_info.read_backing_store)(cinfo, &ptr->b_s_info,
+                                                 ptr->mem_buffer[i],
+                                                 file_offset, byte_count);
+        file_offset += byte_count;
     }
-    __asm__ volatile("" : "=m"(stack_pad));
 }

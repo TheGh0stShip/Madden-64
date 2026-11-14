@@ -34,7 +34,6 @@ void func_80029AD0(void)
     u32 third = D_80088AF6;
     u32 fourth = D_80088AF7;
     u32 flag = D_80088AF3;
-    u32 second;
 
     D_8008B060 = third;
     D_8008B061 = fourth;
@@ -43,11 +42,11 @@ void func_80029AD0(void)
     }
     D_8008B062 = first;
 
-    second = D_80088AF5;
+    first = D_80088AF5;
     if (flag != 0) {
-        second |= 0x80;
+        first |= 0x80;
     }
-    D_8008B063 = second;
+    D_8008B063 = first;
     D_8008B064 = D_80087AAC | (D_800876DC << 13);
     D_8008B066 = D_80088AF0 - D_80088AEE;
     D_8008B068 = func_800278D8(D_80088AEA, D_80088AEC);

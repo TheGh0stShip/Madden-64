@@ -1,0 +1,39 @@
+diff --git a/n64dk/match/asn64.py b/n64dk/match/asn64.py
+--- a/n64dk/match/asn64.py
++++ b/n64dk/match/asn64.py
+@@
+-        # ASN64 can materialize callee-saved FP pairs as two single-word
+-        # transfers in odd/even order instead of one doubleword transfer.
++        # ASN64 can materialize FP pairs as two single-word transfers in
++        # odd/even order instead of one doubleword transfer.  This applies
++        # to ordinary pointer-based loads/stores as well as stack saves.
+@@
+-            r"(?P<offset>-?\d+)\(\$sp\)\n",
++            r"(?P<offset>-?\d+)\((?P<base>\$[A-Za-z0-9]+)\)\n",
+@@
+             offset = int(match.group("offset"))
++            base = match.group("base")
+             indent = match.group("i")
+             return (
+-                f"{indent}{instruction}\t$f{reg + 1},{offset}($sp)\n"
+-                f"{indent}{instruction}\t$f{reg},{offset + 4}($sp)\n"
++                f"{indent}{instruction}\t$f{reg + 1},{offset}({base})\n"
++                f"{indent}{instruction}\t$f{reg},{offset + 4}({base})\n"
+             )
+diff --git a/tests/test_match.py b/tests/test_match.py
+--- a/tests/test_match.py
++++ b/tests/test_match.py
+@@
+     def test_asn64_opt_in_kmc_fp_pair_words(self):
+-        source = "\ts.d\t$f22,8($sp)\n\tl.d\t$f20,0($sp)\n"
++        source = (
++            "\ts.d\t$f22,8($sp)\n"
++            "\tl.d\t$f20,0($sp)\n"
++            "\tl.d\t$f4,0($t0)\n"
++        )
+@@
+             "\ts.s\t$f23,8($sp)\n\ts.s\t$f22,12($sp)\n"
+-            "\tl.s\t$f21,0($sp)\n\tl.s\t$f20,4($sp)\n",
++            "\tl.s\t$f21,0($sp)\n\tl.s\t$f20,4($sp)\n"
++            "\tl.s\t$f5,0($t0)\n\tl.s\t$f4,4($t0)\n",
+         )

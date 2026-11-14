@@ -34,6 +34,7 @@ GENERIC_ASSEMBLER_NORMALIZERS = {
     "--normalizer-enable-KMC-LID-ALIGN4",
     "--normalizer-enable-KMC-LID-PAIR",
     "--normalizer-enable-KMC-LID-PAD4",
+    "--normalizer-enable-KMC-LOAD-HAZARD-MOVE-FILL",
 }
 
 

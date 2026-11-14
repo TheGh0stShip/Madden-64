@@ -18,7 +18,7 @@ typedef struct AudioContextObject {
 
 typedef struct AudioContext {
     u8 pad00[0x14];
-    volatile AudioContextObject *object;
+    AudioContextObject *object;
 } AudioContext;
 
 extern s32 D_800734F8;
@@ -43,13 +43,14 @@ extern void func_8003D600(AudioChannel *channel);
 
 void audio_channel_prepare(s32 index, s32 value)
 {
-    register AudioChannel *channel __asm__("$16");
-    register s32 lock __asm__("$17") = D_800734F8;
-    register s32 counter __asm__("$20");
-    register s32 *clear_slot __asm__("$19");
-    register s32 *second __asm__("$18");
-    register u8 *first __asm__("$17");
-    register volatile AudioContextObject *object __asm__("$4");
+    AudioChannel *channel;
+    s32 lock = D_800734F8;
+    s32 counter;
+    s32 *clear_slot;
+    s32 *second;
+    u8 *first;
+    AudioContextObject *object;
+    u32 flags;
 
     if (lock != -1) {
         return;
@@ -61,13 +62,13 @@ void audio_channel_prepare(s32 index, s32 value)
     D_8008B344 = (u8 *)func_800355D8(D_80085D42, index) - 4;
     D_8008B650 = 0;
     object = D_80064A00->object;
-    if (object->flags & 5) {
+    flags = object->flags;
+    object = (AudioContextObject *)((u8 *)object + 0xE0);
+    if (flags & 5) {
         D_800734F8 = lock;
         return;
     }
 
-    object = (AudioContextObject *)((u8 *)object + 0xE0);
-    __asm__("" : "=r"(object) : "0"(object));
     channel = (AudioChannel *)object;
     D_80087B6C = channel;
     counter = 1;

@@ -2,33 +2,16 @@
 
 typedef void *(*AllocateCallback)(void *context, s32 zero, s32 size);
 
-typedef struct DriverAllocator {
-    AllocateCallback allocate;
-} DriverAllocator;
-
+typedef struct DriverAllocator { AllocateCallback allocate; } DriverAllocator;
 typedef struct DriverCallbacks {
-    void *field0;
-    void *field4;
-    void *callback8;
-    void *callbackC;
-    void *callback10;
-    void *callback14;
-    void *callback18;
-    void *owner;
+    void *field0; void *field4; void *callback8; void *callbackC;
+    void *callback10; void *callback14; void *callback18; void *owner;
 } DriverCallbacks;
-
 typedef struct DriverContext {
-    u32 field0;
-    DriverAllocator *allocator;
-    u8 pad8[12];
-    DriverCallbacks *callbacks;
+    u32 field0; DriverAllocator *allocator; u8 pad8[12]; DriverCallbacks *callbacks;
 } DriverContext;
-
-extern void func_80055558(void);
-extern void func_80055568(void);
-extern void func_80055588(void);
-extern void func_80058B08(void);
-extern void func_80055604(void);
+extern void func_80055558(void); extern void func_80055568(void);
+extern void func_80055588(void); extern void func_80058B08(void); extern void func_80055604(void);
 
 void driver_callbacks_initialize(DriverContext *context, void *owner)
 {
@@ -36,16 +19,11 @@ void driver_callbacks_initialize(DriverContext *context, void *owner)
 
     if (context->callbacks == 0) {
         DriverCallbacks *allocated = context->allocator->allocate(context, 0, 0x24);
-
         context->callbacks = allocated;
         allocated->owner = owner;
     }
     callbacks = context->callbacks;
-    for (;;) {
-        if (callbacks == context->callbacks) {
-            break;
-        }
-    }
+    for (;;) { if (callbacks == context->callbacks) break; }
     callbacks->callback8 = func_80055558;
     callbacks->callbackC = func_80055568;
     callbacks->callback10 = func_80055588;

@@ -1,49 +1,56 @@
+/* IJG libjpeg 6a jquant1.c: create_odither_tables(). */
 #include "types.h"
 
-extern void *func_8006056C(void *object);
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
 
-typedef struct SharedBufferSlot {
-    u8 pad00[0x20];
-    u32 key;
-    u8 pad24[0x10];
-    void *buffer;
-} SharedBufferSlot;
+typedef struct {
+    void *start_pass;
+    void *color_quantize;
+    void *finish_pass;
+    void *new_color_map;
+} jpeg_color_quantizer;
 
-void object_shared_buffers_assign(u8 *object)
+typedef struct {
+    jpeg_color_quantizer pub;
+    void *sv_colormap;
+    s32 sv_actual;
+    void *colorindex;
+    s32 is_padded;
+    s32 Ncolors[4];
+    s32 row_index;
+    void *odither[4];
+    void *fserrors[4];
+    s32 on_odd_row;
+} my_cquantizer;
+
+struct jpeg_decompress_struct {
+    u8 pad000[0x78];
+    s32 out_color_components;
+    u8 pad07C[0x14C];
+    my_cquantizer *cquantize;
+};
+
+extern void *func_8006056C(j_decompress_ptr cinfo, s32 ncolors);
+
+void object_shared_buffers_assign(j_decompress_ptr cinfo)
 {
-    register u8 *saved_object __asm__("$18") = object;
-    register u8 *base __asm__("$19") = *(u8 **)(object + 0x1C8);
-    register u8 *slot __asm__("$17");
-    register s32 outer __asm__("$16") = 0;
-    volatile u8 frame_pad[16];
+    my_cquantizer *cquantize = cinfo->cquantize;
+    void *odither;
+    s32 i;
+    s32 j;
+    s32 nci;
 
-    if (*(s32 *)(saved_object + 0x78) > 0) {
-        slot = base;
-        do {
-            s32 inner = 0;
-            register u32 key __asm__("$5") = *(u32 *)(slot + 0x20);
-            register void *buffer __asm__("$6") = 0;
-
-            if (outer > 0) {
-                u8 *cursor = base;
-                do {
-                    volatile SharedBufferSlot *candidate = (SharedBufferSlot *)cursor;
-                    if (key != candidate->key) {
-                        inner++;
-                    } else {
-                        buffer = candidate->buffer;
-                        goto found;
-                    }
-                    cursor += 4;
-                } while (inner < outer);
+    for (i = 0; i < cinfo->out_color_components; i++) {
+        nci = cquantize->Ncolors[i];
+        odither = 0;
+        for (j = 0; j < i; j++) {
+            if (nci == cquantize->Ncolors[j]) {
+                odither = cquantize->odither[j];
+                break;
             }
-found:
-            if (buffer == 0) {
-                buffer = func_8006056C(saved_object);
-            }
-            *(void **)(slot + 0x34) = buffer;
-            outer++;
-            slot += 4;
-        } while (outer < *(s32 *)(saved_object + 0x78));
+        }
+        if (odither == 0)
+            odither = func_8006056C(cinfo, nci);
+        cquantize->odither[i] = odither;
     }
 }

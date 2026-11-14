@@ -25,6 +25,7 @@ GENERIC_ASSEMBLER_NORMALIZERS = {
     "--normalizer-enable-KMC-LID-ALIGN4",
     "--normalizer-enable-KMC-LID-PAIR",
     "--normalizer-enable-KMC-LID-PAD4",
+    "--normalizer-enable-KMC-LOAD-HAZARD-MOVE-FILL",
 }
 ASM_ESCAPE = re.compile(
     r"\b(?:__asm__|asm)\b|\.incbin\b|"
@@ -71,6 +72,60 @@ def feature_indices(blob: bytes, buckets: int = BUCKETS) -> dict[int, float]:
                    for word in words)
     add(f"calls:{min(calls, 31)}", 2.0)
     add(f"branches:{min(branches, 63)}", 2.0)
+    return values
+
+
+def contextual_features(entry: dict, blob: bytes, address_lookup: dict[int, dict],
+                        buckets: int = BUCKETS) -> dict[int, float]:
+    """Add CFG, direct-call, and boundary evidence to opcode-shingle features."""
+    values = feature_indices(blob, buckets)
+
+    def add(name: str, weight: float = 1.0) -> None:
+        index = stable_hash(name, buckets)
+        values[index] = values.get(index, 0.0) + weight
+
+    words = struct.unpack(f">{len(blob) // 4}I", blob)
+    vram = int(entry["vram"], 0) if isinstance(entry["vram"], str) else int(entry["vram"])
+    leaders = {0}
+    edges = set()
+    backward = 0
+    callees = []
+    conditional = {1, 4, 5, 6, 7, 0x14, 0x15}
+    for index, word in enumerate(words):
+        op = word >> 26
+        if op in conditional:
+            disp = word & 0xffff
+            disp -= 0x10000 if disp & 0x8000 else 0
+            target = index + 1 + disp
+            if 0 <= target < len(words):
+                leaders.add(target)
+                edges.add((index, target))
+                backward += target <= index
+            if index + 1 < len(words):
+                leaders.add(index + 1)
+                edges.add((index, index + 1))
+        elif op == 2:
+            target_vram = ((vram + index * 4 + 4) & 0xf0000000) | ((word & 0x3ffffff) << 2)
+            local = (target_vram - vram) // 4
+            if 0 <= local < len(words):
+                leaders.add(local)
+                edges.add((index, local))
+        elif op == 3:
+            target_vram = ((vram + index * 4 + 4) & 0xf0000000) | ((word & 0x3ffffff) << 2)
+            callee = address_lookup.get(target_vram)
+            if callee:
+                callees.append(callee)
+    add(f"cfg-blocks:{min(63, len(leaders))}", 3.0)
+    add(f"cfg-edges:{min(127, len(edges))}", 2.0)
+    add(f"cfg-backward:{min(31, backward)}", 3.0)
+    for callee in callees[:24]:
+        add(f"callee-size:{min(255, int(callee['size']) // 16)}", 1.5)
+        add(f"callee-module:{callee['module']}", .5)
+    add(f"callee-count:{min(31, len(callees))}", 2.0)
+    confidence = entry.get("boundary_confidence", "catalogue")
+    add(f"boundary-confidence:{confidence}", 2.0)
+    if entry.get("boundary_kind"):
+        add(f"boundary-kind:{entry['boundary_kind']}", 2.0)
     return values
 
 
@@ -124,6 +179,10 @@ def retrieve(root: Path, catalog_path: Path, output: Path,
         raise SystemExit("PyTorch is required; run on the Desktop GPU") from exc
     catalog = json.loads(catalog_path.read_text())
     rows = load_blobs(root, catalog)
+    address_lookup = {
+        int(entry["vram"], 0) if isinstance(entry["vram"], str) else int(entry["vram"]): entry
+        for entry, _ in rows
+    }
     eligible = genuine_sources(root)
     donors = [(entry, blob) for entry, blob in rows
               if entry["matched"] and entry.get("matching_source") in eligible]
@@ -135,8 +194,8 @@ def retrieve(root: Path, catalog_path: Path, output: Path,
     def matrix(items):
         tensor = torch.zeros((len(items), BUCKETS), dtype=torch.float32,
                              device=device)
-        for row, (_, blob) in enumerate(items):
-            features = feature_indices(blob)
+        for row, (entry, blob) in enumerate(items):
+            features = contextual_features(entry, blob, address_lookup)
             cols = list(features)
             tensor[row, cols] = torch.tensor(list(features.values()), device=device)
         return torch.nn.functional.normalize(tensor, dim=1)

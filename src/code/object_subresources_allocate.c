@@ -3,7 +3,7 @@
 typedef void *(*AllocateFunction)(void *owner, s32 count, s32 size);
 
 extern void func_8002E58C(void *pointer, s32 value, s32 size);
-extern void func_8005D018(void);
+extern void object_decode_transform(void);
 
 void object_subresources_allocate(void *owner)
 {
@@ -15,7 +15,7 @@ void object_subresources_allocate(void *owner)
     void *pointer;
 
     *(u8 **)(saved_owner + 0x1BC) = header;
-    *(void (**)(void))header = func_8005D018;
+    *(void (**)(void))header = object_decode_transform;
 
     for (index = 0, record = *(u8 **)(saved_owner + 0xD8);
          index < *(s32 *)(saved_owner + 0x20);

@@ -1,62 +1,35 @@
+/* IJG libjpeg 6a jquant1.c: make_odither_array(). */
 #include "types.h"
 
-typedef struct ImageScaleContext ImageScaleContext;
+typedef u32 size_t;
+typedef struct jpeg_common_struct *j_common_ptr;
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
+typedef void *(*alloc_small_method)(j_common_ptr, s32, size_t);
+typedef s32 ODITHER_MATRIX[16][16];
+typedef s32 (*ODITHER_MATRIX_PTR)[16];
 
-typedef struct ImageScaleAllocator {
-    void *(*allocate)(ImageScaleContext *context, u32 count, u32 size);
-} ImageScaleAllocator;
+typedef struct jpeg_memory_mgr { alloc_small_method alloc_small; } jpeg_memory_mgr;
+struct jpeg_decompress_struct { void *err; jpeg_memory_mgr *mem; };
+struct jpeg_common_struct { void *err; jpeg_memory_mgr *mem; };
 
-struct ImageScaleContext {
-    u32 field0;
-    ImageScaleAllocator *allocator;
-};
+extern u8 D_80003418[16][16];
 
-extern u8 D_80003418[];
-
-s32 *func_8006056C(ImageScaleContext *context, s32 scale)
+ODITHER_MATRIX_PTR func_8006056C(j_decompress_ptr cinfo, s32 ncolors)
 {
-    register s32 denominator __asm__("$16");
-    s32 *table;
-    register s32 row __asm__("$9");
-    register s32 limit __asm__("$10");
-    register s32 *table_base __asm__("$11");
-    register s32 *output_row __asm__("$8");
-    register u8 *lookup_row __asm__("$7");
+    ODITHER_MATRIX_PTR odither;
+    s32 j;
+    s32 k;
+    s32 num;
+    s32 den;
 
-    denominator = scale;
-    table = context->allocator->allocate(context, 1, 0x400);
-    denominator = (denominator - 1) << 9;
-    row = 0;
-    limit = 255;
-    table_base = table;
-    output_row = table_base;
-    lookup_row = D_80003418;
-
-    do {
-        register s32 column __asm__("$6") = 0;
-        register s32 *output __asm__("$4") = output_row;
-        register u8 *lookup __asm__("$5") = lookup_row;
-
-        do {
-            register s32 value __asm__("$2");
-            register s32 shifted __asm__("$3");
-
-            value = limit - (*lookup << 1);
-            shifted = value << 8;
-            value = shifted - value;
-
-            if (value < 0) {
-                value = -(-value / denominator);
-            } else {
-                value /= denominator;
-            }
-            *output++ = value;
-            column++;
-            lookup++;
-        } while (column < 16);
-        output_row += 16;
-        row++;
-        lookup_row += 16;
-    } while (row < 16);
-    return table_base;
+    odither = (ODITHER_MATRIX_PTR)(*cinfo->mem->alloc_small)(
+        (j_common_ptr)cinfo, 1, sizeof(ODITHER_MATRIX));
+    den = 2 * 256 * (ncolors - 1);
+    for (j = 0; j < 16; j++) {
+        for (k = 0; k < 16; k++) {
+            num = (255 - 2 * (s32)D_80003418[j][k]) * 255;
+            odither[j][k] = num < 0 ? -((-num) / den) : num / den;
+        }
+    }
+    return odither;
 }

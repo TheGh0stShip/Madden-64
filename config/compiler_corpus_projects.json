@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "name": "madden-football-64",
+      "root": ".",
+      "image": "build/us/main_unpacked.z64",
+      "manifests": [
+        {"path": "config/us/matching_kmc_units.tsv", "compiler_family": "kmc-gcc", "compiler_version": "2.7.2-kmc", "assembler": "kmc-gas"},
+        {"path": "config/us/matching_ido_sources.tsv", "compiler_family": "ido", "compiler_version": "5.3", "assembler": "ido-as"}
+      ]
+    },
+    {
+      "name": "rugrats-scavenger-hunt",
+      "root": "../Rugrats64",
+      "image": "Rugrats - Scavenger Hunt (USA).z64",
+      "manifests": [
+        {"path": "config/us/matching_kmc_as_units.tsv", "compiler_family": "kmc-gcc", "compiler_version": "2.7.2-kmc", "assembler": "kmc-gas"},
+        {"path": "config/us/matching_ido_units.tsv", "compiler_family": "ido", "compiler_version": "5.3", "assembler": "ido-as"},
+        {"path": "config/us/matching_sn_units.tsv", "compiler_family": "sn-gcc", "compiler_version": "2.8-sn", "assembler": "asn64"}
+      ]
+    },
+    {
+      "name": "nagano-winter-olympics-98",
+      "root": "../nagano",
+      "image": "Nagano Winter Olympics '98 (USA).z64",
+      "manifests": [
+        {"path": "config/us/matching_kmc_as_units.tsv", "compiler_family": "kmc-gcc", "compiler_version": "2.7.2-kmc", "assembler": "kmc-gas"},
+        {"path": "config/us/matching_ido_units.tsv", "compiler_family": "ido", "compiler_version": "5.3", "assembler": "ido-as"},
+        {"path": "config/us/matching_ido7_units.tsv", "compiler_family": "ido", "compiler_version": "7.1", "assembler": "ido-as"}
+      ]
+    },
+    {
+      "name": "battletanx",
+      "root": "../BattleTanx",
+      "image": "baseroms/us/baserom.z64",
+      "manifests": [
+        {"path": "config/us/matching_kmc_units.tsv", "compiler_family": "kmc-gcc", "compiler_version": "2.7.2-kmc", "assembler": "kmc-gas"},
+        {"path": "config/us/matching_sn_units.tsv", "compiler_family": "sn-gcc", "compiler_version": "2.8-sn", "assembler": "asn64"}
+      ]
+    },
+    {
+      "name": "south-park-eu",
+      "root": "${DECOMP_RESEARCH}/upstreams/south-park-decomp",
+      "format": "decompdecomp",
+      "metadata": "decompdecomp.json",
+      "sources": "src",
+      "common_header": "include/common.h",
+      "exclude_functions": ["func_80276CA0", "func_8028E9E0", "func_80406968"]
+    }
+  ]
+}

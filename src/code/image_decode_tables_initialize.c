@@ -1,65 +1,46 @@
+/* IJG libjpeg 6a jdcolor.c: build_ycc_rgb_table(). */
 #include "types.h"
 
-typedef struct ImageTableContext ImageTableContext;
+typedef u32 size_t;
+typedef struct jpeg_common_struct *j_common_ptr;
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
+typedef void *(*alloc_small_method)(j_common_ptr, s32, size_t);
 
-typedef struct ImageTableAllocator {
-    void *(*allocate)(ImageTableContext *context, u32 count, u32 size);
-} ImageTableAllocator;
-
-typedef struct ImageDecodeTables {
-    void (*entry)(void);
-    void (*handler)(void);
-    s32 *table0;
-    s32 *table1;
-    s32 *table2;
-    s32 *table3;
-} ImageDecodeTables;
-
-struct ImageTableContext {
-    u32 field0;
-    ImageTableAllocator *allocator;
-    u8 pad08[0x1BC];
-    ImageDecodeTables *tables;
+typedef struct jpeg_memory_mgr { alloc_small_method alloc_small; } jpeg_memory_mgr;
+typedef struct {
+    void *pub[2];
+    s32 *Cr_r_tab;
+    s32 *Cb_b_tab;
+    s32 *Cr_g_tab;
+    s32 *Cb_g_tab;
+} my_color_deconverter;
+struct jpeg_decompress_struct {
+    void *err;
+    jpeg_memory_mgr *mem;
+    u8 pad008[0x1BC];
+    my_color_deconverter *cconvert;
 };
+struct jpeg_common_struct { void *err; jpeg_memory_mgr *mem; };
 
-void func_8005F868(ImageTableContext *context)
+void func_8005F868(j_decompress_ptr cinfo)
 {
-    register ImageTableContext *saved_context __asm__("$16") = context;
-    register ImageDecodeTables *tables __asm__("$17") = context->tables;
-    register s32 index __asm__("$7");
-    register u32 value0 __asm__("$8");
-    register u32 value1 __asm__("$9");
-    register u32 value2 __asm__("$10");
-    register u32 value3 __asm__("$11");
-    register s32 *last_table __asm__("$2");
+    my_color_deconverter *cconvert = cinfo->cconvert;
+    s32 i;
+    s32 x;
 
-    tables->table0 = saved_context->allocator->allocate(saved_context, 1, 0x400);
-    tables->table1 = saved_context->allocator->allocate(saved_context, 1, 0x400);
-    tables->table2 = saved_context->allocator->allocate(saved_context, 1, 0x400);
-    last_table = saved_context->allocator->allocate(saved_context, 1, 0x400);
-    index = 0;
-    value3 = 0x002C8D00;
-    value2 = 0x005B6900;
-    value1 = 0xFF1DAF00;
-    value0 = 0xFF4D0B80;
-    tables->table3 = last_table;
+    cconvert->Cr_r_tab = (s32 *)(*cinfo->mem->alloc_small)(
+        (j_common_ptr)cinfo, 1, 256 * sizeof(s32));
+    cconvert->Cb_b_tab = (s32 *)(*cinfo->mem->alloc_small)(
+        (j_common_ptr)cinfo, 1, 256 * sizeof(s32));
+    cconvert->Cr_g_tab = (s32 *)(*cinfo->mem->alloc_small)(
+        (j_common_ptr)cinfo, 1, 256 * sizeof(s32));
+    cconvert->Cb_g_tab = (s32 *)(*cinfo->mem->alloc_small)(
+        (j_common_ptr)cinfo, 1, 256 * sizeof(s32));
 
-    do {
-        register u32 offset __asm__("$4") = index * 4;
-        register u32 value2_step __asm__("$6") = 0xFFFF492E;
-        register u32 value1_step __asm__("$5") = 0x1C5A2;
-        register u32 value0_step __asm__("$3") = 0x166E9;
-
-        __asm__("" : "=r"(offset) : "0"(offset));
-        index++;
-        __asm__("" : "=r"(index) : "0"(index));
-        *(s32 *)(offset + (u32)tables->table0) = (s32)value0 >> 16;
-        *(s32 *)(offset + (u32)tables->table1) = (s32)value1 >> 16;
-        value1 += value1_step;
-        *(s32 *)(offset + (u32)tables->table2) = value2;
-        value0 += value0_step;
-        value2 += value2_step;
-        *(s32 *)(offset + (u32)tables->table3) = value3;
-        value3 -= 0x581A;
-    } while (index < 0x100);
+    for (i = 0, x = -128; i <= 255; i++, x++) {
+        cconvert->Cr_r_tab[i] = (91881 * x + 32768) >> 16;
+        cconvert->Cb_b_tab[i] = (116130 * x + 32768) >> 16;
+        cconvert->Cr_g_tab[i] = -46802 * x;
+        cconvert->Cb_g_tab[i] = -22554 * x + 32768;
+    }
 }

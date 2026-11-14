@@ -6,6 +6,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import re
 import struct
 import tomllib
 from collections import Counter
@@ -81,6 +82,19 @@ COMMON_IMMEDIATES = {
     0, 1, 2, 3, 4, 8, 0x10, 0x18, 0x20, 0x28, 0x30, 0x38, 0x40,
     0xFF, 0xFFFF, 0x8000,
 }
+ANY_ASM = re.compile(r"\b(?:__asm__|asm)\b|\.incbin\b")
+GENERIC_NORMALIZERS = {
+    "--normalizer-enable-KMC-ABS-SYM-PAIR", "--normalizer-enable-KMC-FP-PAIR-WORDS",
+    "--normalizer-enable-KMC-LID-ALIGN4", "--normalizer-enable-KMC-LID-PAIR",
+    "--normalizer-enable-KMC-LID-PAD4",
+}
+
+
+def genuine_c(source: str, flags: str) -> bool:
+    path = ROOT / source
+    return (path.is_file() and not ANY_ASM.search(path.read_text()) and
+            not any(token.startswith("--normalizer-enable-") and token not in GENERIC_NORMALIZERS
+                    for token in flags.split()))
 
 
 def manifest_ranges(paths: tuple[str, ...], suffix: str = ".c") -> list[tuple[int, int, str]]:
@@ -92,6 +106,8 @@ def manifest_ranges(paths: tuple[str, ...], suffix: str = ".c") -> list[tuple[in
                 if not row or not row[0].startswith("0x"):
                     continue
                 if not row[2].endswith(suffix):
+                    continue
+                if suffix == ".c" and not genuine_c(row[2], row[3] if len(row) >= 4 else ""):
                     continue
                 start, size = int(row[0], 0), int(row[1], 0)
                 ranges.append((start, start + size, row[2]))
@@ -148,7 +164,7 @@ def normalize_word(word: int) -> int:
     return word & 0xFC000000
 
 
-def signatures(blob: bytes) -> dict[str, object]:
+def signatures(blob: bytes, vram: int = 0) -> dict[str, object]:
     words = struct.unpack(f">{len(blob) // 4}I", blob)
     opcodes = [opcode_name(word) for word in words]
     normalized = b"".join(struct.pack(">I", normalize_word(word))
@@ -160,6 +176,22 @@ def signatures(blob: bytes) -> dict[str, object]:
     calls = sum(1 for word in words if word >> 26 == 3)
     branches = sum(1 for word in words
                    if word >> 26 in (1, 4, 5, 6, 7, 0x14, 0x15))
+    direct_calls = [
+        f"0x{(((vram + index * 4 + 4) & 0xF0000000) | ((word & 0x3FFFFFF) << 2)):08X}"
+        for index, word in enumerate(words) if word >> 26 == 3
+    ]
+    leaders = {0}; cfg_edges = set(); backward_edges = 0
+    for index, word in enumerate(words):
+        if word >> 26 in (1, 4, 5, 6, 7, 0x14, 0x15):
+            displacement = word & 0xFFFF
+            displacement -= 0x10000 if displacement & 0x8000 else 0
+            target = index + 1 + displacement
+            if 0 <= target < len(words):
+                leaders.add(target); cfg_edges.add((index, target))
+                backward_edges += target <= index
+            if index + 1 < len(words):
+                leaders.add(index + 1); cfg_edges.add((index, index + 1))
+    ends_return = len(words) >= 2 and words[-2] == 0x03E00008
     return {
         "sha256": hashlib.sha256(blob).hexdigest(),
         "normalized_sha256": hashlib.sha256(normalized).hexdigest(),
@@ -169,6 +201,11 @@ def signatures(blob: bytes) -> dict[str, object]:
         "rare_immediates": [f"0x{value:X}" for value in rare],
         "calls": calls,
         "branches": branches,
+        "direct_calls": direct_calls,
+        "cfg": {"blocks": len(leaders), "edges": len(cfg_edges),
+                "backward_edges": backward_edges},
+        "boundary_confidence": "high" if ends_return else "medium",
+        "boundary_kind": "return-terminated" if ends_return else "catalogue-span",
     }
 
 
@@ -196,7 +233,7 @@ def catalogue_module(spec: dict[str, object]) -> list[dict[str, object]]:
                 "matched": matched,
                 "matching_source": source,
             }
-            entry.update(signatures(blob))
+            entry.update(signatures(blob, vram))
             if not matched:
                 constants = " ".join(entry["rare_immediates"][:3])
                 opcodes = " ".join(entry["opcode_prefix"][:8])
@@ -229,7 +266,7 @@ def loader_catalogue() -> list[dict[str, object]]:
             "vram": f"0x{vram:08X}", "image_offset": f"0x{start:X}",
             "size": size, "matched": matched, "matching_source": source,
         }
-        entry.update(signatures(image[start:start + size]))
+        entry.update(signatures(image[start:start + size], vram))
         if not matched:
             constants = " ".join(entry["rare_immediates"][:3])
             opcodes = " ".join(entry["opcode_prefix"][:8])

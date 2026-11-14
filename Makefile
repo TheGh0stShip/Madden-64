@@ -1,5 +1,5 @@
 PYTHON ?= python3
-N64DK_ROOT ?= /home/steve/projects/n64-decomp-kit
+N64DK_ROOT ?= ../n64-decomp-kit
 N64DK_PYTHON ?= $(N64DK_ROOT)/.venv/bin/python
 N64DK := PYTHONPATH=$(N64DK_ROOT) $(N64DK_PYTHON) -m n64dk
 ROM ?= Madden Football 64 (USA).z64

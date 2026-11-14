@@ -5,11 +5,11 @@ extern u32 func_8003FF30(const u16 *entry, u16 value);
 
 u32 audio_mapping_lookup(u16 key, u32 value)
 {
-    register u32 saved_value __asm__("$18") = value;
-    register u32 saved_key __asm__("$17");
-    register u32 index __asm__("$16");
-    register u32 result __asm__("$6");
-    register u16 *table __asm__("$5") = D_800740C4;
+    u32 saved_value = value;
+    u32 saved_key;
+    u32 index;
+    u32 result;
+    u16 *table = D_800740C4;
 
     result = 11;
     index = 0;

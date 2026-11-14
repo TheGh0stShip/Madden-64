@@ -1,0 +1,19 @@
+address	kind	function	detail
+0x800908B8	false_split	func_800908B8	8-byte signed global load belongs to the body formerly catalogued at 0x800908C0; the loaded v0 is tested at 0x800908E0, and multiple exact C units use 0x800908B8 as the runtime callback/mode entry
+0x8008E074	false_split	func_8008E074	8-byte global load belongs to the body formerly catalogued at 0x8008E07C; two direct calls target 0x8008E074 and none target 0x8008E07C
+0x8008EE88	false_split	func_8008EE88	8-byte global load belongs to the body formerly catalogued at 0x8008EE90; the direct call targets 0x8008EE88 and none target 0x8008EE90
+0x800928C8	false_split	func_800928C8	8-byte global load belongs to the body formerly catalogued at 0x800928D0; the direct call targets 0x800928C8 and none target 0x800928D0
+0x8009CDAC	false_split	func_8009CDAC	8-byte global load belongs to the body formerly catalogued at 0x8009CDB4; four direct calls target 0x8009CDAC and none target 0x8009CDB4
+0x8009D710	false_split	func_8009D710	8-byte global load belongs to the body formerly catalogued at 0x8009D718; two direct calls target 0x8009D710 and none target 0x8009D718
+0x8009D82C	false_split	func_8009D82C	8-byte global load belongs to the body formerly catalogued at 0x8009D834; two direct calls target 0x8009D82C and none target 0x8009D834
+0x8009D948	false_split	func_8009D948	8-byte global load belongs to the body formerly catalogued at 0x8009D950; the direct call targets 0x8009D948 and none target 0x8009D950
+0x8009DA6C	false_split	func_8009DA6C	12-byte argument/global setup belongs to the body formerly catalogued at 0x8009DA78; the direct call targets 0x8009DA6C and none target 0x8009DA78
+0x800A17C8	false_split	func_800A17C8	16-byte global setup belongs to the body formerly catalogued at 0x800A17D8; the direct call targets 0x800A17C8 and none target 0x800A17D8
+0x800AA6EC	false_split	func_800AA6EC	8-byte global load belongs to the body formerly catalogued at 0x800AA6F4; three direct calls target 0x800AA6EC and none target 0x800AA6F4
+0x800B9FF4	false_split	func_800B9FF4	8-byte global load belongs to the body formerly catalogued at 0x800B9FFC; the direct call targets 0x800B9FF4 and none target 0x800B9FFC
+0x800BA114	false_split	func_800BA114	8-byte global load belongs to the body formerly catalogued at 0x800BA11C; the direct call targets 0x800BA114 and none target 0x800BA11C
+0x800BA254	false_split	func_800BA254	8-byte global load belongs to the body formerly catalogued at 0x800BA25C; the direct call targets 0x800BA254 and none target 0x800BA25C
+0x800BA3FC	false_split	func_800BA3FC	8-byte global load belongs to the body formerly catalogued at 0x800BA404; the direct call targets 0x800BA3FC and none target 0x800BA404
+0x800BA6F0	false_split	func_800BA6F0	8-byte global load belongs to the body formerly catalogued at 0x800BA6F8; the direct call targets 0x800BA6F0 and none target 0x800BA6F8
+0x800BAD04	false_split	func_800BAD04	8-byte global load belongs to the body formerly catalogued at 0x800BAD0C; the direct call targets 0x800BAD04 and none target 0x800BAD0C
+0x800BAE88	false_split	func_800BAE88	8-byte global load belongs to the body formerly catalogued at 0x800BAE90; the direct call targets 0x800BAE88 and none target 0x800BAE90

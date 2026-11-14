@@ -1,41 +1,47 @@
+/* IJG libjpeg 6a jdsample.c: h2v2_upsample(). */
 #include "types.h"
 
-extern void func_80063250(void **sources, s32 source_index,
-                          void **destinations, s32 destination_index,
-                          s32 count, u32 size);
+typedef u8 JSAMPLE;
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+typedef u32 JDIMENSION;
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
+typedef struct jpeg_component_info jpeg_component_info;
+struct jpeg_decompress_struct {
+    u8 pad000[0x70];
+    JDIMENSION output_width;
+    u8 pad074[0xC0];
+    s32 max_v_samp_factor;
+};
 
-void image_rows_expand_horizontal(u8 *state, void *unused, u8 **sources,
-                                  u8 ***destination_tables)
+extern void func_80063250(JSAMPARRAY, s32, JSAMPARRAY, s32, s32, JDIMENSION);
+
+void image_rows_expand_horizontal(j_decompress_ptr cinfo,
+                                  jpeg_component_info *compptr,
+                                  JSAMPARRAY input_data,
+                                  JSAMPARRAY *output_data_ptr)
 {
-    register u8 *saved_state = state;
-    register u8 **source;
-    register u8 **destinations = *destination_tables;
-    register u8 **destination;
-    register s32 index;
-    register s32 one;
-    volatile u64 padding;
-    (void)unused;
-    if (*(s32 *)(saved_state + 0x134) > 0) {
-      index = 0;
-      one = 1;
-      destination = destinations;
-      source = sources;
-      do {
-        u8 *output = *destination;
-        u8 *end = output + *(s32 *)(saved_state + 0x70);
-        u8 *input = *source;
+    JSAMPARRAY output_data = *output_data_ptr;
+    register JSAMPROW inptr;
+    register JSAMPROW outptr;
+    register JSAMPLE invalue;
+    JSAMPROW outend;
+    s32 inrow;
+    s32 outrow;
 
-        while (output < end) {
-            u8 value = *input++;
-            *output++ = value;
-            *output++ = value;
+    inrow = outrow = 0;
+    while (outrow < cinfo->max_v_samp_factor) {
+        inptr = input_data[inrow];
+        outptr = output_data[outrow];
+        outend = outptr + cinfo->output_width;
+        while (outptr < outend) {
+            invalue = *inptr++;
+            *outptr++ = invalue;
+            *outptr++ = invalue;
         }
-        source++;
-        func_80063250((void **)destinations, index,
-                      (void **)destinations, index + 1,
-                      one, *(u32 *)(saved_state + 0x70));
-        index += 2;
-        destination += 2;
-      } while (index < *(s32 *)(saved_state + 0x134));
+        func_80063250(output_data, outrow, output_data, outrow + 1, 1,
+                      cinfo->output_width);
+        inrow++;
+        outrow += 2;
     }
 }

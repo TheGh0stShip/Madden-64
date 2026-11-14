@@ -1,119 +1,74 @@
+/* IJG libjpeg 6a jquant1.c: select_ncolors(). */
 #include "types.h"
 
-typedef struct ImageTableFinalizeContext ImageTableFinalizeContext;
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
+typedef struct jpeg_common_struct *j_common_ptr;
 
-typedef struct ImageTableEvent {
-    void (*dispatch)(ImageTableFinalizeContext *context);
-    u8 pad04[0x10];
-    u32 type;
-    u32 value;
-} ImageTableEvent;
+typedef struct jpeg_error_mgr {
+    void (*error_exit)(j_common_ptr cinfo);
+    void *other[4];
+    s32 msg_code;
+    union { s32 i[8]; char s[80]; } msg_parm;
+} jpeg_error_mgr;
 
-struct ImageTableFinalizeContext {
-    ImageTableEvent *event;
+struct jpeg_decompress_struct {
+    jpeg_error_mgr *err;
     u8 pad004[0x24];
-    s32 mode;
+    s32 out_color_space;
     u8 pad02C[0x34];
-    s32 capacity;
+    s32 desired_number_of_colors;
     u8 pad064[0x14];
-    s32 dimensions;
+    s32 out_color_components;
 };
+struct jpeg_common_struct { jpeg_error_mgr *err; };
 
-extern s32 D_80003518[];
+extern const s32 D_80003518[3];
 
-s32 image_table_finalize(ImageTableFinalizeContext *context, s32 *sizes)
+s32 image_table_finalize(j_decompress_ptr cinfo, s32 Ncolors[])
 {
-    register ImageTableFinalizeContext *saved_context __asm__("$18") = context;
-    register s32 *saved_sizes __asm__("$20") = sizes;
-    register s32 dimensions __asm__("$17") = context->dimensions;
-    register s32 capacity __asm__("$19") = context->capacity;
-    register s32 root __asm__("$16");
-    register s32 power __asm__("$5");
-    register s32 i __asm__("$4");
-    register s32 product __asm__("$9");
-    register s32 mode_two __asm__("$10");
-    register s32 *permutation __asm__("$11");
-    u32 stack_padding;
+    s32 nc = cinfo->out_color_components;
+    s32 max_colors = cinfo->desired_number_of_colors;
+    s32 total_colors;
+    s32 iroot;
+    s32 i;
+    s32 j;
+    s32 changed;
+    s32 temp;
 
-    __asm__("" : : "m"(stack_padding));
-    root = 1;
-    __asm__("" : "=r"(root) : "0"(root));
-    power = root + 1;
-
+    iroot = 1;
     do {
-        root = power;
-        i = 1;
-        while (i < dimensions) {
-            power *= root;
-            i++;
-        }
-        if (capacity < power) {
-            break;
-        }
-        power = root + 1;
-    } while (1);
+        iroot++;
+        temp = iroot;
+        for (i = 1; i < nc; i++)
+            temp *= iroot;
+    } while (temp <= max_colors);
+    iroot--;
 
-    root--;
-    if (root < 2) {
-        saved_context->event->type = 0x37;
-        saved_context->event->value = power;
-        saved_context->event->dispatch(saved_context);
+    if (iroot < 2) {
+        cinfo->err->msg_code = 0x37;
+        cinfo->err->msg_parm.i[0] = temp;
+        (*cinfo->err->error_exit)((j_common_ptr)cinfo);
     }
 
-    product = 1;
-    i = 0;
-    if (dimensions > 0) {
-        s32 *cursor = sizes;
-
-        do {
-            *cursor = root;
-            i++;
-            product *= root;
-            cursor++;
-        } while (i < dimensions);
+    total_colors = 1;
+    for (i = 0; i < nc; i++) {
+        Ncolors[i] = iroot;
+        total_colors *= iroot;
     }
 
-    mode_two = 2;
-    permutation = D_80003518;
-    __asm__("" : "=r"(permutation) : "0"(permutation));
-    i = 0;
     do {
-        register s32 changed __asm__("$8") = 0;
-        register s32 *permutation_cursor __asm__("$7");
-
-        permutation_cursor = permutation;
-        if (dimensions > 0) {
-          do {
-            register s32 index __asm__("$2");
-            register s32 *slot __asm__("$6");
-            register s32 next __asm__("$3");
-            register s32 next_product __asm__("$5");
-
-            if (saved_context->mode == mode_two) {
-                index = *permutation_cursor;
-                slot = &sizes[index];
-            } else {
-                index = i;
-                slot = &sizes[index];
-            }
-            next = *slot + 1;
-            next_product = (product / *slot) * next;
-
-            if (capacity < next_product) {
+        changed = 0;
+        for (i = 0; i < nc; i++) {
+            j = (cinfo->out_color_space == 2 ? D_80003518[i] : i);
+            temp = total_colors / Ncolors[j];
+            temp *= Ncolors[j] + 1;
+            if (temp > max_colors)
                 break;
-            }
-            *slot = next;
-            product = next_product;
+            Ncolors[j]++;
+            total_colors = temp;
             changed = 1;
-            permutation_cursor++;
-            i++;
-          } while (i < dimensions);
         }
-        if (!changed) {
-            break;
-        }
-        i = 0;
-    } while (1);
+    } while (changed);
 
-    return product;
+    return total_colors;
 }

@@ -16,11 +16,11 @@ from pathlib import Path
 import gpu_function_retrieval as base
 
 
-def dense(items, device):
+def dense(items, device, address_lookup):
     import torch
     out = torch.zeros((len(items), base.BUCKETS), dtype=torch.float16, device=device)
-    for row, (_, blob) in enumerate(items):
-        features = base.feature_indices(blob)
+    for row, (entry, blob) in enumerate(items):
+        features = base.contextual_features(entry, blob, address_lookup)
         cols = list(features)
         out[row, cols] = torch.tensor(list(features.values()), dtype=torch.float16,
                                       device=device)
@@ -51,8 +51,12 @@ def main() -> int:
     donors = [(e, b) for e, b in rows
               if e["matched"] and e.get("matching_source") in eligible]
     queries = [(e, b) for e, b in rows if not e["matched"]]
+    address_lookup = {
+        int(e["vram"], 0) if isinstance(e["vram"], str) else int(e["vram"]): e
+        for e, _ in rows
+    }
     device = torch.device("cuda")
-    dm, qm = dense(donors, device), dense(queries, device)
+    dm, qm = dense(donors, device, address_lookup), dense(queries, device, address_lookup)
     counts = torch.zeros((len(queries), len(donors)), dtype=torch.int16, device=device)
     sums = torch.zeros_like(counts, dtype=torch.float32)
     sums2 = torch.zeros_like(sums)

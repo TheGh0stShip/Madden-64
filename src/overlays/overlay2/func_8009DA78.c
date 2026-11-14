@@ -15,13 +15,14 @@ extern s16 D_800892B4;
 extern s16 D_800892B6;
 extern s16 D_80087A92;
 extern s16 D_8008A5B0;
+extern s8 D_800C4AD3;
 
 Slot *func_8009D69C(s32, s32);
 void func_80024F5C(void);
 
-void func_8009DA78(s32 team, s32 index) {
+void func_8009DA6C(s32 index) {
     ValueMap map = { "\x05\x0A\x00\x08\x0B\x0D\x0E\x11\x1C" };
-    Slot *slot = func_8009D69C(team, index);
+    Slot *slot = func_8009D69C(D_800C4AD3, index);
     u8 second;
     s32 first;
     volatile u8 *base;

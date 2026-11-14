@@ -15,20 +15,19 @@ extern void func_8004BDB8(void *state, s32 second, s32 third, void *source,
 
 void audio_channel_finalize(u8 *channel)
 {
-    register void **buffers __asm__("$16") = D_8008B348;
-    register s32 *active __asm__("$17") = D_80084F60;
-    register s32 initial __asm__("$3") = D_8008B650;
-    register s32 render_index __asm__("$2");
-    register s32 next __asm__("$4");
-    register void *buffer __asm__("$5");
-    register void *source __asm__("$7");
-    register u32 release_address __asm__("$4");
+    void **buffers = D_8008B348;
+    s32 *active = D_80084F60;
+    s32 initial = D_8008B650;
+    s32 render_index;
+    s32 next;
+    void *buffer;
+    void *source;
+    u32 release_address;
     u8 *entry;
     u8 value;
 
     *(void **)(channel + 0x14) = buffers[initial];
     initial ^= 1;
-    __asm__("" : "=r"(initial) : "0"(initial));
     if (active[initial] != 0) {
         release_address = initial << 1;
         release_address += initial;
@@ -46,12 +45,10 @@ void audio_channel_finalize(u8 *channel)
                   buffers[render_index], 0xFF6,
                   D_800885F0 + render_index * 0x18);
 
-    next = D_8008B650;
-    active[next] = 1;
-    next ^= 1;
-    buffer = buffers[next];
+    active[D_8008B650] = 1;
+    next = D_8008B650 ^ 1;
+    entry = buffers[next];
     D_8008B650 = next;
-    entry = (u8 *)buffer;
     value = entry[0xFED];
     if ((value & 1) == 0) {
         entry[0xFED] = value | 2;

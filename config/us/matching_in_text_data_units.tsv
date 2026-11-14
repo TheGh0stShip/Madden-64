@@ -1,0 +1,3 @@
+# Initialized data embedded inside executable images. MODULE SOURCE SECTION VRAM SIZE SHA256 CREDITED_BYTES
+# Verified separately with: tools/verify_data.py config/us/matching_in_text_data_units.tsv
+resident	src/data/resident/in_text_overlay_load_records.c	.data	0x800420A0	0x10	8782ae56bbb0850683991020afc6b5fbe120336b4ea9d7919ba6dc8f94792361	16

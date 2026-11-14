@@ -8,11 +8,12 @@ u16 transformed_points_outside_count(void *first, void *second, s16 *bounds,
 {
     s32 points[8][4];
     s32 transformed[32];
-    register u16 outside __asm__("$7");
-    register u16 index __asm__("$6");
-    register s32 value __asm__("$4");
-    register s32 coordinate __asm__("$2");
-    register s32 less __asm__("$3");
+    s32 value;
+    s32 outside;
+    s32 sum;
+    u16 index;
+    s32 coordinate;
+    s32 less;
     s32 *point;
 
     func_80043488(transformed, first, second);
@@ -21,7 +22,8 @@ u16 transformed_points_outside_count(void *first, void *second, s16 *bounds,
     outside = 0;
     index = 0;
     do {
-        point = (s32 *)((index & 0xFFFF) * 16 + (u32)points);
+        coordinate = (index & 0xFFFF) * 16;
+        point = (s32 *)(coordinate + (u32)points);
         coordinate = point[0];
         less = coordinate < bounds[0];
         coordinate = bounds[1] < coordinate;
@@ -44,7 +46,8 @@ vertical_min_done:
         value |= 1;
 vertical_max_done:
         index++;
-        outside = value + outside;
+        sum = value + outside;
+        outside = sum;
     } while (index < 8);
 
     return outside;

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Desktop permutation farm job",
+  "type": "object",
+  "required": ["id", "source", "destination", "module", "vram", "size", "function", "target_function", "flags"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+$"},
+    "source": {"type": "string"},
+    "destination": {"type": "string"},
+    "module": {"enum": ["resident", "overlay_1", "overlay_2", "overlay_4", "overlay_5"]},
+    "vram": {"type": "string"},
+    "size": {"type": "string"},
+    "function": {"type": "string"},
+    "target_function": {"type": "string"},
+    "pipeline": {"enum": ["kmc+builtin", "kmc+asn64", "kmc+as", "ido5.3", "ido7.1", "sn"]},
+    "flags": {"type": "string"},
+    "iterations": {"type": "integer", "minimum": 1},
+    "max_mutations": {"type": "integer", "minimum": 1},
+    "temperature": {"type": "number", "exclusiveMinimum": 0},
+    "seeds": {"type": "array", "minItems": 1, "items": {"type": "integer"}}
+    ,"donor": {"type": "object"}
+  },
+  "additionalProperties": false
+}

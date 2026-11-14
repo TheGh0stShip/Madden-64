@@ -87,7 +87,7 @@ def verify(row: dict[str, str], n64dk_root: Path) -> tuple[bool, str]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("manifest", nargs="?", default=str(ROOT / "config/us/matching_data_units.tsv"))
-    parser.add_argument("--n64dk", default="/home/steve/projects/n64-decomp-kit")
+    parser.add_argument("--n64dk", default=str(ROOT.parent / "n64-decomp-kit"))
     args = parser.parse_args()
     ok_all = True
     total = credited = 0

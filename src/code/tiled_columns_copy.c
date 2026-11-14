@@ -1,48 +1,40 @@
+/* IJG libjpeg 6a jdcolor.c: null_convert(). */
 #include "types.h"
 
-void tiled_columns_copy(u8 *object, u8 ***sources, s32 plane,
-                        u8 **destinations, s32 plane_count)
-{
-    register s32 planes = plane_count;
-    register s32 columns = *(s32 *)(object + 0x20);
-    register s32 rows = *(s32 *)(object + 0x70);
-    register s32 column;
-    register u32 source_offset;
-    register u8 ***source_pointer;
-    register u8 *source;
-    register s32 remaining;
-    register u8 *destination;
-    u8 value;
-    volatile u64 unused;
+typedef u8 JSAMPLE;
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+typedef JSAMPARRAY *JSAMPIMAGE;
+typedef u32 JDIMENSION;
+typedef struct jpeg_decompress_struct *j_decompress_ptr;
+struct jpeg_decompress_struct {
+    u8 pad000[0x20];
+    s32 num_components;
+    u8 pad024[0x4C];
+    JDIMENSION output_width;
+};
 
-    planes--;
-    if (planes < 0) {
-        return;
-    }
-    do {
-        column = 0;
-        if (columns > 0) {
-            source_offset = plane << 2;
-            source_pointer = sources;
-            do {
-                source = *(u8 **)((u8 *)source_offset +
-                                  (u32)*source_pointer);
-                remaining = rows;
-                destination = *destinations + column;
-                if (remaining != 0) {
-                    do {
-                        value = *source++;
-                        remaining--;
-                        *destination = value;
-                        destination += columns;
-                    } while (remaining != 0);
-                }
-                column++;
-                source_pointer++;
-            } while (column < columns);
+void tiled_columns_copy(j_decompress_ptr cinfo, JSAMPIMAGE input_buf,
+                        JDIMENSION input_row, JSAMPARRAY output_buf,
+                        s32 num_rows)
+{
+    register JSAMPROW inptr;
+    register JSAMPROW outptr;
+    register JDIMENSION count;
+    register s32 num_components = cinfo->num_components;
+    JDIMENSION num_cols = cinfo->output_width;
+    s32 ci;
+
+    while (--num_rows >= 0) {
+        for (ci = 0; ci < num_components; ci++) {
+            inptr = input_buf[ci][input_row];
+            outptr = output_buf[0] + ci;
+            for (count = num_cols; count > 0; count--) {
+                *outptr = *inptr++;
+                outptr += num_components;
+            }
         }
-        plane++;
-        planes--;
-        destinations++;
-    } while (planes >= 0);
+        input_row++;
+        output_buf++;
+    }
 }

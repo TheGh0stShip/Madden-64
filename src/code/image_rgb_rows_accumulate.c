@@ -1,79 +1,68 @@
+/* IJG libjpeg 6a jquant1.c: quantize3_ord_dither(). */
 #include "types.h"
 
-typedef struct ImageRgbAccumulateState {
-    u8 pad00[0x18];
-    u8 **clamp_tables;
-    u8 pad1C[0x14];
-    u32 phase;
-    s32 *red_offsets;
-    s32 *green_offsets;
-    s32 *blue_offsets;
-} ImageRgbAccumulateState;
+typedef u32 JDIMENSION;
+typedef u8 JSAMPLE;
+typedef JSAMPLE *JSAMPROW;
+typedef JSAMPROW *JSAMPARRAY;
+typedef s32 ODITHER_MATRIX[16][16];
+typedef s32 (*ODITHER_MATRIX_PTR)[16];
 
-typedef struct ImageRgbAccumulateContext {
+typedef struct {
+    void *pub[4];
+    JSAMPARRAY sv_colormap;
+    s32 sv_actual;
+    JSAMPARRAY colorindex;
+    s32 is_padded;
+    s32 Ncolors[4];
+    s32 row_index;
+    ODITHER_MATRIX_PTR odither[4];
+    s16 *fserrors[4];
+    s32 on_odd_row;
+} my_cquantizer;
+typedef struct {
     u8 pad000[0x70];
-    s32 width;
+    JDIMENSION output_width;
     u8 pad074[0x154];
-    ImageRgbAccumulateState *state;
-} ImageRgbAccumulateContext;
+    my_cquantizer *cquantize;
+} jpeg_decompress_struct;
+typedef jpeg_decompress_struct *j_decompress_ptr;
 
-void func_8006099C(
-    ImageRgbAccumulateContext *context,
-    u8 **input_rows,
-    u8 **output_rows,
-    s32 row_count)
+void func_8006099C(j_decompress_ptr cinfo, JSAMPARRAY input_buf,
+                   JSAMPARRAY output_buf, s32 num_rows)
 {
-    register s32 remaining_rows __asm__("$21");
-    ImageRgbAccumulateState *state;
-    u8 **clamp_tables;
-    register s32 width __asm__("$22");
-    register u8 *red_clamp __asm__("$20");
-    register u8 *green_clamp __asm__("$19");
-    register u8 *blue_clamp __asm__("$18");
-    register u8 **saved_output_rows __asm__("$17");
-    register u8 **saved_input_rows __asm__("$16");
-    register s32 row __asm__("$14");
-    u64 stack_padding;
+    my_cquantizer *cquantize = cinfo->cquantize;
+    register s32 pixcode;
+    register JSAMPROW input_ptr;
+    register JSAMPROW output_ptr;
+    JSAMPROW colorindex0 = cquantize->colorindex[0];
+    JSAMPROW colorindex1 = cquantize->colorindex[1];
+    JSAMPROW colorindex2 = cquantize->colorindex[2];
+    s32 *dither0;
+    s32 *dither1;
+    s32 *dither2;
+    s32 row_index, col_index;
+    s32 row;
+    JDIMENSION col;
+    JDIMENSION width = cinfo->output_width;
 
-    __asm__("" : : "m"(stack_padding));
-    state = context->state;
-    remaining_rows = row_count;
-    __asm__("" : "=r"(remaining_rows) : "0"(remaining_rows));
-    clamp_tables = state->clamp_tables;
-    width = context->width;
-    red_clamp = clamp_tables[0];
-    green_clamp = clamp_tables[1];
-    blue_clamp = clamp_tables[2];
-    if (remaining_rows > 0) {
-        row = 0;
-        saved_output_rows = output_rows;
-        saved_input_rows = input_rows;
-      do {
-        u32 phase = state->phase;
-        u8 *input = *saved_input_rows;
-        u8 *output = *saved_output_rows;
-        u32 position = 0;
-        s32 remaining = width;
-        s32 *red_offsets = state->red_offsets + phase * 16;
-        s32 *green_offsets = state->green_offsets + phase * 16;
-        s32 *blue_offsets = state->blue_offsets + phase * 16;
+    for (row = 0; row < num_rows; row++) {
+        row_index = cquantize->row_index;
+        input_ptr = input_buf[row];
+        output_ptr = output_buf[row];
+        dither0 = cquantize->odither[0][row_index];
+        dither1 = cquantize->odither[1][row_index];
+        dither2 = cquantize->odither[2][row_index];
+        col_index = 0;
 
-        while (remaining != 0) {
-            register u32 red __asm__("$4") = *input++;
-            register u32 green __asm__("$5") = *input++;
-            register u32 blue __asm__("$7") = *input++;
-
-            *output++ = red_clamp[red + red_offsets[position]] +
-                green_clamp[green + green_offsets[position]] +
-                blue_clamp[blue + blue_offsets[position]];
-            position = (position + 1) & 15;
-            remaining--;
+        for (col = width; col > 0; col--) {
+            pixcode = colorindex0[*input_ptr++ + dither0[col_index]];
+            pixcode += colorindex1[*input_ptr++ + dither1[col_index]];
+            pixcode += colorindex2[*input_ptr++ + dither2[col_index]];
+            *output_ptr++ = (JSAMPLE)pixcode;
+            col_index = (col_index + 1) & 15;
         }
-        phase = (phase + 1) & 15;
-        state->phase = phase;
-        saved_output_rows++;
-        row++;
-        saved_input_rows++;
-      } while (row < remaining_rows);
+        row_index = (row_index + 1) & 15;
+        cquantize->row_index = row_index;
     }
 }
