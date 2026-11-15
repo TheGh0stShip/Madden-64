@@ -4,3 +4,56 @@ root = ".toolchain"
 [match]
 symbols = ["build/us/survey/symbol_addrs.txt"]
 rom = "Madden Football 64 (USA).z64"
+
+[images.resident]
+path = "build/us/audit/overlay_2_composite.z64"
+vram_delta = 0x7FFFF400
+catalogue = "config/us/functions_resident.toml"
+manifests = [
+  "config/us/matching_kmc_units.tsv",
+  "config/us/matching_ido_units.tsv",
+  "config/us/matching_asm_units.tsv",
+]
+aliases = ["main"]
+
+[images.overlay1]
+path = "build/us/audit/overlay_1.z64"
+vram_delta = 0x8008A8E0
+catalogue = "config/us/functions_overlay1.toml"
+catalogue_shift = 0x4724
+manifests = [
+  "config/us/matching_overlay1_kmc_units.tsv",
+  "config/us/matching_overlay1_asm_units.tsv",
+]
+
+[images.overlay2]
+path = "build/us/audit/overlay_2.z64"
+vram_delta = 0x8008A8E0
+catalogue = "config/us/functions_overlay2.toml"
+manifests = ["config/us/matching_overlay2_kmc_units.tsv"]
+
+[images.overlay4]
+path = "build/us/audit/overlay_4.z64"
+vram_delta = 0x800C4F48
+catalogue = "config/us/functions_overlay4.toml"
+catalogue_shift = 0x18A0
+manifests = [
+  "config/us/matching_overlay4_kmc_units.tsv",
+  "config/us/matching_overlay4_asm_units.tsv",
+]
+
+[images.overlay5]
+path = "build/us/audit/overlay_5.z64"
+vram_delta = 0x800C4F48
+catalogue = "config/us/functions_overlay5.toml"
+manifests = ["config/us/matching_overlay5_kmc_units.tsv"]
+
+[run]
+pipeline = "kmc+builtin"
+flags = "-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude"
+symbols = ["build/us/survey/symbol_addrs.txt"]
+search_ceiling = 40
+
+[run.images.resident.recipes]
+"config/us/matching_kmc_units.tsv" = "kmc+builtin"
+"config/us/matching_ido_units.tsv" = "ido5.3"
