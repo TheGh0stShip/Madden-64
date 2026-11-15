@@ -183,26 +183,26 @@
       "overlay_1": {
         "functions": 950,
         "bytes": 193028,
-        "matched_functions": 426,
-        "matched_bytes": 69372
+        "matched_functions": 427,
+        "matched_bytes": 69584
       },
       "overlay_2": {
         "functions": 567,
-        "bytes": 199108,
-        "matched_functions": 418,
-        "matched_bytes": 74800
+        "bytes": 199116,
+        "matched_functions": 431,
+        "matched_bytes": 77420
       },
       "overlay_4": {
         "functions": 400,
         "bytes": 116056,
-        "matched_functions": 216,
-        "matched_bytes": 46244
+        "matched_functions": 217,
+        "matched_bytes": 46712
       },
       "overlay_5": {
         "functions": 380,
         "bytes": 123640,
-        "matched_functions": 280,
-        "matched_bytes": 38528
+        "matched_functions": 288,
+        "matched_bytes": 40472
       },
       "resident": {
         "functions": 1361,
@@ -214,8 +214,8 @@
     "catalogue_status": {
       "provisional": true,
       "program_code_bytes": 1082496,
-      "catalogue_body_bytes": 1010524,
-      "code_bytes_outside_catalogue_bodies": 71972,
+      "catalogue_body_bytes": 1010532,
+      "code_bytes_outside_catalogue_bodies": 71964,
       "catalogue_candidates": 3663,
       "boundary_audits": {
         "resident": {
@@ -327,15 +327,15 @@
       },
       "000-0256": {
         "functions": 799,
-        "bytes": 148640,
-        "matched_functions": 611,
-        "matched_bytes": 112888
+        "bytes": 148648,
+        "matched_functions": 627,
+        "matched_bytes": 115804
       },
       "000-0512": {
         "functions": 670,
         "bytes": 243120,
-        "matched_functions": 394,
-        "matched_bytes": 136600
+        "matched_functions": 401,
+        "matched_bytes": 138928
       },
       "000-1024": {
         "functions": 313,

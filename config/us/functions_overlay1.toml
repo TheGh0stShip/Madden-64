@@ -7,7 +7,7 @@ vram = 0x80090004
 size = 0x375E8
 
 functions = [
-    { name = "func_80090004", vram = 0x80090004, size = 0x5f0 }, # asm falls_through
+    { name = "func_80090004", vram = 0x80090004, size = 0x5f0 }, # fragment
     { name = "func_800905F4", vram = 0x800905f4, size = 0x60 }, # asm
     { name = "func_80090678", vram = 0x80090678, size = 0x40 }, # asm
     { name = "func_800906DC", vram = 0x800906dc, size = 0x20 }, # asm
@@ -924,7 +924,7 @@ functions = [
     { name = "func_800C5288", vram = 0x800c5288, size = 0x58 }, # asm
     { name = "func_800C52E0", vram = 0x800c52e0, size = 0xd0 }, # c
     { name = "func_800C53B0", vram = 0x800c53b0, size = 0x74 }, # asm
-    { name = "func_800C5424", vram = 0x800c5424, size = 0xd4 }, # asm
+    { name = "func_800C5424", vram = 0x800c5424, size = 0xd4 }, # c
     { name = "func_800C54F8", vram = 0x800c54f8, size = 0x10c }, # c
     { name = "func_800C5604", vram = 0x800c5604, size = 0x298 }, # asm
     { name = "func_800C589C", vram = 0x800c589c, size = 0x74 }, # asm
