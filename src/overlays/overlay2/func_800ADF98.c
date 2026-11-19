@@ -1,0 +1,85 @@
+#include "m2c.h"
+
+typedef struct { u8 pad[0x14]; s32 rect[4]; u8 pad2[0x20]; s32 unk44; s32 pad3; s32 unk4C; s32 unk50; } Disp;
+typedef struct { s32 pad[7]; s32 unk1C; s32 unk20; } Item;
+typedef struct { char c[4]; } Four;
+typedef struct { s32 unk0; u16 unk4; s16 pad6; s16 unk8; u8 pad[0xA]; s8 unk14; char name[4]; } Rec;
+typedef struct { s32 count; char *line[181]; } Sub;
+typedef struct { u8 pad[0x2C]; s32 unk2C; s32 unk30; s32 unk34; s32 pad1; Item *item; u8 pad2[0x20]; Rec *rec; u8 pad3[0x10]; Sub sub; } Panel;
+typedef struct { s16 id; Sub *sub; s32 unk8; s32 unkC; s16 unk10; } Init;
+extern s32 D_80087AA8;
+extern s32 D_800892D8[4];
+extern u16 D_800BDF0A;
+extern s32 D_800BF858;
+extern char D_8008BEA0[];
+extern char D_800C3024[];
+Disp *func_800DD634(void);
+void func_80024694(void);
+void *func_80032E00(s32, s32);
+void func_8002E65C(char *, char *);
+void func_800AE870(Rec *);
+void func_800AE734(Panel *, u16);
+void func_800D54E4(s32);
+Item *func_8000D740(s32, s32, Init *);
+void func_800D6424(Item *, s32, s32, s32);
+void func_800DD694(s32, s32, s32);
+void func_800D6060(s32, s32 *, Panel *);
+void func_800ADF98(Panel *arg0) {
+    Init init;
+    Disp *d;
+    Sub *sub;
+    Rec *rec;
+    Item *item;
+    u16 i;
+
+    d = func_800DD634();
+    func_80024694();
+    sub = &arg0->sub;
+    sub->count = 0xB5;
+    for (i = 0; i < 0xB4; i++) {
+        sub->line[i] = 0;
+    }
+    sub->line[i] = 0;
+    rec = func_80032E00(0, 0x1C);
+    arg0->sub.line[2] = func_80032E00(0, 0x12);
+    arg0->sub.line[3] = func_80032E00(0, 0x12);
+    arg0->sub.line[0] = func_80032E00(0, 0xA);
+    arg0->sub.line[1] = func_80032E00(0, 0xA);
+    arg0->sub.line[104] = func_80032E00(0, 0xA);
+    func_8002E65C(arg0->sub.line[2], D_800C3024);
+    func_8002E65C(arg0->sub.line[3], D_800C3024);
+    func_8002E65C(arg0->sub.line[0], D_800C3024);
+    func_8002E65C(arg0->sub.line[1], D_800C3024);
+    func_8002E65C(arg0->sub.line[104], D_800C3024);
+    rec->unk4 = D_800BDF0A;
+    rec->unk0 = 0;
+    rec->unk8 = 0;
+    rec->unk14 = 0;
+    *(Four *) rec->name = *(Four *) D_8008BEA0;
+    arg0->sub.line[73] = 0;
+    arg0->rec = rec;
+    func_800AE870(rec);
+    func_800AE734(arg0, rec->unk4);
+    sub = &arg0->sub;
+    d->unk44 = 0;
+    func_800D54E4(1);
+    init.id = 0x378;
+    init.sub = sub;
+    init.unk8 = 0;
+    init.unk10 = 7;
+    item = func_8000D740(D_80087AA8, 1, &init);
+    arg0->item = item;
+    item->unk1C = 0x14A;
+    item->unk20 = 0;
+    func_800D6424(item, 0, 1, 0xA);
+    arg0->unk2C = 0;
+    arg0->unk30 = 0x14A;
+    arg0->unk34 = 0x388;
+    d->rect[0] = D_800892D8[0];
+    d->rect[1] = D_800892D8[1];
+    d->rect[2] = D_800892D8[2];
+    d->rect[3] = D_800892D8[3];
+    func_800DD694(0x48, 0x12, 8);
+    d->unk50 = d->unk4C;
+    func_800D6060(0x380, &D_800BF858, arg0);
+}

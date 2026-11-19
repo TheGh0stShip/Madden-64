@@ -11,7 +11,7 @@ vram_delta = 0x7FFFF400
 catalogue = "config/us/functions_resident.toml"
 manifests = [
   "config/us/matching_kmc_units.tsv",
-  "config/us/matching_ido_units.tsv",
+  "config/us/matching_ido_sources.tsv",
   "config/us/matching_asm_units.tsv",
 ]
 aliases = ["main"]
@@ -56,4 +56,4 @@ search_ceiling = 40
 
 [run.images.resident.recipes]
 "config/us/matching_kmc_units.tsv" = "kmc+builtin"
-"config/us/matching_ido_units.tsv" = "ido5.3"
+"config/us/matching_ido_sources.tsv" = "ido5.3"
