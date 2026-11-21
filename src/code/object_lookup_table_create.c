@@ -1,78 +1,41 @@
 #include "types.h"
 
-typedef struct ObjectMethods2 {
-    void *allocate;
-} ObjectMethods2;
+typedef struct {
+    s32 *(*unk_00)(void *, s32, s32);
+} ObjectMethods;
 
-typedef struct LookupState {
+typedef struct {
     u8 pad00[0x28];
-    s32 *table;
+    s32 *unk_28;
 } LookupState;
 
-typedef struct LookupObject {
-    u8 pad00[4];
-    ObjectMethods2 *methods;
+typedef struct {
+    u8 pad00[0x4];
+    ObjectMethods *unk_04;
     u8 pad08[0x1C0];
-    LookupState *state;
+    LookupState *unk_1C8;
 } LookupObject;
-
-typedef void *(*AllocateMethod2)(LookupObject *, s32, u32);
 
 void object_lookup_table_create(LookupObject *object)
 {
-    register ObjectMethods2 *methods __asm__("$2");
-    register LookupState *state __asm__("$16");
-    s32 *allocation;
-    register s32 value __asm__("$4");
-    register s32 index __asm__("$3");
-    register s32 *center __asm__("$7");
-    register s32 *negative __asm__("$6");
-    register s32 *positive __asm__("$5");
-    register u32 offset __asm__("$2");
-    s32 negative_value;
+    LookupState *state = object->unk_1C8;
+    s32 *table = object->unk_04->unk_00(object, 1, 0x7FC) + 0xFF;
+    s32 value = 0;
+    s32 i = 0;
 
-    methods = object->methods;
-    state = object->state;
-    __asm__("" : "=r"(methods) : "0"(methods), "r"(state));
-    allocation = ((AllocateMethod2)methods->allocate)(object, 1, 0x7FC);
-    value = 0;
-    index = 0;
-    center = (s32 *)((u8 *)allocation + 0x3FC);
-    negative = center;
-    positive = center;
-    state->table = center;
-    do {
-        *positive = value;
-        *negative = -value;
-        negative--;
-        positive++;
-        index++;
-        value++;
-    } while (index < 0x10);
-    if (index < 0x30) {
-        offset = index << 2;
-        negative = (s32 *)((u8 *)center - offset);
-        positive = (s32 *)(offset + (u32)center);
-        do {
-            *positive = value;
-            *negative = -value;
-            negative--;
-            index++;
-            value += (index ^ 1) & 1;
-            positive++;
-        } while (index < 0x30);
+    state->unk_28 = table;
+    for (; i < 0x10; i++, value++) {
+        table[i] = value;
+        table[-i] = -value;
     }
-    if (index < 0x100) {
-        negative_value = -value;
-        offset = index << 2;
-        negative = (s32 *)((u8 *)center - offset);
-        positive = (s32 *)(offset + (u32)center);
-        do {
-            *positive = value;
-            *negative = negative_value;
-            negative--;
-            index++;
-            positive++;
-        } while (index < 0x100);
+    for (; i < 0x30; ) {
+        table[i] = value;
+        table[-i] = -value;
+        i++;
+        value += (i ^ 1) & 1;
+    }
+    for (; i < 0x100; i++) {
+        table[i] = value;
+        table[-i] = -value;
     }
 }

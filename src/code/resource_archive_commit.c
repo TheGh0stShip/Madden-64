@@ -1,78 +1,69 @@
 #include "types.h"
 
-#define M2C_UNK s32
-#define M2C_FIELD(x, type, offset) (*(type)((u8 *)(x) + (offset)))
+typedef struct {
+    s16 ob[3];
+    u16 flag;
+    s16 tc[2];
+    u8 r;
+    u8 g;
+    u8 b;
+    u8 a;
+} Vertex;
 
-s32 func_80032E00(M2C_UNK, s32);
-M2C_UNK func_80033308(M2C_UNK, s32, s32, M2C_UNK);
+typedef struct {
+    u8 unk_00[0x10];
+    u16 unk_10;
+    u8 unk_12[0x0A];
+    s16 unk_1C;
+    u16 unk_1E;
+    u8 unk_20[0x10];
+    s32 unk_30;
+    u8 unk_34[0x0C];
+    Vertex *unk_40;
+    Vertex *unk_44;
+} ArchiveImage;
 
-void resource_archive_commit(void *arg0, s8 arg1)
+typedef struct {
+    u8 unk_00[8];
+    ArchiveImage *unk_08;
+} Archive;
+
+extern u16 D_80064AB0[];
+extern Vertex *memory_pool_range_take(s32 pool, s32 size);
+extern void func_80033308(s32 pool, void *addr, s32 size, s32 arg3);
+
+void resource_archive_commit(Archive *archive, s32 alpha)
 {
-    register s32 saved_s3 __asm__("$19") = arg1;
-    register s32 temp_s0 __asm__("$16");
-    s32 width;
-    s32 divisor;
-    register s32 remainder __asm__("$3");
-    register s32 temp_v0 __asm__("$2");
-    register s32 temp_s1 __asm__("$17");
-    u16 temp_v1;
-    u16 temp_v1_2;
-    register void *temp_s2 __asm__("$18");
-    void *var_v1;
-    register s32 var_a0 __asm__("$4");
+    ArchiveImage *image = archive->unk_08;
+    Vertex *v;
+    s32 rows;
+    s32 count;
+    s32 size;
+    s16 width;
 
-    temp_s2 = M2C_FIELD(arg0, void **, 8);
-    if (M2C_FIELD(temp_s2, s32 *, 0x40) != 0) {
-        goto block_4;
+    if (image->unk_40 == 0) {
+        width = image->unk_1E;
+        rows = 0x800 / width;
+        image->unk_30 |= 0x8000;
+        if (D_80064AB0[width >> 3] < rows) {
+            rows = D_80064AB0[width >> 3];
+        }
+        count = image->unk_1C / rows + 1;
+        count += image->unk_1C % rows != 0;
+        count *= 2;
+        size = count << 5;
+        image->unk_40 = memory_pool_range_take(0, size);
+        image->unk_44 = image->unk_40 + count;
+        func_80033308(0, image->unk_40, size, 0);
+        image->unk_10 = count;
     }
-    width = (s16)M2C_FIELD(temp_s2, u16 *, 0x1E);
-    divisor = 0x800 / width;
-    M2C_FIELD(temp_s2, s32 *, 0x30) |= 0x8000;
-    temp_v1_2 = M2C_FIELD((width >> 3) * 2 + 0x80060000, u16 *, 0x4AB0);
-    if ((s32)temp_v1_2 < divisor) {
-        divisor = temp_v1_2;
+    count = image->unk_10;
+    v = image->unk_40;
+    while (count--) {
+        v[0].a = alpha;
+        v[1].a = alpha;
+        v[0].r = v[0].g = v[0].b = 0xFF;
+        v[1].r = v[1].g = v[1].b = 0xFF;
+        v += 2;
     }
-    temp_v0 = M2C_FIELD(temp_s2, s16 *, 0x1C);
-    remainder = temp_v0 % divisor;
-    temp_v0 /= divisor;
-    temp_s1 = temp_v0 + 1;
-    temp_s1 += remainder != 0;
-    temp_s1 *= 2;
-    __asm__("" : "=r"(temp_s1) : "0"(temp_s1));
-    temp_s0 = temp_s1 << 5;
-    temp_v0 = func_80032E00(0, temp_s0);
-    M2C_FIELD(temp_s2, s32 *, 0x40) = temp_v0;
-    M2C_FIELD(temp_s2, s32 *, 0x44) = temp_v0 + (temp_s1 * 0x10);
-    func_80033308(0, M2C_FIELD(temp_s2, s32 *, 0x40), temp_s0, 0);
-    M2C_FIELD(temp_s2, u16 *, 0x10) = temp_s1;
-
-block_4:
-    temp_s1 = M2C_FIELD(temp_s2, u16 *, 0x10);
-    var_v1 = M2C_FIELD(temp_s2, void **, 0x40);
-    temp_v0 = temp_s1;
-    temp_s1 -= 1;
-    if (temp_v0 == 0) {
-        goto block_7;
-    }
-    var_a0 = 0xFF;
-    var_v1 += 0x1C;
-
-loop_6:
-    M2C_FIELD(var_v1, s8 *, -0xD) = arg1;
-    M2C_FIELD(var_v1, s8 *, 3) = arg1;
-    M2C_FIELD(var_v1, s8 *, -0xE) = var_a0;
-    M2C_FIELD(var_v1, s8 *, -0xF) = var_a0;
-    M2C_FIELD(var_v1, s8 *, -0x10) = var_a0;
-    M2C_FIELD(var_v1, s8 *, 2) = var_a0;
-    M2C_FIELD(var_v1, s8 *, 1) = var_a0;
-    M2C_FIELD(var_v1, s8 *, 0) = var_a0;
-    var_v1 += 0x20;
-    temp_v0 = temp_s1;
-    temp_s1 -= 1;
-    if (temp_v0 != 0) {
-        goto loop_6;
-    }
-
-block_7:
-    return;
 }

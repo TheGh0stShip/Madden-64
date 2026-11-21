@@ -1,23 +1,26 @@
 #include "types.h"
 
-extern s16 D_800894FC;
-extern volatile u32 D_80080C10;
-extern void *volatile D_8008A058;
-extern void *volatile D_80086178;
-extern s32 func_80031A1C(s32 value);
-extern s16 func_8001FA38(s32 value);
-extern void func_8001FA68(s32 mode, void *input, void *first, void *second);
+typedef struct {
+    u8 unk_00[0x20];
+    void *unk_20;
+} MenuData;
 
-void menu_input_activation_update(volatile u8 *object_arg,
-                                  volatile u8 *input_arg)
-{
-    register volatile u8 *object __asm__("$17") = object_arg;
-    register volatile u8 *input __asm__("$18") = input_arg;
-    register u16 threshold __asm__("$16");
-    void *first;
-    void *second;
-    register u8 *object_base __asm__("$2");
-    register u8 *global_base __asm__("$3");
+typedef struct {
+    u8 unk_00[0x24];
+    MenuData *unk_24;
+} MenuObject;
+
+extern s16 D_800894FC;
+extern u32 D_80080C10;
+extern MenuObject *D_8008A058;
+extern MenuData *D_80086178;
+u16 func_80031A1C(s32 value);
+s16 func_8001FA38(s32 value);
+void menu_player_update(s32 mode, u8 *input, void *first, void *second);
+
+void menu_input_activation_update(MenuObject *object, u8 *input) {
+    s32 threshold;
+    u32 limit;
 
     if (D_800894FC != 0) {
         return;
@@ -28,22 +31,14 @@ void menu_input_activation_update(volatile u8 *object_arg,
     if (object != D_8008A058) {
         return;
     }
-    threshold = func_80031A1C(((input[0x18] * 3) >> 1) + 0x28) & 0xFFFF;
+    threshold = func_80031A1C(((input[0x18] * 3) >> 1) + 0x28);
     if ((func_8001FA38(3) / 2) - 1 < threshold) {
         return;
     }
-    threshold = input[0xE];
-    if ((u16)func_80031A1C(0xC8) >= threshold) {
-        object_base = *(u8 *volatile *)(object + 0x24);
-        global_base = D_80086178;
-        first = *(void *volatile *)(object_base + 0x20);
-        second = *(void *volatile *)(global_base + 0x20);
-        func_8001FA68(0xD, (void *)input, first, second);
-        return;
+    limit = input[0xE];
+    if (func_80031A1C(0xC8) >= limit) {
+        menu_player_update(0xD, input, object->unk_24->unk_20, D_80086178->unk_20);
+    } else {
+        menu_player_update(3, input, object->unk_24->unk_20, D_80086178->unk_20);
     }
-    object_base = *(u8 *volatile *)(object + 0x24);
-    global_base = D_80086178;
-    first = *(void *volatile *)(object_base + 0x20);
-    second = *(void *volatile *)(global_base + 0x20);
-    func_8001FA68(3, (void *)input, first, second);
 }

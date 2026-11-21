@@ -1,0 +1,137 @@
+#include "types.h"
+
+typedef struct {
+    s32 id;
+    s16 unk_4;
+    s16 unk_6;
+    s16 unk_8;
+    s32 unk_C;
+    s32 unk_10;
+    s32 unk_14;
+    u8 pad18[0x10];
+} ObjDesc;
+
+typedef struct {
+    u8 pad0[0x10];
+    u8 unk_10;
+} Settings;
+
+s32 func_8000C8A0(s32);
+void func_8000CDC0(void);
+s32 func_8000D740(s32, s32, ObjDesc *);
+void func_8000D874(s32, s32);
+s32 func_8000D8DC(s32, ObjDesc *);
+void func_800167FC(s16, u8 *);
+void func_80016FC4(u16);
+s16 func_80016FD4(void);
+void func_80016FE4(s32);
+void func_8001AAD8(u16, s32);
+void func_8001AB74(void);
+s32 func_8001ABC4(void);
+void func_8001AD78(void *);
+void func_800334B8(void);
+u16 func_800356C4(void *, s32);
+void func_8003647C(u16, s32);
+void func_8003E460(void);
+void func_800B18DC(void);
+void func_80000404(void);
+extern u8 D_8006B904[];
+extern s32 D_8007A1A8;
+extern s32 D_800854A0;
+extern s32 D_800879AC;
+extern s32 D_80087A64;
+extern s32 D_80088090;
+extern s16 D_8008809A;
+extern u16 D_800886FC;
+extern s32 D_800892D8[];
+extern s32 D_800892DC;
+extern s32 D_800892E0;
+extern s32 D_800892E4;
+extern s32 D_800892E8;
+extern s32 D_800892EC;
+extern s32 D_800892F0;
+extern s32 D_800892F4;
+extern s32 D_800892F8;
+extern s8 D_8008B210;
+extern s32 D_8008B36C;
+extern Settings *D_800E6C4C;
+
+void func_800B13A4(void) {
+    ObjDesc desc;
+    u8 value;
+    u16 heap;
+    s32 i;
+
+    func_8000CDC0();
+    func_800334B8();
+    D_8007A1A8 = func_8001ABC4();
+    func_8001AB74();
+    func_8001AAD8(D_800886FC, 0x2B);
+    func_8001AD78(D_8006B904);
+    func_800167FC(D_8008B210 + 1, &value);
+    D_800E6C4C->unk_10 = value;
+    heap = func_800356C4(func_80000404, 0x720);
+    D_8008809A = func_80016FD4();
+    func_80016FC4(heap);
+    func_8000D874(D_80087A64, D_8008B36C);
+    func_800B18DC();
+    func_8000CDC0();
+    func_800334B8();
+    func_8003647C(heap, 0x1A);
+    func_8003647C(heap, 1);
+    func_8003647C(heap, 0x1B);
+    func_8003647C(heap, 0x1C);
+    func_8003647C(heap, 3);
+    func_8003647C(heap, 4);
+    func_8003647C(heap, 0x7E);
+    for (i = 0; i < 35; i++) {
+        func_8003E460();
+    }
+    desc.unk_4 = 1;
+    desc.id = 1;
+    desc.unk_6 = 0x14;
+    desc.unk_C = 0;
+    desc.unk_8 = 0x1A;
+    D_800879AC = func_8000D740(func_8000C8A0(D_80088090), 0, &desc);
+    func_80016FE4(D_800879AC);
+    desc.unk_4 = 8;
+    desc.id = 0x1A;
+    desc.unk_6 = 0x16;
+    desc.unk_8 = 0;
+    D_800854A0 = func_8000D740(func_8000C8A0(D_80088090), 0, &desc);
+    func_80016FE4(D_800854A0);
+    desc.id = 0x1B;
+    desc.unk_C = 0;
+    desc.unk_4 = 4;
+    desc.unk_6 = 0;
+    desc.unk_8 = 0;
+    D_800892D8[0] = func_8000D8DC(0, &desc);
+    func_80016FE4(D_800892D8[0]);
+    desc.id = 0x1C;
+    D_800892DC = func_8000D8DC(0, &desc);
+    func_80016FE4(D_800892DC);
+    desc.id = 3;
+    D_800892E0 = func_8000D8DC(0, &desc);
+    func_80016FE4(D_800892E0);
+    desc.id = 4;
+    D_800892E4 = func_8000D8DC(0, &desc);
+    func_80016FE4(D_800892E4);
+    desc.id = 0x7E;
+    D_800892F8 = func_8000D8DC(0, &desc);
+    func_80016FE4(D_800892F8);
+    desc.unk_C = 0x20;
+    desc.unk_14 = D_800892D8[0];
+    D_800892E8 = func_8000D8DC(0, &desc);
+    func_80016FE4(D_800892E8);
+    desc.unk_14 = D_800892DC;
+    D_800892EC = func_8000D8DC(0, &desc);
+    func_80016FE4(D_800892EC);
+    desc.unk_14 = D_800892E0;
+    D_800892F0 = func_8000D8DC(0, &desc);
+    func_80016FE4(D_800892F0);
+    desc.unk_14 = D_800892E4;
+    D_800892F4 = func_8000D8DC(0, &desc);
+    func_80016FE4(D_800892F4);
+    func_8000CDC0();
+    func_800334B8();
+}

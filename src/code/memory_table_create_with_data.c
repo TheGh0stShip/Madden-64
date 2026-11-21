@@ -14,43 +14,34 @@ extern u16 D_8007A3FC[];
 extern void *func_80032E00(u32 owner, u32 size);
 extern void *func_800337CC(s32 owner, u32 size, s32 source);
 
-MemoryTable *memory_table_create_with_data(s32 type, s32 count,
-                                            s32 alignment, s32 source)
+MemoryTable *memory_table_create_with_data(s32 type, u16 count, s32 alignment, s32 source)
 {
-    register s32 saved_type __asm__("$18") = type;
-    register s32 saved_count __asm__("$20") = count;
-    register s32 work_s1 __asm__("$17") = (s16)saved_type;
-    register s32 saved_source __asm__("$19") = source;
-    register u32 normalized_count __asm__("$22");
+    s16 kind;
     u32 unit;
-    register u32 stride __asm__("$16");
+    u32 n;
+    u32 stride;
     MemoryTable *table;
-    register u32 index __asm__("$21");
+    u32 i;
 
-    unit = D_8007A3FC[work_s1];
-    normalized_count = saved_count & 0xFFFF;
-    stride = alignment - 1;
-    stride += unit;
+    kind = type;
+    unit = D_8007A3FC[kind];
+    n = count;
+    alignment--;
+    stride = alignment + unit;
     stride &= -unit;
-    work_s1 = (s32)func_80032E00(0, normalized_count * 2 + 0x10);
-    table = (MemoryTable *)work_s1;
-    index = 1;
-
-    table->count = saved_count;
-    table->type = saved_type;
+    table = func_80032E00(0, n * 2 + 0x10);
+    i = 1;
+    table->count = count;
+    table->type = type;
     table->stride = stride;
-    table->data = func_800337CC((s16)saved_type,
-                                normalized_count * stride, saved_source);
+    table->data = func_800337CC(kind, n * stride, source);
     table->sentinel = 0xFFFF;
-    if (normalized_count != 0) {
-        register u32 loop_count __asm__("$5") = normalized_count;
-        u16 *cursor = (u16 *)((u8 *)table + 2);
-
+    if (n != 0) {
+        u32 last = n;
         do {
-            cursor[6] = index - 1;
-            index++;
-            cursor++;
-        } while (loop_count >= index);
+            table->indices[i - 1] = i - 1;
+            i++;
+        } while (last >= i);
     }
     return table;
 }

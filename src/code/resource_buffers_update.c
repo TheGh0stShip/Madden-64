@@ -1,7 +1,7 @@
 #include "types.h"
 
 typedef struct ResourceInput {
-    u16 flags;
+    volatile u16 flags;
     u16 pad2;
     u32 first;
     u32 second;
@@ -38,103 +38,65 @@ typedef struct Resource {
     void *field24;
 } Resource;
 
-extern u8 * volatile D_80069294;
+extern u8 *volatile D_80069294;
 extern s32 D_800692AC;
-extern void *D_80069298;
+extern s32 *D_80069298;
 extern Resource *D_8007947C[];
-extern void *func_8000D5BC(s32, s32, s32, void *);
-extern void func_8001B098(Resource *, ResourceData *);
-extern void *func_80032E00(s32 pool, u32 size);
-extern void func_80033308(s32 pool, void *destination, u32 size, s32 offset);
 
-void resource_buffers_update(Resource *resource, ResourceInput *input)
-{
-    register Resource *saved_resource __asm__("$18");
-    register ResourceInput *saved_input __asm__("$16");
-    register ResourceData *data __asm__("$17");
-    register u32 size __asm__("$16");
-    register u32 original_size __asm__("$19");
-    register void *source __asm__("$2");
-    register u8 *lookup_base __asm__("$3");
-    register u8 *record_base __asm__("$8");
-    register u32 lookup_offset __asm__("$2");
-    register void *record __asm__("$7");
-    register s32 zero0 __asm__("$4");
-    register s32 zero1 __asm__("$5");
-    register s32 zero2 __asm__("$6");
-    register s32 index __asm__("$3");
-    register s32 next_index __asm__("$2");
-    register u8 *record_address __asm__("$2");
+void *object_children_create();
+void resource_buffers_allocate(Resource *, ResourceData *);
+void *memory_pool_range_take(s32, u32);
+void func_80033308(s32, void *, u32, s32);
 
-    saved_resource = resource;
-    saved_input = input;
-    __asm__("" : "=r"(saved_resource), "=r"(saved_input)
-              : "0"(saved_resource), "1"(saved_input));
-    data = saved_resource->data;
+static inline u8 *resolve(u32 offset) {
+    return (u8 *)(*(u32 *)((offset & 0xFFFC) + (u32)D_80069294) + (u32)D_80069294);
+}
 
-    data->flags = saved_input->flags;
-    data->first = saved_input->first;
-    data->second = saved_input->second;
-    zero0 = 0;
-    zero1 = 0;
-    __asm__ volatile("" : "=r"(zero0), "=r"(zero1)
-                     : "0"(zero0), "1"(zero1) : "memory");
-    lookup_offset = saved_input->flags & 0xFFFC;
-    lookup_base = D_80069294;
-    record_base = D_80069294;
-    record_address = (u8 *)(lookup_offset + (u32)lookup_base);
-    index = D_800692AC;
-    record = (void *)*(u32 *)record_address;
-    zero2 = 0;
-    next_index = index + 1;
-    record = (void *)((u32)record + (u32)record_base);
-    data->record = record;
-    data->index = index;
-    D_800692AC = next_index;
-    D_8007947C[index] = saved_resource;
-    saved_resource->active = 1;
+void resource_buffers_update(Resource *resource, ResourceInput *input) {
+    ResourceData *data = resource->data;
+    u32 size;
+    s32 count;
+
+    data->flags = input->flags;
+    data->first = (void *)input->first;
+    data->second = (void *)input->second;
+    data->record = resolve(input->flags);
+    data->index = D_800692AC;
+    D_8007947C[D_800692AC++] = resource;
+    resource->active = 1;
     data->fieldA = 0;
-    data->handle = func_8000D5BC(zero0, zero1, zero2, record);
-    data->count = saved_input->count + 2;
-    func_8001B098(saved_resource, data);
-
-    source = D_80069298;
-    __asm__("" : "=r"(source) : "0"(source));
-    if (source != 0) {
-        original_size = *(u32 *)source;
-        size = original_size;
-        size++;
-        data->global_copy = func_80032E00(0, size);
+    data->handle = object_children_create(0, 0, 0);
+    data->count = input->count + 2;
+    resource_buffers_allocate(resource, data);
+    if (D_80069298 ) {
+        count = *D_80069298;
+        size = count + 1;
+        data->global_copy = memory_pool_range_take(0, size);
         func_80033308(0, data->global_copy, size, 0);
         size *= 4;
-        data->global_words = func_80032E00(0, size);
+        data->global_words = memory_pool_range_take(0, size);
         func_80033308(0, data->global_words, size, 0);
-        *(u32 *)data->global_words = original_size;
+        *(s32 *)data->global_words = count;
     } else {
-        __asm__("" : "=r"(source));
         data->global_copy = 0;
         data->global_words = 0;
     }
-    source = data->first;
-    __asm__("" : "=r"(source) : "0"(source));
-    if (source != 0) {
-        original_size = *(u32 *)source;
-        size = original_size;
-        size++;
-        data->first_copy = func_80032E00(0, size);
+    if (data->first ) {
+        count = *(s32 *)data->first;
+        size = count + 1;
+        data->first_copy = memory_pool_range_take(0, size);
         func_80033308(0, data->first_copy, size, 0);
         size *= 4;
-        data->first_words = func_80032E00(0, size);
+        data->first_words = memory_pool_range_take(0, size);
         func_80033308(0, data->first_words, size, 0);
-        *(u32 *)data->first_words = original_size;
+        *(s32 *)data->first_words = count;
     } else {
-        __asm__("" : "=r"(source));
         data->first_copy = 0;
         data->first_words = 0;
     }
-    saved_resource->field24 = 0;
-    saved_resource->field20 = 0;
-    saved_resource->field1C = 0;
+    resource->field24 = 0;
+    resource->field20 = 0;
+    resource->field1C = 0;
     data->fieldE = 0;
     data->fieldC = 0;
 }

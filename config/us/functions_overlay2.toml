@@ -172,7 +172,7 @@ functions = [
     { name = "func_8009D948", vram = 0x8009d948, size = 0x124 }, # c corrected late start
     { name = "func_8009DA6C", vram = 0x8009da6c, size = 0xa8 }, # c corrected late start
     { name = "func_8009DB14", vram = 0x8009db14, size = 0x144 }, # c
-    { name = "func_8009DC60", vram = 0x8009dc60, size = 0x2a0 }, # c
+    { name = "func_8009DC58", vram = 0x8009dc58, size = 0x2a8 }, # rekey-genuine-row
     { name = "func_8009DF00", vram = 0x8009df00, size = 0x90 }, # c
     { name = "func_8009DF90", vram = 0x8009df90, size = 0x28 }, # c
     { name = "func_8009DFB8", vram = 0x8009dfb8, size = 0x28 }, # c

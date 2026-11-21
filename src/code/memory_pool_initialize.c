@@ -22,41 +22,36 @@ extern MemoryBlock *D_8007A410[];
 extern MemoryBlock *D_8007A414[];
 extern void func_80033534(MemoryBlock *block);
 
-void memory_pool_initialize(s32 pool)
+void memory_pool_initialize(s16 pool)
 {
-    register MemoryBlock *block __asm__("$16");
-    register MemoryBlock *block_end __asm__("$17");
-    register s32 saved_pool __asm__("$18") = pool;
-    s32 pool_index = (s16)pool;
+    MemoryBlock *block;
+    MemoryBlock *block_end;
     u16 *index;
     u16 count;
     u16 value;
 
-    block = D_8007A400[pool_index];
-    D_8007A410[pool_index] = block;
-    D_8007A40C[pool_index] = block;
-    D_8007A414[pool_index] = block;
-    block->address = D_8007A3F4[pool_index];
+    block = D_8007A400[pool];
+    D_8007A410[pool] = block;
+    D_8007A40C[pool] = block;
+    D_8007A414[pool] = block;
+    block->address = D_8007A3F4[pool];
+    block->size = D_8007A3F8[pool];
     block->flags = 1;
-    block->free_next = (MemoryBlock *)-1;
-    block->free_previous = (MemoryBlock *)-1;
-    block->previous = (MemoryBlock *)-1;
-    block->next = (MemoryBlock *)-1;
-    block->size = D_8007A3F8[pool_index];
+    block->next = block->previous = block->free_next = block->free_previous = (MemoryBlock *)-1;
 
-    block_end = D_8007A400[pool_index];
+    block_end = D_8007A400[pool];
     while (++block < block_end) {
         func_80033534(block);
     }
 
-    index = D_8007A404[(s16)saved_pool];
+    index = D_8007A404[pool];
     *index = 0xFFFF;
-    count = D_8007A3F0[(s16)saved_pool];
+    count = D_8007A3F0[pool];
     value = 1;
     while (value < count) {
         index++;
         *index = value;
         value++;
     }
-    D_8007A408[(s16)saved_pool] = index;
+    D_8007A408[pool] = index;
 }

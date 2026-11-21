@@ -44,32 +44,32 @@ heuristic boundary catalogues and are not equivalent measures.
 | Module | Functions | Matched | Candidate bytes | Matched bytes |
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 0 | 632 | 0 |
-| overlay_1 | 950 | 427 | 193,028 | 69,584 |
-| overlay_2 | 567 | 450 | 199,116 | 84,832 |
-| overlay_4 | 400 | 218 | 116,056 | 46,920 |
-| overlay_5 | 380 | 293 | 123,640 | 42,416 |
-| resident | 1,361 | 1,099 | 378,060 | 230,216 |
+| overlay_1 | 739 | 522 | 213,960 | 156,680 |
+| overlay_2 | 567 | 528 | 199,124 | 152,068 |
+| overlay_4 | 345 | 256 | 122,040 | 76,440 |
+| overlay_5 | 380 | 351 | 123,640 | 87,964 |
+| resident | 1,361 | 1,233 | 378,060 | 295,428 |
 
 ### Size distribution
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 304 | 96 | 3,644 | 1,284 |
-| 000-0032 | 236 | 94 | 6,204 | 2,424 |
-| 000-0064 | 476 | 101 | 23,628 | 4,920 |
-| 000-0128 | 707 | 114 | 66,784 | 10,776 |
-| 000-0256 | 799 | 169 | 148,648 | 32,328 |
-| 000-0512 | 670 | 251 | 243,120 | 97,368 |
-| 000-1024 | 313 | 223 | 220,024 | 160,308 |
-| 1025+ | 158 | 128 | 298,480 | 227,156 |
+| 000-0016 | 245 | 38 | 2,856 | 508 |
+| 000-0032 | 180 | 38 | 4,768 | 988 |
+| 000-0064 | 417 | 38 | 20,732 | 1,820 |
+| 000-0128 | 655 | 55 | 62,148 | 5,400 |
+| 000-0256 | 742 | 63 | 138,304 | 11,912 |
+| 000-0512 | 657 | 102 | 239,928 | 39,236 |
+| 000-1024 | 322 | 106 | 226,844 | 77,260 |
+| 1025+ | 179 | 67 | 341,876 | 131,752 |
 
-- Exact duplicate body families: 29
-- Functions participating in those families: 163
+- Exact duplicate body families: 28
+- Functions participating in those families: 161
 - Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 1,082,496
-- Bytes assigned to provisional candidate bodies: 1,010,532
-- Code bytes outside provisional candidate bodies: 71,964
+- Bytes assigned to provisional candidate bodies: 1,037,456
+- Code bytes outside provisional candidate bodies: 45,040
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally
@@ -81,9 +81,9 @@ register dependency, and no contradictory boundary finding.
 | Module | Sweep candidates | Published candidates | Gap ranges | Gap bytes | Contradictory findings |
 |---|---:|---:|---:|---:|---:|
 | resident | 1,361 | 1,361 | 2 | 14,536 | 12 |
-| overlay_1 | 1,071 | 950 | 231 | 43,696 | 987 |
+| overlay_1 | 1,071 | 739 | 231 | 43,696 | 987 |
 | overlay_2 | 606 | 567 | 0 | 0 | 129 |
-| overlay_4 | 420 | 400 | 87 | 17,500 | 348 |
+| overlay_4 | 420 | 345 | 87 | 17,500 | 348 |
 | overlay_5 | 408 | 380 | 1 | 16 | 75 |
 
 These findings are an audit queue, not additional progress. They include

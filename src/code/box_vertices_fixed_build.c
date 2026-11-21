@@ -7,43 +7,19 @@ typedef struct FixedVertex {
     s32 unused;
 } FixedVertex;
 
-void box_vertices_fixed_build(FixedVertex *vertices, const s32 *origin,
-                              const s32 *extent)
-{
-    register s32 x __asm__("$2");
-    register s32 y __asm__("$3");
-    register s32 z __asm__("$5");
-    register s32 ex __asm__("$7");
-    register s32 ey __asm__("$10");
-    register s32 ez __asm__("$8");
-    register s32 left __asm__("$11");
-    register s32 right __asm__("$2");
-    register s32 top __asm__("$6");
-    register s32 bottom __asm__("$3");
-    register s32 front __asm__("$9");
-    register s32 back __asm__("$5");
-
-    x = origin[0];
-    y = origin[1];
-    z = origin[2];
-    ex = extent[0];
-    ey = extent[1];
-    ez = extent[2];
-    x = -x << 16;
-    ex <<= 16;
-    left = x - ex;
-    __asm__ volatile ("" : "=r" (left) : "0" (left));
-    y <<= 16;
-    ey <<= 16;
-    top = y + ey;
-    __asm__ volatile ("" : "=r" (top) : "0" (top));
-    z <<= 16;
-    ez <<= 16;
-    front = z - ez;
-    __asm__ volatile ("" : "=r" (front) : "0" (front));
-    right = x + ex;
-    back = z + ez;
-    bottom = y - ey;
+void box_vertices_fixed_build(FixedVertex *vertices, s32 *origin, s32 *extent) {
+    s32 x = -origin[0] << 16;
+    s32 y = origin[1] << 16;
+    s32 z = origin[2] << 16;
+    s32 ex = extent[0] << 16;
+    s32 ey = extent[1] << 16;
+    s32 ez = extent[2] << 16;
+    s32 left = x - ex;
+    s32 top = y + ey;
+    s32 front = z - ez;
+    s32 right = x + ex;
+    s32 back = z + ez;
+    s32 bottom = y - ey;
 
     vertices[0].x = left;
     vertices[0].y = top;

@@ -1,63 +1,47 @@
 #include "types.h"
 
-extern void func_80061F10(void *object, s32 first, s32 second, s32 third);
+typedef u16 HistCell;
+typedef HistCell HistRow[32];
+typedef HistRow *Hist2D;
 
-void object_lookup_indices_decode(u8 *object, u8 **sources, u8 **outputs,
-                                  s32 count)
+typedef struct {
+    u8 unk_00[0x18];
+    Hist2D *histogram;
+} QuantizeState;
+
+typedef struct {
+    u8 unk_00[0x70];
+    u32 output_width;
+    u8 unk_74[0x154];
+    QuantizeState *cquantize;
+} DecodeObject;
+
+extern void func_80061F10(DecodeObject *object, s32 c0, s32 c1, s32 c2);
+
+void object_lookup_indices_decode(DecodeObject *object, u8 **input_buf, u8 **output_buf, s32 num_rows)
 {
-    register u8 *saved_object __asm__("$23") = object;
-    register u8 **saved_sources __asm__("$21");
-    register u8 **saved_outputs __asm__("$22");
-    register s32 outer __asm__("$20") = 0;
-    register s32 remaining __asm__("$18");
-    register u8 *input __asm__("$16");
-    register u8 *output __asm__("$19");
-    register u16 *entry __asm__("$17");
-    u16 **table;
-    u8 *runtime;
-    s32 width_value;
-    volatile struct {
-        u32 pad0;
-        s32 count;
-        u32 pad1;
-        s32 width;
-    } locals;
-    volatile u64 padding;
+    QuantizeState *cquantize = object->cquantize;
+    Hist2D *histogram = cquantize->histogram;
+    register u8 *inptr;
+    register u8 *outptr;
+    register HistCell *cachep;
+    register s32 c0, c1, c2;
+    s32 row;
+    u32 col;
+    u32 width = object->output_width;
 
-    locals.count = count;
-    __asm__("" : "=r"(saved_object) : "0"(saved_object));
-    runtime = *(u8 **)(saved_object + 0x1C8);
-    width_value = *(s32 *)(saved_object + 0x70);
-    table = *(u16 ***)(runtime + 0x18);
-    if (count > 0) {
-        locals.width = width_value;
-        saved_outputs = outputs;
-        saved_sources = sources;
-        do {
-            remaining = locals.width;
-            input = *saved_sources;
-            output = *saved_outputs;
-            if (remaining != 0) {
-                do {
-                    s32 first = *input++ >> 3;
-                    s32 second = *input++ >> 2;
-                    register u32 third_byte __asm__("$4") = *input;
-                    s32 third = third_byte >> 3;
-                    register u8 *base __asm__("$3") =
-                        (u8 *)table[first] + (second << 6);
-
-                    entry = (u16 *)(base + (third << 1));
-                    input++;
-                    if (*entry == 0) {
-                        func_80061F10(saved_object, first, second, third);
-                    }
-                    *output++ = ((u8 *)entry)[1] - 1;
-                    remaining--;
-                } while (remaining != 0);
+    for (row = 0; row < num_rows; row++) {
+        inptr = input_buf[row];
+        outptr = output_buf[row];
+        for (col = width; col > 0; col--) {
+            c0 = *inptr++ >> 3;
+            c1 = *inptr++ >> 2;
+            c2 = *inptr++ >> 3;
+            cachep = &histogram[c0][c1][c2];
+            if (*cachep == 0) {
+                func_80061F10(object, c0, c1, c2);
             }
-            saved_outputs++;
-            outer++;
-            saved_sources++;
-        } while (outer < locals.count);
+            *outptr++ = (u8)(*cachep - 1);
+        }
     }
 }

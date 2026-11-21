@@ -1,48 +1,59 @@
 #include "types.h"
 
-extern void object_index_stream_decode(void *object, void *records);
-extern s32 object_lookup_finalize(void *object, void *records, s32 first,
-                                  s32 count);
-extern void object_lookup_process(void *object, void *record, s32 index);
+typedef struct {
+    s32 unk_00;
+    s32 unk_04;
+    s32 unk_08;
+    s32 unk_0C;
+    s32 unk_10;
+    s32 unk_14;
+    s32 unk_18;
+    s32 unk_1C;
+} LookupRecord;
 
-typedef void *(*AllocateCallback)(void *object, s32 count, s32 size);
-typedef void (*ObjectCallback)(void *object, s32 value);
+typedef struct {
+    s32 unk_00;
+    void (*emit)(void *object, s32 level);
+    u8 unk_08[0xC];
+    s32 code;
+    s32 param;
+} ErrorManager;
 
-void object_lookup_initialize(u8 *object, s32 count)
+typedef struct {
+    void *(*alloc)(void *object, s32 pool, s32 size);
+} MemoryManager;
+
+typedef struct {
+    ErrorManager *err;
+    MemoryManager *mem;
+    u8 unk_08[0x7C];
+    s32 count;
+} LookupObject;
+
+extern void object_index_stream_decode(LookupObject *object, LookupRecord *records);
+extern s32 object_lookup_finalize(LookupObject *object, LookupRecord *records, s32 first, s32 count);
+extern void object_lookup_process(LookupObject *object, LookupRecord *record, s32 index);
+
+void object_lookup_initialize(LookupObject *object, s32 count)
 {
-    register u8 *saved_object __asm__("$19") = object;
-    register s32 saved_count __asm__("$16") = count;
-    register u8 *records __asm__("$17");
-    register s32 index __asm__("$18");
-    register s32 record_count __asm__("$20");
-    ObjectCallback callback;
-    volatile u64 padding;
+    LookupRecord *records;
+    s32 i;
+    s32 n;
 
-    __asm__("" : "=r"(saved_object), "=r"(saved_count)
-               : "0"(saved_object), "1"(saved_count));
-    records = ((AllocateCallback)**(void ***)(saved_object + 4))(
-        object, 1, saved_count << 5);
-    index = 0;
-    *(u32 *)(records + 0x00) = 0;
-    *(u32 *)(records + 0x04) = 0x1F;
-    *(u32 *)(records + 0x08) = 0;
-    *(u32 *)(records + 0x0C) = 0x3F;
-    *(u32 *)(records + 0x10) = 0;
-    *(u32 *)(records + 0x14) = 0x1F;
-    object_index_stream_decode(saved_object, records);
-    record_count = object_lookup_finalize(saved_object, records, 1,
-                                          saved_count);
-    if (record_count > 0) {
-        saved_count = (s32)records;
-        do {
-            object_lookup_process(saved_object, (void *)saved_count, index);
-            index++;
-            saved_count += 0x20;
-        } while (index < record_count);
+    records = object->mem->alloc(object, 1, count * sizeof(LookupRecord));
+    records[0].unk_00 = 0;
+    records[0].unk_04 = 0x1F;
+    records[0].unk_08 = 0;
+    records[0].unk_0C = 0x3F;
+    records[0].unk_10 = 0;
+    records[0].unk_14 = 0x1F;
+    object_index_stream_decode(object, records);
+    n = object_lookup_finalize(object, records, 1, count);
+    for (i = 0; i < n; i++) {
+        object_lookup_process(object, &records[i], i);
     }
-    *(s32 *)(saved_object + 0x84) = record_count;
-    *(u32 *)(*(u8 **)saved_object + 0x14) = 0x5F;
-    *(s32 *)(*(u8 **)saved_object + 0x18) = record_count;
-    callback = *(ObjectCallback *)(*(u8 **)saved_object + 4);
-    callback(saved_object, 1);
+    object->count = n;
+    object->err->code = 0x5F;
+    object->err->param = n;
+    object->err->emit(object, 1);
 }

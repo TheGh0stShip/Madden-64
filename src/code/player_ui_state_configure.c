@@ -1,60 +1,39 @@
 #include "types.h"
 
+typedef struct {
+    void *unk_00;
+    u8 unk_04;
+    u8 pad_05[0x5B];
+    u8 unk_60[0x50];
+    u8 unk_B0;
+    u8 pad_B1[7];
+    u32 unk_B8;
+    u8 pad_BC[0x70C];
+} PlayerUiState;
+
 extern s16 D_800692B2;
-extern u8 D_800784F4[];
-extern u8 D_800784F8[];
-extern u8 D_800785A4[];
-extern u8 D_800785AC[];
-extern u8 D_80078554[];
-extern void func_8001F0C4(s32 index);
-extern void func_80044F48(void *state, u8 a1, u8 a2);
-extern void func_80044F6C(void *state, u32 index, u8 value, void *record);
+extern PlayerUiState D_800784F4[];
 
-void player_ui_state_configure(u32 index, u8 *record, void *table)
-{
-    register u32 original __asm__("$7") = index;
-    register u8 *saved_record __asm__("$19");
-    register u32 saved_index __asm__("$17");
-    register u32 offset __asm__("$18");
-    register u8 *state __asm__("$16");
-    register u32 initial_index __asm__("$2");
-    register u32 initial_offset __asm__("$3");
-    register s32 mode __asm__("$4");
-    register u32 field __asm__("$3");
-    register s32 call_arg __asm__("$4");
+void menu_state_process(s32 index);
+void func_80044F48(void *state, u8 a1, u8 a2);
+void func_80044F6C(void *state, u32 index, u8 value, u8 *rec);
 
-    initial_index = original & 0xFF;
-    initial_offset = initial_index << 5;
-    initial_offset -= initial_index;
-    initial_offset <<= 3;
-    mode = D_800692B2;
-    initial_offset += initial_index;
-    initial_offset <<= 3;
-    *(void **)(D_800784F4 + initial_offset) = table;
-    saved_record = record;
-    if (mode == 0) {
-        D_800784F8[initial_offset] = 0xFF;
+void player_ui_state_configure(u32 index, u8 *record, void *table) {
+    u8 *rec = record;
+
+    D_800784F4[(u8)index].unk_00 = table;
+    if (D_800692B2 == 0) {
+        D_800784F4[(u8)index].unk_04 = 0xFF;
     } else {
-        D_800784F8[initial_offset] = 0;
+        D_800784F4[(u8)index].unk_04 = 0;
     }
-    saved_index = original & 0xFF;
-    initial_index = saved_index << 5;
-    initial_index -= saved_index;
-    initial_index <<= 3;
-    field = saved_record[0x21];
-    initial_index += saved_index;
-    offset = initial_index << 3;
-    *(u32 *)(D_800785AC + offset) = 0;
-    D_800785A4[offset] = field;
-    if (saved_index == 1) {
-        __asm__("" : "=r"(saved_index) : "0"(saved_index));
-        call_arg = 1;
-        func_8001F0C4(call_arg);
-        call_arg = 1;
-        func_8001F0C4(call_arg);
+    D_800784F4[(u8)index].unk_B0 = rec[0x21];
+    D_800784F4[(u8)index].unk_B8 = 0;
+    if ((u8)index == 1) {
+        menu_state_process(1);
+        menu_state_process(1);
     }
-    func_8001F0C4(saved_index);
-    state = D_80078554 + offset;
-    func_80044F48(state, saved_record[0x10], saved_record[0xF]);
-    func_80044F6C(state, saved_index, saved_record[0xD], saved_record);
+    menu_state_process((u8)index);
+    func_80044F48(D_800784F4[(u8)index].unk_60, rec[0x10], rec[0xF]);
+    func_80044F6C(D_800784F4[(u8)index].unk_60, (u8)index, rec[0xD], rec);
 }

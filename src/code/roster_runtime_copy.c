@@ -1,43 +1,34 @@
 #include "types.h"
 
-extern u8 D_80080C90[];
-extern u16 D_80080CFC[];
-extern u8 D_80080D78[];
+typedef struct {
+    u8 x00;
+    u8 pad01[0x27];
+} PlayerRecord;
+
+typedef struct {
+    u8 frame;
+    u8 pad01[0x6B];
+    u16 players[55];
+    u8 padDA[0xE];
+    PlayerRecord records[55];
+    u8 pad980[0x17CC];
+} RosterTeam;
+
+extern RosterTeam D_80080C90[];
 extern u16 *D_80073438;
-extern u16 func_80028A58(u8 value);
-extern u8 *func_8003A368(void);
 
-void roster_runtime_copy(u32 roster)
-{
-    register u32 offset __asm__("$17");
-    register u32 record_offset __asm__("$16");
-    register u16 *source __asm__("$19");
-    register u16 *destination __asm__("$18");
-    register u8 *output __asm__("$4");
-    register u32 v1_work __asm__("$3");
-    register u32 v0_work __asm__("$2");
-    u32 record;
+u16 frame_identifier_find(u32 identifier);
+u8 *func_8003A368(void);
 
-    roster &= 0xFFFF;
-    offset = roster * 0x214C;
-    record = func_80028A58(D_80080C90[offset]);
-    v1_work = (u32)D_80080CFC;
-    source = (u16 *)(offset + v1_work);
-    record &= 0xFFFF;
-    record_offset = record << 3;
-    record_offset -= record;
-    record_offset <<= 3;
-    v1_work = (u32)D_80073438;
-    __asm__("" : "=r"(v1_work) : "0"(v1_work));
-    record_offset -= record;
-    v0_work = record_offset << 1;
-    destination = (u16 *)(v1_work + v0_work);
-    output = func_8003A368() + record_offset;
-    v1_work = 0;
-    do {
-        *destination++ = *source++;
-        *output++ = D_80080D78[offset];
-        offset += 0x28;
-        v1_work++;
-    } while (v1_work < 55);
+void roster_runtime_copy(u16 roster) {
+    u16 id = frame_identifier_find(D_80080C90[roster].frame);
+    u16 *src = D_80080C90[roster].players;
+    u16 *dst = D_80073438 + id * 55;
+    u8 *out = func_8003A368() + id * 55;
+    u32 i;
+
+    for (i = 0; i < 55; i++) {
+        *dst++ = *src++;
+        *out++ = D_80080C90[roster].records[i].x00;
+    }
 }
