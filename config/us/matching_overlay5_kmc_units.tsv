@@ -1,4 +1,5 @@
 # ROM_START	SIZE	SOURCE	FLAGS	SHA256
+0x19440	0x360	src/overlays/overlay5/func_800DE388.c	--assembler=asn64 --symbol=D_8006C33C:0x8006C33C --symbol=D_80072380:0x80072380 --symbol=D_80072394:0x80072394 --symbol=D_8008931C:0x8008931C --symbol=overlay5_field_10_store:0x800E09F0 --symbol=overlay5_runtime_object_replace:0x800E08A4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1c86158a78003102d4ee751f9569b638c5624bf8d79de09e1c1aaa3d3648ba54
 0x1228	0x34	src/overlays/overlay5/runtime_sequence_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1442d365819e045d28e1f50c107e2f1924c2baedd553eaca61fbc5a714bd9f76
 0x125C	0x14	src/overlays/overlay5/object_state_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ee965ef777686b20d4b4078afc1d10fa4a8a03751b7de6b65d4124b1f099d62d
 0x1270	0x160	src/overlays/overlay5/func_800C61B8.c	--section-base=.rodata:0x80001748 --symbol=func_80031A1C:0x80031A1C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c759b183829ab0a9d60c4717cfe3b7123dfbcf60d4d3ab55b3e21c52d00d65de
@@ -350,3 +351,5 @@
 0x1DA7C	0x98	src/overlays/overlay5/packed_bits_read.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d19a8276ebb0875186552d2d55b79105f46afbd427615479ca1308d55049beb4
 0x1DB14	0x68	src/overlays/overlay5/packed_bit_set.c	--section-base=.rodata:0x80002F24 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	402800837197ce101716293344d37e885df0bd4fc21dc53eda69fadfd5a0d8b1
 0x1DB7C	0x80	src/overlays/overlay5/func_800E2AC4.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2c0a58a78c4aa702b72982d0e0f7e353534a8cd8380898183f9bb1394a2501d6
+0x1A254	0x1F8	src/overlays/overlay5/func_800DF19C.c	--assembler=asn64 --symbol=D_800723EC:0x800723EC -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e74a8b130971fb7882b78735bd87d0e1933d225d70f90bf9b3e76643c695a392
+0x1D330	0xCC	src/overlays/overlay5/func_800E2278.c	--assembler=asn64 --symbol=D_80002EE0:0x80002EE0 --symbol=D_80002EE8:0x80002EE8 --symbol=D_80002EF0:0x80002EF0 --symbol=D_80084F28:0x80084F28 --symbol=func_800E24EC:0x800E24EC --symbol=func_800E2584:0x800E2584 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	049b8cc2fac1c8450f0e0fa51a920c1044832a80dfeddf9f46a5d6057158b00b
