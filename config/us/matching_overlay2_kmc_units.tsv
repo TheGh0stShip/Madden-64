@@ -68,6 +68,7 @@
 0x9C24	0x68	src/overlays/overlay2/func_80094504.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2fdfd99426309f73d2512cdbde227ee9783724762cbabcdf62eccfa5836a50a7
 0x9C8C	0x20	src/overlays/overlay2/func_8009456C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a090d42dd4245caa4ac0e0cad9ecda1d9c60fa436c1b134a16c3971a5d28204e
 0x9CAC	0x4C	src/overlays/overlay2/func_8009458C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a0598323f8c6004c8f2bec71cd2c14783557422b8eadae7f58f4c3220e9d1dd5
+0x9CF8	0x164	src/overlays/overlay2/func_800945D8.c	--assembler=asn64 --section-base=.rodata:0x800019DC --symbol=func_800167FC:0x800167FC --symbol=func_8002E65C:0x8002E65C --normalizer-enable-FP32-PAIR --normalizer-enable-KMC-LID-ALIGN4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b5f80037985924412dda7567dd1f9dae325f2b5e2df5634cfeaf0cb4893afae2
 0x9E5C	0xB0	src/overlays/overlay2/func_8009473C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	80356bfcf363f5abdae52e1a0d4ad33a3f00f85ce473b20a91e99d21ab25b8da
 0x9F0C	0x28	src/overlays/overlay2/func_800947F4.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d7129c87512fa467358750473084b95731030c74518786af41f32b2f98472430
 0x9F34	0x8	src/overlays/overlay2/noop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
