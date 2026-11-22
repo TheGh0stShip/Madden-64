@@ -52,9 +52,7 @@ functions = [
     { name = "func_800C9F14", vram = 0x800c9f14, size = 0x64 }, # c
     { name = "func_800C9F78", vram = 0x800c9f78, size = 0x54 }, # c
     { name = "func_800C9FCC", vram = 0x800c9fcc, size = 0x3c0 }, # uncatalogued-head
-    { name = "func_800CA38C", vram = 0x800ca38c, size = 0x38 }, # fragment
-    { name = "func_800CA3C4", vram = 0x800ca3c4, size = 0x154 }, # c falls_through
-    { name = "func_800CA518", vram = 0x800ca518, size = 0x10 }, # stub
+    { name = "func_800CA38C", vram = 0x800ca38c, size = 0x19c }, # merged false fragments; complete function ends before func_800CA528
     { name = "func_800CA528", vram = 0x800ca528, size = 0x218 }, # c
     { name = "func_800CA740", vram = 0x800ca740, size = 0xc4 }, # rekey-genuine-row
     { name = "func_800CA804", vram = 0x800ca804, size = 0x128 }, # c

@@ -46,7 +46,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | boot_loader | 5 | 0 | 632 | 0 |
 | overlay_1 | 739 | 522 | 213,960 | 156,680 |
 | overlay_2 | 567 | 541 | 199,124 | 159,772 |
-| overlay_4 | 345 | 259 | 122,040 | 77,652 |
+| overlay_4 | 343 | 259 | 122,040 | 77,652 |
 | overlay_5 | 380 | 356 | 123,640 | 91,104 |
 | resident | 1,361 | 1,233 | 378,060 | 295,428 |
 
@@ -54,12 +54,12 @@ heuristic boundary catalogues and are not equivalent measures.
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 245 | 38 | 2,856 | 508 |
+| 000-0016 | 244 | 37 | 2,840 | 492 |
 | 000-0032 | 180 | 38 | 4,768 | 988 |
-| 000-0064 | 417 | 38 | 20,732 | 1,820 |
+| 000-0064 | 416 | 37 | 20,676 | 1,764 |
 | 000-0128 | 655 | 55 | 62,148 | 5,400 |
 | 000-0256 | 742 | 62 | 138,304 | 11,708 |
-| 000-0512 | 657 | 95 | 239,928 | 36,564 |
+| 000-0512 | 657 | 95 | 240,000 | 36,636 |
 | 000-1024 | 322 | 93 | 226,844 | 68,080 |
 | 1025+ | 179 | 67 | 341,876 | 131,752 |
 
@@ -83,7 +83,7 @@ register dependency, and no contradictory boundary finding.
 | resident | 1,361 | 1,361 | 2 | 14,536 | 12 |
 | overlay_1 | 1,071 | 739 | 231 | 43,696 | 987 |
 | overlay_2 | 606 | 567 | 0 | 0 | 129 |
-| overlay_4 | 420 | 345 | 87 | 17,500 | 348 |
+| overlay_4 | 420 | 343 | 87 | 17,500 | 348 |
 | overlay_5 | 408 | 380 | 1 | 16 | 75 |
 
 These findings are an audit queue, not additional progress. They include

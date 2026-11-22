@@ -33,7 +33,7 @@ class AttackSurfaceTests(unittest.TestCase):
 
     def test_public_function_totals_are_preserved(self):
         modules = self.analysis["functions"]["modules"]
-        self.assertEqual(sum(item["functions"] for item in modules.values()), 3397)
+        self.assertEqual(sum(item["functions"] for item in modules.values()), 3395)
         self.assertEqual(sum(item["matched_functions"] for item in modules.values()),
                          2911)
 
