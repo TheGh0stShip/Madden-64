@@ -46,7 +46,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | boot_loader | 5 | 0 | 632 | 0 |
 | overlay_1 | 739 | 522 | 213,960 | 156,680 |
 | overlay_2 | 567 | 541 | 199,124 | 159,772 |
-| overlay_4 | 343 | 259 | 122,040 | 77,652 |
+| overlay_4 | 343 | 260 | 122,040 | 78,684 |
 | overlay_5 | 380 | 356 | 123,640 | 91,104 |
 | resident | 1,361 | 1,233 | 378,060 | 295,428 |
 
@@ -61,7 +61,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | 000-0256 | 742 | 62 | 138,304 | 11,708 |
 | 000-0512 | 657 | 95 | 240,000 | 36,636 |
 | 000-1024 | 322 | 93 | 226,844 | 68,080 |
-| 1025+ | 179 | 67 | 341,876 | 131,752 |
+| 1025+ | 179 | 66 | 341,876 | 130,720 |
 
 - Exact duplicate body families: 28
 - Functions participating in those families: 161
