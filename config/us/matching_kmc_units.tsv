@@ -450,7 +450,7 @@
 0x2F428	0x20	src/code/offset_wrapper.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	531bbb5cc2e5f0a8e0be578e88e5d87586506c5ac3321c8554ed823754d51cd6
 0x2F448	0x48	src/code/packed_signed_table_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Iinclude	3ff1927eed252aeda631943a3c2fb3da98bb9ce9c2ac6caee73bbc31b7fa293f
 0x2F490	0x10C	src/code/func_8002E890.c	--assembler=asn64 --section-base=.rodata:0x80001564 --normalizer-enable-KMC-LID-PAIR --normalizer-enable-KMC-LID-ALIGN4 --normalizer-enable-KMC-LID-PAD4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6a8f09655ac2464c054d60097d69412750c4ac0332c7880641ac90c6e89998c2
-0x2F59C	0x4C	src/code/fixed_square_root.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	91f11e005ea503c562a1f79ca871f9dc3468dd91c618a87d5b06f9e3cd5a1529
+0x2F59C	0x4C	src/code/fixed_square_root.c	--assembler=asn64 --symbol=D_80001590:0x80001590 --symbol=D_80001598:0x80001598 --normalizer-enable-FP32-PAIR -O2 -G0 -mips3 -mgp32 -mfp32 -ffast-math -Wa,-r4300_mul -Iinclude	91f11e005ea503c562a1f79ca871f9dc3468dd91c618a87d5b06f9e3cd5a1529
 0x2F5E8	0x3C	src/code/runtime_offset_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f3fab230d72aa6c6770b6c026f0a3c400040cb8e6d21e09c63bf9d90dcb74d1a
 0x2F624	0x38	src/code/runtime_defaults_prepare.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2cca6ee545e9cd025c5c9c9e9af5c2a08a17a8f19ece0efa379b5ee8d14c1fb4
 0x2F970	0x10C	src/code/func_8002ED70.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e301f094f5e7aa7330c8372644b8aaf6eb7150e7591c172169befcc28b45e935

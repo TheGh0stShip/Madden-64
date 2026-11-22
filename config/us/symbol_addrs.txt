@@ -3,3 +3,5 @@
 # this file are proof inputs; speculative matcher-inferred addresses do not
 # belong here.
 D_8008B654 = 0x8008B654; // type:bss size:0x4 evidence:4-exact-consumers
+D_80001590 = 0x80001590; // type:rodata size:0x8 evidence:data-ledger
+D_80001598 = 0x80001598; // type:rodata size:0x8 evidence:data-ledger
