@@ -113,7 +113,7 @@
 0xE9F0	0x28	src/code/node_pool_select.c	--symbol=D_8008AFD4:0x8008AFD4 --symbol=D_80078430:0x80078430 --symbol=D_80078438:0x80078438 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	973fcaa7c767d961fde35eed2a4a5cd915249a78f0d412097d03b2a5a3389e8b
 0xEA18	0x1C	src/code/node_pool_advance.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	97cd495e4a88a49610679e56ff1ad86c3789dfbf588af0fcc887236f960b717e
 0xEA34	0xDC	src/code/vector_slots_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f26cf764e126b874306e8d34b69cf26df94a5457f782b9f258933d9f0a6f30fb
-0xEB10	0x24	src/code/node_pool_current.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f40358cf0716632b90674f90227f8b817cf33650c02b22977b94145202011ba
+0xEB10	0x24	src/code/node_pool_current.c	--symbol=D_80064BB0:0x80064BB0 --symbol=D_80064BB8:0x80064BB8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8f40358cf0716632b90674f90227f8b817cf33650c02b22977b94145202011ba
 0xEB34	0xF8	src/code/vector_signed_components_load.c	--assembler=asn64 --symbol=D_80078418:0x80078418 --symbol=D_80078419:0x80078419 --symbol=D_8007841A:0x8007841A --symbol=D_8007841C:0x8007841C --symbol=D_8007841D:0x8007841D --symbol=D_8007841E:0x8007841E --symbol=D_80078429:0x80078429 --symbol=D_8007842A:0x8007842A -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	639afcb1bf63baf9699161edadf03489afa79fc2fd5537e3c3d6a700d25b29d5
 0xEC2C	0x30	src/code/pool_entry_at.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8a2fd554e13ec2077a1815af4c95837e306809ddc0e04ae080634a8d86c74990
 0xEC5C	0x60	src/code/indexed_color_pair_set.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	08c5d5b307918605cc8bda326e0ebd81a8c95fc1300295ba6a698a4b0c984769
@@ -275,7 +275,7 @@
 0x201A4	0x30	src/code/indexed_entry_dispatch.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	86ea9e29deb44fa79d8eb9b8e2f94cc7d4e0b43ead2f002312915c75ae1bd1d9
 0x201D4	0x138	src/code/func_8001F5D4.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9a183d5bdc2cc9c81da7205fb2a2c4ef1e0d03c45dcb6b3eb946d6919370575a
 0x2030C	0x48	src/code/gameplay_resources_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	131499d69ada7d3d9da19a09c9603a35fccc0e613b2aa00dd4ea84f6cc862166
-0x20354	0x38	src/code/indexed_pair_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8486e631389e9bd39e81b2cc0966fe6035fc2a868a6e39ce76b7b0131e9ce8d8
+0x20354	0x38	src/code/indexed_pair_clear.c	--symbol=D_80078590:0x80078590 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8486e631389e9bd39e81b2cc0966fe6035fc2a868a6e39ce76b7b0131e9ce8d8
 0x2038C	0x90	src/code/player_index_selection_set.c	--assembler=asn64 --symbol=D_800785A5:0x800785A5 --symbol=D_80086DD8:0x80086DD8 --symbol=D_800908B8:0x800908B8 --symbol=D_80087954:0x80087954 -O2 -G0 -mips3 -mgp32 -mfp32	1f5b5f3ae494dde37695129d9c8709e0c4cba0d02d05b35d03ad57df9d85da8b
 0x2041C	0x2C	src/code/team_entry_flag.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bc433b493cef370a6968cd62d8b5484e7e7f5f6011c0c39cd3c4d85edcb6bfc3
 0x20448	0x1C4	src/code/menu_player_finalize.c	--assembler=asn64 --symbol=D_800692B0:0x800692B0 --symbol=D_800692B2:0x800692B2 --symbol=D_80069308:0x80069308 --symbol=D_800695F0:0x800695F0 --symbol=D_80071728:0x80071728 --symbol=D_800784F4:0x800784F4 --symbol=D_80080D6A:0x80080D6A --symbol=func_8001F0C4:0x8001F0C4 --symbol=func_8001F488:0x8001F488 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c4cea4ca78a7e774eeec1dd339d002544723c75350bf4e48f524f65477440a2f
@@ -382,7 +382,7 @@
 0x2A094	0x78	src/code/selection_state_advance.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3f7bb24da536c8aa15fd7d57b12076e5717b42122add22db3e04c88caf3ad4d7
 0x2A3A4	0x38	src/code/runtime_threshold_flag.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b0fde17111b74808a83d1ce0db2e06d7fb65952ae552fc1d278d12e976420f97
 0x2A3DC	0x20	src/code/counter_subtract.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b3d9929501a8c83cfa3e5526694bb8c8fae36cb67d8bcdaa2bf3b9d29124b394
-0x2A3FC	0x5C	src/code/indexed_flag_byte_get.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	87c2956fc8c61674395841828bdd70a6a6270b41049a091ac86af558ad029ae3
+0x2A3FC	0x5C	src/code/indexed_flag_byte_get.c	--assembler=asn64 --symbol=D_80081860:0x80081860 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	87c2956fc8c61674395841828bdd70a6a6270b41049a091ac86af558ad029ae3
 0x2A458	0xDC	src/code/play_event_queue_advance.c	--assembler=asn64 --normalizer-enable-KMC-PLAY-QUEUE-SCHEDULE -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bcf2e82a1a49edc10b8a2c3eff4c49ba841243bdb58551d8fe589b20d5b9fe52
 0x2A534	0x20	src/code/score_digits.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a60e43236d9202a213e7d65c80840d36b2e5d3f8c4bbbd7315cd9dcf0db1b05a
 0x2A554	0x64	src/code/cyclic_packed_value_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2edffc157bcff2661afc7ec92fed0fbd3116fa97fb3b6e68bf2f3d67c39aef2f
@@ -417,9 +417,9 @@
 0x2D5B0	0xD8	src/code/team_color_resolve.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	64f3a182c48c9dd4419724d40fcd8813c8af0904349219fff2010186b59aeb12
 0x2D688	0x18	src/code/variadic_success.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6c0dbc56dd67d795f31837b306636282ebb656a1ed0cc38e5a3222053993161d
 0x2D6A0	0x30	src/code/task_state_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e22cdbece40f300ed525f66888942bc570250b124d87e0d5ac16a9b6df20fc0
-0x2D6D0	0x48	src/code/slot_allocate_next.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	18bce64596a91b77b0509453ff878b59fa56544f892422dafe1fe467d41bd104
+0x2D6D0	0x48	src/code/slot_allocate_next.c	--symbol=D_80085E68:0x80085E68 --symbol=D_8008B35C:0x8008B35C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	18bce64596a91b77b0509453ff878b59fa56544f892422dafe1fe467d41bd104
 0x2D718	0x38	src/code/identity_rows_init.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ca11186b4835fda780704942bfcb53b1e5a987165cabbe273b597cfb65af5d5c
-0x2D750	0x84	src/code/active_record_copy.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	47c7572c80c52f74adadb4c95fff00cc46b4a8c3d603972cb036c342d06e460e
+0x2D750	0x84	src/code/active_record_copy.c	--symbol=D_80085E68:0x80085E68 --symbol=D_8008B35C:0x8008B35C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	47c7572c80c52f74adadb4c95fff00cc46b4a8c3d603972cb036c342d06e460e
 0x2D7D4	0x154	src/code/matrix_stack_duplicate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	73193b2373cfb65790f6bdd5f8787f953f5c7db076d0e5125110bad973b14048
 0x2D928	0x1C	src/code/task_counter.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f364b0d43138228b440aaa447bcff0efe06ad71f06b85c816681b9429562ac3d
 0x2DF50	0x48	src/code/current_vector_negate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bee10790d235ca51f507b9686228b421d7c8a26d3e3f639886a42b1c8549131f
@@ -434,7 +434,7 @@
 0x2E614	0x168	src/code/matrix_stack_transform_vector.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	3bcc96d7aaaaea23ef51d361c6363085590c285979e844cf7764c7f5d77bf069
 0x2E77C	0x54	src/code/active_record_values_rotate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	129554f13c8d308af16d0d8edf54ed467c85828413b393c985e70368a98f8d2d
 0x2E968	0x168	src/code/matrix_stack_transform_point.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	549980e65c0d478972aed84683656423a1617b58bf97eac9711140e01d36f452
-0x2EAD0	0x24	src/code/task_entry.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e78efefb5724067c3a9fc21b2d6ffc9aaaba5222f443e0c1a66a5b48cbf97126
+0x2EAD0	0x24	src/code/task_entry.c	--symbol=D_80085E68:0x80085E68 --symbol=D_8008B35C:0x8008B35C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	e78efefb5724067c3a9fc21b2d6ffc9aaaba5222f443e0c1a66a5b48cbf97126
 0x2EAF4	0x128	src/code/matrix_stack_export_fixed.c	--assembler=asn64 --symbol=D_80085E68:0x80085E68 --symbol=D_8008B35C:0x8008B35C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f075d17d9d3778c4677eb50a4223aa63097f5f81e3e436dbad930d2819febd2c
 0x2EC1C	0xEC	src/code/matrix_vector_transform.c	--assembler=asn64 --normalizer-enable-KMC-FP-PAIR-WORDS -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f4f8a91fb416038788f5a0f0479fe4405e8d0320c31071ab4b5e0ea6e73979d9
 0x2ED08	0x40	src/code/byte_string_compare_count.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	5f7c1b83ff2833238c855ca828bb8b0be5f36faeb111edc78f85bce3fbfa1296
@@ -514,7 +514,7 @@
 0x33A00	0x13C	src/code/memory_pool_range_take.c	--assembler=asn64 --symbol=D_8007A3FC:0x8007A3FC --symbol=D_8007A40C:0x8007A40C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b8b726fd1bf519c8011faaffdf675543882967eb0264d714a83a937a5f63287a
 0x33B3C	0x114	src/code/memory_pool_block_resize.c	--assembler=asn64 --symbol=D_8007A414:0x8007A414 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9b1f069c34bee6f40757f33b538234c68986e9cf825423dd949b8b16871910bb
 0x33C50	0xDC	src/code/memory_block_split.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7d191d556e18131a17dd055bae01e96cc4426f45758a5496d27b80cc7ae86cba
-0x33D2C	0x48	src/code/channel_maximum_size.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f0e03fca6c04ec52b78c4e897815eea8bbb878fe586a9a958a23ededab193230
+0x33D2C	0x48	src/code/channel_maximum_size.c	--symbol=D_8007A40C:0x8007A40C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f0e03fca6c04ec52b78c4e897815eea8bbb878fe586a9a958a23ededab193230
 0x33D74	0xE4	src/code/memory_table_create.c	--assembler=asn64 --normalizer-enable-KMC-LATE-S0-SETUP -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	d93aa31398617c7a5dc375d4196d2177fafa7efeaac978191731b73cff6d689a
 0x33E58	0x40	src/code/stream_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bb64cf6d1bc5be58f89326314c0b4271d802f687eb0aaaa8b4931ac79e5a8325
 0x33E98	0x30	src/code/stream_block_pop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	0c7601dade8f8fbaafb3cefecd0ea516976ec49f5dd43a9ce03d36e3e17bd5ad
