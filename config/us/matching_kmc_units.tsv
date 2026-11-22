@@ -865,7 +865,7 @@
 0x46394	0x58	src/code/render_buffers_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	cae59b5666856b10cb635e67ab4d149d866e8c945ec6313a2e0d086a9ee0ec77
 0x463F0	0x8	src/code/late_noop_secondary.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x463F8	0x44	src/code/runtime_range_allocate.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7378a853ffb83aa81aac49222dc4aa3912a5f13935a11e1aecb3e2303f7e408f
-0x4643C	0xBC	src/code/audio_timeline_update.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	deb1ddb393d931653cb4e5ee513b8a480b4b66f074f8964e483362911548db42
+0x4643C	0xBC	src/code/audio_timeline_update.c	--assembler=asn64 --symbol=D_80074D78:0x80074D78 --symbol=D_8008A5B4:0x8008A5B4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	deb1ddb393d931653cb4e5ee513b8a480b4b66f074f8964e483362911548db42
 0x464F8	0x30	src/code/late_resource_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b8c473319d37265dbba5b21dafbf24827b7e8e116c574eb15dffdd0dae861b
 0x55368	0x150	src/code/object_state_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	30979702dd097b84d1799e2339779148fb740af50825c30d4e3c9422a34dcc3b
 0x554B8	0x130	src/code/object_stream_driver_process.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9185523d2a740e8f25c6571a5398c8dadd5c469edef2b46e75c29e052585e129
