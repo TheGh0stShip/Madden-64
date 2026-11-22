@@ -331,17 +331,17 @@ address	kind	function	detail
 0x800E2BC0	rejected_start		sweep seed: falls into the next function
 0x800E2BF8	late_start	0x800E2BF8	reads v0,v1 set by the preceding bytes
 0x800E2C00	late_start	0x800E2C00	reads v0 set by the preceding bytes
-0x800E45AC	in_text_data		0x218 bytes of non-code inside text
-0x800E45AC	rejected_start		sweep seed: falls into the next function
-0x800E47C4	late_start	0x800E47C4	reads v1 set by the preceding bytes
-0x800E47D0	branch_outside	0x800E47C4	branch to 0x800E46F0 outside any entry
-0x800E4838	cross_branch	0x800E47C4	branch to 0x800E48E4 inside 0x800E48A4
-0x800E4848	cross_branch	0x800E47C4	branch to 0x800E48E4 inside 0x800E48A4
-0x800E485C	cross_branch	0x800E47C4	branch to 0x800E48E4 inside 0x800E48A4
-0x800E48A4	late_start	0x800E48A4	reads v0 set by the preceding bytes
-0x800E48F8	cross_branch	0x800E48A4	branch to 0x800E4978 inside 0x800E4904
-0x800E4900	cross_branch	0x800E48A4	branch to 0x800E4918 inside 0x800E4904
-0x800E4904	late_start	0x800E4904	reads v1 set by the preceding bytes
+0x800E45AC	uncatalogued_head	0x800E45AC	pointer-table entry and stack-frame prologue begin the function 0x218 bytes before the former first row
+0x800E47C4	merged_false_fragment	0x800E45AC	reads v1 and saved registers owned by the frame beginning at 0x800E45AC
+0x800E47D0	internal_branch	0x800E45AC	branch to 0x800E46F0 remains inside the corrected function
+0x800E4838	internal_branch	0x800E45AC	branch to 0x800E48E4 crosses a former false split
+0x800E4848	internal_branch	0x800E45AC	branch to 0x800E48E4 crosses a former false split
+0x800E485C	internal_branch	0x800E45AC	branch to 0x800E48E4 crosses a former false split
+0x800E4880	merged_false_fragment	0x800E45AC	uses the saved-register frame beginning at 0x800E45AC and falls through
+0x800E48A4	merged_false_fragment	0x800E45AC	reads v0 and saved registers owned by the frame beginning at 0x800E45AC
+0x800E48F8	internal_branch	0x800E45AC	branch to 0x800E4978 crosses a former false split
+0x800E4900	internal_branch	0x800E45AC	branch to 0x800E4918 crosses a former false split
+0x800E4904	merged_false_fragment	0x800E45AC	reads v1 and saved registers owned by the frame beginning at 0x800E45AC
 0x800E56D0	in_text_data		0x6C bytes of non-code inside text
 0x800E56D0	rejected_start		sweep seed: falls into the next function
 0x800E573C	late_start	0x800E573C	reads v0 set by the preceding bytes

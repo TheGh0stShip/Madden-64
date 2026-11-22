@@ -46,7 +46,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | boot_loader | 5 | 0 | 632 | 0 |
 | overlay_1 | 739 | 522 | 213,960 | 156,680 |
 | overlay_2 | 567 | 541 | 199,124 | 159,772 |
-| overlay_4 | 343 | 260 | 122,040 | 78,684 |
+| overlay_4 | 340 | 260 | 122,576 | 78,684 |
 | overlay_5 | 380 | 356 | 123,640 | 91,104 |
 | resident | 1,361 | 1,233 | 378,060 | 295,428 |
 
@@ -56,20 +56,20 @@ heuristic boundary catalogues and are not equivalent measures.
 |---|---:|---:|---:|---:|
 | 000-0016 | 244 | 37 | 2,840 | 492 |
 | 000-0032 | 180 | 38 | 4,768 | 988 |
-| 000-0064 | 416 | 37 | 20,676 | 1,764 |
-| 000-0128 | 655 | 55 | 62,148 | 5,400 |
-| 000-0256 | 742 | 62 | 138,304 | 11,708 |
+| 000-0064 | 415 | 36 | 20,640 | 1,728 |
+| 000-0128 | 654 | 54 | 62,052 | 5,304 |
+| 000-0256 | 741 | 61 | 138,116 | 11,520 |
 | 000-0512 | 657 | 95 | 240,000 | 36,636 |
-| 000-1024 | 322 | 93 | 226,844 | 68,080 |
-| 1025+ | 179 | 66 | 341,876 | 130,720 |
+| 000-1024 | 321 | 92 | 226,244 | 67,480 |
+| 1025+ | 180 | 67 | 343,332 | 132,176 |
 
 - Exact duplicate body families: 28
 - Functions participating in those families: 161
 - Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 1,082,496
-- Bytes assigned to provisional candidate bodies: 1,037,456
-- Code bytes outside provisional candidate bodies: 45,040
+- Bytes assigned to provisional candidate bodies: 1,037,992
+- Code bytes outside provisional candidate bodies: 44,504
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally
@@ -83,7 +83,7 @@ register dependency, and no contradictory boundary finding.
 | resident | 1,361 | 1,361 | 2 | 14,536 | 12 |
 | overlay_1 | 1,071 | 739 | 231 | 43,696 | 987 |
 | overlay_2 | 606 | 567 | 0 | 0 | 129 |
-| overlay_4 | 420 | 343 | 87 | 17,500 | 348 |
+| overlay_4 | 420 | 340 | 87 | 17,500 | 348 |
 | overlay_5 | 408 | 380 | 1 | 16 | 75 |
 
 These findings are an audit queue, not additional progress. They include

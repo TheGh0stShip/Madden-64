@@ -322,10 +322,7 @@ functions = [
     { name = "func_800E4498", vram = 0x800e4498, size = 0x8 }, # stub
     { name = "func_800E44A0", vram = 0x800e44a0, size = 0x8 }, # c
     { name = "func_800E44A8", vram = 0x800e44a8, size = 0x104 }, # c
-    { name = "func_800E47C4", vram = 0x800e47c4, size = 0xbc }, # leaf falls_through
-    { name = "func_800E4880", vram = 0x800e4880, size = 0x24 }, # fragment
-    { name = "func_800E48A4", vram = 0x800e48a4, size = 0x60 }, # fragment
-    { name = "func_800E4904", vram = 0x800e4904, size = 0x258 }, # c
+    { name = "func_800E45AC", vram = 0x800e45ac, size = 0x5b0 }, # c
     { name = "func_800E4B5C", vram = 0x800e4b5c, size = 0x128 }, # c
     { name = "func_800E4C84", vram = 0x800e4c84, size = 0x68 }, # c
     { name = "func_800E4CEC", vram = 0x800e4cec, size = 0x114 }, # c

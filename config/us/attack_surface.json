@@ -193,8 +193,8 @@
         "matched_bytes": 159772
       },
       "overlay_4": {
-        "functions": 343,
-        "bytes": 122040,
+        "functions": 340,
+        "bytes": 122576,
         "matched_functions": 260,
         "matched_bytes": 78684
       },
@@ -214,9 +214,9 @@
     "catalogue_status": {
       "provisional": true,
       "program_code_bytes": 1082496,
-      "catalogue_body_bytes": 1037456,
-      "code_bytes_outside_catalogue_bodies": 45040,
-      "catalogue_candidates": 3395,
+      "catalogue_body_bytes": 1037992,
+      "code_bytes_outside_catalogue_bodies": 44504,
+      "catalogue_candidates": 3392,
       "boundary_audits": {
         "resident": {
           "text_bytes": 411132,
@@ -267,7 +267,7 @@
         "overlay_4": {
           "text_bytes": 132728,
           "sweep_candidates": 420,
-          "catalogue_candidates": 343,
+          "catalogue_candidates": 340,
           "in_text_data_ranges": 87,
           "in_text_data_bytes": 17500,
           "findings": {
@@ -314,20 +314,20 @@
         "matched_bytes": 3780
       },
       "000-0064": {
-        "functions": 416,
-        "bytes": 20676,
+        "functions": 415,
+        "bytes": 20640,
         "matched_functions": 379,
         "matched_bytes": 18912
       },
       "000-0128": {
-        "functions": 655,
-        "bytes": 62148,
+        "functions": 654,
+        "bytes": 62052,
         "matched_functions": 600,
         "matched_bytes": 56748
       },
       "000-0256": {
-        "functions": 742,
-        "bytes": 138304,
+        "functions": 741,
+        "bytes": 138116,
         "matched_functions": 680,
         "matched_bytes": 126596
       },
@@ -338,14 +338,14 @@
         "matched_bytes": 203364
       },
       "000-1024": {
-        "functions": 322,
-        "bytes": 226844,
+        "functions": 321,
+        "bytes": 226244,
         "matched_functions": 229,
         "matched_bytes": 158764
       },
       "1025+": {
-        "functions": 179,
-        "bytes": 341876,
+        "functions": 180,
+        "bytes": 343332,
         "matched_functions": 113,
         "matched_bytes": 211156
       }
