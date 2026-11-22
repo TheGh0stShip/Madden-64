@@ -1,4 +1,5 @@
 address	kind	function	detail
+0x800B2EB8	uncatalogued_head	0x800B2EB8	pointer table D_800BFABC names this entry; its global-base load defines v1 consumed by the following stack-frame body
 0x800908B8	false_split	func_800908B8	8-byte signed global load belongs to the body formerly catalogued at 0x800908C0; the loaded v0 is tested at 0x800908E0, and multiple exact C units use 0x800908B8 as the runtime callback/mode entry
 0x8008E074	false_split	func_8008E074	8-byte global load belongs to the body formerly catalogued at 0x8008E07C; two direct calls target 0x8008E074 and none target 0x8008E07C
 0x8008EE88	false_split	func_8008EE88	8-byte global load belongs to the body formerly catalogued at 0x8008EE90; the direct call targets 0x8008EE88 and none target 0x8008EE90

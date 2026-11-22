@@ -45,7 +45,7 @@ heuristic boundary catalogues and are not equivalent measures.
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 0 | 632 | 0 |
 | overlay_1 | 736 | 522 | 213,748 | 156,680 |
-| overlay_2 | 567 | 541 | 199,124 | 159,772 |
+| overlay_2 | 567 | 542 | 199,132 | 160,140 |
 | overlay_4 | 340 | 261 | 123,716 | 79,096 |
 | overlay_5 | 380 | 356 | 123,640 | 91,104 |
 | resident | 1,361 | 1,233 | 378,060 | 295,428 |
@@ -59,7 +59,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | 000-0064 | 415 | 36 | 20,640 | 1,728 |
 | 000-0128 | 652 | 52 | 61,864 | 5,116 |
 | 000-0256 | 741 | 61 | 138,116 | 11,520 |
-| 000-0512 | 657 | 94 | 240,000 | 36,224 |
+| 000-0512 | 657 | 93 | 240,008 | 35,864 |
 | 000-1024 | 320 | 91 | 225,376 | 66,612 |
 | 1025+ | 181 | 68 | 345,340 | 134,184 |
 
@@ -68,8 +68,8 @@ heuristic boundary catalogues and are not equivalent measures.
 - Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 1,082,496
-- Bytes assigned to provisional candidate bodies: 1,038,920
-- Code bytes outside provisional candidate bodies: 43,576
+- Bytes assigned to provisional candidate bodies: 1,038,928
+- Code bytes outside provisional candidate bodies: 43,568
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally

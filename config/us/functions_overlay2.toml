@@ -450,7 +450,7 @@ functions = [
     { name = "func_800B26A8", vram = 0x800b26a8, size = 0x6ac }, # c
     { name = "func_800B2D5C", vram = 0x800b2d5c, size = 0x138 }, # c
     { name = "func_800B2E94", vram = 0x800b2e94, size = 0x24 }, # leaf
-    { name = "func_800B2EC0", vram = 0x800b2ec0, size = 0x168 }, # c
+    { name = "func_800B2EB8", vram = 0x800b2eb8, size = 0x170 }, # uncatalogued-head
     { name = "func_800B3028", vram = 0x800b3028, size = 0x58 }, # c
     { name = "func_800B3088", vram = 0x800b3088, size = 0x188 }, # c
     { name = "func_800B3210", vram = 0x800b3210, size = 0x1c4 }, # c
