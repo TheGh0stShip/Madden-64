@@ -29,11 +29,11 @@ typedef struct StreamObject {
     StreamState *stream;
 } StreamObject;
 
-extern u8 D_80062AF8[];
-extern u8 D_80062B0C[];
-extern u8 D_80062E68[];
-extern u8 D_80062C40[];
-extern u8 D_80062CA8[];
+extern void func_80062AF8(void);
+extern void func_80062B0C(void);
+extern void func_80062E68(void);
+extern void func_80062C40(void);
+extern void func_80062CA8(void);
 extern void func_800629C8(StreamObject *object);
 
 typedef void *(*AllocateMethod)(StreamObject *, s32, u32);
@@ -45,16 +45,16 @@ void object_stream_state_create(StreamObject *object)
 
     state = ((AllocateMethod)object->methods->allocate)(object, 1, 0x30);
     object->stream = state;
-    state->vtable = D_80062AF8;
+    state->vtable = func_80062AF8;
     state->value8 = 0;
     state->size = object->width * object->height;
     if (object->mode == 2) {
-        state->operation = D_80062B0C;
-        state->handler = D_80062E68;
+        state->operation = func_80062B0C;
+        state->handler = func_80062E68;
         state->handle = ((CreateMethod)object->methods->create)(object, 1, state->size);
     } else {
-        state->operation = D_80062C40;
-        state->handler = D_80062CA8;
+        state->operation = func_80062C40;
+        state->handler = func_80062CA8;
         state->handle = 0;
     }
     func_800629C8(object);

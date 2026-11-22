@@ -1030,13 +1030,13 @@
 0x63F7C	0x44	src/code/runtime_object_release.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f6406217b63b1bd850dd95d12483df89cd84cc9a417c459c4ab231d0979932d0
 0x63FC0	0x58	src/code/allocated_fields_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4657f13ccd915ddc7f4e643000f6f697663d6c05ee98e1d7834aa72a212a5ac7
 0x64018	0x44	src/code/runtime_dispatch_loop.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	4d805a5669aa9867443b4453c0864ea86fa73571540cb5c223470c0e019b3b4b
-0x6405C	0x38	src/code/runtime_description_emit.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8ad5dfc2fda45cedb08fa85d9fcc1670bf1b8de5b513098ea7e1a7279f08128a
+0x6405C	0x38	src/code/runtime_description_emit.c	--symbol=D_800049D8:0x800049D8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	8ad5dfc2fda45cedb08fa85d9fcc1670bf1b8de5b513098ea7e1a7279f08128a
 0x64094	0x80	src/code/object_callback_threshold.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	eda4de069e1db0c85163d8e3a4ef106ea41d547fe48be43a29f58d969738ac8c
 0x64114	0x8	src/code/empty_function.c	-DFUNCTION=func_80063514 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
 0x6411C	0x14	src/code/object_pair_clear.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	77d80406c4b9b7b5ec3e7ea39ebac491208335ab1b8f95f84467c574ab4dd0b0
-0x64130	0x70	src/code/callback_table_initialize.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2269d5b445ef991e9b6303257a0bd15f39541534eddc54aa094484d12281456d
+0x64130	0x70	src/code/callback_table_initialize.c	--symbol=D_80003668:0x80003668 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	2269d5b445ef991e9b6303257a0bd15f39541534eddc54aa094484d12281456d
 0x641A0	0x3C	src/code/callback_command_53.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	ca9f10907d7dbdba0133785ece088bb7a1a4b8b6b692f2c41786f7161614696e
-0x641DC	0x1C8	src/code/object_stream_initialize.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e375a3c6c34e61bcd33af9cec50ba847afee5253c1e8e85eb3da221711024a8
+0x641DC	0x1C8	src/code/object_stream_initialize.c	--assembler=asn64 --symbol=D_800049E0:0x800049E0 --symbol=D_800049E8:0x800049E8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9e375a3c6c34e61bcd33af9cec50ba847afee5253c1e8e85eb3da221711024a8
 0x643A4	0xF8	src/code/object_stream_allocate.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	b49b118e173468d19684636e5389d205d2dbaff39e87004914a856cc8fb66ba6
 0x6449C	0x130	src/code/object_stream_pointer_blocks.c	--assembler=asn64 -DFUNCTION=func_8006389C -DSIZE_SHIFT=0 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	872b25523f195143e816b68ff3feeb0f306d9e7d1fdae9c2bc96b8c2f1ecbcc4
 0x645CC	0x140	src/code/object_stream_pointer_blocks.c	--assembler=asn64 -DFUNCTION=func_800639CC -DSIZE_SHIFT=7 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fb5994e8701fd43786fd8eaf7fca7509ffbaaa8cd4d311ce33ce94efb3bc7e47
