@@ -25,7 +25,6 @@
 0x17C30	0x390	src/code/resource_file_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	427f64fc5f37912404edf7fa5ff54e00b8f5e61f7e0e47feeed11d9457c625be
 0x30538	0x330	src/code/bitstream_record_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	293141820cae715f5d34fba3254c8644f3afb608b7539251ed7db73760f9926a
 0x32854	0x434	src/code/runtime_flags_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	b16bcd8eb0d270eaecc33c2b54465228f1ea60be63ed55f4f46172ee1329d560
-0x331C0	0x3C4	src/code/math_tables_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	1047f32e43229bc6cc47ba720f745b48989d07547eda01a61553bc9f656d52dd
 0x3BFA0	0x30C	src/code/audio_table_decode_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	04c6b97fc31b2eb2bc130c82c8afa77c6031225091008a4805c5535077ed6921
 0x1D68C	0x5FC	src/code/ui_text_block_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	a28d396cadc704c53621bf93af7871a4ae0db1461d8ef8d366374ea9833730e1
 0x1E690	0x508	src/code/ui_text_layout_forward.s	-O2 -G0 -mips3 -mgp32 -mfp32	79557dffbe6289089b3a91e444df3f316e1828d31a79b716f99c434fb38e1e45
@@ -69,7 +68,6 @@
 0x2DD4C	0x204	src/code/gameplay_record_update_tertiary.s	-O2 -G0 -mips3 -mgp32 -mfp32	4e68c6d4bcf65e6e633f8fd36adfd9fa42a2f9c69ee0f65c09b3948382547f7d
 0x56A8C	0x204	src/code/object_animation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	75a7eb8087f9247d86d0c218bf269ac0f7f9a9c079853fc3c61dad89f61b04d4
 0x3D00C	0x200	src/code/audio_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	e2905fad917ec54a4b1ed4707ed27c5223fc010463a9692baef68ce332d0a75f
-0x1478C	0x1F8	src/code/render_pipeline_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	907028be3668e1a0fc5290307834ec05a22315d4b258c2c0f8f30fbbe3bc80f5
 0x29DD4	0x1F8	src/code/menu_mode_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	32acffb7892567d36a15c97b0ced5e8dce0f7fb60ca96f225b224a011445f616
 0x2A898	0x1F0	src/code/menu_record_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	8db15eab71898a8c05f7b3112c0b1f225f6bbaa21ec707688241f51447d96eed
 0x173FC	0x1D8	src/code/resource_stream_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	f5b6d9759c33b023f818c9e42adf85f3725b33aa3c76c7692e5c90bfdf9bc53a
