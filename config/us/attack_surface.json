@@ -181,8 +181,8 @@
         "matched_bytes": 0
       },
       "overlay_1": {
-        "functions": 736,
-        "bytes": 213748,
+        "functions": 732,
+        "bytes": 213984,
         "matched_functions": 522,
         "matched_bytes": 156680
       },
@@ -214,9 +214,9 @@
     "catalogue_status": {
       "provisional": true,
       "program_code_bytes": 1082496,
-      "catalogue_body_bytes": 1038928,
-      "code_bytes_outside_catalogue_bodies": 43568,
-      "catalogue_candidates": 3389,
+      "catalogue_body_bytes": 1039164,
+      "code_bytes_outside_catalogue_bodies": 43332,
+      "catalogue_candidates": 3385,
       "boundary_audits": {
         "resident": {
           "text_bytes": 411132,
@@ -234,7 +234,7 @@
         "overlay_1": {
           "text_bytes": 1048576,
           "sweep_candidates": 1071,
-          "catalogue_candidates": 736,
+          "catalogue_candidates": 732,
           "in_text_data_ranges": 231,
           "in_text_data_bytes": 43696,
           "findings": {
@@ -302,20 +302,20 @@
     },
     "size_buckets": {
       "000-0016": {
-        "functions": 244,
-        "bytes": 2840,
+        "functions": 243,
+        "bytes": 2824,
         "matched_functions": 207,
         "matched_bytes": 2348
       },
       "000-0032": {
-        "functions": 179,
-        "bytes": 4744,
+        "functions": 177,
+        "bytes": 4680,
         "matched_functions": 142,
         "matched_bytes": 3780
       },
       "000-0064": {
-        "functions": 415,
-        "bytes": 20640,
+        "functions": 414,
+        "bytes": 20604,
         "matched_functions": 379,
         "matched_bytes": 18912
       },
@@ -326,14 +326,14 @@
         "matched_bytes": 56748
       },
       "000-0256": {
-        "functions": 741,
-        "bytes": 138116,
+        "functions": 740,
+        "bytes": 137980,
         "matched_functions": 680,
         "matched_bytes": 126596
       },
       "000-0512": {
-        "functions": 657,
-        "bytes": 240008,
+        "functions": 658,
+        "bytes": 240496,
         "matched_functions": 564,
         "matched_bytes": 204144
       },

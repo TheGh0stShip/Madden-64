@@ -436,11 +436,7 @@ functions = [
     { name = "transition_command_submit", vram = 0x800b17dc, size = 0x40 }, # C
     { name = "func_800B181C", vram = 0x800b181c, size = 0x2c }, # c
     { name = "func_800B1848", vram = 0x800b1848, size = 0x60 }, # leaf
-    { name = "func_800B18DC", vram = 0x800b18dc, size = 0x88 }, # asm
-    { name = "func_800B1964", vram = 0x800b1964, size = 0x20 }, # asm
-    { name = "func_800B1984", vram = 0x800b1984, size = 0x20 }, # asm
-    { name = "func_800B19AC", vram = 0x800b19ac, size = 0x24 }, # asm
-    { name = "func_800B1A80", vram = 0x800b1a80, size = 0x10 }, # stub
+    { name = "func_800B18A8", vram = 0x800b18a8, size = 0x1e8 }, # boundary-corrected
     { name = "global_buffer_prepare", vram = 0x800b1a90, size = 0x3c }, # C
     { name = "conditional_value_resolve", vram = 0x800b1acc, size = 0x5c }, # C
     { name = "func_800B1B28", vram = 0x800b1b28, size = 0x5c }, # c boundary-corrected

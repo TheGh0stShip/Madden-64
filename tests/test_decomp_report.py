@@ -57,7 +57,7 @@ class DecompReportTests(unittest.TestCase):
         self.assertEqual(totals["matched_code"], "782524")
         self.assertEqual(totals["total_data"], "155472")
         self.assertEqual(totals["matched_data"], "155472")
-        self.assertEqual(totals["total_functions"], 3389)
+        self.assertEqual(totals["total_functions"], 3385)
         self.assertEqual(totals["matched_functions"], 2914)
         categories = {item["id"]: item["measures"] for item in report["categories"]}
         self.assertEqual(set(categories), {
@@ -66,7 +66,7 @@ class DecompReportTests(unittest.TestCase):
         })
         self.assertEqual(categories["code"]["total_code"], "1082496")
         self.assertEqual(categories["code"]["matched_code"], "782524")
-        self.assertEqual(categories["code"]["total_functions"], 3389)
+        self.assertEqual(categories["code"]["total_functions"], 3385)
         self.assertEqual(categories["code"]["matched_functions"], 2914)
         self.assertEqual(categories["assembly_reference"]["matched_code"], "127528")
         self.assertEqual(categories["assembly_assisted_reference"]["matched_code"], "9512")
@@ -77,8 +77,8 @@ class DecompReportTests(unittest.TestCase):
         self.assertLessEqual(sum(int(unit["measures"]["total_code"])
                                  for unit in report["units"]), 1082496)
         self.assertEqual(sum(unit["measures"]["total_functions"]
-                                 for unit in report["units"]), 3389)
-        self.assertEqual(len(report["units"]), 3389)
+                                 for unit in report["units"]), 3385)
+        self.assertEqual(len(report["units"]), 3385)
         self.assertEqual(sum(unit["metadata"]["complete"]
                              for unit in report["units"]), 2914)
         partial_units = {
@@ -125,7 +125,7 @@ class DecompReportTests(unittest.TestCase):
             "unit": "bytes",
         })
         self.assertEqual(tracks["matching-functions"]["measurement"], {
-            "kind": "ratio", "completed": 2914, "total": 3389,
+            "kind": "ratio", "completed": 2914, "total": 3385,
             "unit": "functions",
         })
         self.assertEqual(tracks["assembly-reference"]["measurement"], {

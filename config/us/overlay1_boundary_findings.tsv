@@ -1,4 +1,10 @@
 address	kind	function	detail
+0x800B18A8	uncatalogued_head	0x800B18A8	stack-frame prologue begins here; the formerly separate rows through 0x800B1A80 are control-flow blocks sharing its saved-register frame and epilogue
+0x800B18DC	merged_false_fragment	0x800B18A8	uses s0-s3 and the stack frame established at 0x800B18A8
+0x800B1964	merged_false_fragment	0x800B18A8	control-flow block inside the 0x800B18A8 frame
+0x800B1984	merged_false_fragment	0x800B18A8	control-flow block inside the 0x800B18A8 frame
+0x800B19AC	merged_false_fragment	0x800B18A8	control-flow block inside the 0x800B18A8 frame
+0x800B1A80	merged_false_fragment	0x800B18A8	restores s0 from the frame established at 0x800B18A8 and owns the shared return
 0x80090564	branch_outside	0x80090004	branch to 0x800906B8 outside any entry
 0x80090588	branch_outside	0x80090004	branch to 0x80090654 outside any entry
 0x800905B8	branch_outside	0x80090004	branch to 0x80090704 outside any entry
@@ -565,12 +571,6 @@ address	kind	function	detail
 0x800B1318	in_text_data		0x8C bytes of non-code inside text
 0x800B164C	in_text_data		0xF8 bytes of non-code inside text
 0x800B1744	late_start	0x800B1744	reads v0 set by the preceding bytes
-0x800B18A8	in_text_data		0x34 bytes of non-code inside text
-0x800B18A8	rejected_start		sweep seed: falls into the next function
-0x800B18DC	falls_through	0x800B18DC	preceding code continues into this entry
-0x800B19A4	stray_words		0x8 non-code bytes before 0x800B19AC
-0x800B19AC	falls_through	0x800B19AC	preceding code continues into this entry
-0x800B19D0	in_text_data		0xB0 bytes of non-code inside text
 0x800B1B28	in_text_data		0x20 bytes of non-code inside text
 0x800B1B28	rejected_start		sweep seed: falls into the next function
 0x800B1CF4	in_text_data		0x34 bytes of non-code inside text

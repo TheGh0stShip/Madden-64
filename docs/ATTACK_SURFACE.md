@@ -44,7 +44,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | Module | Functions | Matched | Candidate bytes | Matched bytes |
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 0 | 632 | 0 |
-| overlay_1 | 736 | 522 | 213,748 | 156,680 |
+| overlay_1 | 732 | 522 | 213,984 | 156,680 |
 | overlay_2 | 567 | 542 | 199,132 | 160,140 |
 | overlay_4 | 340 | 261 | 123,716 | 79,096 |
 | overlay_5 | 380 | 356 | 123,640 | 91,104 |
@@ -54,12 +54,12 @@ heuristic boundary catalogues and are not equivalent measures.
 
 | Function bytes | Candidates | Unmatched | Candidate bytes | Unmatched bytes |
 |---|---:|---:|---:|---:|
-| 000-0016 | 244 | 37 | 2,840 | 492 |
-| 000-0032 | 179 | 37 | 4,744 | 964 |
-| 000-0064 | 415 | 36 | 20,640 | 1,728 |
+| 000-0016 | 243 | 36 | 2,824 | 476 |
+| 000-0032 | 177 | 35 | 4,680 | 900 |
+| 000-0064 | 414 | 35 | 20,604 | 1,692 |
 | 000-0128 | 652 | 52 | 61,864 | 5,116 |
-| 000-0256 | 741 | 61 | 138,116 | 11,520 |
-| 000-0512 | 657 | 93 | 240,008 | 35,864 |
+| 000-0256 | 740 | 60 | 137,980 | 11,384 |
+| 000-0512 | 658 | 94 | 240,496 | 36,352 |
 | 000-1024 | 320 | 91 | 225,376 | 66,612 |
 | 1025+ | 181 | 68 | 345,340 | 134,184 |
 
@@ -68,8 +68,8 @@ heuristic boundary catalogues and are not equivalent measures.
 - Matched-to-unmatched transferable families retained: 0
 - Conservative unmatched queue entries retained: 0
 - Program-region code bytes: 1,082,496
-- Bytes assigned to provisional candidate bodies: 1,038,928
-- Code bytes outside provisional candidate bodies: 43,568
+- Bytes assigned to provisional candidate bodies: 1,039,164
+- Code bytes outside provisional candidate bodies: 43,332
 
 Exact duplicate families with both matched and unmatched members are
 the first source-reuse targets. The conservative queue additionally
@@ -81,7 +81,7 @@ register dependency, and no contradictory boundary finding.
 | Module | Sweep candidates | Published candidates | Gap ranges | Gap bytes | Contradictory findings |
 |---|---:|---:|---:|---:|---:|
 | resident | 1,361 | 1,361 | 2 | 14,536 | 12 |
-| overlay_1 | 1,071 | 736 | 231 | 43,696 | 987 |
+| overlay_1 | 1,071 | 732 | 231 | 43,696 | 987 |
 | overlay_2 | 606 | 567 | 0 | 0 | 129 |
 | overlay_4 | 420 | 340 | 87 | 17,500 | 348 |
 | overlay_5 | 408 | 380 | 1 | 16 | 75 |
