@@ -62,6 +62,13 @@ the architecturally required load-delay scheduling. This rule depends only on
 the instruction form, not on a function name, address, register allocation, or
 desired target sequence.
 
+`FP32-PAIR` is another generic ASN64 compatibility rule. With `-mfp32`, ASN64
+materializes an `ldc1` or `sdc1` pseudo-operation as odd/even `lwc1` or
+`swc1` words. The rule depends only on the pseudo-operation, register pair,
+and addressing operand; it does not inspect a function name, target address,
+or desired instruction sequence. Ordinary C using this assembler lane remains
+eligible for matching-C credit.
+
 Function-specific scheduling or instruction-rewrite normalizers remain excluded
 from genuine-C progress. Their rows are retained only as assembly-assisted
 reference coverage until their source produces the ROM instructions directly.
