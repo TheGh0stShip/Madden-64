@@ -45,7 +45,7 @@ heuristic boundary catalogues and are not equivalent measures.
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 0 | 632 | 0 |
 | overlay_1 | 739 | 522 | 213,960 | 156,680 |
-| overlay_2 | 567 | 540 | 199,124 | 159,064 |
+| overlay_2 | 567 | 541 | 199,124 | 159,772 |
 | overlay_4 | 345 | 258 | 122,040 | 77,316 |
 | overlay_5 | 380 | 356 | 123,640 | 91,104 |
 | resident | 1,361 | 1,233 | 378,060 | 295,428 |
@@ -60,7 +60,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | 000-0128 | 655 | 55 | 62,148 | 5,400 |
 | 000-0256 | 742 | 62 | 138,304 | 11,708 |
 | 000-0512 | 657 | 96 | 239,928 | 36,900 |
-| 000-1024 | 322 | 94 | 226,844 | 68,788 |
+| 000-1024 | 322 | 93 | 226,844 | 68,080 |
 | 1025+ | 179 | 67 | 341,876 | 131,752 |
 
 - Exact duplicate body families: 28
