@@ -879,6 +879,7 @@
 0x55AD0	0x20	src/code/call_no_arguments.c	-DFUNCTION=func_80054ED0 -DCALLEE=func_8006337C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	a3d726533a6d2eb6b173cd09dc5edf4947be6fe5c52e9f1615cd4dd7ccf41b89
 0x55AF0	0x20	src/code/call_no_arguments.c	-DFUNCTION=func_80054EF0 -DCALLEE=func_80063318 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c43dd26a5dc61bc7fa4ac7c8211e5ef724f709b74059757dda6cc4d09953f302
 0x55B10	0x70	src/code/display_command_store.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	7dbf41f715bfdcc5045d6054b618d13fc16667a871b7270c447941dbe14dacc7
+0x55B80	0x234	src/code/object_driver_initialize.c	--assembler=asn64 --section-base=.rodata:0x800031E0 --normalizer-enable-FP32-PAIR --normalizer-enable-KMC-LID-ALIGN4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	49679c08e077741d5b795ee4a2c09df0c96b0b0d75908abb95d1309443794bbf
 0x55DB4	0xC8	src/code/object_action_update.c	--assembler=asn64 --symbol=func_8005527C:0x8005527C --symbol=func_80063318:0x80063318 -O2 -G0 -mips3 -mgp32 -mfp32	451be2b666cafe5cf7d2f43f99f8e053404a41ad13220cd9c8ca458e639345e1
 0x55E7C	0x100	src/code/object_state_dispatch.c	--assembler=asn64 --section-base=.rodata:0x800031E8 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	9ce6d58daa8b438dcb4abd657aada1a00acce1363decf619be41b9dcabc896a3
 0x55F7C	0x64	src/code/display_result_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	051e85f42d6cd71d0a3f11c031512b27925e22be3240bb8ced111ac8bff7fc74

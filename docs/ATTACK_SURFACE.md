@@ -48,7 +48,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | overlay_2 | 567 | 544 | 199,132 | 160,784 |
 | overlay_4 | 340 | 261 | 123,716 | 79,096 |
 | overlay_5 | 380 | 356 | 123,640 | 91,104 |
-| resident | 1,361 | 1,238 | 378,060 | 297,608 |
+| resident | 1,361 | 1,239 | 378,060 | 298,172 |
 
 ### Size distribution
 
@@ -60,7 +60,7 @@ heuristic boundary catalogues and are not equivalent measures.
 | 000-0128 | 652 | 51 | 61,864 | 5,040 |
 | 000-0256 | 740 | 59 | 137,980 | 11,148 |
 | 000-0512 | 658 | 89 | 240,496 | 34,352 |
-| 000-1024 | 320 | 90 | 225,376 | 65,648 |
+| 000-1024 | 320 | 89 | 225,376 | 65,084 |
 | 1025+ | 181 | 68 | 345,340 | 134,184 |
 
 - Exact duplicate body families: 28
