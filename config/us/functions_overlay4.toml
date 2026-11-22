@@ -64,7 +64,7 @@ functions = [
     { name = "func_800CAD68", vram = 0x800cad68, size = 0x25c }, # c
     { name = "func_800CAFC4", vram = 0x800cafc4, size = 0x2c }, # c
     { name = "func_800CAFF0", vram = 0x800caff0, size = 0x28 }, # c
-    { name = "func_800CB494", vram = 0x800cb494, size = 0x364 }, # c
+    { name = "func_800CB020", vram = 0x800cb020, size = 0x7d8 }, # uncatalogued-head
     { name = "func_800CB7F8", vram = 0x800cb7f8, size = 0x5c }, # c
     { name = "func_800CB854", vram = 0x800cb854, size = 0x16c }, # c
     { name = "func_800CB9C0", vram = 0x800cb9c0, size = 0x16c }, # c

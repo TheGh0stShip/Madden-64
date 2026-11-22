@@ -134,8 +134,9 @@ address	kind	function	detail
 0x80097E74	in_text_data		0x28 bytes of non-code inside text
 0x80097E74	rejected_start		sweep seed: falls into the next function
 0x80097F90	in_text_data		0xE0 bytes of non-code inside text
-0x80098070	late_start	0x80098070	reads v0,v1 set by the preceding bytes
-0x800980FC	late_start	0x800980FC	reads at,v1 set by the preceding bytes
+0x80098070	shifted_duplicate	0x8009386C	+0x4724 duplicate coordinate inside the already owned 0x8009386C function
+0x80098088	shifted_duplicate	0x8009386C	+0x4724 duplicate coordinate inside the already owned 0x8009386C function
+0x800980FC	shifted_duplicate	0x8009386C	+0x4724 duplicate coordinate inside the already owned 0x8009386C function
 0x80098144	in_text_data		0x14 bytes of non-code inside text
 0x80098164	late_start	0x80098164	reads v1 set by the preceding bytes
 0x80098178	late_start	0x80098178	reads v0 set by the preceding bytes

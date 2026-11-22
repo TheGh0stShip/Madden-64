@@ -87,9 +87,6 @@ functions = [
     { name = "func_80097D28", vram = 0x80097d28, size = 0x8 }, # stub
     { name = "func_80097D30", vram = 0x80097d30, size = 0x144 }, # c
     { name = "func_80097E74", vram = 0x80097e74, size = 0x11c }, # c boundary-corrected
-    { name = "func_80098070", vram = 0x80098070, size = 0x18 }, # asm
-    { name = "func_80098088", vram = 0x80098088, size = 0x74 }, # asm
-    { name = "func_800980FC", vram = 0x800980fc, size = 0x48 }, # asm
     { name = "func_80098144", vram = 0x80098144, size = 0x9c }, # c boundary-corrected
     { name = "func_800981E0", vram = 0x800981e0, size = 0x3a8 }, # rekey-genuine-row
     { name = "func_80098588", vram = 0x80098588, size = 0xa8 }, # c

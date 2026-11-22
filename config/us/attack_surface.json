@@ -181,8 +181,8 @@
         "matched_bytes": 0
       },
       "overlay_1": {
-        "functions": 739,
-        "bytes": 213960,
+        "functions": 736,
+        "bytes": 213748,
         "matched_functions": 522,
         "matched_bytes": 156680
       },
@@ -194,7 +194,7 @@
       },
       "overlay_4": {
         "functions": 340,
-        "bytes": 122576,
+        "bytes": 123716,
         "matched_functions": 260,
         "matched_bytes": 78684
       },
@@ -214,9 +214,9 @@
     "catalogue_status": {
       "provisional": true,
       "program_code_bytes": 1082496,
-      "catalogue_body_bytes": 1037992,
-      "code_bytes_outside_catalogue_bodies": 44504,
-      "catalogue_candidates": 3392,
+      "catalogue_body_bytes": 1038920,
+      "code_bytes_outside_catalogue_bodies": 43576,
+      "catalogue_candidates": 3389,
       "boundary_audits": {
         "resident": {
           "text_bytes": 411132,
@@ -234,7 +234,7 @@
         "overlay_1": {
           "text_bytes": 1048576,
           "sweep_candidates": 1071,
-          "catalogue_candidates": 739,
+          "catalogue_candidates": 736,
           "in_text_data_ranges": 231,
           "in_text_data_bytes": 43696,
           "findings": {
@@ -308,8 +308,8 @@
         "matched_bytes": 2348
       },
       "000-0032": {
-        "functions": 180,
-        "bytes": 4768,
+        "functions": 179,
+        "bytes": 4744,
         "matched_functions": 142,
         "matched_bytes": 3780
       },
@@ -320,8 +320,8 @@
         "matched_bytes": 18912
       },
       "000-0128": {
-        "functions": 654,
-        "bytes": 62052,
+        "functions": 652,
+        "bytes": 61864,
         "matched_functions": 600,
         "matched_bytes": 56748
       },
@@ -338,14 +338,14 @@
         "matched_bytes": 203364
       },
       "000-1024": {
-        "functions": 321,
-        "bytes": 226244,
+        "functions": 320,
+        "bytes": 225376,
         "matched_functions": 229,
         "matched_bytes": 158764
       },
       "1025+": {
-        "functions": 180,
-        "bytes": 343332,
+        "functions": 181,
+        "bytes": 345340,
         "matched_functions": 113,
         "matched_bytes": 211156
       }

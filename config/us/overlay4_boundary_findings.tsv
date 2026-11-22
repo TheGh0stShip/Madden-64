@@ -55,7 +55,8 @@ address	kind	function	detail
 0x800CA7A8	late_start	0x800CA7A8	reads v0,v1 set by the preceding bytes
 0x800CB018	in_text_data		0x47C bytes of non-code inside text
 0x800CB018	rejected_start		sweep seed: falls into the next function
-0x800CB494	falls_through	0x800CB494	preceding code continues into this entry
+0x800CB020	uncatalogued_head	0x800CB020	stack-frame prologue begins 0x474 bytes before the former row and owns one epilogue at 0x800CB7F0
+0x800CB494	merged_false_fragment	0x800CB020	predecessor falls through with the 0x800CB020 saved-register frame live
 0x800CC048	in_text_data		0x144 bytes of non-code inside text
 0x800CC048	rejected_start		sweep seed: falls into the next function
 0x800CC238	late_start	0x800CC238	reads v1,t0,v0 set by the preceding bytes
