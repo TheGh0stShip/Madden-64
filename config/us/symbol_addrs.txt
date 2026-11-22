@@ -1,0 +1,5 @@
+# Reviewed non-function symbols whose addresses are established by retail
+# relocations and repeated independently matching consumers.  Declarations in
+# this file are proof inputs; speculative matcher-inferred addresses do not
+# belong here.
+D_8008B654 = 0x8008B654; // type:bss size:0x4 evidence:4-exact-consumers

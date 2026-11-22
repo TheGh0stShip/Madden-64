@@ -59,6 +59,7 @@
 0xAD4C	0x38	src/overlays/overlay1/object_table_value_apply.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fddef45674de05e37e81481853606d69aee4705843f7d13203cd9a383fe24ea3
 0xAD84	0x44	src/overlays/overlay1/conditional_child_release.c	--symbol=func_80032F3C:0x80032F3C -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	77dca423ea238e0b8b4284dc21d9fad5f3eea5df7de04e578be79e6f718d0804
 0xADC8	0x8	src/overlays/overlay1/noop_99dcc.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	78aa5094d5ec7291c79f799c009d04f06c2f20187988e3dcc8d35ee5efdbb378
+0xADD0	0x1C4	src/overlays/overlay1/func_80099DD4.c	--assembler=asn64 --section-base=.rodata:0x800006D8 --symbol=D_8008B654:0x8008B654 --symbol=func_8002E01C:0x8002E01C --normalizer-enable-FP32-PAIR --normalizer-enable-KMC-LID-ALIGN4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	15f5ca758b95c81381ced70464729b72bde3a3f6d5821ff0fa6fb315ab431025
 0xAF94	0x40	src/overlays/overlay1/resource_load_96.c	--symbol=func_80008F30:0x80008F30 --symbol=D_800958B4:0x800958B4 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	c9224dab9ff3b6c44f0e9724cbfe87839887bd1af736d983b11e0b35bb5bd817
 0xB6B8	0xA4	src/overlays/overlay1/func_8009A6BC.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	1ff12e22ef2cce2be2b7a7d410785b09763a25e6cdd19d45cf5e4996354f8094
 0xBE78	0x74	src/overlays/overlay1/func_8009AE7C.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	fd96dc8108fa8b3e67c6bf0210acb6bf514726cef28871d98a87fd1ccec95847
