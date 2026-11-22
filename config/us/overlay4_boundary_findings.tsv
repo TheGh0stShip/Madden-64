@@ -23,7 +23,7 @@ address	kind	function	detail
 0x800C8768	branch_outside	0x800C872C	branch to 0x800C8628 outside any entry
 0x800C8964	in_text_data		0x188 bytes of non-code inside text
 0x800C8964	rejected_start		sweep seed: falls into the next function
-0x800C8AEC	late_start	0x800C8AEC	reads at set by the preceding bytes; not referenced
+0x800C8AEC	confirmed_start	0x800C8AEC	exact 0x19C-byte KMC C unit; preceding function returns at 0x800C8AE4 and this unit owns a complete epilogue
 0x800C8C08	in_text_data		0x80 bytes of non-code inside text
 0x800C8C08	rejected_start		sweep seed: falls into the next function
 0x800C8C88	late_start	0x800C8C88	reads at,v0 set by the preceding bytes; not referenced
