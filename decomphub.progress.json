@@ -8,7 +8,7 @@
       "scope": "USA Rev 0 (N8ME) loader, resident executable, and both executable overlays; only byte-identical code compiled from .c sources counts.",
       "measurement": {
         "kind": "ratio",
-        "completed": 818924,
+        "completed": 826672,
         "total": 1082496,
         "unit": "bytes"
       }
@@ -19,7 +19,7 @@
       "scope": "Byte-identical .s units retained as disassembly and reverse-engineering reference; excluded from C decompilation progress.",
       "measurement": {
         "kind": "ratio",
-        "completed": 110208,
+        "completed": 109388,
         "total": 1082496,
         "unit": "bytes"
       }
@@ -63,8 +63,8 @@
       "scope": "Audited candidate boundaries across the loader, resident image, and both executable overlays; a function counts only when its complete machine code is reproduced from a compiled .c source.",
       "measurement": {
         "kind": "ratio",
-        "completed": 2965,
-        "total": 3385,
+        "completed": 2969,
+        "total": 3384,
         "unit": "functions"
       }
     },

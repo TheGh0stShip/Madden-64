@@ -16,7 +16,6 @@
 0x4F648	0xC0	src/libultra/os_probe_tlb.s	-O2 -G0 -mips3 -mgp32 -mfp32	349227b84b51cb246abaf9de4bf56eba78054d85575e1bfb09acfdb8d1bc0c28
 0x4DD68	0xA0	src/libultra/os_set_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	86cb8015715ed857a8877c8f765e022385d51b5c1e2cb8645586b08a05f91a23
 0xD620	0x118	src/code/object_orientation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	4b07a347661fd37d5f854d7aeccce5e048c2bf657a3f6695ae536c9c20f31144
-0xBEE0	0x334	src/code/display_texture_cache_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	6026df1f74f17f295e4714d019d7fdf4d716042349650d7c31ee8350e4c4a36a
 0xCB08	0x358	src/code/display_frame_context_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	f9b465a7804ab800a612b84ce4ed14db0f4b3861266749e45976cdaf0bcab16f
 0xCE60	0x530	src/code/display_frame_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	ac5ffd49de96de5846aea0fd5dd145c33707cc567c205a01c0c4133a7b4298ff
 0x11878	0x5B0	src/code/display_scene_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	adb6a1bbbf7e8e055b979de41bf349a877ef7a8d2510eccda5c73bc36e205316

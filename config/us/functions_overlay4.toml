@@ -290,8 +290,7 @@ functions = [
     { name = "func_800E281C", vram = 0x800e281c, size = 0x50 }, # c
     { name = "func_800E286C", vram = 0x800e286c, size = 0x1bc }, # c
     { name = "func_800E2A28", vram = 0x800e2a28, size = 0x198 }, # c
-    { name = "func_800E2BF8", vram = 0x800e2bf8, size = 0x8 }, # fragment
-    { name = "func_800E2C00", vram = 0x800e2c00, size = 0x114 }, # leaf
+    { name = "func_800E2BC0", vram = 0x800e2bc0, size = 0x154 }, # c
     { name = "func_800E2D14", vram = 0x800e2d14, size = 0x458 }, # trailing-padding
     { name = "func_800E3170", vram = 0x800e3170, size = 0x44 }, # c
     { name = "func_800E31B4", vram = 0x800e31b4, size = 0x88 }, # c

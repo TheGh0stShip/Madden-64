@@ -69,7 +69,7 @@ functions = [
     { name = "func_8000B140", vram = 0x8000b140, size = 0x44 }, # leaf
     { name = "func_8000B184", vram = 0x8000b184, size = 0x54 }, # leaf
     { name = "display_texture_parameters_set", vram = 0x8000b1d8, size = 0x104 }, # c
-    { name = "display_texture_cache_initialize", vram = 0x8000b2e0, size = 0x334 }, # asm
+    { name = "display_texture_cache_initialize", vram = 0x8000b2e0, size = 0x334 }, # c
     { name = "display_system_shutdown", vram = 0x8000b614, size = 0xe4 }, # c
     { name = "display_surface_create", vram = 0x8000b6f8, size = 0xac }, # c
     { name = "func_8000B7A4", vram = 0x8000b7a4, size = 0x40 }, # c
