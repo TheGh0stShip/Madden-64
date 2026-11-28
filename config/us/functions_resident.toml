@@ -590,7 +590,7 @@ functions = [
     { name = "controller_axes_resolve", vram = 0x80031040, size = 0xec }, # c
     { name = "display_offsets_accumulate", vram = 0x8003112c, size = 0xa4 }, # c
     { name = "runtime_callback_process", vram = 0x800311d0, size = 0x1dc }, # asm
-    { name = "runtime_callback_update", vram = 0x800313ac, size = 0x21c }, # asm
+    { name = "runtime_callback_update", vram = 0x800313ac, size = 0x21c }, # c
     { name = "runtime_state_update", vram = 0x800315c8, size = 0x210 }, # asm
     { name = "func_800317D8", vram = 0x800317d8, size = 0x108 }, # c
     { name = "func_800318E0", vram = 0x800318e0, size = 0x2c }, # leaf

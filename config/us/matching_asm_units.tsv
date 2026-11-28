@@ -61,7 +61,6 @@
 0x2C224	0x24C	src/code/gameplay_interface_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ea3c576fdfd25dafa13172e14cc0413347309a4d15df556abba00d5cc169af0
 0x37364	0x23C	src/code/memory_pool_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0772237cd205e292cc9c11a831ba74f4cab293b0e1ed2345a5adeef0ab04df0b
 0x4427C	0x238	src/code/display_context_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	25527a2d1eb8bacc6038054e32d534cbfa0358454b62ba4e85a17f58131a94fe
-0x31FAC	0x21C	src/code/runtime_callback_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	9498db540d0af001e01156aebc7012d0170540a36536cf307bfe3d461e9bd02d
 0x2D944	0x204	src/code/gameplay_record_update_primary.s	-O2 -G0 -mips3 -mgp32 -mfp32	96a3466be3b13f79139fffd1b45e8b703b4f3e8e359e407c7d59c34d06e7756e
 0x2DB48	0x204	src/code/gameplay_record_update_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	1f71abd0426132ef0bfda9df96f48271a395ddbda6bd7f164d266f578278c6a3
 0x2DD4C	0x204	src/code/gameplay_record_update_tertiary.s	-O2 -G0 -mips3 -mgp32 -mfp32	4e68c6d4bcf65e6e633f8fd36adfd9fa42a2f9c69ee0f65c09b3948382547f7d
