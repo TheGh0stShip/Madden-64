@@ -151,12 +151,13 @@ class RomLayoutTests(unittest.TestCase):
     def test_overlay1_boundary_findings_are_well_formed(self):
         lines = OVERLAY1_FINDINGS.read_text().splitlines()
         self.assertEqual(lines[0], "address\tkind\tfunction\tdetail")
-        self.assertEqual(len(lines) - 1, 952)
+        self.assertEqual(len(lines) - 1, 953)
         allowed_kinds = {
             "branch_outside", "branch_to_entry", "confirmed_start", "cross_branch",
             "falls_through", "in_text_data", "interior_alias", "junk_start",
-            "late_start", "rejected_start", "shared_epilogue", "stray_words",
-            "start_in_delay_slot",
+            "late_start", "merged_false_fragment", "rejected_start",
+            "shared_epilogue", "shifted_duplicate", "start_in_delay_slot",
+            "stray_words", "uncatalogued_head",
         }
         for line in lines[1:]:
             address, kind, _function, detail = line.split("\t", 3)
@@ -185,12 +186,13 @@ class RomLayoutTests(unittest.TestCase):
     def test_overlay4_boundary_findings_are_well_formed(self):
         lines = OVERLAY4_FINDINGS.read_text().splitlines()
         self.assertEqual(lines[0], "address\tkind\tfunction\tdetail")
-        self.assertEqual(len(lines) - 1, 349)
+        self.assertEqual(len(lines) - 1, 350)
         allowed_kinds = {
             "branch_outside", "branch_to_entry", "cross_branch",
-            "falls_through", "in_text_data", "interior_alias", "junk_start",
-            "late_start", "rejected_start", "shared_epilogue", "stray_words",
-            "start_in_delay_slot",
+            "confirmed_start", "falls_through", "in_text_data",
+            "interior_alias", "internal_branch", "junk_start", "late_start",
+            "merged_false_fragment", "rejected_start", "shared_epilogue",
+            "start_in_delay_slot", "stray_words", "uncatalogued_head",
         }
         for line in lines[1:]:
             address, kind, _function, detail = line.split("\t", 3)

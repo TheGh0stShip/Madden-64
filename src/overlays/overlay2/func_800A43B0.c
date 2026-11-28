@@ -55,7 +55,7 @@ void func_800D63B4(Screen *);
 void func_800DD82C(Msg *);
 void func_80030C74(s32 *);
 u16 func_80031A1C(s32);
-void func_800A4754(u8);
+void func_800A4754(s32);
 
 void func_800A43B0(Screen *screen, s32 controller, s16 button) {
     Menu *m;

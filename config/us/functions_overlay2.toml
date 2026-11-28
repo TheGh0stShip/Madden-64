@@ -241,7 +241,7 @@ functions = [
     { name = "func_800A2938", vram = 0x800a2930, size = 0x15c }, # c boundary-corrected
     { name = "func_800A2A94", vram = 0x800a2a8c, size = 0x14c }, # c boundary-corrected
     { name = "func_800A2BD8", vram = 0x800a2bd8, size = 0x30 }, # c
-    { name = "func_800A2C10", vram = 0x800a2c10, size = 0x2c8 }, # c
+    { name = "func_800A2C08", vram = 0x800a2c08, size = 0x2d0 }, # c boundary-corrected
     { name = "func_800A2EE0", vram = 0x800a2ed8, size = 0x90 }, # c boundary-corrected
     { name = "func_800A2F68", vram = 0x800a2f68, size = 0x558 }, # c
     { name = "func_800A34C0", vram = 0x800a34c0, size = 0x394 }, # c

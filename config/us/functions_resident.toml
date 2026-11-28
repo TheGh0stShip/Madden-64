@@ -221,7 +221,7 @@ functions = [
     { name = "func_800160B4", vram = 0x800160b4, size = 0x10 }, # c
     { name = "resource_stream_decode", vram = 0x800160c4, size = 0x4dc }, # asm
     { name = "resource_stream_process", vram = 0x800165a0, size = 0x25c }, # asm
-    { name = "resource_stream_update", vram = 0x800167fc, size = 0x1d8 }, # asm
+    { name = "resource_stream_update", vram = 0x800167fc, size = 0x1d8 }, # c
     { name = "func_800169D4", vram = 0x800169d4, size = 0x10 }, # stub
     { name = "func_800169E4", vram = 0x800169e4, size = 0x30 }, # c
     { name = "func_80016A14", vram = 0x80016a14, size = 0x10 }, # c

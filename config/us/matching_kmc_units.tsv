@@ -171,6 +171,7 @@
 0x16C54	0x4C	src/code/runtime_pair_reset.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	bde55fc944ffd6db4e9d562e94ef0950337a474c04fbecd44f5819dad36ff7e7
 0x16CA0	0x24	src/code/system_toggle.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	61e892cd486dcf27e887993ddf934cf7da39000188cfee73700e250e627630a3
 0x171A0	0x25C	src/code/resource_stream_process.c	--assembler=asn64 --symbol=D_80088B78:0x80088B78 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	313ab1d966912454b49ab8471817ad9f9e13215e70013fd152380619c30739a8
+0x173FC	0x1D8	src/code/resource_stream_update.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	f5b6d9759c33b023f818c9e42adf85f3725b33aa3c76c7692e5c90bfdf9bc53a
 0x175D4	0x50	src/code/ui_entry_value.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	14b86cb715dc8a936d01f9bd5a0efcbe317fd1f61b25dcd88e221c5f0266aa3b
 0x17770	0x40	src/code/indexed_short_table_get.c	-O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	81ac38d9619e0460fc848e96f5b5db4feecc83c52bd15fff0ed31403ed671293
 0x177B0	0x68	src/code/multiline_metric.c	--assembler=asn64 -O2 -G0 -mips3 -mgp32 -mfp32 -Wa,-r4300_mul -Iinclude	6536012511b539e5162e98cbe12aeb4ff6020e1168bb93064cf77faee194d855
