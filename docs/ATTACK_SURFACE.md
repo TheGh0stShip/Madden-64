@@ -44,11 +44,11 @@ heuristic boundary catalogues and are not equivalent measures.
 | Module | Functions | Matched | Candidate bytes | Matched bytes |
 |---|---:|---:|---:|---:|
 | boot_loader | 5 | 0 | 632 | 0 |
-| overlay_1 | 732 | 523 | 213,984 | 157,132 |
-| overlay_2 | 567 | 547 | 199,140 | 162,888 |
-| overlay_4 | 340 | 261 | 123,716 | 79,096 |
-| overlay_5 | 380 | 358 | 123,640 | 91,964 |
-| resident | 1,361 | 1,243 | 378,060 | 300,280 |
+| overlay_1 | 732 | 531 | 213,984 | 161,892 |
+| overlay_2 | 567 | 551 | 199,140 | 166,384 |
+| overlay_4 | 340 | 263 | 123,716 | 81,368 |
+| overlay_5 | 380 | 364 | 123,640 | 97,988 |
+| resident | 1,361 | 1,254 | 378,060 | 308,736 |
 
 ### Size distribution
 
@@ -58,10 +58,10 @@ heuristic boundary catalogues and are not equivalent measures.
 | 000-0032 | 177 | 35 | 4,680 | 900 |
 | 000-0064 | 414 | 35 | 20,604 | 1,692 |
 | 000-0128 | 652 | 51 | 61,864 | 5,040 |
-| 000-0256 | 740 | 59 | 137,980 | 11,148 |
-| 000-0512 | 658 | 85 | 240,496 | 32,524 |
-| 000-1024 | 320 | 84 | 225,384 | 61,848 |
-| 1025+ | 181 | 68 | 345,340 | 134,184 |
+| 000-0256 | 740 | 58 | 137,980 | 10,920 |
+| 000-0512 | 658 | 79 | 240,496 | 29,996 |
+| 000-1024 | 320 | 68 | 225,384 | 49,572 |
+| 1025+ | 181 | 60 | 345,340 | 124,208 |
 
 - Exact duplicate body families: 28
 - Functions participating in those families: 161

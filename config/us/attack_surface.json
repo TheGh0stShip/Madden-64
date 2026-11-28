@@ -183,32 +183,32 @@
       "overlay_1": {
         "functions": 732,
         "bytes": 213984,
-        "matched_functions": 523,
-        "matched_bytes": 157132
+        "matched_functions": 531,
+        "matched_bytes": 161892
       },
       "overlay_2": {
         "functions": 567,
         "bytes": 199140,
-        "matched_functions": 547,
-        "matched_bytes": 162888
+        "matched_functions": 551,
+        "matched_bytes": 166384
       },
       "overlay_4": {
         "functions": 340,
         "bytes": 123716,
-        "matched_functions": 261,
-        "matched_bytes": 79096
+        "matched_functions": 263,
+        "matched_bytes": 81368
       },
       "overlay_5": {
         "functions": 380,
         "bytes": 123640,
-        "matched_functions": 358,
-        "matched_bytes": 91964
+        "matched_functions": 364,
+        "matched_bytes": 97988
       },
       "resident": {
         "functions": 1361,
         "bytes": 378060,
-        "matched_functions": 1243,
-        "matched_bytes": 300280
+        "matched_functions": 1254,
+        "matched_bytes": 308736
       }
     },
     "catalogue_status": {
@@ -328,26 +328,26 @@
       "000-0256": {
         "functions": 740,
         "bytes": 137980,
-        "matched_functions": 681,
-        "matched_bytes": 126832
+        "matched_functions": 682,
+        "matched_bytes": 127060
       },
       "000-0512": {
         "functions": 658,
         "bytes": 240496,
-        "matched_functions": 573,
-        "matched_bytes": 207972
+        "matched_functions": 579,
+        "matched_bytes": 210500
       },
       "000-1024": {
         "functions": 320,
         "bytes": 225384,
-        "matched_functions": 236,
-        "matched_bytes": 163536
+        "matched_functions": 252,
+        "matched_bytes": 175812
       },
       "1025+": {
         "functions": 181,
         "bytes": 345340,
-        "matched_functions": 113,
-        "matched_bytes": 211156
+        "matched_functions": 121,
+        "matched_bytes": 221132
       }
     },
     "exact_duplicate_families": 28,

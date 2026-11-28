@@ -16,7 +16,6 @@
 0x4F648	0xC0	src/libultra/os_probe_tlb.s	-O2 -G0 -mips3 -mgp32 -mfp32	349227b84b51cb246abaf9de4bf56eba78054d85575e1bfb09acfdb8d1bc0c28
 0x4DD68	0xA0	src/libultra/os_set_int_mask.s	-O2 -G0 -mips3 -mgp32 -mfp32	86cb8015715ed857a8877c8f765e022385d51b5c1e2cb8645586b08a05f91a23
 0xD620	0x118	src/code/object_orientation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	4b07a347661fd37d5f854d7aeccce5e048c2bf657a3f6695ae536c9c20f31144
-0x116B4	0x1C4	src/code/display_camera_vector_compute.s	-O2 -G0 -mips3 -mgp32 -mfp32	8e2ed6d7e88148ff8e9c92c7c441b351d8493651434bfe48648cbcf6374f4384
 0xBEE0	0x334	src/code/display_texture_cache_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	6026df1f74f17f295e4714d019d7fdf4d716042349650d7c31ee8350e4c4a36a
 0xCB08	0x358	src/code/display_frame_context_initialize.s	-O2 -G0 -mips3 -mgp32 -mfp32	f9b465a7804ab800a612b84ce4ed14db0f4b3861266749e45976cdaf0bcab16f
 0xCE60	0x530	src/code/display_frame_build.s	-O2 -G0 -mips3 -mgp32 -mfp32	ac5ffd49de96de5846aea0fd5dd145c33707cc567c205a01c0c4133a7b4298ff
@@ -24,8 +23,6 @@
 0x16CC4	0x4DC	src/code/resource_stream_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	013790c958fb87843e64c65cd9b77762cda321e368ef2344fb7ffedbd9db9465
 0x17C30	0x390	src/code/resource_file_load.s	-O2 -G0 -mips3 -mgp32 -mfp32	427f64fc5f37912404edf7fa5ff54e00b8f5e61f7e0e47feeed11d9457c625be
 0x30538	0x330	src/code/bitstream_record_decode.s	-O2 -G0 -mips3 -mgp32 -mfp32	293141820cae715f5d34fba3254c8644f3afb608b7539251ed7db73760f9926a
-0x32854	0x434	src/code/runtime_flags_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	b16bcd8eb0d270eaecc33c2b54465228f1ea60be63ed55f4f46172ee1329d560
-0x3BFA0	0x30C	src/code/audio_table_decode_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	04c6b97fc31b2eb2bc130c82c8afa77c6031225091008a4805c5535077ed6921
 0x1D68C	0x5FC	src/code/ui_text_block_render.s	-O2 -G0 -mips3 -mgp32 -mfp32	a28d396cadc704c53621bf93af7871a4ae0db1461d8ef8d366374ea9833730e1
 0x1E690	0x508	src/code/ui_text_layout_forward.s	-O2 -G0 -mips3 -mgp32 -mfp32	79557dffbe6289089b3a91e444df3f316e1828d31a79b716f99c434fb38e1e45
 0x1EB98	0x518	src/code/ui_text_layout_reverse.s	-O2 -G0 -mips3 -mgp32 -mfp32	92a03370be82eb1c3a0f4e060559bc29658722b6f002b3e47c3663dd1dbe9470
@@ -39,16 +36,11 @@
 0x2AA88	0x4D0	src/code/gameplay_selection_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	cdc69c2b0d46b81c34d929632bad3d9e6ba12cd15abe25f4b53a2edcdebcec4f
 0x38194	0x568	src/code/audio_voice_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	c901e4237158096c6dec79b9f7f0db7a565ccc237f8dd19ff73685799eda4d9b
 0x3E9F8	0x444	src/code/audio_bank_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	92da4e40e2ec40056a7d4fc1244b56178bc258cfe80ea1b305fbbf3823bcd837
-0x34720	0x404	src/code/memory_arena_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	6f8e7f7bf6e41481c4d09f5f58357ec49ece099716f59be07155dbd3e03d8ca9
-0x32C88	0x410	src/code/runtime_input_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0bc885dfadda04befa7a6ffc7b3f41959564cad74c6dd5e8145595d6ca147583
 0x10534	0x1070	src/code/display_object_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	2b8d50ecd697654af8797b353ff0ab83018aff665d1debd7177e159846ef7892
 0x12764	0xC50	src/code/render_command_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	c4344c589a0abeb25c7558f71c7e842a767e4d05ad194d2d79ee5576bc17e9e5
-0x1C3C0	0x444	src/code/ui_resource_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	1e4381c7dde74552ea94c0f1a7c2e74b2f27f083e8deefd27db11764e44acaa7
 0x30E60	0x3C0	src/code/runtime_callback_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	b5734ab14c3c525eb21bc0f03d069e8eb30b7b69a107b974a2df45f50c5a1b3e
 0x29344	0x314	src/code/frame_identifier_resolve.s	-O2 -G0 -mips3 -mgp32 -mfp32	1c3f0072ac5519edc3fdf0bf0d90ca1dfdabb5f9a3847a61ee6f000d3b328b7a
 0x2F660	0x310	src/code/gameplay_command_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	d47bd89424929d9e063bf1b90014a69e85f191ffdbf99a8c92b9dd951153e3c7
-0x56380	0x300	src/code/object_driver_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	ad1fde90870549820a5b5703d2d0cbd2cca38d3a9a1ab9053c5582899a24ca44
-0x567BC	0x2D0	src/code/object_driver_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	e2ced7754bf032e2b935eb53400ce4ca54fba8ae7682ef4cb43fc8dbc71e424c
 0x2C7B0	0x2AC	src/code/packed_field_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	738906d22be55aa24e94d0c6d441f9fa83da39b279c3f5d8cdb70218489698d5
 0x1692C	0x2A4	src/code/render_state_consume.s	-O2 -G0 -mips3 -mgp32 -mfp32	69b6cbfc61bf5b8666b6511ff20e0193e02892f7860dcdeb5c3d33e5756530cc
 0x2A10C	0x298	src/code/menu_cursor_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	9b2ef9b6cc9fa7eb79b9bd62707f24ec6ff5f6c3504cd98a5c6b600265e8cfa4
@@ -57,13 +49,11 @@
 0x26B44	0x258	src/code/gameplay_event_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	593790b783e860a6be29683accfd82d2c31b13f6293bc659b99a22e6e97a4752
 0x4190C	0x254	src/code/interface_runtime_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	50b4af718c32cb97d8760beea5ea2aac8384a514ce9faf3271acd395337805dd
 0x3FA10	0x250	src/code/audio_sequence_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	e9244da0e09b5696bd1cb3bfd26333dd3da25af6063b186d6cd59d9645b4ad7a
-0x2C224	0x24C	src/code/gameplay_interface_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ea3c576fdfd25dafa13172e14cc0413347309a4d15df556abba00d5cc169af0
 0x37364	0x23C	src/code/memory_pool_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	0772237cd205e292cc9c11a831ba74f4cab293b0e1ed2345a5adeef0ab04df0b
 0x4427C	0x238	src/code/display_context_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	25527a2d1eb8bacc6038054e32d534cbfa0358454b62ba4e85a17f58131a94fe
 0x2D944	0x204	src/code/gameplay_record_update_primary.s	-O2 -G0 -mips3 -mgp32 -mfp32	96a3466be3b13f79139fffd1b45e8b703b4f3e8e359e407c7d59c34d06e7756e
 0x2DB48	0x204	src/code/gameplay_record_update_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	1f71abd0426132ef0bfda9df96f48271a395ddbda6bd7f164d266f578278c6a3
 0x2DD4C	0x204	src/code/gameplay_record_update_tertiary.s	-O2 -G0 -mips3 -mgp32 -mfp32	4e68c6d4bcf65e6e633f8fd36adfd9fa42a2f9c69ee0f65c09b3948382547f7d
-0x56A8C	0x204	src/code/object_animation_apply.s	-O2 -G0 -mips3 -mgp32 -mfp32	75a7eb8087f9247d86d0c218bf269ac0f7f9a9c079853fc3c61dad89f61b04d4
 0x3D00C	0x200	src/code/audio_stream_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	e2905fad917ec54a4b1ed4707ed27c5223fc010463a9692baef68ce332d0a75f
 0x29DD4	0x1F8	src/code/menu_mode_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	32acffb7892567d36a15c97b0ced5e8dce0f7fb60ca96f225b224a011445f616
 0x1DF00	0x1D4	src/code/ui_text_line_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	1dd1f510c70fc094d6ce675c29feb7fd1c41ccc75abcc53f877d9e39d3e5e6fb
@@ -71,7 +61,6 @@
 0x1F0B0	0x1B8	src/code/ui_menu_primary.s	-O2 -G0 -mips3 -mgp32 -mfp32	f3fb131a69d6c490fff002466f427a361c6a2f3ee979e37f58561332760a2e6b
 0x1F268	0x1B8	src/code/ui_menu_secondary.s	-O2 -G0 -mips3 -mgp32 -mfp32	05bf26eb4b4cd467bd42052f44d02b1a4a9905fcca93bffd3c55f1cc076e984c
 0x2E7D0	0x198	src/code/gameplay_record_dispatch.s	-O2 -G0 -mips3 -mgp32 -mfp32	54cad0ef6ae1a5bd008b7657d91bffdd1aae6793ffb13e9f2c4cc2e01a4e210b
-0x2BDB8	0x18C	src/code/gameplay_interface_configure.s	-O2 -G0 -mips3 -mgp32 -mfp32	305d379df74bba16a48ca84d1fa8dc69d6902318c4a751d7bf6905dfbfdd25a7
 0x44B7C	0x18C	src/code/display_frame_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	49bc5f02a4f3b851176da35ff998e6b682c09fee29258dbd9a347dc12ce067d3
 0x4459C	0x184	src/code/display_context_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	9dc57a8e25f3c2f97fdd1826a4fb9fb5a6bd476b58acdb1ced3ac69869930210
 0x25928	0x174	src/code/roster_state_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	9732d35322f0eaf057ee5fbbe772ecbfe021da48a51390ce12c8e0b5c7ac1b7d
