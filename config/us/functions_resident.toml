@@ -687,7 +687,7 @@ functions = [
     { name = "memory_block_update", vram = 0x800356c4, size = 0x1a8 }, # asm
     { name = "func_8003586C", vram = 0x8003586c, size = 0x124 }, # c
     { name = "audio_slot_allocate", vram = 0x80035990, size = 0xec }, # c
-    { name = "memory_block_process", vram = 0x80035a7c, size = 0x258 }, # asm
+    { name = "memory_block_process", vram = 0x80035a7c, size = 0x258 }, # c
     { name = "func_80035CD4", vram = 0x80035cd4, size = 0x28 }, # c
     { name = "audio_channel_replace", vram = 0x80035cfc, size = 0x80 }, # c
     { name = "memory_pool_prepare", vram = 0x80035d7c, size = 0x174 }, # c

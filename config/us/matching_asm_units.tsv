@@ -55,7 +55,6 @@
 0xDC1C	0x294	src/code/display_object_transform.s	-O2 -G0 -mips3 -mgp32 -mfp32	a9960ab350f2f21e8388ae87640a9711836d4bb6290310ed22ec03919fa1225f
 0xFC38	0x294	src/code/object_resource_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	522575978ca10ad3c658dfbf37587fd7df443ca4a8c18e1c8897346b096093bc
 0x26B44	0x258	src/code/gameplay_event_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	593790b783e860a6be29683accfd82d2c31b13f6293bc659b99a22e6e97a4752
-0x3667C	0x258	src/code/memory_block_process.s	-O2 -G0 -mips3 -mgp32 -mfp32	a5f668f4cb6403757058a37502f7a2d42e3aea2b6d37405a8b51339f2ca0887f
 0x4190C	0x254	src/code/interface_runtime_prepare.s	-O2 -G0 -mips3 -mgp32 -mfp32	50b4af718c32cb97d8760beea5ea2aac8384a514ce9faf3271acd395337805dd
 0x3FA10	0x250	src/code/audio_sequence_advance.s	-O2 -G0 -mips3 -mgp32 -mfp32	e9244da0e09b5696bd1cb3bfd26333dd3da25af6063b186d6cd59d9645b4ad7a
 0x2C224	0x24C	src/code/gameplay_interface_update.s	-O2 -G0 -mips3 -mgp32 -mfp32	1ea3c576fdfd25dafa13172e14cc0413347309a4d15df556abba00d5cc169af0
