@@ -152,7 +152,7 @@ functions = [
     { name = "func_8009B368", vram = 0x8009b368, size = 0x88 }, # c
     { name = "func_8009B3F0", vram = 0x8009b3f0, size = 0x4c }, # c
     { name = "func_8009B43C", vram = 0x8009b43c, size = 0xb4 }, # c falls_through
-    { name = "func_8009B4F8", vram = 0x8009b4f8, size = 0x4ec }, # c
+    { name = "func_8009B4F0", vram = 0x8009b4f0, size = 0x4f4 }, # c
     { name = "func_8009B9EC", vram = 0x8009b9ec, size = 0x39c }, # c
     { name = "func_8009BD88", vram = 0x8009bd88, size = 0x174 }, # c
     { name = "func_8009BEFC", vram = 0x8009befc, size = 0x1d4 }, # c

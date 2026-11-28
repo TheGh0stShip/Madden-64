@@ -188,9 +188,9 @@
       },
       "overlay_2": {
         "functions": 567,
-        "bytes": 199140,
-        "matched_functions": 551,
-        "matched_bytes": 166384
+        "bytes": 199148,
+        "matched_functions": 552,
+        "matched_bytes": 167652
       },
       "overlay_4": {
         "functions": 340,
@@ -214,8 +214,8 @@
     "catalogue_status": {
       "provisional": true,
       "program_code_bytes": 1082496,
-      "catalogue_body_bytes": 1039180,
-      "code_bytes_outside_catalogue_bodies": 43316,
+      "catalogue_body_bytes": 1039188,
+      "code_bytes_outside_catalogue_bodies": 43308,
       "catalogue_candidates": 3385,
       "boundary_audits": {
         "resident": {
@@ -345,9 +345,9 @@
       },
       "1025+": {
         "functions": 181,
-        "bytes": 345348,
-        "matched_functions": 122,
-        "matched_bytes": 222344
+        "bytes": 345356,
+        "matched_functions": 123,
+        "matched_bytes": 223612
       }
     },
     "exact_duplicate_families": 28,
