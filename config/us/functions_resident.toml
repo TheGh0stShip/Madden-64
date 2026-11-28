@@ -477,7 +477,7 @@ functions = [
     { name = "func_80029AD0", vram = 0x80029ad0, size = 0x104 }, # c
     { name = "func_80029BD4", vram = 0x80029bd4, size = 0x10 }, # stub
     { name = "menu_record_copy_wrapped", vram = 0x80029be4, size = 0xb4 }, # c
-    { name = "menu_record_process", vram = 0x80029c98, size = 0x1f0 }, # asm
+    { name = "menu_record_process", vram = 0x80029c98, size = 0x1f0 }, # c
     { name = "gameplay_selection_process", vram = 0x80029e88, size = 0x4d0 }, # asm
     { name = "gameplay_selection_update", vram = 0x8002a358, size = 0x354 }, # asm
     { name = "gameplay_selection_finalize", vram = 0x8002a6ac, size = 0x26c }, # asm
