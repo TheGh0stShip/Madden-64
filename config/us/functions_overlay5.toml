@@ -62,7 +62,7 @@ functions = [
     { name = "func_800C9220", vram = 0x800c9220, size = 0x8 }, # stub
     { name = "func_800C9228", vram = 0x800c9228, size = 0x2c }, # c
     { name = "func_800C9254", vram = 0x800c9254, size = 0x8 }, # stub
-    { name = "func_800C9264", vram = 0x800c9264, size = 0x4b4 }, # c
+    { name = "func_800C925C", vram = 0x800c925c, size = 0x4bc }, # c
     { name = "func_800C9718", vram = 0x800c9718, size = 0x9bc }, # c
     { name = "func_800CA0D4", vram = 0x800ca0d4, size = 0xc0 }, # c
     { name = "func_800CA194", vram = 0x800ca194, size = 0x134 }, # c
